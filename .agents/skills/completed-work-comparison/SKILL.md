@@ -1,3 +1,7 @@
+---
+name: completed-work-comparison
+description: Compare frozen generated artifacts to completed references after freeze.
+---
 # Completed Work Comparison
 
 Trigger: compare frozen generated artifacts to completed references after

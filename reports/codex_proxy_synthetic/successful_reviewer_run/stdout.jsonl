@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019eef36-b3a9-7c91-9c2f-e3f403b31e29"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"role\":\"project_reviewer\",\"status\":\"PASS\",\"project_id\":\"SYNTH-CJK-001\",\"outputs\":[\"review\"],\"actual_model\":\"unknown\",\"notes\":null}"}}
+{"type":"turn.completed","usage":{"input_tokens":13120,"cached_input_tokens":1920,"output_tokens":143,"reasoning_output_tokens":95}}

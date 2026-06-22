@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Codex Proxy Gate Result",
+  "type": "object",
+  "required": ["gate_id", "status", "cli", "tests", "summary"],
+  "properties": {
+    "gate_id": {"type": "string"},
+    "status": {
+      "enum": [
+        "CODEX_PROXY_READY_FOR_ONE_PROJECT_CALIBRATION",
+        "CODEX_PROXY_NOT_READY",
+        "CODEX_PROXY_INCONCLUSIVE"
+      ]
+    },
+    "cli": {
+      "type": "object",
+      "required": ["path", "version", "exec_help_sha256", "supported_flags"],
+      "properties": {
+        "path": {"type": "string"},
+        "version": {"type": "string"},
+        "exec_help_sha256": {"type": "string"},
+        "supported_flags": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "status", "evidence"],
+        "properties": {
+          "name": {"type": "string"},
+          "status": {"enum": ["PASS", "FAIL", "NOT_VERIFIED"]},
+          "evidence": {"type": "string"},
+          "artifacts": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "summary": {"type": "object"}
+  }
+}

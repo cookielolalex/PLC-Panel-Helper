@@ -1,0 +1,29 @@
+{
+  "run_id": "CODEX-PROXY-SYNTH",
+  "validity": "PASS",
+  "checks": [
+    {
+      "output_type": "production",
+      "path": "reports\\codex_proxy_synthetic\\pdf_generation_and_cjk_paths\\合成路徑\\pdfs\\01_生管課用圖_SYNTH-CJK-001.pdf",
+      "exists": true,
+      "pages": 1,
+      "sha256": "4836F135E8052ECBE938ED34F151704257F73F213690910168295D7EF64144AD"
+    },
+    {
+      "output_type": "sheetmetal",
+      "path": "reports\\codex_proxy_synthetic\\pdf_generation_and_cjk_paths\\合成路徑\\pdfs\\02_鈑金施工圖_SYNTH-CJK-001.pdf",
+      "exists": true,
+      "pages": 1,
+      "sha256": "AB928F140D7C9DB60175C25553D22B6F15B807163CB1A8506708A96762A8670E"
+    },
+    {
+      "output_type": "punch",
+      "path": "reports\\codex_proxy_synthetic\\pdf_generation_and_cjk_paths\\合成路徑\\pdfs\\03_沖孔施工圖_SYNTH-CJK-001.pdf",
+      "exists": true,
+      "pages": 1,
+      "sha256": "AE34C2BC4CA460C4121ABD5E6979608C95BBD2DAF49E8A614B52CCBC69B140DD"
+    }
+  ],
+  "hard_gate_failures": [],
+  "limitations": []
+}

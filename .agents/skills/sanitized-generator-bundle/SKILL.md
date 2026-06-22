@@ -1,3 +1,7 @@
+---
+name: sanitized-generator-bundle
+description: Build and verify evaluation-only sanitized generator bundles.
+---
 # Sanitized Generator Bundle
 
 Trigger: build or verify an evaluation-only sanitized generator bundle from

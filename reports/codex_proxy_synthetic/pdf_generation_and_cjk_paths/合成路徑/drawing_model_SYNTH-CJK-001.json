@@ -1,0 +1,36 @@
+{
+  "schema_version": "drawing_model_v0",
+  "project_id": "SYNTH-CJK-001",
+  "job_spec_hash": "2A451FFCDC25E79664DD1A69D9D58EDAAC0B46DC3A6EB99F4F79425AD2464B70",
+  "units": "mm",
+  "model_version": "synthetic",
+  "panels": [
+    {
+      "panel_id": "P1",
+      "width": 600,
+      "height": 800,
+      "material": null,
+      "thickness": null,
+      "devices": [],
+      "cutouts": [],
+      "verification_status": "TBD"
+    }
+  ],
+  "renderer_visibility": {
+    "production": [
+      "P1"
+    ],
+    "sheetmetal": [
+      "P1"
+    ],
+    "punch": [
+      "P1"
+    ]
+  },
+  "unresolved_regions": [],
+  "provenance": [
+    {
+      "source_id": "SYNTH"
+    }
+  ]
+}

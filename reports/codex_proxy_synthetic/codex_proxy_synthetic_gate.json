@@ -1,0 +1,144 @@
+{
+  "gate_id": "codex_proxy_synthetic_gate_v1",
+  "status": "CODEX_PROXY_READY_FOR_ONE_PROJECT_CALIBRATION",
+  "created_at": "2026-06-22T12:03:26Z",
+  "cli": {
+    "path": "C:\\Users\\alex1\\AppData\\Local\\OpenAI\\Codex\\bin\\8e55c2dd143b6354\\codex.exe",
+    "version": "codex-cli 0.142.0-alpha.6",
+    "exec_help_sha256": "9F86F0115238DDDE2514587E5F95B0AB0AA6B89495E5912878D49AD26038AA19",
+    "supported_flags": [
+      "--config",
+      "--enable",
+      "--disable",
+      "--strict-config",
+      "--model",
+      "--sandbox",
+      "--cd",
+      "--add-dir",
+      "--skip-git-repo-check",
+      "--ephemeral",
+      "--ignore-user-config",
+      "--ignore-rules",
+      "--output-schema",
+      "--json",
+      "--output-last-message"
+    ],
+    "disabled_features_for_tests": [
+      "plugins",
+      "apps",
+      "browser_use",
+      "image_generation"
+    ]
+  },
+  "tests": [
+    {
+      "name": "successful generator run",
+      "status": "PASS",
+      "evidence": "returncode=0 validation_errors=[]",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\successful_generator_run\\stdout.jsonl",
+        "reports\\codex_proxy_synthetic\\successful_generator_run\\stderr.log",
+        "reports\\codex_proxy_synthetic\\successful_generator_run\\last_message.json",
+        "reports\\codex_proxy_synthetic\\successful_generator_run\\process_metadata.json"
+      ]
+    },
+    {
+      "name": "successful independent reviewer run",
+      "status": "PASS",
+      "evidence": "returncode=0 validation_errors=[]",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\successful_reviewer_run\\stdout.jsonl",
+        "reports\\codex_proxy_synthetic\\successful_reviewer_run\\stderr.log",
+        "reports\\codex_proxy_synthetic\\successful_reviewer_run\\last_message.json",
+        "reports\\codex_proxy_synthetic\\successful_reviewer_run\\process_metadata.json"
+      ]
+    },
+    {
+      "name": "malformed final output",
+      "status": "PASS",
+      "evidence": "Synthetic malformed final output rejected.",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\malformed_final_output\\last_message.txt"
+      ]
+    },
+    {
+      "name": "schema failure",
+      "status": "PASS",
+      "evidence": "schema_errors=[\"$: missing required key 'project_id'\", \"$: missing required key 'outputs'\", \"$: missing required key 'actual_model'\", \"$: missing required key 'notes'\"]",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\schema_failure\\bad_output.json"
+      ]
+    },
+    {
+      "name": "timeout",
+      "status": "PASS",
+      "evidence": "timed_out=True",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\timeout\\process_metadata.json"
+      ]
+    },
+    {
+      "name": "nonzero exit",
+      "status": "PASS",
+      "evidence": "returncode=7",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\nonzero_exit\\process_metadata.json"
+      ]
+    },
+    {
+      "name": "reference sentinel exposure",
+      "status": "PASS",
+      "evidence": "errors=['REFERENCE_SENTINEL:visible.txt']",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\reference_sentinel_exposure\\visible.txt"
+      ]
+    },
+    {
+      "name": "path escape",
+      "status": "PASS",
+      "evidence": "errors=['ABSOLUTE_SOURCE_PATH:path.txt']",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\path_escape\\path.txt"
+      ]
+    },
+    {
+      "name": "post-freeze mutation",
+      "status": "PASS",
+      "evidence": "errors=['POST_FREEZE_MUTATION:artifact.txt']",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\post_freeze_mutation\\artifact.txt"
+      ]
+    },
+    {
+      "name": "CJK file paths",
+      "status": "PASS",
+      "evidence": "job_spec=reports\\codex_proxy_synthetic\\pdf_generation_and_cjk_paths\\合成路徑\\job_spec_SYNTH-CJK-001.json",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\pdf_generation_and_cjk_paths\\合成路徑\\job_spec_SYNTH-CJK-001.json",
+        "reports\\codex_proxy_synthetic\\pdf_generation_and_cjk_paths\\合成路徑\\drawing_model_SYNTH-CJK-001.json"
+      ]
+    },
+    {
+      "name": "PDF generation and validation",
+      "status": "PASS",
+      "evidence": "validity=PASS failures=[]",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\pdf_generation_and_cjk_paths\\合成路徑\\pdf_validation.json"
+      ]
+    },
+    {
+      "name": "requested versus actual model recording",
+      "status": "PASS",
+      "evidence": "generator=default->unknown reviewer=default->unknown",
+      "artifacts": [
+        "reports\\codex_proxy_synthetic\\successful_generator_run\\process_metadata.json",
+        "reports\\codex_proxy_synthetic\\successful_reviewer_run\\process_metadata.json"
+      ]
+    }
+  ],
+  "summary": {
+    "pass_count": 12,
+    "fail_count": 0,
+    "network_or_external_data_note": "Only synthetic prompts and fixtures were sent through codex exec."
+  }
+}

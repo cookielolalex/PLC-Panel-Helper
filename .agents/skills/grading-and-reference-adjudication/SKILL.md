@@ -1,3 +1,7 @@
+---
+name: grading-and-reference-adjudication
+description: Grade one frozen project with source-availability-aware reference adjudication.
+---
 # Grading And Reference Adjudication
 
 Trigger: grade one frozen generated project with reference-availability

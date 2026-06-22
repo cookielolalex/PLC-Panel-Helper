@@ -1,0 +1,46 @@
+{
+  "command": [
+    "C:\\Users\\alex1\\AppData\\Local\\OpenAI\\Codex\\bin\\8e55c2dd143b6354\\codex.exe",
+    "exec",
+    "--ephemeral",
+    "--cd",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper",
+    "--sandbox",
+    "read-only",
+    "--disable",
+    "plugins",
+    "--disable",
+    "apps",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "image_generation",
+    "--json",
+    "--output-schema",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\schemas\\codex_proxy_child_output.schema.json",
+    "--output-last-message",
+    "reports\\codex_proxy_synthetic\\successful_reviewer_run\\last_message.json",
+    "Synthetic fixture only. Return exactly one JSON object with keys role,status,project_id,outputs,actual_model,notes. Use role project_reviewer, status PASS, project_id SYNTH-CJK-001, outputs [\"review\"], actual_model unknown."
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "duration_seconds": 5.11,
+  "stdout_path": "reports\\codex_proxy_synthetic\\successful_reviewer_run\\stdout.jsonl",
+  "stderr_path": "reports\\codex_proxy_synthetic\\successful_reviewer_run\\stderr.log",
+  "role": "project_reviewer",
+  "requested_model": "default",
+  "actual_model": "unknown",
+  "actual_model_recording_status": "RECORDED_FROM_CHILD_OUTPUT",
+  "last_message_path": "reports\\codex_proxy_synthetic\\successful_reviewer_run\\last_message.json",
+  "parsed_output": {
+    "role": "project_reviewer",
+    "status": "PASS",
+    "project_id": "SYNTH-CJK-001",
+    "outputs": [
+      "review"
+    ],
+    "actual_model": "unknown",
+    "notes": null
+  },
+  "validation_errors": []
+}

@@ -1,3 +1,7 @@
+---
+name: conflict-handling
+description: Handle missing or conflicting approved source values without inventing fabrication facts.
+---
 # Conflict Handling
 
 Use when approved sources disagree or critical values are missing.

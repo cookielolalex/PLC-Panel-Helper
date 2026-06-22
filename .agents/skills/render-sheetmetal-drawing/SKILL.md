@@ -1,3 +1,7 @@
+---
+name: render-sheetmetal-drawing
+description: Render the sheetmetal fabrication PDF from the shared drawing model.
+---
 # Render Sheetmetal Drawing
 
 Use only after `drawing_model` is schema-valid and frozen for the run.

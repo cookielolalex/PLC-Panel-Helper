@@ -1,3 +1,7 @@
+---
+name: project-grading
+description: Grade frozen generated outputs against adjudicated references.
+---
 # Project Grading
 
 Use when producing validity, quality score, scorable coverage, confidence, and

@@ -1,3 +1,7 @@
+---
+name: reference-adjudication
+description: Build source-availability-aware reference adjudication after output freeze.
+---
 # Reference Adjudication
 
 Use only after generated outputs are frozen and hashed.

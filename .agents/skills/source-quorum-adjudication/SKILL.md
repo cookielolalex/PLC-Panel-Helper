@@ -1,3 +1,7 @@
+---
+name: source-quorum-adjudication
+description: Adjudicate deterministic prefilter and four independent source-review results.
+---
 # Source Quorum Adjudication
 
 Trigger: adjudicate frozen deterministic prefilter and four independent source

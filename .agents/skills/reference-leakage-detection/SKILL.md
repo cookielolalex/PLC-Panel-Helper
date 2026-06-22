@@ -1,3 +1,7 @@
+---
+name: reference-leakage-detection
+description: Detect forbidden completed-reference exposure in candidate sources or bundles.
+---
 # Reference Leakage Detection
 
 Trigger: red-team candidate source or sanitized bundle for forbidden completed

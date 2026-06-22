@@ -1,3 +1,7 @@
+---
+name: evidence-provenance
+description: Record source provenance for extracted or derived job_spec values.
+---
 # Evidence Provenance
 
 Use when extracting values from approved current-project evidence into

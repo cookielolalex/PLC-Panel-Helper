@@ -1,3 +1,7 @@
+---
+name: render-punch-drawing
+description: Render the punch drawing PDF from the shared drawing model.
+---
 # Render Punch Drawing
 
 Use only after `drawing_model` is schema-valid and frozen for the run.

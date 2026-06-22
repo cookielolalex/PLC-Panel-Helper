@@ -1,3 +1,7 @@
+---
+name: project-identity-and-revision
+description: Verify project identity, customer identity, revision, and stale-template risk.
+---
 # Project Identity And Revision
 
 Trigger: verify project ID, customer, revision, supersession, and stale-template

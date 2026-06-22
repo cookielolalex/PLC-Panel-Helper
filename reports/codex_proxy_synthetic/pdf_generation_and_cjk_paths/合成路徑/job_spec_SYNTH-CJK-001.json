@@ -1,0 +1,32 @@
+{
+  "schema_version": "job_spec_v0",
+  "project": {
+    "project_id": "SYNTH-CJK-001",
+    "customer": "合成客戶",
+    "project_name": "合成校驗盤",
+    "revision": "synthetic"
+  },
+  "panels": [
+    {
+      "panel_id": "P1",
+      "width": 600,
+      "height": 800
+    }
+  ],
+  "materials": [],
+  "devices": [],
+  "cutouts": [],
+  "source_references": [
+    {
+      "source_id": "SYNTH",
+      "kind": "fixture"
+    }
+  ],
+  "conflicts": [],
+  "unresolved_fields": [
+    {
+      "field": "material",
+      "status": "TBD"
+    }
+  ]
+}

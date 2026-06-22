@@ -1,3 +1,7 @@
+---
+name: source-role-classification
+description: Classify source-file and worksheet roles for evaluation-only source quorum.
+---
 # Source Role Classification
 
 Trigger: classify source-file or worksheet role for autonomous evaluation-only

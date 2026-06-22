@@ -1,3 +1,7 @@
+---
+name: source-sheet-selection
+description: Classify candidate Excel files and worksheets for generator eligibility.
+---
 # Source Sheet Selection
 
 Use when classifying candidate Excel files or worksheets for generator

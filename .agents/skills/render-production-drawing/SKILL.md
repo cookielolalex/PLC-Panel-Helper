@@ -1,3 +1,7 @@
+---
+name: render-production-drawing
+description: Render the production-use PDF from the shared drawing model.
+---
 # Render Production Drawing
 
 Use only after `drawing_model` is schema-valid and frozen for the run.

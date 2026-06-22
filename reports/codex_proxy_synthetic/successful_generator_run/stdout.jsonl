@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019eef36-a34f-7eb3-9f4c-09e93205a683"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"role\":\"mock_case_generator\",\"status\":\"PASS\",\"project_id\":\"SYNTH-CJK-001\",\"outputs\":[\"production\",\"sheetmetal\",\"punch\"],\"actual_model\":\"unknown\",\"notes\":null}"}}
+{"type":"turn.completed","usage":{"input_tokens":13126,"cached_input_tokens":1920,"output_tokens":105,"reasoning_output_tokens":51}}

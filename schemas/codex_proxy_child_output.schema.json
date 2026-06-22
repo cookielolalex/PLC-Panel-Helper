@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Codex Proxy Synthetic Child Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["role", "status", "project_id", "outputs", "actual_model", "notes"],
+  "properties": {
+    "role": {
+      "enum": ["mock_case_generator", "project_reviewer"]
+    },
+    "status": {
+      "enum": ["PASS", "FAIL"]
+    },
+    "project_id": {"type": "string"},
+    "outputs": {"type": "array", "items": {"type": "string"}},
+    "actual_model": {"type": "string"},
+    "notes": {"type": ["string", "null"]}
+  }
+}

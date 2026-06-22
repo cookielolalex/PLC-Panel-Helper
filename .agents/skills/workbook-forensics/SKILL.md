@@ -1,3 +1,7 @@
+---
+name: workbook-forensics
+description: Inspect workbook parser and package-forensics risks before source approval.
+---
 # Workbook Forensics
 
 Trigger: inspect workbook parser/package risks before evaluation-only approval.

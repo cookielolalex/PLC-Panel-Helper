@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-c",
+    "raise SystemExit(7)"
+  ],
+  "returncode": 7,
+  "timed_out": false,
+  "duration_seconds": 0.03,
+  "stdout_path": "reports\\codex_proxy_synthetic\\nonzero_exit\\stdout.log",
+  "stderr_path": "reports\\codex_proxy_synthetic\\nonzero_exit\\stderr.log"
+}

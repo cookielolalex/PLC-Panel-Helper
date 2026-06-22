@@ -1,3 +1,7 @@
+---
+name: blind-project-generation
+description: Run blind historical mock generation from a verified ALLOWED_EVAL bundle.
+---
 # Blind Project Generation
 
 Trigger: run one blind historical mock generation from a verified

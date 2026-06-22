@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-c",
+    "import time; time.sleep(2)"
+  ],
+  "returncode": null,
+  "timed_out": true,
+  "duration_seconds": 1.02,
+  "stdout_path": "reports\\codex_proxy_synthetic\\timeout\\stdout.log",
+  "stderr_path": "reports\\codex_proxy_synthetic\\timeout\\stderr.log"
+}
