@@ -1,0 +1,125 @@
+{
+  "audit_id": "one_project_calibration_audit_RUN-1110104-AUTO-EVAL-002",
+  "status": "STEP_7C_AUDIT_PASS - READY_FOR_SIX_PROJECT_BASELINE",
+  "run_id": "RUN-1110104-AUTO-EVAL-002",
+  "project_id": "1110104",
+  "created_at": "2026-06-22T12:25:54Z",
+  "git": {
+    "head": "f30faa2977b02a391f67a5b9566117609518b7f9",
+    "status_porcelain_pre_output_write": "",
+    "lineage": {
+      "0a944ec0734cb3e28768bb88129a75838f70ca14": {
+        "cat_file_type": "commit",
+        "merge_base_is_ancestor_exit_code": 0
+      },
+      "8e62d6986ba60117f718709afafff4573fc2c3b6": {
+        "cat_file_type": "commit",
+        "merge_base_is_ancestor_exit_code": 0
+      }
+    }
+  },
+  "criteria": [
+    {
+      "id": "git_state_and_lineage",
+      "status": "PASS",
+      "evidence": "HEAD=f30faa2977b02a391f67a5b9566117609518b7f9; status_len=0; lineage={'0a944ec0734cb3e28768bb88129a75838f70ca14': {'cat_file_type': 'commit', 'merge_base_is_ancestor_exit_code': 0}, '8e62d6986ba60117f718709afafff4573fc2c3b6': {'cat_file_type': 'commit', 'merge_base_is_ancestor_exit_code': 0}}"
+    },
+    {
+      "id": "project_eligibility",
+      "status": "PASS",
+      "evidence": "eligibility.json records the selected ALLOWED_EVAL project."
+    },
+    {
+      "id": "cohort_isolation",
+      "status": "PASS",
+      "evidence": "eligibility excludes checkpoint-validation and final-held-out use."
+    },
+    {
+      "id": "source_quorum",
+      "status": "PASS",
+      "evidence": "sanitized bundle is ALLOWED_EVAL with PASS approval manifest."
+    },
+    {
+      "id": "sanitized_bundle",
+      "status": "PASS",
+      "evidence": "sanitized bundle verifier status is PASS and bundle hashes are present."
+    },
+    {
+      "id": "reference_absence_from_generator_workspace",
+      "status": "PASS",
+      "evidence": "generator workspace forbidden/reference hit count=0"
+    },
+    {
+      "id": "fresh_generator_process",
+      "status": "PASS",
+      "evidence": "generator codex_proxy metadata records ephemeral read-only execution."
+    },
+    {
+      "id": "generator_model_recording",
+      "status": "PASS",
+      "evidence": "actual_model=unknown"
+    },
+    {
+      "id": "artifact_validation_order",
+      "status": "PASS",
+      "evidence": "validation artifacts exist before freeze evidence."
+    },
+    {
+      "id": "freeze_before_reference_access",
+      "status": "PASS",
+      "evidence": "comparison evidence was created after freeze manifest."
+    },
+    {
+      "id": "hashes",
+      "status": "PASS",
+      "evidence": "generated artifact hashes still match freeze manifest."
+    },
+    {
+      "id": "leakage_scan",
+      "status": "PASS",
+      "evidence": "generation leakage scan is PASS."
+    },
+    {
+      "id": "separate_reviewer_process",
+      "status": "PASS",
+      "evidence": "project reviewer result records fresh local process."
+    },
+    {
+      "id": "reviewer_independence",
+      "status": "PASS",
+      "evidence": "reviewer result records local-only reference access after freeze."
+    },
+    {
+      "id": "effective_revision_manifest",
+      "status": "PASS",
+      "evidence": "effective reference manifest contains three references."
+    },
+    {
+      "id": "score_schema_validity",
+      "status": "PASS",
+      "evidence": "grading and project reviewer schemas validate."
+    },
+    {
+      "id": "comparison_pdf_readability",
+      "status": "PASS",
+      "evidence": "all three generated/reference pairings have readable PDF page metadata."
+    },
+    {
+      "id": "unchanged_frozen_workflow",
+      "status": "PASS",
+      "evidence": "workflow/spec/proxy runner files exist at audit time."
+    },
+    {
+      "id": "complete_test_pass",
+      "status": "PASS",
+      "evidence": "source quorum harness test output records PASS."
+    }
+  ],
+  "summary": {
+    "validity": "PASS",
+    "quality_score": 42,
+    "scorable_coverage": 38,
+    "critical_findings": 0,
+    "high_findings": 3
+  }
+}

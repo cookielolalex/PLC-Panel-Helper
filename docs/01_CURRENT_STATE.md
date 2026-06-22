@@ -1,43 +1,42 @@
 # Current State
 
-Current phase: Phase 1.5 source-guard review packet ready; real generation
-blocked at the human approval gate.
+Current phase: one-project historical mock calibration completed and independently
+audited. Stop at the six-project readiness gate.
 
 Accepted release: none.
 
-Current candidate: bootstrap harness scaffold.
+Current candidate: autonomous evaluation-only source approval and one-project
+calibration harness evidence.
 
-Frozen grader/profile: none for production; `evals/grading_profiles/plc_layout_v1.json`
-is the Phase 0 synthetic grading profile once created and hashed.
+Frozen grader/profile: `evals/grading_profiles/plc_layout_v1.json` is the
+current calibration rubric; no production grader is frozen or approved.
 
-Completed gates: master specification read; workspace root and master SHA-256
-verified; local Codex CLI probed through the configured binary; Git located in
-the bundled runtime and initialized; canonical repository scaffold, schemas,
-agent definitions, skills, task briefs, synthetic fixtures, and harness scripts
-created; initial synthetic tests passed; `repo_explorer` and
-`independent_auditor` children completed with schema-valid result files; D-0003
-approved `SRC-ALL-PROJECTS`; 7,400 files and 4,231 workbook/sheet rows were
-inventoried and hashed; `PH0-SOURCE-UPDATE-AUDIT` and
-`PH1-INVENTORY-AUDIT` passed; PH1.5 spawned two read-only explorers and two
-bounded workers; all four PH1.5 child results validated schema-clean; source
-hash reverification passed; the source-guard review packet was generated for
-12 calibration projects; independent PH1.5 audit completed with schema-valid
-top-level `NOT_VERIFIED` / domain `PH1_5_SOURCE_GUARD_AUDIT_INCONCLUSIVE`
-because the auditor could not independently use Git, while substantive
-source-guard checks passed.
+Completed gates: master specification read; source root `SRC-ALL-PROJECTS`
+approved and reverified; batch-selection compliance verified; autonomous
+evaluation-only source approval policy added; five current-parser candidates
+processed; four-specialist quorum review and adjudication completed; five
+projects reached `ALLOWED_EVAL`; sanitized bundle audit passed; codex_proxy
+synthetic gate and independent proxy audit passed; project `1110104` selected
+without inspecting completed reference content; exactly one blind historical
+mock generation was run as `RUN-1110104-AUTO-EVAL-002`; reviewer-only reference
+comparison and project review completed; final independent audit returned
+`STEP_7C_AUDIT_PASS - READY_FOR_SIX_PROJECT_BASELINE`.
 
-Blockers: no files or worksheets are currently generator-approved (`ALLOWED=0`);
-all candidate evidence is either `FORBIDDEN`, `HUMAN_REVIEW_REQUIRED`,
-`AUTO_DENIED`, `QUARANTINED`, or `PARSER_REQUIRED`. PH1.5 review packet counts:
-56 candidate files, 69 candidate worksheets, 4 auto-denied, 4 quarantined, 46
-parser-required, 69 awaiting human decision, 0 allowed. Canonical CAD block and
-vendor catalog roots remain unresolved unless approved separately. Project-local
-CAD/catalog candidates were indexed but are not approved reusable production
-Knowledge. The WindowsApps `codex` alias returns `Access is denied`; the
-configured local CLI binary was successfully probed.
+Current counts: five candidates processed; `AUTO_DENIED=3`;
+`PARSER_REQUIRED=20`; `QUARANTINED=0`; `AGENT_QUORUM_APPROVED_EVAL=15`;
+`ALLOWED_EVAL` projects=5.
 
-Exact next action: stop at the human approval gate. A human reviewer must fill
-`reports/source_review_batches/batch-001/blank_human_decisions.csv` with
-explicit per-row decisions before any approval validator can pass. Do not begin
-a real-project baseline or generator run until a positive generator manifest has
-explicitly approved files and worksheets and a sanitized bundle verifier passes.
+One-project calibration result: selected project `1110104`; generation status
+`PASS`; validity `PASS`; quality score `42`; scorable coverage `38`;
+critical findings `0`; high findings `3`.
+
+Blockers: do not begin a six-project trial in this task. `ALLOWED_PRODUCTION`
+still requires explicit human approval. Completed target drawings remain
+reference-only evidence and may not enter any generator workspace. Generated
+private binary outputs and reviewer reference sandboxes are local ignored
+artifacts, not committed source.
+
+Exact next action: start a new task only if the user authorizes the
+six-project baseline expansion. Use `orchestration/NEXT_THREAD_PROMPT.txt` as
+the continuation prompt and keep the expansion stopped until explicitly
+requested.

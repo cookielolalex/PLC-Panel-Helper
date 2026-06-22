@@ -1,55 +1,73 @@
 # SESSION CHECKPOINT
 
-Current phase: Phase 1.5 source-guard review packet ready; real generation
-blocked.
+Current phase: one-project historical mock calibration completed and stopped at
+the six-project readiness gate.
+
 Current accepted release: none.
-Current candidate: PH1.5 fail-closed source-guard workflow and review packet.
-Frozen grader/profile: none for production.
-Current goal: block real generation until source items are explicitly reviewed,
-hash-bound, sanitized, and independently verified.
-Completed gates: master spec copied and hashed; local Codex CLI and features
-probed through the configured binary; bundled Git located and repository
-initialized; repository scaffold/schemas/scripts/fixtures created; local tests
-passed; D-0003 source root approved; read-only source inventory generated for
-7,400 files and 4,231 workbook/sheet rows; source-update and finalized inventory
-audits passed; four PH1.5 child tasks completed with schema-valid PASS results;
-source hash reverification passed; `batch-001` source review packet generated;
-independent PH1.5 audit completed with schema-valid top-level `NOT_VERIFIED`
-and domain status `PH1_5_SOURCE_GUARD_AUDIT_INCONCLUSIVE`.
-Active or incomplete tasks: human approval gate for `batch-001`. No real
-generator task may start.
-Accepted changes: bootstrap source selection D-0001; exact-source-root policy
-D-0002; consolidated source root D-0003; PH1.5 source-guard workflow and review
-packet D-0004.
+
+Current candidate: autonomous evaluation-only source approval plus one-project
+calibration harness evidence.
+
+Frozen grader/profile: `evals/grading_profiles/plc_layout_v1.json` for
+calibration only; no production grader or release is frozen.
+
+Current goal: wait for explicit user authorization before beginning any
+six-project baseline expansion.
+
+Completed gates: master spec copied and hashed; `SRC-ALL-PROJECTS` approved and
+source hashes reverified; batch-selection compliance verified; autonomous
+evaluation-only approval policy recorded as D-0006; five current-parser
+candidates processed; 15 items adjudicated `AGENT_QUORUM_APPROVED_EVAL`; five
+projects reached `ALLOWED_EVAL`; source-bundle audit passed; codex_proxy
+synthetic gate and audit passed; project `1110104` selected; run
+`RUN-1110104-AUTO-EVAL-002` generated and validated three PDF output types;
+reviewer comparison and project review completed; final audit returned
+`STEP_7C_AUDIT_PASS - READY_FOR_SIX_PROJECT_BASELINE`.
+
+Active or incomplete tasks: six-project baseline is not started and requires a
+new explicit user request.
+
+Accepted changes: D-0001 through D-0009.
+
 Proposed but unaccepted changes: none.
+
 Current Instructions path: none.
+
 Active production Knowledge paths: none.
+
 Active skill hashes: not yet frozen.
-Latest evidence: `manifests/all_projects_inventory_summary.json`,
-`manifests/all_projects_file_role_index.csv`,
-`manifests/all_projects_workbook_sheet_index.csv`,
-`reports/harness/phase0_test_output.txt`,
-`reports/harness/phase0_child_result_validation.json`,
-`orchestration/results/PH0-SOURCE-UPDATE-AUDIT.json`, and
-`orchestration/results/PH1-INVENTORY-AUDIT.json`,
-`reports/source_review_batches/batch-001/batch_manifest.json`,
-`reports/source_guard_coverage_summary.md`,
-`reports/source_guard_test_report.md`,
-`reports/PH1_5_SOURCE_GUARD_AUDIT.md`, and
-`reports/PH1_5_COORDINATOR_AUDIT_ADDENDUM.md`.
+
+Latest evidence: `manifests/source_guard/autonomous_eval_batch_001.json`,
+`reports/source_review_batches/batch-001/eval_source_bundle_audit.json`,
+`reports/codex_proxy_synthetic/codex_proxy_audit.json`,
+`evals/cases/development/1110104/eligibility.json`,
+`evals/runs/RUN-1110104-AUTO-EVAL-002/generation_complete.json`,
+`evals/runs/RUN-1110104-AUTO-EVAL-002/review/project_reviewer_result.json`,
+and `evals/runs/RUN-1110104-AUTO-EVAL-002/audit/one_project_audit.json`.
+
 Known regressions: none.
-Unresolved questions: no files or worksheets are generator-approved yet;
-canonical CAD block and vendor catalog roots remain unresolved unless approved
-separately; project-local candidates are indexed but not production Knowledge.
-Exact next action: human review must fill
-`reports/source_review_batches/batch-001/blank_human_decisions.csv`; blank rows
-fail validation and currently approve zero source items. Do not begin a
-real-project baseline or generator run.
-Required files to read next: `AGENTS.md`, `docs/01_CURRENT_STATE.md`,
-`orchestration/TASK_REGISTRY.csv`, and child result files.
+
+Unresolved questions: `ALLOWED_PRODUCTION` still requires explicit human
+approval; generated private PDFs and reviewer reference copies are ignored local
+artifacts and should not be committed; six-project expansion has not been
+authorized.
+
+Exact next action: if the user requests it, plan the six-project baseline from
+the `ALLOWED_EVAL` pool while preserving family/cohort isolation. Otherwise do
+not start additional project generation.
+
+Required files to read next: `AGENTS.md`,
+`CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt`, `docs/01_CURRENT_STATE.md`,
+`docs/04_DECISION_LEDGER.md`, `docs/06_EVAL_LEDGER.md`,
+`docs/SESSION_CHECKPOINT.md`, `orchestration/TASK_REGISTRY.csv`, and
+`orchestration/NEXT_THREAD_PROMPT.txt`.
+
 Files that must remain untouched: declared source roots, frozen releases,
-frozen graders, prior run evidence.
+frozen graders, prior immutable run evidence, generated private binaries, and
+reviewer reference sandboxes.
+
 Obsolete context not to reload: old chats, old transcripts, non-canonical spec
 copies.
+
 Starting Git commit for next thread: use the latest checkpoint commit from
 `git log -1 --oneline`; this file cannot self-reference a future commit hash.

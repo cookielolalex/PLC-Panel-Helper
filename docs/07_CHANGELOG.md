@@ -28,3 +28,17 @@
   substantive source-guard checks passed, but the auditor could not verify the
   Git commit with its available tools. Added a coordinator Git verification
   addendum without changing the independent audit result.
+- Added autonomous evaluation-only source approval policy, states, custom
+  agents, Skills, and schemas while preserving the production human-approval
+  requirement.
+- Processed the five current-parser candidates from `batch-001`; 15 items
+  reached `AGENT_QUORUM_APPROVED_EVAL`, five projects reached `ALLOWED_EVAL`,
+  and the independent source-bundle audit passed.
+- Activated and independently audited the codex_proxy synthetic gate with 12
+  passing fixtures.
+- Selected project `1110104`, ran exactly one accepted blind historical mock
+  calibration after preserving one failed attempt, produced reviewer-only
+  comparison evidence, and recorded a project reviewer result.
+- Ran the final one-project independent audit. Result:
+  `STEP_7C_AUDIT_PASS - READY_FOR_SIX_PROJECT_BASELINE`. No six-project trial
+  was started.

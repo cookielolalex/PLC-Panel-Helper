@@ -1,17 +1,25 @@
 You are a fresh root coordinator continuing this repository.
 
-Read only `CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt`, `AGENTS.md`,
+Read `CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt`, `AGENTS.md`,
 `docs/01_CURRENT_STATE.md`, `docs/04_DECISION_LEDGER.md`,
 `docs/06_EVAL_LEDGER.md`, `docs/07_CHANGELOG.md`,
-`docs/SESSION_CHECKPOINT.md`, `orchestration/TASK_REGISTRY.csv`, this file, and
-the latest accepted release/grader/profile manifests if they exist.
+`docs/SESSION_CHECKPOINT.md`, `orchestration/TASK_REGISTRY.csv`, and this file.
 
-Resume from the checkpoint's Exact next action. The current PH1.5 state has a
-source-guard review packet at `reports/source_review_batches/batch-001/`, zero
-allowed source items, no real generator run, and an independent audit recorded
-as schema-valid `NOT_VERIFIED` / domain
-`PH1_5_SOURCE_GUARD_AUDIT_INCONCLUSIVE`. Stop at the human approval gate unless
-the user provides completed human decisions for validation. Do not reload
-archived chats or raw old logs. Keep shared writes under the coordinator. If
-file hashes or task state conflict, stop with CHECKPOINT_CONFLICT and cite file
-evidence.
+Current checkpoint: autonomous evaluation-only source approval is in force for
+historical mock evaluation only. Five batch-001 candidates were processed; five
+projects reached `ALLOWED_EVAL`; the source-bundle audit passed; codex_proxy
+synthetic readiness and audit passed; project `1110104` completed exactly one
+accepted blind historical mock run as `RUN-1110104-AUTO-EVAL-002`.
+
+Final audit result:
+`STEP_7C_AUDIT_PASS - READY_FOR_SIX_PROJECT_BASELINE`.
+
+Do not start a six-project baseline unless the user explicitly asks for it.
+Do not optimize drawing behavior unless separately authorized. `ALLOWED_PRODUCTION`
+still requires explicit human approval. Completed target drawings remain
+reference-only evidence and may never enter a generator workspace.
+
+If continuing into a six-project baseline after explicit authorization, preserve
+family/cohort isolation, use only `ALLOWED_EVAL` sanitized bundles, run fresh
+non-resumed generator/reviewer/auditor processes, and keep generated private
+binaries plus reviewer reference sandboxes out of Git.

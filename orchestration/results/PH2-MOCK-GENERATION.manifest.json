@@ -1,0 +1,25 @@
+{
+  "task_id": "PH2-MOCK-GENERATION",
+  "run_id": "RUN-1110104-AUTO-EVAL-002",
+  "project_id": "1110104",
+  "visible_files": [
+    {
+      "path": "evals/cases/development/1110104/eligibility.json",
+      "sha256": "5FB8A6C31F13C10CF63DC8C1A141ED793D6230D8637D7898E8A182194AA8EC47"
+    },
+    {
+      "path": "evals/runs/RUN-1110104-AUTO-EVAL-002/generation_complete.json",
+      "sha256": "6CCBE897B55E9B8C02D5FBCAF7373876FA841D79E45F8728F0E495C805759C76"
+    },
+    {
+      "path": "evals/runs/RUN-1110104-AUTO-EVAL-002/process_metadata.json",
+      "sha256": "4939785A5362AE4DBC4B60FB6FBFB994629CE82EE7D18ABCA310593187E2ED9C"
+    },
+    {
+      "path": "evals/runs/RUN-1110104-AUTO-EVAL-002/freeze_manifest.json",
+      "sha256": "FBBF66F3722EBCBCC3C761F2920EDF2D5B9E4D1280CED82351BB70EDAD214512"
+    }
+  ],
+  "result_path": "evals/runs/RUN-1110104-AUTO-EVAL-002/generation_complete.json",
+  "status": "PASS"
+}

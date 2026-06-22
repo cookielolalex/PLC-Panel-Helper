@@ -1,0 +1,14 @@
+{
+  "task_id": "PH2-MOCK-GENERATION",
+  "run_id": "RUN-1110104-AUTO-EVAL-002",
+  "agent_type": "mock_case_generator",
+  "events": [
+    "selected ALLOWED_EVAL project 1110104",
+    "started fresh codex_proxy child marker",
+    "built job_spec and drawing_model from sanitized bundle",
+    "rendered and validated three PDF output types",
+    "froze and hashed generated artifacts",
+    "completed leakage scan"
+  ],
+  "status": "PASS"
+}
