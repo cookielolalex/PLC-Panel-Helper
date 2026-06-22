@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source Quorum Adjudication",
+  "type": "object",
+  "required": ["adjudication_id", "project_id", "policy_version", "status", "items", "summary"],
+  "properties": {
+    "adjudication_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "policy_version": {"type": "string"},
+    "status": {
+      "enum": [
+        "AGENT_QUORUM_APPROVED_EVAL",
+        "QUARANTINED",
+        "AUTO_DENIED",
+        "PARSER_REQUIRED",
+        "NO_REVIEWABLE_ITEMS"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["decision_id", "final_state", "file_sha256", "worksheet_fingerprint", "reason_codes"],
+        "properties": {
+          "decision_id": {"type": "string"},
+          "file_id": {"type": "string"},
+          "file_sha256": {"type": "string"},
+          "worksheet_name": {"type": ["string", "null"]},
+          "worksheet_fingerprint": {"type": ["string", "null"]},
+          "final_state": {
+            "enum": [
+              "AGENT_QUORUM_APPROVED_EVAL",
+              "AUTO_DENIED",
+              "PARSER_REQUIRED",
+              "QUARANTINED"
+            ]
+          },
+          "reason_codes": {"type": "array", "items": {"type": "string"}},
+          "review_votes": {"type": "object"},
+          "unresolved_issues": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "summary": {"type": "object"},
+    "run_metadata": {"type": "object"}
+  }
+}

@@ -1,6 +1,6 @@
 # Source Guard Spec
 
-Status: PH1.5 calibration draft.
+Status: PH1.5 calibration draft plus autonomous evaluation-only amendment.
 
 The source guard converts inventory rows into file-and-worksheet review
 decisions. It never approves evidence by model confidence alone.
@@ -9,18 +9,30 @@ decisions. It never approves evidence by model confidence alone.
 
 - `UNREVIEWED`: inventory exists but no policy decision has been applied.
 - `AUTO_DENIED`: deterministic forbidden or unsafe condition.
-- `CANDIDATE`: may be reviewable after all integrity checks pass.
-- `NEEDS_HUMAN_REVIEW`: potentially useful, but insufficient for automation.
 - `PARSER_REQUIRED`: deterministic parser support is missing or failed.
-- `SUPERSEDED`: replaced by a newer approved item or revision relationship.
 - `QUARANTINED`: may be useful later but is unsafe for current calibration.
+- `SUPERSEDED`: replaced by a newer approved item or revision relationship.
+- `AGENT_QUORUM_APPROVED_EVAL`: deterministic source validation passed and all
+  four independent source-review agents returned `ALLOW_EVAL` for the same
+  current file hash, worksheet fingerprint, and project identity.
+- `ALLOWED_EVAL`: evaluation-only sanitized bundle passed verification and
+  independent audit. Only sanitized artifacts in that bundle may enter a
+  historical mock generator workspace.
+- `ALLOWED_PRODUCTION`: explicit human approval remains required.
+- `CANDIDATE`: legacy/intermediate state; may be reviewable after all integrity
+  checks pass.
+- `NEEDS_HUMAN_REVIEW`: legacy manual-review state. It remains fail-closed for
+  production, but may enter the autonomous evaluation-only quorum path when no
+  deterministic denial or quarantine condition exists.
 - `HUMAN_APPROVED`: explicit human approval was recorded.
 - `HUMAN_DENIED`: explicit human denial was recorded.
-- `ALLOWED`: derived final state only after human approval, current hash,
-  current worksheet fingerprint, sanitization, and bundle verification pass.
+- `ALLOWED`: legacy alias for the human-production path. New artifacts must use
+  `ALLOWED_EVAL` or `ALLOWED_PRODUCTION`.
 
-No real source item receives `ALLOWED` during PH1.5. Blank decision cells are
-not approvals.
+No real source item receives production approval during PH1.5. Blank decision
+cells are not approvals. The blank human decision CSV is preserved as
+historical evidence, but the manual-edit gate is superseded for evaluation-only
+trials by `docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md`.
 
 ## Automatic Denial
 
@@ -53,4 +65,3 @@ hashes, worksheet metadata, role, parser status, warnings, reason codes,
 limited inventory-derived previews, and explicit approval instructions. They do
 not include completed-reference images, completed dimensions, reviewer findings,
 scores, or comparison evidence.
-

@@ -49,6 +49,9 @@
         "QUARANTINED",
         "HUMAN_APPROVED",
         "HUMAN_DENIED",
+        "AGENT_QUORUM_APPROVED_EVAL",
+        "ALLOWED_EVAL",
+        "ALLOWED_PRODUCTION",
         "ALLOWED"
       ]
     },
@@ -63,6 +66,9 @@
         "QUARANTINED",
         "HUMAN_APPROVED",
         "HUMAN_DENIED",
+        "AGENT_QUORUM_APPROVED_EVAL",
+        "ALLOWED_EVAL",
+        "ALLOWED_PRODUCTION",
         "ALLOWED"
       ]
     },
@@ -75,4 +81,3 @@
     "sanitized_artifact_hash": {"type": ["string", "null"]}
   }
 }
-

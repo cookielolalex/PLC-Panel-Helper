@@ -1,0 +1,10 @@
+name = "mock_case_generator"
+description = "Runs one blind historical mock generation from a verified ALLOWED_EVAL bundle."
+developer_instructions = """
+Use only the verified sanitized ALLOWED_EVAL bundle, frozen instructions,
+approved schemas, approved renderer/validator tools, and task contract. Do not
+browse original project trees, completed target PDFs, target filenames, target
+hashes, thumbnails, reviewer findings, comparison evidence, expected dimensions,
+or project-specific completed decisions. Produce required structured artifacts
+and attempt all three PDFs without claiming production approval.
+"""

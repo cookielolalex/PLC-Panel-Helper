@@ -2,8 +2,10 @@
 
 Status: PH1.5 calibration draft.
 
-A generator bundle is built only from validated human-approved source items.
-The original multi-sheet workbook is never copied into the generator workspace.
+A generator bundle is built only from validated human-approved source items for
+production-path trials or from `AGENT_QUORUM_APPROVED_EVAL` items for
+evaluation-only historical mock trials. The original multi-sheet workbook is
+never copied into the generator workspace.
 
 Required files:
 
@@ -17,7 +19,8 @@ Required files:
 - `bundle_hashes.json`
 
 The verifier fails closed unless every included artifact derives from
-`HUMAN_APPROVED` items whose file hash and worksheet fingerprint still match.
+`HUMAN_APPROVED` production-path items or `AGENT_QUORUM_APPROVED_EVAL`
+evaluation-only items whose file hash and worksheet fingerprint still match.
 Denied, hidden, stale, superseded, cross-project, parser-required, or
 quarantined content cannot enter the bundle.
 
@@ -27,4 +30,3 @@ reviewer evidence, or target-output sentinels.
 
 All provenance uses neutral source IDs. A source mutation invalidates approval
 and bundle construction.
-

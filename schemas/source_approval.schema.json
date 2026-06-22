@@ -7,6 +7,9 @@
     "approval_manifest_id": {"type": "string"},
     "policy_version": {"type": "string"},
     "status": {"type": "string"},
+    "approval_mode": {
+      "enum": ["HUMAN_PRODUCTION", "AUTONOMOUS_EVALUATION_ONLY"]
+    },
     "decisions": {
       "type": "array",
       "items": {
@@ -14,8 +17,11 @@
         "required": ["decision_id", "human_decision", "reviewer", "file_sha256", "worksheet_fingerprint"],
         "properties": {
           "decision_id": {"type": "string"},
-          "human_decision": {"enum": ["HUMAN_APPROVED", "HUMAN_DENIED", "NEEDS_MORE_EVIDENCE"]},
+          "human_decision": {"enum": ["HUMAN_APPROVED", "HUMAN_DENIED", "NEEDS_MORE_EVIDENCE", "NOT_APPLICABLE_EVAL"]},
           "reviewer": {"type": "string"},
+          "agent_decision": {
+            "enum": ["AGENT_QUORUM_APPROVED_EVAL", "ALLOWED_EVAL", "ALLOWED_PRODUCTION", "HUMAN_APPROVED", "HUMAN_DENIED", "NEEDS_MORE_EVIDENCE", "NOT_APPLICABLE_EVAL"]
+          },
           "file_sha256": {"type": "string"},
           "worksheet_fingerprint": {"type": "string"},
           "notes": {"type": ["string", "null"]}
@@ -24,4 +30,3 @@
     }
   }
 }
-

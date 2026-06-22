@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source Quorum Review",
+  "type": "object",
+  "required": ["review_id", "reviewer_role", "policy_version", "items", "run_metadata"],
+  "properties": {
+    "review_id": {"type": "string"},
+    "reviewer_role": {
+      "enum": [
+        "source_role_classifier",
+        "project_identity_reviewer",
+        "workbook_forensics_reviewer",
+        "leakage_red_team"
+      ]
+    },
+    "policy_version": {"type": "string"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "project_id",
+          "decision_id",
+          "file_id",
+          "file_sha256",
+          "worksheet_name",
+          "worksheet_fingerprint",
+          "decision",
+          "reason_codes",
+          "evidence_ids",
+          "detected_risks",
+          "unresolved_issues"
+        ],
+        "properties": {
+          "project_id": {"type": "string"},
+          "file_id": {"type": "string"},
+          "decision_id": {"type": "string"},
+          "file_sha256": {"type": "string"},
+          "worksheet_name": {"type": ["string", "null"]},
+          "worksheet_fingerprint": {"type": ["string", "null"]},
+          "project_identity": {"type": ["string", "null"]},
+          "decision": {"enum": ["ALLOW_EVAL", "DENY", "QUARANTINE"]},
+          "reason_codes": {"type": "array", "items": {"type": "string"}},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}},
+          "detected_risks": {"type": "array", "items": {"type": "string"}},
+          "unresolved_issues": {"type": "array", "items": {"type": "string"}},
+          "confidence": {"type": ["number", "null"]},
+          "run_metadata": {"type": ["object", "null"]}
+        }
+      }
+    },
+    "run_metadata": {"type": "object"}
+  }
+}
