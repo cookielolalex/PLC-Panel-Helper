@@ -1,0 +1,506 @@
+{
+  "review_id": "batch-001_project_identity_reviewer",
+  "reviewer_role": "project_identity_reviewer",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "items": [
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-8C1C05B6AC4D96",
+      "file_id": "SRC-ALL-PROJECTS-FILE-011F1B9F2837",
+      "file_sha256": "8BCF3F03C1E565043146DB7665FC7E65D98B5A9BFD9A4A9301B62CD5620CCF7F",
+      "worksheet_name": null,
+      "worksheet_fingerprint": null,
+      "project_identity": "1110205",
+      "decision": "DENY",
+      "reason_codes": [
+        "DETERMINISTIC_PARSER_REQUIRED",
+        "WORKSHEET_IDENTITY_NOT_REVIEWABLE"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-8C1C05B6AC4D96",
+        "file:SRC-ALL-PROJECTS-FILE-011F1B9F2837",
+        "project_manifest:1110205",
+        "file_sha256:8BCF3F03C1E565043146DB7665FC7E65D98B5A9BFD9A4A9301B62CD5620CCF7F",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [
+        "legacy_xls_or_unparsed_workbook",
+        "missing_worksheet_fingerprint",
+        "worksheet_visibility_unknown"
+      ],
+      "unresolved_issues": [
+        "parser_required_condition"
+      ],
+      "confidence": 1,
+      "run_metadata": {
+        "source_prefilter_state": "PARSER_REQUIRED",
+        "source_proposed_decision": "PARSER_REQUIRED",
+        "source_reviewable": false,
+        "detected_document_role": "spreadsheet_other",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-011F1B9F2837-XLS-UNPARSED",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-1A20412E3BF4C8",
+      "file_id": "SRC-ALL-PROJECTS-FILE-16AFAD29810B",
+      "file_sha256": "71D6F14B91D2041B9773AE787D69FF07C81EBE692DED9CB372E2B3A2A055185C",
+      "worksheet_name": null,
+      "worksheet_fingerprint": null,
+      "project_identity": "1110205",
+      "decision": "DENY",
+      "reason_codes": [
+        "DETERMINISTIC_PARSER_REQUIRED",
+        "WORKSHEET_IDENTITY_NOT_REVIEWABLE"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-1A20412E3BF4C8",
+        "file:SRC-ALL-PROJECTS-FILE-16AFAD29810B",
+        "project_manifest:1110205",
+        "file_sha256:71D6F14B91D2041B9773AE787D69FF07C81EBE692DED9CB372E2B3A2A055185C",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [
+        "legacy_xls_or_unparsed_workbook",
+        "missing_worksheet_fingerprint",
+        "worksheet_visibility_unknown"
+      ],
+      "unresolved_issues": [
+        "parser_required_condition"
+      ],
+      "confidence": 1,
+      "run_metadata": {
+        "source_prefilter_state": "PARSER_REQUIRED",
+        "source_proposed_decision": "PARSER_REQUIRED",
+        "source_reviewable": false,
+        "detected_document_role": "spreadsheet_other",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-16AFAD29810B-XLS-UNPARSED",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-FD5565DC7BCF22",
+      "file_id": "SRC-ALL-PROJECTS-FILE-32344781657C",
+      "file_sha256": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+      "worksheet_name": "璅蝮質”",
+      "worksheet_fingerprint": "7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA",
+      "project_identity": "1110205",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_IDENTITY_SUPPORTED_BY_MANIFEST_PATH",
+        "NO_CROSS_PROJECT_OR_STALE_SIGNAL"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-FD5565DC7BCF22",
+        "file:SRC-ALL-PROJECTS-FILE-32344781657C",
+        "project_manifest:1110205",
+        "file_sha256:C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+        "worksheet_fingerprint:7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.86,
+      "run_metadata": {
+        "source_prefilter_state": "SUBMIT_TO_REVIEW",
+        "source_proposed_decision": "NEEDS_HUMAN_REVIEW",
+        "source_reviewable": true,
+        "detected_document_role": "allowed_contract_workbook",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-32344781657C-SHEET-001",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-893AF227DF95E8",
+      "file_id": "SRC-ALL-PROJECTS-FILE-32344781657C",
+      "file_sha256": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+      "worksheet_name": "璅閰喟敦銵?",
+      "worksheet_fingerprint": null,
+      "project_identity": "1110205",
+      "decision": "DENY",
+      "reason_codes": [
+        "DETERMINISTIC_AUTO_DENIED",
+        "FORBIDDEN_SOURCE_SIGNAL"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-893AF227DF95E8",
+        "file:SRC-ALL-PROJECTS-FILE-32344781657C",
+        "project_manifest:1110205",
+        "file_sha256:C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [
+        "forbidden_source_signal",
+        "missing_or_denied_worksheet_fingerprint"
+      ],
+      "unresolved_issues": [
+        "deterministic_auto_denied_condition"
+      ],
+      "confidence": 1,
+      "run_metadata": {
+        "source_prefilter_state": "AUTO_DENIED",
+        "source_proposed_decision": "AUTO_DENIED",
+        "source_reviewable": false,
+        "detected_document_role": "allowed_contract_workbook",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-32344781657C-SHEET-002",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-9E7AE8F36A74FD",
+      "file_id": "SRC-ALL-PROJECTS-FILE-32344781657C",
+      "file_sha256": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+      "worksheet_name": "璅?桀??銵?",
+      "worksheet_fingerprint": "CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02",
+      "project_identity": "1110205",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_IDENTITY_SUPPORTED_BY_MANIFEST_PATH",
+        "NO_CROSS_PROJECT_OR_STALE_SIGNAL"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-9E7AE8F36A74FD",
+        "file:SRC-ALL-PROJECTS-FILE-32344781657C",
+        "project_manifest:1110205",
+        "file_sha256:C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+        "worksheet_fingerprint:CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.86,
+      "run_metadata": {
+        "source_prefilter_state": "SUBMIT_TO_REVIEW",
+        "source_proposed_decision": "NEEDS_HUMAN_REVIEW",
+        "source_reviewable": true,
+        "detected_document_role": "allowed_contract_workbook",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-32344781657C-SHEET-003",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-F6B62B487EEDB0",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9575CA3AB1EB",
+      "file_sha256": "E4D9E1D6441D57DBE6CB0FD6F5DFB29F8FFDC02D27A1C1EF286FC2E9AE460BC6",
+      "worksheet_name": null,
+      "worksheet_fingerprint": null,
+      "project_identity": "1110205",
+      "decision": "DENY",
+      "reason_codes": [
+        "DETERMINISTIC_PARSER_REQUIRED",
+        "WORKSHEET_IDENTITY_NOT_REVIEWABLE"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-F6B62B487EEDB0",
+        "file:SRC-ALL-PROJECTS-FILE-9575CA3AB1EB",
+        "project_manifest:1110205",
+        "file_sha256:E4D9E1D6441D57DBE6CB0FD6F5DFB29F8FFDC02D27A1C1EF286FC2E9AE460BC6",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [
+        "legacy_xls_or_unparsed_workbook",
+        "missing_worksheet_fingerprint",
+        "worksheet_visibility_unknown"
+      ],
+      "unresolved_issues": [
+        "parser_required_condition"
+      ],
+      "confidence": 1,
+      "run_metadata": {
+        "source_prefilter_state": "PARSER_REQUIRED",
+        "source_proposed_decision": "PARSER_REQUIRED",
+        "source_reviewable": false,
+        "detected_document_role": "spreadsheet_other",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-9575CA3AB1EB-XLS-UNPARSED",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-9D8E790A58C8AE",
+      "file_id": "SRC-ALL-PROJECTS-FILE-A48305E4E930",
+      "file_sha256": "30AA0EB5EEDFCDAF4BFB2986E109D323407379E7560C8CE7F486AAE3FFA9CEE5",
+      "worksheet_name": null,
+      "worksheet_fingerprint": null,
+      "project_identity": "1110205",
+      "decision": "DENY",
+      "reason_codes": [
+        "DETERMINISTIC_PARSER_REQUIRED",
+        "WORKSHEET_IDENTITY_NOT_REVIEWABLE"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-9D8E790A58C8AE",
+        "file:SRC-ALL-PROJECTS-FILE-A48305E4E930",
+        "project_manifest:1110205",
+        "file_sha256:30AA0EB5EEDFCDAF4BFB2986E109D323407379E7560C8CE7F486AAE3FFA9CEE5",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [
+        "legacy_xls_or_unparsed_workbook",
+        "missing_worksheet_fingerprint",
+        "worksheet_visibility_unknown"
+      ],
+      "unresolved_issues": [
+        "parser_required_condition"
+      ],
+      "confidence": 1,
+      "run_metadata": {
+        "source_prefilter_state": "PARSER_REQUIRED",
+        "source_proposed_decision": "PARSER_REQUIRED",
+        "source_reviewable": false,
+        "detected_document_role": "spreadsheet_other",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-A48305E4E930-XLS-UNPARSED",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-BD827EA3B0D6BD",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C10627CB0F35",
+      "file_sha256": "EF607D4929727F45E49DB35124F0AE388E728BB2E130FEBB09AE6E2AB39AE289",
+      "worksheet_name": null,
+      "worksheet_fingerprint": null,
+      "project_identity": "1110205",
+      "decision": "DENY",
+      "reason_codes": [
+        "DETERMINISTIC_PARSER_REQUIRED",
+        "WORKSHEET_IDENTITY_NOT_REVIEWABLE"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-BD827EA3B0D6BD",
+        "file:SRC-ALL-PROJECTS-FILE-C10627CB0F35",
+        "project_manifest:1110205",
+        "file_sha256:EF607D4929727F45E49DB35124F0AE388E728BB2E130FEBB09AE6E2AB39AE289",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [
+        "legacy_xls_or_unparsed_workbook",
+        "missing_worksheet_fingerprint",
+        "worksheet_visibility_unknown"
+      ],
+      "unresolved_issues": [
+        "parser_required_condition"
+      ],
+      "confidence": 1,
+      "run_metadata": {
+        "source_prefilter_state": "PARSER_REQUIRED",
+        "source_proposed_decision": "PARSER_REQUIRED",
+        "source_reviewable": false,
+        "detected_document_role": "spreadsheet_other",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-C10627CB0F35-XLS-UNPARSED",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-B5CBB9DE92A78B",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963",
+      "file_sha256": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+      "worksheet_name": "璅蝮質”",
+      "worksheet_fingerprint": "7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA",
+      "project_identity": "1110205",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_IDENTITY_SUPPORTED_BY_MANIFEST_PATH",
+        "NO_CROSS_PROJECT_OR_STALE_SIGNAL"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-B5CBB9DE92A78B",
+        "file:SRC-ALL-PROJECTS-FILE-E507D1D25963",
+        "project_manifest:1110205",
+        "file_sha256:D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+        "worksheet_fingerprint:7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.86,
+      "run_metadata": {
+        "source_prefilter_state": "SUBMIT_TO_REVIEW",
+        "source_proposed_decision": "NEEDS_HUMAN_REVIEW",
+        "source_reviewable": true,
+        "detected_document_role": "allowed_material_list_workbook",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963-SHEET-001",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-59B788E902970C",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963",
+      "file_sha256": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+      "worksheet_name": "璅閰喟敦銵?",
+      "worksheet_fingerprint": null,
+      "project_identity": "1110205",
+      "decision": "DENY",
+      "reason_codes": [
+        "DETERMINISTIC_AUTO_DENIED",
+        "FORBIDDEN_SOURCE_SIGNAL"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-59B788E902970C",
+        "file:SRC-ALL-PROJECTS-FILE-E507D1D25963",
+        "project_manifest:1110205",
+        "file_sha256:D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [
+        "forbidden_source_signal",
+        "missing_or_denied_worksheet_fingerprint"
+      ],
+      "unresolved_issues": [
+        "deterministic_auto_denied_condition"
+      ],
+      "confidence": 1,
+      "run_metadata": {
+        "source_prefilter_state": "AUTO_DENIED",
+        "source_proposed_decision": "AUTO_DENIED",
+        "source_reviewable": false,
+        "detected_document_role": "allowed_material_list_workbook",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963-SHEET-002",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110205",
+      "decision_id": "SGD-289C4E13989C26",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963",
+      "file_sha256": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+      "worksheet_name": "璅?桀??銵?",
+      "worksheet_fingerprint": "CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02",
+      "project_identity": "1110205",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_IDENTITY_SUPPORTED_BY_MANIFEST_PATH",
+        "NO_CROSS_PROJECT_OR_STALE_SIGNAL"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110205",
+        "decision:SGD-289C4E13989C26",
+        "file:SRC-ALL-PROJECTS-FILE-E507D1D25963",
+        "project_manifest:1110205",
+        "file_sha256:D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+        "worksheet_fingerprint:CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02",
+        "path_project_id:1110205"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.86,
+      "run_metadata": {
+        "source_prefilter_state": "SUBMIT_TO_REVIEW",
+        "source_proposed_decision": "NEEDS_HUMAN_REVIEW",
+        "source_reviewable": true,
+        "detected_document_role": "allowed_material_list_workbook",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963-SHEET-003",
+        "identity_evidence": {
+          "manifest_project_id": "1110205",
+          "item_project_id": "1110205",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    }
+  ],
+  "run_metadata": {
+    "generated_at": "2026-06-22T00:00:00+08:00",
+    "input_prefilter_summary": "manifests/source_guard/project_manifests/prefilter_summary.json",
+    "input_prefilter_paths": [
+      "manifests\\source_guard\\project_manifests\\1110405\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110205\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110410\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110104\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110204\\deterministic_prefilter.json"
+    ],
+    "item_count": 38,
+    "decision_counts": {
+      "ALLOW_EVAL": 15,
+      "DENY": 23,
+      "QUARANTINE": 0
+    },
+    "deterministic_review_rule": "ALLOW_EVAL only for SUBMIT_TO_REVIEW rows whose manifest project_id is present in the path with no other batch project id and no stale/cross/superseded signal; DENY deterministic PARSER_REQUIRED and AUTO_DENIED rows.",
+    "reviewed_basis": [
+      "AGENTS.md",
+      "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md",
+      "schemas/source_quorum_review.schema.json",
+      "manifests/source_guard/project_manifests/*/deterministic_prefilter.json",
+      "manifests/source_guard/project_manifests/*/review_input.json"
+    ],
+    "forbidden_inputs_read": []
+  }
+}

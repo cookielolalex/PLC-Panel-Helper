@@ -1,0 +1,46 @@
+{
+  "approval_manifest_id": "approval-eval-bundle-1110205",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS",
+  "approval_mode": "AUTONOMOUS_EVALUATION_ONLY",
+  "decisions": [
+    {
+      "decision_id": "SGD-FD5565DC7BCF22",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+      "worksheet_fingerprint": "7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    },
+    {
+      "decision_id": "SGD-9E7AE8F36A74FD",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+      "worksheet_fingerprint": "CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    },
+    {
+      "decision_id": "SGD-B5CBB9DE92A78B",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+      "worksheet_fingerprint": "7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    },
+    {
+      "decision_id": "SGD-289C4E13989C26",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+      "worksheet_fingerprint": "CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    }
+  ],
+  "approved_count": 4,
+  "approval_manifest_hash": "C23FC7ADD5A8F310575B98DF9641CD08D16723C48590A293210E1AE5A540CBB0"
+}

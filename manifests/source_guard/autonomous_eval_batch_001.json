@@ -1,0 +1,159 @@
+{
+  "manifest_id": "autonomous_eval_batch_001",
+  "batch_id": "batch-001",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "created_at": "2026-06-22T11:02:45Z",
+  "git_head": "8e62d6986ba60117f718709afafff4573fc2c3b6",
+  "source_hash_reverification": "reports\\source_hash_reverification_autonomous_eval.json",
+  "candidate_count": 5,
+  "candidates": [
+    {
+      "rank": 1,
+      "project_id": "1110405",
+      "family_id": "國倫水電",
+      "score": 291,
+      "reviewable_decision_ids": [
+        "SGD-2BB8F4C5348957",
+        "SGD-60695E46370264",
+        "SGD-0934CE53139606",
+        "SGD-F941FF6BCB2B6C"
+      ],
+      "excluded_decision_ids": [
+        "SGD-0217C79AC0A2D8",
+        "SGD-54581891916AF9",
+        "SGD-04F75CA0E93D81",
+        "SGD-AF673D3E5641B3",
+        "SGD-9F70E222E978E9"
+      ],
+      "ranking_factors": {
+        "deterministic_parser_success_rows": 4,
+        "parser_required_rows": 5,
+        "auto_denied_rows": 0,
+        "quarantined_rows": 0,
+        "permitted_source_completeness_proxy": 4,
+        "panel_complexity_proxy_workbook_count": 10,
+        "candidate_decision_rows": 9,
+        "family_duplicate_in_batch": true,
+        "ordinary_first_calibration_penalty": 30,
+        "primary_blocker": "visible xlsx rows are parsed and fingerprinted pending human approval"
+      }
+    },
+    {
+      "rank": 2,
+      "project_id": "1110205",
+      "family_id": "昕辰嘉義",
+      "score": 279,
+      "reviewable_decision_ids": [
+        "SGD-FD5565DC7BCF22",
+        "SGD-9E7AE8F36A74FD",
+        "SGD-B5CBB9DE92A78B",
+        "SGD-289C4E13989C26"
+      ],
+      "excluded_decision_ids": [
+        "SGD-8C1C05B6AC4D96",
+        "SGD-1A20412E3BF4C8",
+        "SGD-893AF227DF95E8",
+        "SGD-F6B62B487EEDB0",
+        "SGD-9D8E790A58C8AE",
+        "SGD-BD827EA3B0D6BD",
+        "SGD-59B788E902970C"
+      ],
+      "ranking_factors": {
+        "deterministic_parser_success_rows": 4,
+        "parser_required_rows": 5,
+        "auto_denied_rows": 2,
+        "quarantined_rows": 0,
+        "permitted_source_completeness_proxy": 4,
+        "panel_complexity_proxy_workbook_count": 10,
+        "candidate_decision_rows": 11,
+        "family_duplicate_in_batch": false,
+        "ordinary_first_calibration_penalty": 0,
+        "primary_blocker": "visible xlsx rows are parsed and fingerprinted pending human approval with auto-denied rows excluded"
+      }
+    },
+    {
+      "rank": 3,
+      "project_id": "1110410",
+      "family_id": "國倫水電",
+      "score": 246,
+      "reviewable_decision_ids": [
+        "SGD-F3A5C9E7B2674E",
+        "SGD-E25373215632FB",
+        "SGD-89E1E5092FF4EC"
+      ],
+      "excluded_decision_ids": [
+        "SGD-B6FB5F61E3C292"
+      ],
+      "ranking_factors": {
+        "deterministic_parser_success_rows": 3,
+        "parser_required_rows": 1,
+        "auto_denied_rows": 0,
+        "quarantined_rows": 0,
+        "permitted_source_completeness_proxy": 3,
+        "panel_complexity_proxy_workbook_count": 4,
+        "candidate_decision_rows": 4,
+        "family_duplicate_in_batch": true,
+        "ordinary_first_calibration_penalty": 30,
+        "primary_blocker": "visible xlsx rows are parsed and fingerprinted pending human approval"
+      }
+    },
+    {
+      "rank": 4,
+      "project_id": "1110104",
+      "family_id": "飛達機電",
+      "score": 135,
+      "reviewable_decision_ids": [
+        "SGD-628D223B34A365",
+        "SGD-29710C0EE48604"
+      ],
+      "excluded_decision_ids": [
+        "SGD-FCF2F785B0BD18",
+        "SGD-57C8A777DF4127",
+        "SGD-BE3A43BF93A8B5",
+        "SGD-D81C49DC8B8C31"
+      ],
+      "ranking_factors": {
+        "deterministic_parser_success_rows": 2,
+        "parser_required_rows": 4,
+        "auto_denied_rows": 0,
+        "quarantined_rows": 0,
+        "permitted_source_completeness_proxy": 2,
+        "panel_complexity_proxy_workbook_count": 9,
+        "candidate_decision_rows": 6,
+        "family_duplicate_in_batch": false,
+        "ordinary_first_calibration_penalty": 0,
+        "primary_blocker": "visible xlsx rows are parsed and fingerprinted pending human approval"
+      }
+    },
+    {
+      "rank": 5,
+      "project_id": "1110204",
+      "family_id": "宇博義竹",
+      "score": 105,
+      "reviewable_decision_ids": [
+        "SGD-5F108DF896D683",
+        "SGD-1F9E956311AE35"
+      ],
+      "excluded_decision_ids": [
+        "SGD-E47CE60F98FBF0",
+        "SGD-C5E0EFB26076B0",
+        "SGD-343B359609575F",
+        "SGD-B1D85654CF548B",
+        "SGD-B45D2F6E06C4AA",
+        "SGD-C39D3A376755C2"
+      ],
+      "ranking_factors": {
+        "deterministic_parser_success_rows": 2,
+        "parser_required_rows": 5,
+        "auto_denied_rows": 1,
+        "quarantined_rows": 0,
+        "permitted_source_completeness_proxy": 2,
+        "panel_complexity_proxy_workbook_count": 9,
+        "candidate_decision_rows": 8,
+        "family_duplicate_in_batch": false,
+        "ordinary_first_calibration_penalty": 0,
+        "primary_blocker": "visible xlsx rows are parsed and fingerprinted pending human approval with one auto-denied stale or forbidden row"
+      }
+    }
+  ]
+}

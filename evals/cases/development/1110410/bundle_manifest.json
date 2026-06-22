@@ -1,0 +1,27 @@
+{
+  "bundle_id": "eval-bundle-1110410",
+  "project_id": "1110410",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "ALLOWED_EVAL",
+  "approval_mode": "AUTONOMOUS_EVALUATION_ONLY",
+  "artifacts": [
+    {
+      "artifact_id": "SGD-F3A5C9E7B2674E",
+      "path": "sanitized_inputs\\SGD-F3A5C9E7B2674E_標單總表.csv",
+      "sha256": "3CD0572E08B4C5B66425546C208EBEE67444A5A11DA5766F8E6E844344DB53FF",
+      "source_decision_id": "SGD-F3A5C9E7B2674E"
+    },
+    {
+      "artifact_id": "SGD-E25373215632FB",
+      "path": "sanitized_inputs\\SGD-E25373215632FB_標單詳細表.csv",
+      "sha256": "3A485A4BB44513A90F2FFE2FFE284D2B06E993C483F9042A9AC2306A43B53286",
+      "source_decision_id": "SGD-E25373215632FB"
+    },
+    {
+      "artifact_id": "SGD-89E1E5092FF4EC",
+      "path": "sanitized_inputs\\SGD-89E1E5092FF4EC_標單單價分析表.csv",
+      "sha256": "46905E72ED001982C8190D8227D6E3F7CEE54C956CFE8F3F37C758E34716FCF4",
+      "source_decision_id": "SGD-89E1E5092FF4EC"
+    }
+  ]
+}

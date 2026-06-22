@@ -1,0 +1,219 @@
+{
+  "prefilter_id": "deterministic_prefilter_1110104",
+  "project_id": "1110104",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS_SUBMIT_TO_REVIEW",
+  "items": [
+    {
+      "decision_id": "SGD-628D223B34A365",
+      "file_id": "SRC-ALL-PROJECTS-FILE-4377C2CB6116",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-4377C2CB6116-SHEET-001",
+      "project_id": "1110104",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110104飛達機電屏東縣林邊溪伏流水\\屏東林邊溪伏流水工程材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "FFB938D6473065EACA1E5D7E1E1ABE16866BAE88E5A57A47EEF18A99112465DE",
+      "worksheet_name": "估價單",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "31DE29085B628C7C191106E8FEAC74F7281C230CA3FBC977040E1AE7D99E6635",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "FFB938D6473065EACA1E5D7E1E1ABE16866BAE88E5A57A47EEF18A99112465DE"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "31DE29085B628C7C191106E8FEAC74F7281C230CA3FBC977040E1AE7D99E6635"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-FCF2F785B0BD18",
+      "file_id": "SRC-ALL-PROJECTS-FILE-46532BDC693B",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-46532BDC693B-XLS-UNPARSED",
+      "project_id": "1110104",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110104飛達機電屏東縣林邊溪伏流水\\工作記錄單飛達屏東縣林邊溪伏流水xls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "9A7C81F094879476DB80071DC80BEEB36ED921529E56C401DC872089420A69A4",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "9A7C81F094879476DB80071DC80BEEB36ED921529E56C401DC872089420A69A4"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-57C8A777DF4127",
+      "file_id": "SRC-ALL-PROJECTS-FILE-6C7F253617B7",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-6C7F253617B7-XLS-UNPARSED",
+      "project_id": "1110104",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110104飛達機電屏東縣林邊溪伏流水\\飛達屏東縣林邊溪伏流水示範場址生產能力分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "9A9D46BA64A789746A2652FD9A170D8373FCAFAECE825D2ABF91D05285E3A8A6",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "9A9D46BA64A789746A2652FD9A170D8373FCAFAECE825D2ABF91D05285E3A8A6"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-BE3A43BF93A8B5",
+      "file_id": "SRC-ALL-PROJECTS-FILE-92F5A780C787",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-92F5A780C787-XLS-UNPARSED",
+      "project_id": "1110104",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110104飛達機電屏東縣林邊溪伏流水\\飛達機電屏東林邊溪伏流水成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "5950533ECE857CED21C9AF488BB1CBEF7E072319BC0AA8085DDC0B44EAB987D2",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "5950533ECE857CED21C9AF488BB1CBEF7E072319BC0AA8085DDC0B44EAB987D2"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-29710C0EE48604",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9ECE0255FAC2",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9ECE0255FAC2-SHEET-001",
+      "project_id": "1110104",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110104飛達機電屏東縣林邊溪伏流水\\屏東林邊溪伏流水工程合約.xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "A11D21C62C571D5FC6EC56B69C3AE5ABFD088F54F5877A3ABFF4C10EBD0C0C13",
+      "worksheet_name": "估價單",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "5019008FF406DC39F2867611B1C6DD6231025AEF90ED88ABCF0F94CA51231162",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A11D21C62C571D5FC6EC56B69C3AE5ABFD088F54F5877A3ABFF4C10EBD0C0C13"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "5019008FF406DC39F2867611B1C6DD6231025AEF90ED88ABCF0F94CA51231162"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-D81C49DC8B8C31",
+      "file_id": "SRC-ALL-PROJECTS-FILE-B2B0E1EF630F",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-B2B0E1EF630F-XLS-UNPARSED",
+      "project_id": "1110104",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110104飛達機電屏東縣林邊溪伏流水\\飛達屏東縣林邊溪伏流水示範場址合約審查會議.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "4B27DBA8A968D8B185B68CB1C88C0D0F96345A25B510C3A0EECFEBAA68F98888",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "4B27DBA8A968D8B185B68CB1C88C0D0F96345A25B510C3A0EECFEBAA68F98888"
+        }
+      ],
+      "reviewable": false
+    }
+  ],
+  "summary": {
+    "SUBMIT_TO_REVIEW": 2,
+    "PARSER_REQUIRED": 4
+  },
+  "run_metadata": {
+    "source_decisions": "manifests\\source_guard\\source_decisions.csv",
+    "file_index": "manifests\\all_projects_file_role_index.csv",
+    "candidate_manifest": "manifests\\source_guard\\autonomous_eval_batch_001.json"
+  }
+}

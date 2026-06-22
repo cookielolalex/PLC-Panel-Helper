@@ -1,0 +1,285 @@
+{
+  "prefilter_id": "deterministic_prefilter_1110204",
+  "project_id": "1110204",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS_SUBMIT_TO_REVIEW",
+  "items": [
+    {
+      "decision_id": "SGD-E47CE60F98FBF0",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1C094DE54353",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-1C094DE54353-XLS-UNPARSED",
+      "project_id": "1110204",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\宇博義竹所六區受支援水量計分項ls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "7EB9C31A9F35DC600174F447DEC863BB7679183AC6736DD986BB841244C5CBAD",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "7EB9C31A9F35DC600174F447DEC863BB7679183AC6736DD986BB841244C5CBAD"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-C5E0EFB26076B0",
+      "file_id": "SRC-ALL-PROJECTS-FILE-54E0F32F1D77",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-54E0F32F1D77-XLS-UNPARSED",
+      "project_id": "1110204",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\宇博義竹所六區支受援水量計合約審查表.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "DE6D4B36FFFF5ED51CB8593C90E2E161BC2C057AC7C4D7076EC395AD7B880EB2",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "DE6D4B36FFFF5ED51CB8593C90E2E161BC2C057AC7C4D7076EC395AD7B880EB2"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-5F108DF896D683",
+      "file_id": "SRC-ALL-PROJECTS-FILE-742A1E5F7FEE",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-742A1E5F7FEE-SHEET-001",
+      "project_id": "1110204",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\義竹六區支受援水量計材料清單1.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "A34733138D9F846F17B381FA31EECF9AD37697252C4F684F26BAB743C62D487A",
+      "worksheet_name": "標單總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "E35E4089C1A054A0697ADFE8F789B25C24532EAF66934E0BD23D7919CF075F7A",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A34733138D9F846F17B381FA31EECF9AD37697252C4F684F26BAB743C62D487A"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "E35E4089C1A054A0697ADFE8F789B25C24532EAF66934E0BD23D7919CF075F7A"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-343B359609575F",
+      "file_id": "SRC-ALL-PROJECTS-FILE-742A1E5F7FEE",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-742A1E5F7FEE-SHEET-002",
+      "project_id": "1110204",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\義竹六區支受援水量計材料清單1.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "A34733138D9F846F17B381FA31EECF9AD37697252C4F684F26BAB743C62D487A",
+      "worksheet_name": "標單詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "AUTO_DENIED",
+      "prefilter_state": "AUTO_DENIED",
+      "reason_codes": [
+        "FORBIDDEN_LABEL_OR_ROLE",
+        "FORBIDDEN_SOURCE",
+        "MISSING_WORKSHEET_FINGERPRINT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A34733138D9F846F17B381FA31EECF9AD37697252C4F684F26BAB743C62D487A"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-1F9E956311AE35",
+      "file_id": "SRC-ALL-PROJECTS-FILE-742A1E5F7FEE",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-742A1E5F7FEE-SHEET-003",
+      "project_id": "1110204",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\義竹六區支受援水量計材料清單1.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "A34733138D9F846F17B381FA31EECF9AD37697252C4F684F26BAB743C62D487A",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "BFD62E07A86628D5D043985E5F82541824B73CBC0DA193CF58A769298DA1F186",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A34733138D9F846F17B381FA31EECF9AD37697252C4F684F26BAB743C62D487A"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "BFD62E07A86628D5D043985E5F82541824B73CBC0DA193CF58A769298DA1F186"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-B1D85654CF548B",
+      "file_id": "SRC-ALL-PROJECTS-FILE-809201460996",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-809201460996-XLS-UNPARSED",
+      "project_id": "1110204",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\宇博義竹所六區支受援水量計訂單分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "0C68C8441EBC15BE83215ACD74D9F02733821DD9AA7814DB1E557A14891EB583",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "0C68C8441EBC15BE83215ACD74D9F02733821DD9AA7814DB1E557A14891EB583"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-B45D2F6E06C4AA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-BC0FE841978B",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-BC0FE841978B-XLS-UNPARSED",
+      "project_id": "1110204",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\宇博義竹所六區支受援水量計生產能力分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "69C85DF39BADDF761AFACDDD089F8FACF53F08FA7F1C00DD69FC7AF7CFF4830E",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "69C85DF39BADDF761AFACDDD089F8FACF53F08FA7F1C00DD69FC7AF7CFF4830E"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-C39D3A376755C2",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E7224B2D2459",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-E7224B2D2459-XLS-UNPARSED",
+      "project_id": "1110204",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\工作記錄單宇博義竹所六區支受援水量計s.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "EE0E5137FDCEA852165F8769657137BE05C63E66A602FB3191F0197DBEC855DD",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "EE0E5137FDCEA852165F8769657137BE05C63E66A602FB3191F0197DBEC855DD"
+        }
+      ],
+      "reviewable": false
+    }
+  ],
+  "summary": {
+    "PARSER_REQUIRED": 5,
+    "SUBMIT_TO_REVIEW": 2,
+    "AUTO_DENIED": 1
+  },
+  "run_metadata": {
+    "source_decisions": "manifests\\source_guard\\source_decisions.csv",
+    "file_index": "manifests\\all_projects_file_role_index.csv",
+    "candidate_manifest": "manifests\\source_guard\\autonomous_eval_batch_001.json"
+  }
+}

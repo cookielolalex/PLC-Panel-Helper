@@ -1,0 +1,181 @@
+{
+  "review_id": "leakage_red_team_batch_001",
+  "reviewer_role": "leakage_red_team",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "items": [
+    {
+      "project_id": "1110104",
+      "file_id": "SRC-ALL-PROJECTS-FILE-4377C2CB6116",
+      "decision_id": "SGD-628D223B34A365",
+      "file_sha256": "FFB938D6473065EACA1E5D7E1E1ABE16866BAE88E5A57A47EEF18A99112465DE",
+      "worksheet_name": null,
+      "worksheet_fingerprint": "31DE29085B628C7C191106E8FEAC74F7281C230CA3FBC977040E1AE7D99E6635",
+      "project_identity": "1110104",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA"
+      ],
+      "evidence_ids": [
+        "SGD-628D223B34A365",
+        "SRC-ALL-PROJECTS-FILE-4377C2CB6116",
+        "SRC-ALL-PROJECTS-FILE-4377C2CB6116-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.83,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110104",
+      "file_id": "SRC-ALL-PROJECTS-FILE-46532BDC693B",
+      "decision_id": "SGD-FCF2F785B0BD18",
+      "file_sha256": "9A7C81F094879476DB80071DC80BEEB36ED921529E56C401DC872089420A69A4",
+      "worksheet_name": "",
+      "worksheet_fingerprint": "",
+      "project_identity": "1110104",
+      "decision": "DENY",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "PARSER_REQUIRED"
+      ],
+      "evidence_ids": [
+        "SGD-FCF2F785B0BD18",
+        "SRC-ALL-PROJECTS-FILE-46532BDC693B",
+        "SRC-ALL-PROJECTS-FILE-46532BDC693B-XLS-UNPARSED"
+      ],
+      "detected_risks": [
+        "UNSUPPORTED_PARSER"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110104",
+      "file_id": "SRC-ALL-PROJECTS-FILE-6C7F253617B7",
+      "decision_id": "SGD-57C8A777DF4127",
+      "file_sha256": "9A9D46BA64A789746A2652FD9A170D8373FCAFAECE825D2ABF91D05285E3A8A6",
+      "worksheet_name": "",
+      "worksheet_fingerprint": "",
+      "project_identity": "1110104",
+      "decision": "DENY",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "PARSER_REQUIRED"
+      ],
+      "evidence_ids": [
+        "SGD-57C8A777DF4127",
+        "SRC-ALL-PROJECTS-FILE-6C7F253617B7",
+        "SRC-ALL-PROJECTS-FILE-6C7F253617B7-XLS-UNPARSED"
+      ],
+      "detected_risks": [
+        "UNSUPPORTED_PARSER"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110104",
+      "file_id": "SRC-ALL-PROJECTS-FILE-92F5A780C787",
+      "decision_id": "SGD-BE3A43BF93A8B5",
+      "file_sha256": "5950533ECE857CED21C9AF488BB1CBEF7E072319BC0AA8085DDC0B44EAB987D2",
+      "worksheet_name": "",
+      "worksheet_fingerprint": "",
+      "project_identity": "1110104",
+      "decision": "DENY",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "PARSER_REQUIRED"
+      ],
+      "evidence_ids": [
+        "SGD-BE3A43BF93A8B5",
+        "SRC-ALL-PROJECTS-FILE-92F5A780C787",
+        "SRC-ALL-PROJECTS-FILE-92F5A780C787-XLS-UNPARSED"
+      ],
+      "detected_risks": [
+        "UNSUPPORTED_PARSER"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110104",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9ECE0255FAC2",
+      "decision_id": "SGD-29710C0EE48604",
+      "file_sha256": "A11D21C62C571D5FC6EC56B69C3AE5ABFD088F54F5877A3ABFF4C10EBD0C0C13",
+      "worksheet_name": null,
+      "worksheet_fingerprint": "5019008FF406DC39F2867611B1C6DD6231025AEF90ED88ABCF0F94CA51231162",
+      "project_identity": "1110104",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA"
+      ],
+      "evidence_ids": [
+        "SGD-29710C0EE48604",
+        "SRC-ALL-PROJECTS-FILE-9ECE0255FAC2",
+        "SRC-ALL-PROJECTS-FILE-9ECE0255FAC2-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.83,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110104",
+      "file_id": "SRC-ALL-PROJECTS-FILE-B2B0E1EF630F",
+      "decision_id": "SGD-D81C49DC8B8C31",
+      "file_sha256": "4B27DBA8A968D8B185B68CB1C88C0D0F96345A25B510C3A0EECFEBAA68F98888",
+      "worksheet_name": "",
+      "worksheet_fingerprint": "",
+      "project_identity": "1110104",
+      "decision": "DENY",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "PARSER_REQUIRED"
+      ],
+      "evidence_ids": [
+        "SGD-D81C49DC8B8C31",
+        "SRC-ALL-PROJECTS-FILE-B2B0E1EF630F",
+        "SRC-ALL-PROJECTS-FILE-B2B0E1EF630F-XLS-UNPARSED"
+      ],
+      "detected_risks": [
+        "UNSUPPORTED_PARSER"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    }
+  ],
+  "run_metadata": {
+    "prefilter_root": "manifests\\source_guard\\project_manifests",
+    "created_at": "2026-06-22T11:08:17Z",
+    "independence_note": "Generated from role-specific deterministic rules without reading other reviewer outputs.",
+    "prefilter_parse_note": "Input prefilter files were line-structured but not strict JSON; malformed worksheet names were emitted as null."
+  }
+}

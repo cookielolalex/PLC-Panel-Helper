@@ -1,0 +1,13 @@
+project_id,project_year_prefix,path_year_prefix,family_id,batch_stratum,has_all_three_completed_targets,workbook_count,candidate_decision_rows,needs_human_review_rows,parser_required_rows,quarantined_rows,auto_denied_rows,parsed_with_fingerprint_rows,reviewable_fingerprinted_visible_xlsx_rows,current_parser_bundle_possible,primary_blocker
+1110101,111,111,飛達鳥嘴潭下游送水管E,straightforward_visible_candidate,true,5,5,0,5,0,0,0,0,false,all candidate rows require the unsupported legacy xls parser
+1110103,111,111,國倫水電,straightforward_visible_candidate,true,6,3,0,3,0,0,0,0,false,all candidate rows require the unsupported legacy xls parser
+1110102,111,111,聯電FA,multi_panel_or_multi_workbook,true,6,3,0,3,0,0,0,0,false,all candidate rows require the unsupported legacy xls parser
+1110104,111,111,飛達機電,multi_panel_or_multi_workbook,true,9,6,2,4,0,0,2,2,true,visible xlsx rows are parsed and fingerprinted pending human approval
+1110203,111,111,宇博高雄,stale_or_unrelated_sheet_risk,true,10,7,0,7,0,0,0,0,false,all candidate rows require the unsupported legacy xls parser
+1110204,111,111,宇博義竹,stale_or_unrelated_sheet_risk,true,9,8,2,5,0,1,2,2,true,visible xlsx rows are parsed and fingerprinted pending human approval with one auto-denied stale or forbidden row
+1110504,111,111,三裕正,hidden_sheet_risk,true,4,4,0,0,4,0,4,0,false,all currently parseable rows are quarantined for hidden or link or named-range risk
+1110404,111,111,宇博實業,revision_supersession_risk,true,10,7,0,7,0,0,0,0,false,all candidate rows require the unsupported legacy xls parser
+1120102,112,112,核陽工程,conflicting_project_identity_risk,true,5,2,0,1,0,1,0,0,false,no reviewable parsed worksheet rows remain after auto-deny and parser-required blockers
+1110205,111,111,昕辰嘉義,parser_required_risk,true,10,11,4,5,0,2,4,4,true,visible xlsx rows are parsed and fingerprinted pending human approval with auto-denied rows excluded
+1110405,111,111,國倫水電,seeded_random_family_separated,true,10,9,4,5,0,0,4,4,true,visible xlsx rows are parsed and fingerprinted pending human approval
+1110410,111,111,國倫水電,backfill_reference_complete,true,4,4,3,1,0,0,3,3,true,visible xlsx rows are parsed and fingerprinted pending human approval

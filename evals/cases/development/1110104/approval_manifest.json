@@ -1,0 +1,28 @@
+{
+  "approval_manifest_id": "approval-eval-bundle-1110104",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS",
+  "approval_mode": "AUTONOMOUS_EVALUATION_ONLY",
+  "decisions": [
+    {
+      "decision_id": "SGD-628D223B34A365",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "FFB938D6473065EACA1E5D7E1E1ABE16866BAE88E5A57A47EEF18A99112465DE",
+      "worksheet_fingerprint": "31DE29085B628C7C191106E8FEAC74F7281C230CA3FBC977040E1AE7D99E6635",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    },
+    {
+      "decision_id": "SGD-29710C0EE48604",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "A11D21C62C571D5FC6EC56B69C3AE5ABFD088F54F5877A3ABFF4C10EBD0C0C13",
+      "worksheet_fingerprint": "5019008FF406DC39F2867611B1C6DD6231025AEF90ED88ABCF0F94CA51231162",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    }
+  ],
+  "approved_count": 2,
+  "approval_manifest_hash": "371B50293C08B52E378D8863FD99C953581800357AFB9728E958F0BEB27C1695"
+}

@@ -1,0 +1,322 @@
+{
+  "prefilter_id": "deterministic_prefilter_1110405",
+  "project_id": "1110405",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS_SUBMIT_TO_REVIEW",
+  "items": [
+    {
+      "decision_id": "SGD-0217C79AC0A2D8",
+      "file_id": "SRC-ALL-PROJECTS-FILE-423435B0344F",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-423435B0344F-XLS-UNPARSED",
+      "project_id": "1110405",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\國倫古坑梅山站支援竹崎機電成本分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "975E5BCC2ED5E186FE9992A0F1E75E567E82772B30EE747E17B2A0798E43D864",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "975E5BCC2ED5E186FE9992A0F1E75E567E82772B30EE747E17B2A0798E43D864"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-2BB8F4C5348957",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5A7221226009",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5A7221226009-SHEET-001",
+      "project_id": "1110405",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\古坑梅山站支援竹崎供水合約.xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "C412F50C94ECEA93DD3CAF56A34F1BC1B9DB3B1C1A0276AB2E0426B43D31594C",
+      "worksheet_name": "標單總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "0F1C68C85203EFE5BC019510A6CDF687E07074A651A47740D719961775B63ADB",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "C412F50C94ECEA93DD3CAF56A34F1BC1B9DB3B1C1A0276AB2E0426B43D31594C"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "0F1C68C85203EFE5BC019510A6CDF687E07074A651A47740D719961775B63ADB"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-60695E46370264",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5A7221226009",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5A7221226009-SHEET-002",
+      "project_id": "1110405",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\古坑梅山站支援竹崎供水合約.xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "C412F50C94ECEA93DD3CAF56A34F1BC1B9DB3B1C1A0276AB2E0426B43D31594C",
+      "worksheet_name": "標單詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "761880610C53C55472E1F8C390605774369896C4C3DE4A05DBBFF29AA51C6AE5",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "C412F50C94ECEA93DD3CAF56A34F1BC1B9DB3B1C1A0276AB2E0426B43D31594C"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "761880610C53C55472E1F8C390605774369896C4C3DE4A05DBBFF29AA51C6AE5"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-0934CE53139606",
+      "file_id": "SRC-ALL-PROJECTS-FILE-68E647B26CC3",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-68E647B26CC3-SHEET-001",
+      "project_id": "1110405",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\古坑梅山站支援竹崎供水材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "07183FC05D395EBCCF3AF389957FE2FA7D321C38FCFAF4A1F4CF6FF8B92A3965",
+      "worksheet_name": "標單總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "0F1C68C85203EFE5BC019510A6CDF687E07074A651A47740D719961775B63ADB",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "07183FC05D395EBCCF3AF389957FE2FA7D321C38FCFAF4A1F4CF6FF8B92A3965"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "0F1C68C85203EFE5BC019510A6CDF687E07074A651A47740D719961775B63ADB"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-F941FF6BCB2B6C",
+      "file_id": "SRC-ALL-PROJECTS-FILE-68E647B26CC3",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-68E647B26CC3-SHEET-002",
+      "project_id": "1110405",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\古坑梅山站支援竹崎供水材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "07183FC05D395EBCCF3AF389957FE2FA7D321C38FCFAF4A1F4CF6FF8B92A3965",
+      "worksheet_name": "標單詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "B12366907E792317BE71F0816A85EB4623FAE8AF83B2117E35AB2AF333F2DAFC",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "07183FC05D395EBCCF3AF389957FE2FA7D321C38FCFAF4A1F4CF6FF8B92A3965"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "B12366907E792317BE71F0816A85EB4623FAE8AF83B2117E35AB2AF333F2DAFC"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-54581891916AF9",
+      "file_id": "SRC-ALL-PROJECTS-FILE-8882CDA243ED",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-8882CDA243ED-XLS-UNPARSED",
+      "project_id": "1110405",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\國倫水電古坑梅山站支援竹崎機電會議審查表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "1EF4FD7B988EE2CF2A6A80F59964F1A45BE1747B0C1C9EC287AB6C3616F7E2B0",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "1EF4FD7B988EE2CF2A6A80F59964F1A45BE1747B0C1C9EC287AB6C3616F7E2B0"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-04F75CA0E93D81",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9EB302A16F6B",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9EB302A16F6B-XLS-UNPARSED",
+      "project_id": "1110405",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\國倫古坑所梅山站支援竹崎成本分析分項.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "2F4EA672E1A51AE7853C38AFDBC86AB995B1CDA1677C01CFFBD3D54F21CEE917",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "2F4EA672E1A51AE7853C38AFDBC86AB995B1CDA1677C01CFFBD3D54F21CEE917"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-AF673D3E5641B3",
+      "file_id": "SRC-ALL-PROJECTS-FILE-D6ED7A4231A7",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-D6ED7A4231A7-XLS-UNPARSED",
+      "project_id": "1110405",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\工作記錄單國倫水古坑梅山站支援竹崎所機電ls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "F832EACFE8F34D79DD7281EDBCC0B419AE6928CEF021BB3954488D7A202D74F7",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "F832EACFE8F34D79DD7281EDBCC0B419AE6928CEF021BB3954488D7A202D74F7"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-9F70E222E978E9",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DCCC80E221B1",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-DCCC80E221B1-XLS-UNPARSED",
+      "project_id": "1110405",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\國倫水電古坑梅山站支援竹崎機電生產能力分表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "CF92B269553DD3B1AA6D771A793CB863FA8B7CAB0DD645F6674D4AE8D0EA8A9B",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "CF92B269553DD3B1AA6D771A793CB863FA8B7CAB0DD645F6674D4AE8D0EA8A9B"
+        }
+      ],
+      "reviewable": false
+    }
+  ],
+  "summary": {
+    "PARSER_REQUIRED": 5,
+    "SUBMIT_TO_REVIEW": 4
+  },
+  "run_metadata": {
+    "source_decisions": "manifests\\source_guard\\source_decisions.csv",
+    "file_index": "manifests\\all_projects_file_role_index.csv",
+    "candidate_manifest": "manifests\\source_guard\\autonomous_eval_batch_001.json"
+  }
+}

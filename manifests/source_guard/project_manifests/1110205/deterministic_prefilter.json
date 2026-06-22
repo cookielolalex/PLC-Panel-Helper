@@ -1,0 +1,387 @@
+{
+  "prefilter_id": "deterministic_prefilter_1110205",
+  "project_id": "1110205",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS_SUBMIT_TO_REVIEW",
+  "items": [
+    {
+      "decision_id": "SGD-8C1C05B6AC4D96",
+      "file_id": "SRC-ALL-PROJECTS-FILE-011F1B9F2837",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-011F1B9F2837-XLS-UNPARSED",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\新陳中埔頂寮橫坑供水會議審查.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "8BCF3F03C1E565043146DB7665FC7E65D98B5A9BFD9A4A9301B62CD5620CCF7F",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "8BCF3F03C1E565043146DB7665FC7E65D98B5A9BFD9A4A9301B62CD5620CCF7F"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-1A20412E3BF4C8",
+      "file_id": "SRC-ALL-PROJECTS-FILE-16AFAD29810B",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-16AFAD29810B-XLS-UNPARSED",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\新陳嘉義中埔頂寮橫坑供水訂單成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "71D6F14B91D2041B9773AE787D69FF07C81EBE692DED9CB372E2B3A2A055185C",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "71D6F14B91D2041B9773AE787D69FF07C81EBE692DED9CB372E2B3A2A055185C"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-FD5565DC7BCF22",
+      "file_id": "SRC-ALL-PROJECTS-FILE-32344781657C",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-32344781657C-SHEET-001",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\中埔頂寮橫坑加壓站合約.xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+      "worksheet_name": "標單總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-893AF227DF95E8",
+      "file_id": "SRC-ALL-PROJECTS-FILE-32344781657C",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-32344781657C-SHEET-002",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\中埔頂寮橫坑加壓站合約.xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+      "worksheet_name": "標單詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "AUTO_DENIED",
+      "prefilter_state": "AUTO_DENIED",
+      "reason_codes": [
+        "FORBIDDEN_LABEL_OR_ROLE",
+        "FORBIDDEN_SOURCE",
+        "MISSING_WORKSHEET_FINGERPRINT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-9E7AE8F36A74FD",
+      "file_id": "SRC-ALL-PROJECTS-FILE-32344781657C",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-32344781657C-SHEET-003",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\中埔頂寮橫坑加壓站合約.xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-F6B62B487EEDB0",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9575CA3AB1EB",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9575CA3AB1EB-XLS-UNPARSED",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\新陳中埔頂寮橫坑供水生產能力分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "E4D9E1D6441D57DBE6CB0FD6F5DFB29F8FFDC02D27A1C1EF286FC2E9AE460BC6",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "E4D9E1D6441D57DBE6CB0FD6F5DFB29F8FFDC02D27A1C1EF286FC2E9AE460BC6"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-9D8E790A58C8AE",
+      "file_id": "SRC-ALL-PROJECTS-FILE-A48305E4E930",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-A48305E4E930-XLS-UNPARSED",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\新陳嘉義中埔頂寮橫坑供水訂單分項成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "30AA0EB5EEDFCDAF4BFB2986E109D323407379E7560C8CE7F486AAE3FFA9CEE5",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "30AA0EB5EEDFCDAF4BFB2986E109D323407379E7560C8CE7F486AAE3FFA9CEE5"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-BD827EA3B0D6BD",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C10627CB0F35",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-C10627CB0F35-XLS-UNPARSED",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\工作記錄單新陳嘉義縣中埔鄉橫坑供水.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "EF607D4929727F45E49DB35124F0AE388E728BB2E130FEBB09AE6E2AB39AE289",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "EF607D4929727F45E49DB35124F0AE388E728BB2E130FEBB09AE6E2AB39AE289"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-B5CBB9DE92A78B",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963-SHEET-001",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\中埔頂寮橫坑加壓站材料清單1.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+      "worksheet_name": "標單總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-59B788E902970C",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963-SHEET-002",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\中埔頂寮橫坑加壓站材料清單1.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+      "worksheet_name": "標單詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "AUTO_DENIED",
+      "prefilter_state": "AUTO_DENIED",
+      "reason_codes": [
+        "FORBIDDEN_LABEL_OR_ROLE",
+        "FORBIDDEN_SOURCE",
+        "MISSING_WORKSHEET_FINGERPRINT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-289C4E13989C26",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963-SHEET-003",
+      "project_id": "1110205",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\中埔頂寮橫坑加壓站材料清單1.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "summary": {
+    "PARSER_REQUIRED": 5,
+    "SUBMIT_TO_REVIEW": 4,
+    "AUTO_DENIED": 2
+  },
+  "run_metadata": {
+    "source_decisions": "manifests\\source_guard\\source_decisions.csv",
+    "file_index": "manifests\\all_projects_file_role_index.csv",
+    "candidate_manifest": "manifests\\source_guard\\autonomous_eval_batch_001.json"
+  }
+}

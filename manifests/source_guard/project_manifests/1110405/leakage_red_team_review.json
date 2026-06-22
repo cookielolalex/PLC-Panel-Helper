@@ -1,0 +1,259 @@
+{
+  "review_id": "leakage_red_team_batch_001",
+  "reviewer_role": "leakage_red_team",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "items": [
+    {
+      "project_id": "1110405",
+      "file_id": "SRC-ALL-PROJECTS-FILE-423435B0344F",
+      "decision_id": "SGD-0217C79AC0A2D8",
+      "file_sha256": "975E5BCC2ED5E186FE9992A0F1E75E567E82772B30EE747E17B2A0798E43D864",
+      "worksheet_name": "",
+      "worksheet_fingerprint": "",
+      "project_identity": "1110405",
+      "decision": "DENY",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "PARSER_REQUIRED"
+      ],
+      "evidence_ids": [
+        "SGD-0217C79AC0A2D8",
+        "SRC-ALL-PROJECTS-FILE-423435B0344F",
+        "SRC-ALL-PROJECTS-FILE-423435B0344F-XLS-UNPARSED"
+      ],
+      "detected_risks": [
+        "UNSUPPORTED_PARSER"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110405",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5A7221226009",
+      "decision_id": "SGD-2BB8F4C5348957",
+      "file_sha256": "C412F50C94ECEA93DD3CAF56A34F1BC1B9DB3B1C1A0276AB2E0426B43D31594C",
+      "worksheet_name": "璅蝮質”",
+      "worksheet_fingerprint": "0F1C68C85203EFE5BC019510A6CDF687E07074A651A47740D719961775B63ADB",
+      "project_identity": "1110405",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA"
+      ],
+      "evidence_ids": [
+        "SGD-2BB8F4C5348957",
+        "SRC-ALL-PROJECTS-FILE-5A7221226009",
+        "SRC-ALL-PROJECTS-FILE-5A7221226009-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.83,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110405",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5A7221226009",
+      "decision_id": "SGD-60695E46370264",
+      "file_sha256": "C412F50C94ECEA93DD3CAF56A34F1BC1B9DB3B1C1A0276AB2E0426B43D31594C",
+      "worksheet_name": null,
+      "worksheet_fingerprint": "761880610C53C55472E1F8C390605774369896C4C3DE4A05DBBFF29AA51C6AE5",
+      "project_identity": "1110405",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA"
+      ],
+      "evidence_ids": [
+        "SGD-60695E46370264",
+        "SRC-ALL-PROJECTS-FILE-5A7221226009",
+        "SRC-ALL-PROJECTS-FILE-5A7221226009-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.83,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110405",
+      "file_id": "SRC-ALL-PROJECTS-FILE-68E647B26CC3",
+      "decision_id": "SGD-0934CE53139606",
+      "file_sha256": "07183FC05D395EBCCF3AF389957FE2FA7D321C38FCFAF4A1F4CF6FF8B92A3965",
+      "worksheet_name": "璅蝮質”",
+      "worksheet_fingerprint": "0F1C68C85203EFE5BC019510A6CDF687E07074A651A47740D719961775B63ADB",
+      "project_identity": "1110405",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA"
+      ],
+      "evidence_ids": [
+        "SGD-0934CE53139606",
+        "SRC-ALL-PROJECTS-FILE-68E647B26CC3",
+        "SRC-ALL-PROJECTS-FILE-68E647B26CC3-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.83,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110405",
+      "file_id": "SRC-ALL-PROJECTS-FILE-68E647B26CC3",
+      "decision_id": "SGD-F941FF6BCB2B6C",
+      "file_sha256": "07183FC05D395EBCCF3AF389957FE2FA7D321C38FCFAF4A1F4CF6FF8B92A3965",
+      "worksheet_name": null,
+      "worksheet_fingerprint": "B12366907E792317BE71F0816A85EB4623FAE8AF83B2117E35AB2AF333F2DAFC",
+      "project_identity": "1110405",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA"
+      ],
+      "evidence_ids": [
+        "SGD-F941FF6BCB2B6C",
+        "SRC-ALL-PROJECTS-FILE-68E647B26CC3",
+        "SRC-ALL-PROJECTS-FILE-68E647B26CC3-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.83,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110405",
+      "file_id": "SRC-ALL-PROJECTS-FILE-8882CDA243ED",
+      "decision_id": "SGD-54581891916AF9",
+      "file_sha256": "1EF4FD7B988EE2CF2A6A80F59964F1A45BE1747B0C1C9EC287AB6C3616F7E2B0",
+      "worksheet_name": "",
+      "worksheet_fingerprint": "",
+      "project_identity": "1110405",
+      "decision": "DENY",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "PARSER_REQUIRED"
+      ],
+      "evidence_ids": [
+        "SGD-54581891916AF9",
+        "SRC-ALL-PROJECTS-FILE-8882CDA243ED",
+        "SRC-ALL-PROJECTS-FILE-8882CDA243ED-XLS-UNPARSED"
+      ],
+      "detected_risks": [
+        "UNSUPPORTED_PARSER"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110405",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9EB302A16F6B",
+      "decision_id": "SGD-04F75CA0E93D81",
+      "file_sha256": "2F4EA672E1A51AE7853C38AFDBC86AB995B1CDA1677C01CFFBD3D54F21CEE917",
+      "worksheet_name": "",
+      "worksheet_fingerprint": "",
+      "project_identity": "1110405",
+      "decision": "DENY",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "PARSER_REQUIRED"
+      ],
+      "evidence_ids": [
+        "SGD-04F75CA0E93D81",
+        "SRC-ALL-PROJECTS-FILE-9EB302A16F6B",
+        "SRC-ALL-PROJECTS-FILE-9EB302A16F6B-XLS-UNPARSED"
+      ],
+      "detected_risks": [
+        "UNSUPPORTED_PARSER"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110405",
+      "file_id": "SRC-ALL-PROJECTS-FILE-D6ED7A4231A7",
+      "decision_id": "SGD-AF673D3E5641B3",
+      "file_sha256": "F832EACFE8F34D79DD7281EDBCC0B419AE6928CEF021BB3954488D7A202D74F7",
+      "worksheet_name": "",
+      "worksheet_fingerprint": "",
+      "project_identity": "1110405",
+      "decision": "DENY",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "PARSER_REQUIRED"
+      ],
+      "evidence_ids": [
+        "SGD-AF673D3E5641B3",
+        "SRC-ALL-PROJECTS-FILE-D6ED7A4231A7",
+        "SRC-ALL-PROJECTS-FILE-D6ED7A4231A7-XLS-UNPARSED"
+      ],
+      "detected_risks": [
+        "UNSUPPORTED_PARSER"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110405",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DCCC80E221B1",
+      "decision_id": "SGD-9F70E222E978E9",
+      "file_sha256": "CF92B269553DD3B1AA6D771A793CB863FA8B7CAB0DD645F6674D4AE8D0EA8A9B",
+      "worksheet_name": "",
+      "worksheet_fingerprint": "",
+      "project_identity": "1110405",
+      "decision": "DENY",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "PARSER_REQUIRED"
+      ],
+      "evidence_ids": [
+        "SGD-9F70E222E978E9",
+        "SRC-ALL-PROJECTS-FILE-DCCC80E221B1",
+        "SRC-ALL-PROJECTS-FILE-DCCC80E221B1-XLS-UNPARSED"
+      ],
+      "detected_risks": [
+        "UNSUPPORTED_PARSER"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    }
+  ],
+  "run_metadata": {
+    "prefilter_root": "manifests\\source_guard\\project_manifests",
+    "created_at": "2026-06-22T11:08:17Z",
+    "independence_note": "Generated from role-specific deterministic rules without reading other reviewer outputs.",
+    "prefilter_parse_note": "Input prefilter files were line-structured but not strict JSON; malformed worksheet names were emitted as null."
+  }
+}

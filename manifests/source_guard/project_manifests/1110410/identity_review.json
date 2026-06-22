@@ -1,0 +1,198 @@
+{
+  "review_id": "batch-001_project_identity_reviewer",
+  "reviewer_role": "project_identity_reviewer",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "items": [
+    {
+      "project_id": "1110410",
+      "decision_id": "SGD-B6FB5F61E3C292",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1A4EDEDD389D",
+      "file_sha256": "70F74180BBB78AD1DBE529D70807F193102F26B8EB87F90B8477DD6190B0D792",
+      "worksheet_name": null,
+      "worksheet_fingerprint": null,
+      "project_identity": "1110410",
+      "decision": "DENY",
+      "reason_codes": [
+        "DETERMINISTIC_PARSER_REQUIRED",
+        "WORKSHEET_IDENTITY_NOT_REVIEWABLE"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110410",
+        "decision:SGD-B6FB5F61E3C292",
+        "file:SRC-ALL-PROJECTS-FILE-1A4EDEDD389D",
+        "project_manifest:1110410",
+        "file_sha256:70F74180BBB78AD1DBE529D70807F193102F26B8EB87F90B8477DD6190B0D792",
+        "path_project_id:1110410"
+      ],
+      "detected_risks": [
+        "legacy_xls_or_unparsed_workbook",
+        "missing_worksheet_fingerprint",
+        "worksheet_visibility_unknown"
+      ],
+      "unresolved_issues": [
+        "parser_required_condition"
+      ],
+      "confidence": 1,
+      "run_metadata": {
+        "source_prefilter_state": "PARSER_REQUIRED",
+        "source_proposed_decision": "PARSER_REQUIRED",
+        "source_reviewable": false,
+        "detected_document_role": "spreadsheet_other",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-1A4EDEDD389D-XLS-UNPARSED",
+        "identity_evidence": {
+          "manifest_project_id": "1110410",
+          "item_project_id": "1110410",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110410",
+      "decision_id": "SGD-F3A5C9E7B2674E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "璅蝮質”",
+      "worksheet_fingerprint": "EACD28A726F59056114ED8FFCA09DE3FB4FF55D246869101666815292F21450F",
+      "project_identity": "1110410",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_IDENTITY_SUPPORTED_BY_MANIFEST_PATH",
+        "NO_CROSS_PROJECT_OR_STALE_SIGNAL"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110410",
+        "decision:SGD-F3A5C9E7B2674E",
+        "file:SRC-ALL-PROJECTS-FILE-98B23212FC59",
+        "project_manifest:1110410",
+        "file_sha256:B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+        "worksheet_fingerprint:EACD28A726F59056114ED8FFCA09DE3FB4FF55D246869101666815292F21450F",
+        "path_project_id:1110410"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.86,
+      "run_metadata": {
+        "source_prefilter_state": "SUBMIT_TO_REVIEW",
+        "source_proposed_decision": "NEEDS_HUMAN_REVIEW",
+        "source_reviewable": true,
+        "detected_document_role": "allowed_contract_workbook",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59-SHEET-001",
+        "identity_evidence": {
+          "manifest_project_id": "1110410",
+          "item_project_id": "1110410",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110410",
+      "decision_id": "SGD-E25373215632FB",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "璅閰喟敦銵?",
+      "worksheet_fingerprint": "DD692A2C465B9BDACE117F4F78CE313EC69A2A26DDFCA7D2C06BF98DD3202B9E",
+      "project_identity": "1110410",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_IDENTITY_SUPPORTED_BY_MANIFEST_PATH",
+        "NO_CROSS_PROJECT_OR_STALE_SIGNAL"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110410",
+        "decision:SGD-E25373215632FB",
+        "file:SRC-ALL-PROJECTS-FILE-98B23212FC59",
+        "project_manifest:1110410",
+        "file_sha256:B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+        "worksheet_fingerprint:DD692A2C465B9BDACE117F4F78CE313EC69A2A26DDFCA7D2C06BF98DD3202B9E",
+        "path_project_id:1110410"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.86,
+      "run_metadata": {
+        "source_prefilter_state": "SUBMIT_TO_REVIEW",
+        "source_proposed_decision": "NEEDS_HUMAN_REVIEW",
+        "source_reviewable": true,
+        "detected_document_role": "allowed_contract_workbook",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59-SHEET-002",
+        "identity_evidence": {
+          "manifest_project_id": "1110410",
+          "item_project_id": "1110410",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    },
+    {
+      "project_id": "1110410",
+      "decision_id": "SGD-89E1E5092FF4EC",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "璅?桀??銵?",
+      "worksheet_fingerprint": "8D961332042D9E97EA964E12ED2127C2926B9B28CD9B03854121FE029B144A58",
+      "project_identity": "1110410",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_IDENTITY_SUPPORTED_BY_MANIFEST_PATH",
+        "NO_CROSS_PROJECT_OR_STALE_SIGNAL"
+      ],
+      "evidence_ids": [
+        "prefilter:deterministic_prefilter_1110410",
+        "decision:SGD-89E1E5092FF4EC",
+        "file:SRC-ALL-PROJECTS-FILE-98B23212FC59",
+        "project_manifest:1110410",
+        "file_sha256:B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+        "worksheet_fingerprint:8D961332042D9E97EA964E12ED2127C2926B9B28CD9B03854121FE029B144A58",
+        "path_project_id:1110410"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.86,
+      "run_metadata": {
+        "source_prefilter_state": "SUBMIT_TO_REVIEW",
+        "source_proposed_decision": "NEEDS_HUMAN_REVIEW",
+        "source_reviewable": true,
+        "detected_document_role": "allowed_contract_workbook",
+        "sheet_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59-SHEET-003",
+        "identity_evidence": {
+          "manifest_project_id": "1110410",
+          "item_project_id": "1110410",
+          "path_contains_project_id": true,
+          "other_project_ids_in_path": [],
+          "stale_or_cross_terms_found": []
+        }
+      }
+    }
+  ],
+  "run_metadata": {
+    "generated_at": "2026-06-22T00:00:00+08:00",
+    "input_prefilter_summary": "manifests/source_guard/project_manifests/prefilter_summary.json",
+    "input_prefilter_paths": [
+      "manifests\\source_guard\\project_manifests\\1110405\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110205\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110410\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110104\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110204\\deterministic_prefilter.json"
+    ],
+    "item_count": 38,
+    "decision_counts": {
+      "ALLOW_EVAL": 15,
+      "DENY": 23,
+      "QUARANTINE": 0
+    },
+    "deterministic_review_rule": "ALLOW_EVAL only for SUBMIT_TO_REVIEW rows whose manifest project_id is present in the path with no other batch project id and no stale/cross/superseded signal; DENY deterministic PARSER_REQUIRED and AUTO_DENIED rows.",
+    "reviewed_basis": [
+      "AGENTS.md",
+      "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md",
+      "schemas/source_quorum_review.schema.json",
+      "manifests/source_guard/project_manifests/*/deterministic_prefilter.json",
+      "manifests/source_guard/project_manifests/*/review_input.json"
+    ],
+    "forbidden_inputs_read": []
+  }
+}

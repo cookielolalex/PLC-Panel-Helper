@@ -1,0 +1,176 @@
+{
+  "review_id": "batch-001_workbook_forensics_reviewer",
+  "reviewer_role": "workbook_forensics_reviewer",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "items": [
+    {
+      "project_id": "1110410",
+      "decision_id": "SGD-89E1E5092FF4EC",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "璅?桀??銵?",
+      "worksheet_fingerprint": "8D961332042D9E97EA964E12ED2127C2926B9B28CD9B03854121FE029B144A58",
+      "project_identity": "1110410",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "WORKBOOK_FORENSICS_PASS",
+        "PREFILTER_SUBMIT_TO_REVIEW",
+        "VISIBLE_WORKSHEET",
+        "HASH_AND_WORKSHEET_FINGERPRINT_PRESENT"
+      ],
+      "evidence_ids": [
+        "prefilter_state:SUBMIT_TO_REVIEW reviewable:true document_role:allowed_contract_workbook worksheet_visibility:visible file_id:SRC-ALL-PROJECTS-FILE-98B23212FC59 file_sha256:B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+        "worksheet_fingerprint:8D961332042D9E97EA964E12ED2127C2926B9B28CD9B03854121FE029B144A58"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "source_prefilter_path": "manifests\\source_guard\\project_manifests\\1110410\\deterministic_prefilter.json",
+        "prefilter_state": "SUBMIT_TO_REVIEW",
+        "reviewable": true,
+        "detected_document_role": "allowed_contract_workbook",
+        "worksheet_visibility": "visible",
+        "macros_executed": false,
+        "source_workbook_opened": false
+      }
+    },
+    {
+      "project_id": "1110410",
+      "decision_id": "SGD-B6FB5F61E3C292",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1A4EDEDD389D",
+      "file_sha256": "70F74180BBB78AD1DBE529D70807F193102F26B8EB87F90B8477DD6190B0D792",
+      "worksheet_name": null,
+      "worksheet_fingerprint": null,
+      "project_identity": "1110410",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "WORKBOOK_FORENSICS_QUARANTINE",
+        "PARSER_REQUIRED_UNRESOLVED"
+      ],
+      "evidence_ids": [
+        "prefilter_state:PARSER_REQUIRED reviewable:false document_role:spreadsheet_other worksheet_visibility:unknown file_id:SRC-ALL-PROJECTS-FILE-1A4EDEDD389D file_sha256:70F74180BBB78AD1DBE529D70807F193102F26B8EB87F90B8477DD6190B0D792"
+      ],
+      "detected_risks": [
+        "legacy_xls_parser_required",
+        "missing_worksheet_fingerprint",
+        "worksheet_visibility_unknown_or_not_visible",
+        "non_approved_workbook_role"
+      ],
+      "unresolved_issues": [
+        "deterministic_prefilter_requires_parser_before_eval_approval"
+      ],
+      "confidence": 1,
+      "run_metadata": {
+        "source_prefilter_path": "manifests\\source_guard\\project_manifests\\1110410\\deterministic_prefilter.json",
+        "prefilter_state": "PARSER_REQUIRED",
+        "reviewable": false,
+        "detected_document_role": "spreadsheet_other",
+        "worksheet_visibility": "unknown",
+        "macros_executed": false,
+        "source_workbook_opened": false
+      }
+    },
+    {
+      "project_id": "1110410",
+      "decision_id": "SGD-E25373215632FB",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "璅閰喟敦銵?",
+      "worksheet_fingerprint": "DD692A2C465B9BDACE117F4F78CE313EC69A2A26DDFCA7D2C06BF98DD3202B9E",
+      "project_identity": "1110410",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "WORKBOOK_FORENSICS_PASS",
+        "PREFILTER_SUBMIT_TO_REVIEW",
+        "VISIBLE_WORKSHEET",
+        "HASH_AND_WORKSHEET_FINGERPRINT_PRESENT"
+      ],
+      "evidence_ids": [
+        "prefilter_state:SUBMIT_TO_REVIEW reviewable:true document_role:allowed_contract_workbook worksheet_visibility:visible file_id:SRC-ALL-PROJECTS-FILE-98B23212FC59 file_sha256:B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+        "worksheet_fingerprint:DD692A2C465B9BDACE117F4F78CE313EC69A2A26DDFCA7D2C06BF98DD3202B9E"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "source_prefilter_path": "manifests\\source_guard\\project_manifests\\1110410\\deterministic_prefilter.json",
+        "prefilter_state": "SUBMIT_TO_REVIEW",
+        "reviewable": true,
+        "detected_document_role": "allowed_contract_workbook",
+        "worksheet_visibility": "visible",
+        "macros_executed": false,
+        "source_workbook_opened": false
+      }
+    },
+    {
+      "project_id": "1110410",
+      "decision_id": "SGD-F3A5C9E7B2674E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "璅蝮質”",
+      "worksheet_fingerprint": "EACD28A726F59056114ED8FFCA09DE3FB4FF55D246869101666815292F21450F",
+      "project_identity": "1110410",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "WORKBOOK_FORENSICS_PASS",
+        "PREFILTER_SUBMIT_TO_REVIEW",
+        "VISIBLE_WORKSHEET",
+        "HASH_AND_WORKSHEET_FINGERPRINT_PRESENT"
+      ],
+      "evidence_ids": [
+        "prefilter_state:SUBMIT_TO_REVIEW reviewable:true document_role:allowed_contract_workbook worksheet_visibility:visible file_id:SRC-ALL-PROJECTS-FILE-98B23212FC59 file_sha256:B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+        "worksheet_fingerprint:EACD28A726F59056114ED8FFCA09DE3FB4FF55D246869101666815292F21450F"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "source_prefilter_path": "manifests\\source_guard\\project_manifests\\1110410\\deterministic_prefilter.json",
+        "prefilter_state": "SUBMIT_TO_REVIEW",
+        "reviewable": true,
+        "detected_document_role": "allowed_contract_workbook",
+        "worksheet_visibility": "visible",
+        "macros_executed": false,
+        "source_workbook_opened": false
+      }
+    }
+  ],
+  "run_metadata": {
+    "role": "workbook_forensics_reviewer",
+    "batch_id": "batch-001",
+    "generated_at": "2026-06-22T19:09:25.2597193+08:00",
+    "item_count": 38,
+    "decision_counts": {
+      "ALLOW_EVAL": 15,
+      "DENY": 3,
+      "QUARANTINE": 20
+    },
+    "macros_executed": false,
+    "source_workbooks_opened": false,
+    "completed_target_or_reference_artifacts_inspected": false,
+    "other_reviewer_results_inspected": false,
+    "inputs": [
+      "AGENTS.md",
+      "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+      "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md",
+      "schemas/source_quorum_review.schema.json",
+      "manifests/source_guard/project_manifests/prefilter_summary.json",
+      "manifests\\source_guard\\project_manifests\\1110104\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110204\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110205\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110405\\deterministic_prefilter.json",
+      "manifests\\source_guard\\project_manifests\\1110410\\deterministic_prefilter.json"
+    ],
+    "notes": [
+      "Review reproduced from candidate prefilter metadata only.",
+      "PARSER_REQUIRED rows quarantined because parser support is required before evaluation approval.",
+      "AUTO_DENIED rows denied because deterministic forbidden-source signals cannot be overridden.",
+      "SUBMIT_TO_REVIEW rows allowed only when workbook metadata shows visible worksheet, current file hash, worksheet fingerprint, and approved workbook role."
+    ]
+  }
+}

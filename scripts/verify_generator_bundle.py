@@ -49,10 +49,15 @@ def main() -> None:
         approval = json.loads((args.bundle_dir / "approval_manifest.json").read_text(encoding="utf-8"))
         if approval.get("status") != "PASS":
             errors.append("APPROVAL_MANIFEST_NOT_PASS")
-        approved_ids = {row["decision_id"] for row in approval.get("decisions", []) if row.get("human_decision") == "HUMAN_APPROVED"}
+        approved_ids = {
+            row["decision_id"]
+            for row in approval.get("decisions", [])
+            if row.get("human_decision") == "HUMAN_APPROVED"
+            or row.get("agent_decision") == "AGENT_QUORUM_APPROVED_EVAL"
+        }
         for artifact in bundle_manifest.get("artifacts", []):
             if artifact.get("source_decision_id") not in approved_ids:
-                errors.append(f"ARTIFACT_WITHOUT_HUMAN_APPROVAL:{artifact.get('path')}")
+                errors.append(f"ARTIFACT_WITHOUT_APPROVAL:{artifact.get('path')}")
             path = args.bundle_dir / artifact["path"]
             if not path.exists():
                 errors.append(f"MISSING_ARTIFACT:{artifact['path']}")
@@ -68,6 +73,8 @@ def main() -> None:
         if path.is_file():
             rel = path.relative_to(args.bundle_dir)
             rel_text = str(rel)
+            if path.is_file() and path.suffix.lower() in {".xls", ".xlsx", ".xlsm", ".xlsb"}:
+                errors.append(f"ORIGINAL_WORKBOOK_EXTENSION:{rel_text}")
             for hit in detect_forbidden_text(rel_text):
                 errors.append(f"FORBIDDEN_NAME:{rel_text}:{hit}")
             if ".." in rel.parts:

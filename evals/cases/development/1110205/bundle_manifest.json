@@ -1,0 +1,33 @@
+{
+  "bundle_id": "eval-bundle-1110205",
+  "project_id": "1110205",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "ALLOWED_EVAL",
+  "approval_mode": "AUTONOMOUS_EVALUATION_ONLY",
+  "artifacts": [
+    {
+      "artifact_id": "SGD-FD5565DC7BCF22",
+      "path": "sanitized_inputs\\SGD-FD5565DC7BCF22_標單總表.csv",
+      "sha256": "A7D6D29A369A9C2F0D5CB7FDDD936C978FBB1F15E5DDE42C855F746F1039BA10",
+      "source_decision_id": "SGD-FD5565DC7BCF22"
+    },
+    {
+      "artifact_id": "SGD-9E7AE8F36A74FD",
+      "path": "sanitized_inputs\\SGD-9E7AE8F36A74FD_標單單價分析表.csv",
+      "sha256": "2D777D1ED7E488F8430487D664CBD031C9B2CC204D718D3C0DA09BDD41A52955",
+      "source_decision_id": "SGD-9E7AE8F36A74FD"
+    },
+    {
+      "artifact_id": "SGD-B5CBB9DE92A78B",
+      "path": "sanitized_inputs\\SGD-B5CBB9DE92A78B_標單總表.csv",
+      "sha256": "A7D6D29A369A9C2F0D5CB7FDDD936C978FBB1F15E5DDE42C855F746F1039BA10",
+      "source_decision_id": "SGD-B5CBB9DE92A78B"
+    },
+    {
+      "artifact_id": "SGD-289C4E13989C26",
+      "path": "sanitized_inputs\\SGD-289C4E13989C26_標單單價分析表.csv",
+      "sha256": "2D777D1ED7E488F8430487D664CBD031C9B2CC204D718D3C0DA09BDD41A52955",
+      "source_decision_id": "SGD-289C4E13989C26"
+    }
+  ]
+}

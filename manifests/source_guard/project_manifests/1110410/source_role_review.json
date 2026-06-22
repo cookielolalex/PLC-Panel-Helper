@@ -1,0 +1,114 @@
+{
+  "review_id": "source_role_classifier_batch_001",
+  "reviewer_role": "source_role_classifier",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "items": [
+    {
+      "project_id": "1110410",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1A4EDEDD389D",
+      "decision_id": "SGD-B6FB5F61E3C292",
+      "file_sha256": "70F74180BBB78AD1DBE529D70807F193102F26B8EB87F90B8477DD6190B0D792",
+      "worksheet_name": "",
+      "worksheet_fingerprint": "",
+      "project_identity": "1110410",
+      "decision": "DENY",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE",
+        "PARSER_REQUIRED"
+      ],
+      "evidence_ids": [
+        "SGD-B6FB5F61E3C292",
+        "SRC-ALL-PROJECTS-FILE-1A4EDEDD389D",
+        "SRC-ALL-PROJECTS-FILE-1A4EDEDD389D-XLS-UNPARSED"
+      ],
+      "detected_risks": [
+        "UNSUPPORTED_PARSER"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110410",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "decision_id": "SGD-F3A5C9E7B2674E",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "標單總表",
+      "worksheet_fingerprint": "EACD28A726F59056114ED8FFCA09DE3FB4FF55D246869101666815292F21450F",
+      "project_identity": "1110410",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE"
+      ],
+      "evidence_ids": [
+        "SGD-F3A5C9E7B2674E",
+        "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+        "SRC-ALL-PROJECTS-FILE-98B23212FC59-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.86,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110410",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "decision_id": "SGD-E25373215632FB",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "標單詳細表",
+      "worksheet_fingerprint": "DD692A2C465B9BDACE117F4F78CE313EC69A2A26DDFCA7D2C06BF98DD3202B9E",
+      "project_identity": "1110410",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE"
+      ],
+      "evidence_ids": [
+        "SGD-E25373215632FB",
+        "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+        "SRC-ALL-PROJECTS-FILE-98B23212FC59-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.86,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110410",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "decision_id": "SGD-89E1E5092FF4EC",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_fingerprint": "8D961332042D9E97EA964E12ED2127C2926B9B28CD9B03854121FE029B144A58",
+      "project_identity": "1110410",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE"
+      ],
+      "evidence_ids": [
+        "SGD-89E1E5092FF4EC",
+        "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+        "SRC-ALL-PROJECTS-FILE-98B23212FC59-SHEET-003"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.86,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    }
+  ],
+  "run_metadata": {
+    "prefilter_root": "manifests/source_guard/project_manifests",
+    "created_at": "2026-06-22T11:05:27Z",
+    "independence_note": "Generated from role-specific deterministic rules without reading other reviewer outputs."
+  }
+}

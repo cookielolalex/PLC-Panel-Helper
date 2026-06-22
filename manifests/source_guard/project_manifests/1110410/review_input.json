@@ -1,0 +1,146 @@
+{
+  "project_id": "1110410",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [
+    {
+      "decision_id": "SGD-F3A5C9E7B2674E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59-SHEET-001",
+      "project_id": "1110410",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\雲林廠下游原水流量計箱合約.xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "標單總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "EACD28A726F59056114ED8FFCA09DE3FB4FF55D246869101666815292F21450F",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "EACD28A726F59056114ED8FFCA09DE3FB4FF55D246869101666815292F21450F"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-E25373215632FB",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59-SHEET-002",
+      "project_id": "1110410",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\雲林廠下游原水流量計箱合約.xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "標單詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "DD692A2C465B9BDACE117F4F78CE313EC69A2A26DDFCA7D2C06BF98DD3202B9E",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "DD692A2C465B9BDACE117F4F78CE313EC69A2A26DDFCA7D2C06BF98DD3202B9E"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-89E1E5092FF4EC",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59-SHEET-003",
+      "project_id": "1110410",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\雲林廠下游原水流量計箱合約.xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "8D961332042D9E97EA964E12ED2127C2926B9B28CD9B03854121FE029B144A58",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "8D961332042D9E97EA964E12ED2127C2926B9B28CD9B03854121FE029B144A58"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-B6FB5F61E3C292",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1A4EDEDD389D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-1A4EDEDD389D-XLS-UNPARSED",
+      "project_id": "1110410",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\工作紀錄單國倫水電雲林廠轄下站流量計箱xls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "70F74180BBB78AD1DBE529D70807F193102F26B8EB87F90B8477DD6190B0D792",
+      "worksheet_name": "",
+      "worksheet_visibility": "unknown",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "PARSER_REQUIRED",
+      "prefilter_state": "PARSER_REQUIRED",
+      "reason_codes": [
+        "HUMAN_REVIEW_REQUIRED",
+        "LEGACY_XLS_PARSER_REQUIRED",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "70F74180BBB78AD1DBE529D70807F193102F26B8EB87F90B8477DD6190B0D792"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}

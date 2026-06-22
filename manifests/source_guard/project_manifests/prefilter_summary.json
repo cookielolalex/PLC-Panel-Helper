@@ -1,0 +1,62 @@
+{
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "projects": [
+    {
+      "project_id": "1110405",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "PARSER_REQUIRED": 5,
+        "SUBMIT_TO_REVIEW": 4
+      },
+      "prefilter_path": "manifests\\source_guard\\project_manifests\\1110405\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\source_guard\\project_manifests\\1110405\\review_input.json"
+    },
+    {
+      "project_id": "1110205",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "PARSER_REQUIRED": 5,
+        "SUBMIT_TO_REVIEW": 4,
+        "AUTO_DENIED": 2
+      },
+      "prefilter_path": "manifests\\source_guard\\project_manifests\\1110205\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\source_guard\\project_manifests\\1110205\\review_input.json"
+    },
+    {
+      "project_id": "1110410",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "PARSER_REQUIRED": 1,
+        "SUBMIT_TO_REVIEW": 3
+      },
+      "prefilter_path": "manifests\\source_guard\\project_manifests\\1110410\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\source_guard\\project_manifests\\1110410\\review_input.json"
+    },
+    {
+      "project_id": "1110104",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 2,
+        "PARSER_REQUIRED": 4
+      },
+      "prefilter_path": "manifests\\source_guard\\project_manifests\\1110104\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\source_guard\\project_manifests\\1110104\\review_input.json"
+    },
+    {
+      "project_id": "1110204",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "PARSER_REQUIRED": 5,
+        "SUBMIT_TO_REVIEW": 2,
+        "AUTO_DENIED": 1
+      },
+      "prefilter_path": "manifests\\source_guard\\project_manifests\\1110204\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\source_guard\\project_manifests\\1110204\\review_input.json"
+    }
+  ],
+  "counts": {
+    "PARSER_REQUIRED": 20,
+    "SUBMIT_TO_REVIEW": 15,
+    "AUTO_DENIED": 3
+  }
+}
