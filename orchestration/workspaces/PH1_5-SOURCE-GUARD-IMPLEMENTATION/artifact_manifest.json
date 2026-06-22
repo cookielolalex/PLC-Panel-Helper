@@ -1,0 +1,54 @@
+{
+    "artifact_manifest_id":  "PH1_5-SOURCE-GUARD-IMPLEMENTATION-artifacts",
+    "created_at":  "2026-06-22T00:00:00+08:00",
+    "artifacts":  [
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/patches/source_guard_implementation.patch",
+                          "sha256":  "A98F0C96852F76EA1BB0A414CD25CE1DD8DC8158C25E4131B803B912996DF00F"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/proposed/reports/source_guard_review_workflow.md",
+                          "sha256":  "4996108D954F1BE965D21B27870230C64CE5409FAA9E03FD970DE52325B80B84"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/proposed/schemas/sanitized_generator_bundle.schema.json",
+                          "sha256":  "90288585F5FEDF0097BABE54987F92E6CD3811838C835541AD9548EE1ACF2D91"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/proposed/schemas/source_approval.schema.json",
+                          "sha256":  "A6E3FA13566E880AFA54FB886B77AEDF4FEBD06E32B011BB512E0102D7F60F6D"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/proposed/schemas/source_review_batch.schema.json",
+                          "sha256":  "BDA978AFE29F2B05E662C6184BE053125BD1210A68114A0615504B4BA4C33830"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/proposed/scripts/build_sanitized_generator_bundle.py",
+                          "sha256":  "68AA1FF1EFBA992909576F2B720C909F72B6B46A5BBCB3D1AB91DC0630D09282"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/proposed/scripts/build_source_review_batch.py",
+                          "sha256":  "4DA6F3E733348D04C867577BCDFB9BED7E37E91B8D5CFFBE7A1C8B34A64394C8"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/proposed/scripts/source_guard.py",
+                          "sha256":  "F9EF0C29F7DCA9AEF8782372A829E1617CBE9666153B9E72A0ED5EBF7FD70478"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/proposed/scripts/validate_source_approval.py",
+                          "sha256":  "F24D70D610E1C43E6CF89A685A000CDC5663898F0F7B64CF7B3851A375598165"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/proposed/scripts/verify_sanitized_bundle.py",
+                          "sha256":  "390159DC062337243763EC2CDCCFAB233956FE6AB69AEF101036E7EE93E5C11E"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/proposed/tests/test_source_guard.py",
+                          "sha256":  "D3449B83B0344B9D0F798FD700EF7E543A836347E6A1E6F563AB40BBF6A6119B"
+                      },
+                      {
+                          "path":  "orchestration/workspaces/PH1_5-SOURCE-GUARD-IMPLEMENTATION/README.md",
+                          "sha256":  "009F9E2E9EE51BC961C6699E919E69FA52A969927F49066B5AD74893675A9399"
+                      }
+                  ]
+}

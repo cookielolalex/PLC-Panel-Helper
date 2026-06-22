@@ -1,0 +1,37 @@
+{
+  "batch_id": "batch-001",
+  "selected_project_ids": [
+    "1110101",
+    "1110103",
+    "1110102",
+    "1110104",
+    "1110203",
+    "1110204",
+    "1110504",
+    "1110404",
+    "1120102",
+    "1110205",
+    "1110405",
+    "1110410"
+  ],
+  "strata": {
+    "straightforward_visible_candidate": 2,
+    "multi_panel_or_multi_workbook": 2,
+    "stale_or_unrelated_sheet_risk": 2,
+    "hidden_sheet_risk": 1,
+    "revision_supersession_risk": 1,
+    "conflicting_project_identity_risk": 1,
+    "parser_required_risk": 1,
+    "seeded_random_family_separated": 1,
+    "backfill_reference_complete": 1
+  },
+  "decision_counts": {
+    "PARSER_REQUIRED": 46,
+    "NEEDS_HUMAN_REVIEW": 15,
+    "AUTO_DENIED": 4,
+    "QUARANTINED": 4
+  },
+  "candidate_file_count": 56,
+  "candidate_worksheet_count": 69,
+  "batch_manifest_hash": "A871F08C4158B9103C7047DE08AB5BB28E87BB1E20A0A449D7FB0377F2E0C051"
+}

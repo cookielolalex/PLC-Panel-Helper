@@ -1,0 +1,103 @@
+{
+  "task_id": "PH1_5-SOURCE-GUARD-POLICY",
+  "agent_type": "repo_explorer",
+  "status": "PASS",
+  "checks": [
+    {
+      "criterion": "Authority and read boundary were honored",
+      "status": "PASS",
+      "evidence": "Read only the task-declared workspace inputs plus the child_result schema. docs/SOURCE_ROOTS.md marks source roots read-only, and this task did not dereference SRC-ALL-PROJECTS, completed PDFs, .git, evals/runs, or evals/references."
+    },
+    {
+      "criterion": "Exact input hashes are captured",
+      "status": "PASS",
+      "evidence": "SHA-256 hashes are recorded for CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt, AGENTS.md, docs/01_CURRENT_STATE.md, docs/SOURCE_ROOTS.md, the five manifest CSVs, two review queue CSVs, reports/generator_eligibility_summary.md, and schemas/child_result.schema.json."
+    },
+    {
+      "criterion": "File role taxonomy supports fail-closed source classification",
+      "status": "PASS",
+      "evidence": "manifests/all_projects_file_role_index.csv has 7,400 rows: forbidden_production_control_file=2,006, completed_sheetmetal_drawing_reference=1,860, spreadsheet_other=1,428, forbidden_electrical_drawing=1,008, supporting_document_non_generator=418, allowed_material_list_workbook=291, allowed_contract_workbook=223, unclear=57, completed_production_drawing_reference=44, completed_punch_drawing_reference=38, cad_block_library=27. generator_eligibility is FORBIDDEN=5,001 and HUMAN_REVIEW_REQUIRED=2,399, with ALLOWED=0."
+    },
+    {
+      "criterion": "Worksheet taxonomy supports sheet-level gating",
+      "status": "PASS",
+      "evidence": "manifests/all_projects_workbook_sheet_index.csv has 4,231 rows. generator_eligibility is HUMAN_REVIEW_REQUIRED=2,139 and FORBIDDEN=2,092, with ALLOWED=0. stale_template_status values include FORBIDDEN_SOURCE=2,067, HUMAN_REVIEW_REQUIRED=1,466, INSUFFICIENT_IDENTITY=617, HIDDEN_SHEET_REVIEW_REQUIRED=29, CURRENT_PROJECT_ID_MATCH=27, and STALE_TEMPLATE_SHEET=25."
+    },
+    {
+      "criterion": "Positive generator allowlist is available",
+      "status": "FAIL",
+      "evidence": "reports/generator_eligibility_summary.md states no real project is generator-eligible yet: file-level ALLOWED=0 and worksheet-level ALLOWED=0. docs/01_CURRENT_STATE.md repeats that all candidate evidence is FORBIDDEN or HUMAN_REVIEW_REQUIRED."
+    },
+    {
+      "criterion": "Manual review queue identifies unresolved approval work",
+      "status": "PASS",
+      "evidence": "reports/manual_review_queue.csv has 2,139 worksheet rows, all status HUMAN_REVIEW_REQUIRED. Reasons: HUMAN_REVIEW_REQUIRED=1,466, INSUFFICIENT_IDENTITY=617, HIDDEN_SHEET_REVIEW_REQUIRED=29, CURRENT_PROJECT_ID_MATCH=27."
+    },
+    {
+      "criterion": "Stale, hidden, and cross-project risks are represented as deterministic gates",
+      "status": "PASS",
+      "evidence": "reports/stale_sheet_review_queue.csv has 671 parsed review rows: INSUFFICIENT_IDENTITY=617, HIDDEN_SHEET_REVIEW_REQUIRED=29, STALE_TEMPLATE_SHEET=25. The sheet index also shows detected_project_id present for only 924 of 4,231 rows and absent for 3,307 rows, so project identity cannot be inferred safely for most sheets."
+    },
+    {
+      "criterion": "Parser and workbook-link risks are resolved for approval",
+      "status": "FAIL",
+      "evidence": "manifests/all_projects_workbook_sheet_index.csv reports parse_status PARSED=2,765 and UNSUPPORTED_XLS_PARSER_REQUIRED=1,466; visibility unknown=1,466; hidden=34; external_links present=112. manifests/115_workbook_sheet_index.csv similarly has UNSUPPORTED_XLS_PARSER_REQUIRED=180 and external_links present=20. These rows must remain unapproved or human-reviewed."
+    },
+    {
+      "criterion": "Project/family selection is safe to drive generation",
+      "status": "FAIL",
+      "evidence": "manifests/all_projects_project_manifest.csv has 405 projects, 2,847 workbooks, and candidate workbook counts allowed_contract=223 and allowed_material_list=291, but generator_candidate_status is WORKSHEET_REVIEW_REQUIRED=366, REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED=26, and NO_APPROVED_WORKSHEETS=13. Candidate workbook family labels are not sufficient without approved sheet decisions and a project-locked positive manifest."
+    },
+    {
+      "criterion": "Reusable CAD/catalog family selection is approved",
+      "status": "NOT_VERIFIED",
+      "evidence": "docs/01_CURRENT_STATE.md says canonical CAD block and vendor catalog roots remain unresolved unless approved separately. manifests/all_projects_file_role_index.csv contains cad_block_library=27 project-local candidates, but these are not approved reusable production Knowledge."
+    },
+    {
+      "criterion": "Deterministic file decision rules are defined",
+      "status": "PASS",
+      "evidence": "Rule file-guard-v1: FORBID if source_root is not an approved read-only root, primary_role is forbidden_* or completed_*_reference, forbidden_signature_match is True, drawing_output_type is production/sheetmetal/punch reference, duplicate_of points to a forbidden fingerprint, or classification basis marks reference-only content. HUMAN_REVIEW_REQUIRED if role is unclear, spreadsheet_other, supporting_document_non_generator, candidate allowed_* workbook without approved worksheet coverage, parser status is not parse-safe, or confidence is insufficient. ALLOW only after explicit approved positive manifest row with stable sha256/content_fingerprint and no forbidden derivative fields."
+    },
+    {
+      "criterion": "Deterministic worksheet decision rules are defined",
+      "status": "PASS",
+      "evidence": "Rule sheet-guard-v1: FORBID if parent workbook is forbidden, stale_template_status is FORBIDDEN_SOURCE or STALE_TEMPLATE_SHEET, sheet identity conflicts with the selected project, or the sheet derives from completed/reference material. HUMAN_REVIEW_REQUIRED if parse_status is UNSUPPORTED_XLS_PARSER_REQUIRED, visibility is hidden/unknown without approval, external_links is non-empty without adjudication, identity is insufficient, or approved_by/approval_time is absent. ALLOW only when parent workbook is file-guard ALLOW, sheet is approved for the selected current project, stale evidence is resolved, visibility/link risks are accepted, and the approved sheet hash/provenance is bound into the positive bundle."
+    },
+    {
+      "criterion": "Required evidence fields for source-guard decisions are specified",
+      "status": "PASS",
+      "evidence": "Minimum evidence fields: decision_rule_id, source_manifest_hash, source_root, file_id, workbook_file_id, sheet_id, relative_path or redacted path token, sha256, content_fingerprint, duplicate_of, primary_role, secondary_tags, drawing_output_type, forbidden_signature_match, generator_eligibility, classification_confidence, basis, parse_status, review_status, project_id, detected_project_id, detected_customer, detected_project_name, detected_date, detected_revision, visibility, used_range, print_area, named_ranges, external_links flag, stale_template_status, stale_evidence, approved_by, approval_time, reviewer decision id, and bundle hash. Generator-visible bundles must exclude completed target filenames, hashes, thumbnails, extracted strings, reviewer findings, expected answers, and absolute source paths."
+    },
+    {
+      "criterion": "Generator leakage boundary is explicit",
+      "status": "PASS",
+      "evidence": "AGENTS.md and CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt both require positive generator bundles only, forbid production-control files, electrical drawings, completed/modified target drawings, and all derivatives. This child result therefore recommends a hard fail-closed decision until ALLOWED file and worksheet rows exist."
+    }
+  ],
+  "artifacts": [
+    "orchestration/results/PH1_5-SOURCE-GUARD-POLICY.json"
+  ],
+  "hashes": {
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+    "AGENTS.md": "6298E5EEB469DEBA38CD3F83D5697C402815B7E0C94F61E7F355D6D704D8E433",
+    "docs/01_CURRENT_STATE.md": "DA4A8A2FE03519877E4FA72D1C6B94C69C45F746E556EDB3B35C523A7D35F066",
+    "docs/SOURCE_ROOTS.md": "A97097C0691DD1F39EB34C05B1D484175E1389DBFEEFEF8A8F63920924666DEB",
+    "manifests/all_projects_file_role_index.csv": "5AED72D1AD3E15A0D70ABAE4D0CACED0C87D8F063B7A484412D4757507C28397",
+    "manifests/all_projects_workbook_sheet_index.csv": "A3E3246C103F5BA5AB783FB8D18DC7F6E722419901F131F6314AF2483A7A7EFC",
+    "manifests/all_projects_project_manifest.csv": "493C36F17A2AA061F3C371AF4FC720B85780075F43643A3158E7D597AD5AB2CF",
+    "manifests/115_file_role_index.csv": "0D21E3D34C12D103733CAFFC72CAEF82485D20353944B0A0BEE1B12E3BBFDC93",
+    "manifests/115_workbook_sheet_index.csv": "153D263A9BCC6A6CFFAE158B76C308854D1C62F13B82CFCF87CDC00465BC51FF",
+    "reports/manual_review_queue.csv": "198DFF85074B299FF519C93180497B2FD1F1330E28D97E1239C16A41690B7A6C",
+    "reports/stale_sheet_review_queue.csv": "2F280927DE7AB36B6D31443FC805B14122BC0328D61B878F87C94DCCBAD1F92A",
+    "reports/generator_eligibility_summary.md": "FCE9FF5FEDCD2AB87033C1F9F4BB98BAA97E1C8BA3AC2DF09203F4E29D0364FF",
+    "schemas/child_result.schema.json": "DDC770A4C36D3664C20B6E2E8688CB30F997C3A479B98108C596A43E2307BC41"
+  },
+  "summary": "Source-guard policy analysis completed from the closed evidence set. The deterministic decision is fail-closed for generation: current manifests contain no ALLOWED file or worksheet rows, all candidate workbook/sheet evidence still requires human review or is forbidden, and parser/hidden/external-link/stale-template risks remain unresolved. The proposed rules require project-locked positive file and sheet approvals, stable hashes, reviewer approval fields, stale/identity/link/visibility adjudication, and a generator bundle that excludes all completed-reference derivatives.",
+  "blockers": [
+    "No positive generator allowlist exists: reports/generator_eligibility_summary.md reports ALLOWED=0 at both file and worksheet levels.",
+    "2,139 worksheet rows remain HUMAN_REVIEW_REQUIRED in reports/manual_review_queue.csv, with no approved_by or approval_time evidence in the sheet index.",
+    "1,466 all-project worksheet rows and 180 115 worksheet rows require unsupported legacy .xls parser handling before deterministic approval.",
+    "Hidden sheets, unknown visibility, external links, insufficient identity, and stale-template rows require human adjudication before any critical fabrication values can be trusted.",
+    "Reusable CAD block and vendor catalog family roots are unresolved; project-local cad_block_library rows are not approved production Knowledge."
+  ]
+}

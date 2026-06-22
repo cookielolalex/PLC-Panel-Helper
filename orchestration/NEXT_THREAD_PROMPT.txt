@@ -6,7 +6,10 @@ Read only `CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt`, `AGENTS.md`,
 `docs/SESSION_CHECKPOINT.md`, `orchestration/TASK_REGISTRY.csv`, this file, and
 the latest accepted release/grader/profile manifests if they exist.
 
-Resume from the checkpoint's Exact next action. Do not reload archived chats or
-raw old logs. Keep shared writes under the coordinator. If file hashes or task
-state conflict, stop with CHECKPOINT_CONFLICT and cite file evidence.
-
+Resume from the checkpoint's Exact next action. The current PH1.5 state has a
+source-guard review packet at `reports/source_review_batches/batch-001/`, zero
+allowed source items, and no real generator run. First complete any pending
+independent PH1.5 source-guard audit; after audit, stop at the human approval
+gate. Do not reload archived chats or raw old logs. Keep shared writes under the
+coordinator. If file hashes or task state conflict, stop with
+CHECKPOINT_CONFLICT and cite file evidence.

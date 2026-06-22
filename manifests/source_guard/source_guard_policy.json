@@ -1,0 +1,49 @@
+{
+  "policy_id": "source_guard_policy_v1",
+  "policy_version": "source_guard_policy_v1",
+  "status": "PH1_5_CALIBRATION",
+  "allowed_final_state_requires": [
+    "explicit_human_approval",
+    "current_file_hash_match",
+    "current_worksheet_fingerprint_match",
+    "sanitized_artifact_created",
+    "bundle_verification_pass",
+    "no_denied_or_quarantined_dependency"
+  ],
+  "no_automatic_allowed": true,
+  "forbidden_labels": [
+    "生管文件",
+    "電機施工圖",
+    "生管課用圖",
+    "生管用圖",
+    "鈑金施工圖",
+    "沖孔施工圖"
+  ],
+  "decision_states": [
+    "UNREVIEWED",
+    "AUTO_DENIED",
+    "CANDIDATE",
+    "NEEDS_HUMAN_REVIEW",
+    "PARSER_REQUIRED",
+    "SUPERSEDED",
+    "QUARANTINED",
+    "HUMAN_APPROVED",
+    "HUMAN_DENIED",
+    "ALLOWED"
+  ],
+  "worksheet_fingerprint": {
+    "algorithm": "SHA-256 over sorted UTF-8 JSON payload",
+    "payload_fields": [
+      "sheet_name",
+      "sheet_visibility",
+      "workbook_sheet_count",
+      "used_range_dimensions",
+      "normalized_visible_cell_content",
+      "merged_ranges",
+      "formula_locations",
+      "defined_names_touching_sheet",
+      "identity_like_cells"
+    ]
+  }
+}
+

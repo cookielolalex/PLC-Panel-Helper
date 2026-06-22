@@ -1,0 +1,46 @@
+﻿{
+    "task_id":  "PH1_5-SOURCE-GUARD-POLICY",
+    "created_at":  "2026-06-22T16:56:57.8485817+08:00",
+    "visible_files":  [
+                          {
+                              "path":  "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+                              "sha256":  "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09"
+                          },
+                          {
+                              "path":  "AGENTS.md",
+                              "sha256":  "6298E5EEB469DEBA38CD3F83D5697C402815B7E0C94F61E7F355D6D704D8E433"
+                          },
+                          {
+                              "path":  "docs/01_CURRENT_STATE.md",
+                              "sha256":  "DA4A8A2FE03519877E4FA72D1C6B94C69C45F746E556EDB3B35C523A7D35F066"
+                          },
+                          {
+                              "path":  "docs/SOURCE_ROOTS.md",
+                              "sha256":  "A97097C0691DD1F39EB34C05B1D484175E1389DBFEEFEF8A8F63920924666DEB"
+                          },
+                          {
+                              "path":  "manifests/all_projects_inventory_summary.json",
+                              "sha256":  "2AA6BE5982B2F8E291B18174E18B02016F028F67A4000750239F8F1F8A57A86A"
+                          },
+                          {
+                              "path":  "reports/manual_review_queue.csv",
+                              "sha256":  "198DFF85074B299FF519C93180497B2FD1F1330E28D97E1239C16A41690B7A6C"
+                          },
+                          {
+                              "path":  "reports/stale_sheet_review_queue.csv",
+                              "sha256":  "2F280927DE7AB36B6D31443FC805B14122BC0328D61B878F87C94DCCBAD1F92A"
+                          },
+                          {
+                              "path":  "orchestration/TASK_REGISTRY.csv",
+                              "sha256":  "F45013D3A51E37FAB135CF7A06266F6DE17B43F90191C83E5395EE693D658532"
+                          },
+                          {
+                              "path":  "orchestration\\tasks\\PH1_5-SOURCE-GUARD-POLICY.md",
+                              "sha256":  "8583F6E1BD5945B964A5D0058D2E18E5CFEC9583CE8DDD7FD3BB4FE1CD70FE0F"
+                          },
+                          {
+                              "path":  "schemas\\child_result.schema.json",
+                              "sha256":  "DDC770A4C36D3664C20B6E2E8688CB30F997C3A479B98108C596A43E2307BC41"
+                          }
+                      ]
+}

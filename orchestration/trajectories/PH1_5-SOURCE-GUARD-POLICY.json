@@ -1,0 +1,23 @@
+﻿{
+    "run_id":  "PH1_5-SOURCE-GUARD-POLICY",
+    "parent_id":  "root-coordinator",
+    "requested_model":  "inherited",
+    "actual_model":  "inherited_parent_gpt-5.5_not_independently_reported",
+    "sandbox":  "instructional_bounded",
+    "visible_file_manifest_hash":  "E2CEC83B86A19DCFC338AFFBBE47B1CE013E013CA313CF2008E9DFB9F74479D6",
+    "tool_calls":  [
+                       {
+                           "timestamp":  "2026-06-22T16:56:57.8485817+08:00",
+                           "tool":  "multi_agent_v1.spawn_agent",
+                           "exit_code":  0
+                       }
+                   ],
+    "input_hashes":  {
+
+                     },
+    "output_hashes":  {
+
+                      },
+    "status":  "RUNNING",
+    "termination_reason":  null
+}

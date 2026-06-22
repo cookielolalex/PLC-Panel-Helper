@@ -1,0 +1,75 @@
+{
+  "task_id": "PH1_5-SYNTHETIC-THREAT-MODEL",
+  "agent_type": "repo_explorer",
+  "status": "PASS",
+  "checks": [
+    {
+      "criterion": "Read boundary and forbidden-path discipline",
+      "status": "PASS",
+      "evidence": "Read the task brief and listed repository inputs only for this threat-model result, with an auxiliary read of docs/SOURCE_ROOTS.md to confirm source-root boundaries. Did not inspect the declared external source root, .git, evals/runs, evals/references, or completed target PDF content. No shared files were edited."
+    },
+    {
+      "criterion": "Authoritative leakage boundary",
+      "status": "PASS",
+      "evidence": "The master spec and generator input policy require positive allowlists, current-project workbook and worksheet approval, stale-sheet rejection, hidden/formula/named-range/external-link inventory, and hard REFERENCE_LEAKAGE failure for completed-target derivatives, filenames, hashes, thumbnails, reviewer findings, scores, expected answers, symlinks, junctions, environment variables, search indexes, or alternate paths that reveal forbidden data."
+    },
+    {
+      "criterion": "Workbook sheet leakage and contamination paths",
+      "status": "PASS",
+      "evidence": "Threat paths: visible allowed sheets can leak forbidden/stale values through formulas, cached formula results, print areas, named ranges, external workbook links, hidden or very-hidden sheets, copied template tabs, revision replacement tabs, and worksheet-level duplicate identities. The workbook sheet index has 4231 rows: 2092 FORBIDDEN, 2139 HUMAN_REVIEW_REQUIRED, 34 hidden, 1466 unknown/unparsed legacy .xls rows, 112 rows with external_links, 303 rows with print_area, 25 STALE_TEMPLATE_SHEET, and 29 HIDDEN_SHEET_REVIEW_REQUIRED. named_ranges is currently empty in this index, but the fail-closed expectation must remain because future approved workbooks can contain them."
+    },
+    {
+      "criterion": "Bundle builder threat surface",
+      "status": "PASS",
+      "evidence": "scripts/build_generator_bundle.py currently admits files when generator_eligibility is ALLOWED and forbidden text is absent from relative_path, file_name, and primary_role, then copies absolute_path if it exists. It admits sheets when generator_eligibility is ALLOWED and stale_template_status is not STALE_TEMPLATE_SHEET. Threats requiring fail-closed tests include missing signed approval fields, stale or tampered adjudication JSON, absolute_path outside an approved root, source mutation after manifesting, duplicate hashes with mixed roles, archive-member leakage, unresolved external links, formulas or cached values pointing at unapproved sheets, and the emitted symlink_junction_scan status of NOT_IMPLEMENTED_PHASE0."
+    },
+    {
+      "criterion": "Contamination scanner threat surface",
+      "status": "PASS",
+      "evidence": "scripts/scan_generator_contamination.py scans manifest text, bundle-relative paths, and UTF-8 file content under 1 MiB for forbidden terms. Deterministic negative fixtures should cover cases that this pattern can miss or must reject: large files, binary workbook/zip members, embedded strings, non-UTF-8 text, symlinks/junctions/reparse points, path traversal, alternate data streams, extra files not declared by manifest, declared files missing from bundle, hash mismatches, and reference-only sentinels present as filenames or metadata."
+    },
+    {
+      "criterion": "Existing synthetic coverage review",
+      "status": "PASS",
+      "evidence": "scripts/run_tests.py includes a positive bundle test with one forbidden file label and one stale sheet, plus basic forbidden classification. It does not yet express deterministic negative expectations for formulas, named ranges, external links, hidden content, revision/supersedes handling, duplicates, source mutations, symlinks/junctions, path traversal, bundle/manifest drift, or approval tampering. The current result therefore proposes expectations rather than modifying tests, per read-only task scope."
+    },
+    {
+      "criterion": "Fail-closed workbook fixture expectations",
+      "status": "PASS",
+      "evidence": "Expected fixtures: reject any workbook with an ALLOWED visible sheet whose formula, cached value, defined name, print area, pivot/cache metadata, or external link references a forbidden, hidden, stale, or unapproved sheet/workbook; reject hidden or very-hidden sheets unless explicitly approved with current identity; reject legacy .xls critical data when parser support is unavailable; reject stale-template sheets with conflicting project/customer/date/revision markers; reject duplicate worksheet identities until a signed field-specific authority decision selects one. Expected status should be REFERENCE_LEAKAGE for forbidden exposure and HUMAN_REVIEW_REQUIRED or CONFLICT for unresolved current-project identity."
+    },
+    {
+      "criterion": "Fail-closed filesystem and source fixture expectations",
+      "status": "PASS",
+      "evidence": "Expected fixtures: reject symlink, junction, reparse-point, hardlink, UNC, drive-prefix, alternate-stream, and path traversal entries that resolve outside the assigned generator bundle or approved source root; reject source files whose hash, size, or resolved path changed between source manifest and copy time; reject copied files whose content hash does not match the source manifest; reject duplicate hashes where any path or manifest role is forbidden; reject archive extraction attempts that would place files outside the bundle or expose forbidden names/contents."
+    },
+    {
+      "criterion": "Fail-closed approval and revision fixture expectations",
+      "status": "PASS",
+      "evidence": "Expected fixtures: reject generator_eligibility=ALLOWED rows lacking approved_by, approval_time, signed decision ID, and stable source/adjudication hashes; reject approval JSON whose target hashes no longer match current manifests; reject rows promoted from HUMAN_REVIEW_REQUIRED or FORBIDDEN without a coordinator-applied decision artifact; reject newest-filename-wins revision selection; require sheet-level effective status, output type, panel/sheet identity, revision, and supersedes links before any revision workbook or drawing-reference metadata can affect generation."
+    },
+    {
+      "criterion": "Generator-visible evidence expectations",
+      "status": "PASS",
+      "evidence": "A generator run should start only when the positive manifest, visible-file manifest, copied bundle hashes, contamination scan, symlink/junction scan, external-link/formula/name inventory, approval decision hashes, and source hashes all agree. Any missing scan, NOT_IMPLEMENTED scan, unexpected file, missing declared file, stale hash, forbidden sentinel, reference filename/hash/score/reviewer derivative, or unresolved conflict should prevent generator execution rather than be downgraded to a warning."
+    }
+  ],
+  "artifacts": [
+    "orchestration/results/PH1_5-SYNTHETIC-THREAT-MODEL.json"
+  ],
+  "hashes": {
+    "orchestration/tasks/PH1_5-SYNTHETIC-THREAT-MODEL.md": "7235AAA22F5027BEE56158A9DCEA1694B880B1387A93F8333C75D80825547896",
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+    "docs/specs/GENERATOR_INPUT_POLICY.md": "2899DD888E05528CFE1E540C391C490AD796D72A573CAC982D4CBB82ABB665DD",
+    "docs/specs/EVALUATION_HARNESS_SPEC.md": "7454C5032CC683E58448ACFBD4425636FE45AB6ADF2DB68AE85274A5FBD28BCA",
+    "scripts/build_generator_bundle.py": "042974890000EBABA5E55048F514F017D2134F816BE67FD5D33B67F4E7671A98",
+    "scripts/scan_generator_contamination.py": "23CB6875255E041A2E947F939DF1164704DB7A556A15940E7A9E29CF90BC4A49",
+    "scripts/run_tests.py": "823364914D92A52708D857064795A06BEB1562F8A2F6AF492BE48F4339D80FB0",
+    "manifests/all_projects_workbook_sheet_index.csv": "A3E3246C103F5BA5AB783FB8D18DC7F6E722419901F131F6314AF2483A7A7EFC",
+    "reports/classification_validation.md": "E4CD07834AFEC36CDA59101791F5C148403EE1E5E22591BF8A692EA12F58173C",
+    "schemas/child_result.schema.json": "DDC770A4C36D3664C20B6E2E8688CB30F997C3A479B98108C596A43E2307BC41",
+    "docs/SOURCE_ROOTS.md": "A97097C0691DD1F39EB34C05B1D484175E1389DBFEEFEF8A8F63920924666DEB"
+  },
+  "summary": "Completed a read-only synthetic leakage and contamination threat model for the generator input boundary. Key risks are workbook-internal leakage through formulas, cached values, hidden sheets, print areas, named ranges, external links, stale/revision tabs, and duplicate identities; filesystem leakage through symlinks, junctions, reparse points, path traversal, source mutation, archive members, duplicate hashes, and bundle/manifest drift; and governance leakage through approval tampering or stale hash-bound decisions. Current bootstrap tests cover only a narrow positive bundle/stale-sheet case, so the next coordinator-owned implementation should add deterministic negative fixtures that fail closed before generation whenever a required scan is missing, NOT_IMPLEMENTED, contaminated, stale, tampered, or unverifiable.",
+  "blockers": []
+}

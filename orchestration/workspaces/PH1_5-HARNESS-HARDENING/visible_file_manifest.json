@@ -1,0 +1,46 @@
+{
+  "manifest_id": "PH1_5-HARNESS-HARDENING-visible-inputs",
+  "encoding": "UTF-8",
+  "files": [
+    {
+      "path": "docs/specs/GENERATOR_INPUT_POLICY.md",
+      "sha256": "2899DD888E05528CFE1E540C391C490AD796D72A573CAC982D4CBB82ABB665DD",
+      "purpose": "generator source boundary policy"
+    },
+    {
+      "path": "docs/specs/EVALUATION_HARNESS_SPEC.md",
+      "sha256": "7454C5032CC683E58448ACFBD4425636FE45AB6ADF2DB68AE85274A5FBD28BCA",
+      "purpose": "evaluation harness artifact and contamination requirements"
+    },
+    {
+      "path": "scripts/run_tests.py",
+      "sha256": "823364914D92A52708D857064795A06BEB1562F8A2F6AF492BE48F4339D80FB0",
+      "purpose": "existing local test harness entrypoint"
+    },
+    {
+      "path": "scripts/harness_lib.py",
+      "sha256": "5C4BC8F1F021D56B7849DD807D97699607CF208FAE723021D72EC9A82D985A75",
+      "purpose": "shared harness helper library"
+    },
+    {
+      "path": "scripts/scan_generator_contamination.py",
+      "sha256": "23CB6875255E041A2E947F939DF1164704DB7A556A15940E7A9E29CF90BC4A49",
+      "purpose": "source guard scanner under hardening"
+    },
+    {
+      "path": "evals/fixtures/synthetic_cases_manifest.json",
+      "sha256": "728D7E35B2884D8248BFEA073F37272CAA63E36BE7321AF0B2EE504BDFC2A81C",
+      "purpose": "current synthetic fixture inventory"
+    },
+    {
+      "path": "evals/fixtures/utf8_labels.txt",
+      "sha256": "4BB82F47AE3F61418540434768A6E752D1B218A04FB82C7A87FEA8B5A103AF47",
+      "purpose": "current UTF-8/CJK label fixture"
+    },
+    {
+      "path": "schemas/child_result.schema.json",
+      "sha256": "DDC770A4C36D3664C20B6E2E8688CB30F997C3A479B98108C596A43E2307BC41",
+      "purpose": "result schema"
+    }
+  ]
+}

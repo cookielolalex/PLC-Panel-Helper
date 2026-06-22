@@ -1,0 +1,23 @@
+{
+  "fixture_set_id": "source_guard_ph1_5",
+  "status": "SYNTHETIC_METADATA_ONLY",
+  "real_project_content_included": false,
+  "cases": [
+    "hidden_worksheet_sentinel",
+    "very_hidden_worksheet_sentinel",
+    "formula_dependency_quarantine",
+    "named_range_quarantine",
+    "external_link_quarantine",
+    "stale_project_identity_denial",
+    "macro_enabled_workbook_quarantine",
+    "legacy_xls_parser_required",
+    "source_hash_mutation_denial",
+    "blank_human_decision_denial",
+    "worksheet_fingerprint_tamper_denial",
+    "source_root_path_leak_denial",
+    "target_output_name_leak_denial",
+    "bundle_hash_mismatch_denial",
+    "artifact_without_human_approval_denial"
+  ],
+  "runner": "scripts/run_tests.py"
+}

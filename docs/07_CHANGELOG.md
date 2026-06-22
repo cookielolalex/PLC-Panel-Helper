@@ -14,3 +14,12 @@
   reusable library roots unapproved.
 - Passed `PH0-SOURCE-UPDATE-AUDIT` and `PH1-INVENTORY-AUDIT`; no generator
   bundle or real-project baseline was started.
+- Added PH1.5 fail-closed source-guard schemas, policy, review-batch builder,
+  approval validator, sanitized bundle builder, bundle verifier, and synthetic
+  regression tests.
+- Generated `reports/source_review_batches/batch-001/` for 12 historical
+  reference-complete calibration projects because active year 115 has no
+  all-three-completed-target projects. The packet has 56 candidate files, 69
+  candidate worksheets, and 0 allowed items.
+- Validated all four PH1.5 child results and reran the synthetic harness. Blank
+  human decisions fail closed with `approved_count=0`.

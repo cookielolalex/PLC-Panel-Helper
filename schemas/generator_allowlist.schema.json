@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generator Allowlist",
+  "type": "object",
+  "required": ["allowlist_id", "project_id", "policy_version", "allowed_items", "status"],
+  "properties": {
+    "allowlist_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "policy_version": {"type": "string"},
+    "status": {"type": "string"},
+    "allowed_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["decision_id", "file_id", "sheet_id", "file_sha256", "worksheet_fingerprint"],
+        "properties": {
+          "decision_id": {"type": "string"},
+          "file_id": {"type": "string"},
+          "sheet_id": {"type": "string"},
+          "file_sha256": {"type": "string"},
+          "worksheet_fingerprint": {"type": "string"}
+        }
+      }
+    },
+    "approval_manifest_hash": {"type": ["string", "null"]}
+  }
+}
+

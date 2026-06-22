@@ -1,0 +1,1133 @@
+diff --git a/reports/source_guard_review_workflow.md b/reports/source_guard_review_workflow.md
+new file mode 100644
+--- /dev/null
++++ b/reports/source_guard_review_workflow.md
+@@ -0,0 +1,77 @@
++# Source Guard Review Workflow
++
++Status: proposed only. No real item is approved by this report.
++
++Purpose:
++
++- Convert `reports/manual_review_queue.csv` into a metadata-only review batch.
++- Require a signed source approval file before any item can enter a generator
++  bundle.
++- Bind every approval to the current source index hashes and the exact current
++  row hash for each approved item.
++- Build a sanitized generator bundle manifest that contains approved workbook
++  and worksheet identifiers only, plus copied workbook files after verification.
++
++Fail-closed rules:
++
++- `FORBIDDEN` rows are never eligible for approval.
++- Completed target drawing roles, production-control roles, electrical drawing
++  roles, target-like PDF names, and rows with forbidden signature matches are
++  rejected even if a human approval document names them.
++- `.xls` workbooks remain unsupported until a parser/conversion path is
++  separately approved and tested.
++- Hidden, stale, insufficient-identity, or non-current worksheets are rejected.
++- Missing source hashes, stale approval row hashes, mismatched index hashes, and
++  missing signature fields reject the approval.
++- Bundle manifests must not expose absolute source paths.
++- Bundle files must not be symlinks, junctions, reparse points, or hash
++  mismatches.
++
++Review sequence:
++
++1. Coordinator builds a review batch:
++
++   ```powershell
++   python scripts/build_source_review_batch.py `
++     --manual-review-queue reports/manual_review_queue.csv `
++     --file-role-index manifests/all_projects_file_role_index.csv `
++     --workbook-sheet-index manifests/all_projects_workbook_sheet_index.csv `
++     --output-json reports/source_review_batch.json `
++     --output-csv reports/source_review_batch.csv
++   ```
++
++2. Human reviewer creates a separate source approval JSON matching
++   `schemas/source_approval.schema.json`.
++3. Coordinator validates the approval:
++
++   ```powershell
++   python scripts/validate_source_approval.py `
++     --approval reports/source_approval.json `
++     --file-role-index manifests/all_projects_file_role_index.csv `
++     --workbook-sheet-index manifests/all_projects_workbook_sheet_index.csv `
++     --output reports/source_approval_validation.json
++   ```
++
++4. Only after validation passes, coordinator builds a sanitized bundle:
++
++   ```powershell
++   python scripts/build_sanitized_generator_bundle.py `
++     --approval reports/source_approval.json `
++     --file-role-index manifests/all_projects_file_role_index.csv `
++     --workbook-sheet-index manifests/all_projects_workbook_sheet_index.csv `
++     --bundle-dir tmp/sanitized_generator_bundle `
++     --output-manifest tmp/sanitized_generator_bundle/manifest.json `
++     --project-id 1150001 `
++     --run-id REVIEWED-1150001 `
++     --copy-files
++   ```
++
++5. Coordinator verifies the bundle before any generator invocation:
++
++   ```powershell
++   python scripts/verify_sanitized_bundle.py `
++     --bundle-dir tmp/sanitized_generator_bundle `
++     --manifest tmp/sanitized_generator_bundle/manifest.json `
++     --output tmp/sanitized_generator_bundle/verification.json
++   ```
++
+
+diff --git a/schemas/sanitized_generator_bundle.schema.json b/schemas/sanitized_generator_bundle.schema.json
+new file mode 100644
+--- /dev/null
++++ b/schemas/sanitized_generator_bundle.schema.json
+@@ -0,0 +1,60 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "title": "Sanitized Generator Bundle",
++  "type": "object",
++  "required": [
++    "manifest_id",
++    "project_id",
++    "run_id",
++    "status",
++    "source_approval_id",
++    "allowed_files",
++    "allowed_sheets",
++    "excluded",
++    "verification"
++  ],
++  "properties": {
++    "manifest_id": {"type": "string"},
++    "project_id": {"type": "string"},
++    "run_id": {"type": "string"},
++    "status": {"enum": ["PASS", "FAIL", "HUMAN_REVIEW_REQUIRED"]},
++    "source_approval_id": {"type": "string"},
++    "bundle_root": {"type": "string"},
++    "allowed_files": {
++      "type": "array",
++      "items": {
++        "type": "object",
++        "required": ["source_file_id", "bundle_path", "sha256", "extension", "primary_role"],
++        "properties": {
++          "source_file_id": {"type": "string"},
++          "bundle_path": {"type": "string"},
++          "sha256": {"type": "string"},
++          "extension": {"type": "string"},
++          "primary_role": {"type": "string"}
++        }
++      }
++    },
++    "allowed_sheets": {
++      "type": "array",
++      "items": {
++        "type": "object",
++        "required": ["sheet_id", "workbook_file_id", "sheet_name"],
++        "properties": {
++          "sheet_id": {"type": "string"},
++          "workbook_file_id": {"type": "string"},
++          "sheet_name": {"type": "string"}
++        }
++      }
++    },
++    "excluded": {"type": "array"},
++    "verification": {
++      "type": "object",
++      "required": ["status", "errors"],
++      "properties": {
++        "status": {"enum": ["PASS", "FAIL", "NOT_RUN"]},
++        "errors": {"type": "array", "items": {"type": "string"}}
++      }
++    }
++  }
++}
++
+
+diff --git a/schemas/source_approval.schema.json b/schemas/source_approval.schema.json
+new file mode 100644
+--- /dev/null
++++ b/schemas/source_approval.schema.json
+@@ -0,0 +1,69 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "title": "Source Approval",
++  "type": "object",
++  "required": [
++    "approval_id",
++    "created_at",
++    "approved_by",
++    "signed_human_decision",
++    "bound_inputs",
++    "decisions"
++  ],
++  "properties": {
++    "approval_id": {"type": "string"},
++    "created_at": {"type": "string"},
++    "approved_by": {"type": "string"},
++    "signed_human_decision": {
++      "type": "object",
++      "required": ["signer", "signed_at", "statement", "signature_sha256"],
++      "properties": {
++        "signer": {"type": "string"},
++        "signed_at": {"type": "string"},
++        "statement": {"type": "string"},
++        "signature_sha256": {"type": "string"}
++      }
++    },
++    "bound_inputs": {
++      "type": "object",
++      "required": ["file_role_index_sha256", "workbook_sheet_index_sha256"],
++      "properties": {
++        "file_role_index_sha256": {"type": "string"},
++        "workbook_sheet_index_sha256": {"type": "string"},
++        "source_roots_sha256": {"type": "string"},
++        "review_batch_sha256": {"type": "string"}
++      }
++    },
++    "decisions": {
++      "type": "array",
++      "minItems": 1,
++      "items": {
++        "type": "object",
++        "required": [
++          "decision_id",
++          "item_type",
++          "item_id",
++          "decision",
++          "current_row_sha256",
++          "rationale"
++        ],
++        "properties": {
++          "decision_id": {"type": "string"},
++          "item_type": {"enum": ["file", "worksheet"]},
++          "item_id": {"type": "string"},
++          "decision": {
++            "enum": [
++              "ALLOW_GENERATOR_INPUT",
++              "REJECT_GENERATOR_INPUT",
++              "REQUEST_MORE_INFO"
++            ]
++          },
++          "current_row_sha256": {"type": "string"},
++          "effective_project_id": {"type": "string"},
++          "rationale": {"type": "string"}
++        }
++      }
++    }
++  }
++}
++
+
+diff --git a/schemas/source_review_batch.schema.json b/schemas/source_review_batch.schema.json
+new file mode 100644
+--- /dev/null
++++ b/schemas/source_review_batch.schema.json
+@@ -0,0 +1,84 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "title": "Source Review Batch",
++  "type": "object",
++  "required": [
++    "review_batch_id",
++    "created_at",
++    "generator_visible",
++    "source_indices",
++    "items"
++  ],
++  "properties": {
++    "review_batch_id": {"type": "string"},
++    "created_at": {"type": "string"},
++    "generator_visible": {"type": "boolean"},
++    "source_indices": {
++      "type": "object",
++      "required": [
++        "file_role_index",
++        "workbook_sheet_index"
++      ],
++      "properties": {
++        "file_role_index": {
++          "type": "object",
++          "required": ["path", "sha256"],
++          "properties": {
++            "path": {"type": "string"},
++            "sha256": {"type": "string"}
++          }
++        },
++        "workbook_sheet_index": {
++          "type": "object",
++          "required": ["path", "sha256"],
++          "properties": {
++            "path": {"type": "string"},
++            "sha256": {"type": "string"}
++          }
++        },
++        "manual_review_queue": {
++          "type": "object",
++          "properties": {
++            "path": {"type": "string"},
++            "sha256": {"type": "string"}
++          }
++        }
++      }
++    },
++    "items": {
++      "type": "array",
++      "items": {
++        "type": "object",
++        "required": [
++          "queue_id",
++          "item_type",
++          "item_id",
++          "reason",
++          "current_generator_eligibility",
++          "source_row_sha256",
++          "reviewer_instruction"
++        ],
++        "properties": {
++          "queue_id": {"type": "string"},
++          "item_type": {"enum": ["file", "worksheet"]},
++          "item_id": {"type": "string"},
++          "reason": {"type": "string"},
++          "status": {"type": "string"},
++          "source_root": {"type": "string"},
++          "relative_path": {"type": "string"},
++          "workbook_file_id": {"type": "string"},
++          "sheet_name": {"type": "string"},
++          "primary_role": {"type": "string"},
++          "stale_template_status": {"type": "string"},
++          "visibility": {"type": "string"},
++          "current_generator_eligibility": {
++            "enum": ["FORBIDDEN", "HUMAN_REVIEW_REQUIRED", "ALLOWED"]
++          },
++          "source_row_sha256": {"type": "string"},
++          "reviewer_instruction": {"type": "string"}
++        }
++      }
++    }
++  }
++}
++
+
+diff --git a/scripts/build_sanitized_generator_bundle.py b/scripts/build_sanitized_generator_bundle.py
+new file mode 100644
+--- /dev/null
++++ b/scripts/build_sanitized_generator_bundle.py
+@@ -0,0 +1,72 @@
++from __future__ import annotations
++
++import argparse
++from pathlib import Path
++
++from source_guard import (
++    build_sanitized_bundle_manifest,
++    read_csv,
++    read_json,
++    validate_approval,
++    validate_bound_inputs,
++    verify_bundle_manifest,
++    write_json,
++)
++
++
++def main() -> None:
++    parser = argparse.ArgumentParser(description="Build a sanitized generator bundle from validated source approvals.")
++    parser.add_argument("--approval", type=Path, required=True)
++    parser.add_argument("--file-role-index", type=Path, required=True)
++    parser.add_argument("--workbook-sheet-index", type=Path, required=True)
++    parser.add_argument("--bundle-dir", type=Path, required=True)
++    parser.add_argument("--output-manifest", type=Path, required=True)
++    parser.add_argument("--run-id", default="RUN")
++    parser.add_argument("--project-id", required=True)
++    parser.add_argument("--copy-files", action="store_true")
++    args = parser.parse_args()
++
++    approval = read_json(args.approval)
++    file_rows = read_csv(args.file_role_index)
++    sheet_rows = read_csv(args.workbook_sheet_index)
++    guard_result = validate_approval(approval, file_rows, sheet_rows)
++    bound_errors = validate_bound_inputs(approval, args.file_role_index, args.workbook_sheet_index)
++    if bound_errors or guard_result.status != "PASS":
++        write_json(args.output_manifest, {
++            "manifest_id": f"sanitized-generator-input-{args.run_id}",
++            "project_id": args.project_id,
++            "run_id": args.run_id,
++            "status": "FAIL" if bound_errors or guard_result.errors else "HUMAN_REVIEW_REQUIRED",
++            "source_approval_id": approval.get("approval_id", ""),
++            "bundle_root": str(args.bundle_dir),
++            "allowed_files": [],
++            "allowed_sheets": [],
++            "excluded": [],
++            "verification": {"status": "FAIL", "errors": [*bound_errors, *guard_result.errors]},
++        })
++        raise SystemExit(1)
++
++    manifest = build_sanitized_bundle_manifest(
++        approval=approval,
++        guard_result=guard_result,
++        file_rows=file_rows,
++        sheet_rows=sheet_rows,
++        bundle_root=args.bundle_dir,
++        run_id=args.run_id,
++        project_id=args.project_id,
++        copy_files=args.copy_files,
++    )
++    if args.copy_files:
++        verification_errors = verify_bundle_manifest(manifest, args.bundle_dir)
++        manifest["verification"] = {
++            "status": "FAIL" if verification_errors else "PASS",
++            "errors": verification_errors,
++        }
++    write_json(args.output_manifest, manifest)
++    if manifest["status"] != "PASS" or manifest["verification"]["status"] == "FAIL":
++        raise SystemExit(1)
++
++
++if __name__ == "__main__":
++    main()
++
+
+diff --git a/scripts/build_source_review_batch.py b/scripts/build_source_review_batch.py
+new file mode 100644
+--- /dev/null
++++ b/scripts/build_source_review_batch.py
+@@ -0,0 +1,68 @@
++from __future__ import annotations
++
++import argparse
++from datetime import datetime, timezone
++from pathlib import Path
++
++from source_guard import build_review_items, read_csv, sha256_file, write_csv, write_json
++
++
++def main() -> None:
++    parser = argparse.ArgumentParser(description="Build a metadata-only source review batch.")
++    parser.add_argument("--manual-review-queue", type=Path, required=True)
++    parser.add_argument("--file-role-index", type=Path, required=True)
++    parser.add_argument("--workbook-sheet-index", type=Path, required=True)
++    parser.add_argument("--output-json", type=Path, required=True)
++    parser.add_argument("--output-csv", type=Path)
++    parser.add_argument("--batch-id", default="source-review-batch")
++    parser.add_argument("--max-items", type=int)
++    args = parser.parse_args()
++
++    queue_rows = read_csv(args.manual_review_queue)
++    file_rows = read_csv(args.file_role_index)
++    sheet_rows = read_csv(args.workbook_sheet_index)
++    items = build_review_items(queue_rows, file_rows, sheet_rows, args.max_items)
++    batch = {
++        "review_batch_id": args.batch_id,
++        "created_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
++        "generator_visible": False,
++        "source_indices": {
++            "file_role_index": {
++                "path": str(args.file_role_index),
++                "sha256": sha256_file(args.file_role_index),
++            },
++            "workbook_sheet_index": {
++                "path": str(args.workbook_sheet_index),
++                "sha256": sha256_file(args.workbook_sheet_index),
++            },
++            "manual_review_queue": {
++                "path": str(args.manual_review_queue),
++                "sha256": sha256_file(args.manual_review_queue),
++            },
++        },
++        "items": items,
++    }
++    write_json(args.output_json, batch)
++    if args.output_csv:
++        write_csv(args.output_csv, items, [
++            "queue_id",
++            "item_type",
++            "item_id",
++            "reason",
++            "status",
++            "source_root",
++            "relative_path",
++            "workbook_file_id",
++            "sheet_name",
++            "primary_role",
++            "stale_template_status",
++            "visibility",
++            "current_generator_eligibility",
++            "source_row_sha256",
++            "reviewer_instruction",
++        ])
++
++
++if __name__ == "__main__":
++    main()
++
+
+diff --git a/scripts/source_guard.py b/scripts/source_guard.py
+new file mode 100644
+--- /dev/null
++++ b/scripts/source_guard.py
+@@ -0,0 +1,405 @@
++from __future__ import annotations
++
++import csv
++import hashlib
++import json
++import os
++import shutil
++from dataclasses import dataclass
++from pathlib import Path
++from typing import Any
++
++
++EXCEL_EXTENSIONS = {".xlsx", ".xlsm"}
++SAFE_FILE_ROLES = {
++    "allowed_contract_workbook",
++    "allowed_material_list_workbook",
++    "allowed_supporting_workbook",
++}
++FORBIDDEN_FILE_ROLES = {
++    "forbidden_production_control_file",
++    "forbidden_electrical_drawing",
++    "completed_production_drawing_reference",
++    "completed_sheetmetal_drawing_reference",
++    "completed_punch_drawing_reference",
++}
++TARGET_OUTPUT_PREFIXES = ("01_", "02_", "03_")
++ALLOW_DECISION = "ALLOW_GENERATOR_INPUT"
++
++
++class SourceGuardError(Exception):
++    pass
++
++
++@dataclass(frozen=True)
++class GuardResult:
++    status: str
++    errors: list[str]
++    warnings: list[str]
++    allowed_file_ids: list[str]
++    allowed_sheet_ids: list[str]
++
++
++def read_json(path: Path) -> Any:
++    with path.open("r", encoding="utf-8") as f:
++        return json.load(f)
++
++
++def write_json(path: Path, data: Any) -> None:
++    path.parent.mkdir(parents=True, exist_ok=True)
++    with path.open("w", encoding="utf-8", newline="\n") as f:
++        json.dump(data, f, ensure_ascii=False, indent=2)
++        f.write("\n")
++
++
++def read_csv(path: Path) -> list[dict[str, str]]:
++    with path.open("r", encoding="utf-8-sig", newline="") as f:
++        return list(csv.DictReader(f))
++
++
++def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> None:
++    path.parent.mkdir(parents=True, exist_ok=True)
++    with path.open("w", encoding="utf-8-sig", newline="") as f:
++        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
++        writer.writeheader()
++        writer.writerows(rows)
++
++
++def sha256_file(path: Path) -> str:
++    h = hashlib.sha256()
++    with path.open("rb") as f:
++        for chunk in iter(lambda: f.read(1024 * 1024), b""):
++            h.update(chunk)
++    return h.hexdigest().upper()
++
++
++def sha256_json(data: Any) -> str:
++    text = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
++    return hashlib.sha256(text.encode("utf-8")).hexdigest().upper()
++
++
++def row_sha256(row: dict[str, Any]) -> str:
++    stable = {k: row.get(k, "") for k in sorted(row)}
++    return sha256_json(stable)
++
++
++def boolish(value: Any) -> bool:
++    return str(value).strip().lower() in {"1", "true", "yes", "y"}
++
++
++def index_by(rows: list[dict[str, str]], key: str) -> dict[str, dict[str, str]]:
++    indexed: dict[str, dict[str, str]] = {}
++    for row in rows:
++        value = row.get(key, "")
++        if value:
++            indexed[value] = row
++    return indexed
++
++
++def is_target_like_name(name: str) -> bool:
++    base = Path(name).name
++    return base.startswith(TARGET_OUTPUT_PREFIXES) and base.lower().endswith(".pdf")
++
++
++def forbidden_reasons(row: dict[str, Any]) -> list[str]:
++    reasons: list[str] = []
++    if row.get("generator_eligibility") == "FORBIDDEN":
++        reasons.append("generator_eligibility_forbidden")
++    if row.get("primary_role") in FORBIDDEN_FILE_ROLES:
++        reasons.append(f"forbidden_role:{row.get('primary_role')}")
++    if boolish(row.get("forbidden_signature_match", "")):
++        reasons.append("forbidden_signature_match")
++    if row.get("drawing_output_type"):
++        reasons.append(f"drawing_output_type:{row.get('drawing_output_type')}")
++    for key in ("relative_path", "file_name", "bundle_path"):
++        value = str(row.get(key, ""))
++        if value and is_target_like_name(value):
++            reasons.append(f"target_like_name:{key}")
++    return reasons
++
++
++def file_allow_reasons(row: dict[str, Any]) -> list[str]:
++    reasons: list[str] = []
++    reasons.extend(forbidden_reasons(row))
++    ext = str(row.get("extension") or Path(str(row.get("file_name", ""))).suffix).lower()
++    if ext not in EXCEL_EXTENSIONS:
++        reasons.append(f"unsupported_extension:{ext or 'missing'}")
++    if row.get("primary_role") not in SAFE_FILE_ROLES:
++        reasons.append(f"not_safe_file_role:{row.get('primary_role') or 'missing'}")
++    if not row.get("project_id"):
++        reasons.append("missing_project_id")
++    digest = str(row.get("sha256", ""))
++    if not digest or digest == "NOT_HASHED":
++        reasons.append("missing_current_file_hash")
++    return reasons
++
++
++def sheet_allow_reasons(sheet: dict[str, Any], workbook: dict[str, Any] | None) -> list[str]:
++    reasons: list[str] = []
++    reasons.extend(forbidden_reasons(sheet))
++    if workbook is None:
++        reasons.append("missing_workbook_file_row")
++        return reasons
++    reasons.extend(f"workbook_{reason}" for reason in file_allow_reasons(workbook))
++    if str(sheet.get("visibility", "")).lower() not in {"visible", ""}:
++        reasons.append(f"non_visible_sheet:{sheet.get('visibility')}")
++    if sheet.get("stale_template_status") != "CURRENT_PROJECT_ID_MATCH":
++        reasons.append(f"not_current_project_sheet:{sheet.get('stale_template_status') or 'missing'}")
++    if not sheet.get("sheet_name"):
++        reasons.append("missing_sheet_name")
++    return reasons
++
++
++def build_review_items(
++    queue_rows: list[dict[str, str]],
++    file_rows: list[dict[str, str]],
++    sheet_rows: list[dict[str, str]],
++    max_items: int | None = None,
++) -> list[dict[str, Any]]:
++    files = index_by(file_rows, "file_id")
++    sheets = index_by(sheet_rows, "sheet_id")
++    items: list[dict[str, Any]] = []
++    for queue in queue_rows:
++        item_type = queue.get("item_type", "")
++        item_id = queue.get("item_id", "")
++        if queue.get("status") != "HUMAN_REVIEW_REQUIRED":
++            continue
++        if item_type == "file":
++            row = files.get(item_id)
++            if row is None:
++                continue
++            item = {
++                "queue_id": queue.get("queue_id", ""),
++                "item_type": "file",
++                "item_id": item_id,
++                "reason": queue.get("reason", ""),
++                "status": queue.get("status", ""),
++                "source_root": row.get("source_root", ""),
++                "relative_path": row.get("relative_path", ""),
++                "primary_role": row.get("primary_role", ""),
++                "current_generator_eligibility": row.get("generator_eligibility", ""),
++                "source_row_sha256": row_sha256(row),
++                "reviewer_instruction": "Review metadata and source file manually; approve only current project Excel inputs.",
++            }
++        elif item_type == "worksheet":
++            row = sheets.get(item_id)
++            if row is None:
++                continue
++            workbook = files.get(row.get("workbook_file_id", ""))
++            item = {
++                "queue_id": queue.get("queue_id", ""),
++                "item_type": "worksheet",
++                "item_id": item_id,
++                "reason": queue.get("reason", ""),
++                "status": queue.get("status", ""),
++                "source_root": workbook.get("source_root", "") if workbook else "",
++                "relative_path": workbook.get("relative_path", "") if workbook else "",
++                "workbook_file_id": row.get("workbook_file_id", ""),
++                "sheet_name": row.get("sheet_name", ""),
++                "stale_template_status": row.get("stale_template_status", ""),
++                "visibility": row.get("visibility", ""),
++                "current_generator_eligibility": row.get("generator_eligibility", ""),
++                "source_row_sha256": row_sha256(row),
++                "reviewer_instruction": "Approve only if the sheet is current-project evidence and not a stale or hidden template.",
++            }
++        else:
++            continue
++        items.append(item)
++        if max_items is not None and len(items) >= max_items:
++            break
++    return items
++
++
++def validate_bound_inputs(
++    approval: dict[str, Any],
++    file_role_index: Path,
++    workbook_sheet_index: Path,
++) -> list[str]:
++    errors: list[str] = []
++    bound = approval.get("bound_inputs", {})
++    actual_file_hash = sha256_file(file_role_index)
++    actual_sheet_hash = sha256_file(workbook_sheet_index)
++    if bound.get("file_role_index_sha256") != actual_file_hash:
++        errors.append("file_role_index_sha256_mismatch")
++    if bound.get("workbook_sheet_index_sha256") != actual_sheet_hash:
++        errors.append("workbook_sheet_index_sha256_mismatch")
++    return errors
++
++
++def validate_approval(
++    approval: dict[str, Any],
++    file_rows: list[dict[str, str]],
++    sheet_rows: list[dict[str, str]],
++) -> GuardResult:
++    errors: list[str] = []
++    warnings: list[str] = []
++    allowed_files: set[str] = set()
++    allowed_sheets: set[str] = set()
++    files = index_by(file_rows, "file_id")
++    sheets = index_by(sheet_rows, "sheet_id")
++
++    signature = approval.get("signed_human_decision", {})
++    for key in ("signer", "signed_at", "statement", "signature_sha256"):
++        if not signature.get(key):
++            errors.append(f"missing_signature_field:{key}")
++
++    for decision in approval.get("decisions", []):
++        if decision.get("decision") != ALLOW_DECISION:
++            warnings.append(f"non_allow_decision_skipped:{decision.get('decision_id', '')}")
++            continue
++        item_type = decision.get("item_type")
++        item_id = decision.get("item_id", "")
++        if item_type == "file":
++            row = files.get(item_id)
++            if row is None:
++                errors.append(f"file_decision_missing_row:{item_id}")
++                continue
++            if decision.get("current_row_sha256") != row_sha256(row):
++                errors.append(f"file_decision_stale_hash:{item_id}")
++                continue
++            reasons = file_allow_reasons(row)
++            if reasons:
++                errors.append(f"file_decision_rejected:{item_id}:{'|'.join(reasons)}")
++                continue
++            allowed_files.add(item_id)
++        elif item_type == "worksheet":
++            row = sheets.get(item_id)
++            if row is None:
++                errors.append(f"sheet_decision_missing_row:{item_id}")
++                continue
++            if decision.get("current_row_sha256") != row_sha256(row):
++                errors.append(f"sheet_decision_stale_hash:{item_id}")
++                continue
++            workbook_id = row.get("workbook_file_id", "")
++            workbook = files.get(workbook_id)
++            reasons = sheet_allow_reasons(row, workbook)
++            if reasons:
++                errors.append(f"sheet_decision_rejected:{item_id}:{'|'.join(reasons)}")
++                continue
++            allowed_sheets.add(item_id)
++            allowed_files.add(workbook_id)
++        else:
++            errors.append(f"unknown_decision_item_type:{item_type}")
++
++    status = "PASS" if not errors and (allowed_files or allowed_sheets) else "HUMAN_REVIEW_REQUIRED"
++    if errors:
++        status = "FAIL"
++    return GuardResult(
++        status=status,
++        errors=errors,
++        warnings=warnings,
++        allowed_file_ids=sorted(allowed_files),
++        allowed_sheet_ids=sorted(allowed_sheets),
++    )
++
++
++def copy_approved_file(src: Path, bundle_root: Path, row: dict[str, Any]) -> dict[str, str]:
++    if src.is_symlink():
++        raise SourceGuardError(f"refusing_symlink_source:{src}")
++    target = bundle_root / "evidence" / f"{row['file_id']}{Path(src).suffix.lower()}"
++    target.parent.mkdir(parents=True, exist_ok=True)
++    shutil.copy2(src, target)
++    return {
++        "source_file_id": row["file_id"],
++        "bundle_path": str(target.relative_to(bundle_root)).replace("\\", "/"),
++        "sha256": sha256_file(target),
++        "extension": Path(target).suffix.lower(),
++        "primary_role": row.get("primary_role", ""),
++    }
++
++
++def build_sanitized_bundle_manifest(
++    approval: dict[str, Any],
++    guard_result: GuardResult,
++    file_rows: list[dict[str, str]],
++    sheet_rows: list[dict[str, str]],
++    bundle_root: Path,
++    run_id: str,
++    project_id: str,
++    copy_files: bool,
++) -> dict[str, Any]:
++    files = index_by(file_rows, "file_id")
++    sheets = index_by(sheet_rows, "sheet_id")
++    allowed_files: list[dict[str, str]] = []
++    excluded: list[dict[str, str]] = []
++
++    for file_id in guard_result.allowed_file_ids:
++        row = files[file_id]
++        if copy_files:
++            absolute_path = row.get("absolute_path", "")
++            if not absolute_path:
++                raise SourceGuardError(f"approved_file_missing_absolute_path:{file_id}")
++            allowed_files.append(copy_approved_file(Path(absolute_path), bundle_root, row))
++        else:
++            allowed_files.append({
++                "source_file_id": file_id,
++                "bundle_path": f"evidence/{file_id}{row.get('extension', '')}",
++                "sha256": row.get("sha256", ""),
++                "extension": row.get("extension", ""),
++                "primary_role": row.get("primary_role", ""),
++            })
++
++    allowed_sheets = [
++        {
++            "sheet_id": sheet_id,
++            "workbook_file_id": sheets[sheet_id].get("workbook_file_id", ""),
++            "sheet_name": sheets[sheet_id].get("sheet_name", ""),
++        }
++        for sheet_id in guard_result.allowed_sheet_ids
++    ]
++    for row in file_rows:
++        if row.get("file_id") not in guard_result.allowed_file_ids:
++            excluded.append({"id": row.get("file_id", ""), "reason": "not_in_validated_source_approval"})
++    for row in sheet_rows:
++        if row.get("sheet_id") not in guard_result.allowed_sheet_ids:
++            excluded.append({"id": row.get("sheet_id", ""), "reason": "not_in_validated_source_approval"})
++
++    return {
++        "manifest_id": f"sanitized-generator-input-{run_id}",
++        "project_id": project_id,
++        "run_id": run_id,
++        "status": guard_result.status,
++        "source_approval_id": approval.get("approval_id", ""),
++        "bundle_root": str(bundle_root),
++        "allowed_files": allowed_files,
++        "allowed_sheets": allowed_sheets,
++        "excluded": excluded,
++        "verification": {"status": "NOT_RUN", "errors": []},
++    }
++
++
++def has_windows_reparse_point(path: Path) -> bool:
++    attrs = getattr(path.stat(), "st_file_attributes", 0)
++    return bool(attrs & getattr(os.stat_result, "FILE_ATTRIBUTE_REPARSE_POINT", 0))
++
++
++def verify_bundle_manifest(manifest: dict[str, Any], bundle_root: Path) -> list[str]:
++    errors: list[str] = []
++    root = bundle_root.resolve()
++    for row in manifest.get("allowed_files", []):
++        bundle_path = str(row.get("bundle_path", ""))
++        if not bundle_path or Path(bundle_path).is_absolute():
++            errors.append(f"invalid_bundle_path:{bundle_path}")
++            continue
++        if ".." in Path(bundle_path).parts:
++            errors.append(f"bundle_path_escapes_root:{bundle_path}")
++            continue
++        if forbidden_reasons(row):
++            errors.append(f"forbidden_bundle_metadata:{bundle_path}:{'|'.join(forbidden_reasons(row))}")
++        path = (root / bundle_path).resolve()
++        try:
++            path.relative_to(root)
++        except ValueError:
++            errors.append(f"resolved_bundle_path_escapes_root:{bundle_path}")
++            continue
++        if path.exists():
++            if path.is_symlink() or has_windows_reparse_point(path):
++                errors.append(f"bundle_reparse_point_rejected:{bundle_path}")
++            if path.is_file():
++                actual = sha256_file(path)
++                if row.get("sha256") and row.get("sha256") != actual:
++                    errors.append(f"bundle_hash_mismatch:{bundle_path}")
++        else:
++            errors.append(f"bundle_file_missing:{bundle_path}")
++    return errors
++
+
+diff --git a/scripts/validate_source_approval.py b/scripts/validate_source_approval.py
+new file mode 100644
+--- /dev/null
++++ b/scripts/validate_source_approval.py
+@@ -0,0 +1,44 @@
++from __future__ import annotations
++
++import argparse
++from pathlib import Path
++
++from source_guard import (
++    read_csv,
++    read_json,
++    validate_approval,
++    validate_bound_inputs,
++    write_json,
++)
++
++
++def main() -> None:
++    parser = argparse.ArgumentParser(description="Validate signed source approvals against current source indexes.")
++    parser.add_argument("--approval", type=Path, required=True)
++    parser.add_argument("--file-role-index", type=Path, required=True)
++    parser.add_argument("--workbook-sheet-index", type=Path, required=True)
++    parser.add_argument("--output", type=Path, required=True)
++    args = parser.parse_args()
++
++    approval = read_json(args.approval)
++    file_rows = read_csv(args.file_role_index)
++    sheet_rows = read_csv(args.workbook_sheet_index)
++    result = validate_approval(approval, file_rows, sheet_rows)
++    bound_errors = validate_bound_inputs(approval, args.file_role_index, args.workbook_sheet_index)
++    errors = [*bound_errors, *result.errors]
++    status = "FAIL" if errors else result.status
++    write_json(args.output, {
++        "approval_id": approval.get("approval_id", ""),
++        "status": status,
++        "errors": errors,
++        "warnings": result.warnings,
++        "allowed_file_ids": result.allowed_file_ids if status == "PASS" else [],
++        "allowed_sheet_ids": result.allowed_sheet_ids if status == "PASS" else [],
++    })
++    if status == "FAIL":
++        raise SystemExit(1)
++
++
++if __name__ == "__main__":
++    main()
++
+
+diff --git a/scripts/verify_sanitized_bundle.py b/scripts/verify_sanitized_bundle.py
+new file mode 100644
+--- /dev/null
++++ b/scripts/verify_sanitized_bundle.py
+@@ -0,0 +1,30 @@
++from __future__ import annotations
++
++import argparse
++from pathlib import Path
++
++from source_guard import read_json, verify_bundle_manifest, write_json
++
++
++def main() -> None:
++    parser = argparse.ArgumentParser(description="Verify a sanitized generator bundle manifest and copied files.")
++    parser.add_argument("--bundle-dir", type=Path, required=True)
++    parser.add_argument("--manifest", type=Path, required=True)
++    parser.add_argument("--output", type=Path, required=True)
++    args = parser.parse_args()
++
++    manifest = read_json(args.manifest)
++    errors = verify_bundle_manifest(manifest, args.bundle_dir)
++    result = {
++        "manifest_id": manifest.get("manifest_id", ""),
++        "status": "FAIL" if errors else "PASS",
++        "errors": errors,
++    }
++    write_json(args.output, result)
++    if errors:
++        raise SystemExit(1)
++
++
++if __name__ == "__main__":
++    main()
++
+
+diff --git a/tests/test_source_guard.py b/tests/test_source_guard.py
+new file mode 100644
+--- /dev/null
++++ b/tests/test_source_guard.py
+@@ -0,0 +1,164 @@
++from __future__ import annotations
++
++import sys
++from pathlib import Path
++
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT / "scripts"))
++
++from source_guard import (  # noqa: E402
++    build_review_items,
++    build_sanitized_bundle_manifest,
++    row_sha256,
++    validate_approval,
++)
++
++
++def synthetic_file_row(**overrides: str) -> dict[str, str]:
++    row = {
++        "file_id": "FILE-SAFE-001",
++        "source_root": "SRC-SYNTHETIC",
++        "relative_path": "1150001/input.xlsx",
++        "archive_member_path": "",
++        "project_id": "1150001",
++        "project_name": "Synthetic project",
++        "customer": "Synthetic customer",
++        "file_name": "input.xlsx",
++        "extension": ".xlsx",
++        "size_bytes": "10",
++        "modified_time": "0",
++        "sha256": "A" * 64,
++        "content_fingerprint": "A" * 64,
++        "duplicate_of": "",
++        "primary_role": "allowed_contract_workbook",
++        "secondary_tags": "",
++        "drawing_output_type": "",
++        "generator_eligibility": "HUMAN_REVIEW_REQUIRED",
++        "forbidden_signature_match": "False",
++        "classification_confidence": "0.75",
++        "basis": "synthetic_test",
++        "parse_status": "PARSED",
++        "review_status": "BOOTSTRAP_CLASSIFIED",
++        "notes": "",
++        "absolute_path": "",
++    }
++    row.update(overrides)
++    return row
++
++
++def synthetic_sheet_row(**overrides: str) -> dict[str, str]:
++    row = {
++        "sheet_id": "SHEET-SAFE-001",
++        "workbook_file_id": "FILE-SAFE-001",
++        "sheet_name": "CurrentInput",
++        "visibility": "visible",
++        "used_range": "A1:D10",
++        "print_area": "",
++        "named_ranges": "",
++        "external_links": "",
++        "detected_project_id": "1150001",
++        "detected_customer": "Synthetic customer",
++        "detected_project_name": "Synthetic project",
++        "detected_date": "2026-06-22",
++        "detected_revision": "0",
++        "stale_template_status": "CURRENT_PROJECT_ID_MATCH",
++        "stale_evidence": "",
++        "generator_eligibility": "HUMAN_REVIEW_REQUIRED",
++        "approved_by": "",
++        "approval_time": "",
++        "parse_status": "PARSED",
++        "notes": "",
++    }
++    row.update(overrides)
++    return row
++
++
++def approval_for(row: dict[str, str], item_type: str, item_id: str) -> dict[str, object]:
++    return {
++        "approval_id": "APPROVAL-SYNTHETIC",
++        "created_at": "2026-06-22T00:00:00Z",
++        "approved_by": "synthetic-reviewer",
++        "signed_human_decision": {
++            "signer": "synthetic-reviewer",
++            "signed_at": "2026-06-22T00:00:00Z",
++            "statement": "Synthetic approval for regression testing only.",
++            "signature_sha256": "B" * 64,
++        },
++        "bound_inputs": {
++            "file_role_index_sha256": "C" * 64,
++            "workbook_sheet_index_sha256": "D" * 64,
++        },
++        "decisions": [{
++            "decision_id": "DECISION-001",
++            "item_type": item_type,
++            "item_id": item_id,
++            "decision": "ALLOW_GENERATOR_INPUT",
++            "current_row_sha256": row_sha256(row),
++            "effective_project_id": "1150001",
++            "rationale": "Synthetic current project workbook/sheet.",
++        }],
++    }
++
++
++def test_forbidden_file_role_cannot_be_approved() -> None:
++    file_row = synthetic_file_row(
++        primary_role="forbidden_electrical_drawing",
++        generator_eligibility="FORBIDDEN",
++        file_name="target.pdf",
++        extension=".pdf",
++    )
++    approval = approval_for(file_row, "file", "FILE-SAFE-001")
++    result = validate_approval(approval, [file_row], [])
++    assert result.status == "FAIL"
++    assert not result.allowed_file_ids
++    assert any("forbidden_role" in error for error in result.errors)
++
++
++def test_stale_hash_rejected() -> None:
++    file_row = synthetic_file_row()
++    approval = approval_for(file_row, "file", "FILE-SAFE-001")
++    approval["decisions"][0]["current_row_sha256"] = "0" * 64
++    result = validate_approval(approval, [file_row], [])
++    assert result.status == "FAIL"
++    assert result.errors == ["file_decision_stale_hash:FILE-SAFE-001"]
++
++
++def test_current_synthetic_sheet_approval_passes() -> None:
++    file_row = synthetic_file_row()
++    sheet_row = synthetic_sheet_row()
++    approval = approval_for(sheet_row, "worksheet", "SHEET-SAFE-001")
++    result = validate_approval(approval, [file_row], [sheet_row])
++    assert result.status == "PASS"
++    assert result.allowed_file_ids == ["FILE-SAFE-001"]
++    assert result.allowed_sheet_ids == ["SHEET-SAFE-001"]
++    manifest = build_sanitized_bundle_manifest(
++        approval=approval,
++        guard_result=result,
++        file_rows=[file_row],
++        sheet_rows=[sheet_row],
++        bundle_root=Path("tmp/synthetic-bundle"),
++        run_id="SYNTHETIC",
++        project_id="1150001",
++        copy_files=False,
++    )
++    assert manifest["status"] == "PASS"
++    assert manifest["allowed_files"][0]["source_file_id"] == "FILE-SAFE-001"
++    assert "absolute_path" not in manifest["allowed_files"][0]
++
++
++def test_review_batch_keeps_generator_visibility_false_inputs() -> None:
++    file_row = synthetic_file_row()
++    sheet_row = synthetic_sheet_row()
++    queue = [{
++        "queue_id": "Q-001",
++        "item_type": "worksheet",
++        "item_id": "SHEET-SAFE-001",
++        "reason": "HUMAN_REVIEW_REQUIRED",
++        "status": "HUMAN_REVIEW_REQUIRED",
++    }]
++    items = build_review_items(queue, [file_row], [sheet_row])
++    assert len(items) == 1
++    assert items[0]["current_generator_eligibility"] == "HUMAN_REVIEW_REQUIRED"
++    assert items[0]["source_row_sha256"] == row_sha256(sheet_row)
++
+

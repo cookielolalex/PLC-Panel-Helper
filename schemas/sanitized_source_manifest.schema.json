@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sanitized Source Manifest",
+  "type": "object",
+  "required": ["bundle_id", "project_id", "policy_version", "artifacts", "status"],
+  "properties": {
+    "bundle_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "policy_version": {"type": "string"},
+    "status": {"type": "string"},
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["artifact_id", "path", "sha256", "source_decision_id"],
+        "properties": {
+          "artifact_id": {"type": "string"},
+          "path": {"type": "string"},
+          "sha256": {"type": "string"},
+          "source_decision_id": {"type": "string"}
+        }
+      }
+    },
+    "verification_hash": {"type": ["string", "null"]}
+  }
+}
+

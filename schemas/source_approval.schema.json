@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source Approval",
+  "type": "object",
+  "required": ["approval_manifest_id", "policy_version", "decisions", "status"],
+  "properties": {
+    "approval_manifest_id": {"type": "string"},
+    "policy_version": {"type": "string"},
+    "status": {"type": "string"},
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["decision_id", "human_decision", "reviewer", "file_sha256", "worksheet_fingerprint"],
+        "properties": {
+          "decision_id": {"type": "string"},
+          "human_decision": {"enum": ["HUMAN_APPROVED", "HUMAN_DENIED", "NEEDS_MORE_EVIDENCE"]},
+          "reviewer": {"type": "string"},
+          "file_sha256": {"type": "string"},
+          "worksheet_fingerprint": {"type": "string"},
+          "notes": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}
+

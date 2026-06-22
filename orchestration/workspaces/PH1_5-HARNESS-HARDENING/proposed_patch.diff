@@ -1,0 +1,554 @@
+diff --git a/scripts/harness_lib.py b/scripts/harness_lib.py
+--- a/scripts/harness_lib.py
++++ b/scripts/harness_lib.py
+@@
+ import argparse
+ import csv
+ import hashlib
+ import json
+ import os
++import re
+ import shutil
+ import sys
+ from dataclasses import dataclass
+ from pathlib import Path
+ from typing import Any
+@@
+ TARGET_OUTPUT_TYPES = {
+     "production": "01_?恣隤脩?{project_id}.pdf",
+     "sheetmetal": "02_???賢極?{project_id}.pdf",
+     "punch": "03_瘝??賢極?{project_id}.pdf",
+ }
++
++SOURCE_ROOT_LEAK_TERMS = [
++    "All Projects",
++    "SOURCE_ROOT",
++    "source_root",
++    "\\Desktop\\All Projects",
++    "/Desktop/All Projects",
++]
++
++TARGET_OUTPUT_NAME_RE = re.compile(
++    r"(?:^|[\\/])?0[123]_[^\\/]*_[A-Za-z0-9-]{3,}\.pdf(?:$|[^A-Za-z0-9])",
++    re.IGNORECASE,
++)
++
++TARGET_OUTPUT_LABELS = [
++    "01_生管課用圖_",
++    "02_鈑金施工圖_",
++    "03_沖孔施工圖_",
++]
+@@
+ def detect_forbidden_text(text: str) -> list[str]:
+     return [term for term in FORBIDDEN_TERMS if term in text]
++
++
++def detect_source_root_leaks(text: str, extra_canaries: list[str] | None = None) -> list[str]:
++    terms = SOURCE_ROOT_LEAK_TERMS + [term for term in (extra_canaries or []) if term]
++    return [term for term in terms if term in text]
++
++
++def detect_target_output_names(text: str) -> list[str]:
++    hits = [label for label in TARGET_OUTPUT_LABELS if label in text]
++    if TARGET_OUTPUT_NAME_RE.search(text):
++        hits.append("target_output_name_pattern")
++    return hits
+diff --git a/scripts/scan_generator_contamination.py b/scripts/scan_generator_contamination.py
+--- a/scripts/scan_generator_contamination.py
++++ b/scripts/scan_generator_contamination.py
+@@
+ from __future__ import annotations
+ 
+ import argparse
++import os
++import re
++import stat
++import zipfile
+ from pathlib import Path
++from typing import Any
+ 
+-from harness_lib import FORBIDDEN_TERMS, detect_forbidden_text, read_json, write_json
++from harness_lib import (
++    FORBIDDEN_TERMS,
++    detect_forbidden_text,
++    detect_source_root_leaks,
++    detect_target_output_names,
++    read_json,
++    sha256_file,
++    write_json,
++)
++
++
++TEXT_ENTRY_SUFFIXES = {".xml", ".rels", ".txt", ".json", ".csv"}
++FORMULA_RE = re.compile(r"<(?:[A-Za-z0-9_]+:)?f(?:\s|>)", re.IGNORECASE)
++DEFINED_NAME_RE = re.compile(r"<(?:[A-Za-z0-9_]+:)?definedName\b", re.IGNORECASE)
++HIDDEN_SHEET_RE = re.compile(r"<sheet\b[^>]*\bstate=\"(hidden|veryHidden)\"", re.IGNORECASE)
++PROJECT_ID_RE = re.compile(r"(?:project_id|project id|工程編號)\s*[:=]\s*([A-Za-z0-9_-]+)", re.IGNORECASE)
++CUSTOMER_ID_RE = re.compile(r"(?:customer_id|customer id|客戶編號)\s*[:=]\s*([A-Za-z0-9_-]+)", re.IGNORECASE)
++
++
++def _add_hit(hits: list[dict[str, str]], path: str, term: str, location: str, category: str) -> None:
++    hits.append({"path": path, "term": term, "location": location, "category": category})
++
++
++def _scan_text(
++    hits: list[dict[str, str]],
++    path: str,
++    text: str,
++    location: str,
++    *,
++    project_id: str | None,
++    customer_id: str | None,
++    source_root_canaries: list[str],
++) -> None:
++    for term in detect_forbidden_text(text):
++        _add_hit(hits, path, term, location, "forbidden_term")
++    for term in detect_source_root_leaks(text, source_root_canaries):
++        _add_hit(hits, path, term, location, "source_root_path_leak")
++    for term in detect_target_output_names(text):
++        _add_hit(hits, path, term, location, "target_output_name_leak")
++    if FORMULA_RE.search(text):
++        _add_hit(hits, path, "formula", location, "workbook_formula")
++    if DEFINED_NAME_RE.search(text):
++        _add_hit(hits, path, "definedName", location, "workbook_named_range")
++    for state in HIDDEN_SHEET_RE.findall(text):
++        _add_hit(hits, path, state, location, "workbook_hidden_sheet")
++    if "TargetMode=\"External\"" in text or "externalLink" in text:
++        _add_hit(hits, path, "externalLink", location, "workbook_external_link")
++    if project_id:
++        for found in PROJECT_ID_RE.findall(text):
++            if found != project_id:
++                _add_hit(hits, path, found, location, "stale_project_id")
++    if customer_id:
++        for found in CUSTOMER_ID_RE.findall(text):
++            if found != customer_id:
++                _add_hit(hits, path, found, location, "stale_customer_id")
++
++
++def _is_relative_to(path: Path, root: Path) -> bool:
++    try:
++        path.relative_to(root)
++        return True
++    except ValueError:
++        return False
++
++
++def _is_reparse_point(path: Path) -> bool:
++    if path.is_symlink():
++        return True
++    attrs = getattr(path.stat(follow_symlinks=False), "st_file_attributes", 0)
++    return bool(attrs & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0))
++
++
++def _walk_json(value: Any, path: str = "$") -> list[tuple[str, Any]]:
++    rows = [(path, value)]
++    if isinstance(value, dict):
++        for key, child in value.items():
++            rows.extend(_walk_json(child, f"{path}.{key}"))
++    elif isinstance(value, list):
++        for index, child in enumerate(value):
++            rows.extend(_walk_json(child, f"{path}[{index}]"))
++    return rows
++
++
++def _scan_manifest_semantics(
++    hits: list[dict[str, str]],
++    manifest: Any,
++    bundle_root: Path,
++) -> None:
++    for json_path, value in _walk_json(manifest):
++        if isinstance(value, dict):
++            superseded = value.get("superseded_by") or value.get("superseded_by_file_id")
++            status = str(value.get("supersession_status", "")).upper()
++            if superseded or "SUPERSEDED" in status:
++                _add_hit(hits, json_path, str(superseded or status), "manifest", "superseded_source")
++
++            approval_scope = str(value.get("approval_scope", "")).strip().lower()
++            if value.get("bulk_approval") is True or approval_scope == "bulk":
++                _add_hit(hits, json_path, "bulk_approval", "manifest", "bulk_approval")
++            for key in ("decision_id", "approver", "approved_by", "signed_by", "signature"):
++                if key in value and not str(value.get(key, "")).strip():
++                    _add_hit(hits, json_path, key, "manifest", "blank_decision")
++            if value.get("approved") is True and not (
++                value.get("signature") or value.get("signed_hash") or value.get("decision_hash")
++            ):
++                _add_hit(hits, json_path, "missing_signature", "manifest", "approval_tampering")
++            if value.get("tampered") is True:
++                _add_hit(hits, json_path, "tampered", "manifest", "approval_tampering")
++
++            candidate_path = value.get("bundle_path") or value.get("relative_path") or value.get("path")
++            expected_hash = value.get("sha256") or value.get("hash")
++            if candidate_path and expected_hash:
++                candidate = bundle_root / str(candidate_path)
++                if candidate.exists() and candidate.is_file():
++                    actual = sha256_file(candidate)
++                    if actual.upper() != str(expected_hash).upper():
++                        _add_hit(hits, str(candidate_path), str(expected_hash), "manifest", "mutation_invalidation")
++
++
++def _scan_decision_artifact(hits: list[dict[str, str]], decision_path: Path | None) -> None:
++    if not decision_path:
++        return
++    data = read_json(decision_path)
++    _scan_manifest_semantics(hits, data, decision_path.parent)
++
++
++def _scan_zip_workbook(
++    hits: list[dict[str, str]],
++    path: Path,
++    rel: str,
++    *,
++    project_id: str | None,
++    customer_id: str | None,
++    source_root_canaries: list[str],
++) -> None:
++    try:
++        with zipfile.ZipFile(path) as zf:
++            names = zf.namelist()
++            for name in names:
++                normalized = name.replace("\\", "/")
++                parts = [part for part in normalized.split("/") if part]
++                if normalized.startswith("/") or ".." in parts:
++                    _add_hit(hits, f"{rel}!/{name}", name, "zip_entry", "zip_traversal")
++                if normalized == "xl/vbaProject.bin":
++                    _add_hit(hits, f"{rel}!/{name}", "vbaProject.bin", "zip_entry", "macro_enabled_workbook")
++                if normalized.startswith("xl/externalLinks/"):
++                    _add_hit(hits, f"{rel}!/{name}", "externalLinks", "zip_entry", "workbook_external_link")
++                suffix = Path(normalized).suffix
++                if suffix in TEXT_ENTRY_SUFFIXES and zf.getinfo(name).file_size <= 1024 * 1024:
++                    text = zf.read(name).decode("utf-8", errors="ignore")
++                    _scan_text(
++                        hits,
++                        f"{rel}!/{name}",
++                        text,
++                        "zip_content",
++                        project_id=project_id,
++                        customer_id=customer_id,
++                        source_root_canaries=source_root_canaries,
++                    )
++    except zipfile.BadZipFile:
++        _add_hit(hits, rel, "bad_zip", "content", "uninspectable_workbook")
+@@
+ def main() -> None:
+     parser = argparse.ArgumentParser(description="Scan a generator bundle for forbidden labels and sentinel content.")
+     parser.add_argument("--bundle-dir", type=Path, required=True)
+     parser.add_argument("--manifest", type=Path, required=True)
+     parser.add_argument("--output", type=Path, required=True)
++    parser.add_argument("--project-id")
++    parser.add_argument("--customer-id")
++    parser.add_argument("--decision-artifact", type=Path)
++    parser.add_argument("--source-root-canary", action="append", default=[])
+     args = parser.parse_args()
+ 
+     hits = []
++    bundle_root = args.bundle_dir.resolve()
+     manifest_text = args.manifest.read_text(encoding="utf-8")
+-    for term in detect_forbidden_text(manifest_text):
+-        hits.append({"path": str(args.manifest), "term": term, "location": "manifest"})
++    _scan_text(
++        hits,
++        str(args.manifest),
++        manifest_text,
++        "manifest",
++        project_id=args.project_id,
++        customer_id=args.customer_id,
++        source_root_canaries=args.source_root_canary,
++    )
++    manifest = read_json(args.manifest)
++    _scan_manifest_semantics(hits, manifest, args.bundle_dir)
++    _scan_decision_artifact(hits, args.decision_artifact)
+     if args.bundle_dir.exists():
+         for path in args.bundle_dir.rglob("*"):
+             rel = str(path.relative_to(args.bundle_dir))
+-            for term in detect_forbidden_text(rel):
+-                hits.append({"path": rel, "term": term, "location": "path"})
+-            if path.is_file() and path.stat().st_size < 1024 * 1024:
++            _scan_text(
++                hits,
++                rel,
++                rel,
++                "path",
++                project_id=args.project_id,
++                customer_id=args.customer_id,
++                source_root_canaries=args.source_root_canary,
++            )
++            resolved = path.resolve()
++            if _is_reparse_point(path):
++                _add_hit(hits, rel, "reparse_point", "path", "symlink_or_junction")
++                continue
++            if not _is_relative_to(resolved, bundle_root):
++                _add_hit(hits, rel, str(resolved), "path", "path_escape")
++                continue
++            if path.is_file() and path.suffix.lower() == ".xls":
++                _add_hit(hits, rel, ".xls", "path", "legacy_workbook_requires_parser")
++            if path.is_file() and path.suffix.lower() == ".xlsm":
++                _add_hit(hits, rel, ".xlsm", "path", "macro_enabled_workbook")
++            if path.is_file() and path.suffix.lower() in {".xlsx", ".xlsm"}:
++                _scan_zip_workbook(
++                    hits,
++                    path,
++                    rel,
++                    project_id=args.project_id,
++                    customer_id=args.customer_id,
++                    source_root_canaries=args.source_root_canary,
++                )
++            if path.is_file() and path.stat().st_size < 1024 * 1024:
+                 try:
+                     text = path.read_text(encoding="utf-8")
+                 except UnicodeDecodeError:
+                     continue
+-                for term in detect_forbidden_text(text):
+-                    hits.append({"path": rel, "term": term, "location": "content"})
++                _scan_text(
++                    hits,
++                    rel,
++                    text,
++                    "content",
++                    project_id=args.project_id,
++                    customer_id=args.customer_id,
++                    source_root_canaries=args.source_root_canary,
++                )
+     write_json(args.output, {
+         "scan_id": "generator-contamination-scan",
+         "status": "FAIL" if hits else "PASS",
+diff --git a/scripts/run_tests.py b/scripts/run_tests.py
+--- a/scripts/run_tests.py
++++ b/scripts/run_tests.py
+@@
+ import json
++import os
+ import subprocess
+ import sys
++import zipfile
+ from pathlib import Path
+@@
+ def test_positive_bundle_and_contamination_scan() -> None:
+@@
+     scan = read_json(contamination)
+     assert_true(scan["status"] == "PASS", "clean positive bundle should pass contamination scan")
++
++
++def _write_ooxml_fixture(
++    path: Path,
++    *,
++    sheet_state: str = "visible",
++    sheet_text: str = "",
++    formula: bool = False,
++    defined_name: bool = False,
++    external_link: bool = False,
++    zip_traversal: bool = False,
++    macro: bool = False,
++) -> None:
++    path.parent.mkdir(parents=True, exist_ok=True)
++    workbook_sheet_attrs = "" if sheet_state == "visible" else f' state="{sheet_state}"'
++    formula_xml = "<f>SUM(A1:A2)</f>" if formula else ""
++    defined_name_xml = "<definedNames><definedName name=\"LEAK\">Sheet1!$A$1</definedName></definedNames>" if defined_name else ""
++    external_rel_xml = (
++        '<Relationship Id="rExt1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink" '
++        'Target="../externalLinks/externalLink1.xml"/>'
++        if external_link
++        else ""
++    )
++    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as zf:
++        zf.writestr("[Content_Types].xml", "<Types></Types>")
++        zf.writestr(
++            "xl/workbook.xml",
++            (
++                "<workbook><sheets>"
++                f"<sheet name=\"Sheet1\" sheetId=\"1\" r:id=\"rId1\"{workbook_sheet_attrs}/>"
++                "</sheets>"
++                f"{defined_name_xml}"
++                "</workbook>"
++            ),
++        )
++        zf.writestr("xl/_rels/workbook.xml.rels", f"<Relationships>{external_rel_xml}</Relationships>")
++        zf.writestr(
++            "xl/worksheets/sheet1.xml",
++            f"<worksheet><sheetData><row><c><v>{sheet_text}</v>{formula_xml}</c></row></sheetData></worksheet>",
++        )
++        if external_link:
++            zf.writestr("xl/externalLinks/externalLink1.xml", "<externalLink/>")
++        if macro:
++            zf.writestr("xl/vbaProject.bin", b"synthetic-macro")
++        if zip_traversal:
++            zf.writestr("../escape.txt", "reference_only_sentinel")
++
++
++def _scan_case(
++    work_dir: Path,
++    name: str,
++    *,
++    manifest: dict,
++    decision_artifact: dict | None = None,
++    project_id: str = "1150101",
++    customer_id: str = "CUSTOMER-OK",
++) -> dict:
++    case_dir = work_dir / name
++    bundle_dir = case_dir / "bundle"
++    case_dir.mkdir(parents=True, exist_ok=True)
++    manifest_path = case_dir / "manifest.json"
++    contamination = case_dir / "contamination.json"
++    write_json(manifest_path, manifest)
++    cmd = [
++        PY,
++        "scripts/scan_generator_contamination.py",
++        "--bundle-dir",
++        str(bundle_dir),
++        "--manifest",
++        str(manifest_path),
++        "--output",
++        str(contamination),
++        "--project-id",
++        project_id,
++        "--customer-id",
++        customer_id,
++    ]
++    if decision_artifact is not None:
++        decision_path = case_dir / "decision.json"
++        write_json(decision_path, decision_artifact)
++        cmd.extend(["--decision-artifact", str(decision_path)])
++    run(cmd)
++    return read_json(contamination)
++
++
++def test_adversarial_source_guard_hardening() -> None:
++    work_dir = ROOT / "tmp" / "phase1_5_source_guard"
++    bundle_dir = work_dir / "base" / "bundle"
++    bundle_dir.mkdir(parents=True, exist_ok=True)
++
++    cases: list[tuple[str, str]] = []
++
++    hidden = work_dir / "hidden" / "bundle" / "hidden.xlsx"
++    _write_ooxml_fixture(hidden, sheet_state="hidden", sheet_text="reference_only_sentinel")
++    cases.append(("hidden", "FAIL"))
++
++    very_hidden = work_dir / "very_hidden" / "bundle" / "very_hidden.xlsx"
++    _write_ooxml_fixture(very_hidden, sheet_state="veryHidden", sheet_text="reference_only_sentinel")
++    cases.append(("very_hidden", "FAIL"))
++
++    workbook_controls = work_dir / "workbook_controls" / "bundle" / "controls.xlsx"
++    _write_ooxml_fixture(workbook_controls, formula=True, defined_name=True, external_link=True)
++    cases.append(("workbook_controls", "FAIL"))
++
++    stale_ids = work_dir / "stale_ids" / "bundle" / "stale.xlsx"
++    _write_ooxml_fixture(stale_ids, sheet_text="project_id=9999999 customer_id=OLD_CUSTOMER")
++    cases.append(("stale_ids", "FAIL"))
++
++    superseded = work_dir / "superseded" / "bundle" / "ok.txt"
++    superseded.parent.mkdir(parents=True, exist_ok=True)
++    superseded.write_text("clean", encoding="utf-8")
++    write_json(work_dir / "superseded" / "manifest.json", {"files": [{"path": "ok.txt", "superseded_by": "newer-file"}]})
++    cases.append(("superseded", "FAIL"))
++
++    macro = work_dir / "macro" / "bundle" / "macro.xlsm"
++    _write_ooxml_fixture(macro, macro=True)
++    cases.append(("macro", "FAIL"))
++
++    legacy = work_dir / "legacy" / "bundle" / "legacy.xls"
++    legacy.parent.mkdir(parents=True, exist_ok=True)
++    legacy.write_text("legacy binary placeholder", encoding="utf-8")
++    cases.append(("legacy", "FAIL"))
++
++    mutated = work_dir / "mutated" / "bundle" / "allowed.txt"
++    mutated.parent.mkdir(parents=True, exist_ok=True)
++    mutated.write_text("changed", encoding="utf-8")
++    write_json(work_dir / "mutated" / "manifest.json", {"files": [{"path": "allowed.txt", "sha256": "0" * 64}]})
++    cases.append(("mutated", "FAIL"))
++
++    source_leak = work_dir / "source_leak" / "bundle" / "leak.txt"
++    source_leak.parent.mkdir(parents=True, exist_ok=True)
++    source_leak.write_text("SOURCE_ROOT/All Projects/current/reference", encoding="utf-8")
++    cases.append(("source_leak", "FAIL"))
++
++    target_leak = work_dir / "target_leak" / "bundle" / "01_生管課用圖_1150101.pdf.txt"
++    target_leak.parent.mkdir(parents=True, exist_ok=True)
++    target_leak.write_text("name only", encoding="utf-8")
++    cases.append(("target_leak", "FAIL"))
++
++    clean_cjk = work_dir / "clean_cjk" / "bundle" / "箱體資料_1150101.xlsx"
++    _write_ooxml_fixture(clean_cjk, sheet_text="project_id=1150101 customer_id=CUSTOMER-OK")
++    cases.append(("clean_cjk", "PASS"))
++
++    traversal = work_dir / "zip_traversal" / "bundle" / "traversal.xlsx"
++    _write_ooxml_fixture(traversal, zip_traversal=True)
++    cases.append(("zip_traversal", "FAIL"))
++
++    for case_name, expected in cases:
++        manifest_path = work_dir / case_name / "manifest.json"
++        if not manifest_path.exists():
++            write_json(manifest_path, {"files": []})
++        scan = _scan_case(work_dir, case_name, manifest=read_json(manifest_path))
++        assert_true(scan["status"] == expected, f"{case_name} expected {expected}, got {scan}")
++
++    blank_decision = _scan_case(
++        work_dir,
++        "blank_decision",
++        manifest={"files": []},
++        decision_artifact={"decision_id": "", "approver": "", "approved": True},
++    )
++    assert_true(blank_decision["status"] == "FAIL", "blank approvals must fail")
++
++    tampered_decision = _scan_case(
++        work_dir,
++        "approval_tampering",
++        manifest={"files": []},
++        decision_artifact={"decision_id": "D2", "approver": "reviewer", "approved": True, "tampered": True},
++    )
++    assert_true(tampered_decision["status"] == "FAIL", "approval tampering must fail")
++
++    bulk_decision = _scan_case(
++        work_dir,
++        "bulk_decision",
++        manifest={"files": []},
++        decision_artifact={"decision_id": "D1", "approver": "reviewer", "signature": "sig", "bulk_approval": True},
++    )
++    assert_true(bulk_decision["status"] == "FAIL", "bulk approvals must fail")
++
++    symlink_case = work_dir / "symlink_escape" / "bundle"
++    symlink_case.mkdir(parents=True, exist_ok=True)
++    outside = work_dir / "outside.txt"
++    outside.write_text("reference_only_sentinel", encoding="utf-8")
++    link = symlink_case / "linked.txt"
++    try:
++        os.symlink(outside, link)
++    except (OSError, NotImplementedError):
++        link = None
++    if link is not None:
++        symlink_scan = _scan_case(work_dir, "symlink_escape", manifest={"files": []})
++        assert_true(symlink_scan["status"] == "FAIL", "symlink or junction escape must fail")
+@@
+ def main() -> None:
+     tests = [
+         test_json_schemas_parse,
+         test_declared_json_artifacts_validate,
+         test_utf8_fixture_labels,
+         test_forbidden_classification,
+         test_grading_weights,
+         test_synthetic_render_grade,
+         test_positive_bundle_and_contamination_scan,
++        test_adversarial_source_guard_hardening,
+     ]
+diff --git a/evals/fixtures/synthetic_cases_manifest.json b/evals/fixtures/synthetic_cases_manifest.json
+--- a/evals/fixtures/synthetic_cases_manifest.json
++++ b/evals/fixtures/synthetic_cases_manifest.json
+@@
+-    "cjk_paths_and_filenames"
++    "cjk_paths_and_filenames",
++    "adversarial_hidden_worksheet_sentinel",
++    "adversarial_very_hidden_worksheet_sentinel",
++    "adversarial_formula_named_range_external_link",
++    "adversarial_stale_customer_project_ids",
++    "adversarial_superseded_manifest_entry",
++    "adversarial_macro_enabled_workbook",
++    "adversarial_legacy_xls_parser_required",
++    "adversarial_approval_tampering",
++    "adversarial_mutation_invalidation",
++    "adversarial_source_root_path_leak",
++    "adversarial_target_output_name_leak",
++    "adversarial_clean_cjk_path",
++    "adversarial_symlink_or_junction_escape",
++    "adversarial_zip_traversal_entry",
++    "adversarial_blank_decisions",
++    "adversarial_bulk_approvals"
+   ]
+ }

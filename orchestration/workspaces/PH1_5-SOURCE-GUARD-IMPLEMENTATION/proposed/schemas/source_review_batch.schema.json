@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source Review Batch",
+  "type": "object",
+  "required": [
+    "review_batch_id",
+    "created_at",
+    "generator_visible",
+    "source_indices",
+    "items"
+  ],
+  "properties": {
+    "review_batch_id": {"type": "string"},
+    "created_at": {"type": "string"},
+    "generator_visible": {"type": "boolean"},
+    "source_indices": {
+      "type": "object",
+      "required": [
+        "file_role_index",
+        "workbook_sheet_index"
+      ],
+      "properties": {
+        "file_role_index": {
+          "type": "object",
+          "required": ["path", "sha256"],
+          "properties": {
+            "path": {"type": "string"},
+            "sha256": {"type": "string"}
+          }
+        },
+        "workbook_sheet_index": {
+          "type": "object",
+          "required": ["path", "sha256"],
+          "properties": {
+            "path": {"type": "string"},
+            "sha256": {"type": "string"}
+          }
+        },
+        "manual_review_queue": {
+          "type": "object",
+          "properties": {
+            "path": {"type": "string"},
+            "sha256": {"type": "string"}
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "queue_id",
+          "item_type",
+          "item_id",
+          "reason",
+          "current_generator_eligibility",
+          "source_row_sha256",
+          "reviewer_instruction"
+        ],
+        "properties": {
+          "queue_id": {"type": "string"},
+          "item_type": {"enum": ["file", "worksheet"]},
+          "item_id": {"type": "string"},
+          "reason": {"type": "string"},
+          "status": {"type": "string"},
+          "source_root": {"type": "string"},
+          "relative_path": {"type": "string"},
+          "workbook_file_id": {"type": "string"},
+          "sheet_name": {"type": "string"},
+          "primary_role": {"type": "string"},
+          "stale_template_status": {"type": "string"},
+          "visibility": {"type": "string"},
+          "current_generator_eligibility": {
+            "enum": ["FORBIDDEN", "HUMAN_REVIEW_REQUIRED", "ALLOWED"]
+          },
+          "source_row_sha256": {"type": "string"},
+          "reviewer_instruction": {"type": "string"}
+        }
+      }
+    }
+  }
+}
+

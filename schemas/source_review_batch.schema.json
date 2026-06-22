@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source Review Batch",
+  "type": "object",
+  "required": ["batch_id", "policy_version", "selection_seed", "projects", "status"],
+  "properties": {
+    "batch_id": {"type": "string"},
+    "policy_version": {"type": "string"},
+    "selection_seed": {"type": "integer"},
+    "selection_algorithm": {"type": "string"},
+    "status": {"type": "string"},
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["project_id", "stratum", "candidate_file_count", "candidate_worksheet_count"],
+        "properties": {
+          "project_id": {"type": "string"},
+          "family_id": {"type": "string"},
+          "stratum": {"type": "string"},
+          "rationale": {"type": "string"},
+          "candidate_file_count": {"type": "integer"},
+          "candidate_worksheet_count": {"type": "integer"}
+        }
+      }
+    },
+    "counts": {"type": "object"},
+    "outputs": {"type": "array", "items": {"type": "string"}}
+  }
+}
+

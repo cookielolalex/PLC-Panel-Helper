@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sanitized Generator Bundle",
+  "type": "object",
+  "required": [
+    "manifest_id",
+    "project_id",
+    "run_id",
+    "status",
+    "source_approval_id",
+    "allowed_files",
+    "allowed_sheets",
+    "excluded",
+    "verification"
+  ],
+  "properties": {
+    "manifest_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "run_id": {"type": "string"},
+    "status": {"enum": ["PASS", "FAIL", "HUMAN_REVIEW_REQUIRED"]},
+    "source_approval_id": {"type": "string"},
+    "bundle_root": {"type": "string"},
+    "allowed_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_file_id", "bundle_path", "sha256", "extension", "primary_role"],
+        "properties": {
+          "source_file_id": {"type": "string"},
+          "bundle_path": {"type": "string"},
+          "sha256": {"type": "string"},
+          "extension": {"type": "string"},
+          "primary_role": {"type": "string"}
+        }
+      }
+    },
+    "allowed_sheets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sheet_id", "workbook_file_id", "sheet_name"],
+        "properties": {
+          "sheet_id": {"type": "string"},
+          "workbook_file_id": {"type": "string"},
+          "sheet_name": {"type": "string"}
+        }
+      }
+    },
+    "excluded": {"type": "array"},
+    "verification": {
+      "type": "object",
+      "required": ["status", "errors"],
+      "properties": {
+        "status": {"enum": ["PASS", "FAIL", "NOT_RUN"]},
+        "errors": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}
+

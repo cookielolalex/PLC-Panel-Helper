@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source Guard Decision",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "source_root_id",
+    "project_id",
+    "relative_path",
+    "file_sha256",
+    "proposed_decision",
+    "final_decision",
+    "reason_codes",
+    "policy_version"
+  ],
+  "properties": {
+    "decision_id": {"type": "string"},
+    "source_root_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "family_id": {"type": ["string", "null"]},
+    "relative_path": {"type": "string"},
+    "file_name": {"type": "string"},
+    "file_sha256": {"type": "string"},
+    "file_size": {"type": ["integer", "string"]},
+    "workbook_format": {"type": ["string", "null"]},
+    "worksheet_name": {"type": ["string", "null"]},
+    "worksheet_visibility": {"type": ["string", "null"]},
+    "worksheet_fingerprint": {"type": ["string", "null"]},
+    "workbook_sheet_count": {"type": ["integer", "string", "null"]},
+    "detected_project_identifiers": {"type": "array", "items": {"type": "string"}},
+    "detected_customer_identifiers": {"type": "array", "items": {"type": "string"}},
+    "detected_document_role": {"type": "string"},
+    "parser_name": {"type": "string"},
+    "parser_version": {"type": "string"},
+    "parse_status": {"type": "string"},
+    "formula_dependency_status": {"type": "string"},
+    "external_link_status": {"type": "string"},
+    "named_range_status": {"type": "string"},
+    "revision_status": {"type": "string"},
+    "duplicate_or_supersession": {"type": ["string", "null"]},
+    "proposed_decision": {
+      "enum": [
+        "UNREVIEWED",
+        "AUTO_DENIED",
+        "CANDIDATE",
+        "NEEDS_HUMAN_REVIEW",
+        "PARSER_REQUIRED",
+        "SUPERSEDED",
+        "QUARANTINED",
+        "HUMAN_APPROVED",
+        "HUMAN_DENIED",
+        "ALLOWED"
+      ]
+    },
+    "final_decision": {
+      "enum": [
+        "UNREVIEWED",
+        "AUTO_DENIED",
+        "CANDIDATE",
+        "NEEDS_HUMAN_REVIEW",
+        "PARSER_REQUIRED",
+        "SUPERSEDED",
+        "QUARANTINED",
+        "HUMAN_APPROVED",
+        "HUMAN_DENIED",
+        "ALLOWED"
+      ]
+    },
+    "reason_codes": {"type": "array", "items": {"type": "string"}},
+    "evidence_references": {"type": "array", "items": {"type": "string"}},
+    "policy_version": {"type": "string"},
+    "reviewer_or_approver": {"type": ["string", "null"]},
+    "decision_timestamp": {"type": ["string", "null"]},
+    "approval_manifest_hash": {"type": ["string", "null"]},
+    "sanitized_artifact_hash": {"type": ["string", "null"]}
+  }
+}
+

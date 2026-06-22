@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "path": "orchestration\\results\\PH1_5-SOURCE-GUARD-POLICY.json",
+      "sha256": "550A97845A2608E4A7EB409C5D8913F2645C1E349A78DD2582E29C34847DD1D0",
+      "schema_valid": true,
+      "errors": []
+    },
+    {
+      "path": "orchestration\\results\\PH1_5-SYNTHETIC-THREAT-MODEL.json",
+      "sha256": "87280AE451CCACD1590D611908C35843B03FFE4EE9A44948AD29F117C65C99FC",
+      "schema_valid": true,
+      "errors": []
+    },
+    {
+      "path": "orchestration\\results\\PH1_5-SOURCE-GUARD-IMPLEMENTATION.json",
+      "sha256": "666E8A2FBF9394C3F2E90BC0CD24E54164FB8A212C5AB9E5C9BD45D8F9091E0C",
+      "schema_valid": true,
+      "errors": []
+    },
+    {
+      "path": "orchestration\\results\\PH1_5-HARNESS-HARDENING.json",
+      "sha256": "0E66F8EF862AC949318331E69E19185760021B8DF3FAC9260FA5D66D44B622FB",
+      "schema_valid": true,
+      "errors": []
+    }
+  ]
+}

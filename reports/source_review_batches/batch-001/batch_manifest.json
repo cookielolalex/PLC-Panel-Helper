@@ -1,0 +1,123 @@
+{
+  "batch_id": "batch-001",
+  "policy_version": "source_guard_policy_v1",
+  "selection_seed": 20260622,
+  "selection_algorithm": "reference_complete_projects_stratified_family_separated_seeded_backfill_v1",
+  "status": "SOURCE_GUARD_REVIEW_PACK_READY_REAL_GENERATION_BLOCKED",
+  "active_year_note": "Active year 115 has no all-three-completed-target projects; selected historical reference-complete calibration projects instead.",
+  "projects": [
+    {
+      "project_id": "1110101",
+      "family_id": "飛達鳥嘴潭下游送水管E",
+      "stratum": "straightforward_visible_candidate",
+      "rationale": "Small reference-complete project with workbook evidence.",
+      "candidate_file_count": 5,
+      "candidate_worksheet_count": 5
+    },
+    {
+      "project_id": "1110103",
+      "family_id": "國倫水電",
+      "stratum": "straightforward_visible_candidate",
+      "rationale": "Small reference-complete project with workbook evidence.",
+      "candidate_file_count": 3,
+      "candidate_worksheet_count": 3
+    },
+    {
+      "project_id": "1110102",
+      "family_id": "聯電FA",
+      "stratum": "multi_panel_or_multi_workbook",
+      "rationale": "Large file/workbook footprint exercises multi-input review.",
+      "candidate_file_count": 3,
+      "candidate_worksheet_count": 3
+    },
+    {
+      "project_id": "1110104",
+      "family_id": "飛達機電",
+      "stratum": "multi_panel_or_multi_workbook",
+      "rationale": "Large file/workbook footprint exercises multi-input review.",
+      "candidate_file_count": 6,
+      "candidate_worksheet_count": 6
+    },
+    {
+      "project_id": "1110203",
+      "family_id": "宇博高雄",
+      "stratum": "stale_or_unrelated_sheet_risk",
+      "rationale": "Worksheet metadata includes stale or insufficient identity risk.",
+      "candidate_file_count": 7,
+      "candidate_worksheet_count": 7
+    },
+    {
+      "project_id": "1110204",
+      "family_id": "宇博義竹",
+      "stratum": "stale_or_unrelated_sheet_risk",
+      "rationale": "Worksheet metadata includes stale or insufficient identity risk.",
+      "candidate_file_count": 6,
+      "candidate_worksheet_count": 8
+    },
+    {
+      "project_id": "1110504",
+      "family_id": "三裕正",
+      "stratum": "hidden_sheet_risk",
+      "rationale": "Workbook metadata includes hidden or veryHidden sheet risk.",
+      "candidate_file_count": 1,
+      "candidate_worksheet_count": 4
+    },
+    {
+      "project_id": "1110404",
+      "family_id": "宇博實業",
+      "stratum": "revision_supersession_risk",
+      "rationale": "Project files include modification/revision naming.",
+      "candidate_file_count": 7,
+      "candidate_worksheet_count": 7
+    },
+    {
+      "project_id": "1120102",
+      "family_id": "核陽工程",
+      "stratum": "conflicting_project_identity_risk",
+      "rationale": "Worksheet identity conflicts with project path identity.",
+      "candidate_file_count": 2,
+      "candidate_worksheet_count": 2
+    },
+    {
+      "project_id": "1110205",
+      "family_id": "昕辰嘉義",
+      "stratum": "parser_required_risk",
+      "rationale": "Legacy parser-required workbook evidence is present.",
+      "candidate_file_count": 7,
+      "candidate_worksheet_count": 11
+    },
+    {
+      "project_id": "1110405",
+      "family_id": "國倫水電",
+      "stratum": "seeded_random_family_separated",
+      "rationale": "Random seed 20260622 among remaining reference-complete projects.",
+      "candidate_file_count": 7,
+      "candidate_worksheet_count": 9
+    },
+    {
+      "project_id": "1110410",
+      "family_id": "國倫水電",
+      "stratum": "backfill_reference_complete",
+      "rationale": "Backfill because strict strata/family separation produced fewer than 12 projects.",
+      "candidate_file_count": 2,
+      "candidate_worksheet_count": 4
+    }
+  ],
+  "counts": {
+    "candidate_files": 56,
+    "candidate_worksheets": 69,
+    "auto_denied": 4,
+    "quarantined": 4,
+    "parser_required": 46,
+    "awaiting_human_decision": 69,
+    "allowed": 0
+  },
+  "outputs": [
+    "batch_manifest.json",
+    "source_review_batch_001.csv",
+    "source_review_batch_001.html",
+    "project_packets/",
+    "approval_instructions.md",
+    "blank_human_decisions.csv"
+  ]
+}
