@@ -1,0 +1,255 @@
+{
+  "audit_id": "codex_proxy_independent_audit_2026-06-22",
+  "status": "CODEX_PROXY_READY_FOR_ONE_PROJECT_CALIBRATION",
+  "audit_date": "2026-06-22",
+  "workspace": "C:/Users/alex1/OneDrive/Documents/PLC Panels Generation Helper",
+  "scope": {
+    "web_search_used": false,
+    "mcp_servers_used": false,
+    "apps_or_connectors_used": false,
+    "danger_full_access_or_yolo_used": false,
+    "completed_target_pdfs_or_reference_thumbnails_inspected": false,
+    "wrote_only": [
+      "reports/codex_proxy_synthetic/codex_proxy_audit.json",
+      "reports/codex_proxy_synthetic/codex_proxy_audit.md"
+    ]
+  },
+  "git_pre_write_verification": {
+    "status": "PASS",
+    "git_exe": "C:/Users/alex1/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe",
+    "head": "5754abb4ad0054484f7c3609befe7333021d3fc3",
+    "status_short": "",
+    "diff_stat": "",
+    "recent_commits": [
+      "5754abb Activate codex proxy synthetic gate",
+      "e5cfe0e Record eval source bundle audit",
+      "c8aca2c Add autonomous source quorum bundle evidence",
+      "2af4992 Add autonomous eval source approval policy",
+      "8e62d69 Add PH1.5 source guard audit evidence"
+    ],
+    "commands": [
+      "git rev-parse HEAD",
+      "git status --short",
+      "git diff --stat",
+      "git log --oneline -5"
+    ]
+  },
+  "evidence_hashes": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "6298E5EEB469DEBA38CD3F83D5697C402815B7E0C94F61E7F355D6D704D8E433"
+    },
+    {
+      "path": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+      "sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+      "source": "orchestration/results/PH1_5-HARNESS-HARDENING.manifest.json"
+    },
+    {
+      "path": "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md",
+      "sha256": "9CCE463845097C6686B481C8F94D8D0B459B521B170474E93B2B550EE4F6F530"
+    },
+    {
+      "path": "scripts/codex_proxy.py",
+      "sha256": "9E2B62E5CA7BC11F7B52E49870E2EB696C01DB4227BF37D7CA44D1D252C63AC0"
+    },
+    {
+      "path": "schemas/codex_proxy_gate.schema.json",
+      "sha256": "F43E0626807692AF2A9CCBC3EF7BEE6394D03D2A6E788AB8EED7843E590D3F0E"
+    },
+    {
+      "path": "schemas/codex_proxy_child_output.schema.json",
+      "sha256": "B3C55888FD6552370A11F9BBA5363A3ADD09155B3332E6BB826A5053C65FE002"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/codex_proxy_synthetic_gate.json",
+      "sha256": "93B76CE304270664CA2A0890F9EE64A554E0BD46067145987C22DAFC5A3312B6"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/codex_exec_help.txt",
+      "sha256": "9F86F0115238DDDE2514587E5F95B0AB0AA6B89495E5912878D49AD26038AA19"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/successful_generator_run/process_metadata.json",
+      "sha256": "A1A33B4028BB59710FFB7343B3EC2B86AFBD5C3FE80DF2705E89EB5A7154E9C6"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/successful_generator_run/stdout.jsonl",
+      "sha256": "FF084A47DD480BAD1402967A13001210281CB5A8EE18221FC411556A1814FAA7"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/successful_generator_run/last_message.json",
+      "sha256": "8AB6FB079E24F87A62ACB411666670B6DAEE4260773960366F8886343490DECB"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/successful_reviewer_run/process_metadata.json",
+      "sha256": "8437973A41ABB7FF778D25B3B0FB32A22FA88DA15CD68349727D180529F6A2A7"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/successful_reviewer_run/stdout.jsonl",
+      "sha256": "9982672B821340EC6366D7381590872C3069CEBC641F44B237B58261F65C7E56"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/successful_reviewer_run/last_message.json",
+      "sha256": "709B75E00A3ED972090E493A35F992D20CF7FDAC124E91A80BCB693A5B09BC99"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/malformed_final_output/last_message.txt",
+      "sha256": "7CCFA1FBF3940E6F0C0375D87C0F9235A50514E14CB427BDFAF5077987B26CCF"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/schema_failure/bad_output.json",
+      "sha256": "EF71FFA99FFDBD0A93684395D534CBCFE21423BDC94554414232789DA4F204D7"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/timeout/process_metadata.json",
+      "sha256": "7BC061CEA27E0FD7E8FD437120F216D21DF0A1DED6795CC6BB00E19123F9AD7D"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/nonzero_exit/process_metadata.json",
+      "sha256": "368C4E26AF0DFEA68AA7BDA9821D056613E3E76F6B47415A33F384CD9B54354C"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/reference_sentinel_exposure/visible.txt",
+      "sha256": "0B31AA76651E84B7D3FF0D3B9F72E88316F3A982166DF42754198C4DD7F64F22"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/path_escape/path.txt",
+      "sha256": "02ABAA26A0158A4FCEA86B6B284115DF33755BE63A02FB2DFADB52A2D9CDEF13"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/post_freeze_mutation/artifact.txt",
+      "sha256": "F39592393EF0859CB196A52693D2CEA00FB2DF784B3C04AE54AA7CADB8E562F8"
+    },
+    {
+      "path": "reports/codex_proxy_synthetic/pdf_generation_and_cjk_paths/<cjk-subdir>/pdf_validation.json",
+      "sha256": "874DBD7A8EFE4E32AE04E743F9A9E9B8BB651E04C6C39DE3DDE493A9B537DC4B"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion": "Required authority and proxy files were read",
+      "status": "PASS",
+      "evidence": "Read AGENTS.md, master spec, current state/checkpoint/decision/changelog files, AUTONOMOUS_EVAL_SOURCE_APPROVAL.md, scripts/codex_proxy.py, both codex_proxy schemas, and codex_proxy_synthetic evidence. Core file hashes are recorded above."
+    },
+    {
+      "criterion": "CLI version evidence",
+      "status": "PASS",
+      "evidence": "Direct command `codex.exe --version` returned `codex-cli 0.142.0-alpha.6`; gate JSON records the same version."
+    },
+    {
+      "criterion": "CLI help and supported flags evidence",
+      "status": "PASS",
+      "evidence": "Direct `codex.exe exec --help` output and codex_exec_help.txt hash 9F86F0115238DDDE2514587E5F95B0AB0AA6B89495E5912878D49AD26038AA19 include --config, --enable, --disable, --strict-config, --model, --sandbox, --cd, --add-dir, --skip-git-repo-check, --ephemeral, --ignore-user-config, --ignore-rules, --output-schema, --json, and --output-last-message."
+    },
+    {
+      "criterion": "Fresh ephemeral sessions",
+      "status": "PASS",
+      "evidence": "Generator and reviewer process metadata commands include --ephemeral. stdout.jsonl thread IDs differ: generator 019eef36-a34f-7eb3-9f4c-09e93205a683; reviewer 019eef36-b3a9-7c91-9c2f-e3f403b31e29."
+    },
+    {
+      "criterion": "Explicit working directory",
+      "status": "PASS",
+      "evidence": "Both codex exec command arrays include --cd C:/Users/alex1/OneDrive/Documents/PLC Panels Generation Helper."
+    },
+    {
+      "criterion": "Read-only sandbox for codex exec",
+      "status": "PASS",
+      "evidence": "Both codex exec command arrays include --sandbox read-only; help output lists read-only as a supported sandbox value."
+    },
+    {
+      "criterion": "Feature disables for proxy child runs",
+      "status": "PASS",
+      "evidence": "Both codex exec command arrays include --disable plugins, --disable apps, --disable browser_use, and --disable image_generation."
+    },
+    {
+      "criterion": "Structured output validation",
+      "status": "PASS",
+      "evidence": "Bundled Python validation command returned [] for gate JSON and both successful last_message.json files against their schemas; schema_failure/bad_output.json returned missing required key errors for project_id, outputs, actual_model, and notes."
+    },
+    {
+      "criterion": "Process logs exist and are hash-bound",
+      "status": "PASS",
+      "evidence": "Generator and reviewer stdout.jsonl, stderr.log, last_message.json, and process_metadata.json exist; stdout logs include thread.started, turn.started, item.completed, and turn.completed usage events. Hashes for the main process logs are recorded above."
+    },
+    {
+      "criterion": "Successful generator child run",
+      "status": "PASS",
+      "evidence": "Gate JSON records returncode=0, validation_errors=[], role mock_case_generator; last_message validates against codex_proxy_child_output.schema.json."
+    },
+    {
+      "criterion": "Successful independent reviewer child run",
+      "status": "PASS",
+      "evidence": "Gate JSON records returncode=0, validation_errors=[], role project_reviewer; last_message validates against codex_proxy_child_output.schema.json."
+    },
+    {
+      "criterion": "Malformed final output test",
+      "status": "PASS",
+      "evidence": "Gate JSON records malformed final output rejected; malformed fixture hash 7CCFA1FBF3940E6F0C0375D87C0F9235A50514E14CB427BDFAF5077987B26CCF."
+    },
+    {
+      "criterion": "Schema failure test",
+      "status": "PASS",
+      "evidence": "Independent validation command reproduced expected missing-key errors for schema_failure/bad_output.json."
+    },
+    {
+      "criterion": "Timeout test",
+      "status": "PASS",
+      "evidence": "timeout/process_metadata.json records returncode null, timed_out true, duration_seconds 1.02."
+    },
+    {
+      "criterion": "Nonzero exit test",
+      "status": "PASS",
+      "evidence": "nonzero_exit/process_metadata.json records returncode 7 and timed_out false."
+    },
+    {
+      "criterion": "Sentinel exposure test",
+      "status": "PASS",
+      "evidence": "Gate JSON records errors=['REFERENCE_SENTINEL:visible.txt']; visible.txt hash 0B31AA76651E84B7D3FF0D3B9F72E88316F3A982166DF42754198C4DD7F64F22."
+    },
+    {
+      "criterion": "Path escape/source path exposure test",
+      "status": "PASS",
+      "evidence": "Gate JSON records errors=['ABSOLUTE_SOURCE_PATH:path.txt']; path.txt hash 02ABAA26A0158A4FCEA86B6B284115DF33755BE63A02FB2DFADB52A2D9CDEF13."
+    },
+    {
+      "criterion": "Post-freeze mutation test",
+      "status": "PASS",
+      "evidence": "Gate JSON records errors=['POST_FREEZE_MUTATION:artifact.txt']; codex_proxy.py constructs a frozen hash before mutating the synthetic artifact; artifact.txt hash F39592393EF0859CB196A52693D2CEA00FB2DF784B3C04AE54AA7CADB8E562F8."
+    },
+    {
+      "criterion": "CJK path test",
+      "status": "PASS",
+      "evidence": "Gate JSON records PASS for CJK file paths under pdf_generation_and_cjk_paths; CJK pdf_validation.json hash 874DBD7A8EFE4E32AE04E743F9A9E9B8BB651E04C6C39DE3DDE493A9B537DC4B."
+    },
+    {
+      "criterion": "PDF generation and validation test",
+      "status": "PASS",
+      "evidence": "pdf_validation.json records validity PASS, hard_gate_failures [], and three one-page synthetic PDFs with SHA-256 values 4836F135E8052ECBE938ED34F151704257F73F213690910168295D7EF64144AD, AB928F140D7C9DB60175C25553D22B6F15B807163CB1A8506708A96762A8670E, and AE34C2BC4CA460C4121ABD5E6979608C95BBD2DAF49E8A614B52CCBC69B140DD."
+    },
+    {
+      "criterion": "Requested versus actual model recording test",
+      "status": "PASS",
+      "evidence": "Process metadata records requested_model default, actual_model unknown, and actual_model_recording_status RECORDED_FROM_CHILD_OUTPUT for both child runs. Limitation: this verifies field capture, not an authoritative runtime model identity beyond the child output."
+    },
+    {
+      "criterion": "No project/customer data in codex exec prompts",
+      "status": "PASS",
+      "evidence": "Parsed final command arguments show synthetic-only prompts using project_id SYNTH-CJK-001, fixture-only roles, and fixed output labels. No real project/customer identifiers or source paths appear in the prompt strings."
+    },
+    {
+      "criterion": "Source approval boundary preserved",
+      "status": "PASS",
+      "evidence": "docs/01_CURRENT_STATE.md and docs/SESSION_CHECKPOINT.md state real generation remains blocked with no generator-approved files or worksheets; this proxy audit does not override the source-approval gate."
+    },
+    {
+      "criterion": "Bundled Git clean-status check before writes",
+      "status": "PASS",
+      "evidence": "Immediately before creating the audit files, bundled git reported HEAD 5754abb4ad0054484f7c3609befe7333021d3fc3, empty `git status --short`, and empty `git diff --stat`."
+    }
+  ],
+  "limitations": [
+    "The audit did not rerun `scripts/codex_proxy.py synthetic-suite` because that command writes into reports/codex_proxy_synthetic evidence paths outside the two authorized audit outputs.",
+    "The model-recording test captures the child-reported `actual_model` field. The recorded value is `unknown`; this is adequate for the existing synthetic gate but not authoritative model telemetry.",
+    "This status covers codex proxy synthetic readiness only. Real project generation remains blocked until source approval and sanitized-bundle verification pass."
+  ]
+}
