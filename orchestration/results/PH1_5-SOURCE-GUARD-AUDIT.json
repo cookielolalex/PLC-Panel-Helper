@@ -1,0 +1,101 @@
+{
+  "task_id": "PH1_5-SOURCE-GUARD-AUDIT",
+  "agent_type": "independent_auditor",
+  "status": "NOT_VERIFIED",
+  "audit_status": "PH1_5_SOURCE_GUARD_AUDIT_INCONCLUSIVE",
+  "checks": [
+    {
+      "criterion": "Master spec hash is recorded as EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+      "status": "PASS",
+      "evidence": "Get-FileHash SHA256 CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt returned EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09, and docs/04_DECISION_LEDGER.md D-0001 records the same hash."
+    },
+    {
+      "criterion": "PH1.5 child result validation report is PASS and all four child results are schema-valid",
+      "status": "PASS",
+      "evidence": "reports/harness/phase1_5_child_result_validation.json has status=PASS. All four result rows have schema_valid=true and current hashes match the recorded hashes for PH1_5-SOURCE-GUARD-POLICY, PH1_5-SYNTHETIC-THREAT-MODEL, PH1_5-SOURCE-GUARD-IMPLEMENTATION, and PH1_5-HARNESS-HARDENING."
+    },
+    {
+      "criterion": "Source-hash reverification passed before review packet construction",
+      "status": "PASS",
+      "evidence": "reports/source_hash_reverification.json has status=PASS, checked=7400, missing_count=0, changed_count=0. docs/01_CURRENT_STATE.md and docs/07_CHANGELOG.md record source hash reverification before batch-001 packet generation; file metadata showed source_hash_reverification.json LastWriteTimeUtc 2026-06-22 08:54:59 and batch_manifest.json LastWriteTimeUtc 2026-06-22 09:05:31."
+    },
+    {
+      "criterion": "batch-001 has exactly the 12 selected project IDs and reported counts",
+      "status": "PASS",
+      "evidence": "reports/source_review_batches/batch-001/batch_manifest.json parses as UTF-8 JSON and lists project IDs 1110101, 1110103, 1110102, 1110104, 1110203, 1110204, 1110504, 1110404, 1120102, 1110205, 1110405, 1110410. Independent CSV count from source_review_batch_001.csv found 69 rows, 56 unique files, 69 worksheet rows, decisions PARSER_REQUIRED=46, NEEDS_HUMAN_REVIEW=15, AUTO_DENIED=4, QUARANTINED=4, and matching packet directories for the same 12 IDs."
+    },
+    {
+      "criterion": "Real source approvals remain zero",
+      "status": "PASS",
+      "evidence": "manifests/source_guard/source_decisions.csv has 69 rows with final_decision=UNREVIEWED for all rows, allowed_final_rows=0, and allowed_proposed_rows=0. reports/source_review_batches/batch-001/blank_decision_validation.json has status=FAIL and approved_count=0."
+    },
+    {
+      "criterion": "Source-guard scripts fail closed for hidden sheets, stale or mutated hashes, parser-required .xls, macro .xlsm, formula, named-range, external-link risks, approval tampering, and bundle leakage",
+      "status": "PASS",
+      "evidence": "reports/source_guard_test_report.md records synthetic PASS coverage for hidden and very-hidden worksheets, formula dependency quarantine, external-link and named-range quarantine, macro-enabled workbook quarantine, legacy .xls parser-required blocking, source hash mutation denial, blank human decision denial, worksheet fingerprint tamper denial, and sanitized bundle verification failure on source-path and target-output leaks. evals/fixtures/source_guard/synthetic_fixture_manifest.json lists these synthetic cases. Parse-only ast.parse passed for audited scripts."
+    },
+    {
+      "criterion": "No generator output, real baseline, or real sanitized bundle was produced",
+      "status": "PASS",
+      "evidence": "Allowed recorded evidence in docs/01_CURRENT_STATE.md, docs/07_CHANGELOG.md, reports/source_guard_test_report.md, orchestration/results/PH1_5-SOURCE-GUARD-IMPLEMENTATION.json, and orchestration/results/PH1_5-HARNESS-HARDENING.json states no real generator or real-project baseline was started and no real bundle was built. I did not directly scan forbidden output/reference/run roots."
+    },
+    {
+      "criterion": "Requested commit 0a944ec was independently audited",
+      "status": "NOT_VERIFIED",
+      "evidence": "Plain git was not available on PATH. Standard Git for Windows paths and direct Codex runtime Git guesses were unavailable. I did not inspect .git manually because .git was not within the task-declared allowed read paths; current working-tree files listed by the task were audited instead."
+    },
+    {
+      "criterion": "Blocking defects or residual risks identified",
+      "status": "PASS",
+      "evidence": "No current-tree source-guard blocker was found in the allowed evidence. Residual risks are commit-object verification not completed, direct absence checks constrained by forbidden output/reference/run paths, and one over-broad initial orchestration/results text search whose non-PH1.5 hits were not used as evidence."
+    }
+  ],
+  "artifacts": [
+    "orchestration/results/PH1_5-SOURCE-GUARD-AUDIT.json",
+    "reports/PH1_5_SOURCE_GUARD_AUDIT.md"
+  ],
+  "hashes": {
+    "reports/PH1_5_SOURCE_GUARD_AUDIT.md": "A239567C00E201F5814A6832FAF628F9D8410C07FAD810A84882B608616AE407",
+    "orchestration/tasks/PH1_5-SOURCE-GUARD-AUDIT.md": "5F7499F63CFD7C290F4C4768A85A1F76415CA40DD97EA427FA43AE9D6B3273F2",
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+    "docs/04_DECISION_LEDGER.md": "D8FF3937C311B815CCDABE5FD761371F4D38B2CBBCE987446E595BFC3994D7A8",
+    "docs/01_CURRENT_STATE.md": "9325B5CDFCE261EA40CAF148D243BFED4C42B6F09E45C0165394DF47BF2B1BA1",
+    "docs/07_CHANGELOG.md": "56ABB885C9B5D83904E1B81A34EED96157D5D89B9CC9962BF2D289921DAC0B12",
+    "docs/SESSION_CHECKPOINT.md": "7AA1F04FB2C09E21D5DB60587857F9856A2ED11830D9DADFFDA10770517CBF29",
+    "docs/specs/GENERATOR_INPUT_POLICY.md": "2899DD888E05528CFE1E540C391C490AD796D72A573CAC982D4CBB82ABB665DD",
+    "docs/specs/SOURCE_GUARD_SPEC.md": "A374C4BDA53E557F547E79786DA0EC64D005FD39E6BB45E5FCD114FD5428C568",
+    "docs/specs/SANITIZED_GENERATOR_BUNDLE_SPEC.md": "96D091181ADCF8BBA7CE433865401DDC1BF699EAE757E126FEF71EABF39B5A3C",
+    "reports/harness/phase1_5_child_result_validation.json": "0B939BD7E33D620C6DD1D8CE7EE6D0117E0C25BFA3DEEBE14AB29D1B9FAEF9D5",
+    "orchestration/results/PH1_5-SOURCE-GUARD-POLICY.json": "550A97845A2608E4A7EB409C5D8913F2645C1E349A78DD2582E29C34847DD1D0",
+    "orchestration/results/PH1_5-SYNTHETIC-THREAT-MODEL.json": "87280AE451CCACD1590D611908C35843B03FFE4EE9A44948AD29F117C65C99FC",
+    "orchestration/results/PH1_5-SOURCE-GUARD-IMPLEMENTATION.json": "666E8A2FBF9394C3F2E90BC0CD24E54164FB8A212C5AB9E5C9BD45D8F9091E0C",
+    "orchestration/results/PH1_5-HARNESS-HARDENING.json": "0E66F8EF862AC949318331E69E19185760021B8DF3FAC9260FA5D66D44B622FB",
+    "reports/source_hash_reverification.json": "4BE1BA383947C1B4A5E1F4648903C54AACB11E70124DF5AA546386B894550D06",
+    "reports/source_review_batches/batch-001/batch_manifest.json": "A871F08C4158B9103C7047DE08AB5BB28E87BB1E20A0A449D7FB0377F2E0C051",
+    "reports/source_review_batches/batch-001/source_review_batch_001.csv": "1A65E3CCCB07EAD20DAC2C2307E2AF7561C2A1B2F4639F6404BC0271CDA3E734",
+    "reports/source_review_batches/batch-001/blank_decision_validation.json": "6020D7A854CBD80FF0401165559616905F8F6AAF33ABA3EB0B096EC401E78B6C",
+    "manifests/source_guard/source_decisions.csv": "1A65E3CCCB07EAD20DAC2C2307E2AF7561C2A1B2F4639F6404BC0271CDA3E734",
+    "manifests/source_guard/source_guard_policy.json": "DE896F9E54DA926BA5296751CE6AD0ABBF225BE4B11252D5ED33CF1F33B7DBDF",
+    "reports/source_guard_coverage_summary.json": "2F051102423F8945F90DB5F8E950BDFCD3C591F52BDC9CA7B46A3C38AB5DF0AF",
+    "reports/source_guard_coverage_summary.md": "BB08A17268D2592BB3789C9B8E803B23B684EEAB6DF45DF98EA991FF2CDA44AF",
+    "reports/source_guard_test_report.md": "2298C405BE59FAB14EFE5679C9498528EB1AC28D1FF746EA0442AB891E004659",
+    "reports/harness/phase1_5_test_output.txt": "1FE9AB3EB737439C18289E6DDB126A7F61391983728732ECDD4CE182AEB4F85C",
+    "scripts/source_guard.py": "C658A3D33BC5DBBDF7E1BAB64E0F62A5625842325D4F9C70A963D3F272055F76",
+    "scripts/validate_source_approval.py": "3FFD0A02FB9EB4B776CC0EA9AFE515DF0E0A7AB5A96D6DEFCF5E9A653857A9F6",
+    "scripts/build_sanitized_generator_bundle.py": "F80140DBE1DB02456AAF850E0F94ECAEEDB5B497E88B48DF3D0D5D54E2204BBF",
+    "scripts/verify_generator_bundle.py": "2CCC1A88570E9BFB375C897134815C93B0005AF967E05219E20BC0AFBDD7C9DD",
+    "scripts/run_tests.py": "98C2DCA7F7E91CEDA1029C4EBF24593E23E5212AEE07ABEB9CA9B34C5CFFA06F",
+    "tests/source_guard/README.md": "969E6F4A154EC1166777CC845D81C57AAF915BC975869FED99FE83BC5D6502F6",
+    "evals/fixtures/source_guard/synthetic_fixture_manifest.json": "2954EE900C5A1D7324014E2D2C9CB7A7B735A6B3E7872B949F6AC985B474B917",
+    "schemas/source_review_batch.schema.json": "470FF5AD516E3DFF31B581E8F220C616BF5872C808943D1979D36A127256C49E",
+    "schemas/source_approval.schema.json": "6FA1D1C64C3D9BBDF2D52B3707838CD599D353644B6963596DEFD6B38A5F66B9",
+    "schemas/sanitized_source_manifest.schema.json": "A3898E6580EB5AC44E26BC577AB7B388BDC6883A6ABD581AECD2E7B424C0E646",
+    "orchestration/TASK_REGISTRY.csv": "82C487F10626FA33CF8EAD15AB969D381BFE655B9354DA8A21C3478F8DAB9C8B"
+  },
+  "summary": "Current working-tree source-guard evidence passed the substantive PH1.5 checklist: master hash recorded, child results schema-valid, source hashes reverified, batch-001 counts and project IDs match, real approvals remain zero, fail-closed synthetic coverage is recorded, and allowed evidence says no real generator, baseline, or sanitized bundle was produced. Overall status is INCONCLUSIVE because commit 0a944ec could not be independently inspected without git access and because of the noted audit read-scope caveat.",
+  "blockers": [
+    "Commit 0a944ec was not independently audited: no git executable was available, and .git was outside the declared allowed read paths.",
+    "One initial text search was broader than the task's PH1_5-only orchestration/results allowance; non-PH1.5 hits were not used as evidence.",
+    "Direct filesystem absence checks for real baselines or generated outputs were constrained by forbidden evals/runs and target-drawing boundaries; the audit relies on allowed recorded evidence."
+  ]
+}

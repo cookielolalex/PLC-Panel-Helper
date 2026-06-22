@@ -23,3 +23,8 @@
   candidate worksheets, and 0 allowed items.
 - Validated all four PH1.5 child results and reran the synthetic harness. Blank
   human decisions fail closed with `approved_count=0`.
+- Ran the independent PH1.5 source-guard audit. The audit is schema-valid
+  `NOT_VERIFIED` with domain status `PH1_5_SOURCE_GUARD_AUDIT_INCONCLUSIVE`:
+  substantive source-guard checks passed, but the auditor could not verify the
+  Git commit with its available tools. Added a coordinator Git verification
+  addendum without changing the independent audit result.

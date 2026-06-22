@@ -1,6 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: Phase 1.5 source-guard review packet built; audit pending.
+Current phase: Phase 1.5 source-guard review packet ready; real generation
+blocked.
 Current accepted release: none.
 Current candidate: PH1.5 fail-closed source-guard workflow and review packet.
 Frozen grader/profile: none for production.
@@ -12,9 +13,11 @@ initialized; repository scaffold/schemas/scripts/fixtures created; local tests
 passed; D-0003 source root approved; read-only source inventory generated for
 7,400 files and 4,231 workbook/sheet rows; source-update and finalized inventory
 audits passed; four PH1.5 child tasks completed with schema-valid PASS results;
-source hash reverification passed; `batch-001` source review packet generated.
-Active or incomplete tasks: independent PH1.5 source-guard audit still pending.
-No real generator task may start.
+source hash reverification passed; `batch-001` source review packet generated;
+independent PH1.5 audit completed with schema-valid top-level `NOT_VERIFIED`
+and domain status `PH1_5_SOURCE_GUARD_AUDIT_INCONCLUSIVE`.
+Active or incomplete tasks: human approval gate for `batch-001`. No real
+generator task may start.
 Accepted changes: bootstrap source selection D-0001; exact-source-root policy
 D-0002; consolidated source root D-0003; PH1.5 source-guard workflow and review
 packet D-0004.
@@ -30,14 +33,15 @@ Latest evidence: `manifests/all_projects_inventory_summary.json`,
 `orchestration/results/PH0-SOURCE-UPDATE-AUDIT.json`, and
 `orchestration/results/PH1-INVENTORY-AUDIT.json`,
 `reports/source_review_batches/batch-001/batch_manifest.json`,
-`reports/source_guard_coverage_summary.md`, and
-`reports/source_guard_test_report.md`.
+`reports/source_guard_coverage_summary.md`,
+`reports/source_guard_test_report.md`,
+`reports/PH1_5_SOURCE_GUARD_AUDIT.md`, and
+`reports/PH1_5_COORDINATOR_AUDIT_ADDENDUM.md`.
 Known regressions: none.
 Unresolved questions: no files or worksheets are generator-approved yet;
 canonical CAD block and vendor catalog roots remain unresolved unless approved
 separately; project-local candidates are indexed but not production Knowledge.
-Exact next action: run independent PH1.5 source-guard audit. After audit,
-human review must fill
+Exact next action: human review must fill
 `reports/source_review_batches/batch-001/blank_human_decisions.csv`; blank rows
 fail validation and currently approve zero source items. Do not begin a
 real-project baseline or generator run.

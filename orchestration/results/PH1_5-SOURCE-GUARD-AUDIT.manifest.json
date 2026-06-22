@@ -1,0 +1,24 @@
+{
+  "task_id": "PH1_5-SOURCE-GUARD-AUDIT",
+  "status": "NOT_VERIFIED",
+  "audit_status": "PH1_5_SOURCE_GUARD_AUDIT_INCONCLUSIVE",
+  "agent_id": "019eeea0-d293-7fa1-bd3b-79637108b6c9",
+  "artifacts": [
+    {
+      "path": "orchestration/results/PH1_5-SOURCE-GUARD-AUDIT.json",
+      "sha256": "48A43CE47627C9D44E853BB5482162485696792C54044434059EA4697F8D884F"
+    },
+    {
+      "path": "reports/PH1_5_SOURCE_GUARD_AUDIT.md",
+      "sha256": "A239567C00E201F5814A6832FAF628F9D8410C07FAD810A84882B608616AE407"
+    },
+    {
+      "path": "reports/harness/phase1_5_audit_result_validation.json",
+      "sha256": "49EE4CF0A150F1ABD1D1F30BC720752D59281E0E5CE94A77990D2954D933A469"
+    }
+  ],
+  "blockers": [
+    "Independent auditor could not verify commit 0a944ec with Git.",
+    "Independent audit remains inconclusive despite substantive checklist PASS findings."
+  ]
+}

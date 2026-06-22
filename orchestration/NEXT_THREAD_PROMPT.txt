@@ -8,8 +8,10 @@ the latest accepted release/grader/profile manifests if they exist.
 
 Resume from the checkpoint's Exact next action. The current PH1.5 state has a
 source-guard review packet at `reports/source_review_batches/batch-001/`, zero
-allowed source items, and no real generator run. First complete any pending
-independent PH1.5 source-guard audit; after audit, stop at the human approval
-gate. Do not reload archived chats or raw old logs. Keep shared writes under the
-coordinator. If file hashes or task state conflict, stop with
-CHECKPOINT_CONFLICT and cite file evidence.
+allowed source items, no real generator run, and an independent audit recorded
+as schema-valid `NOT_VERIFIED` / domain
+`PH1_5_SOURCE_GUARD_AUDIT_INCONCLUSIVE`. Stop at the human approval gate unless
+the user provides completed human decisions for validation. Do not reload
+archived chats or raw old logs. Keep shared writes under the coordinator. If
+file hashes or task state conflict, stop with CHECKPOINT_CONFLICT and cite file
+evidence.

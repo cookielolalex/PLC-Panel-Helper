@@ -1,7 +1,7 @@
 # Current State
 
-Current phase: Phase 1.5 source-guard review packet built; independent audit
-pending.
+Current phase: Phase 1.5 source-guard review packet ready; real generation
+blocked at the human approval gate.
 
 Accepted release: none.
 
@@ -21,7 +21,10 @@ inventoried and hashed; `PH0-SOURCE-UPDATE-AUDIT` and
 `PH1-INVENTORY-AUDIT` passed; PH1.5 spawned two read-only explorers and two
 bounded workers; all four PH1.5 child results validated schema-clean; source
 hash reverification passed; the source-guard review packet was generated for
-12 calibration projects.
+12 calibration projects; independent PH1.5 audit completed with schema-valid
+top-level `NOT_VERIFIED` / domain `PH1_5_SOURCE_GUARD_AUDIT_INCONCLUSIVE`
+because the auditor could not independently use Git, while substantive
+source-guard checks passed.
 
 Blockers: no files or worksheets are currently generator-approved (`ALLOWED=0`);
 all candidate evidence is either `FORBIDDEN`, `HUMAN_REVIEW_REQUIRED`,
@@ -33,8 +36,7 @@ CAD/catalog candidates were indexed but are not approved reusable production
 Knowledge. The WindowsApps `codex` alias returns `Access is denied`; the
 configured local CLI binary was successfully probed.
 
-Exact next action: run the independent PH1.5 source-guard audit, then stop at
-the human approval gate. A human reviewer must fill
+Exact next action: stop at the human approval gate. A human reviewer must fill
 `reports/source_review_batches/batch-001/blank_human_decisions.csv` with
 explicit per-row decisions before any approval validator can pass. Do not begin
 a real-project baseline or generator run until a positive generator manifest has
