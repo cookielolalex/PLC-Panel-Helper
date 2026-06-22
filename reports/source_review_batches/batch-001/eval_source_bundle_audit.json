@@ -1,0 +1,214 @@
+{
+  "audit_id": "eval_source_bundle_audit_batch_001",
+  "status": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+  "generated_at": "2026-06-22T19:39:24.7823861+08:00",
+  "repository_root": "C:/Users/alex1/OneDrive/Documents/PLC Panels Generation Helper",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "scope": {
+    "batch_id": "batch-001",
+    "projects": ["1110104", "1110204", "1110205", "1110405", "1110410"],
+    "approved_eval_decision_count": 15,
+    "sanitized_artifact_count": 15,
+    "production_approval": false,
+    "completed_target_pdf_content_inspected": false,
+    "reference_thumbnails_inspected": false
+  },
+  "constraints_observed": {
+    "web_search_used": false,
+    "mcp_servers_apps_connectors_used": false,
+    "danger_full_access_or_yolo_used": false,
+    "writes_limited_to": [
+      "reports/source_review_batches/batch-001/eval_source_bundle_audit.json",
+      "reports/source_review_batches/batch-001/eval_source_bundle_audit.md"
+    ]
+  },
+  "read_evidence": [
+    {"path": "AGENTS.md", "sha256": "6298E5EEB469DEBA38CD3F83D5697C402815B7E0C94F61E7F355D6D704D8E433"},
+    {"path": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt", "sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09"},
+    {"path": "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md", "sha256": "9CCE463845097C6686B481C8F94D8D0B459B521B170474E93B2B550EE4F6F530"},
+    {"path": "manifests/source_guard/autonomous_eval_batch_001.json", "sha256": "240BB2B9B575215ABB9EDFD61C14B7AA6FB3984ABE550F5F52AAE37B5F2E2AC2"},
+    {"path": "reports/source_hash_reverification_autonomous_eval.json", "sha256": "781D50F86B0B4A202C08CF494F8961B6DC6FBC700A8D1EC387ED76EA5336C050"},
+    {"path": "reports/harness/autonomous_eval_source_quorum_test_output.txt", "sha256": "1FE9AB3EB737439C18289E6DDB126A7F61391983728732ECDD4CE182AEB4F85C"},
+    {"path": "schemas/source_quorum_review.schema.json", "sha256": "BB8A3AAD6EA3D3F735DC6A5CA7470D59D9CFDB1D0139BAE3FD828CB90FE02CEC"},
+    {"path": "schemas/source_quorum_adjudication.schema.json", "sha256": "678DA3E1CC57B0F23D26068962F753813560B438ECC9C03937694F71B3457D06"},
+    {"path": "schemas/source_approval.schema.json", "sha256": "8567933CF66ADFB0031ED8D2EC8FA93EF227712FB41F7A8257C8498A808F179E"},
+    {"path": "schemas/sanitized_source_manifest.schema.json", "sha256": "A3898E6580EB5AC44E26BC577AB7B388BDC6883A6ABD581AECD2E7B424C0E646"},
+    {"path": "manifests/source_guard/project_manifests/", "file_count": 37},
+    {"path": "manifests/source_guard/reviews/batch-001/", "file_count": 4},
+    {"path": "evals/cases/development/", "file_count": 61},
+    {"path": "orchestration/trajectories/", "file_count": 9}
+  ],
+  "git": {
+    "head": "c8aca2ce34321eca04223400d49852dfa24c604a",
+    "status_porcelain_pre_output_write": "",
+    "diff_stat_pre_output_write": "",
+    "log_oneline": [
+      "c8aca2c (HEAD -> main) Add autonomous source quorum bundle evidence",
+      "2af4992 Add autonomous eval source approval policy",
+      "8e62d69 Add PH1.5 source guard audit evidence",
+      "0a944ec Implement PH1.5 source guard review workflow",
+      "567222a Record inventory audit commit metadata",
+      "04eef41 Add approved-root source inventory manifests",
+      "e318a74 Record Phase 0 child run metadata",
+      "bd23b3c Bootstrap Phase 0 workflow scaffold"
+    ],
+    "lineage": {
+      "0a944ec0734cb3e28768bb88129a75838f70ca14": {
+        "cat_file_type": "commit",
+        "merge_base_is_ancestor_exit_code": 0,
+        "subject": "Implement PH1.5 source guard review workflow"
+      },
+      "8e62d6986ba60117f718709afafff4573fc2c3b6": {
+        "cat_file_type": "commit",
+        "merge_base_is_ancestor_exit_code": 0,
+        "subject": "Add PH1.5 source guard audit evidence"
+      }
+    }
+  },
+  "criteria": [
+    {
+      "id": "required_reads",
+      "status": "PASS",
+      "evidence": "Governing docs, current phase/current state/checkpoint records, manifests, reviews, development bundles, test output, trajectories, Git diff/log, commits, and quorum/bundle schemas were read or parsed."
+    },
+    {
+      "id": "git_head_status_diff_and_lineage",
+      "status": "PASS",
+      "evidence": "Bundled Git rev-parse HEAD returned c8aca2ce34321eca04223400d49852dfa24c604a. git status --porcelain, git diff --stat, and git diff --name-status were empty before writing audit outputs. Both requested commits exist and are ancestors of HEAD.",
+      "commands": [
+        "C:/Users/alex1/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe rev-parse HEAD",
+        "C:/Users/alex1/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe status --porcelain",
+        "C:/Users/alex1/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe diff --stat",
+        "C:/Users/alex1/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe cat-file -t <commit>",
+        "C:/Users/alex1/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe merge-base --is-ancestor <commit> HEAD"
+      ]
+    },
+    {
+      "id": "current_source_hash_verification",
+      "status": "PASS",
+      "evidence": "Fresh SHA-256 recomputation against manifests/all_projects_file_role_index.csv checked 7400 current source files with missing_count=0 and changed_count=0. Existing report reports PASS for the same 7400 rows.",
+      "files": [
+        "manifests/all_projects_file_role_index.csv",
+        "reports/source_hash_reverification_autonomous_eval.json"
+      ],
+      "command_evidence": {
+        "checked": 7400,
+        "missing_count": 0,
+        "changed_count": 0,
+        "duration_seconds": 12.37
+      }
+    },
+    {
+      "id": "schema_validation",
+      "status": "PASS",
+      "evidence": "Validated 39 source quorum review, source quorum adjudication, source approval, and sanitized source manifest instances against repository schemas with error_count=0.",
+      "schemas": [
+        "schemas/source_quorum_review.schema.json",
+        "schemas/source_quorum_adjudication.schema.json",
+        "schemas/source_approval.schema.json",
+        "schemas/sanitized_source_manifest.schema.json"
+      ]
+    },
+    {
+      "id": "approval_quorum_validation",
+      "status": "PASS",
+      "evidence": "All 15 approved decision IDs across 5 projects have deterministic prefilter evidence, four ALLOW_EVAL specialist votes on the same file SHA-256, worksheet fingerprint, and project identity, adjudicator final_state=AGENT_QUORUM_APPROVED_EVAL, approval_manifest status=PASS, and bundle_manifest status=ALLOWED_EVAL. Excluded decision IDs did not enter bundles.",
+      "approved_decision_count": 15,
+      "projects": ["1110104", "1110204", "1110205", "1110405", "1110410"]
+    },
+    {
+      "id": "worksheet_fingerprint_validation",
+      "status": "PASS",
+      "evidence": "Recomputed 15 approved worksheet fingerprints directly from current source workbooks using source_guard.worksheet_fingerprint; all matched deterministic prefilter, review_input, reviewer, adjudication, and approval records. Each approved worksheet maps to a parsed visible row in manifests/all_projects_workbook_sheet_index.csv and a matching SHA-256 row in manifests/all_projects_file_role_index.csv.",
+      "checked": 15,
+      "sheet_index_stale_template_status_counts": {
+        "INSUFFICIENT_IDENTITY": 15
+      },
+      "note": "INSUFFICIENT_IDENTITY rows were accepted only for autonomous evaluation after unanimous specialist quorum and separate adjudication; this is not production approval."
+    },
+    {
+      "id": "sanitized_bundle_inspection",
+      "status": "PASS",
+      "evidence": "Inspected 61 development bundle files and 15 sanitized CSV artifacts. Bundle manifests, visible file manifests, bundle_hashes, provenance maps, and artifact SHA-256 values agree. Each bundle has status=ALLOWED_EVAL and approval_mode=AUTONOMOUS_EVALUATION_ONLY.",
+      "extension_counts": {
+        ".csv": 15,
+        ".json": 31,
+        ".md": 15
+      }
+    },
+    {
+      "id": "original_workbook_exclusion",
+      "status": "PASS",
+      "evidence": "No .xls, .xlsx, .xlsm, or .xlsb files exist under evals/cases/development."
+    },
+    {
+      "id": "forbidden_source_scan",
+      "status": "PASS",
+      "evidence": "Content/path scans over evals/cases/development found no forbidden source labels, target-output markers, completed-target sentinels, expected-answer markers, score report markers, thumbnail markers, or OCR markers.",
+      "rg_evidence": "rg scans for forbidden Chinese labels and completed/reference marker terms returned exit code 1 with no matches."
+    },
+    {
+      "id": "completed_reference_scan",
+      "status": "PASS",
+      "evidence": "No .pdf, image, CAD, or completed-reference files exist under evals/cases/development; explicit .pdf/thumbnail/expected/reference/completed scans returned no matches."
+    },
+    {
+      "id": "absolute_path_scan",
+      "status": "PASS",
+      "evidence": "No drive-root, UNC, POSIX home, or file:// absolute paths were found in bundle content. Parsed JSON path fields are relative and do not traverse upward.",
+      "absolute_path_hit_count": 0,
+      "unsafe_path_value_count": 0
+    },
+    {
+      "id": "symlink_junction_shortcut_path_traversal_checks",
+      "status": "PASS",
+      "evidence": "No symlinks, junction/reparse points, .lnk shortcuts, parsed path traversal values, or traversal text markers were found under evals/cases/development.",
+      "reparse_or_shortcut_count": 0,
+      "traversal_hit_count": 0
+    },
+    {
+      "id": "test_suite_status",
+      "status": "PASS",
+      "evidence": "reports/harness/autonomous_eval_source_quorum_test_output.txt decodes as UTF-16 and has trailing JSON status=PASS with 10 tests.",
+      "tests": [
+        "test_json_schemas_parse",
+        "test_declared_json_artifacts_validate",
+        "test_utf8_fixture_labels",
+        "test_forbidden_classification",
+        "test_grading_weights",
+        "test_synthetic_render_grade",
+        "test_positive_bundle_and_contamination_scan",
+        "test_source_guard_fail_closed_decisions",
+        "test_source_approval_and_bundle_fail_closed",
+        "test_bundle_verifier_rejects_leaks_and_traversal"
+      ],
+      "note": "The full test suite was not rerun because the repository test runner writes tmp artifacts and the task restricted writes to the two audit outputs."
+    },
+    {
+      "id": "trajectory_and_state_read",
+      "status": "PASS",
+      "evidence": "Trajectory, task registry, current state, checkpoint, and continuation records were read. Metadata freshness observations are recorded as non-blocking because they do not alter the generator-visible bundle contents."
+    }
+  ],
+  "bundle_artifacts": [
+    {"project_id": "1110104", "artifact_id": "SGD-628D223B34A365", "path": "evals/cases/development/1110104/sanitized_inputs/SGD-628D223B34A365_估價單.csv", "sha256": "6FD53C1E188FDE32E6A06F83C323E7C69A44E3EE880910064900285C278C7CFA"},
+    {"project_id": "1110104", "artifact_id": "SGD-29710C0EE48604", "path": "evals/cases/development/1110104/sanitized_inputs/SGD-29710C0EE48604_估價單.csv", "sha256": "0CA019F2660197077D7B3FBA3D774225EA3F1439FFFB6EC05918AFA852266AFE"},
+    {"project_id": "1110204", "artifact_id": "SGD-5F108DF896D683", "path": "evals/cases/development/1110204/sanitized_inputs/SGD-5F108DF896D683_標單總表.csv", "sha256": "9FB33E4A3E8C299ADFDC165AA21CA70D8D159313791AF2F54B983AA5ACC1E285"},
+    {"project_id": "1110204", "artifact_id": "SGD-1F9E956311AE35", "path": "evals/cases/development/1110204/sanitized_inputs/SGD-1F9E956311AE35_標單單價分析表.csv", "sha256": "10D16325DE629B5F4F2F35C470C80EFF8C7D050BD17ECB414FEEF9DCB6C8B2A8"},
+    {"project_id": "1110205", "artifact_id": "SGD-FD5565DC7BCF22", "path": "evals/cases/development/1110205/sanitized_inputs/SGD-FD5565DC7BCF22_標單總表.csv", "sha256": "A7D6D29A369A9C2F0D5CB7FDDD936C978FBB1F15E5DDE42C855F746F1039BA10"},
+    {"project_id": "1110205", "artifact_id": "SGD-9E7AE8F36A74FD", "path": "evals/cases/development/1110205/sanitized_inputs/SGD-9E7AE8F36A74FD_標單單價分析表.csv", "sha256": "2D777D1ED7E488F8430487D664CBD031C9B2CC204D718D3C0DA09BDD41A52955"},
+    {"project_id": "1110205", "artifact_id": "SGD-B5CBB9DE92A78B", "path": "evals/cases/development/1110205/sanitized_inputs/SGD-B5CBB9DE92A78B_標單總表.csv", "sha256": "A7D6D29A369A9C2F0D5CB7FDDD936C978FBB1F15E5DDE42C855F746F1039BA10"},
+    {"project_id": "1110205", "artifact_id": "SGD-289C4E13989C26", "path": "evals/cases/development/1110205/sanitized_inputs/SGD-289C4E13989C26_標單單價分析表.csv", "sha256": "2D777D1ED7E488F8430487D664CBD031C9B2CC204D718D3C0DA09BDD41A52955"},
+    {"project_id": "1110405", "artifact_id": "SGD-2BB8F4C5348957", "path": "evals/cases/development/1110405/sanitized_inputs/SGD-2BB8F4C5348957_標單總表.csv", "sha256": "5CF75120B7110A85E2319EB718A6CF7E33202F5E2F5943CEB0E12D723CC641C8"},
+    {"project_id": "1110405", "artifact_id": "SGD-60695E46370264", "path": "evals/cases/development/1110405/sanitized_inputs/SGD-60695E46370264_標單詳細表.csv", "sha256": "DD0417A76EDEED6542C44192D9D7E0000E9B0A40112AF3AD891C24CB281F7714"},
+    {"project_id": "1110405", "artifact_id": "SGD-0934CE53139606", "path": "evals/cases/development/1110405/sanitized_inputs/SGD-0934CE53139606_標單總表.csv", "sha256": "5CF75120B7110A85E2319EB718A6CF7E33202F5E2F5943CEB0E12D723CC641C8"},
+    {"project_id": "1110405", "artifact_id": "SGD-F941FF6BCB2B6C", "path": "evals/cases/development/1110405/sanitized_inputs/SGD-F941FF6BCB2B6C_標單詳細表.csv", "sha256": "B18148F42732832BB80CC46C6C1D4890316134E6DD8C8C7206C3497C28E1F2D3"},
+    {"project_id": "1110410", "artifact_id": "SGD-F3A5C9E7B2674E", "path": "evals/cases/development/1110410/sanitized_inputs/SGD-F3A5C9E7B2674E_標單總表.csv", "sha256": "3CD0572E08B4C5B66425546C208EBEE67444A5A11DA5766F8E6E844344DB53FF"},
+    {"project_id": "1110410", "artifact_id": "SGD-E25373215632FB", "path": "evals/cases/development/1110410/sanitized_inputs/SGD-E25373215632FB_標單詳細表.csv", "sha256": "3A485A4BB44513A90F2FFE2FFE284D2B06E993C483F9042A9AC2306A43B53286"},
+    {"project_id": "1110410", "artifact_id": "SGD-89E1E5092FF4EC", "path": "evals/cases/development/1110410/sanitized_inputs/SGD-89E1E5092FF4EC_標單單價分析表.csv", "sha256": "46905E72ED001982C8190D8227D6E3F7CEE54C956CFE8F3F37C758E34716FCF4"}
+  ],
+  "non_blocking_observations": [
+    "docs/01_CURRENT_STATE.md, docs/SESSION_CHECKPOINT.md, and orchestration/NEXT_THREAD_PROMPT.txt still describe the pre-autonomous human approval gate/zero allowed state; newer commits add evaluation-only autonomous approval and sanitized bundle artifacts.",
+    "Some PH1.5 trajectory JSON files still report RUNNING even though orchestration/TASK_REGISTRY.csv records accepted/PASS rows for those tasks."
+  ]
+}
