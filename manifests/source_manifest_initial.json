@@ -1,11 +1,11 @@
 {
   "manifest_id": "phase0-initial-source-manifest",
   "created_at": "2026-06-22",
-  "status": "SOURCE_ROOTS_MISSING",
+  "status": "PROJECT_ROOT_APPROVED_INVENTORY_PENDING",
   "files": [],
   "worksheets": [],
   "blockers": [
-    "Declared source roots are missing at exact master-spec paths."
+    "CAD block and vendor catalog roots remain unresolved unless found under approved roots.",
+    "Full source inventory has not yet been generated after D-0003."
   ]
 }
-

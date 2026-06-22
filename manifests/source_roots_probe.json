@@ -34,14 +34,22 @@
       "exists": false,
       "generator_eligibility": "HUMAN_REVIEW_REQUIRED",
       "notes": "Exact declared path missing during Phase 0."
+    },
+    {
+      "id": "SRC-ALL-PROJECTS",
+      "path": "C:\\Users\\alex1\\OneDrive\\Desktop\\All Projects",
+      "role": "consolidated_project_evidence_root",
+      "exists": true,
+      "generator_eligibility": "HUMAN_REVIEW_REQUIRED",
+      "notes": "Human-approved project source root on 2026-06-22; read-only policy applies."
     }
   ],
   "nearby_unapproved_clues": [
     {
       "path": "C:\\Users\\alex1\\OneDrive\\Desktop\\115年度工作",
       "exists": true,
-      "status": "NOT_APPROVED_SOURCE_ROOT"
+      "status": "SUPERSEDED_BY_SRC_ALL_PROJECTS_DECISION_D-0003"
     }
-  ]
+  ],
+  "approved_project_root": "SRC-ALL-PROJECTS"
 }
-

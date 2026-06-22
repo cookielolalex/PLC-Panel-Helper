@@ -1,0 +1,90 @@
+﻿{
+    "task_id":  "PH1-INVENTORY-AUDIT",
+    "created_at":  "2026-06-22T16:39:07.0117220+08:00",
+    "visible_files":  [
+                          {
+                              "path":  "docs/01_CURRENT_STATE.md",
+                              "sha256":  "2113AF9ACD5FF067FC817A279548ED2B5584EFBFE5249C2559FC767263950301"
+                          },
+                          {
+                              "path":  "docs/03_KNOWLEDGE_MANIFEST.md",
+                              "sha256":  "F98C5BBF99E2D608DBB540386ADB33AFC79717CD497A7C8B630BA8C81DF0D636"
+                          },
+                          {
+                              "path":  "docs/04_DECISION_LEDGER.md",
+                              "sha256":  "BEA62DAF3390AD2BC7112E3D197AE717B29FCEBAA5FAE08B43877354F698AC85"
+                          },
+                          {
+                              "path":  "docs/SOURCE_ROOTS.md",
+                              "sha256":  "A97097C0691DD1F39EB34C05B1D484175E1389DBFEEFEF8A8F63920924666DEB"
+                          },
+                          {
+                              "path":  "manifests/all_projects_inventory_summary.json",
+                              "sha256":  "2AA6BE5982B2F8E291B18174E18B02016F028F67A4000750239F8F1F8A57A86A"
+                          },
+                          {
+                              "path":  "manifests/all_projects_file_role_index.csv",
+                              "sha256":  "5AED72D1AD3E15A0D70ABAE4D0CACED0C87D8F063B7A484412D4757507C28397"
+                          },
+                          {
+                              "path":  "manifests/115_file_role_index.csv",
+                              "sha256":  "0D21E3D34C12D103733CAFFC72CAEF82485D20353944B0A0BEE1B12E3BBFDC93"
+                          },
+                          {
+                              "path":  "manifests/all_projects_workbook_sheet_index.csv",
+                              "sha256":  "A3E3246C103F5BA5AB783FB8D18DC7F6E722419901F131F6314AF2483A7A7EFC"
+                          },
+                          {
+                              "path":  "manifests/115_workbook_sheet_index.csv",
+                              "sha256":  "153D263A9BCC6A6CFFAE158B76C308854D1C62F13B82CFCF87CDC00465BC51FF"
+                          },
+                          {
+                              "path":  "manifests/all_projects_project_manifest.csv",
+                              "sha256":  "493C36F17A2AA061F3C371AF4FC720B85780075F43643A3158E7D597AD5AB2CF"
+                          },
+                          {
+                              "path":  "manifests/115_project_manifest.csv",
+                              "sha256":  "EE310487F627E7306E1F53614DA5D429C0CE69236B72CD23DBCC44499C94E0F1"
+                          },
+                          {
+                              "path":  "manifests/st_block_library_index.csv",
+                              "sha256":  "0F1228D5A4477D74642F54882064553E3C068AB9D1DBA9BD9DE8AE89B733A957"
+                          },
+                          {
+                              "path":  "manifests/vendor_catalog_index.csv",
+                              "sha256":  "F77D5FCA3FA505AF64A17BAA672528798EC650C1CB668379AB0781F23FBD29DD"
+                          },
+                          {
+                              "path":  "reports/source_inventory_summary.md",
+                              "sha256":  "841C4F7857F73DC129B5E3BB6F4139AB9E69D292B218750CDBBF63C8A28D8DC9"
+                          },
+                          {
+                              "path":  "reports/generator_eligibility_summary.md",
+                              "sha256":  "FCE9FF5FEDCD2AB87033C1F9F4BB98BAA97E1C8BA3AC2DF09203F4E29D0364FF"
+                          },
+                          {
+                              "path":  "reports/classification_validation.md",
+                              "sha256":  "E4CD07834AFEC36CDA59101791F5C148403EE1E5E22591BF8A692EA12F58173C"
+                          },
+                          {
+                              "path":  "reports/knowledge_pack_validation.md",
+                              "sha256":  "EBBDFC6A8BD9BC98BC6005C5BD33BC9A73827D89B84255EC8965C9328F28FAF7"
+                          },
+                          {
+                              "path":  "reports/harness/phase0_test_output.txt",
+                              "sha256":  "5184FEDFCD1CF5E10F230B436A52FEDAB4581DFD52358FC7FD3901665D1944A2"
+                          },
+                          {
+                              "path":  "reports/harness/phase0_child_result_validation.json",
+                              "sha256":  "FA37432BEC0166EFB3BE0D85675E3ECC4D73FDB40CA8DD50115C38FD269784D9"
+                          },
+                          {
+                              "path":  "orchestration/tasks/PH1-INVENTORY-AUDIT.md",
+                              "sha256":  "815493928EC085A8E77FA3EEE1693E9E2B5DD48CC55D024A60AD2E849DD239D6"
+                          },
+                          {
+                              "path":  "schemas/child_result.schema.json",
+                              "sha256":  "DDC770A4C36D3664C20B6E2E8688CB30F997C3A479B98108C596A43E2307BC41"
+                          }
+                      ]
+}

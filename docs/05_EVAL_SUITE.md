@@ -11,3 +11,11 @@ Real-project baselines are blocked until:
 - Codex proxy or approved generator backend passes isolation tests;
 - exactly one eligible development project passes blind calibration and audit.
 
+Current inventory note: historical projects include 26 projects with all three
+completed target reference classes plus workbook evidence, but no active-year
+115 project currently shows all three completed target classes. This does not
+approve any case for calibration; sheet-level eligibility and reference
+adjudication are still required.
+
+Inventory audit status: `PH1-INVENTORY-AUDIT` passed. It did not approve a
+baseline, generator bundle, or production Knowledge package.

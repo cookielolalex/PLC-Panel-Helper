@@ -1,0 +1,110 @@
+{
+  "task_id": "PH1-INVENTORY-AUDIT",
+  "agent_type": "independent_auditor",
+  "status": "PASS",
+  "checks": [
+    {
+      "criterion": "Task brief and schema constraints",
+      "status": "PASS",
+      "evidence": "Read orchestration/tasks/PH1-INVENTORY-AUDIT.md and schemas/child_result.schema.json. The only repository write performed for this audit is this result file at orchestration/results/PH1-INVENTORY-AUDIT.json."
+    },
+    {
+      "criterion": "Exact input presence and immutable hashes",
+      "status": "PASS",
+      "evidence": "All exact input files named in the task brief were present. SHA-256 hashes for the task brief, master specification, schema, docs, manifests, reports, and task registry are recorded in the top-level hashes object."
+    },
+    {
+      "criterion": "Inventory row counts",
+      "status": "PASS",
+      "evidence": "manifests/all_projects_inventory_summary.json declares file_count=7400, active_year_file_count=606, workbook_sheet_rows=4231, active_year_sheet_rows=446, project_count=404. Import-Csv verification found all_projects_file_role_index=7400 rows, 115_file_role_index=606 rows, all_projects_workbook_sheet_index=4231 rows, 115_workbook_sheet_index=446 rows. all_projects_project_manifest has 405 rows including one UNASSIGNED bucket; non-UNASSIGNED real project rows are 404, matching project_count. 115_project_manifest has 42 rows."
+    },
+    {
+      "criterion": "Hash presence in file and candidate manifests",
+      "status": "PASS",
+      "evidence": "Every row in manifests/all_projects_file_role_index.csv, manifests/115_file_role_index.csv, manifests/st_block_library_index.csv, and manifests/vendor_catalog_index.csv has a non-empty 64-hex sha256 value. MissingSha=0 and InvalidSha=0 for 7400 all-project file rows, 606 active-year file rows, 27 CAD candidate rows, and 21 catalog candidate rows."
+    },
+    {
+      "criterion": "Fail-closed generator eligibility",
+      "status": "PASS",
+      "evidence": "File-level generator_eligibility groups are FORBIDDEN=5001 and HUMAN_REVIEW_REQUIRED=2399 with ALLOWED=0. Worksheet-level groups are FORBIDDEN=2092 and HUMAN_REVIEW_REQUIRED=2139 with ALLOWED=0. reports/generator_eligibility_summary.md states no real project is generator-eligible yet, and project manifest statuses are NO_APPROVED_WORKSHEETS=13, REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED=26, WORKSHEET_REVIEW_REQUIRED=366."
+    },
+    {
+      "criterion": "Forbidden source and completed-reference classification",
+      "status": "PASS",
+      "evidence": "reports/classification_validation.md states target-like PDFs under forbidden electrical-drawing paths were classified as forbidden electrical drawings, production-control paths were classified as forbidden production-control files, and completed target drawing labels were classified as completed reference roles rather than generator evidence. all_projects_file_role_index primary_role counts include forbidden_production_control_file=2006, forbidden_electrical_drawing=1008, completed_sheetmetal_drawing_reference=1860, completed_production_drawing_reference=44, and completed_punch_drawing_reference=38."
+    },
+    {
+      "criterion": "Stale and hidden sheet queueing",
+      "status": "PASS",
+      "evidence": "all_projects_workbook_sheet_index stale_template_status groups are FORBIDDEN_SOURCE=2067, HUMAN_REVIEW_REQUIRED=1466, INSUFFICIENT_IDENTITY=617, HIDDEN_SHEET_REVIEW_REQUIRED=29, CURRENT_PROJECT_ID_MATCH=27, STALE_TEMPLATE_SHEET=25. All 25 STALE_TEMPLATE_SHEET rows are FORBIDDEN. Of 34 hidden sheets, 29 are queued as HUMAN_REVIEW_REQUIRED and 5 are FORBIDDEN_SOURCE/FORBIDDEN. 115_workbook_sheet_index has STALE_TEMPLATE_SHEET=2, both FORBIDDEN, and INSUFFICIENT_IDENTITY=71 queued as HUMAN_REVIEW_REQUIRED."
+    },
+    {
+      "criterion": "CAD and catalog candidate status",
+      "status": "PASS",
+      "evidence": "docs/03_KNOWLEDGE_MANIFEST.md and reports/knowledge_pack_validation.md state production Knowledge is not built and canonical CAD/vendor roots remain unapproved. manifests/st_block_library_index.csv has 27 rows, all library_status=PROJECT_LOCAL_CAD_FILE_NOT_APPROVED_ST_BLOCK1 and generator_eligibility=HUMAN_REVIEW_REQUIRED. manifests/vendor_catalog_index.csv has 21 rows, all catalog_status=PROJECT_LOCAL_CATALOG_CANDIDATE_NOT_PRODUCTION_KNOWLEDGE and generator_eligibility=HUMAN_REVIEW_REQUIRED."
+    },
+    {
+      "criterion": "Harness and child-result tests",
+      "status": "PASS",
+      "evidence": "reports/harness/phase0_test_output.txt records PASS for test_json_schemas_parse, test_declared_json_artifacts_validate, test_utf8_fixture_labels, test_forbidden_classification, test_grading_weights, test_synthetic_render_grade, and test_positive_bundle_and_contamination_scan, with overall status PASS. reports/harness/phase0_child_result_validation.json records status PASS for 3 prior child results and Invalid=0."
+    },
+    {
+      "criterion": "No-baseline boundary",
+      "status": "PASS",
+      "evidence": "docs/01_CURRENT_STATE.md says the exact next action is to finish the source-inventory checkpoint commit, proceed to synthetic harness hardening and source-guard review queues, and not begin a real-project baseline. reports/source_inventory_summary.md states the inventory is manifest evidence only and does not approve any generator bundle or start a real-project baseline. orchestration/TASK_REGISTRY.csv contains four PH0/PH1 audit/explorer tasks and zero baseline-like tasks."
+    }
+  ],
+  "artifacts": [
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+    "orchestration/tasks/PH1-INVENTORY-AUDIT.md",
+    "docs/01_CURRENT_STATE.md",
+    "docs/03_KNOWLEDGE_MANIFEST.md",
+    "docs/04_DECISION_LEDGER.md",
+    "docs/SOURCE_ROOTS.md",
+    "manifests/all_projects_inventory_summary.json",
+    "manifests/all_projects_file_role_index.csv",
+    "manifests/115_file_role_index.csv",
+    "manifests/all_projects_workbook_sheet_index.csv",
+    "manifests/115_workbook_sheet_index.csv",
+    "manifests/all_projects_project_manifest.csv",
+    "manifests/115_project_manifest.csv",
+    "manifests/st_block_library_index.csv",
+    "manifests/vendor_catalog_index.csv",
+    "reports/source_inventory_summary.md",
+    "reports/generator_eligibility_summary.md",
+    "reports/classification_validation.md",
+    "reports/knowledge_pack_validation.md",
+    "reports/harness/phase0_test_output.txt",
+    "reports/harness/phase0_child_result_validation.json",
+    "orchestration/TASK_REGISTRY.csv",
+    "schemas/child_result.schema.json",
+    "orchestration/results/PH1-INVENTORY-AUDIT.json"
+  ],
+  "hashes": {
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+    "orchestration/tasks/PH1-INVENTORY-AUDIT.md": "815493928EC085A8E77FA3EEE1693E9E2B5DD48CC55D024A60AD2E849DD239D6",
+    "docs/01_CURRENT_STATE.md": "2113AF9ACD5FF067FC817A279548ED2B5584EFBFE5249C2559FC767263950301",
+    "docs/03_KNOWLEDGE_MANIFEST.md": "F98C5BBF99E2D608DBB540386ADB33AFC79717CD497A7C8B630BA8C81DF0D636",
+    "docs/04_DECISION_LEDGER.md": "BEA62DAF3390AD2BC7112E3D197AE717B29FCEBAA5FAE08B43877354F698AC85",
+    "docs/SOURCE_ROOTS.md": "A97097C0691DD1F39EB34C05B1D484175E1389DBFEEFEF8A8F63920924666DEB",
+    "manifests/all_projects_inventory_summary.json": "2AA6BE5982B2F8E291B18174E18B02016F028F67A4000750239F8F1F8A57A86A",
+    "manifests/all_projects_file_role_index.csv": "5AED72D1AD3E15A0D70ABAE4D0CACED0C87D8F063B7A484412D4757507C28397",
+    "manifests/115_file_role_index.csv": "0D21E3D34C12D103733CAFFC72CAEF82485D20353944B0A0BEE1B12E3BBFDC93",
+    "manifests/all_projects_workbook_sheet_index.csv": "A3E3246C103F5BA5AB783FB8D18DC7F6E722419901F131F6314AF2483A7A7EFC",
+    "manifests/115_workbook_sheet_index.csv": "153D263A9BCC6A6CFFAE158B76C308854D1C62F13B82CFCF87CDC00465BC51FF",
+    "manifests/all_projects_project_manifest.csv": "493C36F17A2AA061F3C371AF4FC720B85780075F43643A3158E7D597AD5AB2CF",
+    "manifests/115_project_manifest.csv": "EE310487F627E7306E1F53614DA5D429C0CE69236B72CD23DBCC44499C94E0F1",
+    "manifests/st_block_library_index.csv": "0F1228D5A4477D74642F54882064553E3C068AB9D1DBA9BD9DE8AE89B733A957",
+    "manifests/vendor_catalog_index.csv": "F77D5FCA3FA505AF64A17BAA672528798EC650C1CB668379AB0781F23FBD29DD",
+    "reports/source_inventory_summary.md": "841C4F7857F73DC129B5E3BB6F4139AB9E69D292B218750CDBBF63C8A28D8DC9",
+    "reports/generator_eligibility_summary.md": "FCE9FF5FEDCD2AB87033C1F9F4BB98BAA97E1C8BA3AC2DF09203F4E29D0364FF",
+    "reports/classification_validation.md": "E4CD07834AFEC36CDA59101791F5C148403EE1E5E22591BF8A692EA12F58173C",
+    "reports/knowledge_pack_validation.md": "EBBDFC6A8BD9BC98BC6005C5BD33BC9A73827D89B84255EC8965C9328F28FAF7",
+    "reports/harness/phase0_test_output.txt": "5184FEDFCD1CF5E10F230B436A52FEDAB4581DFD52358FC7FD3901665D1944A2",
+    "reports/harness/phase0_child_result_validation.json": "FA37432BEC0166EFB3BE0D85675E3ECC4D73FDB40CA8DD50115C38FD269784D9",
+    "orchestration/TASK_REGISTRY.csv": "526F52F312B7EAAF42207DC18F27F435DA2FF55C1752A85445E5A446309A2783",
+    "schemas/child_result.schema.json": "DDC770A4C36D3664C20B6E2E8688CB30F997C3A479B98108C596A43E2307BC41"
+  },
+  "summary": "PASS. The finalized source inventory indexes are present, hashed, internally consistent for file and worksheet row counts, fail closed for generator eligibility, queue stale/hidden/insufficient-identity worksheets appropriately, keep CAD and catalog candidates unapproved and human-review-only, preserve the no-baseline boundary, and are supported by passing Phase 0 harness and child-result validation evidence. The all-project project manifest contains one extra UNASSIGNED bucket row in addition to the 404 real project rows declared by project_count.",
+  "blockers": []
+}

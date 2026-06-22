@@ -1,0 +1,58 @@
+﻿{
+    "task_id":  "PH0-SOURCE-UPDATE-AUDIT",
+    "created_at":  "2026-06-22T16:32:12.4325320+08:00",
+    "visible_files":  [
+                          {
+                              "path":  "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+                              "sha256":  "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09"
+                          },
+                          {
+                              "path":  "docs/01_CURRENT_STATE.md",
+                              "sha256":  "689395FB6F550188BB21FA16832578F5A59E8EF059954149F65D7CCB4DF952F1"
+                          },
+                          {
+                              "path":  "docs/04_DECISION_LEDGER.md",
+                              "sha256":  "BEA62DAF3390AD2BC7112E3D197AE717B29FCEBAA5FAE08B43877354F698AC85"
+                          },
+                          {
+                              "path":  "docs/SOURCE_ROOTS.md",
+                              "sha256":  "A97097C0691DD1F39EB34C05B1D484175E1389DBFEEFEF8A8F63920924666DEB"
+                          },
+                          {
+                              "path":  "manifests/source_roots_probe.json",
+                              "sha256":  "406C643588020CB48EB85FEFF9BC5BDAD12A0ECF9864DA149958D314A7D3F123"
+                          },
+                          {
+                              "path":  "manifests/all_projects_inventory_summary.json",
+                              "sha256":  "2AA6BE5982B2F8E291B18174E18B02016F028F67A4000750239F8F1F8A57A86A"
+                          },
+                          {
+                              "path":  "reports/source_inventory_summary.md",
+                              "sha256":  "042EF6905FCE2446838AE4F89A4419ACAB8608B1353BB6654FB5B73D63DAC960"
+                          },
+                          {
+                              "path":  "reports/generator_eligibility_summary.md",
+                              "sha256":  "FCE9FF5FEDCD2AB87033C1F9F4BB98BAA97E1C8BA3AC2DF09203F4E29D0364FF"
+                          },
+                          {
+                              "path":  "reports/classification_validation.md",
+                              "sha256":  "E4CD07834AFEC36CDA59101791F5C148403EE1E5E22591BF8A692EA12F58173C"
+                          },
+                          {
+                              "path":  "reports/harness/phase0_test_output.txt",
+                              "sha256":  "5184FEDFCD1CF5E10F230B436A52FEDAB4581DFD52358FC7FD3901665D1944A2"
+                          },
+                          {
+                              "path":  "reports/harness/phase0_child_result_validation.json",
+                              "sha256":  "A39A7723EE0ACD669A8AE99E2FC8E5B435EA8FAD5978A03EB69D31F5E6CEDA9A"
+                          },
+                          {
+                              "path":  "orchestration/tasks/PH0-SOURCE-UPDATE-AUDIT.md",
+                              "sha256":  "6423FEE02DE00BC82F4548F740E9AF58B6B4397106FC28712EC47801DF343103"
+                          },
+                          {
+                              "path":  "schemas/child_result.schema.json",
+                              "sha256":  "DDC770A4C36D3664C20B6E2E8688CB30F997C3A479B98108C596A43E2307BC41"
+                          }
+                      ]
+}

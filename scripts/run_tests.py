@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 
 from harness_lib import classify_path, read_json, repo_root, validate, validate_file
+from harness_lib import write_json
 
 
 ROOT = repo_root()
@@ -71,6 +72,50 @@ def test_synthetic_render_grade() -> None:
     assert_true(grading["validity"] == "PASS", "synthetic PDF package should pass")
 
 
+def test_positive_bundle_and_contamination_scan() -> None:
+    work_dir = ROOT / "tmp" / "bundle_test"
+    work_dir.mkdir(parents=True, exist_ok=True)
+    source_manifest = work_dir / "source_manifest.json"
+    sheet_adjudication = work_dir / "sheet_adjudication.json"
+    bundle_dir = work_dir / "bundle"
+    generator_manifest = work_dir / "generator_input_manifest.json"
+    contamination = work_dir / "contamination.json"
+    write_json(source_manifest, {
+        "manifest_id": "bundle-test-source",
+        "files": [
+            {
+                "file_id": "FILE-ALLOWED",
+                "relative_path": "1150101/合約_1150101.xlsx",
+                "file_name": "合約_1150101.xlsx",
+                "primary_role": "allowed_contract_workbook",
+                "generator_eligibility": "ALLOWED"
+            },
+            {
+                "file_id": "FILE-FORBIDDEN",
+                "relative_path": "1150101/電機施工圖/target.pdf",
+                "file_name": "target.pdf",
+                "primary_role": "forbidden_electrical_drawing",
+                "generator_eligibility": "FORBIDDEN"
+            }
+        ],
+        "worksheets": []
+    })
+    write_json(sheet_adjudication, {
+        "adjudication_id": "bundle-test-sheets",
+        "worksheets": [
+            {"sheet_id": "SHEET-ALLOWED", "generator_eligibility": "ALLOWED", "stale_template_status": "CURRENT_PROJECT_ID_MATCH"},
+            {"sheet_id": "SHEET-STALE", "generator_eligibility": "FORBIDDEN", "stale_template_status": "STALE_TEMPLATE_SHEET"}
+        ]
+    })
+    run([PY, "scripts/build_generator_bundle.py", "--source-manifest", str(source_manifest), "--sheet-adjudication", str(sheet_adjudication), "--bundle-dir", str(bundle_dir), "--output-manifest", str(generator_manifest), "--run-id", "BUNDLE-TEST", "--project-id", "1150101"])
+    manifest = read_json(generator_manifest)
+    assert_true(manifest["allowed_files"] == ["FILE-ALLOWED"], "only positive allowed file should enter manifest")
+    assert_true(manifest["allowed_sheets"] == ["SHEET-ALLOWED"], "stale sheet must be excluded")
+    run([PY, "scripts/scan_generator_contamination.py", "--bundle-dir", str(bundle_dir), "--manifest", str(generator_manifest), "--output", str(contamination)])
+    scan = read_json(contamination)
+    assert_true(scan["status"] == "PASS", "clean positive bundle should pass contamination scan")
+
+
 def main() -> None:
     tests = [
         test_json_schemas_parse,
@@ -79,6 +124,7 @@ def main() -> None:
         test_forbidden_classification,
         test_grading_weights,
         test_synthetic_render_grade,
+        test_positive_bundle_and_contamination_scan,
     ]
     failures = []
     for test in tests:
@@ -96,4 +142,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

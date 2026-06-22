@@ -1,0 +1,28 @@
+﻿{
+    "run_id":  "PH1-INVENTORY-AUDIT",
+    "parent_id":  "root-coordinator",
+    "requested_model":  "inherited",
+    "actual_model":  "inherited_parent_gpt-5.5_not_independently_reported",
+    "sandbox":  "instructional_read_only_not_os_enforced",
+    "visible_file_manifest_hash":  "12E9629D97A53CD4E74FAF5258AB2ADBBD8CD80153F3B26557026DF51887B125",
+    "tool_calls":  [
+                       {
+                           "timestamp":  "2026-06-22T16:39:07.0117220+08:00",
+                           "tool":  "multi_agent_v1.spawn_agent",
+                           "exit_code":  0
+                       },
+                       {
+                           "tool":  "multi_agent_v1.wait_agent",
+                           "timestamp":  "2026-06-22T16:45:06.6286639+08:00",
+                           "exit_code":  0
+                       }
+                   ],
+    "input_hashes":  {
+
+                     },
+    "output_hashes":  {
+                          "result_json":  "424CC82D7B1EF040CB2782F451FFF2C2490170FAD05B359508F09B46BCC89AC3"
+                      },
+    "status":  "COMPLETED",
+    "termination_reason":  "child_result_PASS"
+}
