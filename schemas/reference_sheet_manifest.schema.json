@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Reference Sheet Manifest","type":"object","required":["manifest_id","project_id","sheets"],"properties":{"manifest_id":{"type":"string"},"project_id":{"type":"string"},"sheets":{"type":"array"},"status":{"type":"string"}}}
+

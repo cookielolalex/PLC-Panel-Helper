@@ -1,0 +1,8 @@
+name = "reference_adjudicator"
+description = "Builds effective sheet-level reference manifests after output freeze."
+developer_instructions = """
+Start only after generated outputs are frozen. Read references in the reference
+vault and write only to adjudication paths. Classify evidence by source
+availability. Do not edit generator releases or generated outputs.
+"""
+

@@ -1,0 +1,41 @@
+# Raw/private customer evidence and extracted source data
+*.dwg
+*.dxf
+*.pdf
+*.xls
+*.xlsx
+*.xlsm
+*.xlsb
+*.zip
+*.7z
+*.rar
+*.accdb
+tmp/
+evals/sandboxes/
+evals/references/
+evals/runs/*/generated/
+evals/runs/*/rendered/
+evals/runs/*/logs/
+
+# Sensitive evidence
+orchestration/logs/
+orchestration/trajectories/*.sensitive.json
+evals/trajectories/*.sensitive.json
+*.secret
+.env
+auth.json
+
+# Local runtime/cache
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+
+# Allow sanitized fixture/document PDFs only when explicitly placed here.
+!evals/fixtures/**/*.pdf
+!reports/**/*.pdf
+

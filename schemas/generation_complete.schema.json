@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Generation Complete","type":"object","required":["run_id","project_id","status","required_outputs"],"properties":{"run_id":{"type":"string"},"project_id":{"type":"string"},"status":{"type":"string"},"required_outputs":{"type":"array"},"failure_reason":{"type":["string","null"]}}}
+

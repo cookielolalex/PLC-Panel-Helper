@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Blind AB Review","type":"object","required":["review_id","outcome","reasons"],"properties":{"review_id":{"type":"string"},"outcome":{"enum":["A_PREFERRED","B_PREFERRED","EQUIVALENT","NEITHER_ACCEPTABLE"]},"reasons":{"type":"array"}}}
+

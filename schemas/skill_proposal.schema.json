@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Skill Proposal","type":"object","required":["proposal_id","target_path","target_hash","exact_diff","rollback"],"properties":{"proposal_id":{"type":"string"},"target_path":{"type":"string"},"target_hash":{"type":"string"},"exact_diff":{"type":"string"},"expected_benefit":{"type":"string"},"regression_test":{"type":"string"},"rollback":{"type":"string"},"review_status":{"type":"string"}}}
+

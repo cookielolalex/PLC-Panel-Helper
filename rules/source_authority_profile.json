@@ -1,0 +1,43 @@
+{
+  "profile_id": "source_authority_profile_v0",
+  "version": "0.0.1",
+  "status": "BOOTSTRAP_DRAFT",
+  "field_families": {
+    "project_identity": [
+      "explicit_current_user_correction",
+      "accepted_canonical_project_decision",
+      "approved_current_project_workbook"
+    ],
+    "enclosure_dimensions": [
+      "explicit_current_user_correction",
+      "field_specific_authority_rule",
+      "approved_current_project_workbook",
+      "approved_deterministic_derivation_rule"
+    ],
+    "material_and_thickness": [
+      "explicit_current_user_correction",
+      "field_specific_authority_rule",
+      "approved_current_project_workbook",
+      "approved_company_default_labelled"
+    ],
+    "device_bom": [
+      "explicit_current_user_correction",
+      "approved_current_project_material_list",
+      "approved_component_catalog_metadata"
+    ],
+    "revision_status": [
+      "explicit_current_user_correction",
+      "approved_current_project_workbook",
+      "accepted_canonical_project_decision"
+    ]
+  },
+  "conflict_policy": "equal_or_unclear_authority_disagreement_records_CONFLICT",
+  "forbidden_resolution_sources": [
+    "completed_target_drawings",
+    "生管文件",
+    "電機施工圖",
+    "reviewer_findings",
+    "reference_adjudication"
+  ]
+}
+

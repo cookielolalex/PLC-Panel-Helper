@@ -1,0 +1,2513 @@
+CODEX MASTER BUILD SPECIFICATION
+Custom GPT Industrial Control-Panel Drawing Workflow
+Version: 2.0
+Revision basis: sample-project review + controlled grading/self-improvement design
+Encoding: UTF-8
+
+======================================================================
+0. PURPOSE OF THIS FILE
+======================================================================
+
+This is the sole bootstrap specification for a new Codex project. It is
+self-contained and does not depend on previous chat history.
+
+PRIMARY PRODUCT GOAL
+
+For each eligible project, generate these three primary PDF deliverables:
+
+  01_生管課用圖_<工程編號>.pdf
+  02_鈑金施工圖_<工程編號>.pdf
+  03_沖孔施工圖_<工程編號>.pdf
+
+`生管課用圖` and `生管用圖` are recognized as aliases for the same output
+class. The canonical project-facing label is `生管課用圖` unless an approved
+company naming rule requires otherwise.
+
+The generator may use only explicitly allowlisted current-project Excel
+workbooks/worksheets, explicit current user corrections, frozen production
+Knowledge, approved deterministic rules, and approved reusable component or
+CAD-library metadata. It must not use data from:
+
+- any file or worksheet classified as `生管文件`;
+- any file or worksheet classified as `電機施工圖`;
+- completed or modified target drawings for 生管課用圖/生管用圖,
+  鈑金施工圖, or 沖孔施工圖;
+- extracted text, thumbnails, filenames, hashes, reviewer findings, or other
+  derivatives of those forbidden references.
+
+The intended workflow is:
+
+  allowed Excel documents
+  -> file and worksheet adjudication
+  -> positive generator allowlist and contamination scan
+  -> normalized job_spec.json with cell-level provenance
+  -> conflict/TBD handling and schema validation
+  -> one canonical drawing_model.json
+  -> three deterministic PDF renderers
+  -> optional editable DXF source artifacts
+  -> cross-PDF consistency and fabrication checks
+  -> freeze and hash generated output
+  -> sheet-level reference manifest and adjudication
+  -> blind deterministic grading and independent review
+  -> paired portfolio evaluation
+  -> proposal-first, regression-tested optimization
+  -> protected held-out evaluation
+  -> private ChatGPT web Preview with mandatory human CAD review
+
+The system must reduce long-context degradation by treating chat as temporary
+working memory and repository files as durable, versioned memory.
+
+This file contains:
+
+- project scope, privacy, safety, and source-boundary rules;
+- repository architecture and canonical artifact contracts;
+- parent-thread and subagent orchestration;
+- context-limit and fresh-thread recovery rules;
+- PDF-generation, validation, comparison, and grading requirements;
+- controlled self-improvement techniques adapted from modern agent systems;
+- every implementation phase and completion gate;
+- reusable prompts, including a rebuilt initial Codex prompt;
+- resource references.
+
+The root Codex thread is the COORDINATOR. It executes this file phase by
+phase, explicitly delegates bounded work, waits for and validates every child
+result, writes durable checkpoints, and stops only at explicit human gates or
+genuine blockers.
+
+Do not paste old chat logs into the project. Do not use remembered chat
+content as authority. This file, accepted repository artifacts, approved
+source manifests, and signed human decisions are the authority.
+
+======================================================================
+1. HUMAN SETUP BEFORE THE FIRST CODEX MESSAGE
+======================================================================
+
+1. Create a new, empty, ASCII-only workspace, preferably:
+
+   C:\Users\alex1\OneDrive\Desktop\custom-gpt-drawing-workflow-v2
+
+2. Save this file at the workspace root as:
+
+   CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt
+
+   Also save the separate paste-ready prompt as:
+
+   CODEX_INITIAL_BOOTSTRAP_PROMPT.txt
+
+3. Open that workspace as a new project in the Codex app.
+
+4. Use normal workspace-write permissions for the workspace only.
+   Keep network access off initially. Do not use danger-full-access,
+   --yolo, or any sandbox bypass.
+
+5. Paste the contents of CODEX_INITIAL_BOOTSTRAP_PROMPT.txt (also reproduced
+   in section 18.1) into the new Codex app conversation.
+
+6. Keep the following existing data. Do not delete or reorganize it:
+
+   Active yearly jobs:
+   C:\Users\alex1\OneDrive\Desktop\115年度工作.zip
+
+   CAD block/reference library:
+   C:\Users\alex1\OneDrive\Desktop\案件備份\ST-Block1
+
+   Vendor/equipment catalogs:
+   C:\Users\alex1\OneDrive\Desktop\案件備份\器材型錄
+
+   Legacy prepared package, when present:
+   C:\Users\alex1\OneDrive\Desktop\案件備份_GPT整理
+
+7. All four source locations are READ-ONLY. The project may index or
+   inspect them, but it may never rename, move, overwrite, delete, or
+   extract files back into those locations.
+
+======================================================================
+2. NON-NEGOTIABLE PROJECT RULES
+======================================================================
+
+2.1 SOURCE IMMUTABILITY
+
+- Original archives, project folders, catalogs, drawings, spreadsheets, and
+  completed work are immutable.
+- Temporary extraction is allowed only under workspace/tmp/ or a versioned
+  evaluation sandbox.
+- Temporary files must be reproducible and disposable.
+- Raw customer files, contracts, forbidden references, and completed drawings
+  must not be committed to Git.
+- A source manifest must record hashes before parsing or copying.
+
+2.2 PRIMARY OUTPUT CONTRACT
+
+The required product outputs are three PDFs:
+
+- 生管課用圖 PDF;
+- 鈑金施工圖 PDF;
+- 沖孔施工圖 PDF.
+
+Editable DXF files may be produced as secondary artifacts when the approved
+renderer supports them. A DXF does not substitute for a required PDF. Each PDF
+must be readable, associated with the correct project, and internally
+consistent with the other two PDFs.
+
+2.3 GENERATOR INPUT BOUNDARY — POSITIVE ALLOWLIST ONLY
+
+The generator receives a newly constructed bundle. It must not browse the
+original project tree.
+
+Allowed project-specific evidence:
+
+1. Current-project Excel workbooks explicitly approved by the source guard.
+2. Only the approved worksheets within those workbooks.
+3. Explicit current user corrections recorded in a signed decision artifact.
+4. Approved deterministic rules with versioned rule IDs.
+
+Allowed reusable evidence:
+
+5. Frozen production Knowledge.
+6. Approved component/catalog metadata and CAD block metadata.
+7. Company conventions explicitly marked as defaults, never hidden facts.
+
+Always forbidden to the generator, regardless of folder or filename:
+
+- `生管文件` and any copy, export, cached text, or embedded worksheet derived
+  from it;
+- `電機施工圖` and any copy, image, PDF, CAD export, or extracted text derived
+  from it;
+- completed target drawings, modified target drawings, historical target
+  thumbnails, OCR, vectors, hashes, page counts, filenames, and reviewer
+  annotations;
+- evaluation expected answers, reference-adjudication records, held-out
+  answers, score reports, or comparison overlays;
+- symlinks, junctions, environment variables, search indexes, or alternate
+  paths that reveal forbidden data.
+
+Folder-name filtering alone is insufficient. Build an explicit file-and-sheet
+allowlist, then scan content hashes, archive members, symlinks/junctions,
+filenames, extracted strings, and reference-only sentinels before generation.
+
+Any forbidden exposure is `REFERENCE_LEAKAGE` and invalidates the run.
+
+2.4 STALE WORKSHEET AND TEMPLATE REJECTION
+
+Workbook selection is an engineering gate. Legacy `.xls` and `.xlsx` files may
+contain old examples or unrelated customer tabs.
+
+For every candidate worksheet, record and compare:
+
+- engineering/project number;
+- customer name;
+- project name;
+- approved revision/date marker when present;
+- identifiers shared with other allowed current-project workbooks;
+- whether formulas or named ranges point to stale/hidden sheets.
+
+A worksheet whose identifiers conflict with the current project is
+`STALE_TEMPLATE_SHEET` and is excluded. A sheet with insufficient identity is
+`HUMAN_REVIEW_REQUIRED` and cannot provide critical fabrication values.
+Using a stale or unrelated sheet is a hard evaluation failure.
+
+Hidden sheets, very hidden sheets, external links, cached values, named ranges,
+print areas, and formulas must be inventoried. The system must not assume the
+active tab is current.
+
+2.5 NO UNSUPPORTED FABRICATION VALUES
+
+Never invent or silently infer the following without an explicit, traceable
+allowed source or approved deterministic rule:
+
+- voltage, current, SCCR, enclosure/IP/NEMA rating;
+- material, sheet thickness, surface finish, wire size;
+- exact enclosure, panel, plate, door, rail, duct, or cutout dimensions;
+- exact hole/cutout location, bend allowance, bend deduction, or spacing;
+- model number, manufacturer, quantity, rating, or protection class;
+- drawing approval, certification, safety, or fabrication-release status.
+
+Missing or conflicting values must use one of:
+
+- TBD
+- UNVERIFIED
+- CONFLICT
+- HUMAN_REVIEW_REQUIRED
+
+A proposal may be shown only when labelled `PROPOSED`, linked to its rule or
+analogy, and excluded from verified-fact scoring. A draft must never be called
+certified, approved, safe for production, or ready for fabrication without
+explicit human sign-off.
+
+2.6 FIELD-SPECIFIC SOURCE AUTHORITY WITHIN THE ALLOWED BUNDLE
+
+Do not assume one workbook type is universally more authoritative than another.
+Create a versioned `source_authority_profile.json` that maps each field family
+such as project identity, enclosure dimensions, material, device quantity,
+commercial description, or revision status to its approved source precedence.
+
+Default handling:
+
+1. Explicit current user correction recorded for this project.
+2. Field-specific authority rule for the current revision.
+3. Accepted canonical project decision.
+4. Approved deterministic derivation rule.
+5. Frozen reusable catalog/CAD metadata for catalog facts only.
+6. Company default only when explicitly authorized and labelled as a default.
+
+When two allowed sources of equal or unclear authority disagree, record
+`CONFLICT`; do not guess based on filename, modified time, or historical target.
+Do not use completed target drawings to resolve a generator-side conflict. They
+are reviewer evidence only after output freeze.
+
+2.7 DEVELOPMENT MATERIAL IS NOT PRODUCTION KNOWLEDGE
+
+Keep separate:
+
+- deployable Custom GPT Instructions;
+- production Knowledge files;
+- repository skills used by Codex;
+- development/reference casebooks;
+- evaluation cases and expected behavior;
+- failed generated outputs;
+- completed historical outputs;
+- reviewer reports and grading artifacts;
+- optimization notes and rejected candidates;
+- protected held-out answers.
+
+Do not upload failed outputs, reviewer commentary, project-specific completed
+answers, reference manifests, or held-out data as Custom GPT Knowledge.
+
+2.8 COMPLETED WORK IS ADJUDICATED EVIDENCE, NOT PERFECT GROUND TRUTH
+
+Every generated/reference mismatch receives one class:
+
+- EXPLICIT_IN_ALLOWED_INPUT
+- DERIVABLE_BY_APPROVED_RULE
+- CONFLICTING_ALLOWED_INPUT
+- DESIGN_CHOICE_WITH_CONSTRAINTS
+- UNAVAILABLE_IN_ALLOWED_INPUT
+- OPTIONAL_COMPANY_CONVENTION
+- REFERENCE_POSSIBLY_INCORRECT
+- UNRESOLVED
+
+Do not penalize a generated TBD/CONFLICT when the completed drawing contains a
+value unavailable or contradictory in the allowed input bundle. Do penalize an
+unsupported invented value. Exact historical placement is not mandatory when
+the source only defines constraints and the generated alternative is valid.
+
+2.9 ONE CANONICAL MODEL, THREE RENDERERS
+
+The generator must create one `drawing_model_<工程編號>.json` and render all
+three PDFs from it. The three renderers may emphasize different information,
+but they must share panel IDs, dimensions, materials, quantities, orientations,
+and common geometry.
+
+Independent free-form generation of three unrelated drawings is prohibited.
+Cross-PDF inconsistency is a hard gate or score cap depending on severity.
+
+2.10 SHEET-LEVEL REVISION CONTROL
+
+A `修改` file may replace one sheet rather than the whole drawing package.
+References and generated revisions must be tracked by project, output type,
+panel/sheet identity, revision, effective status, and `supersedes` links.
+“Newest filename wins” is prohibited.
+
+2.11 PRIVACY AND EXTERNAL PROCESSING
+
+- Default execution is local-only.
+- Do not transmit project data to an API until explicit approval is recorded
+  in docs/PRIVACY_APPROVAL.md.
+- Never store credentials in the repository.
+- Use environment variables for credentials.
+- Record every external file transmission, model/provider, retention context,
+  and cleanup action.
+- Keep the final Custom GPT private during initial testing.
+
+2.12 FROZEN RELEASES AND FROZEN GRADERS
+
+Once a candidate release is frozen, evaluation-harness work may not alter its
+Instructions, Knowledge, skills, schemas, source classifier, extraction logic,
+drawing model, renderers, validators, grading profile, or tolerance profile.
+Any improvement creates a new versioned candidate.
+
+The grading profile and reference adjudication are also frozen per experiment.
+Do not move the goalposts after seeing candidate output.
+
+2.13 PROPOSAL-FIRST SELF-IMPROVEMENT
+
+Agents may propose changes but may not directly mutate accepted Instructions,
+production Knowledge, active skills, shared renderers, or the accepted grading
+profile. Every proposal must include:
+
+- target artifact and current hash;
+- evidence and affected failure IDs;
+- exact diff;
+- expected benefit;
+- regression risks;
+- regression test added first;
+- rollback information;
+- independent review status;
+- human approval when required.
+
+Applying a stale proposal whose target hash changed is prohibited.
+
+2.14 SAMPLE-DERIVED HAZARDS — EVALUATION-ONLY KNOWLEDGE
+
+The reviewed sample archive established hazards that must become tests, not
+hidden generator hints:
+
+- target-like PDFs may appear beneath an `電機施工圖` area, so path exclusion is
+  insufficient;
+- legacy workbooks may contain stale unrelated tabs;
+- allowed workbooks can disagree on dimensions or materials;
+- completed references may include exact decisions absent from allowed Excel;
+- revision PDFs may replace only selected panels/sheets;
+- most historical PDFs may be raster scans, limiting vector comparison;
+- project size can range from one panel to many panels, so portfolio scoring
+  must not be dominated by one large project.
+
+Specific project IDs, completed layouts, and hidden decisions remain outside
+production Knowledge and outside every generator bundle.
+
+======================================================================
+3. LONG-CONTEXT AND THREAD MANAGEMENT MODEL
+======================================================================
+
+3.1 WHAT CODEX CAN AND CANNOT DO
+
+The root Codex app conversation can explicitly spawn subagent threads,
+wait for them, steer them, inspect them, and close them. Those are child
+agent threads within the current task.
+
+The root conversation must not claim it can autonomously create a new
+independent top-level Codex app conversation. When a top-level context
+reset is required, it must create durable checkpoint files and ask the
+human to open a fresh Codex conversation using the continuation prompt
+in section 18.
+
+For isolated executable mock-agent runs, the project may launch fresh
+`codex exec --ephemeral` child processes. These are separate execution
+sessions and are preferred for blind generator/reviewer isolation.
+
+3.2 DURABLE MEMORY
+
+The conversation is temporary. Durable memory lives in:
+
+- AGENTS.md
+- docs/00_PROJECT_CHARTER.md
+- docs/01_CURRENT_STATE.md
+- docs/02_ARCHITECTURE.md
+- docs/03_KNOWLEDGE_MANIFEST.md
+- docs/04_DECISION_LEDGER.md
+- docs/05_EVAL_SUITE.md
+- docs/06_EVAL_LEDGER.md
+- docs/07_CHANGELOG.md
+- docs/SOURCE_ROOTS.md
+- docs/SESSION_CHECKPOINT.md
+- orchestration/TASK_REGISTRY.csv
+- orchestration/NEXT_THREAD_PROMPT.txt
+- release manifests and Git commits.
+
+Do not carry state by copying an old chat transcript into a new thread.
+
+3.3 PROACTIVE RESET RULE
+
+The coordinator must checkpoint:
+
+- after every major phase;
+- after every accepted or rejected optimization cycle;
+- before and after a six-project fan-out;
+- after at most three optimization cycles in one root conversation;
+- whenever competing drafts, stale assumptions, or large raw outputs are
+  accumulating;
+- before the conversation approaches a practical context limit.
+
+Do not wait for hard truncation.
+
+At a reset:
+
+1. Finish or safely stop active child agents.
+2. Validate and close child threads.
+3. Update every canonical state file.
+4. Write docs/SESSION_CHECKPOINT.md.
+5. Write orchestration/NEXT_THREAD_PROMPT.txt.
+6. Commit the checkpoint.
+7. Return the status NEW_TOP_LEVEL_THREAD_REQUIRED.
+8. Tell the human to start a fresh Codex app conversation and paste only
+   the short continuation prompt from section 18.
+
+3.4 KEEP THE COORDINATOR CONTEXT SMALL
+
+- Subagents write detailed results to files.
+- The coordinator receives compact, structured summaries.
+- Never paste complete PDFs, CAD dumps, huge CSVs, or raw logs into the
+  parent response.
+- Refer to paths, hashes, finding IDs, and schema-valid summaries.
+- The coordinator reads only the minimum files required for the current
+  phase.
+- Historical detail belongs in ledgers and Git, not CURRENT_STATE.
+
+3.5 RUN TRAJECTORIES AS A FLIGHT RECORDER
+
+Every generator, reviewer, grader, optimizer, and implementation run writes a
+redacted machine-readable trajectory containing:
+
+- run/task ID and parent ID;
+- requested and actual model;
+- prompt/instruction/skill/config hashes;
+- visible-file manifest and allowlist hash;
+- tool calls, commands, timestamps, exit codes, and timeouts;
+- active sandbox and network policy;
+- input and output artifact hashes;
+- validator results and termination reason;
+- compaction/context-reset events when observable.
+
+Trajectories may contain sensitive paths or prompts and must be protected like
+evaluation evidence. They support root-cause analysis but are never uploaded to
+production Knowledge.
+
+3.6 MEMORY TIERS
+
+Use three explicit tiers:
+
+- ACCEPTED_DURABLE: approved rules, schemas, decisions, releases, and tests;
+- PROJECT_EVIDENCE: immutable manifests, run artifacts, references, scores;
+- WORKING_NOTES: temporary hypotheses that expire or are archived.
+
+No agent may promote working notes to accepted durable memory without the
+proposal and review process.
+
+======================================================================
+4. PARENT COORDINATOR AND SUBAGENT ORCHESTRATION
+======================================================================
+
+4.1 GLOBAL AGENT CONFIGURATION
+
+Create `.codex/config.toml` with:
+
+[agents]
+max_threads = 6
+max_depth = 1
+job_max_runtime_seconds = 1800
+
+Keep depth at 1 unless an independently reviewed reason requires otherwise.
+The coordinator explicitly requests subagents; it does not assume automatic
+fan-out.
+
+4.2 PROJECT-SCOPED CUSTOM AGENTS
+
+Create narrow TOML agent definitions under `.codex/agents/`. Each definition
+must include `name`, `description`, and `developer_instructions`. Omitted model
+or sandbox settings inherit from the parent, so every run records the effective
+values.
+
+1. repo_explorer
+   - read-only;
+   - inventories repository/source architecture;
+   - returns evidence and paths, not edits.
+
+2. source_guard
+   - read-only over immutable sources and writable only to its designated
+     preparation/manifests directory;
+   - classifies files and individual worksheets;
+   - builds the positive generator allowlist;
+   - detects forbidden content, hidden sheets, stale templates, external links,
+     duplicates, aliases, and leakage sentinels;
+   - cannot generate drawings or view reviewer conclusions.
+
+3. implementation_worker
+   - workspace-write only within an approved bounded task/worktree;
+   - implements one accepted proposal;
+   - cannot modify unrelated shared artifacts.
+
+4. knowledge_curator
+   - read-only on source/evaluation data;
+   - writes only to a candidate Knowledge directory;
+   - separates reusable rules from project-specific answers;
+   - cannot apply candidate Knowledge to an accepted release.
+
+5. case_generator
+   - workspace-write only inside one isolated generator workspace;
+   - sees only the allowlisted generator bundle;
+   - creates job_spec, drawing_model, three PDFs, optional DXF, provenance,
+     validation report, and completion record;
+   - cannot access references or prior reviewer output.
+
+6. deterministic_grader
+   - runs schema, PDF, geometry, BOM, cross-output, leakage, and consistency
+     checks using frozen code and profiles;
+   - does not change generated or reference artifacts;
+   - reports parser/alignment limitations rather than false passes.
+
+7. reference_adjudicator
+   - read-only over references and writable only to its designated
+     adjudication directory;
+   - starts only after generated outputs are frozen;
+   - builds the effective sheet set and supersedes graph;
+   - classifies reference elements by source availability;
+   - cannot edit the generator release or generated output.
+
+8. project_reviewer
+   - read-only over frozen generated outputs, allowed inputs, adjudicated
+     references, and deterministic evidence;
+   - produces schema-valid findings with source classification and root cause;
+   - cannot implement recommendations.
+
+9. blind_ab_reviewer
+   - read-only;
+   - sees anonymized A/B outputs and allowed project inputs;
+   - reports A preferred, B preferred, equivalent, or neither acceptable;
+   - is not told which output is baseline or candidate.
+
+10. portfolio_optimizer
+    - read-only;
+    - reads structured project results, trajectories, and aggregate metrics;
+    - clusters failures by root cause and proposes the smallest general change;
+    - cannot access protected held-out answers or implement changes.
+
+11. skill_curator
+    - activates only after sufficient scored runs exist;
+    - reviews skill duplication, trigger quality, size, conflicts, and usage;
+    - creates hash-bound proposals under optimization/skill_proposals/;
+    - cannot write active `.agents/skills/*/SKILL.md` directly.
+
+12. independent_auditor
+    - read-only by default;
+    - checks requirements, hashes, tests, score calculations, Git diff,
+      experiment integrity, and human gates;
+    - may propose fixes but does not silently implement them.
+
+4.3 TASK REGISTRY
+
+Create `orchestration/TASK_REGISTRY.csv` with at least:
+
+- task_id
+- phase
+- agent_type
+- scope
+- workspace
+- input_manifest
+- output_manifest
+- status
+- parent_owner
+- child_thread_or_run_id
+- requested_model
+- actual_model
+- sandbox
+- started_at
+- heartbeat_at
+- completed_at
+- exit_status
+- result_path
+- trajectory_path
+- commit
+- blocker
+
+Allowed states:
+
+- PLANNED
+- READY
+- RUNNING
+- WAITING
+- SUCCEEDED
+- FAILED
+- TIMED_OUT
+- CANCELLED
+- NEEDS_PARENT_REVIEW
+- ACCEPTED
+- REJECTED
+
+4.4 SUBAGENT LAUNCH PROTOCOL
+
+Before spawning any agent:
+
+1. Create `orchestration/tasks/<task_id>.md`.
+2. Define exact inputs, outputs, writable paths, forbidden paths, completion
+   criteria, timeout, and output schema.
+3. Add the task to TASK_REGISTRY.csv.
+4. Create an isolated worktree/output directory where writes could conflict.
+5. Generate and hash the visible-file manifest.
+6. Confirm whether the task may access allowed inputs, generated output,
+   references, or held-out data.
+
+Then explicitly instruct Codex to spawn the named agent, wait for it, route
+clarifications only to that agent, inspect its result, and close it.
+
+For repeated project tasks, use `spawn_agents_on_csv` only when supported by
+the installed Codex version and after a synthetic test. Otherwise spawn
+explicit children. Never exceed six concurrent child threads.
+
+4.5 PARENT MONITORING DUTIES
+
+The coordinator must:
+
+- record every child ID and effective configuration;
+- monitor status, heartbeat, timeout, and approval requests;
+- wait for all required children before aggregation;
+- validate expected files, schemas, hashes, and trajectory completion;
+- rerun failure with a new task/run ID rather than overwriting evidence;
+- reject partial, malformed, or prose-only results;
+- compare declared file changes against Git diff and artifact hashes;
+- close completed child threads;
+- merge/apply child work serially;
+- remain the only writer to accepted shared workflow/configuration files.
+
+4.6 NO CONCURRENT SHARED WRITES
+
+Parallel agents write only inside assigned workspaces. The coordinator alone
+may write or apply:
+
+- accepted Instructions and production Knowledge;
+- active `.agents/skills`;
+- shared schemas, renderers, validators, and grading profiles;
+- canonical state files, backlog, releases, and cohort assignments.
+
+4.7 REQUIRED AGENT INTERACTION FLOW
+
+Use this data flow:
+
+  source_guard
+      -> generator_input_manifest + approved worksheet allowlist
+      -> case_generator
+      -> deterministic validation
+      -> generation freeze + hashes
+
+  reference_adjudicator (starts after freeze)
+      -> effective reference sheet manifest + adjudication
+      -> deterministic_grader
+      -> project_reviewer
+      -> grading_result + comparison report
+
+  multiple project results
+      -> portfolio_optimizer
+      -> proposal package
+      -> regression test first
+      -> implementation_worker under coordinator control
+      -> blind paired rerun
+      -> independent_auditor
+      -> accept/reject/human gate
+
+No backward edge may expose completed references, scores, or reviewer findings
+to a generator run being graded.
+
+======================================================================
+5. REPOSITORY STRUCTURE
+======================================================================
+
+Create at least:
+
+AGENTS.md
+README.md
+.gitignore
+CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt
+requirements-harness.txt
+
+rules/
+  source_authority_profile.json
+  derivation_rules/
+  constraint_rules/
+
+.codex/
+  config.toml
+  agents/
+
+.agents/
+  skills/
+    source-sheet-selection/
+    evidence-provenance/
+    conflict-handling/
+    drawing-model-construction/
+    render-production-drawing/
+    render-sheetmetal-drawing/
+    render-punch-drawing/
+    reference-adjudication/
+    project-grading/
+
+skills are active only after proposal review and application. Candidate skill
+proposals live outside `.agents/skills`.
+
+docs/
+  00_PROJECT_CHARTER.md
+  01_CURRENT_STATE.md
+  02_ARCHITECTURE.md
+  03_KNOWLEDGE_MANIFEST.md
+  04_DECISION_LEDGER.md
+  05_EVAL_SUITE.md
+  06_EVAL_LEDGER.md
+  07_CHANGELOG.md
+  SOURCE_ROOTS.md
+  PRIVACY_APPROVAL.md
+  SESSION_CHECKPOINT.md
+  specs/
+    GENERATOR_INPUT_POLICY.md
+    DRAWING_MODEL_SPEC.md
+    PDF_OUTPUT_CONTRACT.md
+    EVALUATION_HARNESS_SPEC.md
+    PLC_PANEL_GRADING_RUBRIC.md
+    SKILL_GOVERNANCE.md
+  exec-plans/
+    active/
+    completed/
+  archive/
+
+orchestration/
+  TASK_REGISTRY.csv
+  NEXT_THREAD_PROMPT.txt
+  tasks/
+  results/
+  logs/
+  trajectories/
+
+schemas/
+  source_manifest.schema.json
+  source_authority_profile.schema.json
+  derivation_rule.schema.json
+  constraint_rule.schema.json
+  generator_input_manifest.schema.json
+  workbook_sheet_adjudication.schema.json
+  job_spec.schema.json
+  drawing_model.schema.json
+  eval_case.schema.json
+  run_manifest.schema.json
+  generation_complete.schema.json
+  validation_results.schema.json
+  reference_sheet_manifest.schema.json
+  reference_adjudication.schema.json
+  comparison_metrics.schema.json
+  grading_result.schema.json
+  reviewer_calibration.schema.json
+  review.schema.json
+  blind_ab_review.schema.json
+  recommendation.schema.json
+  portfolio_summary.schema.json
+  trajectory.schema.json
+  skill_proposal.schema.json
+  production_utility.schema.json
+
+scripts/
+  README.md
+  run_tests.py
+  inventory_sources.py
+  classify_files.py
+  inspect_workbook_sheets.py
+  build_generator_bundle.py
+  scan_generator_contamination.py
+  build_knowledge_pack.py
+  validate_release.py
+  validate_job_spec.py
+  validate_drawing_model.py
+  render_pdf_outputs.py
+  validate_pdf_package.py
+  build_reference_manifest.py
+  adjudicate_reference.py
+  grade_project.py
+  compare_candidates.py
+  compute_project_bootstrap.py
+  eval_harness.py
+
+manifests/
+knowledge/
+  production/
+  development/
+gpt-config/
+releases/
+
+evals/
+  harness/
+  fixtures/
+  grading_profiles/
+  tolerance_profiles/
+  case_registry.csv
+  cases/
+    development/
+    regression/
+    held_out/
+  sandboxes/
+  references/
+  reference_adjudication/
+  runs/
+  trajectories/
+  production_utility/
+
+optimization/
+  cycles/
+  priority_backlog.csv
+  skill_proposals/
+  rejected/
+
+reports/
+  harness/
+  cycles/
+  launch_gate/
+  production_utility/
+
+tests/
+tmp/
+
+Use a project-local `.venv`. Pin dependencies in
+`requirements-harness.txt`. Do not install globally or mutate a managed Codex
+runtime.
+
+Recommended local Python packages, only when actually used:
+
+- jsonschema
+- openpyxl
+- xlrd or a deliberate `.xls` parser when required
+- ezdxf
+- reportlab
+- pypdf
+- pdfplumber
+- PyMuPDF
+- Pillow
+- scipy when minimum-cost matching or project-level bootstrap requires it
+
+Use PyMuPDF as the primary local PDF renderer. OCR is a last-resort fallback
+for image-only text, not a default extraction path. Poppler is optional and
+must not become required unless the implementation truly uses it.
+
+======================================================================
+6. CANONICAL ARTIFACT CONTRACTS AND GRADING MODEL
+======================================================================
+
+6.1 AGENTS.md
+
+Keep under approximately 120 lines. It is a routing map, not a duplicate of
+this master specification. It points to canonical files and states immutable
+source, generator boundary, proposal-first change, and human-gate rules.
+
+6.2 CURRENT_STATE
+
+Keep `docs/01_CURRENT_STATE.md` under 1,000 words. Include current phase,
+accepted release, active candidate, frozen grader/profile, completed gates,
+backend/fidelity, current experiment, blockers, and exact next action.
+
+6.3 DECISION LEDGER
+
+Each decision includes decision ID, date, decision, rationale, evidence,
+affected artifacts, approving human when required, and status:
+PROPOSED, ACCEPTED, SUPERSEDED, or REJECTED.
+
+6.4 EVALUATION LEDGER
+
+Each run includes evaluation ID, project/cohort, release and hashes, grader and
+tolerance profile hashes, reference-adjudication hash, requested/actual model,
+backend/fidelity, date, repeated-run count, validity, quality score, scorable
+coverage, confidence, dimension scores, critical findings, paired difference,
+and result: IMPROVED, REGRESSED, MIXED, or INCONCLUSIVE.
+
+6.5 SESSION CHECKPOINT
+
+Use this exact structure:
+
+# SESSION CHECKPOINT
+
+Current phase:
+Current accepted release:
+Current candidate:
+Frozen grader/profile:
+Current goal:
+Completed gates:
+Active or incomplete tasks:
+Accepted changes:
+Proposed but unaccepted changes:
+Current Instructions path:
+Active production Knowledge paths:
+Active skill hashes:
+Latest evidence:
+Known regressions:
+Unresolved questions:
+Exact next action:
+Required files to read next:
+Files that must remain untouched:
+Obsolete context not to reload:
+Starting Git commit for next thread:
+
+6.6 SOURCE MANIFEST
+
+Every file and workbook worksheet receives a stable ID. File fields include:
+
+- file_id, source_root, relative_path, archive_member_path;
+- project_id, project_name, customer;
+- file_name, extension, size_bytes, modified_time when available;
+- sha256, content_fingerprint, duplicate_of;
+- primary_role, secondary_tags, drawing_output_type;
+- generator_eligibility: ALLOWED, FORBIDDEN, HUMAN_REVIEW_REQUIRED;
+- forbidden_signature_match;
+- classification_confidence and basis;
+- parse_status, review_status, notes.
+
+Worksheet fields include:
+
+- sheet_id, workbook_file_id, sheet_name, visibility;
+- used_range, print_area, named_ranges, external_links;
+- detected_project_id/customer/project_name/date/revision;
+- stale_template_status and evidence;
+- generator_eligibility;
+- approved_by and approval_time when human review is needed.
+
+Primary roles must distinguish at least:
+
+- allowed_contract_workbook
+- allowed_material_list_workbook
+- allowed_supporting_workbook
+- forbidden_production_control_file
+- forbidden_electrical_drawing
+- completed_production_drawing_reference
+- completed_sheetmetal_drawing_reference
+- completed_punch_drawing_reference
+- supporting_document_non_generator
+- cad_block_library
+- vendor_catalog
+- spreadsheet_other
+- unclear
+
+A file named unexpectedly but matching forbidden content remains forbidden.
+
+6.7 GENERATOR INPUT MANIFEST
+
+`generator_input_manifest.json` is the only authority for files visible to a
+generator. It records:
+
+- project and run IDs;
+- allowed file IDs and allowed sheet IDs;
+- immutable hashes;
+- excluded file/sheet IDs and reason codes;
+- frozen release, Knowledge, skill, schema, and renderer hashes;
+- contamination scan result;
+- symlink/junction scan;
+- environment-variable allowlist;
+- bundle construction time and builder version.
+
+A generator run must fail closed if the manifest is missing, invalid, or does
+not match the workspace.
+
+6.8 JOB SPECIFICATION
+
+`job_spec.schema.json` supports project/customer metadata, panel schedule,
+enclosure facts, materials, devices, quantities, manufacturers/models, cutout
+requirements, sheet-metal requirements, production notes, source references,
+verification status, conflicts, and unresolved fields.
+
+Every extracted value retains:
+
+- value and unit;
+- source file ID and sheet ID;
+- exact cell/range, named range, table row, or formula provenance;
+- raw displayed value and normalized value;
+- confidence;
+- verification status;
+- rule ID when derived;
+- conflict-set ID when sources disagree.
+
+6.9 CANONICAL DRAWING MODEL
+
+`drawing_model_<工程編號>.json` is required and schema-valid before rendering.
+It includes:
+
+- project and panel IDs;
+- enclosure/door/mounting-plate boundaries and datums;
+- devices, tags, quantities, bounding boxes, rotations, and mounting regions;
+- rails, wire ducts, cable entries, holes, cutouts, and datum dimensions;
+- materials, thicknesses, folds/bends only when source-supported;
+- annotations and output-specific visibility flags;
+- provenance and verification status for every critical fact;
+- unresolved/TBD regions;
+- coordinate system and units;
+- model version and source job_spec hash.
+
+All three renderers consume this same frozen model.
+
+6.10 PDF OUTPUT CONTRACT
+
+Required outputs:
+
+- `01_生管課用圖_<工程編號>.pdf`
+- `02_鈑金施工圖_<工程編號>.pdf`
+- `03_沖孔施工圖_<工程編號>.pdf`
+
+Optional editable artifacts use matching base names and `.dxf` extension.
+
+Each PDF must contain machine-readable metadata or an accompanying index with:
+project ID, output type, panel/sheet ID, page number, drawing-model hash,
+renderer version, and generation run ID.
+
+Output-specific obligations:
+
+- 生管課用圖: panel identity, overall arrangement, equipment/layout
+  communication, production/assembly notes, and legibility;
+- 鈑金施工圖: fabrication dimensions, panels/doors/plates/base, supported
+  material/thickness, folds/bends when available, and constructability;
+- 沖孔施工圖: hole/cutout identity, size, center/datum, orientation, quantity,
+  containment, and punchability.
+
+6.11 REFERENCE SHEET MANIFEST
+
+The completed package is reconstructed at sheet level. Each record includes:
+
+- project_id, output_type, panel_id, sheet_id;
+- source PDF and page;
+- drawing number/title/revision;
+- base or modification status;
+- effective flag;
+- supersedes and superseded_by IDs;
+- page-pairing anchors and confidence;
+- file/page hash;
+- adjudication status.
+
+The effective set must be reviewed before scoring.
+
+6.12 REFERENCE ADJUDICATION
+
+Every expected item/region has:
+
+- reference_item_id;
+- output type, sheet/panel, object/value category;
+- expected value/geometry when scorable;
+- source-availability class;
+- allowed input evidence or approved rule;
+- criticality weight;
+- tolerance-profile key;
+- acceptable alternatives;
+- human adjudicator/status;
+- exclusion reason when not scored.
+
+Allowed source-availability classes are those listed in section 2.8.
+
+6.13 TOP-LEVEL GRADING RESULT
+
+Every run reports:
+
+Validity: PASS | FAIL
+Quality score: 0.0–100.0
+Scorable coverage: 0–100%
+Confidence: HIGH | MEDIUM | LOW
+Critical findings: integer
+High findings: integer
+
+A quality score without coverage and confidence is invalid.
+
+6.14 HARD VALIDITY GATES
+
+A run is FAIL when any occur:
+
+1. Reference leakage or forbidden file/sheet exposure.
+2. Use of a stale or unrelated worksheet.
+3. Missing required PDF without a valid machine-readable failure record.
+4. Blank, unreadable, corrupted, or wrong-project PDF.
+5. Invented critical value or unsupported verified claim.
+6. Silent resolution of critical source conflict.
+7. Missing provenance for a critical generated value.
+8. Post-freeze artifact mutation.
+9. Critical contradiction among the three PDFs.
+10. Unsupported approval/certification/fabrication-readiness claim.
+
+Recommended non-invalidating score caps:
+
+- complete panel/sheet missing: maximum 50;
+- wrong explicit enclosure dimension or material: maximum 70;
+- high-severity constructability defect: maximum 75;
+- missing one required output-specific information class: maximum 80.
+
+6.15 100-POINT RUBRIC
+
+Use these weights:
+
+- Source selection, provenance, and conflict handling: 20
+- Panel schedule and enclosure facts: 15
+- Device/BOM/quantity/tag fidelity: 20
+- Shared geometry and cross-PDF consistency: 15
+- 生管課用圖-specific quality: 10
+- 沖孔施工圖-specific quality: 10
+- 鈑金施工圖-specific quality: 10
+
+Total: 100.
+
+Each scorable item receives:
+
+- 1.00 correct/within tolerance;
+- 0.75 minor non-fabrication discrepancy;
+- 0.50 partially correct or acceptable alternative incompletely shown;
+- 0.25 recognizable intent but major correction required;
+- 0.00 missing, wrong, or unusable.
+
+Criticality multipliers:
+
+- 5 fabrication/safety/identity critical;
+- 3 engineering-significant;
+- 1 drafting/style preference.
+
+Dimension score = dimension weight multiplied by the weighted item-score ratio.
+An invented critical value triggers a hard gate instead of merely scoring zero.
+
+6.16 SCORABLE COVERAGE AND CONFIDENCE
+
+Scorable coverage is the weighted proportion of relevant reference items that
+are explicit, derivable, or governed by approved constraints.
+
+- HIGH: coverage >=85%, reliable pairing/registration, no unresolved critical
+  reference items;
+- MEDIUM: coverage 65–84% or moderate pairing/reference uncertainty;
+- LOW: coverage <65% or substantial unresolved/unavailable reference content.
+
+Low coverage does not prove poor output. It means the comparison cannot support
+a strong optimization conclusion.
+
+6.17 BOM AND OBJECT COMPARISON
+
+Use weighted precision, recall, and F1 for device/BOM comparison so missing and
+invented items are both penalized. Score repeated identical devices as quantity
+groups where practical.
+
+Match geometry by stable object identity and minimum-cost assignment using
+class, panel region, tag, position, size, rotation, and relationships. Preferred
+comparison order:
+
+1. structured drawing model;
+2. vector/CAD objects;
+3. registered edge/shape comparison;
+4. raster image diagnostics;
+5. blind expert review.
+
+Raw pixel similarity, SSIM, or perceptual similarity may diagnose rendering and
+overall structure, but optional visual-convention items are capped at five
+points across the entire project. Pixel similarity cannot override engineering
+facts or constraints.
+
+6.18 TOLERANCE PROFILES
+
+Use versioned tolerances by object family and measurement type. Never apply one
+universal millimetre tolerance to enclosures, cutouts, devices, labels, rails,
+ducts, and title text. Every tolerance records authority, soft and hard limits,
+units, scope, version, and human approval status.
+
+6.19 PROJECT-LEVEL AGGREGATION
+
+Evaluation hierarchy:
+
+Portfolio -> Project -> Panel/logical fabrication unit -> Objects/constraints.
+
+Compute detailed object scores, aggregate panels to one project score, then
+average projects equally unless a predeclared risk weighting is frozen before
+the experiment. A project with many terminals or many panels must not dominate
+the portfolio merely because it has more objects.
+
+Repeated runs within one project are not independent projects.
+
+6.20 PAIRED CANDIDATE COMPARISON
+
+Baseline and candidate use the same project bundles, grader/profile, reference
+adjudication, model policy, and repeated-run count. Report:
+
+- candidate minus baseline by project and dimension;
+- mean and median paired difference;
+- win/tie/loss rate;
+- worst-project regression;
+- run-to-run standard deviation;
+- project-level bootstrap confidence interval when enough projects exist;
+- new/resolved critical and high findings.
+
+6.21 INITIAL ACCEPTANCE THRESHOLDS
+
+Provisional acceptance requires all of:
+
+- all hard gates pass;
+- overall paired improvement >= +2 points;
+- targeted dimension improvement >= +5 points;
+- no project regression worse than -3 points;
+- no new critical or high-severity defect;
+- no material increase in run-to-run variability;
+- new regression test passes;
+- independent evidence or blind A/B review supports the change.
+
+These thresholds must later be calibrated against reviewer repeatability.
+
+6.22 BLIND A/B REVIEW
+
+Use blind A/B review for at least 20% of development comparisons and every
+held-out project. Ask which requires less correction, is safer to send to CAD
+review, is clearer for fabrication, and has fewer technically significant
+errors. Allowed outcomes: A preferred, B preferred, equivalent, neither
+acceptable. Numeric scoring remains primary; A/B is independent confirmation.
+
+6.23 REVIEWER CALIBRATION
+
+At least 10% of development projects, every disputed critical finding, and a
+sample of held-out projects must be scored independently by two qualified
+reviewers. Report mean absolute score difference, category agreement, and
+weighted kappa or intraclass correlation when sample size supports it.
+
+Do not tighten acceptance thresholds below normal reviewer noise. Disagreement
+that changes an accept/reject decision requires adjudication and a rubric or
+tolerance clarification before the next optimization cycle.
+
+6.24 PRODUCTION UTILITY — SEPARATE DASHBOARD
+
+Do not merge these directly into the historical 100-point score at first:
+
+- CAD correction minutes;
+- added/deleted/moved/resized/relabelled object count;
+- critical edit count;
+- review cycles and clarification questions;
+- percentage retaining generated main layout;
+- shop questions and drawing-caused rework.
+
+An optimization that raises historical similarity but increases engineering
+correction effort is not a genuine improvement.
+
+6.25 TRAJECTORY CONTRACT
+
+Every run trajectory is schema-valid, redacted, immutable after completion,
+and linked by hash from its run manifest. It is used to diagnose whether a
+failure originated in source selection, extraction, prompt/skill activation,
+model reasoning, rendering, or grading.
+
+6.26 SKILL PROPOSAL CONTRACT
+
+A skill proposal is stored as `PROPOSAL.md` plus metadata, not as an active
+`SKILL.md`. It binds to the current target hash and includes scanner/test state,
+support files, expected trigger, non-trigger examples, rollback metadata, and
+review decision. Only the coordinator may apply an approved proposal to
+`.agents/skills`.
+
+======================================================================
+7. PHASE 0 — PREFLIGHT AND BOOTSTRAP
+======================================================================
+
+Goal: create a safe, version-controlled workspace and durable operating system
+without performing the full source scan.
+
+Coordinator actions:
+
+1. Verify the workspace is the intended new project root.
+2. Verify the master file exists and compute its SHA-256 hash.
+3. Probe the installed Codex version/features/config locally without upgrading.
+4. Initialize Git.
+5. Create the repository structure, schemas, and canonical files.
+6. Record source paths as READ-ONLY in docs/SOURCE_ROOTS.md.
+7. Verify source access without modifying or fully hydrating OneDrive data.
+8. Inspect the legacy prepared package only enough to classify clean,
+   corrupted/mojibake, duplicated, forbidden, or uncertain content.
+9. Create initial source-manifest, generator-input, job_spec, drawing_model,
+   reference-manifest, grading-result, and trajectory schemas.
+10. Add exact UTF-8 fixtures containing:
+    合約、材料清單、生管文件、生管課用圖、生管用圖、沖孔、鈑金、電機施工圖.
+11. Add synthetic forbidden-content, stale-sheet, hidden-sheet, revision, and
+    cross-PDF inconsistency fixtures.
+12. Create `.gitignore` covering raw customer files, references, extracted
+    data, run sandboxes, trajectories with sensitive content, credentials,
+    caches, `.venv`, and large binaries while allowing code, schemas,
+    sanitized fixtures, manifests, and reports.
+13. Create `.codex/config.toml`, custom agent definitions, initial repository
+    skills, task registry, and skill-governance policy.
+14. Run initial tests.
+15. Spawn repo_explorer and independent_auditor as bounded read-only children,
+    wait for both, and validate their outputs.
+16. Update canonical state files and commit a bootstrap checkpoint.
+
+Done status:
+
+BOOTSTRAP_COMPLETE
+
+Stop if source access requires destructive changes. Do not extract the complete
+active archive or catalog tree during Phase 0.
+
+======================================================================
+8. PHASE 1 — REPRODUCIBLE FILE AND WORKSHEET INVENTORY
+======================================================================
+
+Goal: create resumable, read-only manifests for active jobs, ST-Block1, vendor
+catalogs, every workbook, and every worksheet relevant to generator eligibility.
+
+Rules:
+
+- Inspect `115年度工作.zip` in place when technically possible.
+- First pass uses paths, names, extensions, sizes, archive metadata, and hashes.
+- Parse workbook contents only in controlled temporary copies.
+- Inventory visible, hidden, and very-hidden sheets; formulas, external links,
+  named ranges, print areas, and project identifiers.
+- Do not recursively force OneDrive to download an entire catalog.
+- Do not use OCR by default.
+- Use pathlib and Unicode-safe processing.
+- Write Excel-facing CSV as UTF-8 with BOM.
+- Console mojibake is not proof of file corruption; validate bytes and parsed
+  Unicode.
+- Classify `生管文件` and `電機施工圖` as generator-forbidden even when they are
+  spreadsheets or contain copies of target outputs.
+- Detect target-like content outside expected folders by hash, page/render
+  fingerprint, filename aliases, and sampled metadata.
+
+Create:
+
+- manifests/115_file_role_index.csv
+- manifests/115_workbook_sheet_index.csv
+- manifests/115_project_manifest.csv
+- manifests/st_block_library_index.csv
+- manifests/vendor_catalog_index.csv
+- reports/source_inventory_summary.md
+- reports/generator_eligibility_summary.md
+- reports/stale_sheet_review_queue.csv
+- reports/manual_review_queue.csv
+- reports/classification_validation.md
+
+The project manifest identifies presence of:
+
+- allowed contract workbook;
+- allowed material-list workbook;
+- other potentially allowed supporting workbooks;
+- forbidden 生管文件;
+- forbidden 電機施工圖;
+- completed 生管課用圖/生管用圖;
+- completed 鈑金施工圖;
+- completed 沖孔施工圖;
+- base and modification/revision files;
+- all three effective target output types.
+
+Earlier counts may be recorded only as UNVERIFIED clues. Report differences;
+never force new results to match old counts.
+
+Do not permanently assign development/regression/held-out cohorts until file,
+sheet, revision, and reference eligibility are verified.
+
+Done status:
+
+INVENTORY_COMPLETE
+
+======================================================================
+9. PHASE 2 — CURATED PRODUCTION KNOWLEDGE AND REPOSITORY SKILLS
+======================================================================
+
+Goal: create a compact production Knowledge package for the Custom GPT and a
+separate set of on-demand repository skills for Codex.
+
+9.1 PRODUCTION KNOWLEDGE
+
+Production Knowledge should normally remain at 14 files or fewer unless a
+documented reason requires more. Candidate reusable files, after validation:
+
+- knowledge router/map;
+- file taxonomy and generator-eligibility rules;
+- normalized field/BOM schema;
+- PDF drawing-output contract;
+- CAD layer/symbol naming guide;
+- component dictionary;
+- ST block index;
+- vendor catalog index;
+- safety/source-verification checklist;
+- job_spec and drawing_model field guide;
+- approved company conventions and tolerance references.
+
+Do not include project-specific completed layouts, held-out expected outputs,
+reviewer findings, sample-project hidden decisions, or stale workbook content.
+Do not duplicate the same behavioral rule in Instructions and Knowledge.
+
+Every production Knowledge file states purpose, version, scope, provenance,
+authority, exclusions, and related instruction/evaluation IDs.
+
+9.2 REPOSITORY SKILLS
+
+Create narrowly scoped skills under `.agents/skills`, using concise descriptions
+that state when the skill should and should not trigger. Skills use progressive
+disclosure so full workflow instructions are loaded only when needed.
+
+Initial skills:
+
+- source-sheet-selection
+- evidence-provenance
+- conflict-handling
+- drawing-model-construction
+- render-production-drawing
+- render-sheetmetal-drawing
+- render-punch-drawing
+- reference-adjudication
+- project-grading
+
+Do not create one giant skill containing the complete master specification.
+Keep source selection, generation, grading, and optimization separate.
+
+9.3 SKILL GOVERNANCE
+
+- Active skills are frozen into each release manifest by hash.
+- Agents create proposals under optimization/skill_proposals/.
+- Proposals are hash-bound and do not become active until applied by the
+  coordinator after tests and review.
+- A skill must include trigger and non-trigger examples.
+- Usage, failure, and overlap metrics are recorded from trajectories.
+- Skill pruning/consolidation begins only after enough scored runs exist.
+
+Create:
+
+- knowledge/production/*
+- .agents/skills/*/SKILL.md
+- gpt-config/KNOWLEDGE_UPLOAD_MANIFEST.md
+- reports/knowledge_pack_validation.md
+- reports/skill_catalog_validation.md
+- updated docs/03_KNOWLEDGE_MANIFEST.md
+
+Done status:
+
+KNOWLEDGE_AND_SKILLS_COMPLETE
+
+======================================================================
+10. PHASE 3 — CUSTOM GPT CONFIGURATION AND PDF GENERATION CONTRACT
+======================================================================
+
+Goal: create exact paste-ready configuration for the private ChatGPT web GPT.
+
+Create:
+
+- gpt-config/INSTRUCTIONS.md
+- gpt-config/BUILDER_FIELDS.md
+- gpt-config/CONVERSATION_STARTERS.md
+- gpt-config/SETUP_CHECKLIST.md
+- reports/instruction_consistency_review.md
+
+Write deployed Instructions primarily in Traditional Chinese. Keep stable IDs,
+JSON keys, filenames, and status codes in English where appropriate.
+
+Required Custom GPT workflow:
+
+1. Inventory uploaded current-project files without assuming every file is
+   allowed evidence.
+2. Classify every file and worksheet.
+3. Reject `生管文件`, `電機施工圖`, completed target drawings, and derived target
+   content from generator evidence.
+4. Detect and exclude stale/unrelated worksheets.
+5. Extract normalized project data from approved sheets only.
+6. Preserve file/sheet/cell-level provenance.
+7. Distinguish extracted, derived-by-approved-rule, proposed, unresolved, and
+   user-approved values.
+8. Detect contradictions and missing critical data.
+9. Produce a human-review checklist for conflicts/TBDs.
+10. Create and validate `job_spec_<工程編號>.json`.
+11. Create and validate one `drawing_model_<工程編號>.json`.
+12. Render all three PDFs from that model.
+13. Validate cross-PDF consistency, completeness, readability, and provenance.
+14. Create drawing index, provenance manifest, and validation report.
+15. Mark all unresolved values explicitly; never invent critical values.
+
+Required output names:
+
+- 01_生管課用圖_<工程編號>.pdf
+- 02_鈑金施工圖_<工程編號>.pdf
+- 03_沖孔施工圖_<工程編號>.pdf
+- job_spec_<工程編號>.json
+- drawing_model_<工程編號>.json
+- drawing_index_<工程編號>.csv
+- provenance_manifest_<工程編號>.json
+- validation_report_<工程編號>.md
+
+Optional secondary artifacts:
+
+- 01_生管課用圖_<工程編號>.dxf
+- 02_鈑金施工圖_<工程編號>.dxf
+- 03_沖孔施工圖_<工程編號>.dxf
+
+Initial capability recommendation:
+
+- Code Interpreter & Data Analysis: enabled
+- Web search: disabled initially
+- Image generation: disabled
+- Apps: disabled
+- Actions: disabled
+- Canvas: optional
+
+Do not promise native DWG certification. PDFs and optional DXF drafts remain
+subject to mandatory human CAD/fabrication review.
+
+Done status:
+
+GPT_CONFIG_COMPLETE
+
+======================================================================
+11. PHASE 4 — FREEZE BASELINE RELEASE V0.1
+======================================================================
+
+Goal: create an immutable evaluation subject and freeze the grader separately.
+
+Create:
+
+releases/v0.1/
+  INSTRUCTIONS.md
+  BUILDER_FIELDS.md
+  KNOWLEDGE_UPLOAD_MANIFEST.md
+  knowledge/
+  skills_manifest.json
+  schemas_manifest.json
+  renderer_manifest.json
+  release_manifest.json
+  RELEASE_NOTES.md
+
+evals/grading_profiles/plc_layout_v1.json
+evals/tolerance_profiles/plc_layout_tolerances_v1.json
+
+The release manifest records version, creation time, every included source path
+and SHA-256, requested model/capabilities, instruction/Knowledge/skill/schema/
+renderer versions, and Git commit.
+
+The grading and tolerance profiles are versioned evaluation artifacts, not part
+of production Knowledge. Freeze and hash them before baseline generation.
+
+Copy; do not move. Mark `BASELINE_FROZEN`. Commit and tag when available.
+After this point, releases/v0.1 and the baseline profiles are immutable.
+
+Done status:
+
+BASELINE_FROZEN
+
+======================================================================
+12. PHASE 5 — SYNTHETIC EVALUATION AND GRADING HARNESS
+======================================================================
+
+Goal: validate harness mechanics, source isolation, PDF generation, reference
+adjudication, and score calculation without real-project optimization.
+
+12.1 BACKENDS
+
+1. synthetic_fixture — HARNESS_MECHANICS_ONLY.
+2. codex_proxy — CODEX_PROXY_SIMULATION; disabled until locally configured.
+3. responses_api — RESPONSES_API_APPROXIMATION; disabled until privacy,
+   credentials, transmission logging, and cleanup are approved.
+
+Never relabel a synthetic run as a Codex or web-GPT result.
+
+12.2 PHYSICAL ISOLATION
+
+Use separate roots:
+
+- generator_workspace
+- generated_output_vault
+- reviewer_workspace
+- reference_vault
+
+The generator sees only a positive allowlist. Reference files, paths, names,
+hashes, page counts, sentinels, review reports, and expected answers must not
+exist beneath generator_workspace.
+
+Test absolute/relative traversal, symlink/junction escape, forbidden environment
+variables, hidden files/sheets, archive nesting, duplicate hashes, reference-only
+sentinels, and paths outside the allowlist.
+
+12.3 HARNESS COMPONENTS
+
+Implement:
+
+- case and cohort registry;
+- file/worksheet adjudication and generator bundle builder;
+- leakage/contamination checks;
+- release, profile, workflow, and artifact hashing;
+- output freeze and mutation detection;
+- JSON/CSV/DXF/PDF validators;
+- drawing-model and cross-PDF validators;
+- sheet-level reference manifest and supersedes graph;
+- reference-adjudication schema and workflow;
+- BOM/object/geometry comparison adapters;
+- score, coverage, confidence, caps, and gate calculation;
+- project-level aggregation and paired candidate comparison;
+- side-by-side PDF reporting;
+- trajectory capture;
+- recommendation aggregation;
+- orchestration CLI and complete tests.
+
+Parser, renderer, alignment, OCR, object matching, or score-calculation failures
+must be explicit limitations or failures, never false passes.
+
+12.4 SYNTHETIC FIXTURES
+
+Include at least:
+
+- valid minimal one-panel project;
+- missing-values/TBD case;
+- deliberate reference leak;
+- forbidden `生管文件` exposure;
+- forbidden `電機施工圖` containing a target-like PDF;
+- stale visible worksheet;
+- stale hidden worksheet and external link;
+- unsupported critical value;
+- invalid drawing_model;
+- invalid/blank PDF;
+- cross-PDF dimension contradiction;
+- revision file replacing only one sheet;
+- unavailable-reference value that must not penalize TBD;
+- uncertain page pairing;
+- CJK paths/filenames containing all key Chinese labels.
+
+12.5 REPORT RULES
+
+Each project comparison report supports generated left, completed right,
+overlay/crop only when reliable, and finding ID, severity, source-availability
+class, factual difference, likely root cause, confidence, score impact, and
+proposed validation target.
+
+Use readable CJK fonts, body at least 11–12 pt, headings at least 16 pt, and a
+full-page appendix plus zoomed comparisons.
+
+12.6 SYNTHETIC STATUS
+
+Allowed statuses:
+
+- SYNTHETIC_HARNESS_IMPLEMENTED
+- SYNTHETIC_HARNESS_AUDIT_PASS
+- SYNTHETIC_HARNESS_INCOMPLETE
+- REAL_PROJECT_CALIBRATION_PENDING
+
+Synthetic tests may not declare the real-data harness validated.
+
+After implementation, spawn an independent auditor in a fresh child thread.
+Required gate:
+
+SYNTHETIC_HARNESS_AUDIT_PASS — REAL_PROJECT_CALIBRATION_PENDING
+
+======================================================================
+13. PHASE 6 — ACTIVATE CODEX_PROXY AND TRAJECTORY CAPTURE
+======================================================================
+
+Goal: implement a real local isolated mock-agent backend using the installed
+Codex CLI while still using synthetic data.
+
+Probe locally without upgrading:
+
+- codex --version
+- codex exec --help
+- codex features list when available
+
+Use only flags shown by the installed CLI. Prefer supported equivalents of:
+
+- codex exec
+- --ephemeral
+- --cd or -C to isolated workspace
+- --sandbox workspace-write for generator
+- --sandbox read-only for reviewer/grader when practical
+- --json for event output
+- --output-schema
+- --output-last-message
+- --ignore-user-config when compatible with controlled configuration
+- no resume, web search, apps/connectors, unapproved MCP, --yolo, or
+  danger-full-access
+
+Every child records requested/actual model, model match, command structure
+without secrets, sandbox, cwd, visible-file manifest, active skill hashes,
+start/end/duration, exit code, stdout/stderr, JSONL events, output hashes,
+trajectory, and final schema validation.
+
+Do not silently substitute a model. A mismatch remains CODEX_PROXY_SIMULATION
+and is reported.
+
+Activation tests include generator, freeze/hash, separate reviewer, malformed
+output, timeout, nonzero exit, sentinel exposure, post-freeze mutation, three
+PDF generation, cross-PDF inconsistency detection, and trajectory redaction.
+
+Required status:
+
+CODEX_PROXY_READY_FOR_ONE_PROJECT_CALIBRATION
+
+======================================================================
+14. PHASE 7 — ONE-PROJECT BLIND CALIBRATION, ADJUDICATION, AND AUDIT
+======================================================================
+
+Goal: validate the complete real-data pipeline on exactly one development
+project before scaling.
+
+14.1 CASE ELIGIBILITY
+
+The case must have verified access to:
+
+- at least one eligible current-project Excel evidence bundle;
+- completed effective 生管課用圖/生管用圖;
+- completed effective 鈑金施工圖;
+- completed effective 沖孔施工圖;
+- enough identity to pair project and sheets.
+
+The generator bundle must exclude `生管文件`, `電機施工圖`, all completed
+outputs, and their derivatives. The case must not be held out, included as a
+completed answer in production Knowledge, previously used for detailed
+optimization, or dependent on inaccessible placeholders.
+
+Do not hardcode a project until eligibility is verified.
+
+14.2 PREPARE
+
+Create physically separate roots and freeze:
+
+- source_manifest.json
+- workbook_sheet_adjudication.json
+- generator_input_manifest.json
+- generator_allowlist.json
+- excluded_source_manifest.json
+- contamination_check.json
+- environment_audit.json
+- reference_file_manifest.json in the reference vault only
+
+The generator bundle includes only approved sheets/files, frozen release,
+production Knowledge, active skills, approved schemas/renderers/rules, task
+manifest, and output contract.
+
+14.3 BLIND GENERATION
+
+Launch one fresh ephemeral case_generator process. The parent must not manually
+generate, repair, or post-edit its output.
+
+Expected artifacts:
+
+- 01_生管課用圖_<工程編號>.pdf
+- 02_鈑金施工圖_<工程編號>.pdf
+- 03_沖孔施工圖_<工程編號>.pdf
+- job_spec_<工程編號>.json
+- drawing_model_<工程編號>.json
+- drawing_index_<工程編號>.csv
+- provenance_manifest_<工程編號>.json
+- validation_report_<工程編號>.md
+- generation_complete.json
+- trajectory.json or trajectory bundle
+- optional matching DXF files
+
+After child exit:
+
+1. Record process metadata and trajectory.
+2. Validate required artifacts and schemas.
+3. Run deterministic source/provenance/cross-PDF/PDF validators.
+4. Write generation_complete.json only after successful validation.
+5. Hash and freeze every generated artifact.
+6. Verify hashes and run leakage checks again.
+7. Never manually repair output.
+
+14.4 REFERENCE RECONSTRUCTION AND ADJUDICATION
+
+Only after valid generation freeze:
+
+- build the effective sheet-level reference manifest;
+- resolve base/modification supersedes links;
+- pair panels/sheets conservatively;
+- classify expected values and objects by source availability;
+- exclude unavailable, unresolved, or possibly incorrect items as required;
+- freeze the adjudication and its hash before candidate scoring.
+
+14.5 DETERMINISTIC COMPARISON AND GRADING
+
+Compare structured drawing models/objects first. Use vector extraction when
+available, then registered edge/raster diagnostics. Normalize page size, scale,
+rotation, and stable engineering datums. Mask signatures, stamps, handwriting,
+dates, and irrelevant title-block differences. Record pairing/registration
+confidence.
+
+Calculate hard gates, score caps, seven rubric dimensions, scorable coverage,
+confidence, and limitations. Do not let image similarity dominate.
+
+14.6 INDEPENDENT REVIEW
+
+Launch a separate fresh project_reviewer. It receives allowed original inputs,
+frozen generated output, effective references, frozen adjudication,
+deterministic evidence, rubric/profile, and no optimizer explanation.
+
+Each finding includes:
+
+- issue_id, project_id, run_id, output_type, panel/sheet;
+- severity and category;
+- source_availability;
+- generated/reference/original-input evidence;
+- difference, score impact, and confidence;
+- likely root cause and root-cause layer;
+- recommended change and validation test;
+- cross-project signature.
+
+Allowed root-cause layers:
+
+- instructions
+- production_knowledge
+- skill_trigger_or_content
+- retrieval
+- source_classification
+- worksheet_selection
+- extraction
+- job_spec_schema
+- drawing_model
+- deterministic_renderer
+- validation
+- report_generation
+- grading_or_tolerance_profile
+- source_data
+- unresolved
+
+14.7 CALIBRATION FIX POLICY
+
+Only harness defects may be fixed during calibration: isolation, invocation,
+logging, trajectories, hashing/freezing, deterministic validation, comparison,
+reference manifest/adjudication mechanics, PDF rendering, score calculation,
+review schema, or metadata.
+
+Do not fix Custom GPT Instructions, Knowledge, active skills, extraction,
+drawing model, or drawing behavior during this calibration run. Preserve old
+evidence and rerun from preparation with a new run ID after evidence-affecting
+fixes.
+
+14.8 CALIBRATION STATUS
+
+Allowed final status:
+
+- HARNESS_VALIDATED — CODEX_PROXY_SIMULATION — ONE_PROJECT_ONLY
+- HARNESS_NOT_VALIDATED
+- CALIBRATION_INCONCLUSIVE
+- NO_ELIGIBLE_CALIBRATION_CASE
+
+A fresh independent audit verifies eligibility, generator isolation, fresh
+processes, model/config recording, freeze timing, hashes, reference manifest,
+adjudication, score math, reviewer independence, PDF readability, unchanged
+release, and full test pass.
+
+Required gate:
+
+ONE_PROJECT_AUDIT_PASS — READY_FOR_MULTI_PROJECT_BASELINE
+
+======================================================================
+15. PHASE 8 — MULTI-PROJECT BASELINE
+======================================================================
+
+Goal: run cycle-000 with six verified development projects and produce the
+first trustworthy baseline score distribution.
+
+Do not use regression or held-out cases.
+
+15.1 COHORT DESIGN
+
+Select projects that collectively exercise:
+
+- simple one-panel output;
+- complex multi-panel output;
+- stale worksheet risk;
+- allowed-source conflict;
+- sheet-level modification/revision;
+- sparse/empty enclosure where invention must be avoided;
+- values unavailable from allowed Excel;
+- raster-heavy completed references.
+
+Do not choose cases merely because they are easiest to score.
+
+15.2 GENERATOR WAVE
+
+1. Prepare six isolated positive-allowlist bundles.
+2. Create one task-registry row per project.
+3. Spawn at most six fresh case_generator processes.
+4. Give no process prior-project state or references.
+5. Wait for all six.
+6. Validate, freeze, hash, and leakage-check each output.
+7. Close all generator threads before reference/reviewer fan-out.
+
+15.3 REFERENCE/GRADER/REVIEWER WAVE
+
+For every project:
+
+1. Build and freeze the effective sheet-level reference manifest.
+2. Adjudicate reference elements.
+3. Run deterministic grading.
+4. Spawn one independent project_reviewer.
+5. Require schema-valid findings and score reconciliation.
+6. Rerun malformed tasks under new IDs without overwriting evidence.
+
+15.4 RUN DIRECTORY
+
+Each run contains:
+
+- run_manifest.json
+- source_manifest.json
+- workbook_sheet_adjudication.json
+- generator_input_manifest.json
+- excluded_source_manifest.json
+- contamination_check.json
+- environment_audit.json
+- generation_complete.json
+- validation_results.json
+- reference_sheet_manifest.json
+- reference_adjudication.json
+- comparison_metrics.json
+- grading_result.json
+- review.json and review.md
+- comparison.pdf
+- trajectory links
+- generated/, rendered/, logs/
+
+15.5 PORTFOLIO AGGREGATION
+
+Aggregate object -> panel -> project -> portfolio. Projects are equally weighted
+unless a predeclared frozen risk weighting exists. Report score, coverage,
+confidence, gate failures, dimension scores, and run limitations per project.
+
+15.6 PORTFOLIO OPTIMIZER
+
+Only after all six schema-valid reviews/scores exist, launch
+portfolio_optimizer. It reads structured findings, score deltas, and redacted
+trajectories. It must:
+
+- cluster by root cause rather than wording;
+- separate systemic from project-specific issues;
+- detect one-project critical failures;
+- reconcile contradictory recommendations;
+- reject vague/unsupported advice;
+- identify unavailable-source and possibly incorrect reference items;
+- preserve strengths and define anti-regression tests;
+- propose changes at the correct layer rather than defaulting to prompt bloat.
+
+Create:
+
+- reports/cycle-000/portfolio_review.md
+- reports/cycle-000/portfolio_review.pdf
+- optimization/cycles/cycle-000/recommendations.jsonl
+- optimization/cycles/cycle-000/priority_backlog.csv
+- optimization/cycles/cycle-000/codex_handoff.md
+- optimization/cycles/cycle-000/machine_summary.json
+
+Priority order:
+
+1. Leakage or fabricated values.
+2. Safety/fabrication impact.
+3. Cross-project frequency.
+4. Evidence confidence and scorable coverage.
+5. Expected quality or correction-effort improvement.
+6. Implementation effort.
+7. Regression risk.
+
+Do not modify the frozen release during baseline.
+
+Done status:
+
+CYCLE_000_COMPLETE — OPTIMIZATION_REQUIRED
+
+or, only when all gates are exceptionally strong:
+
+READY_FOR_HELD_OUT_GATE
+
+======================================================================
+16. PHASE 9 — CONTROLLED, PROPOSAL-FIRST OPTIMIZATION LOOP
+======================================================================
+
+Goal: implement evidence-backed, versioned improvements without prompt bloat,
+reference leakage, autonomous mutation, or overfitting.
+
+Run no more than three optimization cycles in one top-level conversation.
+Checkpoint and request a fresh top-level thread afterward.
+
+16.1 ONE CONCEPTUAL CHANGE PER CYCLE
+
+For each cycle:
+
+1. Select the highest-priority unresolved root cause.
+2. Verify evidence across projects and trajectories.
+3. Decide the correct layer: source classifier, worksheet selection, extraction,
+   schema, skill, drawing model, renderer, validator, report, or rubric.
+4. Reject insufficiently supported recommendations.
+5. Add a regression test before changing behavior.
+6. Create a hash-bound proposal with exact diff and rollback.
+7. Create a new candidate release/worktree.
+8. Make one conceptual change whenever practical.
+9. Run unit/schema/synthetic tests.
+10. Rerun the same development projects and all regression cases.
+11. Keep model policy, grader, tolerances, references, and run count fixed.
+12. Conduct blind A/B review where required.
+13. Compute paired project-level deltas and uncertainty.
+14. Accept or reject using section 6.21 and all hard gates.
+15. Preserve positive and negative evidence; commit separately.
+
+16.2 AVOID PROMPT BLOAT
+
+Before changing Instructions:
+
+- check whether the behavior is already covered;
+- test whether the true defect is source selection, extraction, schema,
+  renderer, validation, or skill activation;
+- identify overlap/conflict with existing rules;
+- define the regression evidence;
+- remove or merge superseded language;
+- reject instruction growth without measurable benefit.
+
+16.3 TRAJECTORY-BASED DIAGNOSIS
+
+Use trajectories to answer:
+
+- Did the correct skill trigger?
+- Did the generator see only the approved sheets?
+- Was the correct value extracted but lost in drawing_model?
+- Did the renderer omit or alter a correct model element?
+- Did the grader mis-pair or misclassify a reference?
+
+Do not edit the prompt merely because final PDFs differ.
+
+16.4 ACCEPT/REJECT
+
+Reject on any new leakage, unsupported critical value, stale-sheet use, invalid
+schema/model, missing PDF, unreadable PDF/DXF, lost provenance, critical score
+regression, project drop >3 points, increased high-severity findings, or failure
+to reproduce improvement independently.
+
+Accept only when all hard gates pass, targeted and overall thresholds pass,
+variance does not materially worsen, regression tests pass, independent/blind
+evidence supports the change, and the release is reproducible and hashed.
+
+16.5 SKILL CURATION
+
+After approximately 20–30 trustworthy scored runs, the skill_curator may propose:
+
+- merging overlapping skills;
+- improving descriptions/triggers;
+- adding non-trigger boundaries;
+- archiving unused or harmful skills;
+- splitting oversized skills;
+- promoting a repeated, approved procedure into a reusable skill.
+
+A lesson becomes a durable company rule only when it appears in at least three
+independent projects or prevents one critical failure and receives engineering
+approval. One unusual historical layout normally remains a project-specific
+exception.
+
+16.6 EVOLUTIONARY CANDIDATE SEARCH — EXPERIMENTAL ONLY
+
+Techniques similar to evolutionary skill/prompt optimization may be tested only
+after the evaluator is stable. Limit them to one narrow skill or instruction
+module at a time. Generate multiple candidate variants, evaluate with frozen
+development/regression sets, apply constraint and size gates, and route the best
+variant through the same proposal, audit, and human-approval process.
+
+Never permit an evolutionary loop to:
+
+- edit the accepted release directly;
+- access held-out answers;
+- change the grader during candidate search;
+- optimize solely for keyword/pixel similarity or a single model judge;
+- mutate source-isolation or safety rules;
+- apply a candidate without exact diff, tests, and rollback.
+
+16.7 CYCLE ARTIFACTS
+
+Each cycle creates:
+
+optimization/cycles/cycle-N/
+  hypothesis.md
+  evidence.json
+  proposal_manifest.json
+  proposed_change.md
+  exact_diff.patch
+  regression_test.md
+  before_scores.csv
+  after_scores.csv
+  paired_comparison.json
+  blind_ab_review.json when required
+  decision.md
+  rollback.md
+  codex_handoff.md
+
+Stop early when critical domain clarification is required, evidence/coverage is
+insufficient, reviewers materially disagree, tolerance is undefined, source
+information is unavailable, no candidate passes regression, or
+READY_FOR_HELD_OUT_GATE is reached.
+
+======================================================================
+17. PHASE 10 — HELD-OUT GATE, PRIVATE WEB PREVIEW, AND CONTINUOUS LEARNING
+======================================================================
+
+17.1 HELD-OUT PROTECTION
+
+A project is held-out eligible only when required allowed inputs and effective
+completed outputs are verified, it is absent from production Knowledge and the
+development reference casebook, and its completed output has not been opened for
+detailed diagnosis or candidate optimization.
+
+If a held-out case is opened for detailed diagnosis, permanently move it to
+regression and replace it.
+
+17.2 FINAL HELD-OUT RUN
+
+Use at least three held-out projects and three fresh independent runs per
+project. Do not alter the candidate, grader, tolerance profile, or reference
+adjudication during the gate.
+
+Non-negotiable gates:
+
+- zero reference leakage;
+- zero stale-sheet use;
+- zero fabricated critical values;
+- zero unsupported approval/certification claims;
+- 100% schema-valid job_spec and drawing_model outputs;
+- all three PDFs produced or explicitly failed for a valid reason;
+- every critical value source-supported or marked TBD/CONFLICT/UNVERIFIED/
+  HUMAN_REVIEW_REQUIRED;
+- all artifacts open and all hashes/metadata complete;
+- no critical cross-PDF inconsistency.
+
+Provisional quality gates:
+
+- project-equal held-out average >=90/100;
+- each project average >=85/100;
+- no individual run below 80/100;
+- run-to-run standard deviation <=5 points per project;
+- no project regression worse than 3 points;
+- no unresolved high-severity mismatch derivable from allowed inputs;
+- portfolio coverage/confidence sufficient to support the conclusion;
+- blind A/B review does not favor the accepted baseline on material quality.
+
+Allowed status:
+
+- READY_FOR_PRIVATE_PREVIEW
+- NOT_READY
+- INSUFFICIENT_EVIDENCE
+
+Never output PRODUCTION_APPROVED.
+
+17.3 CHATGPT WEB PREVIEW
+
+The automated harness cannot replace testing in the actual private Custom GPT.
+Create or duplicate a private candidate using direct Configuration view. Paste
+approved Instructions, upload only the approved Knowledge manifest, enable Code
+Interpreter & Data Analysis, and keep other tools disabled unless explicitly
+designed.
+
+Run at least:
+
+1. One ordinary complete project.
+2. One complex multi-sheet project.
+3. One incomplete/conflicting-input project.
+
+Verify file/worksheet recognition, forbidden-source rejection, Knowledge/skill
+behavior, PDF downloads, Chinese names/text, fresh-chat consistency, drawing
+model creation, three-PDF consistency, and TBD/conflict behavior.
+
+Initial launch status is PRIVATE PILOT only, with mandatory human CAD review and
+no automatic production/fabrication release.
+
+17.4 INGESTING EACH NEW PROJECT
+
+Assign each incoming project a feature vector before cohort selection, including
+panel count, output page count, enclosure type, device-family diversity, source
+conflict count, stale-sheet risk, revision structure, missing-data rate, raster
+versus vector reference, and similarity to existing cases. Use these tags to
+maintain a coverage matrix and avoid filling development or held-out cohorts
+with near-duplicates.
+
+For every new completed project:
+
+1. Register immutable allowed and forbidden source manifests.
+2. Run blind generation before opening completed targets.
+3. Freeze and hash the generated package.
+4. Build effective sheet-level reference manifest.
+5. Adjudicate explicit, derivable, conflicting, unavailable, constrained,
+   optional, or suspect reference elements.
+6. Grade and review with the frozen profile.
+7. Add objective failures as regression cases before changing behavior.
+8. Cluster root cause with existing evidence.
+9. Propose the smallest generalizable change.
+10. Rerun development and regression cohorts.
+11. Preserve untouched projects for future held-out evaluation.
+12. Record production-utility outcomes when human correction is available.
+
+17.5 PRODUCTION UTILITY FEEDBACK
+
+When an engineer edits a generated draft, record correction time, object edits,
+critical corrections, review cycles, clarification questions, accepted main
+layout, shop questions, and drawing-caused rework. Keep this as a separate
+longitudinal dashboard until enough data supports calibrated weighting.
+
+======================================================================
+18. PROMPT LIBRARY
+======================================================================
+
+18.1 INITIAL BOOTSTRAP PROMPT
+
+Paste the following once into a new Codex project whose root contains this
+master file:
+
+----- BEGIN INITIAL PROMPT -----
+
+You are the root coordinator for this repository.
+
+Read `CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt` in full and treat it as the
+sole authoritative bootstrap specification. Do not rely on previous chat memory
+or old transcripts.
+
+The primary product goal is to build and evaluate a private Custom GPT that
+generates these three PDFs for each eligible project:
+
+- `01_生管課用圖_<工程編號>.pdf`
+- `02_鈑金施工圖_<工程編號>.pdf`
+- `03_沖孔施工圖_<工程編號>.pdf`
+
+The generator may use only explicitly allowlisted current-project Excel files
+and approved worksheets, plus frozen reusable Knowledge/rules. It must never use
+`生管文件`, `電機施工圖`, completed target drawings, modified target drawings, or
+any derivatives of those references. Folder-name filtering is insufficient;
+use positive manifests, hashes, worksheet adjudication, and contamination tests.
+
+Execute the specification phase by phase. Use repository files as durable memory
+and keep the coordinator context small.
+
+Immediately:
+
+1. Verify the workspace root and SHA-256 of the master specification.
+2. Probe the installed Codex version, `codex exec --help`, relevant feature
+   flags, and supported config keys locally without upgrading anything.
+3. Verify all declared source locations read-only and record them.
+4. Initialize Git and create the canonical repository structure.
+5. Create concise `AGENTS.md`, `.codex/config.toml`, custom agent definitions,
+   `.agents/skills`, task registry, schemas, and checkpoint files.
+6. Create the Phase 0 execution plan and task briefs.
+7. Explicitly spawn a bounded read-only `repo_explorer` and an independent
+   auditor; wait for both and validate their schema-valid file results.
+8. Implement source-file and worksheet manifests, including stale/hidden-sheet
+   detection and generator eligibility.
+9. Implement positive generator-bundle construction and leakage/contamination
+   tests before any real generation.
+10. Implement `job_spec`, one canonical `drawing_model`, three PDF renderers,
+    cross-PDF validation, reference sheet manifest/adjudication, and the frozen
+    100-point grading system described in the master specification.
+11. Treat completed work as adjudicated evidence, not perfect ground truth.
+12. Capture redacted run trajectories and immutable hashes for every child run.
+13. Keep improvements proposal-first: regression test before fix, exact diff,
+    hash-bound target, independent review, rollback, and coordinator-only apply.
+14. Do not begin a real-project baseline until the synthetic harness and one-
+    project calibration gates have passed.
+15. Implement all safe local phases sequentially without asking broad questions.
+    Resolve non-blocking details conservatively and record assumptions.
+16. Stop only at a genuine blocker, explicit privacy/human gate, or required
+    top-level context reset.
+
+Coordinator rules:
+
+- You alone apply or merge shared workflow artifacts during parallel work.
+- Every child gets exact inputs, writable and forbidden paths, completion
+  criteria, timeout, output schema, and visible-file manifest.
+- Record every child/run ID, effective model, sandbox, trajectory, and status in
+  `orchestration/TASK_REGISTRY.csv`.
+- Wait for all required child results before aggregation.
+- Reject prose-only, malformed, partial, unhashed, or schema-invalid results.
+- Never expose references, scores, target hashes, or reviewer findings to a
+  generator run being graded.
+- Never modify immutable source roots, frozen releases, frozen graders, or prior
+  run evidence.
+- Never use danger-full-access, `--yolo`, external APIs, web publishing, or
+  unapproved connectors/MCP servers.
+- Do not claim you can create a new independent top-level Codex app chat. At a
+  reset boundary, write `docs/SESSION_CHECKPOINT.md` and
+  `orchestration/NEXT_THREAD_PROMPT.txt`, commit, and stop with
+  `NEW_TOP_LEVEL_THREAD_REQUIRED`.
+- Do not claim `PRODUCTION_APPROVED`. The highest automated status is
+  `READY_FOR_PRIVATE_PREVIEW`.
+
+Begin with Phase 0. Show a concise plan and then perform the work in this
+current task.
+
+----- END INITIAL PROMPT -----
+
+18.2 FRESH TOP-LEVEL CONTINUATION PROMPT
+
+----- BEGIN CONTINUATION PROMPT -----
+
+You are a fresh root coordinator continuing an existing repository.
+
+Read only the master specification, AGENTS.md, CURRENT_STATE, DECISION_LEDGER,
+EVAL_LEDGER, CHANGELOG, SESSION_CHECKPOINT, TASK_REGISTRY,
+NEXT_THREAD_PROMPT, latest accepted release manifest, frozen grading/tolerance
+profile manifests, and latest relevant codex_handoff.md.
+
+Verify the Git tree, starting commit, immutable hashes, active task IDs, and
+proposal target hashes. Do not reload archived chats or raw old logs.
+
+Resume exactly from the checkpoint's Exact next action. Explicitly spawn, wait
+for, inspect, and close required bounded subagents. Keep shared writes under the
+root coordinator. If inconsistent, stop with CHECKPOINT_CONFLICT and cite file
+evidence. Otherwise continue until the next gate or reset.
+
+----- END CONTINUATION PROMPT -----
+
+18.3 INDEPENDENT AUDIT PROMPT
+
+----- BEGIN AUDIT PROMPT -----
+
+Act as an independent auditor. Read the master specification, current phase
+plan, canonical state, relevant manifests, frozen release/grader/profile hashes,
+test output, trajectories, Git diff, and commits.
+
+Do not add features or optimize the evaluated workflow. Verify every completion
+criterion with file, hash, command, score calculation, and test evidence. Report
+PASS, FAIL, or NOT VERIFIED for each criterion.
+
+Fix only unambiguous harness/repository defects explicitly allowed by the phase.
+Any evidence-affecting fix requires a new run ID and may not overwrite prior
+evidence. Write the audit report to the required reports path and commit audit-
+only fixes separately.
+
+----- END AUDIT PROMPT -----
+
+18.4 SIX-PROJECT BASELINE PROMPT
+
+----- BEGIN SIX-PROJECT PROMPT -----
+
+Run the approved six-project baseline exactly as defined in the master
+specification. Build one positive-allowlist generator bundle per project and
+verify forbidden-file and stale-sheet exclusion. Spawn at most six fresh
+generators, wait for all, then validate, freeze, hash, leakage-check, and close
+them.
+
+Only after all outputs are frozen, build effective sheet-level reference
+manifests and adjudication. Run deterministic graders and independent reviewers.
+Require schema-valid grading results with validity, score, coverage, and
+confidence.
+
+After all project results exist, launch one portfolio optimizer. It reads
+structured results and redacted trajectories, clusters root causes, and creates
+proposal packages. It must not implement changes or access held-out answers.
+The root coordinator validates results, updates ledgers, and commits cycle-000
+evidence separately. Do not modify the frozen release or grader.
+
+----- END SIX-PROJECT PROMPT -----
+
+18.5 CONTROLLED OPTIMIZATION PROMPT
+
+----- BEGIN OPTIMIZATION PROMPT -----
+
+Execute no more than three controlled optimization cycles using the latest
+accepted release, frozen evaluator, and priority backlog.
+
+For each cycle: verify cross-project evidence and trajectories; select the
+correct root-cause layer; add a regression test first; create a hash-bound
+proposal; make one conceptual change; run unit/synthetic, six development, and
+all regression cases; keep references/grader/model policy fixed; compare paired
+project-level scores and blind A/B results; accept or reject using all hard gates
+and provisional +2 overall/+5 targeted/-3 project thresholds; preserve every
+candidate and rollback; update canonical files; commit accepted and rejected
+experiments separately.
+
+The coordinator alone applies shared changes. Do not access held-out answers or
+allow autonomous mutation of active Instructions, Knowledge, skills, renderers,
+or graders. Stop on insufficient evidence, domain ambiguity, undefined
+tolerance, or READY_FOR_HELD_OUT_GATE. Checkpoint after three cycles.
+
+----- END OPTIMIZATION PROMPT -----
+
+18.6 NEW PROJECT EVIDENCE PROMPT
+
+----- BEGIN NEW EVIDENCE PROMPT -----
+
+Read the canonical state, latest accepted release, frozen grading/tolerance
+profiles, evaluation ledgers, and this new run directory:
+
+[INSERT evals/runs/<run_id>]
+
+Separate source-selection errors, stale sheets, objective drawing errors,
+production/safety risks, missing data, conflicts, user preferences, company
+conventions, project-specific exceptions, incidental formatting, and evaluator
+problems. Use reference source-availability classes.
+
+Use the run trajectory to identify the smallest root-cause layer. Propose one
+generalizable change, add the regression case first, show exact diff and target
+hash, state benefits/risks/rollback, and mark it PROPOSED until independently
+validated. Do not overwrite the accepted release, mutate the grader, or add a
+permanent rule for one-off historical layout preference.
+
+----- END NEW EVIDENCE PROMPT -----
+
+======================================================================
+19. RESEARCH-BACKED DESIGN PATTERNS AND RESOURCE REFERENCES
+======================================================================
+
+19.1 CODEX PATTERNS TO USE
+
+- Explicit bounded subagents with clear return formats; the coordinator waits,
+  inspects, and closes them.
+- `codex exec` for isolated non-interactive generator/reviewer runs using only
+  flags supported by the installed CLI.
+- Repository-scoped `.agents/skills` with progressive disclosure for reusable,
+  narrow workflows.
+- Project `AGENTS.md` for stable routing rules, not as a giant duplicated spec.
+- Project-scoped `.codex/config.toml` and versioned agent definitions.
+- Traces/trajectories plus evals to diagnose and improve agent workflows.
+
+19.2 HERMES-INSPIRED PATTERNS WORTH IMPLEMENTING
+
+- Learn from execution traces, but turn lessons into candidate skills or rules,
+  never immediate live mutation.
+- Curate, merge, and prune skills after sufficient evidence accumulates.
+- Test evolutionary candidate generation only after the grader is stable and
+  only on narrow modules with deterministic gates.
+- Keep accepted durable memory separate from raw session history.
+
+Hermes-style self-evolution remains experimental for this project. Its useful
+idea is candidate generation plus evaluation; autonomous application is not
+accepted.
+
+19.3 OPENCLAW-INSPIRED PATTERNS WORTH IMPLEMENTING
+
+- Proposal-first skill updates: candidate content is not live until explicitly
+  applied.
+- Bind proposals to current hashes so stale proposals cannot clobber changes.
+- Record rollback metadata and scanner/test state.
+- Capture redacted per-run trajectories as a flight recorder.
+- Use workspace and agent isolation plus tool/skill allowlists.
+- Build small deterministic benchmark scenarios before complex model judges.
+
+19.4 PATTERNS TO AVOID
+
+- Autonomous changes to the live Custom GPT.
+- Automatic learning from every historical drawing.
+- A generator grading itself.
+- Hidden shared memory between generator and reviewer.
+- Pixel similarity or a model judge as the primary reward.
+- Optimization on held-out completed drawings.
+- Community skills or plugins operating on private customer data without source
+  review, pinning, sandboxing, and approval.
+- Fine-tuning or reinforcement learning before evaluator repeatability and data
+  governance are established.
+
+19.5 OFFICIAL/CANONICAL REFERENCES TO VERIFY AT IMPLEMENTATION TIME
+
+OpenAI Codex:
+
+- https://developers.openai.com/codex/subagents
+- https://developers.openai.com/codex/concepts/subagents
+- https://developers.openai.com/codex/noninteractive
+- https://developers.openai.com/codex/cli/reference
+- https://developers.openai.com/codex/config-reference
+- https://developers.openai.com/codex/skills
+- https://developers.openai.com/codex/guides/agents-md
+- https://developers.openai.com/codex/agent-approvals-security
+- https://developers.openai.com/codex/learn/best-practices
+
+OpenAI Custom GPT:
+
+- https://help.openai.com/en/articles/8554397-creating-and-editing-gpts
+- https://help.openai.com/en/articles/8555545-file-uploads-faq
+- https://help.openai.com/en/articles/11325361-troubleshooting-gpts
+
+Hermes/OpenClaw primary project references:
+
+- https://github.com/NousResearch/hermes-agent
+- https://github.com/NousResearch/hermes-agent-self-evolution
+- https://docs.openclaw.ai/tools/skills
+- https://docs.openclaw.ai/tools/skill-workshop
+- https://docs.openclaw.ai/tools/trajectory
+
+Use official/current documentation to verify changed features. Probe the
+installed local CLI before relying on any flag or feature.
+
+======================================================================
+20. FINAL SUCCESS DEFINITION
+======================================================================
+
+The project succeeds when it produces a private-pilot Custom GPT package and a
+reproducible evaluation/self-improvement system that:
+
+- accepts only approved current-project Excel worksheets as project evidence;
+- excludes `生管文件`, `電機施工圖`, and all completed-target derivatives;
+- rejects stale or unrelated workbook sheets;
+- extracts source-supported facts with cell-level provenance;
+- detects conflicts and refuses to invent fabrication values;
+- creates schema-valid job_spec and one canonical drawing model;
+- generates readable 生管課用圖, 鈑金施工圖, and 沖孔施工圖 PDFs;
+- keeps all three PDFs internally consistent;
+- creates useful indexes, provenance, validation, and trace reports;
+- reconstructs reference revisions at sheet level;
+- grades validity, quality, scorable coverage, and confidence;
+- separates source-unavailable human decisions from genuine failures;
+- compares baseline and candidate as paired project-level experiments;
+- improves through proposal-first, versioned, regression-tested changes;
+- uses trajectories to locate the true root-cause layer;
+- preserves protected held-out projects;
+- tracks real human correction effort as production utility;
+- remains stable across fresh runs;
+- requires mandatory human CAD/fabrication review.
+
+No automated component may declare PRODUCTION_APPROVED. The highest automated
+status is READY_FOR_PRIVATE_PREVIEW. The first real launch is PRIVATE PILOT.
+
+END OF MASTER SPECIFICATION
+

@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Validation Results","type":"object","required":["run_id","validity","checks"],"properties":{"run_id":{"type":"string"},"validity":{"enum":["PASS","FAIL"]},"checks":{"type":"array"},"hard_gate_failures":{"type":"array"},"limitations":{"type":"array"}}}
+

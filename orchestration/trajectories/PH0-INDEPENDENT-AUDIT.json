@@ -1,0 +1,28 @@
+﻿{
+    "run_id":  "PH0-INDEPENDENT-AUDIT",
+    "parent_id":  "root-coordinator",
+    "requested_model":  "inherited",
+    "actual_model":  "inherited_parent_gpt-5.5_not_independently_reported",
+    "sandbox":  "instructional_read_only_not_os_enforced",
+    "visible_file_manifest_hash":  "11A0055C7E805690E2D6FE819E161A1088C25D499CB337EA84EA0030A6AE00C9",
+    "tool_calls":  [
+                       {
+                           "timestamp":  "2026-06-22T16:05:50.4287336+08:00",
+                           "tool":  "multi_agent_v1.spawn_agent",
+                           "exit_code":  0
+                       },
+                       {
+                           "tool":  "multi_agent_v1.wait_agent",
+                           "timestamp":  "2026-06-22T16:11:53.9848624+08:00",
+                           "exit_code":  0
+                       }
+                   ],
+    "input_hashes":  {
+
+                     },
+    "output_hashes":  {
+                          "result_json":  "EA352FAE93B1BE8D20A1A99E9C34965DA0318185700F46569E7F07EF1A9AF1A9"
+                      },
+    "status":  "COMPLETED",
+    "termination_reason":  "child_result_FAIL"
+}

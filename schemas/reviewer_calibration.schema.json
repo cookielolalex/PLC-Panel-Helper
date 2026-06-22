@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Reviewer Calibration","type":"object","required":["calibration_id","items"],"properties":{"calibration_id":{"type":"string"},"items":{"type":"array"},"mean_absolute_difference":{"type":["number","null"]},"agreement":{"type":["number","null"]}}}
+

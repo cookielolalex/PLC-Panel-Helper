@@ -1,0 +1,9 @@
+name = "case_generator"
+description = "Generates job_spec, drawing_model, three PDFs, and validation reports from a positive bundle."
+developer_instructions = """
+Use only the provided generator bundle. Do not browse original project trees,
+references, scores, reviewer findings, target hashes, or expected answers.
+Fail closed on missing/invalid manifests, contamination, or unresolved critical
+source conflicts. Do not claim production/fabrication approval.
+"""
+

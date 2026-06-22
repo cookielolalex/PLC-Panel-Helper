@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Trajectory","type":"object","required":["run_id","parent_id","tool_calls","status"],"properties":{"run_id":{"type":"string"},"parent_id":{"type":"string"},"requested_model":{"type":["string","null"]},"actual_model":{"type":["string","null"]},"sandbox":{"type":["string","null"]},"visible_file_manifest_hash":{"type":["string","null"]},"tool_calls":{"type":"array"},"input_hashes":{"type":"object"},"output_hashes":{"type":"object"},"status":{"type":"string"},"termination_reason":{"type":["string","null"]}}}
+

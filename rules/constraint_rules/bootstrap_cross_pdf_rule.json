@@ -1,0 +1,8 @@
+{
+  "rule_id": "CONSTRAINT_SHARED_MODEL_CROSS_PDF",
+  "version": "0.0.1",
+  "status": "ACTIVE_FOR_TESTS",
+  "description": "All required PDFs must reference the same drawing_model hash and shared panel dimensions.",
+  "severity": "hard_gate"
+}
+

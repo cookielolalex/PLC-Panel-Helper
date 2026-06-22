@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source Authority Profile",
+  "type": "object",
+  "required": ["profile_id", "version", "field_families", "conflict_policy"],
+  "properties": {
+    "profile_id": {"type": "string"},
+    "version": {"type": "string"},
+    "status": {"type": "string"},
+    "field_families": {"type": "object", "additionalProperties": {"type": "array", "items": {"type": "string"}}},
+    "conflict_policy": {"type": "string"},
+    "forbidden_resolution_sources": {"type": "array", "items": {"type": "string"}}
+  }
+}
+

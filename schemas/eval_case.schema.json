@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Eval Case","type":"object","required":["case_id","cohort","status"],"properties":{"case_id":{"type":"string"},"cohort":{"type":"string"},"status":{"type":"string"},"project_id":{"type":"string"},"feature_vector":{"type":"object"}}}
+

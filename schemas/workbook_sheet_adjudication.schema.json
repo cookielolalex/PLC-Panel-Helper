@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Workbook Sheet Adjudication",
+  "type": "object",
+  "required": ["adjudication_id", "worksheets"],
+  "properties": {
+    "adjudication_id": {"type": "string"},
+    "created_at": {"type": "string"},
+    "status": {"type": "string"},
+    "worksheets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sheet_id", "workbook_file_id", "sheet_name", "visibility", "stale_template_status", "generator_eligibility"],
+        "properties": {
+          "sheet_id": {"type": "string"},
+          "workbook_file_id": {"type": "string"},
+          "sheet_name": {"type": "string"},
+          "visibility": {"type": "string"},
+          "used_range": {"type": ["string", "null"]},
+          "print_area": {"type": ["string", "null"]},
+          "named_ranges": {"type": "array"},
+          "external_links": {"type": "array"},
+          "detected_project_id": {"type": ["string", "null"]},
+          "detected_customer": {"type": ["string", "null"]},
+          "detected_project_name": {"type": ["string", "null"]},
+          "detected_date": {"type": ["string", "null"]},
+          "detected_revision": {"type": ["string", "null"]},
+          "stale_template_status": {"type": "string"},
+          "generator_eligibility": {"enum": ["ALLOWED", "FORBIDDEN", "HUMAN_REVIEW_REQUIRED"]},
+          "approved_by": {"type": ["string", "null"]},
+          "approval_time": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}
+

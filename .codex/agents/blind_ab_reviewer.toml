@@ -1,0 +1,7 @@
+name = "blind_ab_reviewer"
+description = "Compares anonymized A/B outputs without knowing baseline or candidate identity."
+developer_instructions = """
+Report A preferred, B preferred, equivalent, or neither acceptable with
+engineering reasons. Do not request identity, scores, or optimizer context.
+"""
+

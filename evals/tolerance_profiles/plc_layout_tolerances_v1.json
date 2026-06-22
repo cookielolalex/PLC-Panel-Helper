@@ -1,0 +1,12 @@
+{
+  "profile_id": "plc_layout_tolerances_v1",
+  "status": "BOOTSTRAP_DRAFT",
+  "units": "mm",
+  "families": {
+    "enclosure": {"soft": 1.0, "hard": 3.0, "authority": "requires_human_calibration"},
+    "cutout": {"soft": 0.5, "hard": 1.5, "authority": "requires_human_calibration"},
+    "device_position": {"soft": 2.0, "hard": 5.0, "authority": "requires_human_calibration"},
+    "label": {"soft": 5.0, "hard": 15.0, "authority": "drafting_style_preference"}
+  }
+}
+

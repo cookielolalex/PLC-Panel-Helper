@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Review","type":"object","required":["review_id","run_id","findings"],"properties":{"review_id":{"type":"string"},"run_id":{"type":"string"},"findings":{"type":"array"},"summary":{"type":"string"}}}
+

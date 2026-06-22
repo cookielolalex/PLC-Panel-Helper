@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Constraint Rule",
+  "type": "object",
+  "required": ["rule_id", "version", "status", "description"],
+  "properties": {
+    "rule_id": {"type": "string"},
+    "version": {"type": "string"},
+    "status": {"type": "string"},
+    "description": {"type": "string"},
+    "severity": {"type": "string"}
+  }
+}
+

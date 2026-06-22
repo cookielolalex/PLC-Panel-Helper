@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generator Input Manifest",
+  "type": "object",
+  "required": ["manifest_id", "project_id", "run_id", "allowed_files", "allowed_sheets", "excluded"],
+  "properties": {
+    "manifest_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "run_id": {"type": "string"},
+    "allowed_files": {"type": "array"},
+    "allowed_sheets": {"type": "array"},
+    "excluded": {"type": "array"},
+    "contamination_scan": {"type": "object"},
+    "symlink_junction_scan": {"type": "object"},
+    "environment_variable_allowlist": {"type": "array"},
+    "generator_eligibility": {"type": "string"}
+  }
+}
+

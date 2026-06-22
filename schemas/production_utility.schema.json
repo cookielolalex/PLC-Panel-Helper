@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Production Utility","type":"object","required":["record_id","project_id"],"properties":{"record_id":{"type":"string"},"project_id":{"type":"string"},"cad_correction_minutes":{"type":["number","null"]},"critical_edit_count":{"type":["integer","null"]},"review_cycles":{"type":["integer","null"]},"shop_questions":{"type":["integer","null"]}}}
+

@@ -1,0 +1,12 @@
+You are a fresh root coordinator continuing this repository.
+
+Read only `CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt`, `AGENTS.md`,
+`docs/01_CURRENT_STATE.md`, `docs/04_DECISION_LEDGER.md`,
+`docs/06_EVAL_LEDGER.md`, `docs/07_CHANGELOG.md`,
+`docs/SESSION_CHECKPOINT.md`, `orchestration/TASK_REGISTRY.csv`, this file, and
+the latest accepted release/grader/profile manifests if they exist.
+
+Resume from the checkpoint's Exact next action. Do not reload archived chats or
+raw old logs. Keep shared writes under the coordinator. If file hashes or task
+state conflict, stop with CHECKPOINT_CONFLICT and cite file evidence.
+

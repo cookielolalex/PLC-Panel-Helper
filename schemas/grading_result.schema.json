@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Grading Result",
+  "type": "object",
+  "required": ["run_id", "validity", "quality_score", "scorable_coverage", "confidence", "critical_findings", "high_findings", "dimension_scores"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "validity": {"enum": ["PASS", "FAIL"]},
+    "quality_score": {"type": "number", "minimum": 0, "maximum": 100},
+    "scorable_coverage": {"type": "number", "minimum": 0, "maximum": 100},
+    "confidence": {"enum": ["HIGH", "MEDIUM", "LOW"]},
+    "critical_findings": {"type": "integer"},
+    "high_findings": {"type": "integer"},
+    "dimension_scores": {"type": "object"},
+    "hard_gate_failures": {"type": "array"}
+  }
+}
+

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Job Spec",
+  "type": "object",
+  "required": ["schema_version", "project", "panels", "source_references", "unresolved_fields"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project": {
+      "type": "object",
+      "required": ["project_id"],
+      "properties": {
+        "project_id": {"type": "string"},
+        "customer": {"type": ["string", "null"]},
+        "project_name": {"type": ["string", "null"]},
+        "revision": {"type": ["string", "null"]}
+      }
+    },
+    "panels": {"type": "array"},
+    "materials": {"type": "array"},
+    "devices": {"type": "array"},
+    "cutouts": {"type": "array"},
+    "source_references": {"type": "array"},
+    "conflicts": {"type": "array"},
+    "unresolved_fields": {"type": "array"}
+  }
+}
+

@@ -1,0 +1,32 @@
+{
+  "fixture_manifest_id": "phase0-synthetic-fixtures",
+  "encoding": "UTF-8",
+  "required_labels": [
+    "合約",
+    "材料清單",
+    "生管文件",
+    "生管課用圖",
+    "生管用圖",
+    "沖孔",
+    "鈑金",
+    "電機施工圖"
+  ],
+  "cases": [
+    "valid_minimal_one_panel",
+    "missing_values_tbd",
+    "reference_leak_sentinel",
+    "forbidden_production_control_file",
+    "forbidden_electrical_target_like",
+    "stale_visible_worksheet",
+    "stale_hidden_worksheet_external_link",
+    "unsupported_critical_value",
+    "invalid_drawing_model",
+    "invalid_blank_pdf",
+    "cross_pdf_dimension_contradiction",
+    "revision_replaces_one_sheet",
+    "unavailable_reference_tbd_not_penalized",
+    "uncertain_page_pairing",
+    "cjk_paths_and_filenames"
+  ]
+}
+

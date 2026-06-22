@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Comparison Metrics","type":"object","required":["comparison_id","project_id","metrics"],"properties":{"comparison_id":{"type":"string"},"project_id":{"type":"string"},"metrics":{"type":"object"},"limitations":{"type":"array"}}}
+

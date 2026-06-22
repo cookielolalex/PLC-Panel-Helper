@@ -1,0 +1,13 @@
+[agents]
+max_threads = 6
+max_depth = 1
+job_max_runtime_seconds = 1800
+
+[features]
+multi_agent = true
+
+[project]
+source_policy = "positive-generator-allowlist-only"
+network_policy = "local-only-until-docs/PRIVACY_APPROVAL.md-accepts"
+highest_automated_status = "READY_FOR_PRIVATE_PREVIEW"
+

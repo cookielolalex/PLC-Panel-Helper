@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Child Result",
+  "type": "object",
+  "required": ["task_id", "agent_type", "status", "checks", "artifacts", "hashes", "summary"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "agent_type": {"type": "string"},
+    "status": {"enum": ["PASS", "FAIL", "NOT_VERIFIED"]},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["criterion", "status", "evidence"],
+        "properties": {
+          "criterion": {"type": "string"},
+          "status": {"enum": ["PASS", "FAIL", "NOT_VERIFIED"]},
+          "evidence": {"type": "string"}
+        }
+      }
+    },
+    "artifacts": {"type": "array", "items": {"type": "string"}},
+    "hashes": {"type": "object", "additionalProperties": {"type": "string"}},
+    "summary": {"type": "string"},
+    "blockers": {"type": "array", "items": {"type": "string"}}
+  }
+}
+

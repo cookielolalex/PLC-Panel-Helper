@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Recommendation","type":"object","required":["recommendation_id","root_cause_layer","proposal"],"properties":{"recommendation_id":{"type":"string"},"root_cause_layer":{"type":"string"},"proposal":{"type":"string"},"evidence_ids":{"type":"array"},"risk":{"type":"string"}}}
+

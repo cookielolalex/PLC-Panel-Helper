@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Reference Adjudication","type":"object","required":["adjudication_id","project_id","items"],"properties":{"adjudication_id":{"type":"string"},"project_id":{"type":"string"},"items":{"type":"array"},"status":{"type":"string"}}}
+

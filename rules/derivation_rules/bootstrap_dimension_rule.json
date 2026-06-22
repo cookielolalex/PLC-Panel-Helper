@@ -1,0 +1,14 @@
+{
+  "rule_id": "DERIVE_BOOTSTRAP_NO_DIMENSION_INVENTION",
+  "version": "0.0.1",
+  "status": "ACTIVE_FOR_TESTS",
+  "description": "Critical dimensions may not be invented during bootstrap; missing values remain TBD or HUMAN_REVIEW_REQUIRED.",
+  "inputs": [],
+  "outputs": [
+    "verification_status"
+  ],
+  "forbidden_outputs": [
+    "verified_dimension_without_source"
+  ]
+}
+

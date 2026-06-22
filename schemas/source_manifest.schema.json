@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source Manifest",
+  "type": "object",
+  "required": ["manifest_id", "files", "worksheets"],
+  "properties": {
+    "manifest_id": {"type": "string"},
+    "created_at": {"type": "string"},
+    "status": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["file_id", "source_root", "relative_path", "sha256", "primary_role", "generator_eligibility"],
+        "properties": {
+          "file_id": {"type": "string"},
+          "source_root": {"type": "string"},
+          "relative_path": {"type": "string"},
+          "archive_member_path": {"type": ["string", "null"]},
+          "project_id": {"type": ["string", "null"]},
+          "project_name": {"type": ["string", "null"]},
+          "customer": {"type": ["string", "null"]},
+          "file_name": {"type": "string"},
+          "extension": {"type": "string"},
+          "size_bytes": {"type": ["integer", "null"]},
+          "modified_time": {"type": ["string", "null"]},
+          "sha256": {"type": "string"},
+          "content_fingerprint": {"type": ["string", "null"]},
+          "duplicate_of": {"type": ["string", "null"]},
+          "primary_role": {"type": "string"},
+          "secondary_tags": {"type": "array", "items": {"type": "string"}},
+          "drawing_output_type": {"type": ["string", "null"]},
+          "generator_eligibility": {"enum": ["ALLOWED", "FORBIDDEN", "HUMAN_REVIEW_REQUIRED"]},
+          "forbidden_signature_match": {"type": "boolean"},
+          "classification_confidence": {"type": "number"},
+          "basis": {"type": "string"},
+          "parse_status": {"type": "string"},
+          "review_status": {"type": "string"},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "worksheets": {"type": "array"}
+  }
+}
+

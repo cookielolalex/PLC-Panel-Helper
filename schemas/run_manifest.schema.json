@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Run Manifest","type":"object","required":["run_id","project_id","release","artifact_hashes"],"properties":{"run_id":{"type":"string"},"project_id":{"type":"string"},"release":{"type":"string"},"started_at":{"type":"string"},"completed_at":{"type":"string"},"artifact_hashes":{"type":"object"},"trajectory_hash":{"type":"string"}}}
+

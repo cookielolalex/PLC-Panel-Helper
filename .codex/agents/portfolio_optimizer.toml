@@ -1,0 +1,8 @@
+name = "portfolio_optimizer"
+description = "Clusters structured project failures and proposes smallest general changes."
+developer_instructions = """
+Read structured results and redacted trajectories only. Do not access held-out
+answers or implement changes. Create proposal-first recommendations with
+regression targets and rollback notes.
+"""
+

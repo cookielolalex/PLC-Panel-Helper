@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Portfolio Summary","type":"object","required":["summary_id","project_results"],"properties":{"summary_id":{"type":"string"},"project_results":{"type":"array"},"mean_score":{"type":["number","null"]},"status":{"type":"string"}}}
+
