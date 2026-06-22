@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "One Project Calibration Audit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "audit_id",
+    "status",
+    "run_id",
+    "project_id",
+    "created_at",
+    "git",
+    "criteria",
+    "summary"
+  ],
+  "properties": {
+    "audit_id": {"type": "string"},
+    "status": {
+      "enum": [
+        "STEP_7C_AUDIT_PASS - READY_FOR_SIX_PROJECT_BASELINE",
+        "HARNESS_NOT_VALIDATED",
+        "CALIBRATION_INCONCLUSIVE",
+        "NO_ELIGIBLE_CALIBRATION_CASE"
+      ]
+    },
+    "run_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "created_at": {"type": "string"},
+    "git": {
+      "type": "object",
+      "required": ["head", "status_porcelain_pre_output_write", "lineage"],
+      "properties": {
+        "head": {"type": "string"},
+        "status_porcelain_pre_output_write": {"type": "string"},
+        "lineage": {"type": "object"}
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "status", "evidence"],
+        "properties": {
+          "id": {"type": "string"},
+          "status": {"enum": ["PASS", "FAIL", "NOT_VERIFIED"]},
+          "evidence": {"type": "string"}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "validity",
+        "quality_score",
+        "scorable_coverage",
+        "critical_findings",
+        "high_findings"
+      ],
+      "properties": {
+        "validity": {"enum": ["PASS", "FAIL"]},
+        "quality_score": {"type": "number"},
+        "scorable_coverage": {"type": "number"},
+        "critical_findings": {"type": "integer"},
+        "high_findings": {"type": "integer"}
+      }
+    }
+  }
+}

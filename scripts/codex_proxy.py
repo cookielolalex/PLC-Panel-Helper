@@ -82,6 +82,7 @@ def probe_cli(root: Path, output_dir: Path) -> dict[str, Any]:
 
 
 def codex_command(root: Path, out_dir: Path, role: str, prompt: str, requested_model: str = "default") -> dict[str, Any]:
+    out_dir.mkdir(parents=True, exist_ok=True)
     last_message = out_dir / "last_message.json"
     stdout = out_dir / "stdout.jsonl"
     stderr = out_dir / "stderr.log"

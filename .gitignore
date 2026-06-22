@@ -14,6 +14,7 @@ tmp/
 evals/sandboxes/
 evals/references/
 evals/runs/*/generated/
+evals/runs/*/generator_workspace/
 evals/runs/*/rendered/
 evals/runs/*/logs/
 
@@ -38,4 +39,3 @@ Thumbs.db
 # Allow sanitized fixture/document PDFs only when explicitly placed here.
 !evals/fixtures/**/*.pdf
 !reports/**/*.pdf
-

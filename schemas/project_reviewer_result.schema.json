@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project Reviewer Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "review_id",
+    "run_id",
+    "project_id",
+    "reviewer_role",
+    "created_at",
+    "independence",
+    "validity",
+    "quality_score",
+    "scorable_coverage",
+    "confidence",
+    "rubric_dimension_scores",
+    "output_type_scores",
+    "critical_findings",
+    "high_findings",
+    "findings",
+    "comparison_limitations",
+    "run_metadata"
+  ],
+  "properties": {
+    "review_id": {"type": "string"},
+    "run_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "reviewer_role": {"enum": ["project_reviewer"]},
+    "created_at": {"type": "string"},
+    "independence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fresh_process", "external_transmission", "reference_access_after_freeze", "manual_repair"],
+      "properties": {
+        "fresh_process": {"type": "boolean"},
+        "external_transmission": {"type": "boolean"},
+        "reference_access_after_freeze": {"type": "boolean"},
+        "manual_repair": {"type": "boolean"}
+      }
+    },
+    "validity": {"enum": ["PASS", "FAIL"]},
+    "quality_score": {"type": "number", "minimum": 0, "maximum": 100},
+    "scorable_coverage": {"type": "number", "minimum": 0, "maximum": 100},
+    "confidence": {"enum": ["HIGH", "MEDIUM", "LOW"]},
+    "rubric_dimension_scores": {"type": "object"},
+    "output_type_scores": {"type": "object"},
+    "critical_findings": {"type": "integer", "minimum": 0},
+    "high_findings": {"type": "integer", "minimum": 0},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "classification", "finding", "evidence_ids"],
+        "properties": {
+          "severity": {"enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFO"]},
+          "classification": {
+            "enum": [
+              "EXPLICIT_IN_ALLOWED_INPUT",
+              "DERIVABLE_BY_APPROVED_RULE",
+              "CONFLICTING_ALLOWED_INPUT",
+              "DESIGN_CHOICE_WITH_CONSTRAINTS",
+              "UNAVAILABLE_IN_ALLOWED_INPUT",
+              "OPTIONAL_COMPANY_CONVENTION",
+              "REFERENCE_POSSIBLY_INCORRECT",
+              "UNRESOLVED"
+            ]
+          },
+          "finding": {"type": "string"},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "comparison_limitations": {"type": "array", "items": {"type": "string"}},
+    "run_metadata": {"type": "object"}
+  }
+}

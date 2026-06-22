@@ -1,0 +1,22 @@
+{
+  "project_id": "1110104",
+  "created_at": "2026-06-22T20:10:00+08:00",
+  "git_head": "55bb647cbd9fae562a6ab40b542bf94d69d6e464",
+  "bundle_dir": "evals\\cases\\development\\1110104",
+  "bundle_manifest_hash": "DF4068D4D10C4DF8FD084B4B4960E6604D45EAB307995BFC213B49BA723CEFC2",
+  "approval_manifest_hash": "4CBFF5FE88671AF3C61B1855B970997A5F22654AB94517164CE946E8B2BFA845",
+  "verification_results_hash": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16",
+  "source_quorum_adjudication_hash": "AFE04A853AF7B19DA0564075DF9759B8B110AA06550A2862E7DE9F853BA1690D",
+  "status": "FROZEN",
+  "allowed_paths": [
+    "sanitized_inputs\\SGD-628D223B34A365_估價單.csv",
+    "sanitized_inputs\\SGD-29710C0EE48604_估價單.csv"
+  ],
+  "forbidden_paths": [
+    "source root original workbooks",
+    "completed target references",
+    "reviewer findings",
+    "reference thumbnails",
+    "expected answers"
+  ]
+}
