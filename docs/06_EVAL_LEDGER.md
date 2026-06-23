@@ -155,3 +155,32 @@ Quarantined/no-bundle projects: `1120201, 1120309, 1110402, 1110706, 1120102, 11
 Generation attempts: `0`; valid baseline runs: `0`; primary reviews: `0`; secondary reviews: `0`.
 
 Evidence: `reports/baseline-024/insufficient_eligible_projects_for_24_baseline.json` and `reports/baseline-024/insufficient_eligible_projects_for_24_baseline.md`.
+
+## baseline-024-cycle-000 expanded discovery after D-0017
+
+Status: `PRE_SOURCE_SCREENING_BLOCKED_BY_REFERENCE_PRESENCE`.
+
+Purpose: supersede only the twenty-project metadata-only discovery cap and
+reconcile the full approved development inventory under `SRC-ALL-PROJECTS`.
+
+Inventory reconciliation: 404 project IDs and 404 physical project folders.
+
+Target detection v2: 27 `VERIFIED_ALL_THREE` projects, all already accepted,
+previously rejected, quarantined/no-bundle, or protocol-excluded. No completed
+reference content was inspected during metadata target detection.
+
+Expanded candidate registry: 0 `READY_FOR_SOURCE_SCREENING`; 269
+`REFERENCE_PRESENCE_REVIEW_REQUIRED`.
+
+Reference-presence waves: 18 top-ranked partial-reference projects reviewed in
+three isolated waves. All remained `PARTIAL_REFERENCE_SET` with only sheet-metal
+target evidence; 0 projects were promoted to all-three reference availability.
+
+Generation status: not authorized. Source-review quorum and sanitized bundle
+construction have not started for expanded candidates.
+
+Evidence: `reports/baseline-024/expanded-screening/inventory_reconciliation_report.md`,
+`reports/baseline-024/expanded-screening/target_detection_v2_report.md`,
+`evals/baseline-024/expanded_candidate_selection_report.md`,
+`reports/baseline-024/expanded-screening/screening_yield_summary.md`, and
+`reports/baseline-024/expanded-screening/dominant_blockers.json`.

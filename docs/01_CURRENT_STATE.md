@@ -1,12 +1,12 @@
 # Current State
 
-Current phase: cycle-000 Phase C expanded source discovery authorized.
+Current phase: cycle-000 Phase C expanded source discovery blocked before source screening.
 
 Accepted release: none.
 
 Current candidate: `baseline-024-cycle-000` Phase C source approvals.
 
-Current status: `BASELINE024_EXPANDED_DISCOVERY_AUTHORIZED`.
+Current status: `PRE_SOURCE_SCREENING_BLOCKED_BY_REFERENCE_PRESENCE`.
 
 Accepted amendment: `D-0017` expands baseline-024 candidate discovery beyond
 the prior twenty-project metadata-only pool to the full approved development
@@ -33,9 +33,17 @@ Phase C batch evidence: `manifests/baseline-024/source_approvals/phase_c_status.
 
 Recommendations remain PROPOSED. No drawing-generation behavior, accepted Instructions, production Knowledge, extraction logic, schemas, renderer behavior, validation behavior, grading weights, or tolerance profiles were optimized.
 
-Exact next action: reconcile the full `SRC-ALL-PROJECTS` project universe,
-improve completed-target presence detection without exposing reference contents
-to generators or source-review agents, build an expanded ranked candidate
-registry, and resume strict Phase C source approval in six-project waves. Do not
-start baseline generation until exactly twenty-four verified `ALLOWED_EVAL`
-projects are frozen and independently audited.
+Expanded screening result: full inventory reconciliation found 404 project IDs
+and 404 physical project folders. Metadata target detection v2 produced 27
+`VERIFIED_ALL_THREE` projects, all already accepted, rejected, quarantined, or
+protocol-excluded. The expanded candidate registry therefore has 0
+`READY_FOR_SOURCE_SCREENING` projects and 269 projects requiring reference
+presence review. Three isolated reference-presence waves reviewed the top 18
+partial-reference projects; all remained `PARTIAL_REFERENCE_SET` with only
+sheet-metal target evidence.
+
+Exact next action: do not start source screening or baseline generation. Resume
+only at the reference-presence layer: either continue isolated reference review
+with improved, auditable target classification, or make a proposal-first detector
+improvement with regression coverage and independent review. Do not weaken the
+all-three completed-target requirement.

@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: cycle-000 Phase C expanded source discovery authorized.
+Current phase: cycle-000 Phase C expanded source discovery blocked before source screening.
 
 Accepted release: none.
 
@@ -49,3 +49,25 @@ metadata-first reference-set classification, build the expanded candidate
 registry, then run strict six-project source-screening waves until eleven more
 projects reach `ALLOWED_EVAL`, up to three reserves are found, or the full
 development-eligible universe is truly exhausted.
+
+Expanded screening progress after `D-0017`:
+
+- Commit `065be52` reconciled 404 project IDs and 404 physical project folders.
+- Commit `49d5ba6` added metadata target detection v2. It preserved reference
+  isolation and did not inspect completed-reference contents.
+- Commit `f9c58d0` built `expanded_candidate_registry_v2`; it found 0
+  `READY_FOR_SOURCE_SCREENING` projects and 269
+  `REFERENCE_PRESENCE_REVIEW_REQUIRED` projects.
+- Commits `ed71617` and `d6c2333` ran three isolated reference-presence waves
+  covering 18 top-ranked partial-reference projects. All remained
+  `PARTIAL_REFERENCE_SET` with only sheet-metal target evidence; 0 projects were
+  promoted to all-three reference availability.
+
+Current blocker: `PRE_SOURCE_SCREENING_BLOCKED_BY_REFERENCE_PRESENCE`.
+Source screening has not started. Baseline generation attempts remain `0`.
+
+Next action after this checkpoint: do not start source-review quorum or
+generation. Resume at the reference-presence layer only: continue isolated
+reference review with a more capable auditable classifier, or propose and review
+a deterministic detector improvement with regression coverage. Do not weaken the
+all-three completed-target requirement.

@@ -79,3 +79,14 @@
   inventory under `SRC-ALL-PROJECTS` while preserving all source, reference,
   cohort, parser, bundle, audit, frozen workflow, grading, and no-invention
   gates.
+- Reconciled the expanded project universe: 404 project IDs, 404 physical
+  project folders, 13 already accepted `ALLOWED_EVAL` projects, 7 preserved
+  bundle rejections, 6 preserved quarantined/no-bundle projects, and 1
+  protocol-excluded project.
+- Added metadata target detection v2 and expanded candidate registry v2. The
+  registry found 0 immediate `READY_FOR_SOURCE_SCREENING` projects and 269
+  `REFERENCE_PRESENCE_REVIEW_REQUIRED` projects.
+- Ran three isolated reference-presence waves across 18 top-ranked partial
+  projects. All remained sheet-metal-only `PARTIAL_REFERENCE_SET`; no project
+  was promoted to all-three reference availability, and no source screening or
+  generation was started.

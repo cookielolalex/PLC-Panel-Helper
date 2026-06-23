@@ -1,7 +1,7 @@
 You are a fresh root coordinator continuing this repository.
 
 Read the canonical checkpoint files, `reports/calibration-006/independent_audit.json`, and `reports/evaluator-sensitivity/subagent_independent_audit.json`.
-Current status: `BASELINE024_EXPANDED_DISCOVERY_AUTHORIZED`.
+Current status: `PRE_SOURCE_SCREENING_BLOCKED_BY_REFERENCE_PRESENCE`.
 Six-project set: 1110101, 1110104, 1110204, 1110205, 1110405, 1110410.
 Evaluator version for cycle-000: `plc_layout_evaluator_v2_sensitivity`.
 Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
@@ -22,6 +22,13 @@ Final Phase C result before amendment: the frozen metadata-only candidate pool w
 
 Amendment `D-0017` accepted on 2026-06-23 expands baseline-024 candidate discovery beyond the prior twenty-project metadata-only pool to the full approved development inventory under `SRC-ALL-PROJECTS`. It supersedes only the discovery cap and preserves source immutability, source-root restrictions, positive source allowlisting, evaluation-only quorum, reference isolation, cohort isolation, held-out protection, parser requirements, sanitized-bundle verification, independent audit, frozen workflow, grading, and no-invention gates.
 
-Exact next action: reconcile the full `SRC-ALL-PROJECTS` project universe, improve completed-target presence detection without exposing reference contents to source-review agents or generators, build the expanded ranked candidate registry, then rerun deterministic prefiltering, four independent specialist reviews, unanimous source quorum, source adjudication, sanitized bundle construction, bundle verification, and independent audit before any generation.
+Expanded screening progress after amendment:
+
+- `065be52` reconciled the full project universe: 404 project IDs and 404 physical project folders.
+- `49d5ba6` added metadata target detection v2 without opening completed-reference contents.
+- `f9c58d0` built `expanded_candidate_registry_v2`; it found 0 immediate `READY_FOR_SOURCE_SCREENING` projects and 269 `REFERENCE_PRESENCE_REVIEW_REQUIRED` projects.
+- `ed71617` and `d6c2333` ran three isolated reference-presence waves across 18 top-ranked partial-reference projects. All remained `PARTIAL_REFERENCE_SET` with only sheet-metal target evidence; 0 projects were promoted to all-three reference availability.
+
+Exact next action: do not start source-review quorum, sanitized bundle construction, baseline generation, review, or optimization. Resume at the reference-presence layer only: continue isolated reference review with a more capable auditable classifier, or propose and independently review a deterministic target detector improvement with regression coverage. Do not weaken the all-three completed-target requirement and do not use forbidden production-control or electrical PDFs as target evidence.
 
 Do not optimize the drawing workflow unless separately authorized through proposal-first rules.
