@@ -1,0 +1,215 @@
+{
+  "run_id": "RUN-1110410-CAL006-A",
+  "project_id": "1110410",
+  "created_at": "2026-06-23T02:32:26Z",
+  "generated": {
+    "production": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\generated\\01_生管課用圖_1110410.pdf",
+      "sha256": "2524EB80296617C27F74CA6EBFAF410A1F52BBC09D516E19B5849243B7EA3B1B",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    "sheetmetal": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\generated\\02_鈑金施工圖_1110410.pdf",
+      "sha256": "25E246BD614F96B09D9138AA5A30C1A1039CE9B8B7B1CF17FFC45473D49C6FBE",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    "punch": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\generated\\03_沖孔施工圖_1110410.pdf",
+      "sha256": "69979754026A42F910737D2D06822FF877810467807AAC92E27B0E5E2661CCAF",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    }
+  },
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-9800A25AFC8E",
+      "role": "completed_punch_drawing_reference",
+      "output_type": "punch",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\沖孔施工圖\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(沖孔施工圖).pdf",
+      "sha256": "0CE66FEC93F2A6D3A0E94F6CF69522A7048596639B0FB37F4646F10DBAD799E0",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\references\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(沖孔施工圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\references\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(沖孔施工圖).pdf",
+        "sha256": "0CE66FEC93F2A6D3A0E94F6CF69522A7048596639B0FB37F4646F10DBAD799E0",
+        "pages": 2,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-F84339BF84FE",
+      "role": "completed_production_drawing_reference",
+      "output_type": "production",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\生管課用圖\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(生管課用圖).pdf",
+      "sha256": "71AABF2250CDAD278D341C5A32E05DB2870B342F3D00BD5F75B90346D7F11E2E",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\references\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(生管課用圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\references\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(生管課用圖).pdf",
+        "sha256": "71AABF2250CDAD278D341C5A32E05DB2870B342F3D00BD5F75B90346D7F11E2E",
+        "pages": 2,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-0A0BAA12D703",
+      "role": "completed_production_drawing_reference",
+      "output_type": "production",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\生管課用圖\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程-生管課用圖.pdf",
+      "sha256": "6779474CCE3DC578CE087A0237153E2275D0639661C83022E465D71ECDCCEA1A",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\references\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程-生管課用圖.pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\references\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程-生管課用圖.pdf",
+        "sha256": "6779474CCE3DC578CE087A0237153E2275D0639661C83022E465D71ECDCCEA1A",
+        "pages": 1,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-ED04FBF43C1F",
+      "role": "completed_sheetmetal_drawing_reference",
+      "output_type": "sheetmetal",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\鈑金施工圖\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(鈑金施工圖)-開孔.pdf",
+      "sha256": "505F7B02C301E303CE8B423D19D9A9EB876C022BBD0B04D33EA95F4B94954204",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\references\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(鈑金施工圖)-開孔.pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\references\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(鈑金施工圖)-開孔.pdf",
+        "sha256": "505F7B02C301E303CE8B423D19D9A9EB876C022BBD0B04D33EA95F4B94954204",
+        "pages": 1,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-55662875E123",
+      "role": "completed_sheetmetal_drawing_reference",
+      "output_type": "sheetmetal",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\鈑金施工圖\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(鈑金施工圖).pdf",
+      "sha256": "D27E59E5EE6251514099F0B30C2D0A0B00FF6B47F1C61CE8F69BA4DCD852F93F",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\references\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(鈑金施工圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace\\references\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(鈑金施工圖).pdf",
+        "sha256": "D27E59E5EE6251514099F0B30C2D0A0B00FF6B47F1C61CE8F69BA4DCD852F93F",
+        "pages": 2,
+        "page_boxes": [
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          }
+        ]
+      }
+    }
+  ],
+  "pairings": [
+    {
+      "output_type": "production",
+      "status": "PAIRED",
+      "generated_sha256": "2524EB80296617C27F74CA6EBFAF410A1F52BBC09D516E19B5849243B7EA3B1B",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-0A0BAA12D703",
+      "reference_sha256": "6779474CCE3DC578CE087A0237153E2275D0639661C83022E465D71ECDCCEA1A",
+      "generated_pages": 1,
+      "reference_pages": 1,
+      "page_count_match": true,
+      "page_size_match": true,
+      "registration_status": "RELIABLE_FOR_PAGE_METADATA_ONLY",
+      "overlay_created": false,
+      "overlay_reason": "overlay intentionally omitted for first harness calibration"
+    },
+    {
+      "output_type": "sheetmetal",
+      "status": "PAIRED",
+      "generated_sha256": "25E246BD614F96B09D9138AA5A30C1A1039CE9B8B7B1CF17FFC45473D49C6FBE",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-55662875E123",
+      "reference_sha256": "D27E59E5EE6251514099F0B30C2D0A0B00FF6B47F1C61CE8F69BA4DCD852F93F",
+      "generated_pages": 1,
+      "reference_pages": 2,
+      "page_count_match": false,
+      "page_size_match": false,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    },
+    {
+      "output_type": "punch",
+      "status": "PAIRED",
+      "generated_sha256": "69979754026A42F910737D2D06822FF877810467807AAC92E27B0E5E2661CCAF",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-9800A25AFC8E",
+      "reference_sha256": "0CE66FEC93F2A6D3A0E94F6CF69522A7048596639B0FB37F4646F10DBAD799E0",
+      "generated_pages": 1,
+      "reference_pages": 2,
+      "page_count_match": false,
+      "page_size_match": true,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    }
+  ],
+  "metrics": {
+    "paired_output_types": 3,
+    "page_count_matches": 1,
+    "page_size_matches": 2,
+    "overlays_created": 0
+  },
+  "limitations": [
+    "No exact geometry overlay was produced because registration was not established as reliable.",
+    "Completed references are used only in reviewer workspace after generation freeze.",
+    "Scoring separates unavailable dimensions from unsupported invented values."
+  ]
+}

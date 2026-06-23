@@ -1,0 +1,205 @@
+{
+  "run_id": "RUN-1110104-CAL006-A",
+  "project_id": "1110104",
+  "created_at": "2026-06-23T02:32:20Z",
+  "generated": {
+    "production": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110104-CAL006-A\\reviewer_workspace\\generated\\01_生管課用圖_1110104.pdf",
+      "sha256": "D124FCA8EB194CFD0F78683678D1E2146EEB284F27472213FC251B3A3F1907BF",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    "sheetmetal": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110104-CAL006-A\\reviewer_workspace\\generated\\02_鈑金施工圖_1110104.pdf",
+      "sha256": "E6EE4D260A09D201F23733E93A00BCE7648A4F6F09DCE99B2EEBCF7C46E94B78",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    "punch": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110104-CAL006-A\\reviewer_workspace\\generated\\03_沖孔施工圖_1110104.pdf",
+      "sha256": "62FB7D610A06DC434666BBC40E33530EC704F0E0517BFFB004F420C6CFCEFC80",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    }
+  },
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-2EFA3452D018",
+      "role": "completed_punch_drawing_reference",
+      "output_type": "punch",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110104飛達機電屏東縣林邊溪伏流水\\沖孔施工圖\\1110104飛達機電-屏東林邊(沖孔施工圖).pdf",
+      "sha256": "732E24F061555D0FE6BE00556E9B691001AD25D1F84F9E62E219343B5F5EB618",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110104-CAL006-A\\reviewer_workspace\\references\\1110104飛達機電-屏東林邊(沖孔施工圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110104-CAL006-A\\reviewer_workspace\\references\\1110104飛達機電-屏東林邊(沖孔施工圖).pdf",
+        "sha256": "732E24F061555D0FE6BE00556E9B691001AD25D1F84F9E62E219343B5F5EB618",
+        "pages": 4,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-AD4BDE5D08FA",
+      "role": "completed_production_drawing_reference",
+      "output_type": "production",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110104飛達機電屏東縣林邊溪伏流水\\生管課用圖\\1110104飛達機電-屏東林邊(生管課用圖).pdf",
+      "sha256": "4D9EA06C5C0DE62DC9B337685F6A28BE5F1413D3D09C9E3CABCD25B240AF0BAD",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110104-CAL006-A\\reviewer_workspace\\references\\1110104飛達機電-屏東林邊(生管課用圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110104-CAL006-A\\reviewer_workspace\\references\\1110104飛達機電-屏東林邊(生管課用圖).pdf",
+        "sha256": "4D9EA06C5C0DE62DC9B337685F6A28BE5F1413D3D09C9E3CABCD25B240AF0BAD",
+        "pages": 4,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-95A866291A8D",
+      "role": "completed_sheetmetal_drawing_reference",
+      "output_type": "sheetmetal",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110104飛達機電屏東縣林邊溪伏流水\\鈑金施工圖\\1110104飛達機電-屏東林邊(鈑金施工圖).pdf",
+      "sha256": "AC9A9CA413B869B9A9C7674F24441964BD1652785719A193649DE27EDED62ABA",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110104-CAL006-A\\reviewer_workspace\\references\\1110104飛達機電-屏東林邊(鈑金施工圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110104-CAL006-A\\reviewer_workspace\\references\\1110104飛達機電-屏東林邊(鈑金施工圖).pdf",
+        "sha256": "AC9A9CA413B869B9A9C7674F24441964BD1652785719A193649DE27EDED62ABA",
+        "pages": 4,
+        "page_boxes": [
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          }
+        ]
+      }
+    }
+  ],
+  "pairings": [
+    {
+      "output_type": "production",
+      "status": "PAIRED",
+      "generated_sha256": "D124FCA8EB194CFD0F78683678D1E2146EEB284F27472213FC251B3A3F1907BF",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-AD4BDE5D08FA",
+      "reference_sha256": "4D9EA06C5C0DE62DC9B337685F6A28BE5F1413D3D09C9E3CABCD25B240AF0BAD",
+      "generated_pages": 1,
+      "reference_pages": 4,
+      "page_count_match": false,
+      "page_size_match": true,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    },
+    {
+      "output_type": "sheetmetal",
+      "status": "PAIRED",
+      "generated_sha256": "E6EE4D260A09D201F23733E93A00BCE7648A4F6F09DCE99B2EEBCF7C46E94B78",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-95A866291A8D",
+      "reference_sha256": "AC9A9CA413B869B9A9C7674F24441964BD1652785719A193649DE27EDED62ABA",
+      "generated_pages": 1,
+      "reference_pages": 4,
+      "page_count_match": false,
+      "page_size_match": false,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    },
+    {
+      "output_type": "punch",
+      "status": "PAIRED",
+      "generated_sha256": "62FB7D610A06DC434666BBC40E33530EC704F0E0517BFFB004F420C6CFCEFC80",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-2EFA3452D018",
+      "reference_sha256": "732E24F061555D0FE6BE00556E9B691001AD25D1F84F9E62E219343B5F5EB618",
+      "generated_pages": 1,
+      "reference_pages": 4,
+      "page_count_match": false,
+      "page_size_match": true,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    }
+  ],
+  "metrics": {
+    "paired_output_types": 3,
+    "page_count_matches": 0,
+    "page_size_matches": 2,
+    "overlays_created": 0
+  },
+  "limitations": [
+    "No exact geometry overlay was produced because registration was not established as reliable.",
+    "Completed references are used only in reviewer workspace after generation freeze.",
+    "Scoring separates unavailable dimensions from unsupported invented values."
+  ]
+}

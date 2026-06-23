@@ -1,0 +1,22 @@
+{
+  "task_id": "CAL006-F-SECONDARY-RUN-1110205-CAL006-A",
+  "command": [
+    "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "scripts/run_calibration_reviewer.py",
+    "--run-id",
+    "RUN-1110205-CAL006-A",
+    "--project-id",
+    "1110205",
+    "--output",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\runs\\RUN-1110205-CAL006-A\\review\\secondary_project_reviewer_result.json",
+    "--reviewer-label",
+    "secondary_project_reviewer",
+    "--blind-note",
+    "secondary reviewer blind to primary score, findings, generator identity, and portfolio statistics"
+  ],
+  "started_at": "2026-06-23T02:32:28Z",
+  "duration_seconds": 0.15,
+  "returncode": 0,
+  "stdout_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-F-SECONDARY-RUN-1110205-CAL006-A.stdout.log",
+  "stderr_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-F-SECONDARY-RUN-1110205-CAL006-A.stderr.log"
+}

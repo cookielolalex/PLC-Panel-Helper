@@ -1,0 +1,43 @@
+{
+  "run_id": "RUN-1110204-CAL006-A",
+  "project_id": "1110204",
+  "created_at": "2026-06-23T02:32:21Z",
+  "reference_access_after_freeze_hash": "9350346CE8B3026D3C6B64056F19C31198A9D496B8A5B432A74A84A2F16789A7",
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-817B7D868EAF",
+      "role": "completed_punch_drawing_reference",
+      "output_type": "punch",
+      "sha256": "8148D8541888C4071BFE103CB737E3CCC06A91996E90C78B0175669D7252A271",
+      "content_available_to_reviewer_only": true
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-B0C05DF7C0AC",
+      "role": "completed_punch_drawing_reference",
+      "output_type": "punch",
+      "sha256": "8CF2B623EBB9D389B44F5125739125618CABACAEB448CD21DF9FF161CD7E004B",
+      "content_available_to_reviewer_only": true
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-34D7E26D26C1",
+      "role": "completed_production_drawing_reference",
+      "output_type": "production",
+      "sha256": "90FF3C0E1A1705C3085C06D230B06ECF5D31B8D4F3B785BEEE30C776E27E5C71",
+      "content_available_to_reviewer_only": true
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-894C45D45E11",
+      "role": "completed_sheetmetal_drawing_reference",
+      "output_type": "sheetmetal",
+      "sha256": "F6D30A6323FFC4DA7B5E27C61FA02332641B421E76A90F0FCDB4895FE116A63D",
+      "content_available_to_reviewer_only": true
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-E7C607741CFE",
+      "role": "completed_sheetmetal_drawing_reference",
+      "output_type": "sheetmetal",
+      "sha256": "B32B3160FE9C721ED9A097A2456C5A26C6E0CB1570669E0E7D487B6C31418A55",
+      "content_available_to_reviewer_only": true
+    }
+  ]
+}

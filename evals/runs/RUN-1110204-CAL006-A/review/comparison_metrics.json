@@ -1,0 +1,215 @@
+{
+  "run_id": "RUN-1110204-CAL006-A",
+  "project_id": "1110204",
+  "created_at": "2026-06-23T02:32:21Z",
+  "generated": {
+    "production": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\generated\\01_生管課用圖_1110204.pdf",
+      "sha256": "086FE223EE81F7DF511CD027A27DE1C262DF4FCFCF243955321E64A2665EC718",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    "sheetmetal": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\generated\\02_鈑金施工圖_1110204.pdf",
+      "sha256": "8F6881B7A3ED3827957D028FC796485B936B5EED37F7CFC609B3827986EF6B7B",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    "punch": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\generated\\03_沖孔施工圖_1110204.pdf",
+      "sha256": "56D59274A4FA135EB1C4312ACCCD2A289879A3545B158116F09A29FEB19947BC",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    }
+  },
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-817B7D868EAF",
+      "role": "completed_punch_drawing_reference",
+      "output_type": "punch",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\沖孔施工圖\\1110204宇博實業-義竹所六區支受援水汰換工程(沖孔修改圖).pdf",
+      "sha256": "8148D8541888C4071BFE103CB737E3CCC06A91996E90C78B0175669D7252A271",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\references\\1110204宇博實業-義竹所六區支受援水汰換工程(沖孔修改圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\references\\1110204宇博實業-義竹所六區支受援水汰換工程(沖孔修改圖).pdf",
+        "sha256": "8148D8541888C4071BFE103CB737E3CCC06A91996E90C78B0175669D7252A271",
+        "pages": 1,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-B0C05DF7C0AC",
+      "role": "completed_punch_drawing_reference",
+      "output_type": "punch",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\沖孔施工圖\\1110204宇博實業-義竹所六區支受援水汰換工程(沖孔施工圖).pdf",
+      "sha256": "8CF2B623EBB9D389B44F5125739125618CABACAEB448CD21DF9FF161CD7E004B",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\references\\1110204宇博實業-義竹所六區支受援水汰換工程(沖孔施工圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\references\\1110204宇博實業-義竹所六區支受援水汰換工程(沖孔施工圖).pdf",
+        "sha256": "8CF2B623EBB9D389B44F5125739125618CABACAEB448CD21DF9FF161CD7E004B",
+        "pages": 2,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-34D7E26D26C1",
+      "role": "completed_production_drawing_reference",
+      "output_type": "production",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\生管課用圖\\1110204宇博實業-義竹所六區支受援水汰換工程(生管課用圖).pdf",
+      "sha256": "90FF3C0E1A1705C3085C06D230B06ECF5D31B8D4F3B785BEEE30C776E27E5C71",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\references\\1110204宇博實業-義竹所六區支受援水汰換工程(生管課用圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\references\\1110204宇博實業-義竹所六區支受援水汰換工程(生管課用圖).pdf",
+        "sha256": "90FF3C0E1A1705C3085C06D230B06ECF5D31B8D4F3B785BEEE30C776E27E5C71",
+        "pages": 2,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-894C45D45E11",
+      "role": "completed_sheetmetal_drawing_reference",
+      "output_type": "sheetmetal",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\鈑金施工圖\\1110204宇博實業-義竹所六區支受援水汰換工程(鈑金修改圖).pdf",
+      "sha256": "F6D30A6323FFC4DA7B5E27C61FA02332641B421E76A90F0FCDB4895FE116A63D",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\references\\1110204宇博實業-義竹所六區支受援水汰換工程(鈑金修改圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\references\\1110204宇博實業-義竹所六區支受援水汰換工程(鈑金修改圖).pdf",
+        "sha256": "F6D30A6323FFC4DA7B5E27C61FA02332641B421E76A90F0FCDB4895FE116A63D",
+        "pages": 1,
+        "page_boxes": [
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-E7C607741CFE",
+      "role": "completed_sheetmetal_drawing_reference",
+      "output_type": "sheetmetal",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\鈑金施工圖\\1110204宇博實業-義竹所六區支受援水汰換工程(鈑金施工圖).pdf",
+      "sha256": "B32B3160FE9C721ED9A097A2456C5A26C6E0CB1570669E0E7D487B6C31418A55",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\references\\1110204宇博實業-義竹所六區支受援水汰換工程(鈑金施工圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110204-CAL006-A\\reviewer_workspace\\references\\1110204宇博實業-義竹所六區支受援水汰換工程(鈑金施工圖).pdf",
+        "sha256": "B32B3160FE9C721ED9A097A2456C5A26C6E0CB1570669E0E7D487B6C31418A55",
+        "pages": 2,
+        "page_boxes": [
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          }
+        ]
+      }
+    }
+  ],
+  "pairings": [
+    {
+      "output_type": "production",
+      "status": "PAIRED",
+      "generated_sha256": "086FE223EE81F7DF511CD027A27DE1C262DF4FCFCF243955321E64A2665EC718",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-34D7E26D26C1",
+      "reference_sha256": "90FF3C0E1A1705C3085C06D230B06ECF5D31B8D4F3B785BEEE30C776E27E5C71",
+      "generated_pages": 1,
+      "reference_pages": 2,
+      "page_count_match": false,
+      "page_size_match": true,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    },
+    {
+      "output_type": "sheetmetal",
+      "status": "PAIRED",
+      "generated_sha256": "8F6881B7A3ED3827957D028FC796485B936B5EED37F7CFC609B3827986EF6B7B",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-E7C607741CFE",
+      "reference_sha256": "B32B3160FE9C721ED9A097A2456C5A26C6E0CB1570669E0E7D487B6C31418A55",
+      "generated_pages": 1,
+      "reference_pages": 2,
+      "page_count_match": false,
+      "page_size_match": false,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    },
+    {
+      "output_type": "punch",
+      "status": "PAIRED",
+      "generated_sha256": "56D59274A4FA135EB1C4312ACCCD2A289879A3545B158116F09A29FEB19947BC",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-B0C05DF7C0AC",
+      "reference_sha256": "8CF2B623EBB9D389B44F5125739125618CABACAEB448CD21DF9FF161CD7E004B",
+      "generated_pages": 1,
+      "reference_pages": 2,
+      "page_count_match": false,
+      "page_size_match": true,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    }
+  ],
+  "metrics": {
+    "paired_output_types": 3,
+    "page_count_matches": 0,
+    "page_size_matches": 2,
+    "overlays_created": 0
+  },
+  "limitations": [
+    "No exact geometry overlay was produced because registration was not established as reliable.",
+    "Completed references are used only in reviewer workspace after generation freeze.",
+    "Scoring separates unavailable dimensions from unsupported invented values."
+  ]
+}

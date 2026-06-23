@@ -1,0 +1,325 @@
+{
+  "run_id": "RUN-1110101-CAL006-A",
+  "project_id": "1110101",
+  "created_at": "2026-06-23T02:32:18Z",
+  "generated": {
+    "production": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace\\generated\\01_生管課用圖_1110101.pdf",
+      "sha256": "14A2E054D682392D8B78CDF0FD0785B9930A2C9EA1DFCB75298CF55AD2364F41",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    "sheetmetal": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace\\generated\\02_鈑金施工圖_1110101.pdf",
+      "sha256": "80693A77C2AC9A736E0816EA847C239A529E2D2EF18433A193B3C8A7F4E61749",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    "punch": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace\\generated\\03_沖孔施工圖_1110101.pdf",
+      "sha256": "12035AEF9E6E4161928342F5DA378629CEB8AE22D0F6397570268130618DA760",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    }
+  },
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5C3AF14EB985",
+      "role": "completed_punch_drawing_reference",
+      "output_type": "punch",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\沖孔施工圖\\1110101盛福工程-鳥嘴潭E-2(沖孔施工圖).pdf",
+      "sha256": "6288AB656E1FC1A45E91B3EE50879FE304791BB8655C9D28BA7ACB0600BF80D7",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace\\references\\1110101盛福工程-鳥嘴潭E-2(沖孔施工圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace\\references\\1110101盛福工程-鳥嘴潭E-2(沖孔施工圖).pdf",
+        "sha256": "6288AB656E1FC1A45E91B3EE50879FE304791BB8655C9D28BA7ACB0600BF80D7",
+        "pages": 12,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-7ABB80368FBD",
+      "role": "completed_production_drawing_reference",
+      "output_type": "production",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\生管課用圖\\1110101盛福工程-鳥嘴潭E-2(生管課用圖).pdf",
+      "sha256": "972AAFD5E2D72636871E799899B53B91EE5EE0230DA73B2A6BDF936B37F4120A",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace\\references\\1110101盛福工程-鳥嘴潭E-2(生管課用圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace\\references\\1110101盛福工程-鳥嘴潭E-2(生管課用圖).pdf",
+        "sha256": "972AAFD5E2D72636871E799899B53B91EE5EE0230DA73B2A6BDF936B37F4120A",
+        "pages": 12,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-9BAC035FA277",
+      "role": "completed_sheetmetal_drawing_reference",
+      "output_type": "sheetmetal",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\鈑金施工圖\\1110101盛福工程-鳥嘴潭E-2(鈑金施工圖).pdf",
+      "sha256": "F653AB4388A9A48890FB04D7163322C95408C0DD2FFCBBF2B7BF45EB0F450EED",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace\\references\\1110101盛福工程-鳥嘴潭E-2(鈑金施工圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace\\references\\1110101盛福工程-鳥嘴潭E-2(鈑金施工圖).pdf",
+        "sha256": "F653AB4388A9A48890FB04D7163322C95408C0DD2FFCBBF2B7BF45EB0F450EED",
+        "pages": 12,
+        "page_boxes": [
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          }
+        ]
+      }
+    }
+  ],
+  "pairings": [
+    {
+      "output_type": "production",
+      "status": "PAIRED",
+      "generated_sha256": "14A2E054D682392D8B78CDF0FD0785B9930A2C9EA1DFCB75298CF55AD2364F41",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-7ABB80368FBD",
+      "reference_sha256": "972AAFD5E2D72636871E799899B53B91EE5EE0230DA73B2A6BDF936B37F4120A",
+      "generated_pages": 1,
+      "reference_pages": 12,
+      "page_count_match": false,
+      "page_size_match": true,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    },
+    {
+      "output_type": "sheetmetal",
+      "status": "PAIRED",
+      "generated_sha256": "80693A77C2AC9A736E0816EA847C239A529E2D2EF18433A193B3C8A7F4E61749",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-9BAC035FA277",
+      "reference_sha256": "F653AB4388A9A48890FB04D7163322C95408C0DD2FFCBBF2B7BF45EB0F450EED",
+      "generated_pages": 1,
+      "reference_pages": 12,
+      "page_count_match": false,
+      "page_size_match": false,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    },
+    {
+      "output_type": "punch",
+      "status": "PAIRED",
+      "generated_sha256": "12035AEF9E6E4161928342F5DA378629CEB8AE22D0F6397570268130618DA760",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-5C3AF14EB985",
+      "reference_sha256": "6288AB656E1FC1A45E91B3EE50879FE304791BB8655C9D28BA7ACB0600BF80D7",
+      "generated_pages": 1,
+      "reference_pages": 12,
+      "page_count_match": false,
+      "page_size_match": true,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    }
+  ],
+  "metrics": {
+    "paired_output_types": 3,
+    "page_count_matches": 0,
+    "page_size_matches": 2,
+    "overlays_created": 0
+  },
+  "limitations": [
+    "No exact geometry overlay was produced because registration was not established as reliable.",
+    "Completed references are used only in reviewer workspace after generation freeze.",
+    "Scoring separates unavailable dimensions from unsupported invented values."
+  ]
+}

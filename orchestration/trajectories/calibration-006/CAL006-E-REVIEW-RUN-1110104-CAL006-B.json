@@ -1,0 +1,20 @@
+{
+  "task_id": "CAL006-E-REVIEW-RUN-1110104-CAL006-B",
+  "command": [
+    "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "scripts/run_calibration_reviewer.py",
+    "--run-id",
+    "RUN-1110104-CAL006-B",
+    "--project-id",
+    "1110104",
+    "--output",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\runs\\RUN-1110104-CAL006-B\\review\\project_reviewer_result.json",
+    "--reviewer-label",
+    "primary_project_reviewer"
+  ],
+  "started_at": "2026-06-23T02:32:21Z",
+  "duration_seconds": 0.18,
+  "returncode": 0,
+  "stdout_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-E-REVIEW-RUN-1110104-CAL006-B.stdout.log",
+  "stderr_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-E-REVIEW-RUN-1110104-CAL006-B.stderr.log"
+}

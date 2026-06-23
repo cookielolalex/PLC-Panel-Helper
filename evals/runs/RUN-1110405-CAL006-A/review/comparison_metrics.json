@@ -1,0 +1,175 @@
+{
+  "run_id": "RUN-1110405-CAL006-A",
+  "project_id": "1110405",
+  "created_at": "2026-06-23T02:32:24Z",
+  "generated": {
+    "production": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110405-CAL006-A\\reviewer_workspace\\generated\\01_生管課用圖_1110405.pdf",
+      "sha256": "AF92B47D635AFC3E32400DB5F07D575A9980F0E4E93CEBED68B30234F9CEA080",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    "sheetmetal": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110405-CAL006-A\\reviewer_workspace\\generated\\02_鈑金施工圖_1110405.pdf",
+      "sha256": "6D8E1FDD969FB779AFC6F6DA9B75611D63584CB3CDFC8E3C751439D98995077C",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    },
+    "punch": {
+      "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110405-CAL006-A\\reviewer_workspace\\generated\\03_沖孔施工圖_1110405.pdf",
+      "sha256": "E04E53E5636457E8509116EC323C9A35132D29C58BF20BD437487EF25539D041",
+      "pages": 1,
+      "page_boxes": [
+        {
+          "width_pt": 595.2756,
+          "height_pt": 841.8898,
+          "rotation": 0
+        }
+      ]
+    }
+  },
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-3B49DC17A48A",
+      "role": "completed_punch_drawing_reference",
+      "output_type": "punch",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\沖孔施工圖\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(沖孔施工圖).pdf",
+      "sha256": "6F985D2B874F096BEAE8AB9C52786B84675AF6C846847065DE1F38D0E9B345E5",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110405-CAL006-A\\reviewer_workspace\\references\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(沖孔施工圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110405-CAL006-A\\reviewer_workspace\\references\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(沖孔施工圖).pdf",
+        "sha256": "6F985D2B874F096BEAE8AB9C52786B84675AF6C846847065DE1F38D0E9B345E5",
+        "pages": 2,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-63E29B24AD5F",
+      "role": "completed_production_drawing_reference",
+      "output_type": "production",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\生管課用圖\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(生管課用圖).pdf",
+      "sha256": "E3AD35B083AD64C290D596B48A077466B48F134621CBCB24F6E3F445C4182504",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110405-CAL006-A\\reviewer_workspace\\references\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(生管課用圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110405-CAL006-A\\reviewer_workspace\\references\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(生管課用圖).pdf",
+        "sha256": "E3AD35B083AD64C290D596B48A077466B48F134621CBCB24F6E3F445C4182504",
+        "pages": 2,
+        "page_boxes": [
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          },
+          {
+            "width_pt": 595.2,
+            "height_pt": 841.92,
+            "rotation": 270
+          }
+        ]
+      }
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-69B8C07CD1B3",
+      "role": "completed_sheetmetal_drawing_reference",
+      "output_type": "sheetmetal",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\鈑金施工圖\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(鈑金施工圖).pdf",
+      "sha256": "95CF285F594BEAE93D5092B73BEED643A7467B3AC2E7AA8209A998CC10F8600E",
+      "copied_to_reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110405-CAL006-A\\reviewer_workspace\\references\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(鈑金施工圖).pdf",
+      "metadata": {
+        "path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110405-CAL006-A\\reviewer_workspace\\references\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(鈑金施工圖).pdf",
+        "sha256": "95CF285F594BEAE93D5092B73BEED643A7467B3AC2E7AA8209A998CC10F8600E",
+        "pages": 2,
+        "page_boxes": [
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          },
+          {
+            "width_pt": 841.92,
+            "height_pt": 1190.64,
+            "rotation": 270
+          }
+        ]
+      }
+    }
+  ],
+  "pairings": [
+    {
+      "output_type": "production",
+      "status": "PAIRED",
+      "generated_sha256": "AF92B47D635AFC3E32400DB5F07D575A9980F0E4E93CEBED68B30234F9CEA080",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-63E29B24AD5F",
+      "reference_sha256": "E3AD35B083AD64C290D596B48A077466B48F134621CBCB24F6E3F445C4182504",
+      "generated_pages": 1,
+      "reference_pages": 2,
+      "page_count_match": false,
+      "page_size_match": true,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    },
+    {
+      "output_type": "sheetmetal",
+      "status": "PAIRED",
+      "generated_sha256": "6D8E1FDD969FB779AFC6F6DA9B75611D63584CB3CDFC8E3C751439D98995077C",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-69B8C07CD1B3",
+      "reference_sha256": "95CF285F594BEAE93D5092B73BEED643A7467B3AC2E7AA8209A998CC10F8600E",
+      "generated_pages": 1,
+      "reference_pages": 2,
+      "page_count_match": false,
+      "page_size_match": false,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    },
+    {
+      "output_type": "punch",
+      "status": "PAIRED",
+      "generated_sha256": "E04E53E5636457E8509116EC323C9A35132D29C58BF20BD437487EF25539D041",
+      "reference_file_id": "SRC-ALL-PROJECTS-FILE-3B49DC17A48A",
+      "reference_sha256": "6F985D2B874F096BEAE8AB9C52786B84675AF6C846847065DE1F38D0E9B345E5",
+      "generated_pages": 1,
+      "reference_pages": 2,
+      "page_count_match": false,
+      "page_size_match": true,
+      "registration_status": "UNRELIABLE_FOR_OVERLAY",
+      "overlay_created": false,
+      "overlay_reason": "registration not reliable for geometry comparison"
+    }
+  ],
+  "metrics": {
+    "paired_output_types": 3,
+    "page_count_matches": 0,
+    "page_size_matches": 2,
+    "overlays_created": 0
+  },
+  "limitations": [
+    "No exact geometry overlay was produced because registration was not established as reliable.",
+    "Completed references are used only in reviewer workspace after generation freeze.",
+    "Scoring separates unavailable dimensions from unsupported invented values."
+  ]
+}

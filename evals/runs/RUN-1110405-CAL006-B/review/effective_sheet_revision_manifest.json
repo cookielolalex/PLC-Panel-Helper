@@ -1,0 +1,29 @@
+{
+  "run_id": "RUN-1110405-CAL006-B",
+  "project_id": "1110405",
+  "created_at": "2026-06-23T02:32:25Z",
+  "reference_access_after_freeze_hash": "88547387F80DE8052EEF8D55CDBBE37A380BF3EDCB9309FDE703158E409C16F1",
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-3B49DC17A48A",
+      "role": "completed_punch_drawing_reference",
+      "output_type": "punch",
+      "sha256": "6F985D2B874F096BEAE8AB9C52786B84675AF6C846847065DE1F38D0E9B345E5",
+      "content_available_to_reviewer_only": true
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-63E29B24AD5F",
+      "role": "completed_production_drawing_reference",
+      "output_type": "production",
+      "sha256": "E3AD35B083AD64C290D596B48A077466B48F134621CBCB24F6E3F445C4182504",
+      "content_available_to_reviewer_only": true
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-69B8C07CD1B3",
+      "role": "completed_sheetmetal_drawing_reference",
+      "output_type": "sheetmetal",
+      "sha256": "95CF285F594BEAE93D5092B73BEED643A7467B3AC2E7AA8209A998CC10F8600E",
+      "content_available_to_reviewer_only": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "task_id": "CAL006-E-REVIEW-RUN-1110205-CAL006-A-COMPARE",
+  "command": [
+    "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "scripts/compare_one_project.py",
+    "--run-id",
+    "RUN-1110205-CAL006-A",
+    "--project-id",
+    "1110205"
+  ],
+  "started_at": "2026-06-23T02:32:23Z",
+  "duration_seconds": 0.74,
+  "returncode": 0,
+  "stdout_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-E-REVIEW-RUN-1110205-CAL006-A-COMPARE.stdout.log",
+  "stderr_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-E-REVIEW-RUN-1110205-CAL006-A-COMPARE.stderr.log"
+}

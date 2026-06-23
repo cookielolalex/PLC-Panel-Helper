@@ -1,0 +1,88 @@
+{
+  "review_id": "secondary_project_reviewer_RUN-1110410-CAL006-A",
+  "run_id": "RUN-1110410-CAL006-A",
+  "project_id": "1110410",
+  "reviewer_role": "project_reviewer",
+  "created_at": "2026-06-23T02:32:28Z",
+  "independence": {
+    "fresh_process": true,
+    "external_transmission": false,
+    "reference_access_after_freeze": true,
+    "manual_repair": false
+  },
+  "validity": "PASS",
+  "quality_score": 42,
+  "scorable_coverage": 38,
+  "confidence": "LOW",
+  "rubric_dimension_scores": {
+    "source_selection_provenance_conflict": 14,
+    "panel_schedule_enclosure_facts": 5,
+    "device_bom_quantity_tag_fidelity": 8,
+    "shared_geometry_cross_pdf_consistency": 8,
+    "production_drawing_quality": 3,
+    "punch_drawing_quality": 2,
+    "sheetmetal_drawing_quality": 2
+  },
+  "output_type_scores": {
+    "production": 14,
+    "sheetmetal": 14,
+    "punch": 14
+  },
+  "critical_findings": 0,
+  "high_findings": 3,
+  "findings": [
+    {
+      "severity": "HIGH",
+      "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+      "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD.",
+      "evidence_ids": [
+        "grading_result.findings[1]",
+        "comparison_metrics.pairings",
+        "effective_sheet_revision_manifest.references"
+      ]
+    },
+    {
+      "severity": "HIGH",
+      "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+      "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator.",
+      "evidence_ids": [
+        "grading_result.findings[2]",
+        "comparison_metrics.pairings",
+        "effective_sheet_revision_manifest.references"
+      ]
+    },
+    {
+      "severity": "HIGH",
+      "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+      "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready.",
+      "evidence_ids": [
+        "grading_result.findings[3]",
+        "comparison_metrics.pairings",
+        "effective_sheet_revision_manifest.references"
+      ]
+    }
+  ],
+  "comparison_limitations": [
+    "No exact geometry overlay was produced because registration was not established as reliable.",
+    "Completed references are used only in reviewer workspace after generation freeze.",
+    "Scoring separates unavailable dimensions from unsupported invented values."
+  ],
+  "run_metadata": {
+    "generation_complete_sha256": "6632AFC23DCEAD414489B7CB0E28CE2B9328FBBE325FCCD1867DE36F0AD9FBD8",
+    "freeze_manifest_sha256": "044C219AA382E8AF41386EDE13E8D47D0541C1C98CE3D657DFAA79B5E210589D",
+    "comparison_metrics_sha256": "9A48BA69F04C419CE563AF64840861A28042B665E9C04EE4A226D56036C51C4A",
+    "grading_result_sha256": "59E436257E8515E747EB6697AEDB10851671FE493BCBD9142C6668FCFB147D80",
+    "effective_manifest_sha256": "C4999A1626D06603075BD7AC84AF915C9D06856B67C9BA4A76D0389315F68E7E",
+    "freeze_hash": "F9614DB2E40E868883DFBD9B41539F7332E9B4A2AB0530CB9DF7A1F9A0E1B3D8",
+    "paired_outputs": [
+      "production",
+      "sheetmetal",
+      "punch"
+    ],
+    "reference_count": 5,
+    "reviewer_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\sandboxes\\RUN-1110410-CAL006-A\\reviewer_workspace",
+    "rubric": "plc_layout_v1",
+    "reviewer_label": "secondary_project_reviewer",
+    "blind_note": "secondary reviewer blind to primary score, findings, generator identity, and portfolio statistics"
+  }
+}
