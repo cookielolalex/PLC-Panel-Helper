@@ -1,0 +1,2672 @@
+{
+  "diagnosis_id": "v2_zero_promotion_diagnosis_reference_detection_v3_phase_a",
+  "created_at": "2026-06-23T07:42:00+00:00",
+  "source_detector_version": "target_output_detection_v2_metadata_aliases plus reference_presence_classifier_v1_isolated_pdf_text_minimal",
+  "reviewed_project_count": 18,
+  "reviewed_projects": [
+    "1120801",
+    "1120902",
+    "1121102",
+    "1121107",
+    "1130610",
+    "1141201",
+    "1120706",
+    "1130104",
+    "1140201",
+    "1140706",
+    "1141106",
+    "1150104",
+    "1121201",
+    "1130505",
+    "1130901",
+    "1131105",
+    "1140606",
+    "1150103"
+  ],
+  "promotion_count": 0,
+  "decision_counts": {
+    "PARTIAL_REFERENCE_SET": 18
+  },
+  "files_considered_total": 282,
+  "classified_pages_counted_total": 618,
+  "classification_count_total": 271,
+  "root_cause_summary": [
+    {
+      "cause": "classifier_seeing_metadata_and_transient_embedded_text_only",
+      "supported": true,
+      "evidence": "All reviewed projects detected only SHEET_METAL; no v2 result recorded page_ranges from page text or visual page evidence."
+    },
+    {
+      "cause": "inability_to_render_or_inspect_raster_pdfs",
+      "supported": true,
+      "evidence": "V2 policy and classifier did not render pages or crop title blocks; image-only PDFs could not contribute visual role evidence."
+    },
+    {
+      "cause": "overly_restrictive_document_level_contract",
+      "supported": true,
+      "evidence": "Results are file/classification-level; no effective page-level target-output set, combined package registry, or supersession result exists."
+    },
+    {
+      "cause": "one_file_one_type_or_metadata_type_bias",
+      "supported": true,
+      "evidence": "Metadata/file role created whole-file SHEET_METAL classifications even for multipage files; missing types were not recoverable inside combined files."
+    },
+    {
+      "cause": "revision_and_combined_pdf_handling_absent",
+      "supported": true,
+      "evidence": "V2 wrote UNKNOWN_OR_NOT_METADATA_DETECTED and NOT_DETERMINED_METADATA_ONLY for revision/supersession."
+    },
+    {
+      "cause": "target_drawings_under_generator_forbidden_folder_names_not_reviewed_as_reference_evidence",
+      "supported": true,
+      "evidence": "V2 excluded forbidden production-control/electrical roles before page-level role confirmation."
+    },
+    {
+      "cause": "genuinely_missing_drawing_types",
+      "supported": "NOT_PROVEN",
+      "evidence": "V2 produced insufficient content and page-level evidence to distinguish true absence from classification blindness."
+    }
+  ],
+  "safe_conclusion": "Zero promotion was caused by a combination of metadata/text-layer-only classification, no page rendering, no combined or revision package resolution, and policy coupling between generator exclusions and reference eligibility. Existing evidence does not prove all eighteen projects are genuinely missing production and punch references.",
+  "project_reviews": [
+    {
+      "project_id": "1120801",
+      "review_result_path": "manifests/reference_detection/reviews/wave-001/1120801_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-001/B024-RP-W001-1120801.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B84CAF04F262",
+          "extension": ".pdf",
+          "size_bytes": "12062837",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A903065BF040",
+          "extension": ".pdf",
+          "size_bytes": "2448069",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-347A377475D6",
+          "extension": ".pdf",
+          "size_bytes": "586212",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-44344544DAF5",
+          "extension": ".pdf",
+          "size_bytes": "499239",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-746A86CBCFD2",
+          "extension": ".pdf",
+          "size_bytes": "611312",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-25A867B2C0C8",
+          "extension": ".pdf",
+          "size_bytes": "583218",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4224D91B1A97",
+          "extension": ".pdf",
+          "size_bytes": "503630",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E3CEAC19088C",
+          "extension": ".pdf",
+          "size_bytes": "614424",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-DDF6E268AF6D",
+          "extension": ".pdf",
+          "size_bytes": "938385",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-EF842E60068D",
+          "extension": ".pdf",
+          "size_bytes": "77583",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-84B3CC9BB1B8",
+          "extension": ".pdf",
+          "size_bytes": "99337",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F37131D3C7E8",
+          "extension": ".pdf",
+          "size_bytes": "113779",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-2F85A859A2C9",
+          "extension": ".pdf",
+          "size_bytes": "76738",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7F2D07E906B6",
+          "extension": ".pdf",
+          "size_bytes": "90240",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0601390D6787",
+          "extension": ".pdf",
+          "size_bytes": "76250",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1CF94FC1842A",
+          "extension": ".pdf",
+          "size_bytes": "102522",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-D7A4BE90CAF9",
+          "extension": ".pdf",
+          "size_bytes": "118499",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-FCF60DE9CD19",
+          "extension": ".pdf",
+          "size_bytes": "63725",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-00BE77329E1F",
+          "extension": ".pdf",
+          "size_bytes": "82210",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-2FAF44C50885",
+          "extension": ".pdf",
+          "size_bytes": "104141",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-6F1C5F3A2EF2",
+          "extension": ".pdf",
+          "size_bytes": "103771",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3F3A83900E57",
+          "extension": ".pdf",
+          "size_bytes": "68946",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-BDCB18340F78",
+          "extension": ".pdf",
+          "size_bytes": "97832",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7D07B36945B2",
+          "extension": ".pdf",
+          "size_bytes": "69040",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-DB77E53CC11B",
+          "extension": ".pdf",
+          "size_bytes": "70499",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-05314E4F027C",
+          "extension": ".pdf",
+          "size_bytes": "83694",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CFDBDC0748E4",
+          "extension": ".pdf",
+          "size_bytes": "814086",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C6177DFB444F",
+          "extension": ".pdf",
+          "size_bytes": "59039",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 28,
+      "classified_file_count": 28,
+      "pages_counted_from_existing_v2_classifications": 83,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 28,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1120902",
+      "review_result_path": "manifests/reference_detection/reviews/wave-001/1120902_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-001/B024-RP-W001-1120902.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-8C865C3D12FF",
+          "extension": ".pdf",
+          "size_bytes": "15981483",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-70A8B7B2A02F",
+          "extension": ".pdf",
+          "size_bytes": "544560",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-914FBF316945",
+          "extension": ".pdf",
+          "size_bytes": "4410909",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-BF47A50EC0DB",
+          "extension": ".pdf",
+          "size_bytes": "704128",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-FF4270FB4D68",
+          "extension": ".pdf",
+          "size_bytes": "545824",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AB352D9ED300",
+          "extension": ".pdf",
+          "size_bytes": "90083",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E4E3AE96281C",
+          "extension": ".pdf",
+          "size_bytes": "751058",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-D7293B025640",
+          "extension": ".pdf",
+          "size_bytes": "556177",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-400FEF85A28C",
+          "extension": ".pdf",
+          "size_bytes": "558268",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9820F8A22F68",
+          "extension": ".pdf",
+          "size_bytes": "15981483",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B9BB28ADBD7D",
+          "extension": ".pdf",
+          "size_bytes": "4484699",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1D17EC793935",
+          "extension": ".pdf",
+          "size_bytes": "90083",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-26868CC79A0D",
+          "extension": ".pdf",
+          "size_bytes": "59925",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-56B6DBA96D05",
+          "extension": ".pdf",
+          "size_bytes": "93538",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-679BF5C5B446",
+          "extension": ".pdf",
+          "size_bytes": "67936",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-ED255E9214AF",
+          "extension": ".pdf",
+          "size_bytes": "70173",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-65992DBD4FC7",
+          "extension": ".pdf",
+          "size_bytes": "137946",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3CE3459BFF90",
+          "extension": ".pdf",
+          "size_bytes": "78689",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-17C876F031CB",
+          "extension": ".pdf",
+          "size_bytes": "53013",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-26951D47FE51",
+          "extension": ".pdf",
+          "size_bytes": "112201",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-39DA9749A5E6",
+          "extension": ".pdf",
+          "size_bytes": "59663",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E4E722F50ED3",
+          "extension": ".pdf",
+          "size_bytes": "134666",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F7A262DF16D8",
+          "extension": ".pdf",
+          "size_bytes": "72891",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CB7F3C0BC52C",
+          "extension": ".pdf",
+          "size_bytes": "82329",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-47E01AC40DE4",
+          "extension": ".pdf",
+          "size_bytes": "90083",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E3453B92C8CB",
+          "extension": ".pdf",
+          "size_bytes": "155029",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-6092691377A2",
+          "extension": ".pdf",
+          "size_bytes": "75396",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-234F1EC53376",
+          "extension": ".pdf",
+          "size_bytes": "80685",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-82E672706E2D",
+          "extension": ".pdf",
+          "size_bytes": "75836",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A4BD6B538FE9",
+          "extension": ".pdf",
+          "size_bytes": "60635",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-430FEB77618F",
+          "extension": ".pdf",
+          "size_bytes": "66366",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-48ACBCB5583D",
+          "extension": ".pdf",
+          "size_bytes": "57327",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-43C2E9EB515F",
+          "extension": ".pdf",
+          "size_bytes": "102816",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1F07B6058C04",
+          "extension": ".pdf",
+          "size_bytes": "134691",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-61D0E6377143",
+          "extension": ".pdf",
+          "size_bytes": "104727",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0F83C4F6BE04",
+          "extension": ".pdf",
+          "size_bytes": "665175",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-553296C13CF7",
+          "extension": ".pdf",
+          "size_bytes": "109760",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3B1F79A7BBCF",
+          "extension": ".pdf",
+          "size_bytes": "55848",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-859DE676450E",
+          "extension": ".pdf",
+          "size_bytes": "77783",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9CBFF52BAAEE",
+          "extension": ".pdf",
+          "size_bytes": "47980",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-09B638D4264C",
+          "extension": ".pdf",
+          "size_bytes": "47847",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E7D371EF3E04",
+          "extension": ".pdf",
+          "size_bytes": "36366",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3EBDD5CDBDBB",
+          "extension": ".pdf",
+          "size_bytes": "39914",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AF01140F85C9",
+          "extension": ".pdf",
+          "size_bytes": "42914",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3F5B4C161983",
+          "extension": ".pdf",
+          "size_bytes": "42188",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-68B9946918D5",
+          "extension": ".pdf",
+          "size_bytes": "52028",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-21F5B9BE7ADA",
+          "extension": ".pdf",
+          "size_bytes": "39497",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B4CBC9F625BB",
+          "extension": ".pdf",
+          "size_bytes": "51456",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F2CC69AFD13B",
+          "extension": ".pdf",
+          "size_bytes": "63403",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 49,
+      "classified_file_count": 49,
+      "pages_counted_from_existing_v2_classifications": 113,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 49,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1121102",
+      "review_result_path": "manifests/reference_detection/reviews/wave-001/1121102_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-001/B024-RP-W001-1121102.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F72C4370829C",
+          "extension": ".pdf",
+          "size_bytes": "2104299",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B33061E17982",
+          "extension": ".pdf",
+          "size_bytes": "1871002",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A5190E890C29",
+          "extension": ".pdf",
+          "size_bytes": "69173",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-6D33B23D5FA8",
+          "extension": ".pdf",
+          "size_bytes": "80251",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-11714B121A2F",
+          "extension": ".pdf",
+          "size_bytes": "57232",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-BE41B426764C",
+          "extension": ".pdf",
+          "size_bytes": "46161",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5AFD5691794B",
+          "extension": ".pdf",
+          "size_bytes": "47033",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F34FE5941FFA",
+          "extension": ".pdf",
+          "size_bytes": "45305",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E3D13F0D6835",
+          "extension": ".pdf",
+          "size_bytes": "48383",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1C33A7F1777D",
+          "extension": ".pdf",
+          "size_bytes": "69173",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A55373D5A0D7",
+          "extension": ".pdf",
+          "size_bytes": "66366",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3A0A1FE02686",
+          "extension": ".pdf",
+          "size_bytes": "69173",
+          "role_hint": "supporting_document_non_generator"
+        }
+      ],
+      "file_count_considered": 12,
+      "classified_file_count": 11,
+      "pages_counted_from_existing_v2_classifications": 16,
+      "page_count_unavailable_for_unclassified_files": 1,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 11,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1121107",
+      "review_result_path": "manifests/reference_detection/reviews/wave-001/1121107_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-001/B024-RP-W001-1121107.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-89B22DDD44FA",
+          "extension": ".pdf",
+          "size_bytes": "395090",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-D4B8B511ADFE",
+          "extension": ".pdf",
+          "size_bytes": "910690",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-2317490EBD47",
+          "extension": ".pdf",
+          "size_bytes": "9615240",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-13CE07E043B9",
+          "extension": ".pdf",
+          "size_bytes": "171355",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-15C9EF7601BC",
+          "extension": ".pdf",
+          "size_bytes": "82401",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-227299EF436B",
+          "extension": ".pdf",
+          "size_bytes": "121330",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-60F2854C5258",
+          "extension": ".pdf",
+          "size_bytes": "103084",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1011989EE2D2",
+          "extension": ".pdf",
+          "size_bytes": "100466",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-84AB2370162A",
+          "extension": ".pdf",
+          "size_bytes": "104835",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-8988F4104A1D",
+          "extension": ".pdf",
+          "size_bytes": "101699",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F322F8B4DE5B",
+          "extension": ".pdf",
+          "size_bytes": "118770",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CCD858B68F38",
+          "extension": ".pdf",
+          "size_bytes": "98252",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AEFCF9DF09BB",
+          "extension": ".pdf",
+          "size_bytes": "102613",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E8F75D266115",
+          "extension": ".pdf",
+          "size_bytes": "164199",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C1CF082EF0B0",
+          "extension": ".pdf",
+          "size_bytes": "76845",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C216E9DAFD66",
+          "extension": ".pdf",
+          "size_bytes": "114242",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E9D71D7DBF03",
+          "extension": ".pdf",
+          "size_bytes": "96002",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-529E8302D609",
+          "extension": ".pdf",
+          "size_bytes": "131411",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-ABB587027917",
+          "extension": ".pdf",
+          "size_bytes": "145301",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C0C2FD258FFC",
+          "extension": ".pdf",
+          "size_bytes": "98560",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9BB6F986DD14",
+          "extension": ".pdf",
+          "size_bytes": "205529",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-92D9D2DCC0F6",
+          "extension": ".pdf",
+          "size_bytes": "113353",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-12844836FFD4",
+          "extension": ".pdf",
+          "size_bytes": "97658",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-02C159898A9F",
+          "extension": ".pdf",
+          "size_bytes": "106320",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E1EF802C5076",
+          "extension": ".pdf",
+          "size_bytes": "104338",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-826539FA0348",
+          "extension": ".pdf",
+          "size_bytes": "9723656",
+          "role_hint": "supporting_document_non_generator"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9094E981958B",
+          "extension": ".pdf",
+          "size_bytes": "6207175",
+          "role_hint": "supporting_document_non_generator"
+        }
+      ],
+      "file_count_considered": 27,
+      "classified_file_count": 25,
+      "pages_counted_from_existing_v2_classifications": 47,
+      "page_count_unavailable_for_unclassified_files": 2,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 25,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1130610",
+      "review_result_path": "manifests/reference_detection/reviews/wave-001/1130610_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-001/B024-RP-W001-1130610.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CB6F3179EF2C",
+          "extension": ".pdf",
+          "size_bytes": "523226",
+          "role_hint": "supporting_document_non_generator"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A845C37A604C",
+          "extension": ".pdf",
+          "size_bytes": "88622",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-61D9F8FCED55",
+          "extension": ".pdf",
+          "size_bytes": "60868",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-27A9EE5E214C",
+          "extension": ".pdf",
+          "size_bytes": "80041",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F18562241911",
+          "extension": ".pdf",
+          "size_bytes": "65390",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 5,
+      "classified_file_count": 4,
+      "pages_counted_from_existing_v2_classifications": 4,
+      "page_count_unavailable_for_unclassified_files": 1,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 4,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "NOT_ESTABLISHED_BY_V2",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1141201",
+      "review_result_path": "manifests/reference_detection/reviews/wave-001/1141201_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-001/B024-RP-W001-1141201.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E6FAE2FBA210",
+          "extension": ".pdf",
+          "size_bytes": "11655986",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5E484EC31484",
+          "extension": ".pdf",
+          "size_bytes": "13125717",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-01A1E0A93151",
+          "extension": ".pdf",
+          "size_bytes": "3054859",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-EDCD2BB9C8A9",
+          "extension": ".pdf",
+          "size_bytes": "11831769",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-31DF2ACEF38E",
+          "extension": ".pdf",
+          "size_bytes": "13384310",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A005E4DEAD77",
+          "extension": ".pdf",
+          "size_bytes": "3112384",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E1DB011D5675",
+          "extension": ".pdf",
+          "size_bytes": "52559",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5D87D9C4214B",
+          "extension": ".pdf",
+          "size_bytes": "73247",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F8A201435093",
+          "extension": ".pdf",
+          "size_bytes": "53365",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F48CF66CDC91",
+          "extension": ".pdf",
+          "size_bytes": "48505",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-355F712189BD",
+          "extension": ".pdf",
+          "size_bytes": "71542",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1B1F4E137C06",
+          "extension": ".pdf",
+          "size_bytes": "56811",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C5E3BF89F313",
+          "extension": ".pdf",
+          "size_bytes": "58608",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-BC9AE59E1B71",
+          "extension": ".pdf",
+          "size_bytes": "70278",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5AC5511DA766",
+          "extension": ".pdf",
+          "size_bytes": "82981",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-6C0F04F26603",
+          "extension": ".pdf",
+          "size_bytes": "67124",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-849DA4C159D2",
+          "extension": ".pdf",
+          "size_bytes": "66097",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A0A7168FE6AA",
+          "extension": ".pdf",
+          "size_bytes": "44641",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-086D8FF43C51",
+          "extension": ".pdf",
+          "size_bytes": "58086",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B253A7012860",
+          "extension": ".pdf",
+          "size_bytes": "74707",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E66B76577303",
+          "extension": ".pdf",
+          "size_bytes": "93956",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0FA83A5EBF23",
+          "extension": ".pdf",
+          "size_bytes": "72964",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0C52A6468418",
+          "extension": ".pdf",
+          "size_bytes": "74097",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9AC6C8BD8A38",
+          "extension": ".pdf",
+          "size_bytes": "52947",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-D632A1155872",
+          "extension": ".pdf",
+          "size_bytes": "69653",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A8D290DD09B0",
+          "extension": ".pdf",
+          "size_bytes": "61923",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E44EF05C8FF9",
+          "extension": ".pdf",
+          "size_bytes": "59840",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B5786C3314EC",
+          "extension": ".pdf",
+          "size_bytes": "67784",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3DF36116FEA0",
+          "extension": ".pdf",
+          "size_bytes": "71712",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B3880046FA2F",
+          "extension": ".pdf",
+          "size_bytes": "56925",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E571C47850A0",
+          "extension": ".pdf",
+          "size_bytes": "42756",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-971733D4CB1E",
+          "extension": ".pdf",
+          "size_bytes": "63788",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4AFB7E6976CF",
+          "extension": ".pdf",
+          "size_bytes": "61566",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9D56A944D842",
+          "extension": ".pdf",
+          "size_bytes": "60285",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9D48925C8423",
+          "extension": ".pdf",
+          "size_bytes": "60537",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-8D829662FB10",
+          "extension": ".pdf",
+          "size_bytes": "65439",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E31A30D1C9F5",
+          "extension": ".pdf",
+          "size_bytes": "58119",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5EB1E86EDB5B",
+          "extension": ".pdf",
+          "size_bytes": "70058",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4587B6D92FD3",
+          "extension": ".pdf",
+          "size_bytes": "65697",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0F5C72B8E8CB",
+          "extension": ".pdf",
+          "size_bytes": "62553",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3ECD6002070B",
+          "extension": ".pdf",
+          "size_bytes": "72251",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-56A47608F05E",
+          "extension": ".pdf",
+          "size_bytes": "62543",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-8AAA8474FB51",
+          "extension": ".pdf",
+          "size_bytes": "66959",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7A92CE684590",
+          "extension": ".pdf",
+          "size_bytes": "62997",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B52FFEC4834D",
+          "extension": ".pdf",
+          "size_bytes": "69450",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-585795549163",
+          "extension": ".pdf",
+          "size_bytes": "62368",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5490A6A80494",
+          "extension": ".pdf",
+          "size_bytes": "71409",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AC98F0A0564B",
+          "extension": ".pdf",
+          "size_bytes": "45858",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-05EA02A2D0E1",
+          "extension": ".pdf",
+          "size_bytes": "69994",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AC9B9E37EE7D",
+          "extension": ".pdf",
+          "size_bytes": "69921",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-32AA26A235B8",
+          "extension": ".pdf",
+          "size_bytes": "53968",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7F9663FE8610",
+          "extension": ".pdf",
+          "size_bytes": "61419",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 52,
+      "classified_file_count": 52,
+      "pages_counted_from_existing_v2_classifications": 138,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 52,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1120706",
+      "review_result_path": "manifests/reference_detection/reviews/wave-002/1120706_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-002/B024-RP-W002-1120706.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AD9735D60401",
+          "extension": ".pdf",
+          "size_bytes": "5289014",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-8E11CA114C41",
+          "extension": ".pdf",
+          "size_bytes": "67527",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5C5FB9AAFD0B",
+          "extension": ".pdf",
+          "size_bytes": "123611",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7F840959EAA9",
+          "extension": ".pdf",
+          "size_bytes": "66112",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B2B83E18FDEB",
+          "extension": ".pdf",
+          "size_bytes": "82279",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-41F748B47AAB",
+          "extension": ".pdf",
+          "size_bytes": "123852",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-FCC2E825D24D",
+          "extension": ".pdf",
+          "size_bytes": "75867",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-04F57574880D",
+          "extension": ".pdf",
+          "size_bytes": "77933",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-D7BCCAE1CF0D",
+          "extension": ".pdf",
+          "size_bytes": "77525",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E2216F2D8C98",
+          "extension": ".pdf",
+          "size_bytes": "74476",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E16000B94FEC",
+          "extension": ".pdf",
+          "size_bytes": "54371",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5DF9223B316E",
+          "extension": ".pdf",
+          "size_bytes": "39861",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-73B031491576",
+          "extension": ".pdf",
+          "size_bytes": "70753",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 13,
+      "classified_file_count": 13,
+      "pages_counted_from_existing_v2_classifications": 24,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 13,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1130104",
+      "review_result_path": "manifests/reference_detection/reviews/wave-002/1130104_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-002/B024-RP-W002-1130104.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1926BF5F6647",
+          "extension": ".pdf",
+          "size_bytes": "2024766",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 1,
+      "classified_file_count": 1,
+      "pages_counted_from_existing_v2_classifications": 3,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 1,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "POSSIBLE_BUT_NOT_PROVEN",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1140201",
+      "review_result_path": "manifests/reference_detection/reviews/wave-002/1140201_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-002/B024-RP-W002-1140201.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-81240BF1E2F2",
+          "extension": ".pdf",
+          "size_bytes": "643997",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-936DF5FE4FD3",
+          "extension": ".pdf",
+          "size_bytes": "3440538",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-92E357A3AFE1",
+          "extension": ".pdf",
+          "size_bytes": "683562",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-639444E75C2C",
+          "extension": ".pdf",
+          "size_bytes": "3616257",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-6E098BBA8C60",
+          "extension": ".pdf",
+          "size_bytes": "75280",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-75B49734773C",
+          "extension": ".pdf",
+          "size_bytes": "56146",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-43B8872FA329",
+          "extension": ".pdf",
+          "size_bytes": "172656",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9DE2AE75247A",
+          "extension": ".pdf",
+          "size_bytes": "83700",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E14078F8A785",
+          "extension": ".pdf",
+          "size_bytes": "99239",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3300D3554A95",
+          "extension": ".pdf",
+          "size_bytes": "99644",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0C04D23F284E",
+          "extension": ".pdf",
+          "size_bytes": "100599",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 11,
+      "classified_file_count": 11,
+      "pages_counted_from_existing_v2_classifications": 21,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 11,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1140706",
+      "review_result_path": "manifests/reference_detection/reviews/wave-002/1140706_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-002/B024-RP-W002-1140706.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-8C02446E1555",
+          "extension": ".pdf",
+          "size_bytes": "6019408",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E01439E04B03",
+          "extension": ".pdf",
+          "size_bytes": "6054309",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0E321F77FF58",
+          "extension": ".pdf",
+          "size_bytes": "88076",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9277CBFBD44B",
+          "extension": ".pdf",
+          "size_bytes": "50019",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-6BE85FA4AE82",
+          "extension": ".pdf",
+          "size_bytes": "52363",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-16122EB9414F",
+          "extension": ".pdf",
+          "size_bytes": "67740",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E75BC3FF40EB",
+          "extension": ".pdf",
+          "size_bytes": "52631",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-074454338165",
+          "extension": ".pdf",
+          "size_bytes": "67335",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9F015CFFD673",
+          "extension": ".pdf",
+          "size_bytes": "62291",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7EF33C5DA4A6",
+          "extension": ".pdf",
+          "size_bytes": "56785",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-08638FDA39F0",
+          "extension": ".pdf",
+          "size_bytes": "49665",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0587E453EFA0",
+          "extension": ".pdf",
+          "size_bytes": "50617",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 12,
+      "classified_file_count": 12,
+      "pages_counted_from_existing_v2_classifications": 30,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 12,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1141106",
+      "review_result_path": "manifests/reference_detection/reviews/wave-002/1141106_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-002/B024-RP-W002-1141106.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5131FACB64AE",
+          "extension": ".pdf",
+          "size_bytes": "322716",
+          "role_hint": "supporting_document_non_generator"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-8B6B15856164",
+          "extension": ".pdf",
+          "size_bytes": "9909",
+          "role_hint": "supporting_document_non_generator"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AC24330AABF0",
+          "extension": ".pdf",
+          "size_bytes": "4489700",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A67E4CFBE22B",
+          "extension": ".pdf",
+          "size_bytes": "4489700",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CB13DE6582DA",
+          "extension": ".pdf",
+          "size_bytes": "63742",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AB792D0964D4",
+          "extension": ".pdf",
+          "size_bytes": "34309",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-620E5E82D1FB",
+          "extension": ".pdf",
+          "size_bytes": "53801",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-60307030F152",
+          "extension": ".pdf",
+          "size_bytes": "54731",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7A8C30FB376A",
+          "extension": ".pdf",
+          "size_bytes": "52194",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-182645614C63",
+          "extension": ".pdf",
+          "size_bytes": "51982",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3A130E0F35CC",
+          "extension": ".pdf",
+          "size_bytes": "52916",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F4B59B399918",
+          "extension": ".pdf",
+          "size_bytes": "56324",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 12,
+      "classified_file_count": 10,
+      "pages_counted_from_existing_v2_classifications": 24,
+      "page_count_unavailable_for_unclassified_files": 2,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 10,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1150104",
+      "review_result_path": "manifests/reference_detection/reviews/wave-002/1150104_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-002/B024-RP-W002-1150104.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9C6ECBEBEE64",
+          "extension": ".pdf",
+          "size_bytes": "8706153",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-598EFFB1B762",
+          "extension": ".pdf",
+          "size_bytes": "8690587",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-658EF8004EF4",
+          "extension": ".pdf",
+          "size_bytes": "1055608",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-BF74D08C0E9F",
+          "extension": ".pdf",
+          "size_bytes": "41618",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-65B8A6F3DBD3",
+          "extension": ".pdf",
+          "size_bytes": "48999",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B87B57EE53FE",
+          "extension": ".pdf",
+          "size_bytes": "52084",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-861276E67BE5",
+          "extension": ".pdf",
+          "size_bytes": "48186",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-059EEC7132CF",
+          "extension": ".pdf",
+          "size_bytes": "50164",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-51AEA833E77F",
+          "extension": ".pdf",
+          "size_bytes": "53318",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-798729E92AF4",
+          "extension": ".pdf",
+          "size_bytes": "41846",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F28B2907EDAE",
+          "extension": ".pdf",
+          "size_bytes": "47713",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-290D9F0895CC",
+          "extension": ".pdf",
+          "size_bytes": "51866",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-74CEB4882F4E",
+          "extension": ".pdf",
+          "size_bytes": "47400",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-BB64D082E153",
+          "extension": ".pdf",
+          "size_bytes": "46097",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C3C683934599",
+          "extension": ".pdf",
+          "size_bytes": "48482",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5C061A304227",
+          "extension": ".pdf",
+          "size_bytes": "45051",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AE5F9A6CDCA1",
+          "extension": ".pdf",
+          "size_bytes": "52750",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-923A197D8448",
+          "extension": ".pdf",
+          "size_bytes": "50304",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AC886C042CE8",
+          "extension": ".pdf",
+          "size_bytes": "48234",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-97BCDEB09058",
+          "extension": ".pdf",
+          "size_bytes": "59057",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-8B9665C62FFD",
+          "extension": ".pdf",
+          "size_bytes": "1252881",
+          "role_hint": "supporting_document_non_generator"
+        }
+      ],
+      "file_count_considered": 21,
+      "classified_file_count": 20,
+      "pages_counted_from_existing_v2_classifications": 53,
+      "page_count_unavailable_for_unclassified_files": 1,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 20,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1121201",
+      "review_result_path": "manifests/reference_detection/reviews/wave-003/1121201_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-003/B024-RP-W003-1121201.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-871A35105B5F",
+          "extension": ".pdf",
+          "size_bytes": "1372608",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A60093384F84",
+          "extension": ".pdf",
+          "size_bytes": "1224940",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1A9102381A96",
+          "extension": ".pdf",
+          "size_bytes": "62823",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C66BA8BA9590",
+          "extension": ".pdf",
+          "size_bytes": "40581",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B59A83A0E5E4",
+          "extension": ".pdf",
+          "size_bytes": "28329",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4302C72BEF2E",
+          "extension": ".pdf",
+          "size_bytes": "37884",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E58B66847854",
+          "extension": ".pdf",
+          "size_bytes": "45694",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-457B0732CBAB",
+          "extension": ".pdf",
+          "size_bytes": "41679",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0645419418A6",
+          "extension": ".pdf",
+          "size_bytes": "52037",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C99CEB9F084E",
+          "extension": ".pdf",
+          "size_bytes": "39742",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4A45E27100E7",
+          "extension": ".pdf",
+          "size_bytes": "40329",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5C94E3802E75",
+          "extension": ".pdf",
+          "size_bytes": "48462",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-BAB5B0DEE741",
+          "extension": ".pdf",
+          "size_bytes": "59890",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-DFEC8043095E",
+          "extension": ".pdf",
+          "size_bytes": "50310",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5F9284182DD0",
+          "extension": ".pdf",
+          "size_bytes": "1073863",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-799F150DFC83",
+          "extension": ".pdf",
+          "size_bytes": "916347",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 16,
+      "classified_file_count": 16,
+      "pages_counted_from_existing_v2_classifications": 37,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 16,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "UNLIKELY_TO_BE_PROVEN_BY_METADATA_ONLY; V3_REQUIRED",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1130505",
+      "review_result_path": "manifests/reference_detection/reviews/wave-003/1130505_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-003/B024-RP-W003-1130505.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5930DD6C068A",
+          "extension": ".pdf",
+          "size_bytes": "691605",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-99E7F52B4DD6",
+          "extension": ".pdf",
+          "size_bytes": "104802",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CDC673CCFBFB",
+          "extension": ".pdf",
+          "size_bytes": "182667",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B754B45770B3",
+          "extension": ".pdf",
+          "size_bytes": "146892",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3C261E47D017",
+          "extension": ".pdf",
+          "size_bytes": "80668",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F90411D8A9DF",
+          "extension": ".pdf",
+          "size_bytes": "35438",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 6,
+      "classified_file_count": 6,
+      "pages_counted_from_existing_v2_classifications": 10,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 6,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "NOT_ESTABLISHED_BY_V2",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1130901",
+      "review_result_path": "manifests/reference_detection/reviews/wave-003/1130901_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-003/B024-RP-W003-1130901.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-6FBD58B79BC2",
+          "extension": ".pdf",
+          "size_bytes": "92741",
+          "role_hint": "supporting_document_non_generator"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-85364516D9E7",
+          "extension": ".pdf",
+          "size_bytes": "550154",
+          "role_hint": "supporting_document_non_generator"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4454CAF4F80D",
+          "extension": ".pdf",
+          "size_bytes": "702570",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B36BE69ACFDF",
+          "extension": ".pdf",
+          "size_bytes": "695882",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4345ADC649F2",
+          "extension": ".pdf",
+          "size_bytes": "1121195",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 5,
+      "classified_file_count": 3,
+      "pages_counted_from_existing_v2_classifications": 3,
+      "page_count_unavailable_for_unclassified_files": 2,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 3,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "NOT_ESTABLISHED_BY_V2",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1131105",
+      "review_result_path": "manifests/reference_detection/reviews/wave-003/1131105_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-003/B024-RP-W003-1131105.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CC2C6DCE1521",
+          "extension": ".pdf",
+          "size_bytes": "111371",
+          "role_hint": "supporting_document_non_generator"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5C2A0ECFB416",
+          "extension": ".pdf",
+          "size_bytes": "112298",
+          "role_hint": "supporting_document_non_generator"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-EAC38DC48CAB",
+          "extension": ".pdf",
+          "size_bytes": "1592105",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-34152A29AE15",
+          "extension": ".pdf",
+          "size_bytes": "489342",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E174F843328A",
+          "extension": ".pdf",
+          "size_bytes": "472914",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A62B942604C0",
+          "extension": ".pdf",
+          "size_bytes": "1020853",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 6,
+      "classified_file_count": 4,
+      "pages_counted_from_existing_v2_classifications": 6,
+      "page_count_unavailable_for_unclassified_files": 2,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 4,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "NOT_ESTABLISHED_BY_V2",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1140606",
+      "review_result_path": "manifests/reference_detection/reviews/wave-003/1140606_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-003/B024-RP-W003-1140606.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5C7668B821DF",
+          "extension": ".pdf",
+          "size_bytes": "786671",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CA493D92CDEE",
+          "extension": ".pdf",
+          "size_bytes": "792792",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A6B8D4625EC0",
+          "extension": ".pdf",
+          "size_bytes": "1305943",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 3,
+      "classified_file_count": 3,
+      "pages_counted_from_existing_v2_classifications": 3,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 3,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "POSSIBLE_BUT_NOT_PROVEN",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    },
+    {
+      "project_id": "1150103",
+      "review_result_path": "manifests/reference_detection/reviews/wave-003/1150103_reference_presence.json",
+      "visible_manifest_path": "orchestration/input_manifests/reference_detection/wave-003/B024-RP-W003-1150103.visible_files.json",
+      "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+      "classifier_decision": "PARTIAL_REFERENCE_SET",
+      "files_considered": [
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-57B49343A624",
+          "extension": ".pdf",
+          "size_bytes": "807697",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-00CF91E49CEE",
+          "extension": ".pdf",
+          "size_bytes": "1461220",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        },
+        {
+          "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-D24B68C1D070",
+          "extension": ".pdf",
+          "size_bytes": "1461371",
+          "role_hint": "completed_sheetmetal_drawing_reference"
+        }
+      ],
+      "file_count_considered": 3,
+      "classified_file_count": 3,
+      "pages_counted_from_existing_v2_classifications": 3,
+      "page_count_unavailable_for_unclassified_files": 0,
+      "detected_output_types": [
+        "SHEET_METAL"
+      ],
+      "missing_target_output_types": [
+        "PRODUCTION",
+        "PUNCH"
+      ],
+      "classification_count": 3,
+      "copy_failure_count": 0,
+      "signals_available": [
+        "neutral candidate file id",
+        "recorded source hash checked during vault copy",
+        "extension and size metadata",
+        "inventory role hint",
+        "filename/path metadata inside isolated visible manifest",
+        "PDF page count for files that produced a v2 classification",
+        "embedded text extraction attempted transiently by pypdf"
+      ],
+      "signals_unavailable_or_not_persisted": [
+        "rendered full-page images",
+        "title-block-region crops",
+        "neutral visual signatures",
+        "page-level target-output ranges",
+        "classification of pages inside otherwise excluded production-control/electrical folders",
+        "combined multipage package structure",
+        "original-versus-revision supersession",
+        "duplicate and near-duplicate adjudication",
+        "independent blind second classifier result",
+        "per-file no-classification reason for files that produced no classification"
+      ],
+      "reason_promotion_was_blocked": "V2 detected only SHEET_METAL classifications; all-three promotion requires PRODUCTION, SHEET_METAL, and PUNCH. The v2 contract did not render pages, did not persist page-level role evidence, did not resolve combined/revision packages, and skipped deterministic forbidden-role paths even when a target drawing might be stored under a generator-forbidden folder.",
+      "v3_could_resolve_blocker": "POSSIBLE; requires reference-vault-only page rendering, page-level classification, project-identity confirmation, revision resolution, duplicate handling, and independent agreement.",
+      "probably_genuinely_incomplete": "POSSIBLE_BUT_NOT_PROVEN",
+      "diagnosis_notes": [
+        "Do not infer missing target drawings from v2 metadata insufficiency alone.",
+        "No raw text, image, thumbnail, private path, drawing dimension, component detail, quantity, or layout instruction is included in this diagnosis."
+      ]
+    }
+  ],
+  "data_minimization": {
+    "raw_reference_text_persisted": false,
+    "images_or_thumbnails_persisted": false,
+    "private_absolute_paths_included": false,
+    "reference_hashes_included": false,
+    "drawing_dimensions_or_component_details_included": false
+  }
+}
