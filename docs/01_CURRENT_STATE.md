@@ -1,19 +1,22 @@
 # Current State
 
-Current phase: cycle-000 reference detector v3 known-positive calibration failed before source screening.
+Current phase: cycle-000 reference detector calibration stopped at the vision
+privacy gate before detector v4.
 
 Accepted release: none.
 
 Current candidate: `baseline-024-cycle-000` reference-complete project discovery.
 
-Current status: `DETECTOR_V3_RECALL_FAIL`.
+Current status: `VISION_CLASSIFIER_UNAVAILABLE`.
 
 Accepted amendments: `D-0017` expands baseline-024 candidate discovery beyond
 the prior twenty-project metadata-only pool to the full approved development
 inventory under `SRC-ALL-PROJECTS`; `D-0018` accepts
 `target_output_detection_v3_page_content_isolated` as content-aware,
 page-level, reference-vault-only classification; `D-0019` requires known-positive
-recall calibration before reference-universe exhaustion may be declared. These amendments do not weaken
+recall calibration before reference-universe exhaustion may be declared; `D-0020`
+records that GPT-5 vision children are not available for private reference-page
+classification while privacy approval remains `NOT_APPROVED`. These amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -54,6 +57,20 @@ false-negative output-type count was `31`; project-identity mismatch count was
 detector v4, expanded screening, and final audit were not run after the positive
 recall gate failed.
 
+Vision classifier availability result after `D-0019`: a fresh synthetic
+local-image probe child correctly classified a non-private red/blue test image
+and reported actual model `GPT-5`. `docs/PRIVACY_APPROVAL.md` remains
+`NOT_APPROVED`, so no completed reference page, source file, generated output,
+title-block crop, trajectory, or reviewer finding was sent to that vision path.
+Actual private reference pages inspected by vision agents remain `0`. Detector
+v4 was not created, negative controls were not run, and expanded screening did
+not resume. Stop status: `VISION_CLASSIFIER_UNAVAILABLE`.
+
+Regression coverage after `D-0019`: `scripts/run_tests.py` now includes
+`test_reference_detector_v3_known_positive_recall_gate`, covering all 13 missed
+known-positive projects and preventing the local deterministic v3 replay from
+being treated as actual vision classification. Full test runner status: `PASS`.
+
 Portfolio result: mean score `42`, median `42`, minimum `42`, mean scorable
 coverage `38`; validity rate `100%`; critical findings `0`; high findings `36`
 across primary reviews.
@@ -92,9 +109,10 @@ Recommendations remain PROPOSED. No drawing-generation behavior, accepted
 Instructions, production Knowledge, extraction logic, renderer behavior,
 validation behavior, grading weights, or tolerance profiles were optimized.
 
-Exact next action: do not start source screening, cohort freeze, or baseline
-generation from the v3 exhaustion result. Treat that exhaustion conclusion as
-provisional. If work resumes, add regression coverage from the missed
-known-positive controls and determine whether actual vision-capable
-classification is available before creating detector v4. Preserve v3 and
-calibration evidence separately.
+Exact next action: do not start source screening, cohort freeze, baseline
+generation, negative controls, or detector v4 from the v3 exhaustion result.
+Treat that exhaustion conclusion as provisional. Work may resume only after an
+explicit approved path exists for private reference-page vision classification
+or a local-only vision classifier is available. Then preserve the existing v3
+evidence, create detector v4 under new run IDs, and rerun positive and negative
+controls before any expanded screening.

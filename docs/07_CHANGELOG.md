@@ -123,3 +123,15 @@
 - Stopped with `DETECTOR_V3_RECALL_FAIL`. The previous v3 exhaustion result is
   preserved but provisional; no negative controls, detector v4, source
   screening, cohort freeze, or baseline generation was started.
+- Added regression coverage for the v3 known-positive miss set:
+  `test_reference_detector_v3_known_positive_recall_gate` covers all 13 missed
+  controls and prevents local deterministic v3 output from being treated as
+  actual vision classification.
+- Probed fresh child-agent vision on a non-private synthetic image; the child
+  reported actual model `GPT-5` and passed the red/blue image check.
+- Stopped with `VISION_CLASSIFIER_UNAVAILABLE` because
+  `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`; no private completed
+  reference page, title-block crop, source file, generated output, trajectory,
+  or reviewer finding was sent to the GPT-5 vision path. Detector v4, negative
+  controls, expanded screening, cohort freeze, and baseline generation remain
+  blocked.

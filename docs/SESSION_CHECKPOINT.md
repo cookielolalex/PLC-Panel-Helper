@@ -1,6 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: cycle-000 reference detector v3 known-positive calibration failed before source screening.
+Current phase: cycle-000 reference detector calibration stopped at the vision
+privacy gate before detector v4.
 
 Accepted release: none.
 
@@ -12,7 +13,7 @@ Evaluator version for future cycle-000 work: `plc_layout_evaluator_v2_sensitivit
 
 Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
 
-Current status: `DETECTOR_V3_RECALL_FAIL`.
+Current status: `VISION_CLASSIFIER_UNAVAILABLE`.
 
 Latest evidence: `reports/baseline-024/reference-detection-v3/screening_yield.md`,
 `reports/baseline-024/reference-detection-v3/independent_audit.json`,
@@ -21,6 +22,7 @@ Latest evidence: `reports/baseline-024/reference-detection-v3/screening_yield.md
 `reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.json`,
 `manifests/reference_detection/calibration/known_positive_controls.sealed.json`,
 `manifests/reference_detection/calibration/v3_known_positive_replay/`,
+`reports/baseline-024/reference-detector-calibration/vision_classifier_availability_probe.json`,
 `docs/specs/REFERENCE_VAULT_BOUNDARY_SPEC.md`,
 `docs/specs/REFERENCE_PRESENCE_DETECTION_V3.md`,
 `reports/baseline-024/reference-detection-v3/v2_zero_promotion_diagnosis.json`,
@@ -105,15 +107,29 @@ workflow hash verification `PASS`; source-root immutability verification
 model was `local`; actual model was
 `local_poppler_pypdf_deterministic_reference_detector_v3`.
 
+Vision availability result: a fresh child was launched on a non-private
+synthetic red/blue image and correctly inspected the pixels, reporting actual
+model `GPT-5`. `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`, so no private
+completed reference page, title-block crop, source file, generated output,
+trajectory, or reviewer finding was sent to that vision path. Actual private
+reference pages inspected by vision agents remain `0`. Detector v4 was not
+created. Stop status: `VISION_CLASSIFIER_UNAVAILABLE`.
+
+Regression coverage result: `scripts/run_tests.py` now includes
+`test_reference_detector_v3_known_positive_recall_gate`, covering all 13 missed
+known-positive projects from the v3 replay. Full repository test runner status:
+`PASS`.
+
 No drawing workflow optimization occurred. No expanded-candidate source
 screening, sanitized bundle construction, final cohort freeze, baseline
 generation, review, or production approval occurred. Baseline generation
 attempts remain `0`.
 
 Exact next action: do not start source-review quorum, sanitized-bundle
-construction, cohort freeze, baseline generation, review, or optimization from
-the v3 exhaustion result. Treat v3 exhaustion as provisional after the failed
-known-positive recall gate. If work resumes, add regression coverage from the
-missed known-positive controls and determine whether actual vision-capable
-classification is available before creating detector v4. Preserve v3 and
-calibration evidence separately.
+construction, cohort freeze, baseline generation, review, optimization,
+negative controls, or detector v4 from the v3 exhaustion result. Treat v3
+exhaustion as provisional after the failed known-positive recall gate. Work may
+resume only after an explicit approved path exists for private reference-page
+vision classification or a local-only vision classifier is available. Preserve
+v3 and calibration evidence separately, then create detector v4 under new run
+IDs and rerun positive and negative controls before any expanded screening.

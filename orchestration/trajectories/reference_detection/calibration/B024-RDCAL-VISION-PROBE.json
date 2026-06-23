@@ -1,0 +1,25 @@
+{
+  "task_id": "B024-RDCAL-VISION-PROBE",
+  "parent_id": "B024-RDCAL-V3-KNOWN-POSITIVE-REPLAY",
+  "agent_type": "vision_capability_probe",
+  "requested_model": "inherited_parent_model_with_local_image_input",
+  "actual_model": "GPT-5",
+  "model_match": false,
+  "session_id": "019ef3da-1a89-7683-b044-5a03efd18d51",
+  "sandbox": "child_agent_synthetic_local_image_only",
+  "visible_file_manifest": "orchestration/input_manifests/reference_detection/calibration/B024-RDCAL-VISION-PROBE.visible_files.json",
+  "started_at": "2026-06-23T17:40:00+08:00",
+  "completed_at": "2026-06-23T17:41:00+08:00",
+  "exit_status": "PASS",
+  "private_project_data_transmitted": false,
+  "completed_reference_content_transmitted": false,
+  "response": {
+    "status": "PASS",
+    "left_half_color": "red",
+    "right_half_color": "blue",
+    "can_inspect_image": true,
+    "requested_model": "vision capability probe",
+    "actual_model": "GPT-5"
+  },
+  "privacy_gate_result": "BLOCKED_FOR_PRIVATE_REFERENCE_CLASSIFICATION_PRIVACY_NOT_APPROVED"
+}

@@ -503,6 +503,43 @@ def test_reference_detection_v3_duplicates_identity_and_missing_types() -> None:
     assert_true(any(row["neutral_reference_file_id"] == "REF-NEAR-DUP-PROD" and row["page_classification"] == "PRODUCTION_DRAWING" for row in pages), "near duplicate should remain same target type, not a missing third output")
 
 
+def test_reference_detector_v3_known_positive_recall_gate() -> None:
+    summary_path = ROOT / "reports" / "baseline-024" / "reference-detector-calibration" / "known_positive_replay_summary.json"
+    summary = read_json(summary_path)
+    expected_projects = {
+        "1110101",
+        "1110103",
+        "1110104",
+        "1110203",
+        "1110204",
+        "1110205",
+        "1110405",
+        "1110410",
+        "1110704",
+        "1110801",
+        "1120207",
+        "1120305",
+        "1120308",
+    }
+    project_results = {row["project_id"]: row for row in summary["project_results"]}
+    assert_true(summary["detector_version"] == "target_output_detection_v3_page_content_isolated", "unexpected detector under v3 replay gate")
+    assert_true(summary["status"] == "DETECTOR_V3_RECALL_FAIL", "v3 known-positive replay must remain a failed gate until superseded")
+    assert_true(set(summary["known_positive_projects"]) == expected_projects, "known-positive control set changed")
+    assert_true(set(project_results) == expected_projects, "known-positive replay result set changed")
+    assert_true(summary["positive_projects_detected_all_three"] == 0, "v3 must not be recorded as detecting any all-three known positive")
+    assert_true(summary["false_negative_output_type_count"] == 31, "v3 false-negative count changed without a new detector version")
+    assert_true(summary["project_identity_mismatch_count"] == 0, "project identity mismatch count changed")
+    assert_true(summary["per_type_recall"]["PRODUCTION_DRAWING"]["detected"] == 0, "v3 production recall unexpectedly changed")
+    assert_true(summary["per_type_recall"]["SHEETMETAL_DRAWING"]["detected"] == 8, "v3 sheetmetal recall unexpectedly changed")
+    assert_true(summary["per_type_recall"]["PUNCH_DRAWING"]["detected"] == 0, "v3 punch recall unexpectedly changed")
+    assert_true(summary["actual_vision_agents"]["image_only_pages_inspected_by_actual_vision_agents"] == 0, "local v3 replay must not masquerade as actual vision classification")
+    assert_true(summary["classifier_models"][0]["actual_model"] == "local_poppler_pypdf_deterministic_reference_detector_v3", "v3 replay model provenance changed")
+    for project_id in expected_projects:
+        result = project_results[project_id]
+        assert_true(result["missed_output_types"], f"{project_id} must remain a recorded v3 missed-positive regression case")
+        assert_true("IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION" in result["failure_reason"], f"{project_id} missing real-vision failure reason")
+
+
 def main() -> None:
     tests = [
         test_json_schemas_parse,
@@ -518,6 +555,7 @@ def main() -> None:
         test_bundle_verifier_rejects_leaks_and_traversal,
         test_reference_detection_v3_boundary_and_page_level_sets,
         test_reference_detection_v3_duplicates_identity_and_missing_types,
+        test_reference_detector_v3_known_positive_recall_gate,
     ]
     failures = []
     for test in tests:

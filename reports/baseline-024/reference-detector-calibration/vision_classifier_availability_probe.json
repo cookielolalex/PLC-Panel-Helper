@@ -1,0 +1,64 @@
+{
+  "probe_id": "B024-RDCAL-VISION-AVAILABILITY-PROBE",
+  "generated_at": "2026-06-23T17:42:20+08:00",
+  "starting_commit": "776e25f60685c4ccd5bfd015abb965950617ed4a",
+  "purpose": "Determine whether actual vision-capable classification may be used before creating detector v4.",
+  "synthetic_probe": {
+    "status": "PASS",
+    "agent_id": "019ef3da-1a89-7683-b044-5a03efd18d51",
+    "input_image": "tmp/vision_probe_red_left_blue_right.png",
+    "input_contains_private_project_data": false,
+    "requested_model": "inherited_parent_model_with_local_image_input",
+    "actual_model_reported_by_child": "GPT-5",
+    "left_half_color": "red",
+    "right_half_color": "blue",
+    "can_inspect_image": true
+  },
+  "privacy_gate": {
+    "privacy_approval_path": "docs/PRIVACY_APPROVAL.md",
+    "privacy_approval_status": "NOT_APPROVED",
+    "private_reference_images_sent_to_vision_agent": 0,
+    "private_reference_title_crops_sent_to_vision_agent": 0,
+    "project_pages_inspected_by_actual_vision_agents": 0,
+    "decision": "Do not transmit completed reference pages, title-block crops, source files, generated outputs, trajectories, or reviewer findings to the GPT-5 vision child while privacy approval remains NOT_APPROVED."
+  },
+  "detector_v3_calibration": {
+    "summary_path": "reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.json",
+    "detector_version": "target_output_detection_v3_page_content_isolated",
+    "status": "DETECTOR_V3_RECALL_FAIL",
+    "known_positive_projects_tested": 13,
+    "positive_projects_detected_all_three": 0,
+    "per_type_recall": {
+      "PRODUCTION_DRAWING": "0/13",
+      "SHEETMETAL_DRAWING": "8/13",
+      "PUNCH_DRAWING": "0/13"
+    },
+    "image_only_pages_inspected_by_actual_vision_agents": 0,
+    "classifier_actual_model": "local_poppler_pypdf_deterministic_reference_detector_v3"
+  },
+  "regression_coverage": {
+    "test_file": "scripts/run_tests.py",
+    "test_name": "test_reference_detector_v3_known_positive_recall_gate",
+    "missed_known_positive_projects_covered": [
+      "1110101",
+      "1110103",
+      "1110104",
+      "1110203",
+      "1110204",
+      "1110205",
+      "1110405",
+      "1110410",
+      "1110704",
+      "1110801",
+      "1120207",
+      "1120305",
+      "1120308"
+    ],
+    "test_result": "PASS"
+  },
+  "detector_v4": {
+    "created": false,
+    "reason": "Actual private reference-page vision classification is blocked by NOT_APPROVED privacy approval. V4 must not be created until a permitted vision path exists."
+  },
+  "final_status": "VISION_CLASSIFIER_UNAVAILABLE"
+}

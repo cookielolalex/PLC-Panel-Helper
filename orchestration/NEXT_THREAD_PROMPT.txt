@@ -3,9 +3,10 @@ You are a fresh root coordinator continuing this repository.
 Read the canonical checkpoint files, `reports/calibration-006/independent_audit.json`,
 `reports/evaluator-sensitivity/subagent_independent_audit.json`,
 `reports/baseline-024/reference-detection-v3/independent_audit.json`, and
-`reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.json`.
+`reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.json`,
+and `reports/baseline-024/reference-detector-calibration/vision_classifier_availability_probe.json`.
 
-Current status: `DETECTOR_V3_RECALL_FAIL`.
+Current status: `VISION_CLASSIFIER_UNAVAILABLE`.
 
 Starting point for verification:
 
@@ -84,16 +85,34 @@ Known-positive calibration outcome:
 - negative controls, detector v4, expanded screening, and final independent
   calibration audit were not run because the positive recall gate failed.
 
+Vision classifier availability outcome:
+
+- a fresh child inspected a non-private synthetic local image correctly;
+- actual model reported by the child: `GPT-5`;
+- `docs/PRIVACY_APPROVAL.md` status is `NOT_APPROVED`;
+- private completed-reference pages/title-block crops sent to vision agents:
+  `0`;
+- image-only private reference pages inspected by actual vision agents: `0`;
+- detector v4 was not created;
+- stop status: `VISION_CLASSIFIER_UNAVAILABLE`.
+
+Regression coverage:
+
+- `scripts/run_tests.py` includes
+  `test_reference_detector_v3_known_positive_recall_gate`;
+- it covers all 13 missed known-positive replay projects;
+- full repository test runner status: `PASS`.
+
 Exact next action:
 
 Do not start source-review quorum, sanitized-bundle construction, cohort freeze,
-baseline generation, review, or optimization from the v3 exhaustion result.
+baseline generation, review, optimization, negative controls, or detector v4
+from the v3 exhaustion result.
 Treat v3 exhaustion as provisional after the failed known-positive recall gate.
 
-If work resumes, add regression coverage from the missed known-positive
-controls and determine whether actual vision-capable classification is
-available before creating detector v4. Preserve v3 and calibration evidence
-separately. If actual vision classifiers are unavailable, stop with
-`VISION_CLASSIFIER_UNAVAILABLE`; otherwise create detector v4 only after the
-regression tests exist and rerun positive and negative controls before any
-expanded project screening.
+If work resumes, do not use GPT-5 child vision on private reference pages unless
+`docs/PRIVACY_APPROVAL.md` is explicitly changed to approve that processing, or
+a local-only vision classifier is available. Preserve v3 and calibration
+evidence separately. Create detector v4 only after a permitted private
+reference-page vision path exists, then rerun positive and negative controls
+before any expanded project screening.

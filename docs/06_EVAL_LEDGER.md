@@ -260,3 +260,31 @@ and `orchestration/trajectories/reference_detection/calibration/`.
 Generation status: not authorized. Negative controls, detector v4, expanded
 screening, and final independent calibration audit were not run because the
 positive recall gate failed.
+
+## baseline-024-cycle-000 vision classifier availability gate
+
+Status: `VISION_CLASSIFIER_UNAVAILABLE`.
+
+Purpose: determine whether actual vision-capable classifiers may be used for
+private completed-reference page and title-block classification before detector
+v4.
+
+Result: a fresh child inspected a non-private synthetic image and reported
+actual model `GPT-5`, proving the installed child-agent path can inspect images.
+However, `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`, so that path is not
+available for private reference pages or title-block crops. No private project
+image was transmitted. Actual private reference pages inspected by vision
+agents: `0`.
+
+Regression coverage: `scripts/run_tests.py` now includes
+`test_reference_detector_v3_known_positive_recall_gate`, covering all 13 missed
+known-positive replay projects and preventing deterministic local v3 output from
+being accepted as actual vision classification. Full test runner status:
+`PASS`.
+
+Generation status: not authorized. Detector v4, negative controls, expanded
+screening, final cohort freeze, and baseline generation did not run.
+
+Evidence: `reports/baseline-024/reference-detector-calibration/vision_classifier_availability_probe.json`,
+`reports/baseline-024/reference-detector-calibration/vision_classifier_availability_probe.md`,
+and `scripts/run_tests.py`.

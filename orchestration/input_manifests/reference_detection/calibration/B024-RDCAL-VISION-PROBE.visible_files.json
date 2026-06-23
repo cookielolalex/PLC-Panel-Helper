@@ -1,0 +1,13 @@
+{
+  "task_id": "B024-RDCAL-VISION-PROBE",
+  "purpose": "Non-private synthetic probe for child-agent local_image vision capability.",
+  "contains_private_project_data": false,
+  "contains_completed_reference_content": false,
+  "visible_files": [
+    {
+      "path": "tmp/vision_probe_red_left_blue_right.png",
+      "sha256": "92F4A1231C8360791ED3C37B81822FF155020A05F32CB861EA70521569A3EBBA",
+      "description": "Synthetic 80x80 PNG with red left half and blue right half."
+    }
+  ]
+}
