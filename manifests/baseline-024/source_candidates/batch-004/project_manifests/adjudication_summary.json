@@ -1,0 +1,16 @@
+{
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "projects": [
+    {
+      "project_id": "1110501",
+      "status": "AGENT_QUORUM_APPROVED_EVAL",
+      "QUARANTINED": 4,
+      "AGENT_QUORUM_APPROVED_EVAL": 1
+    },
+    {
+      "project_id": "1110504",
+      "status": "QUARANTINED",
+      "QUARANTINED": 4
+    }
+  ]
+}

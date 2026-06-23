@@ -1,0 +1,176 @@
+{
+  "prefilter_id": "baseline024_batch-004_prefilter_1110504",
+  "project_id": "1110504",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "NO_REVIEWABLE_ITEMS",
+  "items": [
+    {
+      "decision_id": "SGD-2275B18F389C1A",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433-SHEET-001",
+      "project_id": "1110504",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110504三裕正-台江國家公園保育植物苗圃新建工程\\1100609110年台江國家公園保育植物苗圃新建工程材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45",
+      "worksheet_name": "預算總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "5CC9A3BC258DBF4CE7BEC7B2E5FFE8B26912783EC96CFBBC8A2BE671374508C1",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "EXTERNAL_LINK_NOT_NONE",
+        "EXTERNAL_LINK_PRESENT",
+        "FORMULA_DEPENDENCY_NOT_NONE",
+        "FORMULA_REFERENCES_OTHER_SHEET",
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "5CC9A3BC258DBF4CE7BEC7B2E5FFE8B26912783EC96CFBBC8A2BE671374508C1"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-8528F2BEFB24A8",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433-SHEET-002",
+      "project_id": "1110504",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110504三裕正-台江國家公園保育植物苗圃新建工程\\1100609110年台江國家公園保育植物苗圃新建工程材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45",
+      "worksheet_name": "預算詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "1C95923986A9BE77569D90E2DC640BCD643180B03D580A82D0FFBCB66ECBD92B",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "EXTERNAL_LINK_NOT_NONE",
+        "EXTERNAL_LINK_PRESENT",
+        "FORMULA_DEPENDENCY_NOT_NONE",
+        "FORMULA_REFERENCES_OTHER_SHEET",
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "1C95923986A9BE77569D90E2DC640BCD643180B03D580A82D0FFBCB66ECBD92B"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-A75F5FBE2DB65F",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433-SHEET-003",
+      "project_id": "1110504",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110504三裕正-台江國家公園保育植物苗圃新建工程\\1100609110年台江國家公園保育植物苗圃新建工程材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45",
+      "worksheet_name": "預算單價分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "158749A1B0B1F83C4D942C7F552648EBB7CAA4BB1A0A837A01C55E6A73A03122",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "EXTERNAL_LINK_NOT_NONE",
+        "EXTERNAL_LINK_PRESENT",
+        "FORMULA_DEPENDENCY_NOT_NONE",
+        "FORMULA_REFERENCES_OTHER_SHEET",
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "158749A1B0B1F83C4D942C7F552648EBB7CAA4BB1A0A837A01C55E6A73A03122"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-F62880104B8FCB",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433-SHEET-004",
+      "project_id": "1110504",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110504三裕正-台江國家公園保育植物苗圃新建工程\\1100609110年台江國家公園保育植物苗圃新建工程材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45",
+      "worksheet_name": "數量計算",
+      "worksheet_visibility": "hidden",
+      "worksheet_fingerprint": "90C980DEE9F906473F1D6163072C52D8006D9838A7C1988B591DEEA15C19AD76",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "EXTERNAL_LINK_NOT_NONE",
+        "EXTERNAL_LINK_PRESENT",
+        "FORMULA_DEPENDENCY_NOT_NONE",
+        "FORMULA_REFERENCES_OTHER_SHEET",
+        "HIDDEN_OR_VERY_HIDDEN_SHEET",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "90C980DEE9F906473F1D6163072C52D8006D9838A7C1988B591DEEA15C19AD76"
+        }
+      ],
+      "reviewable": false
+    }
+  ],
+  "summary": {
+    "QUARANTINED": 4
+  },
+  "run_metadata": {
+    "baseline_id": "baseline-024-cycle-000",
+    "batch_id": "batch-004",
+    "created_at": "2026-06-23T04:38:51Z",
+    "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-004\\source_decisions.csv",
+    "file_index": "manifests\\all_projects_file_role_index.csv",
+    "sheet_index": "manifests\\all_projects_workbook_sheet_index.csv"
+  }
+}

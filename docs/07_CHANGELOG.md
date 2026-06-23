@@ -70,3 +70,7 @@
 - Ran deterministic prefiltering, four independent specialist reviews, quorum adjudication, sanitized bundle verification, and independent source-bundle audit for six more candidate projects.
 - Accepted `1110704` and `1120305` as evaluation-only additions; preserved verifier rejection for `1110701`; left `1110402`, `1110706`, and `1120102` no-bundle/quarantined.
 - Current baseline-024 `ALLOWED_EVAL` count is `13`; generation remains blocked.
+- Completed Phase C source backfill with `baseline-024` batch-004, covering the final two frozen metadata-only candidates.
+- Batch-004 accepted no new evaluation-only projects; preserved verifier rejection for `1110501` and left `1110504` quarantined/no-bundle.
+- Stopped baseline-024 with `INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`: all 20 frozen candidates were processed, only 7 produced accepted bundles, the current verified count is `13`, and 11 additional projects are still required.
+- No 24-project baseline generation, reviews, final audit, drawing-workflow optimization, or production approval occurred.

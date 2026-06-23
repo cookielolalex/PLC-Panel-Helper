@@ -1,8 +1,8 @@
 # Baseline-024 Source Backfill Summary
 
-Status: `PHASE_C_BATCH_003_AUDIT_PASS_CONTINUE_BACKFILL`
+Status: `INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`
 
-No completed-reference content was inspected for source selection or source approval. No drawing generation was started.
+No completed-reference content was inspected for source selection or source approval. No baseline generation was started.
 
 ## Batch 001
 
@@ -31,11 +31,21 @@ No completed-reference content was inspected for source selection or source appr
 - Source bundle audit: `EVAL_SOURCE_BUNDLE_AUDIT_PASS`
 - Independent audit: `BATCH003_SOURCE_BACKFILL_AUDIT_PASS`
 
-## Current Count
+## Batch 004
+
+- Candidate projects: `1110501, 1110504`
+- Accepted ALLOWED_EVAL additions: none
+- Bundle-verification rejected projects: `1110501`
+- Quarantined/no-bundle projects: `1110504`
+- Source bundle audit: `EVAL_SOURCE_BUNDLE_AUDIT_NO_ACCEPTED_BUNDLES`
+- Independent audit: `BATCH004_SOURCE_BACKFILL_AUDIT_PASS`
+
+## Final Count
 
 - Existing anchors: `6`
 - New Phase C accepted projects: `7`
 - Current ALLOWED_EVAL count for baseline-024: `13`
 - Additional projects still required before generation: `11`
+- Frozen metadata-only candidates processed: `20 / 20`
 
-Generation remains blocked until exactly 24 verified `ALLOWED_EVAL` projects are frozen in the final cohort manifest.
+Stop condition: `INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`. The frozen safe candidate pool is exhausted, so generation remains blocked until new approved source authority or accepted proposal-first source/parser changes produce enough verified `ALLOWED_EVAL` projects.

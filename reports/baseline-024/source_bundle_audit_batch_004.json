@@ -1,0 +1,18 @@
+{
+  "audit_id": "baseline024_batch-004_source_bundle_audit",
+  "baseline_id": "baseline-024-cycle-000",
+  "batch_id": "batch-004",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "EVAL_SOURCE_BUNDLE_AUDIT_NO_ACCEPTED_BUNDLES",
+  "projects": [],
+  "errors": [],
+  "rejected_project_ids": [
+    "1110501"
+  ],
+  "quarantined_or_no_bundle_project_ids": [
+    "1110504"
+  ],
+  "reason": "No batch-004 project produced a verified accepted sanitized bundle; 1110501 failed bundle verification and 1110504 had no approved bundle.",
+  "created_at": "2026-06-23T04:45:00Z",
+  "git_head": "2aa0de9"
+}

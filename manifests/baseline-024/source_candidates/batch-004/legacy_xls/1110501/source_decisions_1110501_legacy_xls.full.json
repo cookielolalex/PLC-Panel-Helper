@@ -1,0 +1,105 @@
+[
+  {
+    "decision_id": "SGD-4D2DF2776016E7",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1110501",
+    "family_id": "詠翔鑫",
+    "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110501詠翔鑫-凱倫傘業有限公司 作業廠房、辦公室新建工程\\凱倫傘業有限公司 作業廠房、辦公室新建工程(工作紀錄單)(變更後).xls",
+    "file_name": "凱倫傘業有限公司 作業廠房、辦公室新建工程(工作紀錄單)(變更後).xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-19F7C90C379F",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-19F7C90C379F-XLS-SHEET-001",
+    "file_sha256": "23AB9536284E287CED8530E844AAB467ED28A7BAA937EE69C5AB89DE95B1FC65",
+    "file_size": "50688",
+    "workbook_format": "xls",
+    "worksheet_name": "未稅 (2)",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "59BA0924A6566E5403D4D67E51F60A0BA69FD7E2FE4102AEA110378DD07B0E30",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1110501"
+    ],
+    "detected_customer_identifiers": [
+      "詠翔鑫"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-19F7C90C379F",
+      "SRC-ALL-PROJECTS-FILE-19F7C90C379F-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-004\\legacy_xls\\1110501\\legacy_xls_parse\\1110501\\SRC-ALL-PROJECTS-FILE-19F7C90C379F\\001_未稅 (2).csv",
+    "sanitized_csv_sha256": "AC443F7A20DE1E1DF4235DA9E1C4A542408E0A89F0CFFFD980FC81634E3AF7A1",
+    "non_empty_rows": 35
+  },
+  {
+    "decision_id": "SGD-DB78A644224C0C",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1110501",
+    "family_id": "詠翔鑫",
+    "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110501詠翔鑫-凱倫傘業有限公司 作業廠房、辦公室新建工程\\凱倫傘業有限公司 作業廠房、辦公室新建工程(訂單成本分析表)(變更後).xls",
+    "file_name": "凱倫傘業有限公司 作業廠房、辦公室新建工程(訂單成本分析表)(變更後).xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-24DD84BF38D3",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-24DD84BF38D3-XLS-SHEET-001",
+    "file_sha256": "26657CA8ADF8C6F0F8AF4FB8DA3E049B8EA82F95CF4B5B48EFD483524AD5AAE7",
+    "file_size": "39424",
+    "workbook_format": "xls",
+    "worksheet_name": "Sheet1 (3)",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "E72DAE0F126E63E610C4952343D4A7339BC6B7E527CCFCB3D545E014C031ED3A",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1110501"
+    ],
+    "detected_customer_identifiers": [
+      "詠翔鑫"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NONE",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "CANDIDATE",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-24DD84BF38D3",
+      "SRC-ALL-PROJECTS-FILE-24DD84BF38D3-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-004\\legacy_xls\\1110501\\legacy_xls_parse\\1110501\\SRC-ALL-PROJECTS-FILE-24DD84BF38D3\\001_Sheet1 (3).csv",
+    "sanitized_csv_sha256": "A1644130666FFF8AD0E208005A22365D813CF91F9F01F86F6462AB9B708D8A53",
+    "non_empty_rows": 24
+  }
+]

@@ -1,6 +1,6 @@
 {
   "baseline_id": "baseline-024-cycle-000",
-  "status": "PHASE_C_SOURCE_BUNDLE_AUDIT_PARTIAL_PASS",
+  "status": "INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE",
   "accepted_project_count": 7,
   "accepted_project_ids": [
     "1110801",
@@ -68,8 +68,60 @@
       ],
       "audit_hash": "AC39B90586068C335BB4EF02F8683F52466F8B882A1B9D41AD1627593F96A36C",
       "independent_audit_hash": "8F9A856E38EB5712BC5590AE19F04A1BD9CF91AB74DB8A8C1B42D4BEEC8DF56C"
+    },
+    {
+      "batch_id": "batch-004",
+      "source_bundle_audit_status": "EVAL_SOURCE_BUNDLE_AUDIT_NO_ACCEPTED_BUNDLES",
+      "independent_audit_status": "BATCH004_SOURCE_BACKFILL_AUDIT_PASS",
+      "accepted_project_ids": [],
+      "bundle_rejected_project_ids": [
+        "1110501"
+      ],
+      "quarantined_project_ids": [
+        "1110504"
+      ],
+      "audit_hash": "5D238119AB58A3A04A476636B6A688BD6915772565E51221A703B038198195D2",
+      "independent_audit_hash": "1947989DD2F9831409C7597CD51688EA9E60EB94086D1DE802A50A43DB4D4315"
     }
   ],
   "generation_authorized": false,
-  "remaining_additional_allowed_eval_required": 11
+  "remaining_additional_allowed_eval_required": 11,
+  "phase_c_source_bundle_audit_status": "PHASE_C_SOURCE_BUNDLE_AUDIT_PARTIAL_PASS_INSUFFICIENT_ELIGIBLE_PROJECTS",
+  "current_allowed_eval_project_count": 13,
+  "current_allowed_eval_project_ids": [
+    "1110101",
+    "1110104",
+    "1110204",
+    "1110205",
+    "1110405",
+    "1110410",
+    "1110801",
+    "1120207",
+    "1110103",
+    "1110203",
+    "1120308",
+    "1110704",
+    "1120305"
+  ],
+  "required_allowed_eval_project_count": 24,
+  "metadata_only_candidate_pool_processed_count": 20,
+  "metadata_only_candidate_pool_exhausted": true,
+  "bundle_rejected_project_ids": [
+    "1120101",
+    "1120204",
+    "1120301",
+    "1110404",
+    "1120202",
+    "1110701",
+    "1110501"
+  ],
+  "quarantined_or_no_bundle_project_ids": [
+    "1120201",
+    "1120309",
+    "1110402",
+    "1110706",
+    "1120102",
+    "1110504"
+  ],
+  "stop_reason": "INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE"
 }

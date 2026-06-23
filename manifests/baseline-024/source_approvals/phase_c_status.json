@@ -1,7 +1,7 @@
 {
   "baseline_id": "baseline-024-cycle-000",
   "phase": "cycle-000-C",
-  "status": "PHASE_C_BATCH_003_AUDIT_PASS_CONTINUE_BACKFILL",
+  "status": "INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE",
   "current_allowed_eval_count": 13,
   "new_allowed_eval_projects": [
     "1110801",
@@ -106,16 +106,43 @@
       },
       "source_bundle_audit": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
       "independent_audit": "BATCH003_SOURCE_BACKFILL_AUDIT_PASS"
+    },
+    {
+      "batch_id": "batch-004",
+      "status": "BATCH004_SOURCE_BACKFILL_AUDIT_PASS_NO_ACCEPTED_BUNDLES",
+      "candidate_project_ids": [
+        "1110501",
+        "1110504"
+      ],
+      "accepted_project_ids": [],
+      "quarantined_project_ids": [
+        "1110504"
+      ],
+      "bundle_rejected_project_ids": [
+        "1110501"
+      ],
+      "adjudication_item_counts": {
+        "AGENT_QUORUM_APPROVED_EVAL": 1,
+        "QUARANTINED": 8,
+        "AUTO_DENIED": 0
+      },
+      "source_bundle_audit": "EVAL_SOURCE_BUNDLE_AUDIT_NO_ACCEPTED_BUNDLES",
+      "independent_audit": "BATCH004_SOURCE_BACKFILL_AUDIT_PASS"
     }
   ],
   "generation_authorized": false,
-  "next_action": "continue Phase C source backfill from remaining metadata-only candidates; do not start generation",
+  "next_action": "stop Phase C; no safe eligible metadata-only candidates remain for the frozen 24-project baseline without new approved source authority",
   "evidence": {
     "backfill_plan": "manifests/baseline-024/source_candidates/backfill_plan.json",
-    "latest_batch_manifest": "manifests/baseline-024/source_candidates/batch-003/batch_manifest.json",
-    "latest_bundle_build_summary": "manifests/baseline-024/project_bundles/batch-003/bundle_build_summary.json",
-    "latest_source_bundle_audit": "reports/baseline-024/source_bundle_audit_batch_003.json",
-    "latest_independent_audit": "reports/baseline-024/source_bundle_audit_batch_003_independent.json",
-    "aggregate_source_bundle_audit": "reports/baseline-024/source_bundle_audit.json"
-  }
+    "latest_batch_manifest": "manifests/baseline-024/source_candidates/batch-004/batch_manifest.json",
+    "latest_bundle_build_summary": "manifests/baseline-024/project_bundles/batch-004/bundle_build_summary.json",
+    "latest_source_bundle_audit": "reports/baseline-024/source_bundle_audit_batch_004.json",
+    "latest_independent_audit": "reports/baseline-024/source_bundle_audit_batch_004_independent.json",
+    "aggregate_source_bundle_audit": "reports/baseline-024/source_bundle_audit.json",
+    "shortfall_report": "reports/baseline-024/insufficient_eligible_projects_for_24_baseline.json"
+  },
+  "metadata_only_candidate_pool_processed_count": 20,
+  "metadata_only_candidate_pool_exhausted": true,
+  "required_allowed_eval_project_count": 24,
+  "stop_reason": "INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE"
 }

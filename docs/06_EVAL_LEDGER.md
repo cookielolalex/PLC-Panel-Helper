@@ -123,3 +123,35 @@ Current baseline-024 readiness: 6 anchor projects plus 7 new Phase C additions, 
 Generation status: not authorized.
 
 Evidence: `manifests/baseline-024/source_approvals/phase_c_status.json`, `reports/baseline-024/source_backfill_summary.md`, `reports/baseline-024/source_bundle_audit.json`, `reports/baseline-024/source_bundle_audit_batch_003.json`, and `reports/baseline-024/source_bundle_audit_batch_003_independent.json`.
+
+## baseline-024-cycle-000 Phase C batch-004 source backfill
+
+Status: `BATCH004_SOURCE_BACKFILL_AUDIT_PASS_NO_ACCEPTED_BUNDLES`.
+
+Candidate projects: `1110501, 1110504`.
+
+Accepted evaluation-only additions: none.
+
+Rejected or quarantined: `1110501` failed sanitized bundle verification on forbidden modification-content sentinel; `1110504` remained `QUARANTINED` with no approved bundle.
+
+Current baseline-024 readiness: 6 anchor projects plus 7 new Phase C additions, for 13 verified `ALLOWED_EVAL` projects. Eleven additional verified projects are still required, but the frozen metadata-only candidate pool is exhausted.
+
+Generation status: not authorized.
+
+Evidence: `manifests/baseline-024/source_approvals/phase_c_status.json`, `reports/baseline-024/source_backfill_summary.md`, `reports/baseline-024/source_bundle_audit.json`, `reports/baseline-024/source_bundle_audit_batch_004.json`, and `reports/baseline-024/source_bundle_audit_batch_004_independent.json`.
+
+## baseline-024-cycle-000 Phase C shortfall
+
+Status: `INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`.
+
+Processed frozen metadata-only candidates: `20 / 20`.
+
+Accepted Phase C additions: `1110801, 1120207, 1110103, 1110203, 1120308, 1110704, 1120305`.
+
+Bundle-verification rejected projects: `1120101, 1120204, 1120301, 1110404, 1120202, 1110701, 1110501`.
+
+Quarantined/no-bundle projects: `1120201, 1120309, 1110402, 1110706, 1120102, 1110504`.
+
+Generation attempts: `0`; valid baseline runs: `0`; primary reviews: `0`; secondary reviews: `0`.
+
+Evidence: `reports/baseline-024/insufficient_eligible_projects_for_24_baseline.json` and `reports/baseline-024/insufficient_eligible_projects_for_24_baseline.md`.

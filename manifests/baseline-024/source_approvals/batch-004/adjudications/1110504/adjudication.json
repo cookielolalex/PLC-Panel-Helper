@@ -1,0 +1,105 @@
+{
+  "adjudication_id": "source_quorum_adjudication_1110504",
+  "project_id": "1110504",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "QUARANTINED",
+  "items": [
+    {
+      "decision_id": "SGD-2275B18F389C1A",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433",
+      "file_sha256": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45",
+      "worksheet_name": "預算總表",
+      "worksheet_fingerprint": "5CC9A3BC258DBF4CE7BEC7B2E5FFE8B26912783EC96CFBBC8A2BE671374508C1",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "EXTERNAL_LINK_NOT_NONE",
+        "EXTERNAL_LINK_PRESENT",
+        "FORMULA_DEPENDENCY_NOT_NONE",
+        "FORMULA_REFERENCES_OTHER_SHEET",
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-8528F2BEFB24A8",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433",
+      "file_sha256": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45",
+      "worksheet_name": "預算詳細表",
+      "worksheet_fingerprint": "1C95923986A9BE77569D90E2DC640BCD643180B03D580A82D0FFBCB66ECBD92B",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "EXTERNAL_LINK_NOT_NONE",
+        "EXTERNAL_LINK_PRESENT",
+        "FORMULA_DEPENDENCY_NOT_NONE",
+        "FORMULA_REFERENCES_OTHER_SHEET",
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-A75F5FBE2DB65F",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433",
+      "file_sha256": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45",
+      "worksheet_name": "預算單價分析表",
+      "worksheet_fingerprint": "158749A1B0B1F83C4D942C7F552648EBB7CAA4BB1A0A837A01C55E6A73A03122",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "EXTERNAL_LINK_NOT_NONE",
+        "EXTERNAL_LINK_PRESENT",
+        "FORMULA_DEPENDENCY_NOT_NONE",
+        "FORMULA_REFERENCES_OTHER_SHEET",
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-F62880104B8FCB",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1CD72C81F433",
+      "file_sha256": "F8DA9E91FD4E15411494A382A8BF90DE3A9E201F7C146D607BDC1AFD1847BC45",
+      "worksheet_name": "數量計算",
+      "worksheet_fingerprint": "90C980DEE9F906473F1D6163072C52D8006D9838A7C1988B591DEEA15C19AD76",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "EXTERNAL_LINK_NOT_NONE",
+        "EXTERNAL_LINK_PRESENT",
+        "FORMULA_DEPENDENCY_NOT_NONE",
+        "FORMULA_REFERENCES_OTHER_SHEET",
+        "HIDDEN_OR_VERY_HIDDEN_SHEET",
+        "WORKSHEET_NOT_VISIBLE"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    }
+  ],
+  "summary": {
+    "QUARANTINED": 4
+  },
+  "run_metadata": {
+    "prefilter": "manifests\\baseline-024\\source_candidates\\batch-004\\project_manifests\\1110504\\deterministic_prefilter.json",
+    "review_root": "manifests\\baseline-024\\source_approvals\\batch-004\\reviews",
+    "created_at": "2026-06-23T04:42:23Z"
+  }
+}

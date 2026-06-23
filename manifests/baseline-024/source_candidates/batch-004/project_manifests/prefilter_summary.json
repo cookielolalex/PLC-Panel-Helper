@@ -1,0 +1,24 @@
+{
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "projects": [
+    {
+      "project_id": "1110501",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "QUARANTINED": 4,
+        "SUBMIT_TO_REVIEW": 1
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-004\\project_manifests\\1110501\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-004\\project_manifests\\1110501\\review_input.json"
+    },
+    {
+      "project_id": "1110504",
+      "status": "NO_REVIEWABLE_ITEMS",
+      "summary": {
+        "QUARANTINED": 4
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-004\\project_manifests\\1110504\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-004\\project_manifests\\1110504\\review_input.json"
+    }
+  ]
+}

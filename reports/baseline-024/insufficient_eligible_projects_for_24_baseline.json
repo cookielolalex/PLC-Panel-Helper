@@ -1,0 +1,197 @@
+{
+  "baseline_id": "baseline-024-cycle-000",
+  "status": "INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE",
+  "created_at": "2026-06-23T04:55:00Z",
+  "required_allowed_eval_project_count": 24,
+  "anchor_project_ids": [
+    "1110101",
+    "1110104",
+    "1110204",
+    "1110205",
+    "1110405",
+    "1110410"
+  ],
+  "accepted_phase_c_project_ids": [
+    "1110801",
+    "1120207",
+    "1110103",
+    "1110203",
+    "1120308",
+    "1110704",
+    "1120305"
+  ],
+  "current_allowed_eval_project_ids": [
+    "1110101",
+    "1110104",
+    "1110204",
+    "1110205",
+    "1110405",
+    "1110410",
+    "1110801",
+    "1120207",
+    "1110103",
+    "1110203",
+    "1120308",
+    "1110704",
+    "1120305"
+  ],
+  "current_allowed_eval_project_count": 13,
+  "remaining_additional_allowed_eval_required": 11,
+  "metadata_only_candidate_pool_count": 20,
+  "metadata_only_candidate_pool_processed_count": 20,
+  "metadata_only_candidate_pool_exhausted": true,
+  "phase_c_candidate_project_ids": [
+    "1110801",
+    "1120101",
+    "1120201",
+    "1120204",
+    "1120207",
+    "1120301",
+    "1120309",
+    "1120202",
+    "1120308",
+    "1110103",
+    "1110203",
+    "1110404",
+    "1110701",
+    "1110704",
+    "1110706",
+    "1120305",
+    "1110402",
+    "1120102",
+    "1110501",
+    "1110504"
+  ],
+  "accepted_phase_c_project_count": 7,
+  "bundle_rejected_project_ids": [
+    "1120101",
+    "1120204",
+    "1120301",
+    "1110404",
+    "1120202",
+    "1110701",
+    "1110501"
+  ],
+  "bundle_rejected_project_count": 7,
+  "quarantined_or_no_bundle_project_ids": [
+    "1120201",
+    "1120309",
+    "1110402",
+    "1110706",
+    "1120102",
+    "1110504"
+  ],
+  "quarantined_or_no_bundle_project_count": 6,
+  "adjudication_item_totals": {
+    "AGENT_QUORUM_APPROVED_EVAL": 101,
+    "QUARANTINED": 111,
+    "AUTO_DENIED": 12
+  },
+  "batch_results": [
+    {
+      "batch_id": "batch-001",
+      "candidate_project_ids": [
+        "1110801",
+        "1120101",
+        "1120201",
+        "1120204",
+        "1120207",
+        "1120301"
+      ],
+      "accepted_project_ids": [
+        "1110801",
+        "1120207"
+      ],
+      "bundle_rejected_project_ids": [
+        "1120101",
+        "1120204",
+        "1120301"
+      ],
+      "quarantined_project_ids": [
+        "1120201"
+      ],
+      "source_bundle_audit": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+      "independent_audit": "BATCH001_SOURCE_BACKFILL_AUDIT_PASS"
+    },
+    {
+      "batch_id": "batch-002",
+      "candidate_project_ids": [
+        "1120309",
+        "1120202",
+        "1120308",
+        "1110103",
+        "1110203",
+        "1110404"
+      ],
+      "accepted_project_ids": [
+        "1110103",
+        "1110203",
+        "1120308"
+      ],
+      "bundle_rejected_project_ids": [
+        "1110404",
+        "1120202"
+      ],
+      "quarantined_project_ids": [
+        "1120309"
+      ],
+      "source_bundle_audit": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+      "independent_audit": "BATCH002_SOURCE_BACKFILL_AUDIT_PASS"
+    },
+    {
+      "batch_id": "batch-003",
+      "candidate_project_ids": [
+        "1110701",
+        "1110704",
+        "1110706",
+        "1120305",
+        "1110402",
+        "1120102"
+      ],
+      "accepted_project_ids": [
+        "1110704",
+        "1120305"
+      ],
+      "bundle_rejected_project_ids": [
+        "1110701"
+      ],
+      "quarantined_project_ids": [
+        "1110402",
+        "1110706",
+        "1120102"
+      ],
+      "source_bundle_audit": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+      "independent_audit": "BATCH003_SOURCE_BACKFILL_AUDIT_PASS"
+    },
+    {
+      "batch_id": "batch-004",
+      "candidate_project_ids": [
+        "1110501",
+        "1110504"
+      ],
+      "accepted_project_ids": [],
+      "bundle_rejected_project_ids": [
+        "1110501"
+      ],
+      "quarantined_project_ids": [
+        "1110504"
+      ],
+      "source_bundle_audit": "EVAL_SOURCE_BUNDLE_AUDIT_NO_ACCEPTED_BUNDLES",
+      "independent_audit": "BATCH004_SOURCE_BACKFILL_AUDIT_PASS"
+    }
+  ],
+  "generation_authorized": false,
+  "generation_attempts": 0,
+  "valid_generation_runs": 0,
+  "primary_reviews": 0,
+  "secondary_reviews": 0,
+  "final_audit_started": false,
+  "stop_condition": "Frozen metadata-only candidate pool exhausted before 24 verified ALLOWED_EVAL projects were available.",
+  "continuation_requirement": "Obtain new approved source authority or accepted parser/source-policy changes under proposal-first rules, then rerun source approval from new candidates before any 24-project generation.",
+  "evidence": {
+    "phase_c_status": "manifests/baseline-024/source_approvals/phase_c_status.json",
+    "aggregate_source_bundle_audit": "reports/baseline-024/source_bundle_audit.json",
+    "backfill_plan": "manifests/baseline-024/source_candidates/backfill_plan.json",
+    "batch_004_independent_audit": "reports/baseline-024/source_bundle_audit_batch_004_independent.json"
+  }
+}

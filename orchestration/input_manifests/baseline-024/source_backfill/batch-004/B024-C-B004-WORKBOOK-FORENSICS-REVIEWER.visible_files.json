@@ -1,0 +1,47 @@
+{
+  "task_id": "B024-C-B004-WORKBOOK-FORENSICS-REVIEWER",
+  "baseline_id": "baseline-024-cycle-000",
+  "batch_id": "batch-004",
+  "role": "workbook_forensics_reviewer",
+  "allowed_files": [
+    {
+      "path": "scripts\\autonomous_eval_source_approval.py",
+      "sha256": "AA17749A7948A197A2EC387C3B7DD907138C47F350A50D30859165777703350B"
+    },
+    {
+      "path": "schemas\\source_quorum_review.schema.json",
+      "sha256": "BB8A3AAD6EA3D3F735DC6A5CA7470D59D9CFDB1D0139BAE3FD828CB90FE02CEC"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-004\\batch_manifest.json",
+      "sha256": "77747F2C81FF1B37CEF49C95592836991E015643C68DD5BA3B2600183A54928A"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-004\\project_manifests\\1110501\\deterministic_prefilter.json",
+      "sha256": "1372A3FB7EF6C500D4A4505EF13B69574DE51FB97CD151192B9AC5462D0CD94F"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-004\\project_manifests\\1110504\\deterministic_prefilter.json",
+      "sha256": "2130D6AF8245FB5CACFA9D7F9096A36D98878EE804F3F202CBAF1732F26B10AF"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-004\\project_manifests\\1110501\\review_input.json",
+      "sha256": "37ACB51E92E9B3863304B11851EB1B8F30E14369CE220C31A5AC47BA9F7E29A1"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-004\\project_manifests\\1110504\\review_input.json",
+      "sha256": "0ED285D217FC5116837B9D191BC5DE641CA3AE4706BD5EE8711D8C20C83BBC09"
+    }
+  ],
+  "forbidden_inputs": [
+    "completed target drawings",
+    "target thumbnails or hashes",
+    "expected answers",
+    "reviewer findings or scores",
+    "other specialist review outputs",
+    "adjudicator recommendations",
+    "raw completed-reference content"
+  ],
+  "output_path": "manifests\\baseline-024\\source_approvals\\batch-004\\reviews\\workbook_forensics_reviewer_review.json",
+  "schema": "schemas/source_quorum_review.schema.json"
+}

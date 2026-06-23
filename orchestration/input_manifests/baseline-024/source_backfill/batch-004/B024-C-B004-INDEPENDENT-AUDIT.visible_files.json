@@ -1,0 +1,106 @@
+{
+  "task_id": "B024-C-B004-INDEPENDENT-AUDIT",
+  "baseline_id": "baseline-024-cycle-000",
+  "batch_id": "batch-004",
+  "role": "independent_auditor",
+  "allowed_files": [
+    {
+      "path": "orchestration\\tasks\\baseline-024\\source_backfill\\batch-004\\B024-C-B004-INDEPENDENT-AUDIT.md",
+      "sha256": "1C1BE2252969BEF6E740F4CB135339C84F286A39A8238A7A6EA775B3DBAB3038"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\backfill_plan.json",
+      "sha256": "C7E6416891238D5A810A90D7F3A671B223E55A986CC30EFAB7C5610CBE872560"
+    },
+    {
+      "path": "evals\\baseline-024\\source_readiness.json",
+      "sha256": "9451BC82325FAB063B0DAC5E20730515CB16AD957AAABA80AE77A58ECC16E854"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-004\\batch_manifest.json",
+      "sha256": "77747F2C81FF1B37CEF49C95592836991E015643C68DD5BA3B2600183A54928A"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-004\\project_manifests\\adjudication_summary.json",
+      "sha256": "F3A3B237ECE6824A3CCA6FCCA821D0797344DB6418E1A5C2F3CCC1B275FEA21A"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-004\\adjudication_summary.json",
+      "sha256": "F3A3B237ECE6824A3CCA6FCCA821D0797344DB6418E1A5C2F3CCC1B275FEA21A"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-004\\bundle_build_summary.json",
+      "sha256": "F40932660A93ACC83303B3EA08C291897F2B77019BFF5DF0BD9523D60B273289"
+    },
+    {
+      "path": "reports\\baseline-024\\source_bundle_audit_batch_004.json",
+      "sha256": "5D238119AB58A3A04A476636B6A688BD6915772565E51221A703B038198195D2"
+    },
+    {
+      "path": "schemas\\source_quorum_review.schema.json",
+      "sha256": "BB8A3AAD6EA3D3F735DC6A5CA7470D59D9CFDB1D0139BAE3FD828CB90FE02CEC"
+    },
+    {
+      "path": "schemas\\source_quorum_adjudication.schema.json",
+      "sha256": "678DA3E1CC57B0F23D26068962F753813560B438ECC9C03937694F71B3457D06"
+    },
+    {
+      "path": "schemas\\sanitized_source_manifest.schema.json",
+      "sha256": "A3898E6580EB5AC44E26BC577AB7B388BDC6883A6ABD581AECD2E7B424C0E646"
+    },
+    {
+      "path": "scripts\\verify_generator_bundle.py",
+      "sha256": "5FC9D56D270469AF5D84BB2581ED1521325EADC2E0669C9EB2C5A0E8CAAEE19D"
+    },
+    {
+      "path": "scripts\\baseline024_source_backfill.py",
+      "sha256": "2E065D8DFEA1A0A7B90D2A79FFF4472777B65CC62D99DE3B7154A59E6FB9E4A3"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-004\\reviews\\leakage_red_team_review.json",
+      "sha256": "2D7AB34F5F6DBC20B9751F52E495350A7B1CBFCA97BB6844A77F384B1FC98A47"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-004\\reviews\\project_identity_reviewer_review.json",
+      "sha256": "760344CC31E47D85DB3B0309DE09FD46C36391590700458CA140564F4026ACDC"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-004\\reviews\\source_role_classifier_review.json",
+      "sha256": "1B2F7F4883DDF41C78E2F03FDE7C8A662BA7D9F025B8B4F8F8D0918EDD8FF573"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-004\\reviews\\workbook_forensics_reviewer_review.json",
+      "sha256": "56522371E4DBD430320BA79B3B52128B83682BACA317FF0A35D9B921C16694D6"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-004\\adjudications\\1110501\\adjudication.json",
+      "sha256": "740CBD6F0179DC7E084FFBC9F2250C05BDCE58FA6421CF428A226F7186D9F23D"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-004\\adjudications\\1110504\\adjudication.json",
+      "sha256": "31707B70B49D1E71BD96297E186F008ABEFCA0905806C8CD920C6EDF8C1BA039"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-004\\rejected\\1110501\\build_status.json",
+      "sha256": "C7DE17936B8EAB96CE71627BC5082553DBEBD69F4A4D4C6DCD4C10F5B6F48012"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-004\\rejected\\1110501\\verification_results.json",
+      "sha256": "FC80BDD3B9BF99D93AC370887B7273D95DBBFB9693366F411307AC682D328775"
+    }
+  ],
+  "forbidden_inputs": [
+    "completed target drawings",
+    "target thumbnails or hashes",
+    "expected answers",
+    "reviewer findings or scores outside listed review JSONs",
+    "generator outputs",
+    "archived conversations",
+    "raw completed-reference content",
+    "unlisted source-root files"
+  ],
+  "output_paths": [
+    "reports/baseline-024/source_bundle_audit_batch_004_independent.json",
+    "reports/baseline-024/source_bundle_audit_batch_004_independent.md"
+  ]
+}

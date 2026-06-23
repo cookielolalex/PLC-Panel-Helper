@@ -1,7 +1,7 @@
 You are a fresh root coordinator continuing this repository.
 
 Read the canonical checkpoint files, `reports/calibration-006/independent_audit.json`, and `reports/evaluator-sensitivity/subagent_independent_audit.json`.
-Current status: `PHASE_C_BATCH_003_AUDIT_PASS_CONTINUE_BACKFILL`.
+Current status: `INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`.
 Six-project set: 1110101, 1110104, 1110204, 1110205, 1110405, 1110410.
 Evaluator version for cycle-000: `plc_layout_evaluator_v2_sensitivity`.
 Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
@@ -14,8 +14,12 @@ Phase C batch-001 accepted `1110801` and `1120207` as evaluation-only additions 
 
 Phase C batch-002 accepted `1110103`, `1110203`, and `1120308` as evaluation-only additions after independent source-bundle audit. `1110404` and `1120202` were rejected by bundle verification; `1120309` remained quarantined/no-bundle.
 
-Phase C batch-003 accepted `1110704` and `1120305` as evaluation-only additions after independent source-bundle audit. `1110701` was rejected by bundle verification; `1110402`, `1110706`, and `1120102` remained no-bundle/quarantined. Current baseline-024 `ALLOWED_EVAL` count is `13`; eleven additional source-approved projects are still required, and no 24-project generation is authorized yet.
+Phase C batch-003 accepted `1110704` and `1120305` as evaluation-only additions after independent source-bundle audit. `1110701` was rejected by bundle verification; `1110402`, `1110706`, and `1120102` remained no-bundle/quarantined.
 
-Exact next action: continue Phase C source backfill from remaining metadata-only candidates in smaller monitored legacy-parser chunks. Use deterministic prefiltering, four independent specialist reviews, unanimous source quorum, source adjudication, sanitized bundle construction, bundle verification, and independent audit. Do not start baseline generation until exactly 24 projects have verified `ALLOWED_EVAL` bundles and a final cohort manifest is frozen.
+Phase C batch-004 accepted no new evaluation-only additions after independent source-bundle audit. `1110501` was rejected by bundle verification; `1110504` remained quarantined/no-bundle.
+
+Final Phase C result: the frozen metadata-only candidate pool is exhausted. All 20 candidates were processed, only 7 produced accepted sanitized bundles, and current baseline-024 `ALLOWED_EVAL` count is `13 / 24`. Eleven additional source-approved projects are still required, so no 24-project generation is authorized.
+
+Exact next action: stop baseline-024 generation work unless the user provides new approved source authority or accepts a proposal-first parser/source-policy change with regression coverage and independent review. If new eligible candidates exist later, rerun deterministic prefiltering, four independent specialist reviews, unanimous source quorum, source adjudication, sanitized bundle construction, bundle verification, and independent audit before any generation.
 
 Do not optimize the drawing workflow unless separately authorized through proposal-first rules.

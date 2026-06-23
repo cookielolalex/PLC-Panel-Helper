@@ -1,0 +1,102 @@
+{
+  "prefilter_id": "deterministic_prefilter_1110501_legacy_xls",
+  "project_id": "1110501",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS_SUBMIT_TO_REVIEW",
+  "items": [
+    {
+      "decision_id": "SGD-4D2DF2776016E7",
+      "file_id": "SRC-ALL-PROJECTS-FILE-19F7C90C379F",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-19F7C90C379F-XLS-SHEET-001",
+      "project_id": "1110501",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110501詠翔鑫-凱倫傘業有限公司 作業廠房、辦公室新建工程\\凱倫傘業有限公司 作業廠房、辦公室新建工程(工作紀錄單)(變更後).xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "23AB9536284E287CED8530E844AAB467ED28A7BAA937EE69C5AB89DE95B1FC65",
+      "worksheet_name": "未稅 (2)",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "59BA0924A6566E5403D4D67E51F60A0BA69FD7E2FE4102AEA110378DD07B0E30",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "23AB9536284E287CED8530E844AAB467ED28A7BAA937EE69C5AB89DE95B1FC65"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "59BA0924A6566E5403D4D67E51F60A0BA69FD7E2FE4102AEA110378DD07B0E30"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-DB78A644224C0C",
+      "file_id": "SRC-ALL-PROJECTS-FILE-24DD84BF38D3",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-24DD84BF38D3-XLS-SHEET-001",
+      "project_id": "1110501",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110501詠翔鑫-凱倫傘業有限公司 作業廠房、辦公室新建工程\\凱倫傘業有限公司 作業廠房、辦公室新建工程(訂單成本分析表)(變更後).xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "26657CA8ADF8C6F0F8AF4FB8DA3E049B8EA82F95CF4B5B48EFD483524AD5AAE7",
+      "worksheet_name": "Sheet1 (3)",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "E72DAE0F126E63E610C4952343D4A7339BC6B7E527CCFCB3D545E014C031ED3A",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "26657CA8ADF8C6F0F8AF4FB8DA3E049B8EA82F95CF4B5B48EFD483524AD5AAE7"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "E72DAE0F126E63E610C4952343D4A7339BC6B7E527CCFCB3D545E014C031ED3A"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "summary": {
+    "QUARANTINED": 1,
+    "SUBMIT_TO_REVIEW": 1
+  },
+  "run_metadata": {
+    "created_at": "2026-06-23T04:38:46Z",
+    "parser": "excel_com_legacy_xls_v1",
+    "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-004\\legacy_xls\\1110501\\source_decisions_1110501_legacy_xls.csv"
+  }
+}

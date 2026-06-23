@@ -1,0 +1,39 @@
+{
+  "project_id": "1110501",
+  "created_at": "2026-06-23T04:38:46Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-004\\legacy_xls\\1110501\\source_decisions_1110501_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-19F7C90C379F",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110501詠翔鑫-凱倫傘業有限公司 作業廠房、辦公室新建工程\\凱倫傘業有限公司 作業廠房、辦公室新建工程(工作紀錄單)(變更後).xls",
+      "file_sha256": "23AB9536284E287CED8530E844AAB467ED28A7BAA937EE69C5AB89DE95B1FC65",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-004\\legacy_xls\\1110501\\legacy_xls_parse\\1110501\\SRC-ALL-PROJECTS-FILE-19F7C90C379F",
+      "sheet_count": 1
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-24DD84BF38D3",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110501詠翔鑫-凱倫傘業有限公司 作業廠房、辦公室新建工程\\凱倫傘業有限公司 作業廠房、辦公室新建工程(訂單成本分析表)(變更後).xls",
+      "file_sha256": "26657CA8ADF8C6F0F8AF4FB8DA3E049B8EA82F95CF4B5B48EFD483524AD5AAE7",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-004\\legacy_xls\\1110501\\legacy_xls_parse\\1110501\\SRC-ALL-PROJECTS-FILE-24DD84BF38D3",
+      "sheet_count": 1
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-19F7C90C379F",
+      "first_metadata_hash": "121D966413F0CE988FF225882B93C5B9C6756D173955AEC14BBBFCCBA2C75372",
+      "second_metadata_hash": "121D966413F0CE988FF225882B93C5B9C6756D173955AEC14BBBFCCBA2C75372",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-24DD84BF38D3",
+      "first_metadata_hash": "05490C0BBEBDB33894653F77D192FBAC47A7D921327F16765B43EDEEB0CCB58B",
+      "second_metadata_hash": "05490C0BBEBDB33894653F77D192FBAC47A7D921327F16765B43EDEEB0CCB58B",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 1,
+  "excluded_count": 1
+}
