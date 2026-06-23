@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: cycle-000 Phase C source backfill stopped with `INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`.
+Current phase: cycle-000 Phase C expanded source discovery authorized.
 
 Accepted release: none.
 
@@ -26,8 +26,26 @@ Phase C batch-003 result: `1110704` and `1120305` are accepted evaluation-only a
 
 Phase C batch-004 result: no accepted evaluation-only additions. `1110501` was rejected by sanitized bundle verification; `1110504` remained quarantined/no-bundle. Independent audit returned `BATCH004_SOURCE_BACKFILL_AUDIT_PASS`.
 
-Phase C final result: all 20 frozen metadata-only candidates were processed. Only 7 produced verified accepted sanitized bundles, leaving `13 / 24` verified `ALLOWED_EVAL` projects. Stop status is `INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`; no baseline generation is authorized.
+Phase C final result before amendment: all 20 frozen metadata-only candidates
+were processed. Only 7 produced verified accepted sanitized bundles, leaving
+`13 / 24` verified `ALLOWED_EVAL` projects. Stop status was
+`INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`; no baseline generation was
+authorized.
+
+Amendment `D-0017` on 2026-06-23: the user accepted expanding baseline-024
+candidate discovery to the full approved development inventory under
+`SRC-ALL-PROJECTS`. This supersedes only the twenty-project discovery cap and
+does not weaken source immutability, source-root restrictions, positive source
+allowlisting, evaluation-only approval quorum, reference isolation, cohort
+isolation, held-out protection, parser requirements, sanitized-bundle
+verification, independent auditing, frozen workflow requirements, grading rules,
+or no-invention requirements.
 
 No drawing workflow optimization occurred.
 
-Exact next action: do not start baseline generation. Continue only if the user provides new approved source authority or accepts a proposal-first parser/source-policy change with regression coverage and independent review; then run Phase C source approval for the newly eligible candidates before any generation.
+Exact next action: do not start baseline generation. Reconcile the full
+`SRC-ALL-PROJECTS` project universe, implement completed-target detection v2 as
+metadata-first reference-set classification, build the expanded candidate
+registry, then run strict six-project source-screening waves until eleven more
+projects reach `ALLOWED_EVAL`, up to three reserves are found, or the full
+development-eligible universe is truly exhausted.

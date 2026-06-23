@@ -74,3 +74,8 @@
 - Batch-004 accepted no new evaluation-only projects; preserved verifier rejection for `1110501` and left `1110504` quarantined/no-bundle.
 - Stopped baseline-024 with `INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`: all 20 frozen candidates were processed, only 7 produced accepted bundles, the current verified count is `13`, and 11 additional projects are still required.
 - No 24-project baseline generation, reviews, final audit, drawing-workflow optimization, or production approval occurred.
+- Accepted amendment `D-0017`, expanding baseline-024 candidate discovery beyond
+  the prior twenty-project metadata-only pool to the full approved development
+  inventory under `SRC-ALL-PROJECTS` while preserving all source, reference,
+  cohort, parser, bundle, audit, frozen workflow, grading, and no-invention
+  gates.

@@ -1,12 +1,19 @@
 # Current State
 
-Current phase: cycle-000 Phase C source backfill stopped.
+Current phase: cycle-000 Phase C expanded source discovery authorized.
 
 Accepted release: none.
 
 Current candidate: `baseline-024-cycle-000` Phase C source approvals.
 
-Current status: `INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`.
+Current status: `BASELINE024_EXPANDED_DISCOVERY_AUTHORIZED`.
+
+Accepted amendment: `D-0017` expands baseline-024 candidate discovery beyond
+the prior twenty-project metadata-only pool to the full approved development
+inventory under `SRC-ALL-PROJECTS`. This supersedes only the discovery cap; all
+source immutability, source-root restrictions, positive allowlisting, reference
+isolation, cohort isolation, parser, bundle-verification, independent-audit,
+frozen workflow, and grading gates remain in force.
 
 Evaluator version for future cycle-000 work: `plc_layout_evaluator_v2_sensitivity` using `evals/grading_profiles/plc_layout_v2.json`.
 
@@ -26,4 +33,9 @@ Phase C batch evidence: `manifests/baseline-024/source_approvals/phase_c_status.
 
 Recommendations remain PROPOSED. No drawing-generation behavior, accepted Instructions, production Knowledge, extraction logic, schemas, renderer behavior, validation behavior, grading weights, or tolerance profiles were optimized.
 
-Exact next action: stop baseline-024 generation work under `INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`. Continue only after new approved source authority or accepted proposal-first source/parser changes create additional eligible candidates, then rerun Phase C source approval before any generation.
+Exact next action: reconcile the full `SRC-ALL-PROJECTS` project universe,
+improve completed-target presence detection without exposing reference contents
+to generators or source-review agents, build an expanded ranked candidate
+registry, and resume strict Phase C source approval in six-project waves. Do not
+start baseline generation until exactly twenty-four verified `ALLOWED_EVAL`
+projects are frozen and independently audited.
