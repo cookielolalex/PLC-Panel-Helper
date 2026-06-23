@@ -1,0 +1,153 @@
+﻿{
+    "workbook_file_name":  "孫先生控制盤材料清單xls.xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "Sheet1",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  34,
+                       "used_columns":  10,
+                       "non_empty_rows":  33,
+                       "formula_count":  14,
+                       "formulas":  [
+                                        {
+                                            "row":  8,
+                                            "column":  7,
+                                            "address":  "G8",
+                                            "formula":  "=D8*F8",
+                                            "text":  "14,000"
+                                        },
+                                        {
+                                            "row":  9,
+                                            "column":  7,
+                                            "address":  "G9",
+                                            "formula":  "=D9*F9",
+                                            "text":  "2,500"
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  7,
+                                            "address":  "G10",
+                                            "formula":  "=D10*F10",
+                                            "text":  "3,600"
+                                        },
+                                        {
+                                            "row":  11,
+                                            "column":  7,
+                                            "address":  "G11",
+                                            "formula":  "=D11*F11",
+                                            "text":  "4,600"
+                                        },
+                                        {
+                                            "row":  12,
+                                            "column":  7,
+                                            "address":  "G12",
+                                            "formula":  "=D12*F12",
+                                            "text":  "500"
+                                        },
+                                        {
+                                            "row":  13,
+                                            "column":  7,
+                                            "address":  "G13",
+                                            "formula":  "=D13*F13",
+                                            "text":  "4,800"
+                                        },
+                                        {
+                                            "row":  14,
+                                            "column":  7,
+                                            "address":  "G14",
+                                            "formula":  "=D14*F14",
+                                            "text":  "1,300"
+                                        },
+                                        {
+                                            "row":  15,
+                                            "column":  7,
+                                            "address":  "G15",
+                                            "formula":  "=D15*F15",
+                                            "text":  "2,700"
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  7,
+                                            "address":  "G16",
+                                            "formula":  "=D16*F16",
+                                            "text":  "2,700"
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  7,
+                                            "address":  "G17",
+                                            "formula":  "=D17*F17",
+                                            "text":  "700"
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  7,
+                                            "address":  "G18",
+                                            "formula":  "=D18*F18",
+                                            "text":  "9,600"
+                                        },
+                                        {
+                                            "row":  19,
+                                            "column":  7,
+                                            "address":  "G19",
+                                            "formula":  "=D19*F19",
+                                            "text":  "15,000"
+                                        },
+                                        {
+                                            "row":  20,
+                                            "column":  7,
+                                            "address":  "G20",
+                                            "formula":  "=D20*F20",
+                                            "text":  "3,000"
+                                        },
+                                        {
+                                            "row":  21,
+                                            "column":  7,
+                                            "address":  "G21",
+                                            "formula":  "=SUM(G8:G20)",
+                                            "text":  "65,000"
+                                        }
+                                    ],
+                       "csv_file_name":  "001_Sheet1.csv"
+                   },
+                   {
+                       "index":  2,
+                       "name":  "Sheet2",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  1,
+                       "used_columns":  1,
+                       "non_empty_rows":  0,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "002_Sheet2.csv"
+                   },
+                   {
+                       "index":  3,
+                       "name":  "Sheet3",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  1,
+                       "used_columns":  1,
+                       "non_empty_rows":  0,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "003_Sheet3.csv"
+                   }
+               ]
+}

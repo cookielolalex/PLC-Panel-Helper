@@ -1,0 +1,87 @@
+{
+  "batch_id": "batch-002",
+  "baseline_id": "baseline-024-cycle-000",
+  "status": "PREFILTER_READY_FOR_SPECIALIST_REVIEWS",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "created_at": "2026-06-23T03:55:29Z",
+  "git_head": "5c86d5972b9d5693393c2d1068e1564888b6d92b",
+  "project_ids": [
+    "1120309",
+    "1120202",
+    "1120308",
+    "1110103",
+    "1110203",
+    "1110404"
+  ],
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-002\\source_decisions.csv",
+  "project_manifest_root": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests",
+  "counts": {
+    "QUARANTINED": 58,
+    "NEEDS_HUMAN_REVIEW": 1,
+    "CANDIDATE": 57
+  },
+  "projects": [
+    {
+      "project_id": "1120309",
+      "status": "NO_REVIEWABLE_ITEMS",
+      "summary": {
+        "QUARANTINED": 2,
+        "AUTO_DENIED": 1
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1120309\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1120309\\review_input.json"
+    },
+    {
+      "project_id": "1120202",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 12,
+        "QUARANTINED": 12
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1120202\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1120202\\review_input.json"
+    },
+    {
+      "project_id": "1120308",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 15,
+        "QUARANTINED": 12
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1120308\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1120308\\review_input.json"
+    },
+    {
+      "project_id": "1110103",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "QUARANTINED": 6,
+        "SUBMIT_TO_REVIEW": 6
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1110103\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1110103\\review_input.json"
+    },
+    {
+      "project_id": "1110203",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 6,
+        "QUARANTINED": 12,
+        "AUTO_DENIED": 8
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1110203\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1110203\\review_input.json"
+    },
+    {
+      "project_id": "1110404",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 12,
+        "QUARANTINED": 12
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1110404\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1110404\\review_input.json"
+    }
+  ],
+  "completed_reference_content_inspected_for_selection": false
+}

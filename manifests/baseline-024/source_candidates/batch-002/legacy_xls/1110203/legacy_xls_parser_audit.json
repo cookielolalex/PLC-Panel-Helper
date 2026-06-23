@@ -1,0 +1,104 @@
+{
+  "project_id": "1110203",
+  "created_at": "2026-06-23T03:52:12Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110203\\source_decisions_1110203_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-1B3BDFA1AAB2",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110203宇博高雄廠大樹深井\\宇博高雄廠大樹深井機電分項ls.xls",
+      "file_sha256": "1A7268E5D7E11A7C2C879A0BC996E6F21FC6F46189CDD4CB9833043FF11EFB4D",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110203\\legacy_xls_parse\\1110203\\SRC-ALL-PROJECTS-FILE-1B3BDFA1AAB2",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-634CF8E731A9",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110203宇博高雄廠大樹深井\\工作記錄單宇博高雄廠大樹深井機電s.xls",
+      "file_sha256": "2FD82C6B246E048BA990531EF61E80D24DF1140D3D13D4C851142F7337C18C93",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110203\\legacy_xls_parse\\1110203\\SRC-ALL-PROJECTS-FILE-634CF8E731A9",
+      "sheet_count": 6
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-8E45F60A97E3",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110203宇博高雄廠大樹深井\\宇博高雄廠大樹深井機電工程生產能力分析表.xls",
+      "file_sha256": "568D2B48872327C105CAA64A23462A987AB0D406D2CFD1CBB0203D5E3FFAC9FB",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110203\\legacy_xls_parse\\1110203\\SRC-ALL-PROJECTS-FILE-8E45F60A97E3",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-9E84C9B57489",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110203宇博高雄廠大樹深井\\高雄廠大樹深井機電材料清單.xls",
+      "file_sha256": "AA5B35E2F89EAF2F1DBAF6CCC98BD0EC34E0C3EE60B7949A7AEBF0CAA2AA6E73",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110203\\legacy_xls_parse\\1110203\\SRC-ALL-PROJECTS-FILE-9E84C9B57489",
+      "sheet_count": 4
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-BFCEDE0E934D",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110203宇博高雄廠大樹深井\\宇博高雄廠大樹深井機電合約審查表.xls",
+      "file_sha256": "E3DC6AB59AD87A884F65F993B27DBE28B9636CBF9A46F92195B08E699C8351AF",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110203\\legacy_xls_parse\\1110203\\SRC-ALL-PROJECTS-FILE-BFCEDE0E934D",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-F5DB215C4B12",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110203宇博高雄廠大樹深井\\高雄廠大樹深井機電合約.xls",
+      "file_sha256": "B3365215E836DD25857EA145E65399FE289460DB132D250E6BCF99D26F507D65",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110203\\legacy_xls_parse\\1110203\\SRC-ALL-PROJECTS-FILE-F5DB215C4B12",
+      "sheet_count": 4
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-FF6620F1EFEB",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110203宇博高雄廠大樹深井\\宇博高雄廠大樹深井機電訂單分析表.xls",
+      "file_sha256": "0EE3BB665274A9D81A58AF3F009442DA47E5F97C1543E3DC14B6DB6C4569F60D",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110203\\legacy_xls_parse\\1110203\\SRC-ALL-PROJECTS-FILE-FF6620F1EFEB",
+      "sheet_count": 3
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-1B3BDFA1AAB2",
+      "first_metadata_hash": "774F35BB50C40A62BD8C3DD6739F0B314B746B02A7BABA836466A76F3CC32536",
+      "second_metadata_hash": "774F35BB50C40A62BD8C3DD6739F0B314B746B02A7BABA836466A76F3CC32536",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-634CF8E731A9",
+      "first_metadata_hash": "9DC5EBF286D71D704E9B55F29A9613DEECD13A9FD58B7034052A95A3D8185ABA",
+      "second_metadata_hash": "9DC5EBF286D71D704E9B55F29A9613DEECD13A9FD58B7034052A95A3D8185ABA",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-8E45F60A97E3",
+      "first_metadata_hash": "BF40DB9488066EF1380A504482B3F9663417A453A98F65F9DB509A2270AAF95D",
+      "second_metadata_hash": "BF40DB9488066EF1380A504482B3F9663417A453A98F65F9DB509A2270AAF95D",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-9E84C9B57489",
+      "first_metadata_hash": "38B9CE76EBAA95F971EA0D3D18EFCF24D3859175336483F05FF900256ABFE917",
+      "second_metadata_hash": "38B9CE76EBAA95F971EA0D3D18EFCF24D3859175336483F05FF900256ABFE917",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-BFCEDE0E934D",
+      "first_metadata_hash": "CBE8289D9207CC3587481D8AE7A67855404E21E116B32C1C3FAED94EB4E47098",
+      "second_metadata_hash": "CBE8289D9207CC3587481D8AE7A67855404E21E116B32C1C3FAED94EB4E47098",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-F5DB215C4B12",
+      "first_metadata_hash": "DC996D75F164C43A714CCC538DDB44DA86CAC2912D484A21235EAD1C3FF96316",
+      "second_metadata_hash": "DC996D75F164C43A714CCC538DDB44DA86CAC2912D484A21235EAD1C3FF96316",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-FF6620F1EFEB",
+      "first_metadata_hash": "D28E02DB24639DD73B48546785D88CE07B319C5282A2356419F33F689260F6F5",
+      "second_metadata_hash": "D28E02DB24639DD73B48546785D88CE07B319C5282A2356419F33F689260F6F5",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 12,
+  "excluded_count": 14
+}

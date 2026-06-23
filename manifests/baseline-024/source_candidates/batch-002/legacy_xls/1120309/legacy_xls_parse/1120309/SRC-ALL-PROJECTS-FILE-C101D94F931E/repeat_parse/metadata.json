@@ -1,0 +1,201 @@
+﻿{
+    "workbook_file_name":  "西富-消防控制箱工作紀錄單.xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+                  {
+                      "name":  "未稅!Print_Area",
+                      "refers_to":  "=未稅!$A$1:$AI$44"
+                  },
+                  {
+                      "name":  "含稅!Print_Area",
+                      "refers_to":  "=含稅!$A$1:$AI$44"
+                  }
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "含稅",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  48,
+                       "used_columns":  35,
+                       "non_empty_rows":  35,
+                       "formula_count":  11,
+                       "formulas":  [
+                                        {
+                                            "row":  10,
+                                            "column":  2,
+                                            "address":  "B10",
+                                            "formula":  "=ROUND(J10/1.05,0)",
+                                            "text":  " 40,952 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  6,
+                                            "address":  "F10",
+                                            "formula":  "=ROUND(J10/1.05*0.05,0)",
+                                            "text":  " 2,048 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  33,
+                                            "address":  "AG10",
+                                            "formula":  "=AD10*AA10",
+                                            "text":  "            - "
+                                        },
+                                        {
+                                            "row":  11,
+                                            "column":  33,
+                                            "address":  "AG11",
+                                            "formula":  "=AD11*AA11",
+                                            "text":  "     - "
+                                        },
+                                        {
+                                            "row":  12,
+                                            "column":  33,
+                                            "address":  "AG12",
+                                            "formula":  "=AD12*AA12",
+                                            "text":  "            - "
+                                        },
+                                        {
+                                            "row":  13,
+                                            "column":  33,
+                                            "address":  "AG13",
+                                            "formula":  "=AD13*AA13",
+                                            "text":  "            - "
+                                        },
+                                        {
+                                            "row":  14,
+                                            "column":  33,
+                                            "address":  "AG14",
+                                            "formula":  "=AD14*AA14",
+                                            "text":  "            - "
+                                        },
+                                        {
+                                            "row":  15,
+                                            "column":  33,
+                                            "address":  "AG15",
+                                            "formula":  "=AD15*AA15",
+                                            "text":  "            - "
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  33,
+                                            "address":  "AG16",
+                                            "formula":  "=AD16*AA16",
+                                            "text":  "            - "
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  33,
+                                            "address":  "AG17",
+                                            "formula":  "=AD17*AA17",
+                                            "text":  "            - "
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  33,
+                                            "address":  "AG18",
+                                            "formula":  "=SUM(AG6:AI17)",
+                                            "text":  "            - "
+                                        }
+                                    ],
+                       "csv_file_name":  "001_含稅.csv"
+                   },
+                   {
+                       "index":  2,
+                       "name":  "未稅",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  48,
+                       "used_columns":  35,
+                       "non_empty_rows":  29,
+                       "formula_count":  11,
+                       "formulas":  [
+                                        {
+                                            "row":  10,
+                                            "column":  6,
+                                            "address":  "F10",
+                                            "formula":  "=ROUND(B10*0.05,0)",
+                                            "text":  " 625 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  10,
+                                            "address":  "J10",
+                                            "formula":  "=B10+F10",
+                                            "text":  " 13,125 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  33,
+                                            "address":  "AG10",
+                                            "formula":  "=AD10*AA10",
+                                            "text":  "             - "
+                                        },
+                                        {
+                                            "row":  11,
+                                            "column":  33,
+                                            "address":  "AG11",
+                                            "formula":  "=AD11*AA11",
+                                            "text":  "     - "
+                                        },
+                                        {
+                                            "row":  12,
+                                            "column":  33,
+                                            "address":  "AG12",
+                                            "formula":  "=AD12*AA12",
+                                            "text":  "             - "
+                                        },
+                                        {
+                                            "row":  13,
+                                            "column":  33,
+                                            "address":  "AG13",
+                                            "formula":  "=AD13*AA13",
+                                            "text":  "             - "
+                                        },
+                                        {
+                                            "row":  14,
+                                            "column":  33,
+                                            "address":  "AG14",
+                                            "formula":  "=AD14*AA14",
+                                            "text":  "             - "
+                                        },
+                                        {
+                                            "row":  15,
+                                            "column":  33,
+                                            "address":  "AG15",
+                                            "formula":  "=AD15*AA15",
+                                            "text":  "             - "
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  33,
+                                            "address":  "AG16",
+                                            "formula":  "=AD16*AA16",
+                                            "text":  "             - "
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  33,
+                                            "address":  "AG17",
+                                            "formula":  "=AD17*AA17",
+                                            "text":  "             - "
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  33,
+                                            "address":  "AG18",
+                                            "formula":  "=SUM(AG6:AI17)",
+                                            "text":  "             - "
+                                        }
+                                    ],
+                       "csv_file_name":  "002_未稅.csv"
+                   }
+               ]
+}

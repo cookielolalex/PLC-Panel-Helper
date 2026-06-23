@@ -1,0 +1,305 @@
+{
+  "adjudication_id": "source_quorum_adjudication_1110103",
+  "project_id": "1110103",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "AGENT_QUORUM_APPROVED_EVAL",
+  "items": [
+    {
+      "decision_id": "SGD-658A638AA34EC7",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7EA33A7EBA0E",
+      "file_sha256": "C85DCB66895791B3C08D8569FE5CF8E0BCBE693FED3377D3782B80114A851195",
+      "worksheet_name": "0413",
+      "worksheet_fingerprint": "44B250AE62DD3B0BC927C3C0EBF31D46567F1342287E2EFDFBA771BAAA7F9D65",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-0EF4A89F7DD3B8",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7EA33A7EBA0E",
+      "file_sha256": "C85DCB66895791B3C08D8569FE5CF8E0BCBE693FED3377D3782B80114A851195",
+      "worksheet_name": "0415",
+      "worksheet_fingerprint": "80F99AC9C6518B1C241192861715CA6A227CACBF8E8B08CB512EBB3C660380EC",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-6531EC0328188C",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7EA33A7EBA0E",
+      "file_sha256": "C85DCB66895791B3C08D8569FE5CF8E0BCBE693FED3377D3782B80114A851195",
+      "worksheet_name": "空白",
+      "worksheet_fingerprint": "B5AD89DF08DECDCE5F994AD3DA7C3BBEA1E45E17C3F9FE8E167667935B3A6262",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-CEEFAD38E9A5FF",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7EA33A7EBA0E",
+      "file_sha256": "C85DCB66895791B3C08D8569FE5CF8E0BCBE693FED3377D3782B80114A851195",
+      "worksheet_name": "05",
+      "worksheet_fingerprint": "C486E895C071C0C972EC1931CBA0899016DCFC94173F74D32DAB9D6E9DFCD142",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-7B00C858516928",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7EA33A7EBA0E",
+      "file_sha256": "C85DCB66895791B3C08D8569FE5CF8E0BCBE693FED3377D3782B80114A851195",
+      "worksheet_name": "05 (2)",
+      "worksheet_fingerprint": "AB9BB32E176B865C84DBA725CE82266BEFF1495F0C2BAF3232E972E6C74BD8B2",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-8E18DD3CFAB451",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7EA33A7EBA0E",
+      "file_sha256": "C85DCB66895791B3C08D8569FE5CF8E0BCBE693FED3377D3782B80114A851195",
+      "worksheet_name": "0505",
+      "worksheet_fingerprint": "8A2177A3D8FFC87DF7E559BA5E7CE93A71236D66EA7DFDA3A8C9E8549FE1A9ED",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-4674F34B112F4F",
+      "file_id": "SRC-ALL-PROJECTS-FILE-8CF02C4A8C99",
+      "file_sha256": "F5B9C2D1172F2664938BF0AB5ED5273313DBB15106053063757121B7E258F46E",
+      "worksheet_name": "Sheet1",
+      "worksheet_fingerprint": "F35893B580C1E2EC058BA160A6E3C65F99AF6674CCA6ADA4676E6FE10CC72325",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-93083784BF965D",
+      "file_id": "SRC-ALL-PROJECTS-FILE-8CF02C4A8C99",
+      "file_sha256": "F5B9C2D1172F2664938BF0AB5ED5273313DBB15106053063757121B7E258F46E",
+      "worksheet_name": "Sheet2",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-92B48C948B3703",
+      "file_id": "SRC-ALL-PROJECTS-FILE-8CF02C4A8C99",
+      "file_sha256": "F5B9C2D1172F2664938BF0AB5ED5273313DBB15106053063757121B7E258F46E",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-44E3802E8BE97D",
+      "file_id": "SRC-ALL-PROJECTS-FILE-8F644FF5BC57",
+      "file_sha256": "DCF8AD7681F8A56721E9A801D47486BB4CFFC4FC6540EBBA56596CF647A0F812",
+      "worksheet_name": "Sheet1",
+      "worksheet_fingerprint": "CEFBF42FF69CCB5F6738935E4CEC570EAB35E6983ACFCBEF9C4D0F30DC92FF26",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-F0C46E3FBA15AB",
+      "file_id": "SRC-ALL-PROJECTS-FILE-8F644FF5BC57",
+      "file_sha256": "DCF8AD7681F8A56721E9A801D47486BB4CFFC4FC6540EBBA56596CF647A0F812",
+      "worksheet_name": "Sheet2",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-0385857321AFE2",
+      "file_id": "SRC-ALL-PROJECTS-FILE-8F644FF5BC57",
+      "file_sha256": "DCF8AD7681F8A56721E9A801D47486BB4CFFC4FC6540EBBA56596CF647A0F812",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    }
+  ],
+  "summary": {
+    "QUARANTINED": 6,
+    "AGENT_QUORUM_APPROVED_EVAL": 6
+  },
+  "run_metadata": {
+    "prefilter": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\1110103\\deterministic_prefilter.json",
+    "review_root": "manifests\\baseline-024\\source_approvals\\batch-002\\reviews",
+    "created_at": "2026-06-23T04:01:13Z"
+  }
+}

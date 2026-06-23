@@ -1,0 +1,104 @@
+{
+  "project_id": "1120202",
+  "created_at": "2026-06-23T03:45:02Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120202\\source_decisions_1120202_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-01397B520288",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\新竹縣富百田社區供水合約.xls",
+      "file_sha256": "F17247092D6E35CE6B4C6EFBFF8ED1B549E3CFD63B676C747115FD8B5F86999E",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120202\\legacy_xls_parse\\1120202\\SRC-ALL-PROJECTS-FILE-01397B520288",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\工作記錄單榮陳新竹富百田社區開發供水.xls",
+      "file_sha256": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120202\\legacy_xls_parse\\1120202\\SRC-ALL-PROJECTS-FILE-09BF51E95000",
+      "sheet_count": 6
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-4E73BC0246E0",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳新竹富百田社區供水生產能力分表.xls",
+      "file_sha256": "3F692D90EB975250D6E030BBF215AA09CF89D9EACC170F30F9FACBDC1F77ED90",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120202\\legacy_xls_parse\\1120202\\SRC-ALL-PROJECTS-FILE-4E73BC0246E0",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5A841E3BE7C5",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳新竹縣富百田社區開發供水 會議審查.xls",
+      "file_sha256": "0A878BFF0B92DC0300948133B8BD78E0C0ABB26EFE5F7B531E02311EF1466BF0",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120202\\legacy_xls_parse\\1120202\\SRC-ALL-PROJECTS-FILE-5A841E3BE7C5",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-D5393A167136",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳科技新竹縣富百田社區供水訂單成本分析.xls",
+      "file_sha256": "313207DFE74DAE870C54BA635A6B23B24A44B0F46ECE69750604F31D347BAF2C",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120202\\legacy_xls_parse\\1120202\\SRC-ALL-PROJECTS-FILE-D5393A167136",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-DB13D61047A7",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\新竹縣富百田社區供水材料清單.xls",
+      "file_sha256": "356BD0CEA8461CCDD1C5DB24B3B98738670D753B9890E6960B8634557FD649BD",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120202\\legacy_xls_parse\\1120202\\SRC-ALL-PROJECTS-FILE-DB13D61047A7",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-E53D04B368AC",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳科技新竹縣富百田社區供水訂單成本分析分項.xls",
+      "file_sha256": "363C90F19448AD619163E8BE8B3A6551F51945F7191391FDED13DCBE95A9686A",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120202\\legacy_xls_parse\\1120202\\SRC-ALL-PROJECTS-FILE-E53D04B368AC",
+      "sheet_count": 3
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-01397B520288",
+      "first_metadata_hash": "BCB1C15FBBCBCEDA6589E37DA2DA3E3AAF892BBEFB868464ACB87E660C1CA26E",
+      "second_metadata_hash": "BCB1C15FBBCBCEDA6589E37DA2DA3E3AAF892BBEFB868464ACB87E660C1CA26E",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000",
+      "first_metadata_hash": "BF1724A52297D6E8058255296851B55315EF50DD3AF4393DBF3827F928138448",
+      "second_metadata_hash": "BF1724A52297D6E8058255296851B55315EF50DD3AF4393DBF3827F928138448",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-4E73BC0246E0",
+      "first_metadata_hash": "DC1D4C693C9ABC6616CDC092336D4493DAA772E4E89098012FE62691074AEE3B",
+      "second_metadata_hash": "DC1D4C693C9ABC6616CDC092336D4493DAA772E4E89098012FE62691074AEE3B",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5A841E3BE7C5",
+      "first_metadata_hash": "AEFD2D761AA01F1E92800CC36CC8C1F8FDAEECB8BC8EF7CA09F2C144B40E1A5F",
+      "second_metadata_hash": "AEFD2D761AA01F1E92800CC36CC8C1F8FDAEECB8BC8EF7CA09F2C144B40E1A5F",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-D5393A167136",
+      "first_metadata_hash": "979528597F9D68559CDFB6F577C202737B673BD39A9E71B07817DE15A94D1B2C",
+      "second_metadata_hash": "979528597F9D68559CDFB6F577C202737B673BD39A9E71B07817DE15A94D1B2C",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-DB13D61047A7",
+      "first_metadata_hash": "3D6F1BCC4397246411170F7730FB04029063161B749337C0CF29F935D902E328",
+      "second_metadata_hash": "3D6F1BCC4397246411170F7730FB04029063161B749337C0CF29F935D902E328",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-E53D04B368AC",
+      "first_metadata_hash": "FC89893E1A4093ECF491314F3F3374ADA0C217F40FC030C7A2AD814EFAE75704",
+      "second_metadata_hash": "FC89893E1A4093ECF491314F3F3374ADA0C217F40FC030C7A2AD814EFAE75704",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 12,
+  "excluded_count": 12
+}

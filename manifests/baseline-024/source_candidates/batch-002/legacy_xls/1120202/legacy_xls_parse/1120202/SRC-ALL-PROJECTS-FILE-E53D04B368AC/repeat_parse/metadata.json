@@ -1,0 +1,116 @@
+﻿{
+    "workbook_file_name":  "榮陳科技新竹縣富百田社區供水訂單成本分析分項.xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "Sheet2",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  31,
+                       "used_columns":  8,
+                       "non_empty_rows":  23,
+                       "formula_count":  1,
+                       "formulas":  [
+                                        {
+                                            "row":  14,
+                                            "column":  4,
+                                            "address":  "D14",
+                                            "formula":  "=E7+E8+E9+E11+E10",
+                                            "text":  "                       311,300 "
+                                        }
+                                    ],
+                       "csv_file_name":  "001_Sheet2.csv"
+                   },
+                   {
+                       "index":  2,
+                       "name":  "Sheet3",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  37,
+                       "used_columns":  8,
+                       "non_empty_rows":  29,
+                       "formula_count":  7,
+                       "formulas":  [
+                                        {
+                                            "row":  30,
+                                            "column":  3,
+                                            "address":  "C30",
+                                            "formula":  "=SUM(C6:C29)",
+                                            "text":  "285,000"
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  4,
+                                            "address":  "D30",
+                                            "formula":  "=SUM(D6:D29)",
+                                            "text":  "157,000"
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  5,
+                                            "address":  "E30",
+                                            "formula":  "=SUM(E6:E29)",
+                                            "text":  "33,300"
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  6,
+                                            "address":  "F30",
+                                            "formula":  "=SUM(F6:F29)",
+                                            "text":  "462,100"
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  7,
+                                            "address":  "G30",
+                                            "formula":  "=SUM(G6:G29)",
+                                            "text":  "121,000"
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  8,
+                                            "address":  "H30",
+                                            "formula":  "=SUM(H6:H29)",
+                                            "text":  "0"
+                                        },
+                                        {
+                                            "row":  31,
+                                            "column":  7,
+                                            "address":  "G31",
+                                            "formula":  "=C30+D30+E30+F30+G30+H30",
+                                            "text":  "1,058,400"
+                                        }
+                                    ],
+                       "csv_file_name":  "002_Sheet3.csv"
+                   },
+                   {
+                       "index":  3,
+                       "name":  "Sheet1",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  31,
+                       "used_columns":  8,
+                       "non_empty_rows":  23,
+                       "formula_count":  1,
+                       "formulas":  [
+                                        {
+                                            "row":  14,
+                                            "column":  4,
+                                            "address":  "D14",
+                                            "formula":  "=E7+E8+E9+E11+E10",
+                                            "text":  "                            400,400 "
+                                        }
+                                    ],
+                       "csv_file_name":  "003_Sheet1.csv"
+                   }
+               ]
+}

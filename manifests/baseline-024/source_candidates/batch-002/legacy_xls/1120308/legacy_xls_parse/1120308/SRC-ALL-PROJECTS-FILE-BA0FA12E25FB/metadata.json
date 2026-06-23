@@ -1,0 +1,104 @@
+﻿{
+    "workbook_file_name":  "馬稠後園區流量計儀表箱合約.xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "Sheet1",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  41,
+                       "used_columns":  8,
+                       "non_empty_rows":  41,
+                       "formula_count":  7,
+                       "formulas":  [
+                                        {
+                                            "row":  8,
+                                            "column":  7,
+                                            "address":  "G8",
+                                            "formula":  "=D8*F8",
+                                            "text":  "21,000"
+                                        },
+                                        {
+                                            "row":  9,
+                                            "column":  7,
+                                            "address":  "G9",
+                                            "formula":  "=D9*F9",
+                                            "text":  "600"
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  7,
+                                            "address":  "G10",
+                                            "formula":  "=D10*F10",
+                                            "text":  "800"
+                                        },
+                                        {
+                                            "row":  11,
+                                            "column":  7,
+                                            "address":  "G11",
+                                            "formula":  "=D11*F11",
+                                            "text":  "500"
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  7,
+                                            "address":  "G16",
+                                            "formula":  "=D16*F16",
+                                            "text":  "100"
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  7,
+                                            "address":  "G17",
+                                            "formula":  "=D17*F17",
+                                            "text":  "2,500"
+                                        },
+                                        {
+                                            "row":  20,
+                                            "column":  7,
+                                            "address":  "G20",
+                                            "formula":  "=SUM(G8:G19)",
+                                            "text":  "25,500"
+                                        }
+                                    ],
+                       "csv_file_name":  "001_Sheet1.csv"
+                   },
+                   {
+                       "index":  2,
+                       "name":  "Sheet2",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  1,
+                       "used_columns":  1,
+                       "non_empty_rows":  0,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "002_Sheet2.csv"
+                   },
+                   {
+                       "index":  3,
+                       "name":  "Sheet3",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  1,
+                       "used_columns":  1,
+                       "non_empty_rows":  0,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "003_Sheet3.csv"
+                   }
+               ]
+}

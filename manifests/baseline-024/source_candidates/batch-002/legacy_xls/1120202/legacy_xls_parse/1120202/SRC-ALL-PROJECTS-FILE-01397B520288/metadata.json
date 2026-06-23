@@ -1,0 +1,909 @@
+﻿{
+    "workbook_file_name":  "新竹縣富百田社區供水合約.xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "標單總表",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  38,
+                       "used_columns":  7,
+                       "non_empty_rows":  12,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "001_標單總表.csv"
+                   },
+                   {
+                       "index":  2,
+                       "name":  "標單詳細表",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  285,
+                       "used_columns":  7,
+                       "non_empty_rows":  271,
+                       "formula_count":  122,
+                       "formulas":  [
+                                        {
+                                            "row":  21,
+                                            "column":  6,
+                                            "address":  "F21",
+                                            "formula":  "=SUM(D21*E21)",
+                                            "text":  " 22,000 "
+                                        },
+                                        {
+                                            "row":  22,
+                                            "column":  6,
+                                            "address":  "F22",
+                                            "formula":  "=SUM(D22*E22)",
+                                            "text":  " 1,200 "
+                                        },
+                                        {
+                                            "row":  23,
+                                            "column":  6,
+                                            "address":  "F23",
+                                            "formula":  "=SUM(D23*E23)",
+                                            "text":  " 145,000 "
+                                        },
+                                        {
+                                            "row":  24,
+                                            "column":  6,
+                                            "address":  "F24",
+                                            "formula":  "=SUM(D24*E24)",
+                                            "text":  " 8,500 "
+                                        },
+                                        {
+                                            "row":  25,
+                                            "column":  6,
+                                            "address":  "F25",
+                                            "formula":  "=SUM(D25*E25)",
+                                            "text":  " 10,200 "
+                                        },
+                                        {
+                                            "row":  26,
+                                            "column":  6,
+                                            "address":  "F26",
+                                            "formula":  "=SUM(D26*E26)",
+                                            "text":  " 1,600 "
+                                        },
+                                        {
+                                            "row":  27,
+                                            "column":  6,
+                                            "address":  "F27",
+                                            "formula":  "=SUM(D27*E27)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  28,
+                                            "column":  6,
+                                            "address":  "F28",
+                                            "formula":  "=SUM(D28*E28)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  29,
+                                            "column":  6,
+                                            "address":  "F29",
+                                            "formula":  "=SUM(D29*E29)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  6,
+                                            "address":  "F30",
+                                            "formula":  "=SUM(D30*E30)",
+                                            "text":  " 500 "
+                                        },
+                                        {
+                                            "row":  32,
+                                            "column":  6,
+                                            "address":  "F32",
+                                            "formula":  "=SUM(D32*E32)",
+                                            "text":  " 8,200 "
+                                        },
+                                        {
+                                            "row":  33,
+                                            "column":  6,
+                                            "address":  "F33",
+                                            "formula":  "=SUM(D33*E33)",
+                                            "text":  " 4,200 "
+                                        },
+                                        {
+                                            "row":  34,
+                                            "column":  6,
+                                            "address":  "F34",
+                                            "formula":  "=SUM(D34*E34)",
+                                            "text":  " 23,600 "
+                                        },
+                                        {
+                                            "row":  35,
+                                            "column":  6,
+                                            "address":  "F35",
+                                            "formula":  "=SUM(D35*E35)",
+                                            "text":  " 6,200 "
+                                        },
+                                        {
+                                            "row":  36,
+                                            "column":  6,
+                                            "address":  "F36",
+                                            "formula":  "=SUM(D36*E36)",
+                                            "text":  " 2,500 "
+                                        },
+                                        {
+                                            "row":  39,
+                                            "column":  6,
+                                            "address":  "F39",
+                                            "formula":  "=SUM(D39*E39)",
+                                            "text":  " 2,000 "
+                                        },
+                                        {
+                                            "row":  40,
+                                            "column":  6,
+                                            "address":  "F40",
+                                            "formula":  "=SUM(D40*E40)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  41,
+                                            "column":  6,
+                                            "address":  "F41",
+                                            "formula":  "=SUM(D41*E41)",
+                                            "text":  " 6,400 "
+                                        },
+                                        {
+                                            "row":  43,
+                                            "column":  6,
+                                            "address":  "F43",
+                                            "formula":  "=SUM(D43*E43)",
+                                            "text":  " 10,200 "
+                                        },
+                                        {
+                                            "row":  44,
+                                            "column":  6,
+                                            "address":  "F44",
+                                            "formula":  "=SUM(D44*E44)",
+                                            "text":  " 3,200 "
+                                        },
+                                        {
+                                            "row":  45,
+                                            "column":  6,
+                                            "address":  "F45",
+                                            "formula":  "=SUM(D45*E45)",
+                                            "text":  " 23,000 "
+                                        },
+                                        {
+                                            "row":  46,
+                                            "column":  6,
+                                            "address":  "F46",
+                                            "formula":  "=SUM(D46*E46)",
+                                            "text":  " 29,000 "
+                                        },
+                                        {
+                                            "row":  47,
+                                            "column":  6,
+                                            "address":  "F47",
+                                            "formula":  "=SUM(D47*E47)",
+                                            "text":  " 12,800 "
+                                        },
+                                        {
+                                            "row":  48,
+                                            "column":  6,
+                                            "address":  "F48",
+                                            "formula":  "=SUM(D48*E48)",
+                                            "text":  " 1,280 "
+                                        },
+                                        {
+                                            "row":  49,
+                                            "column":  6,
+                                            "address":  "F49",
+                                            "formula":  "=SUM(D49*E49)",
+                                            "text":  " 3,000 "
+                                        },
+                                        {
+                                            "row":  50,
+                                            "column":  6,
+                                            "address":  "F50",
+                                            "formula":  "=SUM(D50*E50)",
+                                            "text":  " 960 "
+                                        },
+                                        {
+                                            "row":  51,
+                                            "column":  6,
+                                            "address":  "F51",
+                                            "formula":  "=SUM(D51*E51)",
+                                            "text":  " 4,200 "
+                                        },
+                                        {
+                                            "row":  52,
+                                            "column":  6,
+                                            "address":  "F52",
+                                            "formula":  "=SUM(D52*E52)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  54,
+                                            "column":  6,
+                                            "address":  "F54",
+                                            "formula":  "=SUM(D54*E54)",
+                                            "text":  " 10,500 "
+                                        },
+                                        {
+                                            "row":  56,
+                                            "column":  6,
+                                            "address":  "F56",
+                                            "formula":  "=SUM(D56*E56)",
+                                            "text":  " 900 "
+                                        },
+                                        {
+                                            "row":  79,
+                                            "column":  6,
+                                            "address":  "F79",
+                                            "formula":  "=SUM(D79*E79)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  80,
+                                            "column":  6,
+                                            "address":  "F80",
+                                            "formula":  "=SUM(D80*E80)",
+                                            "text":  " 400 "
+                                        },
+                                        {
+                                            "row":  81,
+                                            "column":  6,
+                                            "address":  "F81",
+                                            "formula":  "=SUM(D81*E81)",
+                                            "text":  " 9,500 "
+                                        },
+                                        {
+                                            "row":  82,
+                                            "column":  6,
+                                            "address":  "F82",
+                                            "formula":  "=SUM(D82*E82)",
+                                            "text":  " 2,700 "
+                                        },
+                                        {
+                                            "row":  83,
+                                            "column":  6,
+                                            "address":  "F83",
+                                            "formula":  "=SUM(D83*E83)",
+                                            "text":  " 1,500 "
+                                        },
+                                        {
+                                            "row":  89,
+                                            "column":  6,
+                                            "address":  "F89",
+                                            "formula":  "=SUM(D89*E89)",
+                                            "text":  " 9,000 "
+                                        },
+                                        {
+                                            "row":  96,
+                                            "column":  6,
+                                            "address":  "F96",
+                                            "formula":  "=SUM(D96*E96)",
+                                            "text":  " 15,000 "
+                                        },
+                                        {
+                                            "row":  98,
+                                            "column":  6,
+                                            "address":  "F98",
+                                            "formula":  "=SUM(D98*E98)",
+                                            "text":  " 41,000 "
+                                        },
+                                        {
+                                            "row":  99,
+                                            "column":  6,
+                                            "address":  "F99",
+                                            "formula":  "=SUM(D99*E99)",
+                                            "text":  " 3,000 "
+                                        },
+                                        {
+                                            "row":  102,
+                                            "column":  6,
+                                            "address":  "F102",
+                                            "formula":  "=SUM(D102*E102)",
+                                            "text":  " 22,000 "
+                                        },
+                                        {
+                                            "row":  103,
+                                            "column":  6,
+                                            "address":  "F103",
+                                            "formula":  "=SUM(D103*E103)",
+                                            "text":  " 1,200 "
+                                        },
+                                        {
+                                            "row":  104,
+                                            "column":  6,
+                                            "address":  "F104",
+                                            "formula":  "=SUM(D104*E104)",
+                                            "text":  " 175,000 "
+                                        },
+                                        {
+                                            "row":  105,
+                                            "column":  6,
+                                            "address":  "F105",
+                                            "formula":  "=SUM(D105*E105)",
+                                            "text":  " 8,500 "
+                                        },
+                                        {
+                                            "row":  106,
+                                            "column":  6,
+                                            "address":  "F106",
+                                            "formula":  "=SUM(D106*E106)",
+                                            "text":  " 2,200 "
+                                        },
+                                        {
+                                            "row":  107,
+                                            "column":  6,
+                                            "address":  "F107",
+                                            "formula":  "=SUM(D107*E107)",
+                                            "text":  " 2,000 "
+                                        },
+                                        {
+                                            "row":  108,
+                                            "column":  6,
+                                            "address":  "F108",
+                                            "formula":  "=SUM(D108*E108)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  109,
+                                            "column":  6,
+                                            "address":  "F109",
+                                            "formula":  "=SUM(D109*E109)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  110,
+                                            "column":  6,
+                                            "address":  "F110",
+                                            "formula":  "=SUM(D110*E110)",
+                                            "text":  " 500 "
+                                        },
+                                        {
+                                            "row":  112,
+                                            "column":  6,
+                                            "address":  "F112",
+                                            "formula":  "=SUM(D112*E112)",
+                                            "text":  " 8,200 "
+                                        },
+                                        {
+                                            "row":  113,
+                                            "column":  6,
+                                            "address":  "F113",
+                                            "formula":  "=SUM(D113*E113)",
+                                            "text":  " 5,600 "
+                                        },
+                                        {
+                                            "row":  114,
+                                            "column":  6,
+                                            "address":  "F114",
+                                            "formula":  "=SUM(D114*E114)",
+                                            "text":  " 6,400 "
+                                        },
+                                        {
+                                            "row":  115,
+                                            "column":  6,
+                                            "address":  "F115",
+                                            "formula":  "=SUM(D115*E115)",
+                                            "text":  " 43,200 "
+                                        },
+                                        {
+                                            "row":  116,
+                                            "column":  6,
+                                            "address":  "F116",
+                                            "formula":  "=SUM(D116*E116)",
+                                            "text":  " 6,200 "
+                                        },
+                                        {
+                                            "row":  117,
+                                            "column":  6,
+                                            "address":  "F117",
+                                            "formula":  "=SUM(D117*E117)",
+                                            "text":  " 3,000 "
+                                        },
+                                        {
+                                            "row":  120,
+                                            "column":  6,
+                                            "address":  "F120",
+                                            "formula":  "=SUM(D120*E120)",
+                                            "text":  " 20,400 "
+                                        },
+                                        {
+                                            "row":  121,
+                                            "column":  6,
+                                            "address":  "F121",
+                                            "formula":  "=SUM(D121*E121)",
+                                            "text":  " 4,000 "
+                                        },
+                                        {
+                                            "row":  122,
+                                            "column":  6,
+                                            "address":  "F122",
+                                            "formula":  "=SUM(D122*E122)",
+                                            "text":  " 2,000 "
+                                        },
+                                        {
+                                            "row":  123,
+                                            "column":  6,
+                                            "address":  "F123",
+                                            "formula":  "=SUM(D123*E123)",
+                                            "text":  " 12,800 "
+                                        },
+                                        {
+                                            "row":  124,
+                                            "column":  6,
+                                            "address":  "F124",
+                                            "formula":  "=SUM(D124*E124)",
+                                            "text":  " 46,000 "
+                                        },
+                                        {
+                                            "row":  125,
+                                            "column":  6,
+                                            "address":  "F125",
+                                            "formula":  "=SUM(D125*E125)",
+                                            "text":  " 34,000 "
+                                        },
+                                        {
+                                            "row":  126,
+                                            "column":  6,
+                                            "address":  "F126",
+                                            "formula":  "=SUM(D126*E126)",
+                                            "text":  " 23,200 "
+                                        },
+                                        {
+                                            "row":  127,
+                                            "column":  6,
+                                            "address":  "F127",
+                                            "formula":  "=SUM(D127*E127)",
+                                            "text":  " 12,800 "
+                                        },
+                                        {
+                                            "row":  129,
+                                            "column":  6,
+                                            "address":  "F129",
+                                            "formula":  "=SUM(D129*E129)",
+                                            "text":  " 2,240 "
+                                        },
+                                        {
+                                            "row":  130,
+                                            "column":  6,
+                                            "address":  "F130",
+                                            "formula":  "=SUM(D130*E130)",
+                                            "text":  " 5,000 "
+                                        },
+                                        {
+                                            "row":  131,
+                                            "column":  6,
+                                            "address":  "F131",
+                                            "formula":  "=SUM(D131*E131)",
+                                            "text":  " 1,600 "
+                                        },
+                                        {
+                                            "row":  132,
+                                            "column":  6,
+                                            "address":  "F132",
+                                            "formula":  "=SUM(D132*E132)",
+                                            "text":  " 6,200 "
+                                        },
+                                        {
+                                            "row":  133,
+                                            "column":  6,
+                                            "address":  "F133",
+                                            "formula":  "=SUM(D133*E133)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  135,
+                                            "column":  6,
+                                            "address":  "F135",
+                                            "formula":  "=SUM(D135*E135)",
+                                            "text":  " 10,500 "
+                                        },
+                                        {
+                                            "row":  137,
+                                            "column":  6,
+                                            "address":  "F137",
+                                            "formula":  "=SUM(D137*E137)",
+                                            "text":  " 900 "
+                                        },
+                                        {
+                                            "row":  160,
+                                            "column":  6,
+                                            "address":  "F160",
+                                            "formula":  "=SUM(D160*E160)",
+                                            "text":  " 1,500 "
+                                        },
+                                        {
+                                            "row":  161,
+                                            "column":  6,
+                                            "address":  "F161",
+                                            "formula":  "=SUM(D161*E161)",
+                                            "text":  " 800 "
+                                        },
+                                        {
+                                            "row":  162,
+                                            "column":  6,
+                                            "address":  "F162",
+                                            "formula":  "=SUM(D162*E162)",
+                                            "text":  " 9,500 "
+                                        },
+                                        {
+                                            "row":  163,
+                                            "column":  6,
+                                            "address":  "F163",
+                                            "formula":  "=SUM(D163*E163)",
+                                            "text":  " 2,700 "
+                                        },
+                                        {
+                                            "row":  164,
+                                            "column":  6,
+                                            "address":  "F164",
+                                            "formula":  "=SUM(D164*E164)",
+                                            "text":  " 1,500 "
+                                        },
+                                        {
+                                            "row":  170,
+                                            "column":  6,
+                                            "address":  "F170",
+                                            "formula":  "=SUM(D170*E170)",
+                                            "text":  " 13,500 "
+                                        },
+                                        {
+                                            "row":  177,
+                                            "column":  6,
+                                            "address":  "F177",
+                                            "formula":  "=SUM(D177*E177)",
+                                            "text":  " 15,000 "
+                                        },
+                                        {
+                                            "row":  179,
+                                            "column":  6,
+                                            "address":  "F179",
+                                            "formula":  "=SUM(D179*E179)",
+                                            "text":  " 64,000 "
+                                        },
+                                        {
+                                            "row":  180,
+                                            "column":  6,
+                                            "address":  "F180",
+                                            "formula":  "=SUM(D180*E180)",
+                                            "text":  " 4,000 "
+                                        },
+                                        {
+                                            "row":  183,
+                                            "column":  6,
+                                            "address":  "F183",
+                                            "formula":  "=SUM(D183*E183)",
+                                            "text":  " 22,000 "
+                                        },
+                                        {
+                                            "row":  184,
+                                            "column":  6,
+                                            "address":  "F184",
+                                            "formula":  "=SUM(D184*E184)",
+                                            "text":  " 68,400 "
+                                        },
+                                        {
+                                            "row":  185,
+                                            "column":  6,
+                                            "address":  "F185",
+                                            "formula":  "=SUM(D185*E185)",
+                                            "text":  " 1,100 "
+                                        },
+                                        {
+                                            "row":  186,
+                                            "column":  6,
+                                            "address":  "F186",
+                                            "formula":  "=SUM(D186*E186)",
+                                            "text":  " 500 "
+                                        },
+                                        {
+                                            "row":  187,
+                                            "column":  6,
+                                            "address":  "F187",
+                                            "formula":  "=SUM(D187*E187)",
+                                            "text":  " 5,600 "
+                                        },
+                                        {
+                                            "row":  188,
+                                            "column":  6,
+                                            "address":  "F188",
+                                            "formula":  "=SUM(D188*E188)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  189,
+                                            "column":  6,
+                                            "address":  "F189",
+                                            "formula":  "=SUM(D189*E189)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  190,
+                                            "column":  6,
+                                            "address":  "F190",
+                                            "formula":  "=SUM(D190*E190)",
+                                            "text":  " 6,200 "
+                                        },
+                                        {
+                                            "row":  193,
+                                            "column":  6,
+                                            "address":  "F193",
+                                            "formula":  "=SUM(D193*E193)",
+                                            "text":  " 900 "
+                                        },
+                                        {
+                                            "row":  194,
+                                            "column":  6,
+                                            "address":  "F194",
+                                            "formula":  "=SUM(D194*E194)",
+                                            "text":  " 1,500 "
+                                        },
+                                        {
+                                            "row":  202,
+                                            "column":  6,
+                                            "address":  "F202",
+                                            "formula":  "=SUM(D202*E202)",
+                                            "text":  " 600 "
+                                        },
+                                        {
+                                            "row":  205,
+                                            "column":  6,
+                                            "address":  "F205",
+                                            "formula":  "=SUM(D205*E205)",
+                                            "text":  " 320 "
+                                        },
+                                        {
+                                            "row":  206,
+                                            "column":  6,
+                                            "address":  "F206",
+                                            "formula":  "=SUM(D206*E206)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  207,
+                                            "column":  6,
+                                            "address":  "F207",
+                                            "formula":  "=SUM(D207*E207)",
+                                            "text":  " 2,400 "
+                                        },
+                                        {
+                                            "row":  208,
+                                            "column":  6,
+                                            "address":  "F208",
+                                            "formula":  "=SUM(D208*E208)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  210,
+                                            "column":  6,
+                                            "address":  "F210",
+                                            "formula":  "=SUM(D210*E210)",
+                                            "text":  " 2,700 "
+                                        },
+                                        {
+                                            "row":  211,
+                                            "column":  6,
+                                            "address":  "F211",
+                                            "formula":  "=SUM(D211*E211)",
+                                            "text":  " 7,000 "
+                                        },
+                                        {
+                                            "row":  212,
+                                            "column":  6,
+                                            "address":  "F212",
+                                            "formula":  "=SUM(D212*E212)",
+                                            "text":  " 400 "
+                                        },
+                                        {
+                                            "row":  213,
+                                            "column":  6,
+                                            "address":  "F213",
+                                            "formula":  "=SUM(D213*E213)",
+                                            "text":  " 5,500 "
+                                        },
+                                        {
+                                            "row":  223,
+                                            "column":  6,
+                                            "address":  "F223",
+                                            "formula":  "=SUM(D223*E223)",
+                                            "text":  " 19,000 "
+                                        },
+                                        {
+                                            "row":  224,
+                                            "column":  6,
+                                            "address":  "F224",
+                                            "formula":  "=SUM(D224*E224)",
+                                            "text":  " 2,500 "
+                                        },
+                                        {
+                                            "row":  227,
+                                            "column":  6,
+                                            "address":  "F227",
+                                            "formula":  "=SUM(D227*E227)",
+                                            "text":  " 22,000 "
+                                        },
+                                        {
+                                            "row":  228,
+                                            "column":  6,
+                                            "address":  "F228",
+                                            "formula":  "=SUM(D228*E228)",
+                                            "text":  " 68,400 "
+                                        },
+                                        {
+                                            "row":  229,
+                                            "column":  6,
+                                            "address":  "F229",
+                                            "formula":  "=SUM(D229*E229)",
+                                            "text":  " 1,100 "
+                                        },
+                                        {
+                                            "row":  230,
+                                            "column":  6,
+                                            "address":  "F230",
+                                            "formula":  "=SUM(D230*E230)",
+                                            "text":  " 500 "
+                                        },
+                                        {
+                                            "row":  231,
+                                            "column":  6,
+                                            "address":  "F231",
+                                            "formula":  "=SUM(D231*E231)",
+                                            "text":  " 5,600 "
+                                        },
+                                        {
+                                            "row":  232,
+                                            "column":  6,
+                                            "address":  "F232",
+                                            "formula":  "=SUM(D232*E232)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  233,
+                                            "column":  6,
+                                            "address":  "F233",
+                                            "formula":  "=SUM(D233*E233)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  234,
+                                            "column":  6,
+                                            "address":  "F234",
+                                            "formula":  "=SUM(D234*E234)",
+                                            "text":  " 6,200 "
+                                        },
+                                        {
+                                            "row":  237,
+                                            "column":  6,
+                                            "address":  "F237",
+                                            "formula":  "=SUM(D237*E237)",
+                                            "text":  " 900 "
+                                        },
+                                        {
+                                            "row":  238,
+                                            "column":  6,
+                                            "address":  "F238",
+                                            "formula":  "=SUM(D238*E238)",
+                                            "text":  " 1,500 "
+                                        },
+                                        {
+                                            "row":  246,
+                                            "column":  6,
+                                            "address":  "F246",
+                                            "formula":  "=SUM(D246*E246)",
+                                            "text":  " 600 "
+                                        },
+                                        {
+                                            "row":  247,
+                                            "column":  6,
+                                            "address":  "F247",
+                                            "formula":  "=SUM(D247*E247)",
+                                            "text":  " - "
+                                        },
+                                        {
+                                            "row":  250,
+                                            "column":  6,
+                                            "address":  "F250",
+                                            "formula":  "=SUM(D250*E250)",
+                                            "text":  " 500 "
+                                        },
+                                        {
+                                            "row":  251,
+                                            "column":  6,
+                                            "address":  "F251",
+                                            "formula":  "=SUM(D251*E251)",
+                                            "text":  " 4,800 "
+                                        },
+                                        {
+                                            "row":  252,
+                                            "column":  6,
+                                            "address":  "F252",
+                                            "formula":  "=SUM(D252*E252)",
+                                            "text":  " 1,000 "
+                                        },
+                                        {
+                                            "row":  254,
+                                            "column":  6,
+                                            "address":  "F254",
+                                            "formula":  "=SUM(D254*E254)",
+                                            "text":  " 2,700 "
+                                        },
+                                        {
+                                            "row":  255,
+                                            "column":  6,
+                                            "address":  "F255",
+                                            "formula":  "=SUM(D255*E255)",
+                                            "text":  " 7,000 "
+                                        },
+                                        {
+                                            "row":  256,
+                                            "column":  6,
+                                            "address":  "F256",
+                                            "formula":  "=SUM(D256*E256)",
+                                            "text":  " 400 "
+                                        },
+                                        {
+                                            "row":  257,
+                                            "column":  6,
+                                            "address":  "F257",
+                                            "formula":  "=SUM(D257*E257)",
+                                            "text":  " 5,500 "
+                                        },
+                                        {
+                                            "row":  267,
+                                            "column":  6,
+                                            "address":  "F267",
+                                            "formula":  "=SUM(D267*E267)",
+                                            "text":  " 19,000 "
+                                        },
+                                        {
+                                            "row":  268,
+                                            "column":  6,
+                                            "address":  "F268",
+                                            "formula":  "=SUM(D268*E268)",
+                                            "text":  " 2,500 "
+                                        },
+                                        {
+                                            "row":  270,
+                                            "column":  6,
+                                            "address":  "F270",
+                                            "formula":  "=SUM(D270*E270)",
+                                            "text":  " 45,800 "
+                                        },
+                                        {
+                                            "row":  271,
+                                            "column":  6,
+                                            "address":  "F271",
+                                            "formula":  "=SUM(F12:F270)",
+                                            "text":  " 1,359,000 "
+                                        }
+                                    ],
+                       "csv_file_name":  "002_標單詳細表.csv"
+                   },
+                   {
+                       "index":  3,
+                       "name":  "標單單價分析表",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  42,
+                       "used_columns":  7,
+                       "non_empty_rows":  23,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "003_標單單價分析表.csv"
+                   }
+               ]
+}

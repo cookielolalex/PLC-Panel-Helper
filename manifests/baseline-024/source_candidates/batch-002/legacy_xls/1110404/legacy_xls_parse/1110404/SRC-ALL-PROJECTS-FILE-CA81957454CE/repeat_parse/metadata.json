@@ -1,0 +1,104 @@
+﻿{
+    "workbook_file_name":  "宇博彰化芬園利民橋加壓站分項ls.xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "Sheet1",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  37,
+                       "used_columns":  8,
+                       "non_empty_rows":  29,
+                       "formula_count":  7,
+                       "formulas":  [
+                                        {
+                                            "row":  30,
+                                            "column":  3,
+                                            "address":  "C30",
+                                            "formula":  "=SUM(C6:C29)",
+                                            "text":  "143,500"
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  4,
+                                            "address":  "D30",
+                                            "formula":  "=SUM(D6:D29)",
+                                            "text":  "58,500"
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  5,
+                                            "address":  "E30",
+                                            "formula":  "=SUM(E6:E29)",
+                                            "text":  "10,000"
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  6,
+                                            "address":  "F30",
+                                            "formula":  "=SUM(F6:F29)",
+                                            "text":  "137,200"
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  7,
+                                            "address":  "G30",
+                                            "formula":  "=SUM(G6:G29)",
+                                            "text":  "59,000"
+                                        },
+                                        {
+                                            "row":  30,
+                                            "column":  8,
+                                            "address":  "H30",
+                                            "formula":  "=SUM(H6:H29)",
+                                            "text":  "0"
+                                        },
+                                        {
+                                            "row":  31,
+                                            "column":  7,
+                                            "address":  "G31",
+                                            "formula":  "=C30+D30+E30+F30+G30+H30",
+                                            "text":  "408,200"
+                                        }
+                                    ],
+                       "csv_file_name":  "001_Sheet1.csv"
+                   },
+                   {
+                       "index":  2,
+                       "name":  "Sheet2",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  1,
+                       "used_columns":  1,
+                       "non_empty_rows":  0,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "002_Sheet2.csv"
+                   },
+                   {
+                       "index":  3,
+                       "name":  "Sheet3",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  1,
+                       "used_columns":  1,
+                       "non_empty_rows":  0,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "003_Sheet3.csv"
+                   }
+               ]
+}

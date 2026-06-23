@@ -1,0 +1,932 @@
+{
+  "prefilter_id": "baseline024_batch-002_prefilter_1120202",
+  "project_id": "1120202",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS_SUBMIT_TO_REVIEW",
+  "items": [
+    {
+      "decision_id": "SGD-AA40D44C961272",
+      "file_id": "SRC-ALL-PROJECTS-FILE-01397B520288",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-01397B520288-XLS-SHEET-001",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\新竹縣富百田社區供水合約.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "F17247092D6E35CE6B4C6EFBFF8ED1B549E3CFD63B676C747115FD8B5F86999E",
+      "worksheet_name": "標單總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "162F7E8B9B64AD5A21F4AC825D7761C6A631EF9037945B51E82D21C3E2B26E8E",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "F17247092D6E35CE6B4C6EFBFF8ED1B549E3CFD63B676C747115FD8B5F86999E"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "E2EF67D2796C83B6BC9AC12C3C854E6CA945F4AC3583580838DC6926770CCC8E"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-4FA1EA8B791E41",
+      "file_id": "SRC-ALL-PROJECTS-FILE-01397B520288",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-01397B520288-XLS-SHEET-002",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\新竹縣富百田社區供水合約.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "F17247092D6E35CE6B4C6EFBFF8ED1B549E3CFD63B676C747115FD8B5F86999E",
+      "worksheet_name": "標單詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "927D547707C46C9F2E9A9F4A4954DD901F8C2683143239EF8D05438ED394FADA",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "F17247092D6E35CE6B4C6EFBFF8ED1B549E3CFD63B676C747115FD8B5F86999E"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "8D513AF27FDA93F9B6AA0DC10CBE79C512BB5610C2D105664078962EDCF01A42"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-32B0F0B46D8E86",
+      "file_id": "SRC-ALL-PROJECTS-FILE-01397B520288",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-01397B520288-XLS-SHEET-003",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\新竹縣富百田社區供水合約.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "F17247092D6E35CE6B4C6EFBFF8ED1B549E3CFD63B676C747115FD8B5F86999E",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "31889D6C4E55AA6E0B1CD059183BA3C56C59B6B236C3036195E7517024B62514",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "F17247092D6E35CE6B4C6EFBFF8ED1B549E3CFD63B676C747115FD8B5F86999E"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "6F5DAF54044360B01A2AD17072A6BD0C09952130216F23A80A3699DC72A35408"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-EEDE86BBE01B11",
+      "file_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000-XLS-SHEET-001",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\工作記錄單榮陳新竹富百田社區開發供水.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688",
+      "worksheet_name": "0413",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "44B250AE62DD3B0BC927C3C0EBF31D46567F1342287E2EFDFBA771BAAA7F9D65",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "AD0F33A7A0D4F68F87DCB8B78EF61DB3BC12674CC10FF4BB5F19DDA6868DAEA0"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-CB64939FF3530E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000-XLS-SHEET-002",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\工作記錄單榮陳新竹富百田社區開發供水.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688",
+      "worksheet_name": "0415",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "80F99AC9C6518B1C241192861715CA6A227CACBF8E8B08CB512EBB3C660380EC",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "85443C0FDC9678CCFB657AECCCB90A88F859E5FA16AB8B2EA7210B1053FE7B9A"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-23BAB467863758",
+      "file_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000-XLS-SHEET-003",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\工作記錄單榮陳新竹富百田社區開發供水.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688",
+      "worksheet_name": "空白",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "B5AD89DF08DECDCE5F994AD3DA7C3BBEA1E45E17C3F9FE8E167667935B3A6262",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "1D9CD85BBEF8C721BBFD1971DE053612BFD9145A72AF191B7F8FFF5830E74A9D"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-D81988C9550320",
+      "file_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000-XLS-SHEET-004",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\工作記錄單榮陳新竹富百田社區開發供水.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688",
+      "worksheet_name": "05",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "C486E895C071C0C972EC1931CBA0899016DCFC94173F74D32DAB9D6E9DFCD142",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "768EF9E29A9A541E53DBA9A61496CBC5EA46A9498F86F833F1E0BEB02A18C41C"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-2AA1164C7D2AC2",
+      "file_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000-XLS-SHEET-005",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\工作記錄單榮陳新竹富百田社區開發供水.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688",
+      "worksheet_name": "05 (2)",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "AB9BB32E176B865C84DBA725CE82266BEFF1495F0C2BAF3232E972E6C74BD8B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "AD46148889E6540EA6AC05F9BEE96AC0C92B5655F2025D70C3192CBEA5ED1990"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-0EC5D15E55E7FD",
+      "file_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-09BF51E95000-XLS-SHEET-006",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\工作記錄單榮陳新竹富百田社區開發供水.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688",
+      "worksheet_name": "0505",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "15DA7629F4E61AC62F559D0D56416060CD31B24AF54EC0DF32256A2F017A821E",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B33D5EC5BC90A4E5BF6C1D7866CF0B56FC5A7DEA76738ABA1ECB46C0D59F4688"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "299C55856F52C9A576A4849AD23F8917744A67D3A8C3D88BCC51ED98FBE8D5E2"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-31217AD46AD247",
+      "file_id": "SRC-ALL-PROJECTS-FILE-4E73BC0246E0",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-4E73BC0246E0-XLS-SHEET-001",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳新竹富百田社區供水生產能力分表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "3F692D90EB975250D6E030BBF215AA09CF89D9EACC170F30F9FACBDC1F77ED90",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "BF884AFFC503646539004F80A118B24547874A8207FCE1E359E8564219E93033",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "3F692D90EB975250D6E030BBF215AA09CF89D9EACC170F30F9FACBDC1F77ED90"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "FA3BC69ED61180D19D82717AF5B4170AF40E8B6B9E5EAECF6CC340D8810239F9"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-81AE96C0380DAA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-4E73BC0246E0",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-4E73BC0246E0-XLS-SHEET-002",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳新竹富百田社區供水生產能力分表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "3F692D90EB975250D6E030BBF215AA09CF89D9EACC170F30F9FACBDC1F77ED90",
+      "worksheet_name": "會議審查",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "D71887E3DEC9BCA4F985796C64CA935621FBCBF7949AE3757C7E8B7F3A242E08",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "3F692D90EB975250D6E030BBF215AA09CF89D9EACC170F30F9FACBDC1F77ED90"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "986E47459BA7EF38F46F08D07CD9E0269274B83420D724482F2B0C672E84FCAE"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-9BDA3DD58B9090",
+      "file_id": "SRC-ALL-PROJECTS-FILE-4E73BC0246E0",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-4E73BC0246E0-XLS-SHEET-003",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳新竹富百田社區供水生產能力分表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "3F692D90EB975250D6E030BBF215AA09CF89D9EACC170F30F9FACBDC1F77ED90",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "3F692D90EB975250D6E030BBF215AA09CF89D9EACC170F30F9FACBDC1F77ED90"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-66BBC5F03808E4",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5A841E3BE7C5",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5A841E3BE7C5-XLS-SHEET-001",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳新竹縣富百田社區開發供水 會議審查.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "0A878BFF0B92DC0300948133B8BD78E0C0ABB26EFE5F7B531E02311EF1466BF0",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "6C4228887E1154F44D16833E5FB5C3FFE88E490F6374EF7D601C7446474701B0",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "0A878BFF0B92DC0300948133B8BD78E0C0ABB26EFE5F7B531E02311EF1466BF0"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "8509D6A09CDB9BC1487B4B0BF0C66420C520EA4E990AF278D1AB4CE15A0A9E98"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-856A12FF09FA95",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5A841E3BE7C5",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5A841E3BE7C5-XLS-SHEET-002",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳新竹縣富百田社區開發供水 會議審查.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "0A878BFF0B92DC0300948133B8BD78E0C0ABB26EFE5F7B531E02311EF1466BF0",
+      "worksheet_name": "會議審查",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "5330739E869D45E6D86340E3D4F7A720CE6A3DF0B9F506D465096A11299F8FF1",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "0A878BFF0B92DC0300948133B8BD78E0C0ABB26EFE5F7B531E02311EF1466BF0"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "052C228F0847B0FF26940214F3FEDE598E3003E18798F9772405F041FAA78F46"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-3A50F70ACE20D6",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5A841E3BE7C5",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5A841E3BE7C5-XLS-SHEET-003",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳新竹縣富百田社區開發供水 會議審查.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "0A878BFF0B92DC0300948133B8BD78E0C0ABB26EFE5F7B531E02311EF1466BF0",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "0A878BFF0B92DC0300948133B8BD78E0C0ABB26EFE5F7B531E02311EF1466BF0"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-C07D4EE47385BE",
+      "file_id": "SRC-ALL-PROJECTS-FILE-D5393A167136",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-D5393A167136-XLS-SHEET-001",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳科技新竹縣富百田社區供水訂單成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "313207DFE74DAE870C54BA635A6B23B24A44B0F46ECE69750604F31D347BAF2C",
+      "worksheet_name": "Sheet2",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "5F18738DA20A417CB1F4AD25371D1B22E514B7D8A99701DA76925CAF00B09B2B",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "313207DFE74DAE870C54BA635A6B23B24A44B0F46ECE69750604F31D347BAF2C"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F4F249BBF34602C5E6B09D2D4736508DFE7F7C95FDAFA9C1648C03FDA55F069A"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-0709662D1EE9F4",
+      "file_id": "SRC-ALL-PROJECTS-FILE-D5393A167136",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-D5393A167136-XLS-SHEET-002",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳科技新竹縣富百田社區供水訂單成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "313207DFE74DAE870C54BA635A6B23B24A44B0F46ECE69750604F31D347BAF2C",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "92F08BD1419E91EF7839DC739DC4A1009C3BEDC83095CCC7B6EB5E93973D4128",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "313207DFE74DAE870C54BA635A6B23B24A44B0F46ECE69750604F31D347BAF2C"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "1FFB0518AA55C30B6A5FA2AECABD673CF7EA26344BBBC4EDBA277CAA9FEADD5D"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-835EC27BBF73A4",
+      "file_id": "SRC-ALL-PROJECTS-FILE-D5393A167136",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-D5393A167136-XLS-SHEET-003",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳科技新竹縣富百田社區供水訂單成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "313207DFE74DAE870C54BA635A6B23B24A44B0F46ECE69750604F31D347BAF2C",
+      "worksheet_name": "Sheet1",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "35F652C61C2FD7B7409EE7959EEFD9F640110595A3492F32D668EDFE7D96B920",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "313207DFE74DAE870C54BA635A6B23B24A44B0F46ECE69750604F31D347BAF2C"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "34571D4AC805AE27B2B0EBE515CE93823FA6DA343037A63AE87A996198862A21"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-1195DBCAE18032",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DB13D61047A7",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-DB13D61047A7-XLS-SHEET-001",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\新竹縣富百田社區供水材料清單.xls",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "356BD0CEA8461CCDD1C5DB24B3B98738670D753B9890E6960B8634557FD649BD",
+      "worksheet_name": "標單總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "162F7E8B9B64AD5A21F4AC825D7761C6A631EF9037945B51E82D21C3E2B26E8E",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "356BD0CEA8461CCDD1C5DB24B3B98738670D753B9890E6960B8634557FD649BD"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "E2EF67D2796C83B6BC9AC12C3C854E6CA945F4AC3583580838DC6926770CCC8E"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-1746CE203E64AA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DB13D61047A7",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-DB13D61047A7-XLS-SHEET-002",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\新竹縣富百田社區供水材料清單.xls",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "356BD0CEA8461CCDD1C5DB24B3B98738670D753B9890E6960B8634557FD649BD",
+      "worksheet_name": "標單詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "011F1CE460C79128EF79460BE35E00F984D1AD21DB9EAC2258EA84F0ADD9E248",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "356BD0CEA8461CCDD1C5DB24B3B98738670D753B9890E6960B8634557FD649BD"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F764D0C34465DEEBC0A5DC1FCBB7E00FA224B85FBF960129E2442EA597298FFF"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-1883E4136965DB",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DB13D61047A7",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-DB13D61047A7-XLS-SHEET-003",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\新竹縣富百田社區供水材料清單.xls",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "356BD0CEA8461CCDD1C5DB24B3B98738670D753B9890E6960B8634557FD649BD",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "31889D6C4E55AA6E0B1CD059183BA3C56C59B6B236C3036195E7517024B62514",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "356BD0CEA8461CCDD1C5DB24B3B98738670D753B9890E6960B8634557FD649BD"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "6F5DAF54044360B01A2AD17072A6BD0C09952130216F23A80A3699DC72A35408"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-1929B3948DBE03",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E53D04B368AC",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-E53D04B368AC-XLS-SHEET-001",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳科技新竹縣富百田社區供水訂單成本分析分項.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "363C90F19448AD619163E8BE8B3A6551F51945F7191391FDED13DCBE95A9686A",
+      "worksheet_name": "Sheet2",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "1B1BE9FCA56F599EB5DE9E67FA521B6886F468EB3F73470755752A6EE05072C8",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "363C90F19448AD619163E8BE8B3A6551F51945F7191391FDED13DCBE95A9686A"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "2EB11CEFE09EDB00BCDE1FC56532EE34E472E18D183CA3D3B2CBA57FF45E1788"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-FA5AF590DA4A75",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E53D04B368AC",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-E53D04B368AC-XLS-SHEET-002",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳科技新竹縣富百田社區供水訂單成本分析分項.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "363C90F19448AD619163E8BE8B3A6551F51945F7191391FDED13DCBE95A9686A",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "BF55307F8D032DFCDB8D310698372727864040B8CEBE4A1E7C07F0A8C0B697AF",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "363C90F19448AD619163E8BE8B3A6551F51945F7191391FDED13DCBE95A9686A"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "0784E55514FAAA1E0A45807D3F4E54E3F7E5CCC7267F511EF8F7816C423EF5DF"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-CCBF1FEFA9EAE9",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E53D04B368AC",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-E53D04B368AC-XLS-SHEET-003",
+      "project_id": "1120202",
+      "relative_path": "112年度工作\\112年度工作\\1120202榮陳-新竹富百田社區開發供水\\榮陳科技新竹縣富百田社區供水訂單成本分析分項.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "363C90F19448AD619163E8BE8B3A6551F51945F7191391FDED13DCBE95A9686A",
+      "worksheet_name": "Sheet1",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "35F652C61C2FD7B7409EE7959EEFD9F640110595A3492F32D668EDFE7D96B920",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "363C90F19448AD619163E8BE8B3A6551F51945F7191391FDED13DCBE95A9686A"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "34571D4AC805AE27B2B0EBE515CE93823FA6DA343037A63AE87A996198862A21"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "summary": {
+    "SUBMIT_TO_REVIEW": 12,
+    "QUARANTINED": 12
+  },
+  "run_metadata": {
+    "baseline_id": "baseline-024-cycle-000",
+    "batch_id": "batch-002",
+    "created_at": "2026-06-23T03:45:02Z",
+    "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-002\\source_decisions.csv",
+    "file_index": "manifests\\all_projects_file_role_index.csv",
+    "sheet_index": "manifests\\all_projects_workbook_sheet_index.csv"
+  }
+}

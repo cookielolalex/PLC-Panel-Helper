@@ -91,3 +91,19 @@ Current baseline-024 readiness: 6 anchor projects plus 2 new Phase C additions, 
 Generation status: not authorized.
 
 Evidence: `manifests/baseline-024/source_approvals/phase_c_status.json`, `reports/baseline-024/source_backfill_summary.md`, `reports/baseline-024/source_bundle_audit.json`, `reports/baseline-024/source_bundle_audit_batch_001.json`, and `reports/baseline-024/source_bundle_audit_batch_001_independent.json`.
+
+## baseline-024-cycle-000 Phase C batch-002 source backfill
+
+Status: `PHASE_C_BATCH_002_AUDIT_PASS_CONTINUE_BACKFILL`.
+
+Candidate projects: `1120309, 1120202, 1120308, 1110103, 1110203, 1110404`.
+
+Accepted evaluation-only additions: `1110103, 1110203, 1120308`.
+
+Rejected or quarantined: `1110404` and `1120202` failed sanitized bundle verification on forbidden modification-content sentinel; `1120309` remained `QUARANTINED` with no approved bundle.
+
+Current baseline-024 readiness: 6 anchor projects plus 5 new Phase C additions, for 11 verified `ALLOWED_EVAL` projects. Thirteen additional verified projects are still required before generation.
+
+Generation status: not authorized.
+
+Evidence: `manifests/baseline-024/source_approvals/phase_c_status.json`, `reports/baseline-024/source_backfill_summary.md`, `reports/baseline-024/source_bundle_audit.json`, `reports/baseline-024/source_bundle_audit_batch_002.json`, and `reports/baseline-024/source_bundle_audit_batch_002_independent.json`.

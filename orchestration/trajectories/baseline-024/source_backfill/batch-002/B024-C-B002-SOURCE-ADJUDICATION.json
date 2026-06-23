@@ -1,0 +1,8 @@
+{
+  "task_id": "B024-C-B002-SOURCE-ADJUDICATION",
+  "events": [
+    "validated four specialist reviews against source_quorum_review.schema.json",
+    "ran deterministic source quorum adjudication for six batch-002 projects",
+    "mirrored adjudication outputs into source_approvals/batch-002"
+  ]
+}

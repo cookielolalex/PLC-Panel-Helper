@@ -1,0 +1,64 @@
+{
+  "approval_manifest_id": "approval-baseline024-batch-002-1110103",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS",
+  "approval_mode": "AUTONOMOUS_EVALUATION_ONLY",
+  "decisions": [
+    {
+      "decision_id": "SGD-4674F34B112F4F",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "F5B9C2D1172F2664938BF0AB5ED5273313DBB15106053063757121B7E258F46E",
+      "worksheet_fingerprint": "F35893B580C1E2EC058BA160A6E3C65F99AF6674CCA6ADA4676E6FE10CC72325",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    },
+    {
+      "decision_id": "SGD-93083784BF965D",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "F5B9C2D1172F2664938BF0AB5ED5273313DBB15106053063757121B7E258F46E",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    },
+    {
+      "decision_id": "SGD-92B48C948B3703",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "F5B9C2D1172F2664938BF0AB5ED5273313DBB15106053063757121B7E258F46E",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    },
+    {
+      "decision_id": "SGD-44E3802E8BE97D",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "DCF8AD7681F8A56721E9A801D47486BB4CFFC4FC6540EBBA56596CF647A0F812",
+      "worksheet_fingerprint": "CEFBF42FF69CCB5F6738935E4CEC570EAB35E6983ACFCBEF9C4D0F30DC92FF26",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    },
+    {
+      "decision_id": "SGD-F0C46E3FBA15AB",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "DCF8AD7681F8A56721E9A801D47486BB4CFFC4FC6540EBBA56596CF647A0F812",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    },
+    {
+      "decision_id": "SGD-0385857321AFE2",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "DCF8AD7681F8A56721E9A801D47486BB4CFFC4FC6540EBBA56596CF647A0F812",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "notes": "Autonomous evaluation-only quorum; not production approval."
+    }
+  ],
+  "approved_count": 6,
+  "approval_manifest_hash": "CAE6D896EEBDD5E380177EA45E73AA42C4CE871B6B829C52A75A430CA7839050"
+}

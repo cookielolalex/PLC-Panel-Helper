@@ -1,0 +1,26 @@
+{
+  "project_id": "1120309",
+  "created_at": "2026-06-23T03:42:26Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120309\\source_decisions_1120309_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-C101D94F931E",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120309西富-聯電用消防箱\\西富-消防控制箱工作紀錄單.xls",
+      "file_sha256": "CC538D4A249739FD8156F5395D30B38270461FABCBC050E4168AB37DE69B4982",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120309\\legacy_xls_parse\\1120309\\SRC-ALL-PROJECTS-FILE-C101D94F931E",
+      "sheet_count": 2
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-C101D94F931E",
+      "first_metadata_hash": "8E1D72A95B82A118E2184E18B4F3B1447439A1281FEDC25CE237B79EE1E9EE39",
+      "second_metadata_hash": "8E1D72A95B82A118E2184E18B4F3B1447439A1281FEDC25CE237B79EE1E9EE39",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 0,
+  "excluded_count": 2
+}

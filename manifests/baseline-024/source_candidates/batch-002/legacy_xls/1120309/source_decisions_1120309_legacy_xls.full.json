@@ -1,0 +1,106 @@
+[
+  {
+    "decision_id": "SGD-2B148B355187C7",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120309",
+    "family_id": "西富",
+    "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120309西富-聯電用消防箱\\西富-消防控制箱工作紀錄單.xls",
+    "file_name": "西富-消防控制箱工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-C101D94F931E",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-C101D94F931E-XLS-SHEET-001",
+    "file_sha256": "CC538D4A249739FD8156F5395D30B38270461FABCBC050E4168AB37DE69B4982",
+    "file_size": "72192",
+    "workbook_format": "xls",
+    "worksheet_name": "含稅",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+    "workbook_sheet_count": 2,
+    "detected_project_identifiers": [
+      "1120309"
+    ],
+    "detected_customer_identifiers": [
+      "西富"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-C101D94F931E",
+      "SRC-ALL-PROJECTS-FILE-C101D94F931E-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120309\\legacy_xls_parse\\1120309\\SRC-ALL-PROJECTS-FILE-C101D94F931E\\001_含稅.csv",
+    "sanitized_csv_sha256": "1B204C5C2261878D2216C81F432548D2DFB0D080C5A7F39CFB670AB745D9E191",
+    "non_empty_rows": 35
+  },
+  {
+    "decision_id": "SGD-E60546B963BC8E",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120309",
+    "family_id": "西富",
+    "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120309西富-聯電用消防箱\\西富-消防控制箱工作紀錄單.xls",
+    "file_name": "西富-消防控制箱工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-C101D94F931E",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-C101D94F931E-XLS-SHEET-002",
+    "file_sha256": "CC538D4A249739FD8156F5395D30B38270461FABCBC050E4168AB37DE69B4982",
+    "file_size": "72192",
+    "workbook_format": "xls",
+    "worksheet_name": "未稅",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "5DD4F8F347F999BAB88D6EC485364E6642613735199C429B337F89EE33E7E2B0",
+    "workbook_sheet_count": 2,
+    "detected_project_identifiers": [
+      "1120309"
+    ],
+    "detected_customer_identifiers": [
+      "西富"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-C101D94F931E",
+      "SRC-ALL-PROJECTS-FILE-C101D94F931E-XLS-SHEET-002"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120309\\legacy_xls_parse\\1120309\\SRC-ALL-PROJECTS-FILE-C101D94F931E\\002_未稅.csv",
+    "sanitized_csv_sha256": "D4E55C5634749A4099E1628AE1B8945C0BC774E5845F616297EFA14AE3D893BC",
+    "non_empty_rows": 29
+  }
+]

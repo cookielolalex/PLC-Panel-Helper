@@ -1,0 +1,426 @@
+{
+  "task_id": "B024-C-B002-INDEPENDENT-AUDIT",
+  "baseline_id": "baseline-024-cycle-000",
+  "batch_id": "batch-002",
+  "role": "independent_auditor",
+  "allowed_files": [
+    {
+      "path": "orchestration\\tasks\\baseline-024\\source_backfill\\batch-002\\B024-C-B002-INDEPENDENT-AUDIT.md",
+      "sha256": "6F4C3C9CA9D19CA0F67B3CAAD67D0B000C0F06A5A8115AB5139EDDE98DED03AC"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\backfill_plan.json",
+      "sha256": "C7E6416891238D5A810A90D7F3A671B223E55A986CC30EFAB7C5610CBE872560"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-002\\batch_manifest.json",
+      "sha256": "8670AACAB17268E6F59DF8586216B0DAFB0CE339785C5D14F39EEF1D4034F42D"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests\\adjudication_summary.json",
+      "sha256": "AD50439970A352421C211ECE7EF24B1D075F769614A3E4AF1060547C92612DFA"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\adjudication_summary.json",
+      "sha256": "AD50439970A352421C211ECE7EF24B1D075F769614A3E4AF1060547C92612DFA"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\bundle_build_summary.json",
+      "sha256": "AC5E03BC8B946CD3BC6495F8002668239DEF7AC902A0BDB9245CDC18B44EC541"
+    },
+    {
+      "path": "reports\\baseline-024\\source_bundle_audit_batch_002.json",
+      "sha256": "5C3939853D0061F9850E1CCCBA885796EBD53F5DA2836D983E84DD3329F2CD9B"
+    },
+    {
+      "path": "schemas\\source_quorum_review.schema.json",
+      "sha256": "BB8A3AAD6EA3D3F735DC6A5CA7470D59D9CFDB1D0139BAE3FD828CB90FE02CEC"
+    },
+    {
+      "path": "schemas\\source_quorum_adjudication.schema.json",
+      "sha256": "678DA3E1CC57B0F23D26068962F753813560B438ECC9C03937694F71B3457D06"
+    },
+    {
+      "path": "schemas\\sanitized_source_manifest.schema.json",
+      "sha256": "A3898E6580EB5AC44E26BC577AB7B388BDC6883A6ABD581AECD2E7B424C0E646"
+    },
+    {
+      "path": "scripts\\verify_generator_bundle.py",
+      "sha256": "5FC9D56D270469AF5D84BB2581ED1521325EADC2E0669C9EB2C5A0E8CAAEE19D"
+    },
+    {
+      "path": "scripts\\baseline024_source_backfill.py",
+      "sha256": "2E065D8DFEA1A0A7B90D2A79FFF4472777B65CC62D99DE3B7154A59E6FB9E4A3"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\reviews\\leakage_red_team_review.json",
+      "sha256": "8F7D18E509F3095618B176129C44E3C842417169232E2E0E2A898EEBF1B2A441"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\reviews\\project_identity_reviewer_review.json",
+      "sha256": "8104C30D18B6D317D5105B9C2D550C780F62A3F9F4A93A5D7820FB05307528A4"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\reviews\\source_role_classifier_review.json",
+      "sha256": "4A2B636ED7A367AA297294E196E74A1A7EF69187B7E7D01E09EC6341CA3C105A"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\reviews\\workbook_forensics_reviewer_review.json",
+      "sha256": "F53F41380E169A4A29D3E902EC8624297B67B2EC1E9F7C6E7C5AE5C97D213B21"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\adjudications\\1110103\\adjudication.json",
+      "sha256": "E89F7EA570493B5383B0B70339E2836426CDFD49EBCCE79620AFAD2AD53EFC91"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\adjudications\\1110203\\adjudication.json",
+      "sha256": "A6DB674DBD0A5F633B0220AC685374CE8A709BC7A1FFB825430ACB8677588897"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\adjudications\\1110404\\adjudication.json",
+      "sha256": "50CD302CCCDBC51BBCA480913D4051E9034335D5B852A07CD3C5C6DBE2DDFD57"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\adjudications\\1120202\\adjudication.json",
+      "sha256": "CC97917F1FBE0FF23EBE27FDD83C13B1A55762733B99A9F926A07B13D074AB2A"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\adjudications\\1120308\\adjudication.json",
+      "sha256": "24A2DCDDCB89F0B4D970BDA83333FA1866AA534357E895CB877C41C579846057"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_approvals\\batch-002\\adjudications\\1120309\\adjudication.json",
+      "sha256": "F0AC0D9B23EC89E00E7EA4DC5BF37733FA64D78AB6BA71ED74382385A5BD445F"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\approval_manifest.json",
+      "sha256": "611A9F68362C787879881C070EECFBBA636BC9B9BEB4F1D6162B79B67C96B650"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\build_status.json",
+      "sha256": "C78303EF48BAD69284C763827C155B594432990DEAA84C05686A28292931B53C"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\bundle_hashes.json",
+      "sha256": "E7D20BB686228F1360EC001BDA9099F1D166758D3918DBDEB6544A53AA39BAD5"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\bundle_manifest.json",
+      "sha256": "FBC54C43894219D541FEF5615A1C2C397B75F14D095C97C4F0D8FFD757ED6CCD"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\previews\\SGD-0385857321AFE2_Sheet3.md",
+      "sha256": "B865C7177E86A0D6E0D98316E14EA9FDCEC0B87F53BB50C460432FC138B2D21E"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\previews\\SGD-44E3802E8BE97D_Sheet1.md",
+      "sha256": "7629401F35E9C148939044DBDDE03946241AC22A78B275B2A09B865554BB3ADA"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\previews\\SGD-4674F34B112F4F_Sheet1.md",
+      "sha256": "20E21C886B7AE6B20B537C01277026F82A91ECB72F438805C8C16095C2F5DA28"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\previews\\SGD-92B48C948B3703_Sheet3.md",
+      "sha256": "0358AB6396F01CBD357F3DE2BFD21139F54D2862A8A7291CE8893178039B9D9E"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\previews\\SGD-93083784BF965D_Sheet2.md",
+      "sha256": "0974C6FF8426976DFD0A3239F73447B3411CC088F0DF802A46A4B594C669131C"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\previews\\SGD-F0C46E3FBA15AB_Sheet2.md",
+      "sha256": "3B14A3F7FB17D00B193B2FB9A82B25BBA5416A3453FFA560A0639E62DA1B7FA9"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\provenance_map.json",
+      "sha256": "C8D1C4ED8F9E62613C65584404EC6608F6FEC5D6FC1BB99D24EAE3D49D979AFD"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\sanitized_inputs\\SGD-0385857321AFE2_Sheet3.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\sanitized_inputs\\SGD-44E3802E8BE97D_Sheet1.csv",
+      "sha256": "0A83979FC266B885539BFA5CFA77EF5E7B9AB7161E6926637B70FA2E8FBAF795"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\sanitized_inputs\\SGD-4674F34B112F4F_Sheet1.csv",
+      "sha256": "D5380736522386C60C7DC9ACCDAF6382248882CD9E5B62E4AD26C5FE411C058C"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\sanitized_inputs\\SGD-92B48C948B3703_Sheet3.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\sanitized_inputs\\SGD-93083784BF965D_Sheet2.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\sanitized_inputs\\SGD-F0C46E3FBA15AB_Sheet2.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\verification_results.json",
+      "sha256": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110103\\visible_file_manifest.json",
+      "sha256": "C1ACA3DBFFA9F4F487E297AF4FA46AD007522290B51A4C8A3B7872E220F45B87"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\approval_manifest.json",
+      "sha256": "8A71DAFA71133D1FEA7093ED0C1C8EA1265507BC8CFDACF86FB2E6A2791D1CDC"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\build_status.json",
+      "sha256": "3DBA87162DA3154F70478FD2FDE52CF8AEDE61FDE459894889A221143FACF7C7"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\bundle_hashes.json",
+      "sha256": "CF5564401FB167634C162BB8A38332C781EF2883B66BB177B4451E27566E8BF4"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\bundle_manifest.json",
+      "sha256": "37D5EBEA29179C69C6254E784BDCD4436A5CE85A102EB8E98C009D6602FC9FF6"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\previews\\SGD-3C569FD4C6E0A0_Sheet1.md",
+      "sha256": "70C084417ABCC5A376919F9818A51B4767CD6922EE51F6AFB6ADEE2EC7F120FC"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\previews\\SGD-7365681142E1C6_Sheet3.md",
+      "sha256": "519CE4D868F7CB692BEE1831373AD8993322ADDC8A6839F258575B953493236A"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\previews\\SGD-8A7B0DC447F9C5_Sheet2.md",
+      "sha256": "0096F7B082B174AB529EF1EFB12322844E3EA6DC1B0D03949ADD022C804918CF"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\previews\\SGD-B7E9D8A45305F1_Sheet2.md",
+      "sha256": "E0DC3D67191775BBDBA0413B6478324B6776DF3833B46894EDA7FB00AA21682F"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\previews\\SGD-F318451C7BF88A_Sheet1.md",
+      "sha256": "3BF5FE1108694688C61C0753104CDA39ABD5D76FA196DD5D797610CF1888F4AC"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\previews\\SGD-FE5DC2791AF119_Sheet3.md",
+      "sha256": "A7445993697AA49961C11A3B7A5C98CDF3F437ED6DE90C4F3B1E217D66B82797"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\provenance_map.json",
+      "sha256": "EEFCDCB0F86C69CD92972A9598090A8C7470E980E17330AB9EA68242C74D8582"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\sanitized_inputs\\SGD-3C569FD4C6E0A0_Sheet1.csv",
+      "sha256": "6719C5F91780503A5B0DA44C61DDC81CE60A39DCD7C9E3587EF7B3B8F325C44C"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\sanitized_inputs\\SGD-7365681142E1C6_Sheet3.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\sanitized_inputs\\SGD-8A7B0DC447F9C5_Sheet2.csv",
+      "sha256": "E9342AB1CF86480CD278ABBF72B5BE763D434869C181749193FFDC1243A21873"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\sanitized_inputs\\SGD-B7E9D8A45305F1_Sheet2.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\sanitized_inputs\\SGD-F318451C7BF88A_Sheet1.csv",
+      "sha256": "ADA3BA4CAB5A59B9730B324C58C0996AB1DF5C8E838F123DC6E2732C47BF1534"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\sanitized_inputs\\SGD-FE5DC2791AF119_Sheet3.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\verification_results.json",
+      "sha256": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1110203\\visible_file_manifest.json",
+      "sha256": "42FA68B3F96FEEBE113FC10137161EF9D61D59F325A7D1F12C5EDF9F492F1B20"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\approval_manifest.json",
+      "sha256": "027E76D0227889072024C661F1D123BDF113BCFC2BFFDE68497E5F9F2CEDC973"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\build_status.json",
+      "sha256": "6057E51BD7117AF80484023681A0655BF7BCCEAF7AEF1452EF9D3957BEF87707"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\bundle_hashes.json",
+      "sha256": "E3763938ADE0E98187688FDFA0705EA8DD83C329A950CC7E4DCE016EC5639546"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\bundle_manifest.json",
+      "sha256": "1316B456CD418A98E245108AEE1DCA794648ABEFADEDCBA183492B83A2578255"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-05AA196F049BDE_Sheet3.md",
+      "sha256": "519919F1ED8A3A63C12B2A4EE917BF04B1733EAFB48D1460BCA515CE1B272661"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-1AC0B0C411E7A4_Sheet3.md",
+      "sha256": "3A4D8E0DD2C88E64312660DAAE96F7B967AEB66E529861E3B1EFA62DB4880123"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-4120B7A6AC53CA_Sheet2.md",
+      "sha256": "8AEEB0F5B75F1034841F5F42C647517D9475FC5A511C09A738CDF8A518EBF190"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-70C378FFE41AE6_Sheet1.md",
+      "sha256": "895B5B1518776729731F996B2179643067F1E37D8086467A7D78F28E0AAFF313"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-7EC48107D8302C_Sheet3.md",
+      "sha256": "E2ADA1D9D48306C38E411D03B807874DF45438FCC7BFF9C54766FE9B27872EF5"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-8A374C171653AE_Sheet1.md",
+      "sha256": "D8972B98D358E56CDA2682B14B4A6D13950076EFF47C82337FA0A419FD9198D6"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-8B442E0B402289_Sheet1.md",
+      "sha256": "67A1C2DB81853AC953955D6AF4D57894F82F8761B791A13763586FD2B45A0BC5"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-978C47F83F1C08_Sheet2.md",
+      "sha256": "7D1ECAFD12E6797ABF02B141A5C9A12877EEF9A5D2DF6404EE354605DD45F226"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-B013FC440D668A_Sheet3.md",
+      "sha256": "0CC15439ADC93BBDC994963CBC704B1D345C92FB39CAB657C4AA484EDA96D233"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-B504C81661540C_Sheet2.md",
+      "sha256": "402887BAB077708B9E43FF2C2FBB42FCE845C83F0EE651285417A136B6D9D08A"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-C8CEFF446F9B93_Sheet2.md",
+      "sha256": "85AFB66C7B556FBBB6441B17273856AF5F698F3DB12BC3406B7647BD69389926"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-CA88D60B1F37A6_Sheet1.md",
+      "sha256": "DB056C72E3E0218616CB920AAB9D275156619F1583F865364EB723AFFC82D551"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-D7E4CB50FC86D8_Sheet2.md",
+      "sha256": "335EB5ACD16A2122FB063210E7EA16123915DC5305911281158C463BAA837F09"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-DD939C5DD12525_Sheet3.md",
+      "sha256": "7DD29F340617A429B0F48C52D50EA220ACC4598AC85CD46894E04C167B9BA59C"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\previews\\SGD-E1CD607980C5A1_Sheet1.md",
+      "sha256": "74B1A6321E4D737065660BB035F74B582BF0782599C663048199092483407C36"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\provenance_map.json",
+      "sha256": "670982E49AC10AB11BB5BA5A73A1303D37403ED306CC108D71FCD57BDE74560D"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-05AA196F049BDE_Sheet3.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-1AC0B0C411E7A4_Sheet3.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-4120B7A6AC53CA_Sheet2.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-70C378FFE41AE6_Sheet1.csv",
+      "sha256": "FC458B17E43C25FFB2E3A669D40875B53F4F4BEAF1430B26A0D6E2026411C6A4"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-7EC48107D8302C_Sheet3.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-8A374C171653AE_Sheet1.csv",
+      "sha256": "2BC61CEA0C2D734F9BF91EAF27BC05C6E3A3CD0AB027634B98585C34E40ECA0B"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-8B442E0B402289_Sheet1.csv",
+      "sha256": "226B77E7A75E66111DEDA45EE437D178B75DD3902A4711EBC2861DCE74E39791"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-978C47F83F1C08_Sheet2.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-B013FC440D668A_Sheet3.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-B504C81661540C_Sheet2.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-C8CEFF446F9B93_Sheet2.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-CA88D60B1F37A6_Sheet1.csv",
+      "sha256": "FC458B17E43C25FFB2E3A669D40875B53F4F4BEAF1430B26A0D6E2026411C6A4"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-D7E4CB50FC86D8_Sheet2.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-DD939C5DD12525_Sheet3.csv",
+      "sha256": "B42F2099187886DEF637D6AA840022266E05CB6C987A9394E708E23CD505EB46"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\sanitized_inputs\\SGD-E1CD607980C5A1_Sheet1.csv",
+      "sha256": "226B77E7A75E66111DEDA45EE437D178B75DD3902A4711EBC2861DCE74E39791"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\verification_results.json",
+      "sha256": "29BF67E59C0FC225BA834C3B1E1CE28F6B125C9E68ACBF29919E95CB44997801"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\accepted\\1120308\\visible_file_manifest.json",
+      "sha256": "0E1B4E424BCE3820E27FC2198D86225ED2A63A1EEA8C74D0C0FD1F2BB8701D5D"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\rejected\\1110404\\build_status.json",
+      "sha256": "F58785EF9954A7C89649077E1B0F4FA543D36F4A4CFC8D8FF50822ACFBE802D1"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\rejected\\1110404\\verification_results.json",
+      "sha256": "70E02025AE90C8E27481E8B6A95A68652A9E501133B31F531B819D138F2900D4"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\rejected\\1120202\\build_status.json",
+      "sha256": "1591DBFC2B4211D12C16303C266A0DE7F3BB68453E3D0D4D999D22713AAC0946"
+    },
+    {
+      "path": "manifests\\baseline-024\\project_bundles\\batch-002\\rejected\\1120202\\verification_results.json",
+      "sha256": "B858B9FE399147FB49508F73E570FCEE204C6C3C3B5BE838551D621E0DB1BC84"
+    }
+  ],
+  "forbidden_inputs": [
+    "completed target drawings",
+    "target thumbnails or hashes",
+    "expected answers",
+    "reviewer findings or scores outside listed review JSONs",
+    "generator outputs",
+    "archived conversations",
+    "raw completed-reference content",
+    "unlisted source-root files"
+  ],
+  "output_paths": [
+    "reports/baseline-024/source_bundle_audit_batch_002_independent.json",
+    "reports/baseline-024/source_bundle_audit_batch_002_independent.md"
+  ]
+}

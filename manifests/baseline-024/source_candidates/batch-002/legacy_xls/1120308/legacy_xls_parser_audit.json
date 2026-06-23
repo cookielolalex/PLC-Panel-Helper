@@ -1,0 +1,104 @@
+{
+  "project_id": "1120308",
+  "created_at": "2026-06-23T03:47:38Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120308\\source_decisions_1120308_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-0EA765278F76",
+      "relative_path": "112年度工作\\112年度工作\\1120308濬創-馬稠後儀表箱\\馬稠後園區流量計儀表箱材料清單.xls",
+      "file_sha256": "94B3CE021ED4CEB10AE844ED139670B664AC387719732335B50262E49D12BF58",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120308\\legacy_xls_parse\\1120308\\SRC-ALL-PROJECTS-FILE-0EA765278F76",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-1C2F5437E0C1",
+      "relative_path": "112年度工作\\112年度工作\\1120308濬創-馬稠後儀表箱\\馬稠後園區流量計儀表箱訂單成本分析.xls",
+      "file_sha256": "92227FFF54D719423DC1B072450AB76CCBA77EB5C7BF1C19C566C21C0E831512",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120308\\legacy_xls_parse\\1120308\\SRC-ALL-PROJECTS-FILE-1C2F5437E0C1",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-290645951594",
+      "relative_path": "112年度工作\\112年度工作\\1120308濬創-馬稠後儀表箱\\工作記錄單濬創馬稠後流量儀表箱.xls",
+      "file_sha256": "A86BA739C217BC143FB0E23D50D9B4D8657318C6894233D1878098AC06ADDF49",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120308\\legacy_xls_parse\\1120308\\SRC-ALL-PROJECTS-FILE-290645951594",
+      "sheet_count": 6
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-8A611CE7A03C",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120308濬創馬稠後流量儀表箱\\馬稠後園區流量計儀表箱合約.xls",
+      "file_sha256": "DD5A5F52A7DCD41B98D2C6FE4DE9C96E902BD2EAA192F82EAAA341D4FC28A32A",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120308\\legacy_xls_parse\\1120308\\SRC-ALL-PROJECTS-FILE-8A611CE7A03C",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-B09EFFEE4D2E",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120308濬創馬稠後流量儀表箱\\工作記錄單濬創馬稠後流量儀表箱.xls",
+      "file_sha256": "A86BA739C217BC143FB0E23D50D9B4D8657318C6894233D1878098AC06ADDF49",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120308\\legacy_xls_parse\\1120308\\SRC-ALL-PROJECTS-FILE-B09EFFEE4D2E",
+      "sheet_count": 6
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-B29A017280CF",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120308濬創馬稠後流量儀表箱\\馬稠後園區流量計儀表箱材料清單.xls",
+      "file_sha256": "94B3CE021ED4CEB10AE844ED139670B664AC387719732335B50262E49D12BF58",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120308\\legacy_xls_parse\\1120308\\SRC-ALL-PROJECTS-FILE-B29A017280CF",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-BA0FA12E25FB",
+      "relative_path": "112年度工作\\112年度工作\\1120308濬創-馬稠後儀表箱\\馬稠後園區流量計儀表箱合約.xls",
+      "file_sha256": "98FB39554544BE59C5BA45998B771EEFAB8D3122C263618B700C92E1F77A8EDE",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1120308\\legacy_xls_parse\\1120308\\SRC-ALL-PROJECTS-FILE-BA0FA12E25FB",
+      "sheet_count": 3
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-0EA765278F76",
+      "first_metadata_hash": "9CA5228BE60B3D1C9AAD4F1927F8A0C5E9B151B4571EB48BF96D13F9FEA6FDA9",
+      "second_metadata_hash": "9CA5228BE60B3D1C9AAD4F1927F8A0C5E9B151B4571EB48BF96D13F9FEA6FDA9",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-1C2F5437E0C1",
+      "first_metadata_hash": "218C35C408D45EF303DB7FDE45E62EB7814F08B84DBE4368F35B901515857623",
+      "second_metadata_hash": "218C35C408D45EF303DB7FDE45E62EB7814F08B84DBE4368F35B901515857623",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-290645951594",
+      "first_metadata_hash": "0A50FD821D5ACCFF6EEC7B8D1533BDE9C52AF14CBA3E602AE04C8C7FF75348DF",
+      "second_metadata_hash": "0A50FD821D5ACCFF6EEC7B8D1533BDE9C52AF14CBA3E602AE04C8C7FF75348DF",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-8A611CE7A03C",
+      "first_metadata_hash": "7178FB2C798DC53E2DAF7DD4230F7A830BC2189A0B84BAF520847D60C6707879",
+      "second_metadata_hash": "7178FB2C798DC53E2DAF7DD4230F7A830BC2189A0B84BAF520847D60C6707879",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-B09EFFEE4D2E",
+      "first_metadata_hash": "0A50FD821D5ACCFF6EEC7B8D1533BDE9C52AF14CBA3E602AE04C8C7FF75348DF",
+      "second_metadata_hash": "0A50FD821D5ACCFF6EEC7B8D1533BDE9C52AF14CBA3E602AE04C8C7FF75348DF",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-B29A017280CF",
+      "first_metadata_hash": "9CA5228BE60B3D1C9AAD4F1927F8A0C5E9B151B4571EB48BF96D13F9FEA6FDA9",
+      "second_metadata_hash": "9CA5228BE60B3D1C9AAD4F1927F8A0C5E9B151B4571EB48BF96D13F9FEA6FDA9",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-BA0FA12E25FB",
+      "first_metadata_hash": "7178FB2C798DC53E2DAF7DD4230F7A830BC2189A0B84BAF520847D60C6707879",
+      "second_metadata_hash": "7178FB2C798DC53E2DAF7DD4230F7A830BC2189A0B84BAF520847D60C6707879",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 15,
+  "excluded_count": 12
+}

@@ -1,0 +1,250 @@
+{
+  "audit_id": "B024-C-B002-INDEPENDENT-AUDIT",
+  "role": "independent_auditor",
+  "batch_id": "batch-002",
+  "baseline_id": "baseline-024-cycle-000",
+  "created_at": "2026-06-23T12:08:07.1032176+08:00",
+  "status": "BATCH002_SOURCE_BACKFILL_AUDIT_PASS",
+  "visible_file_manifest": {
+    "path": "orchestration/input_manifests/baseline-024/source_backfill/batch-002/B024-C-B002-INDEPENDENT-AUDIT.visible_files.json",
+    "sha256": "509798EB611A8BCADFB5BBEF3BFA86BAC5503B992F01AACF5771D86CB3C691D9",
+    "allowed_file_count": 101,
+    "hash_mismatch_count": 0
+  },
+  "scope_attestation": {
+    "forbidden_material_opened": false,
+    "forbidden_material_opened_statement": "No completed references, target drawings, target thumbnails or hashes, expected answers, score reports, generator outputs, archived conversations, raw completed-reference content, or unlisted source-root files were opened.",
+    "children_spawned": false,
+    "input_files_mutated": false,
+    "writes": [
+      "reports/baseline-024/source_bundle_audit_batch_002_independent.json",
+      "reports/baseline-024/source_bundle_audit_batch_002_independent.md"
+    ]
+  },
+  "command_evidence": [
+    {
+      "command": "Get-FileHash over all visible manifest allowed_files",
+      "result": "101 allowed files present; 0 SHA-256 mismatches"
+    },
+    {
+      "command": "Node REPL structured cross-check over manifest-listed JSON, CSV, Markdown, and bundle files",
+      "result": "review/adjudication schema checks passed; decision sets, votes, hashes, fingerprints, bundle hashes, symlink flags, workbook extensions, source-path markers, and sentinel scans passed"
+    },
+    {
+      "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.exe rev-parse HEAD; log -1; diff --name-only -- <manifest-listed inputs>",
+      "result": "HEAD 5c86d5972b9d5693393c2d1068e1564888b6d92b; last commit 5c86d5972b9d5693393c2d1068e1564888b6d92b 2026-06-23T11:40:56+08:00 Record baseline-024 source backfill batch 001; listed input diff count 0"
+    }
+  ],
+  "key_evidence_hashes": {
+    "task_brief": {
+      "path": "orchestration/tasks/baseline-024/source_backfill/batch-002/B024-C-B002-INDEPENDENT-AUDIT.md",
+      "sha256": "6F4C3C9CA9D19CA0F67B3CAAD67D0B000C0F06A5A8115AB5139EDDE98DED03AC"
+    },
+    "backfill_plan": {
+      "path": "manifests/baseline-024/source_candidates/backfill_plan.json",
+      "sha256": "C7E6416891238D5A810A90D7F3A671B223E55A986CC30EFAB7C5610CBE872560"
+    },
+    "batch_manifest": {
+      "path": "manifests/baseline-024/source_candidates/batch-002/batch_manifest.json",
+      "sha256": "8670AACAB17268E6F59DF8586216B0DAFB0CE339785C5D14F39EEF1D4034F42D"
+    },
+    "source_candidate_adjudication_summary": {
+      "path": "manifests/baseline-024/source_candidates/batch-002/project_manifests/adjudication_summary.json",
+      "sha256": "AD50439970A352421C211ECE7EF24B1D075F769614A3E4AF1060547C92612DFA"
+    },
+    "source_approval_adjudication_summary": {
+      "path": "manifests/baseline-024/source_approvals/batch-002/adjudication_summary.json",
+      "sha256": "AD50439970A352421C211ECE7EF24B1D075F769614A3E4AF1060547C92612DFA"
+    },
+    "bundle_build_summary": {
+      "path": "manifests/baseline-024/project_bundles/batch-002/bundle_build_summary.json",
+      "sha256": "AC5E03BC8B946CD3BC6495F8002668239DEF7AC902A0BDB9245CDC18B44EC541"
+    },
+    "prior_bundle_audit": {
+      "path": "reports/baseline-024/source_bundle_audit_batch_002.json",
+      "sha256": "5C3939853D0061F9850E1CCCBA885796EBD53F5DA2836D983E84DD3329F2CD9B"
+    },
+    "schemas": {
+      "source_quorum_review": "BB8A3AAD6EA3D3F735DC6A5CA7470D59D9CFDB1D0139BAE3FD828CB90FE02CEC",
+      "source_quorum_adjudication": "678DA3E1CC57B0F23D26068962F753813560B438ECC9C03937694F71B3457D06",
+      "sanitized_source_manifest": "A3898E6580EB5AC44E26BC577AB7B388BDC6883A6ABD581AECD2E7B424C0E646"
+    },
+    "scripts": {
+      "verify_generator_bundle.py": "5FC9D56D270469AF5D84BB2581ED1521325EADC2E0669C9EB2C5A0E8CAAEE19D",
+      "baseline024_source_backfill.py": "2E065D8DFEA1A0A7B90D2A79FFF4472777B65CC62D99DE3B7154A59E6FB9E4A3"
+    }
+  },
+  "criteria": [
+    {
+      "id": 1,
+      "status": "PASS",
+      "finding": "Batch-002 selection and approval evidence is bounded to metadata/source-candidate prefilter evidence, and completed-reference inspection flags are false.",
+      "evidence": [
+        "backfill_plan C7E641... has top-level completed_reference_content_inspected_for_selection=false and all six batch-002 project flags false",
+        "batch_manifest 8670AACA... has completed_reference_content_inspected_for_selection=false",
+        "four review run_metadata.prefilter_root values point to manifests\\baseline-024\\source_candidates\\batch-002\\project_manifests",
+        "six adjudication run_metadata.prefilter values point to batch-002 deterministic_prefilter.json paths and review_root to batch-002 reviews"
+      ]
+    },
+    {
+      "id": 2,
+      "status": "PASS",
+      "finding": "Four specialist review JSONs are present, role-distinct, schema-valid, and cover the same 116 decision IDs.",
+      "evidence": [
+        "review roles: leakage_red_team, project_identity_reviewer, source_role_classifier, workbook_forensics_reviewer",
+        "each review has 116 items; union count is 116; all four decision-id sets are identical",
+        "source_quorum_review.schema.json validation found 0 errors for all four review JSONs",
+        "review hashes: 8F7D18E5..., 8104C30D..., 4A2B636E..., F53F4138..."
+      ]
+    },
+    {
+      "id": 3,
+      "status": "PASS",
+      "finding": "Adjudications are schema-valid; every approved item has four ALLOW_EVAL votes, matching review hashes/fingerprints, and no unresolved issues.",
+      "evidence": [
+        "all six adjudications validated against source_quorum_adjudication.schema.json with 0 schema errors",
+        "approved item counts: 1110103=6, 1110203=6, 1110404=12, 1120202=12, 1120308=15, 1120309=0",
+        "approved_vote_issues=0, missing_review_items=0, hash_fingerprint_mismatches=0, unresolved_issue_items=0 across all adjudications",
+        "source candidate and source approval adjudication summaries share SHA-256 AD504399..."
+      ]
+    },
+    {
+      "id": 4,
+      "status": "PASS",
+      "finding": "Accepted bundle directories are exactly 1110103, 1110203, and 1120308.",
+      "evidence": [
+        "bundle_build_summary AC5E03BC... built list is [1110103, 1110203, 1120308]",
+        "visible-file manifest accepted bundle paths list only those same three project directories"
+      ]
+    },
+    {
+      "id": 5,
+      "status": "PASS",
+      "finding": "Accepted bundles contain no original workbook files, symlinks, absolute source path leaks, forbidden sentinel hits, or verification/hash mismatches in the manifest-visible bundle evidence.",
+      "evidence": [
+        "accepted verification_results statuses are PASS with empty errors for 1110103, 1110203, and 1120308",
+        "build_status is VERIFIED for all three accepted bundles",
+        "bundle_manifest schema checks passed; artifact counts are 6, 6, and 15",
+        "bundle_hashes named-file and artifact hash checks found 0 mismatches",
+        "manifest-listed bundle file scan found 0 workbook extensions, 0 symlinks, 0 absolute source-path marker hits, and 0 forbidden sentinel hits"
+      ]
+    },
+    {
+      "id": 6,
+      "status": "PASS",
+      "finding": "Rejected bundle directories are exactly 1110404 and 1120202, contain only build_status and verification_results in the manifest-visible evidence, and are not included in the accepted audit set.",
+      "evidence": [
+        "bundle_build_summary rejected list is [1110404, 1120202], both reason=BUNDLE_VERIFICATION_FAILED",
+        "visible-file manifest lists only rejected/1110404/build_status.json, rejected/1110404/verification_results.json, rejected/1120202/build_status.json, rejected/1120202/verification_results.json",
+        "rejected build_status values are REJECTED_BY_BUNDLE_VERIFICATION and verification_results statuses are FAIL",
+        "prior bundle audit 5C393985... projects include only accepted 1110103, 1110203, and 1120308"
+      ]
+    },
+    {
+      "id": 7,
+      "status": "PASS",
+      "finding": "1120309 remains quarantined with no approved bundle.",
+      "evidence": [
+        "adjudication 1120309 F0AC0D9B... status=QUARANTINED with final counts QUARANTINED=2 and AUTO_DENIED=1",
+        "adjudication summaries show 1120309 status=QUARANTINED",
+        "bundle_build_summary contains no built or rejected entry for 1120309",
+        "visible-file manifest contains no project_bundles path for 1120309"
+      ]
+    },
+    {
+      "id": 8,
+      "status": "PASS",
+      "finding": "The existing batch-002 source bundle audit reports EVAL_SOURCE_BUNDLE_AUDIT_PASS for the accepted bundle set.",
+      "evidence": [
+        "reports/baseline-024/source_bundle_audit_batch_002.json SHA-256 5C393985... has status=EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+        "that report lists 1110103, 1110203, and 1120308 with status=PASS and no errors"
+      ]
+    },
+    {
+      "id": 9,
+      "status": "PASS",
+      "finding": "No production approval was declared and no drawing generation was started in the manifest-visible evidence.",
+      "evidence": [
+        "accepted approval manifests use approval_mode=AUTONOMOUS_EVALUATION_ONLY and notes state autonomous evaluation-only quorum, not production approval",
+        "global scan of manifest-listed files found 0 hits for PRODUCTION_APPROVED and 0 hits for the three target PDF filename sentinels",
+        "bundle manifests remain BUILT_PENDING_VERIFICATION and build_status values are VERIFIED, not production approval statuses"
+      ]
+    }
+  ],
+  "review_summary": {
+    "roles": [
+      "leakage_red_team",
+      "project_identity_reviewer",
+      "source_role_classifier",
+      "workbook_forensics_reviewer"
+    ],
+    "decision_union_count": 116,
+    "same_decision_set": true,
+    "per_role_decision_counts": {
+      "leakage_red_team": {
+        "ALLOW_EVAL": 51,
+        "DENY": 9,
+        "QUARANTINE": 56
+      },
+      "project_identity_reviewer": {
+        "ALLOW_EVAL": 51,
+        "DENY": 9,
+        "QUARANTINE": 56
+      },
+      "source_role_classifier": {
+        "ALLOW_EVAL": 51,
+        "DENY": 9,
+        "QUARANTINE": 56
+      },
+      "workbook_forensics_reviewer": {
+        "ALLOW_EVAL": 51,
+        "DENY": 9,
+        "QUARANTINE": 56
+      }
+    }
+  },
+  "bundle_summary": {
+    "accepted": [
+      {
+        "project_id": "1110103",
+        "artifact_count": 6,
+        "verification_status": "PASS",
+        "build_status": "VERIFIED",
+        "bundle_manifest_sha256": "FBC54C43894219D541FEF5615A1C2C397B75F14D095C97C4F0D8FFD757ED6CCD"
+      },
+      {
+        "project_id": "1110203",
+        "artifact_count": 6,
+        "verification_status": "PASS",
+        "build_status": "VERIFIED",
+        "bundle_manifest_sha256": "37D5EBEA29179C69C6254E784BDCD4436A5CE85A102EB8E98C009D6602FC9FF6"
+      },
+      {
+        "project_id": "1120308",
+        "artifact_count": 15,
+        "verification_status": "PASS",
+        "build_status": "VERIFIED",
+        "bundle_manifest_sha256": "1316B456CD418A98E245108AEE1DCA794648ABEFADEDCBA183492B83A2578255"
+      }
+    ],
+    "rejected": [
+      {
+        "project_id": "1110404",
+        "artifact_count": 12,
+        "build_status": "REJECTED_BY_BUNDLE_VERIFICATION",
+        "verification_status": "FAIL",
+        "verification_error_count": 2
+      },
+      {
+        "project_id": "1120202",
+        "artifact_count": 12,
+        "build_status": "REJECTED_BY_BUNDLE_VERIFICATION",
+        "verification_status": "FAIL",
+        "verification_error_count": 2
+      }
+    ],
+    "quarantined_without_bundle": [
+      "1120309"
+    ]
+  }
+}

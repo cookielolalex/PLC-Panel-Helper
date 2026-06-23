@@ -1,0 +1,52 @@
+{
+  "project_id": "1110103",
+  "created_at": "2026-06-23T03:48:46Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110103\\source_decisions_1110103_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-7EA33A7EBA0E",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110103國倫水電控制箱\\工作記錄單國倫水電控制箱ls.xls",
+      "file_sha256": "C85DCB66895791B3C08D8569FE5CF8E0BCBE693FED3377D3782B80114A851195",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110103\\legacy_xls_parse\\1110103\\SRC-ALL-PROJECTS-FILE-7EA33A7EBA0E",
+      "sheet_count": 6
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-8CF02C4A8C99",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110103國倫水電控制箱\\孫先生控制盤材料清單xls.xls",
+      "file_sha256": "F5B9C2D1172F2664938BF0AB5ED5273313DBB15106053063757121B7E258F46E",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110103\\legacy_xls_parse\\1110103\\SRC-ALL-PROJECTS-FILE-8CF02C4A8C99",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-8F644FF5BC57",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110103國倫水電控制箱\\孫先生控制盤新xls.xls",
+      "file_sha256": "DCF8AD7681F8A56721E9A801D47486BB4CFFC4FC6540EBBA56596CF647A0F812",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-002\\legacy_xls\\1110103\\legacy_xls_parse\\1110103\\SRC-ALL-PROJECTS-FILE-8F644FF5BC57",
+      "sheet_count": 3
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-7EA33A7EBA0E",
+      "first_metadata_hash": "5C0A6B44AB3D4556011AE3D16D976306BDF72712BCAD781CFE3B0C3E23B19C73",
+      "second_metadata_hash": "5C0A6B44AB3D4556011AE3D16D976306BDF72712BCAD781CFE3B0C3E23B19C73",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-8CF02C4A8C99",
+      "first_metadata_hash": "769FDF921C8C6D0ACBB2E886AE415E19C8CCBFE50D70628103754636A43A61C0",
+      "second_metadata_hash": "769FDF921C8C6D0ACBB2E886AE415E19C8CCBFE50D70628103754636A43A61C0",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-8F644FF5BC57",
+      "first_metadata_hash": "44AFD8F3DF86AE071CD8F3CBDC4611AF7EF834316037E07394D7E6ABE232AD12",
+      "second_metadata_hash": "44AFD8F3DF86AE071CD8F3CBDC4611AF7EF834316037E07394D7E6ABE232AD12",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 6,
+  "excluded_count": 6
+}

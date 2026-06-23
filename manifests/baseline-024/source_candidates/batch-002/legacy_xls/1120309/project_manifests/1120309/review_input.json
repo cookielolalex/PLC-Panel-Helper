@@ -1,0 +1,93 @@
+{
+  "project_id": "1120309",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-2B148B355187C7",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C101D94F931E",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-C101D94F931E-XLS-SHEET-001",
+      "project_id": "1120309",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120309西富-聯電用消防箱\\西富-消防控制箱工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "CC538D4A249739FD8156F5395D30B38270461FABCBC050E4168AB37DE69B4982",
+      "worksheet_name": "含稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "CC538D4A249739FD8156F5395D30B38270461FABCBC050E4168AB37DE69B4982"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-E60546B963BC8E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C101D94F931E",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-C101D94F931E-XLS-SHEET-002",
+      "project_id": "1120309",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120309西富-聯電用消防箱\\西富-消防控制箱工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "CC538D4A249739FD8156F5395D30B38270461FABCBC050E4168AB37DE69B4982",
+      "worksheet_name": "未稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "5DD4F8F347F999BAB88D6EC485364E6642613735199C429B337F89EE33E7E2B0",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "CC538D4A249739FD8156F5395D30B38270461FABCBC050E4168AB37DE69B4982"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "5DD4F8F347F999BAB88D6EC485364E6642613735199C429B337F89EE33E7E2B0"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}
