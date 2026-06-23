@@ -1,0 +1,121 @@
+{
+  "schema_version": "reference_detection_v3_schema_v1",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "task_id": "B024-RDV3-BATCH-012-1141009",
+  "project_id": "1141009",
+  "status": "PARTIAL_REFERENCE_SET",
+  "target_types_present": [
+    "SHEETMETAL_DRAWING"
+  ],
+  "effective_pages": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0CE5225BC2DC",
+      "file_sha256": "74523FA98A84E3D39D7D66DB4E37498FD5F4F40CD2961115EAC47A40482FF626",
+      "page_range": "1-3",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-80FF823DC4CE4C",
+        "RPE-AA642C525EFAB5",
+        "RPE-C5EC22E19AC057",
+        "VIS-1F90C0A6A753CA24",
+        "VIS-DB44A02B340CCEDE"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7C80EA507816",
+      "file_sha256": "7E1D782C612D5080638A2B3D21108EBBE1DE9CE8EDEED1BD3DC1C22AC95DFCA9",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-0EAF5094926177",
+        "VIS-437B297B16E2F03B"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A99311E57371",
+      "file_sha256": "9812DF57D011EDFC4A6E6ADF51463FE19BF39ACB1DBD6F0E6339DD6921EB8A6B",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-C3443FAF5A11C1",
+        "VIS-437B297B16E2F03B"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B46561F314EB",
+      "file_sha256": "35857A5A1DFB53E9043115CDD467D95FA8438DDD6CB229968294C419194F8F40",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-52C82A590769E6",
+        "VIS-3DA5DC7FF6AE5163"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E73913BB2F8E",
+      "file_sha256": "E1656259E9C3C8A9F36679DAC0F3CEE6D53AD0144A4D95A65B52ADDC34B99C7D",
+      "page_range": "1-3",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-72B99E45CEADA7",
+        "RPE-D41D1DED674DA8",
+        "RPE-FE4CBDE48FFB60",
+        "VIS-1F90C0A6A753CA24",
+        "VIS-DB44A02B340CCEDE"
+      ]
+    }
+  ],
+  "duplicate_groups": [],
+  "unresolved_issues": [
+    "ELECTRICAL_DRAWINGS_PRESENT_AND_EXCLUDED_FROM_TARGET_SET",
+    "UNCLASSIFIED_PAGES_REMAIN"
+  ],
+  "generator_exposure": {
+    "generator_receives_reference_file_ids": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "generator_receives_reference_content": false
+  },
+  "minimization": {
+    "raw_text_persisted": false,
+    "rendered_images_persisted": false,
+    "title_crops_persisted": false,
+    "absolute_private_paths_persisted": false,
+    "drawing_details_persisted": false
+  }
+}

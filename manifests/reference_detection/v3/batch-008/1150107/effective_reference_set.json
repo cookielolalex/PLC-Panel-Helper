@@ -1,0 +1,109 @@
+{
+  "schema_version": "reference_detection_v3_schema_v1",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "task_id": "B024-RDV3-BATCH-008-1150107",
+  "project_id": "1150107",
+  "status": "PARTIAL_REFERENCE_SET",
+  "target_types_present": [
+    "SHEETMETAL_DRAWING"
+  ],
+  "effective_pages": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-077FD5C6B90D",
+      "file_sha256": "E2096043FA46420022180038AE5411060CD217D8E60C368FA58A1FCBA544F0C6",
+      "page_range": "1-2",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-38A538234BE76C",
+        "RPE-6D45507966CE94",
+        "VIS-872DFC32C9C3FA0F",
+        "VIS-DB44A02B340CCEDE"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9E26AFA584A8",
+      "file_sha256": "5B9A379FBF3877D1D7B573586CF8D467B466B90F597A8868BE79F0997D1BCE0F",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-AE99B179673143",
+        "VIS-D01A644DC0145814"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A162950567B6",
+      "file_sha256": "1B1F16AED9681704CAC9B3A71D991CB11BED93727621D2F25DC798A652AD9357",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-69242090AEB0C0",
+        "VIS-EC285DC3FC08A378"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AAF2F3F2374F",
+      "file_sha256": "A2149B43B245422767D84D5C5202383939E568EAF7767D2E9266DB42E8060E2B",
+      "page_range": "1-2",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-44E07FA92091CE",
+        "RPE-4CA5580ADFDA71",
+        "VIS-872DFC32C9C3FA0F",
+        "VIS-DB44A02B340CCEDE"
+      ]
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "original_neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-775898FC5620",
+      "duplicate_neutral_reference_file_ids": [
+        "SRC-ALL-PROJECTS-FILE-B5F6DEDD6C96"
+      ]
+    }
+  ],
+  "unresolved_issues": [
+    "ELECTRICAL_DRAWINGS_PRESENT_AND_EXCLUDED_FROM_TARGET_SET",
+    "UNCLASSIFIED_PAGES_REMAIN"
+  ],
+  "generator_exposure": {
+    "generator_receives_reference_file_ids": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "generator_receives_reference_content": false
+  },
+  "minimization": {
+    "raw_text_persisted": false,
+    "rendered_images_persisted": false,
+    "title_crops_persisted": false,
+    "absolute_private_paths_persisted": false,
+    "drawing_details_persisted": false
+  }
+}

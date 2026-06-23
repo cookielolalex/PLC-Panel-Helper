@@ -1,0 +1,73 @@
+{
+  "schema_version": "reference_detection_v3_schema_v1",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "task_id": "B024-RDV3-BATCH-009-1121002",
+  "project_id": "1121002",
+  "status": "PARTIAL_REFERENCE_SET",
+  "target_types_present": [
+    "SHEETMETAL_DRAWING"
+  ],
+  "effective_pages": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-52A47C979E9F",
+      "file_sha256": "5FA9635C9816654F4C5225F803B563540F226EE33C85DA20601D3E9B60102C29",
+      "page_range": "1-4",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-0CAE2B314F5066",
+        "RPE-654C76D9CEC80B",
+        "RPE-89D1526A56E620",
+        "RPE-A8BE38E766224E",
+        "VIS-1F90C0A6A753CA24",
+        "VIS-ADE2F1C0861742EF"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AD646DFF3655",
+      "file_sha256": "5458B0FB8F965CC075C5C0EB453F408CA47E3C6E2A2F897C9E1E5B409CE03A21",
+      "page_range": "1-5",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-3444C80792FBD7",
+        "RPE-913DE6F944B2E2",
+        "RPE-B8C84EBCB1A657",
+        "RPE-CF155E5C352DA2",
+        "RPE-D647408596C6DD",
+        "VIS-1F90C0A6A753CA24",
+        "VIS-872DFC32C9C3FA0F"
+      ]
+    }
+  ],
+  "duplicate_groups": [],
+  "unresolved_issues": [
+    "ELECTRICAL_DRAWINGS_PRESENT_AND_EXCLUDED_FROM_TARGET_SET",
+    "UNCLASSIFIED_PAGES_REMAIN"
+  ],
+  "generator_exposure": {
+    "generator_receives_reference_file_ids": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "generator_receives_reference_content": false
+  },
+  "minimization": {
+    "raw_text_persisted": false,
+    "rendered_images_persisted": false,
+    "title_crops_persisted": false,
+    "absolute_private_paths_persisted": false,
+    "drawing_details_persisted": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "task_id": "B024-RDV3-B009-1120104",
+  "phase": "cycle-000-reference-detection-v3",
+  "agent_type": "reference_page_classifier",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "project_id": "1120104",
+  "visible_files": [
+    "docs/specs/REFERENCE_VAULT_BOUNDARY_SPEC.md",
+    "docs/specs/REFERENCE_PRESENCE_DETECTION_V3.md",
+    "schemas/reference_page_classification.schema.json",
+    "schemas/reference_document_classification.schema.json",
+    "schemas/effective_reference_set.schema.json",
+    "schemas/reference_detection_audit.schema.json",
+    "scripts/detect_reference_presence_v3.py",
+    "scripts/render_reference_classification_evidence.py",
+    "scripts/build_effective_reference_set.py",
+    "scripts/verify_reference_detection_output.py",
+    "manifests/all_projects_file_role_index.csv"
+  ],
+  "private_reference_vault_inputs": "REDACTED_REFERENCE_VAULT_ONLY",
+  "private_input_policy": "completed-reference content was visible only to this isolated classifier process and remains forbidden to source reviewers, generators, Knowledge, and optimizers",
+  "downstream_visibility": "eligibility/status aggregates only; no filenames, source paths, rendered media, raw text, or drawing content"
+}

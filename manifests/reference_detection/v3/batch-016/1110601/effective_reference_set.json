@@ -1,0 +1,88 @@
+{
+  "schema_version": "reference_detection_v3_schema_v1",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "task_id": "B024-RDV3-BATCH-016-1110601",
+  "project_id": "1110601",
+  "status": "PARTIAL_REFERENCE_SET",
+  "target_types_present": [
+    "SHEETMETAL_DRAWING"
+  ],
+  "effective_pages": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3C61288FC5DF",
+      "file_sha256": "F95FAFC25D4D9A359F0D8C5B21D8C4FCCEA20FF0DAD5A042024D707B2C836C9C",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.97,
+      "evidence_ids": [
+        "RPE-BB538A66B501B6",
+        "VIS-256D4CE04F3CA973"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-553FD2002953",
+      "file_sha256": "1500DC0407C73F1E54DB908A92BB2B0310EAC299D334092CF68F2CE27C187BBB",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-3A90E0324B75C8",
+        "VIS-F6CF0C67659513C7"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-60610F09C5BF",
+      "file_sha256": "BBEBB583186087E6EB09AFFB1D7C4FF7367651D7B58A8226B50DDF9BDD498400",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.97,
+      "evidence_ids": [
+        "RPE-8688A9AAD55D5C",
+        "VIS-E1482247AAEDD718"
+      ]
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "original_neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-553FD2002953",
+      "duplicate_neutral_reference_file_ids": [
+        "SRC-ALL-PROJECTS-FILE-DC61A60E4F2D"
+      ]
+    }
+  ],
+  "unresolved_issues": [
+    "ELECTRICAL_DRAWINGS_PRESENT_AND_EXCLUDED_FROM_TARGET_SET",
+    "UNCLASSIFIED_PAGES_REMAIN"
+  ],
+  "generator_exposure": {
+    "generator_receives_reference_file_ids": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "generator_receives_reference_content": false
+  },
+  "minimization": {
+    "raw_text_persisted": false,
+    "rendered_images_persisted": false,
+    "title_crops_persisted": false,
+    "absolute_private_paths_persisted": false,
+    "drawing_details_persisted": false
+  }
+}

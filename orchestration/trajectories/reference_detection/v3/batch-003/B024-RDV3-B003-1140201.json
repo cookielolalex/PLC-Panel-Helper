@@ -1,0 +1,29 @@
+{
+  "task_id": "B024-RDV3-B003-1140201",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "project_id": "1140201",
+  "batch_id": "batch-003",
+  "steps": [
+    "loaded neutral file-role inventory and candidate project ID",
+    "verified candidate file hashes before classification",
+    "extracted page text transiently when available",
+    "rendered pages and title-block crops only under tmp/reference_detection_v3",
+    "classified pages into allowed target/non-target roles",
+    "built minimized effective reference set",
+    "deleted temporary render workspace",
+    "validated output schemas and minimization audit"
+  ],
+  "result": {
+    "status": "PARTIAL_REFERENCE_SET",
+    "target_types_present": "SHEETMETAL_DRAWING",
+    "pdfs_processed": 20,
+    "pages_classified": 76,
+    "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+  },
+  "output_hashes": {
+    "manifests/reference_detection/v3/batch-003/1140201/reference_page_classifications.json": "DD6237662990A249F65F341080CDDE7CDFA253CFEB7072E342CCFC84697192ED",
+    "manifests/reference_detection/v3/batch-003/1140201/reference_document_classifications.json": "EF07ED0F2319FA90C4F24EA7BB48FC3045FC4C3E15AD68ABA2566D3D184A6A15",
+    "manifests/reference_detection/v3/batch-003/1140201/effective_reference_set.json": "75A59AFD64FAD4811F2F7B9066ECB9E56335A54739285F1D9C91B2E4ACABFB11",
+    "manifests/reference_detection/v3/batch-003/1140201/reference_detection_audit.json": "6115B409B6A6F98DD80F8C54D51A980BB78455BBB598244F88236E339E32D61D"
+  }
+}

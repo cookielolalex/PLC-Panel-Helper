@@ -1,0 +1,199 @@
+{
+  "schema_version": "reference_detection_v3_schema_v1",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "task_id": "B024-RDV3-BATCH-010-1130707",
+  "project_id": "1130707",
+  "status": "PARTIAL_REFERENCE_SET",
+  "target_types_present": [
+    "SHEETMETAL_DRAWING"
+  ],
+  "effective_pages": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-67BA1900107F",
+      "file_sha256": "5C24D4286B5D914BB8CA1B624073DE78F00D2E0FC394BDC7DE901D725FDACA93",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-861D4D6938C4B9",
+        "VIS-3DA5DC7FF6AE5163"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-84518FC9AFDE",
+      "file_sha256": "69F07347A966FA3C8308CD35B05FA7DC3177AA4DED9A1810978B30F68902E253",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-D47B7B0DBCABD4",
+        "VIS-3DA5DC7FF6AE5163"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-859A8885F1CF",
+      "file_sha256": "2C2896EB1B3820B3B20B91F57EC06C7388F09E1E44BD47A6F749FC1A0B00C858",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-2B94B3388F2526",
+        "VIS-3DA5DC7FF6AE5163"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-995FB5DA2FF1",
+      "file_sha256": "27FD1299281B0933857BDBEE6BCB4D54AC949AD282AF66E16D7540675E88209B",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-28ED8F51C243DB",
+        "VIS-3DA5DC7FF6AE5163"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A028D4260F87",
+      "file_sha256": "56B2CD84E0470756C2820CE0DD3C70BF88BB1E1D8CEEED6FC032C159571E2E0B",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-71622F57CAC457",
+        "VIS-3DA5DC7FF6AE5163"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A7182BE0FB6C",
+      "file_sha256": "51E21977152DFEE51EF3F55C4DFDAF4FF2ED04100D82BD60C600721D3D42186E",
+      "page_range": "1-7",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-453230EB544CEC",
+        "RPE-467ED70463F73C",
+        "RPE-7033EB0838BDBC",
+        "RPE-84B4F5903416AF",
+        "RPE-D57868CFEDA0C3",
+        "RPE-D75787BE8A5D25",
+        "RPE-E5FB5762682112",
+        "VIS-1F90C0A6A753CA24",
+        "VIS-872DFC32C9C3FA0F",
+        "VIS-DB44A02B340CCEDE"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-AFF9C6BE1292",
+      "file_sha256": "A19A898DF122EB18D2FA8E65E96E18BB392244514045EC6AD1AB0691EA2AFFAD",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-7FF4BE03C5F6C8",
+        "VIS-437B297B16E2F03B"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C00720E9BE7E",
+      "file_sha256": "05FC3645B4421DE482C9AF4C5054A1A76E5A97EF71E12DA7097972BC0845DB0E",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-3C6549A2C7ACFC",
+        "VIS-437B297B16E2F03B"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C431A78CE224",
+      "file_sha256": "E2F8D45A77D97232FB204231E66F19EAA8FB92B25573DDBF80E27213529320D7",
+      "page_range": "1-7",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT",
+      "confidence": 0.88,
+      "evidence_ids": [
+        "RPE-08269E1405F8A2",
+        "RPE-4D6599058B5CB1",
+        "RPE-62FE8AA4455F06",
+        "RPE-996817D2FCA1F4",
+        "RPE-AB35AFBC756ACB",
+        "RPE-C94D0B087BE450",
+        "RPE-F35AE4560EF09D",
+        "VIS-1F90C0A6A753CA24",
+        "VIS-872DFC32C9C3FA0F",
+        "VIS-DB44A02B340CCEDE"
+      ]
+    }
+  ],
+  "duplicate_groups": [],
+  "unresolved_issues": [
+    "ELECTRICAL_DRAWINGS_PRESENT_AND_EXCLUDED_FROM_TARGET_SET",
+    "UNCLASSIFIED_PAGES_REMAIN"
+  ],
+  "generator_exposure": {
+    "generator_receives_reference_file_ids": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "generator_receives_reference_content": false
+  },
+  "minimization": {
+    "raw_text_persisted": false,
+    "rendered_images_persisted": false,
+    "title_crops_persisted": false,
+    "absolute_private_paths_persisted": false,
+    "drawing_details_persisted": false
+  }
+}

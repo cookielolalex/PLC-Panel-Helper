@@ -1,0 +1,20 @@
+{
+  "task_id": "B024-RDV3-B009-LEAKAGE-AUDIT",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "batch_id": "batch-009",
+  "steps": [
+    "validated all available project-level reference_detection_audit records for the batch",
+    "confirmed minimized batch aggregate contains no filenames, raw text, paths, or images",
+    "confirmed no project reached all-three status from filename or folder signals alone"
+  ],
+  "result": {
+    "audit_statuses": [
+      "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+    ],
+    "project_count": 6,
+    "newly_verified_all_three_projects": []
+  },
+  "output_hashes": {
+    "reports/baseline-024/reference-detection-v3/batch_results/batch-009.json": "5DBE40C8847E56E38B0227C35260381A2C254DAC7D338288A730A395817F60EB"
+  }
+}

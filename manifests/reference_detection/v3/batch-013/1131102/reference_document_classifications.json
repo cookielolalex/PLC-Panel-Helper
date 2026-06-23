@@ -1,0 +1,330 @@
+{
+  "document_classifications": [
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-18B4BE7CFC7E",
+      "file_sha256": "557DAB1AF5CA1A3702B65BAFAE2C2F837AD33DECE5F0DA3E23485CAA5AAF651B",
+      "page_count": 2,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_2_PAGES",
+      "detected_page_types": [
+        "SOURCE_DOCUMENT",
+        "UNCLASSIFIED"
+      ],
+      "page_classification_ids": [
+        "RPE-46DC692B251121",
+        "RPE-58F4EB0DC18C58"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-DD23514DB34F",
+      "file_sha256": "C4D4E636FAAE7A454974E94DD4023C5B803FF9D7908E3A4CBE8A1BB00EC58E4E",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "UNCLASSIFIED"
+      ],
+      "page_classification_ids": [
+        "RPE-D4E35427EA81C1"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-6A5758E48E8F",
+      "file_sha256": "E6ACE7F036558EF49E845965A60DB3041905EE9EB1ACF83151A4DA0ADEC2FCDB",
+      "page_count": 16,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_16_PAGES",
+      "detected_page_types": [
+        "SOURCE_DOCUMENT"
+      ],
+      "page_classification_ids": [
+        "RPE-D74F83C8A8A1D9",
+        "RPE-9EE5046C988127",
+        "RPE-88C7A1577F6026",
+        "RPE-D5A56B2327B67F",
+        "RPE-CCAB6465AB83F5",
+        "RPE-E87E6EC20DE723",
+        "RPE-B02E81BF9FA1A4",
+        "RPE-77F5FDE176C793",
+        "RPE-5B1D78CD95D137",
+        "RPE-2B6AB259A100CB",
+        "RPE-CC2C9306EA6FD4",
+        "RPE-4201EE27B5EFA4",
+        "RPE-41FDB61FFF9BCE",
+        "RPE-59A390B0E4AB6F",
+        "RPE-D67A2DCDF4E498",
+        "RPE-C3CF892A411312"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-BF6EB84007E9",
+      "file_sha256": "3C223A3A6447835715B5AC6820757D46F6305DB2941CA34794168C24553BC349",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-02EFC81EA90534"
+      ],
+      "duplicate_of": null,
+      "document_status": "TARGET_EVIDENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-EC639BCE2193",
+      "file_sha256": "3C223A3A6447835715B5AC6820757D46F6305DB2941CA34794168C24553BC349",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-E598855FAD9493"
+      ],
+      "duplicate_of": "SRC-ALL-PROJECTS-FILE-BF6EB84007E9",
+      "document_status": "DUPLICATE_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5173EE4A937E",
+      "file_sha256": "A4F93BEC537082F0F6EF2A03A775437EEEB5547E820D2A8C59717D2DA39FAF85",
+      "page_count": 10,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_10_PAGES",
+      "detected_page_types": [
+        "ELECTRICAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-C69FF8D80BA8C2",
+        "RPE-52E51473192206",
+        "RPE-3A81FE2325FA77",
+        "RPE-B4DA67E9FFCBB0",
+        "RPE-79EB56D8FE7CD1",
+        "RPE-2052C8311F1703",
+        "RPE-C9300ABE6DA1CB",
+        "RPE-2935BF37CD5E18",
+        "RPE-9186FE8166A90D",
+        "RPE-27927B89914417"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F7AB28B81B25",
+      "file_sha256": "D9761AA9AD1482CCAB940F4957DF5D04A9C3707337F0E2E9BC4827718DFBB705",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "ELECTRICAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-655AE8F6C8233C"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A767B9135D53",
+      "file_sha256": "7A09FE3CA24EE1071BE758BD19859CD885269945CDEE77A16549A722575A6687",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "ELECTRICAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-7E7C214553E3A6"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1F4FC15ECF7F",
+      "file_sha256": "41CE3BFF8BD3A30D7F302CF511CD414035A82A035B6323A1B2632DCDB64B46CF",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "ELECTRICAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-60B39E2029BFEF"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7CF483D6B2EF",
+      "file_sha256": "701071D515644C6A1600915CE86EA1A27291E9A9F04E77D87E79414ED5BC774A",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "ELECTRICAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-D37DFD78FBD902"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-6510A4ED63A1",
+      "file_sha256": "FCD61254CF1D08BA2716A280003C2340D67A5CFEC0D184390A9873FA029A9A0B",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "ELECTRICAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-D653859FBCD9D0"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-013-1131102",
+      "project_id": "1131102",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-436DA849F6FE",
+      "file_sha256": "1F50157A6E430F976C7511666FAA354DA15F1C7DA76F3249CDA235DF7906E1B5",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "ELECTRICAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-2C4400DAA8D7E3"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    }
+  ]
+}

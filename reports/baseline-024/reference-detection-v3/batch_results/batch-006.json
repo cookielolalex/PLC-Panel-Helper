@@ -1,0 +1,32 @@
+{
+  "batch_id": "batch-006",
+  "projects_processed": [
+    "1120503",
+    "1130108",
+    "1130506",
+    "1130605",
+    "1140102",
+    "1141210"
+  ],
+  "project_count": 6,
+  "pdfs_processed": 84,
+  "pages_classified": 347,
+  "image_only_or_no_target_text_pdfs": 74,
+  "embedded_text_pdfs": 10,
+  "combined_packages_found": 0,
+  "revision_notice_pages": 0,
+  "newly_verified_all_three_projects": [],
+  "partial_projects": [
+    "1120503",
+    "1130108",
+    "1130506",
+    "1130605",
+    "1140102",
+    "1141210"
+  ],
+  "ambiguous_projects": [],
+  "false_positive_aliases_rejected": 164,
+  "audit_statuses": [
+    "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+  ]
+}

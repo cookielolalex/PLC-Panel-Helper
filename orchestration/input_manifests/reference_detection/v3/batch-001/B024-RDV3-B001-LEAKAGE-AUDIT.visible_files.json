@@ -1,0 +1,14 @@
+{
+  "task_id": "B024-RDV3-B001-LEAKAGE-AUDIT",
+  "phase": "cycle-000-reference-detection-v3",
+  "agent_type": "reference_leakage_auditor",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "visible_files": [
+    "docs/specs/REFERENCE_VAULT_BOUNDARY_SPEC.md",
+    "docs/specs/REFERENCE_PRESENCE_DETECTION_V3.md",
+    "scripts/verify_reference_detection_output.py",
+    "reports/baseline-024/reference-detection-v3/batch_results/batch-001.json",
+    "manifests/reference_detection/v3/batch-001"
+  ],
+  "private_reference_vault_inputs": "NONE"
+}

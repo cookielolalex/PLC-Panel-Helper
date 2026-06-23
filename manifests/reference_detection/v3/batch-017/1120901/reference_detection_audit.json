@@ -1,0 +1,33 @@
+{
+  "audit_id": "reference_detection_v3_audit_B024-RDV3-BATCH-017-1120901",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "task_id": "B024-RDV3-BATCH-017-1120901",
+  "project_id": "1120901",
+  "status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+  "checks": [
+    {
+      "name": "source_hashes_verified_for_accessed_files",
+      "status": "PASS",
+      "detail": "hash mismatches become inaccessible document records"
+    },
+    {
+      "name": "temporary_renders_removed",
+      "status": "PASS",
+      "detail": "tmp/reference_detection_v3 task directories removed"
+    },
+    {
+      "name": "raw_text_not_persisted",
+      "status": "PASS",
+      "detail": "page text is used transiently only"
+    },
+    {
+      "name": "generator_exposure_false",
+      "status": "PASS",
+      "detail": "effective set records no generator reference exposure"
+    }
+  ],
+  "renderer": "POPPLER_PDFTOPPM",
+  "temporary_workspace_removed": true,
+  "data_minimization_pass": true,
+  "generator_isolation_pass": true
+}

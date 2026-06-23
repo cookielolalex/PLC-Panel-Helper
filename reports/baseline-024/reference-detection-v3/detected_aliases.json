@@ -1,0 +1,16 @@
+{
+  "version": "target_output_detection_v3_page_content_isolated",
+  "target_patterns": {
+    "SHEETMETAL_DRAWING": 124,
+    "PUNCH_DRAWING|SHEETMETAL_DRAWING": 3,
+    "PRODUCTION_DRAWING|SHEETMETAL_DRAWING": 1,
+    "PRODUCTION_DRAWING": 1
+  },
+  "classification_methods": {
+    "PAGE_TEXT": 1483,
+    "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT": 2372,
+    "METADATA_ROLE_AFTER_RENDERED_PAGE_NO_TEXT": 1940,
+    "FORBIDDEN_ELECTRICAL_ROLE_NO_TARGET_CONTENT": 3236
+  },
+  "note": "Minimized aggregate method counts only; no filenames, paths, raw text, dimensions, or images."
+}

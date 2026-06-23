@@ -1,0 +1,138 @@
+{
+  "document_classifications": [
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-019-1131110",
+      "project_id": "1131110",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-917665F502A7",
+      "file_sha256": "95445EE5B48AED3E806E49CD61D41DCD9CD91CD3F2AAC0EE61A29944EA16F817",
+      "page_count": 5,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_5_PAGES",
+      "detected_page_types": [
+        "SOURCE_DOCUMENT"
+      ],
+      "page_classification_ids": [
+        "RPE-D81395EBA44C37",
+        "RPE-2AF73AF8C8AD9E",
+        "RPE-0A0512379FE0D0",
+        "RPE-EC1AF67BDCF248",
+        "RPE-DF3DFA3BA24726"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-019-1131110",
+      "project_id": "1131110",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-710195A9BCCD",
+      "file_sha256": "BEEA7E75F4FDE53A2583F50BAD327B16FCD2157B72A03BA9E29B5119B9367548",
+      "page_count": 2,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_2_PAGES",
+      "detected_page_types": [
+        "UNCLASSIFIED"
+      ],
+      "page_classification_ids": [
+        "RPE-C4CE5AF21F67C7",
+        "RPE-3CD5A15183AA9A"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-019-1131110",
+      "project_id": "1131110",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-92AA3C3AC310",
+      "file_sha256": "824A7E5EB254F8644B566CCF2E21E4CAA1E13AB7F1A4F76779ACC7807691A24C",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-3EA61A702745EB"
+      ],
+      "duplicate_of": null,
+      "document_status": "TARGET_EVIDENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-019-1131110",
+      "project_id": "1131110",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5C286D511D54",
+      "file_sha256": "09A755F9E606252DB965C730730ECB834B5AEA1CBAE78BB44074728711FD66F6",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-0802D9A20EBE07"
+      ],
+      "duplicate_of": null,
+      "document_status": "TARGET_EVIDENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-BATCH-019-1131110",
+      "project_id": "1131110",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0796EBB84EAC",
+      "file_sha256": "2E4583E054A3424A4FF1C3B2B258188D51B3723D1A5979759EBB085646077993",
+      "page_count": 5,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_5_PAGES",
+      "detected_page_types": [
+        "ELECTRICAL_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-D5043DB1730031",
+        "RPE-6D012A4A82727C",
+        "RPE-A48848291D2A06",
+        "RPE-F7163F1D7BD712",
+        "RPE-7FDCFF10003CE3"
+      ],
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    }
+  ]
+}

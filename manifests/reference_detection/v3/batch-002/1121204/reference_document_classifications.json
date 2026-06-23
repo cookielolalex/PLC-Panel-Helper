@@ -1,0 +1,29 @@
+{
+  "document_classifications": [
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDV3-B002-1121204",
+      "project_id": "1121204",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-459BFA91B40E",
+      "file_sha256": "2DC0EE3CC35C14D62D11CC79CA0A640C16EEDC17A2E514AC7599B2791A525ABA",
+      "page_count": 1,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_1_PAGES",
+      "detected_page_types": [
+        "PRODUCTION_DRAWING"
+      ],
+      "page_classification_ids": [
+        "RPE-0F8504B54F96B7"
+      ],
+      "duplicate_of": null,
+      "document_status": "TARGET_EVIDENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_images_persisted": false,
+        "title_crops_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    }
+  ]
+}
