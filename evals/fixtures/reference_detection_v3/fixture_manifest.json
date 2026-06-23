@@ -1,0 +1,45 @@
+{
+  "fixture_id": "reference_detection_v3_synthetic_fixtures",
+  "description": "Synthetic PDF definitions used by scripts/run_tests.py. Tests generate temporary PDFs from these definitions; no private completed drawings are stored here.",
+  "project_id": "1999001",
+  "cases": [
+    {
+      "case_id": "target_under_production_control",
+      "role_hint": "forbidden_production_control_file",
+      "pages": ["PROJECT 1999001 PRODUCTION_DRAWING"]
+    },
+    {
+      "case_id": "ordinary_electrical_under_electrical",
+      "role_hint": "forbidden_electrical_drawing",
+      "pages": ["PROJECT 1999001 ELECTRICAL_DRAWING"]
+    },
+    {
+      "case_id": "combined_all_three",
+      "role_hint": "supporting_document_non_generator",
+      "pages": [
+        "PROJECT 1999001 PRODUCTION_DRAWING",
+        "PROJECT 1999001 SHEETMETAL_DRAWING",
+        "PROJECT 1999001 PUNCH_DRAWING"
+      ]
+    },
+    {
+      "case_id": "missing_third_with_duplicate",
+      "role_hint": "supporting_document_non_generator",
+      "pages": [
+        "PROJECT 1999001 PRODUCTION_DRAWING"
+      ]
+    },
+    {
+      "case_id": "sheetmetal_only",
+      "role_hint": "supporting_document_non_generator",
+      "pages": [
+        "PROJECT 1999001 SHEETMETAL_DRAWING"
+      ]
+    },
+    {
+      "case_id": "mismatched_project_identity",
+      "role_hint": "supporting_document_non_generator",
+      "pages": ["PROJECT 1998001 PUNCH_DRAWING"]
+    }
+  ]
+}

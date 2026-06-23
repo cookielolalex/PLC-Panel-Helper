@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reference Detection Audit",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "detector_version",
+    "task_id",
+    "project_id",
+    "status",
+    "checks",
+    "renderer",
+    "temporary_workspace_removed",
+    "data_minimization_pass",
+    "generator_isolation_pass"
+  ],
+  "properties": {
+    "audit_id": {"type": "string"},
+    "detector_version": {"type": "string"},
+    "task_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "status": {
+      "enum": [
+        "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+        "REFERENCE_PRESENCE_BATCH_AUDIT_FAIL",
+        "REFERENCE_PRESENCE_BATCH_AUDIT_INCONCLUSIVE"
+      ]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "status"],
+        "properties": {
+          "name": {"type": "string"},
+          "status": {"enum": ["PASS", "FAIL", "NOT_VERIFIED"]},
+          "detail": {"type": "string"}
+        }
+      }
+    },
+    "renderer": {"type": "string"},
+    "temporary_workspace_removed": {"type": "boolean"},
+    "data_minimization_pass": {"type": "boolean"},
+    "generator_isolation_pass": {"type": "boolean"}
+  }
+}

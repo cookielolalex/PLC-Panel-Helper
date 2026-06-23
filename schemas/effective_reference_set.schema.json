@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Effective Reference Set",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "detector_version",
+    "task_id",
+    "project_id",
+    "status",
+    "target_types_present",
+    "effective_pages",
+    "duplicate_groups",
+    "unresolved_issues",
+    "generator_exposure",
+    "minimization"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "detector_version": {"type": "string"},
+    "task_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "status": {
+      "enum": [
+        "VERIFIED_ALL_THREE_BY_CONTENT",
+        "VERIFIED_ALL_THREE_COMBINED_PACKAGE",
+        "VERIFIED_ALL_THREE_WITH_PAGE_SUPERSESSION",
+        "PARTIAL_REFERENCE_SET",
+        "AMBIGUOUS_REFERENCE_SET",
+        "NO_REFERENCE_SET",
+        "INACCESSIBLE_REFERENCE_SET"
+      ]
+    },
+    "target_types_present": {"type": "array", "items": {"type": "string"}},
+    "effective_pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "neutral_reference_file_id",
+          "file_sha256",
+          "page_range",
+          "target_type",
+          "project_identity_status",
+          "panel_or_sheet_identity",
+          "revision_identity",
+          "supersedes",
+          "current_effective_status",
+          "classification_method",
+          "confidence",
+          "evidence_ids"
+        ],
+        "properties": {
+          "neutral_reference_file_id": {"type": "string"},
+          "file_sha256": {"type": "string"},
+          "page_range": {"type": "string"},
+          "target_type": {
+            "enum": [
+              "PRODUCTION_DRAWING",
+              "SHEETMETAL_DRAWING",
+              "PUNCH_DRAWING"
+            ]
+          },
+          "project_identity_status": {"type": "string"},
+          "panel_or_sheet_identity": {"type": ["string", "null"]},
+          "revision_identity": {"type": ["string", "null"]},
+          "supersedes": {"type": ["string", "null"]},
+          "current_effective_status": {"type": "string"},
+          "classification_method": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "duplicate_groups": {"type": "array", "items": {"type": "object"}},
+    "unresolved_issues": {"type": "array", "items": {"type": "string"}},
+    "generator_exposure": {
+      "type": "object",
+      "required": [
+        "generator_receives_reference_file_ids",
+        "generator_receives_reference_hashes",
+        "generator_receives_reference_paths",
+        "generator_receives_reference_content"
+      ],
+      "properties": {
+        "generator_receives_reference_file_ids": {"type": "boolean"},
+        "generator_receives_reference_hashes": {"type": "boolean"},
+        "generator_receives_reference_paths": {"type": "boolean"},
+        "generator_receives_reference_content": {"type": "boolean"}
+      }
+    },
+    "minimization": {"type": "object"}
+  }
+}
