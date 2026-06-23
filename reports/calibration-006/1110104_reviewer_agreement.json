@@ -1,0 +1,18 @@
+{
+  "calibration_id": "1110104_score_sanity",
+  "items": [
+    {
+      "run_id": "RUN-1110104-AUTO-EVAL-002",
+      "reviewer_a": "score_sanity_reviewer_a_RUN-1110104-AUTO-EVAL-002",
+      "reviewer_b": "score_sanity_reviewer_b_RUN-1110104-AUTO-EVAL-002",
+      "validity_agreement": true,
+      "critical_agreement": true,
+      "high_agreement": true,
+      "source_availability_agreement_percent": 100.0,
+      "score_difference": 0,
+      "coverage_difference": 0
+    }
+  ],
+  "mean_absolute_difference": 0,
+  "agreement": 100.0
+}

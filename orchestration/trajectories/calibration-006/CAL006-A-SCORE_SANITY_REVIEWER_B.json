@@ -1,0 +1,24 @@
+{
+  "task_id": "CAL006-A-SCORE_SANITY_REVIEWER_B",
+  "command": [
+    "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "scripts/run_calibration_reviewer.py",
+    "--run-id",
+    "RUN-1110104-AUTO-EVAL-002",
+    "--project-id",
+    "1110104",
+    "--input-review-dir",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\runs\\RUN-1110104-AUTO-EVAL-002\\review",
+    "--output",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\reports\\calibration-006\\score_sanity\\score_sanity_reviewer_b.json",
+    "--reviewer-label",
+    "score_sanity_reviewer_b",
+    "--blind-note",
+    "score sanity reviewer blind to original reviewer result and peer reviewer"
+  ],
+  "started_at": "2026-06-23T02:17:45Z",
+  "duration_seconds": 0.16,
+  "returncode": 0,
+  "stdout_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-A-SCORE_SANITY_REVIEWER_B.stdout.log",
+  "stderr_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-A-SCORE_SANITY_REVIEWER_B.stderr.log"
+}
