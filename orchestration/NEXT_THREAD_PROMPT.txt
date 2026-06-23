@@ -1,7 +1,7 @@
 You are a fresh root coordinator continuing this repository.
 
 Read the canonical checkpoint files, `reports/calibration-006/independent_audit.json`, and `reports/evaluator-sensitivity/subagent_independent_audit.json`.
-Current status: `PHASE_C_BATCH_002_AUDIT_PASS_CONTINUE_BACKFILL`.
+Current status: `PHASE_C_BATCH_003_AUDIT_PASS_CONTINUE_BACKFILL`.
 Six-project set: 1110101, 1110104, 1110204, 1110205, 1110405, 1110410.
 Evaluator version for cycle-000: `plc_layout_evaluator_v2_sensitivity`.
 Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
@@ -12,7 +12,9 @@ Phase B froze `docs/specs/24_PROJECT_BASELINE_PROTOCOL.md` and `evals/baseline-0
 
 Phase C batch-001 accepted `1110801` and `1120207` as evaluation-only additions after independent source-bundle audit. `1120101`, `1120204`, and `1120301` were rejected by bundle verification; `1120201` remained quarantined/no-bundle.
 
-Phase C batch-002 accepted `1110103`, `1110203`, and `1120308` as evaluation-only additions after independent source-bundle audit. `1110404` and `1120202` were rejected by bundle verification; `1120309` remained quarantined/no-bundle. Current baseline-024 `ALLOWED_EVAL` count is `11`; thirteen additional source-approved projects are still required, and no 24-project generation is authorized yet.
+Phase C batch-002 accepted `1110103`, `1110203`, and `1120308` as evaluation-only additions after independent source-bundle audit. `1110404` and `1120202` were rejected by bundle verification; `1120309` remained quarantined/no-bundle.
+
+Phase C batch-003 accepted `1110704` and `1120305` as evaluation-only additions after independent source-bundle audit. `1110701` was rejected by bundle verification; `1110402`, `1110706`, and `1120102` remained no-bundle/quarantined. Current baseline-024 `ALLOWED_EVAL` count is `13`; eleven additional source-approved projects are still required, and no 24-project generation is authorized yet.
 
 Exact next action: continue Phase C source backfill from remaining metadata-only candidates in smaller monitored legacy-parser chunks. Use deterministic prefiltering, four independent specialist reviews, unanimous source quorum, source adjudication, sanitized bundle construction, bundle verification, and independent audit. Do not start baseline generation until exactly 24 projects have verified `ALLOWED_EVAL` bundles and a final cohort manifest is frozen.
 

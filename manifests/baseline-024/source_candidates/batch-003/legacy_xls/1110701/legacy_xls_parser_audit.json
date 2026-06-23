@@ -1,0 +1,104 @@
+{
+  "project_id": "1110701",
+  "created_at": "2026-06-23T04:16:58Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110701\\source_decisions_1110701_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-1805B1422618",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫水電高鐵台南車站配水池改善生產能力分表.xls",
+      "file_sha256": "CF1FCD73F67F8476708F741D337AF28555486F07988974249F8F186C34B7CDB4",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110701\\legacy_xls_parse\\1110701\\SRC-ALL-PROJECTS-FILE-1805B1422618",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫高鐵台南車站配水池改善成本分析分項.xls",
+      "file_sha256": "1ECAEA6D400D7E7E65226FCA2EB457CF1F117C66928F91319646ADE86D54CB2F",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110701\\legacy_xls_parse\\1110701\\SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-518581B2789A",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\台南高鐵配水池改善材料清單.xls",
+      "file_sha256": "81869648CCA051FF22028B16EC94457F03E7E115E8A238CED542FD70CDE22C60",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110701\\legacy_xls_parse\\1110701\\SRC-ALL-PROJECTS-FILE-518581B2789A",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\工作記錄單國倫高鐵台南車站配水池改善ls.xls",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110701\\legacy_xls_parse\\1110701\\SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "sheet_count": 6
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫水電高鐵台南車站配水池改善會議審查表.xls",
+      "file_sha256": "71BAE4F5331546A964589AEB9B7C2A5AFE2A571A0FE46F4658C8A819F438C74E",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110701\\legacy_xls_parse\\1110701\\SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\台南高鐵配水池改善合約.xls",
+      "file_sha256": "5AD4CF7FED23BF8D08709AFACD27A2D5C5913A7B5CE4FA7778E724548CD1F636",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110701\\legacy_xls_parse\\1110701\\SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫高鐵台南車站配水池改善成本分析表.xls",
+      "file_sha256": "4C15AC7D5EDA6945AECD62BA87FADD60AE46D103788A9342B55D665BC33A3CBD",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110701\\legacy_xls_parse\\1110701\\SRC-ALL-PROJECTS-FILE-B177D8660A13",
+      "sheet_count": 3
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-1805B1422618",
+      "first_metadata_hash": "F91D3C91301F885C32311EDF866AD017105AA22A0735CF3F93F783B5DF10A43A",
+      "second_metadata_hash": "F91D3C91301F885C32311EDF866AD017105AA22A0735CF3F93F783B5DF10A43A",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+      "first_metadata_hash": "9232CF79045107ECB5C1D77803075DA1B59AC1BA070B40C69DF94DAD9C296F05",
+      "second_metadata_hash": "9232CF79045107ECB5C1D77803075DA1B59AC1BA070B40C69DF94DAD9C296F05",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-518581B2789A",
+      "first_metadata_hash": "8ABFC93FCD8E22C33752A57366C4AC1760E427786739ECAA34BD1CBA639CAC3D",
+      "second_metadata_hash": "8ABFC93FCD8E22C33752A57366C4AC1760E427786739ECAA34BD1CBA639CAC3D",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "first_metadata_hash": "CF1DDF26D2B73545B72C07B93F5E29723AEEC420BFA5EBE3B0E37A4A8D7B45AB",
+      "second_metadata_hash": "CF1DDF26D2B73545B72C07B93F5E29723AEEC420BFA5EBE3B0E37A4A8D7B45AB",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+      "first_metadata_hash": "E178FE5B57C95EC575176075F33D9D1E3593DE5D645903A5E3D1069ED8ABA82A",
+      "second_metadata_hash": "E178FE5B57C95EC575176075F33D9D1E3593DE5D645903A5E3D1069ED8ABA82A",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+      "first_metadata_hash": "3BDFA61F4319C6B82F417317031F202AD085D2A588050C10ECFE3EFA7282C2EE",
+      "second_metadata_hash": "3BDFA61F4319C6B82F417317031F202AD085D2A588050C10ECFE3EFA7282C2EE",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+      "first_metadata_hash": "E69057670F3DB10E518F16EA61F58475F35AFC1B9041DA50689F721C2C965C28",
+      "second_metadata_hash": "E69057670F3DB10E518F16EA61F58475F35AFC1B9041DA50689F721C2C965C28",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 12,
+  "excluded_count": 12
+}

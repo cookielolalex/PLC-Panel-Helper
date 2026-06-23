@@ -1,13 +1,15 @@
 {
   "baseline_id": "baseline-024-cycle-000",
   "status": "PHASE_C_SOURCE_BUNDLE_AUDIT_PARTIAL_PASS",
-  "accepted_project_count": 5,
+  "accepted_project_count": 7,
   "accepted_project_ids": [
     "1110801",
     "1120207",
     "1110103",
     "1110203",
-    "1120308"
+    "1120308",
+    "1110704",
+    "1120305"
   ],
   "batch_audits": [
     {
@@ -47,8 +49,27 @@
       ],
       "audit_hash": "5C3939853D0061F9850E1CCCBA885796EBD53F5DA2836D983E84DD3329F2CD9B",
       "independent_audit_hash": "FA9E20BB24BBF1786ED3836E321A452F0F99CAE2F78ECB3F90B80B10AECE81A0"
+    },
+    {
+      "batch_id": "batch-003",
+      "source_bundle_audit_status": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+      "independent_audit_status": "BATCH003_SOURCE_BACKFILL_AUDIT_PASS",
+      "accepted_project_ids": [
+        "1110704",
+        "1120305"
+      ],
+      "bundle_rejected_project_ids": [
+        "1110701"
+      ],
+      "quarantined_project_ids": [
+        "1110402",
+        "1110706",
+        "1120102"
+      ],
+      "audit_hash": "AC39B90586068C335BB4EF02F8683F52466F8B882A1B9D41AD1627593F96A36C",
+      "independent_audit_hash": "8F9A856E38EB5712BC5590AE19F04A1BD9CF91AB74DB8A8C1B42D4BEEC8DF56C"
     }
   ],
   "generation_authorized": false,
-  "remaining_additional_allowed_eval_required": 13
+  "remaining_additional_allowed_eval_required": 11
 }

@@ -1,0 +1,106 @@
+[
+  {
+    "decision_id": "SGD-256C8D049134D9",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1110706",
+    "family_id": "核陽工程",
+    "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110706核陽工程-聯電 12A P3 CUB 2F DRYER一次配電\\聯電 12A P3 CUB 2F DRYER一次配電工程標單-材料清單.xls",
+    "file_name": "聯電 12A P3 CUB 2F DRYER一次配電工程標單-材料清單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-05BCBD65FF18",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-05BCBD65FF18-XLS-SHEET-001",
+    "file_sha256": "6E97D0ABDE9D40F2D60F27692ACF72B93377AC3308EFB69F0B9A5DDCCFF7AF7D",
+    "file_size": "36864",
+    "workbook_format": "xls",
+    "worksheet_name": "材料設備",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "70810DFF15348FE62927765C21BCEF2BC5DBFFFE90B452008D588D01F40B9D1E",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1110706"
+    ],
+    "detected_customer_identifiers": [
+      "核陽工程"
+    ],
+    "detected_document_role": "allowed_material_list_workbook",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-05BCBD65FF18",
+      "SRC-ALL-PROJECTS-FILE-05BCBD65FF18-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110706\\legacy_xls_parse\\1110706\\SRC-ALL-PROJECTS-FILE-05BCBD65FF18\\001_材料設備.csv",
+    "sanitized_csv_sha256": "70668B32E04C4A5D0F825B2605A8BF96196D2CF9F659D6C583087E42DFC59209",
+    "non_empty_rows": 16
+  },
+  {
+    "decision_id": "SGD-B487A77172D9CE",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1110706",
+    "family_id": "核陽工程",
+    "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110706核陽工程-聯電 12A P3 CUB 2F DRYER一次配電\\聯電 12A P3 CUB 2F DRYER一次配電工程(工作紀錄單).xls",
+    "file_name": "聯電 12A P3 CUB 2F DRYER一次配電工程(工作紀錄單).xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-9983923C09B5",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-9983923C09B5-XLS-SHEET-001",
+    "file_sha256": "3EEEF063ABEE4CA4AB00E67AF0C63CE751A43C58F09BE7A28FCBBC8CBDBBDBF7",
+    "file_size": "50688",
+    "workbook_format": "xls",
+    "worksheet_name": "聯電 12A P3 CUB 2F DRYER一次配電工程",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "83FAB16D374EC6834C9937C8463CB9BB0A84027D1895135C6DE4693A1AD62A87",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1110706"
+    ],
+    "detected_customer_identifiers": [
+      "核陽工程"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-9983923C09B5",
+      "SRC-ALL-PROJECTS-FILE-9983923C09B5-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110706\\legacy_xls_parse\\1110706\\SRC-ALL-PROJECTS-FILE-9983923C09B5\\001_聯電 12A P3 CUB 2F DRYER一次配電工程.csv",
+    "sanitized_csv_sha256": "BDFE9EE804F309B9925ABCAEB7B5CE383996509075F4D0266F40A9B22C6FB261",
+    "non_empty_rows": 35
+  }
+]

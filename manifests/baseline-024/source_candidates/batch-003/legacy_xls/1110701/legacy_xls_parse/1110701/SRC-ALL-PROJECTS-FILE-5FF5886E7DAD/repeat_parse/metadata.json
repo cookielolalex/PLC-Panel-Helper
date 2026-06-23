@@ -1,0 +1,79 @@
+﻿{
+    "workbook_file_name":  "國倫水電高鐵台南車站配水池改善會議審查表.xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+                  {
+                      "name":  "會議審查!Check11",
+                      "refers_to":  "=會議審查!$A$31"
+                  },
+                  {
+                      "name":  "會議審查!Check14",
+                      "refers_to":  "=會議審查!$A$37"
+                  },
+                  {
+                      "name":  "會議審查!Check2",
+                      "refers_to":  "=會議審查!$A$18"
+                  },
+                  {
+                      "name":  "會議審查!Check4",
+                      "refers_to":  "=會議審查!$A$19"
+                  },
+                  {
+                      "name":  "會議審查!Check6",
+                      "refers_to":  "=會議審查!$A$21"
+                  },
+                  {
+                      "name":  "會議審查!Check8",
+                      "refers_to":  "=會議審查!$A$27"
+                  }
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "分析表",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  22,
+                       "used_columns":  3,
+                       "non_empty_rows":  13,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "001_分析表.csv"
+                   },
+                   {
+                       "index":  2,
+                       "name":  "會議審查",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  38,
+                       "used_columns":  14,
+                       "non_empty_rows":  36,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "002_會議審查.csv"
+                   },
+                   {
+                       "index":  3,
+                       "name":  "Sheet3",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  1,
+                       "used_columns":  1,
+                       "non_empty_rows":  0,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "003_Sheet3.csv"
+                   }
+               ]
+}

@@ -1,0 +1,101 @@
+﻿{
+    "workbook_file_name":  "聯電 12A P3 CUB 2F DRYER一次配電工程標單-材料清單.xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+                  {
+                      "name":  "材料設備!_FilterDatabase",
+                      "refers_to":  "=材料設備!$A$8:$G$44"
+                  },
+                  {
+                      "name":  "材料設備!Print_Area",
+                      "refers_to":  "=材料設備!$A$1:$G$44"
+                  },
+                  {
+                      "name":  "材料設備!Print_Titles",
+                      "refers_to":  "=材料設備!$1:$8"
+                  }
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "材料設備",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  46,
+                       "used_columns":  8,
+                       "non_empty_rows":  16,
+                       "formula_count":  9,
+                       "formulas":  [
+                                        {
+                                            "row":  12,
+                                            "column":  6,
+                                            "address":  "F12",
+                                            "formula":  "=SUM(E12*D12)",
+                                            "text":  "           5,000 "
+                                        },
+                                        {
+                                            "row":  13,
+                                            "column":  6,
+                                            "address":  "F13",
+                                            "formula":  "=SUM(E13*D13)",
+                                            "text":  "         16,500 "
+                                        },
+                                        {
+                                            "row":  14,
+                                            "column":  6,
+                                            "address":  "F14",
+                                            "formula":  "=SUM(E14*D14)",
+                                            "text":  "           8,000 "
+                                        },
+                                        {
+                                            "row":  15,
+                                            "column":  6,
+                                            "address":  "F15",
+                                            "formula":  "=SUM(E15*D15)",
+                                            "text":  "              600 "
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  6,
+                                            "address":  "F16",
+                                            "formula":  "=SUM(E16*D16)",
+                                            "text":  "           5,100 "
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  6,
+                                            "address":  "F17",
+                                            "formula":  "=SUM(E17*D17)",
+                                            "text":  "           3,000 "
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  6,
+                                            "address":  "F18",
+                                            "formula":  "=SUM(E18*D18)",
+                                            "text":  "           3,800 "
+                                        },
+                                        {
+                                            "row":  19,
+                                            "column":  6,
+                                            "address":  "F19",
+                                            "formula":  "=SUM(E19*D19)",
+                                            "text":  "           3,600 "
+                                        },
+                                        {
+                                            "row":  42,
+                                            "column":  6,
+                                            "address":  "F42",
+                                            "formula":  "=SUM(F12:F38)",
+                                            "text":  "         45,600 "
+                                        }
+                                    ],
+                       "csv_file_name":  "001_材料設備.csv"
+                   }
+               ]
+}

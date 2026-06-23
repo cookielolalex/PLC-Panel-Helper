@@ -1,0 +1,26 @@
+{
+  "baseline_id": "baseline-024-cycle-000",
+  "batch_id": "batch-003",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS_WITH_REJECTIONS",
+  "built": [
+    {
+      "project_id": "1110704",
+      "bundle_dir": "manifests\\baseline-024\\project_bundles\\batch-003\\accepted\\1110704",
+      "artifact_count": 6
+    },
+    {
+      "project_id": "1120305",
+      "bundle_dir": "manifests\\baseline-024\\project_bundles\\batch-003\\accepted\\1120305",
+      "artifact_count": 8
+    }
+  ],
+  "rejected": [
+    {
+      "project_id": "1110701",
+      "bundle_dir": "manifests\\baseline-024\\project_bundles\\batch-003\\rejected\\1110701",
+      "artifact_count": 12,
+      "reason": "BUNDLE_VERIFICATION_FAILED"
+    }
+  ]
+}

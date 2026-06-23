@@ -1,0 +1,38 @@
+{
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "projects": [
+    {
+      "project_id": "1110402",
+      "status": "NO_REVIEWABLE_ITEMS"
+    },
+    {
+      "project_id": "1110701",
+      "status": "AGENT_QUORUM_APPROVED_EVAL",
+      "QUARANTINED": 12,
+      "AGENT_QUORUM_APPROVED_EVAL": 12
+    },
+    {
+      "project_id": "1110704",
+      "status": "AGENT_QUORUM_APPROVED_EVAL",
+      "QUARANTINED": 12,
+      "AGENT_QUORUM_APPROVED_EVAL": 6
+    },
+    {
+      "project_id": "1110706",
+      "status": "QUARANTINED",
+      "QUARANTINED": 2
+    },
+    {
+      "project_id": "1120102",
+      "status": "QUARANTINED",
+      "AUTO_DENIED": 1,
+      "QUARANTINED": 1
+    },
+    {
+      "project_id": "1120305",
+      "status": "AGENT_QUORUM_APPROVED_EVAL",
+      "AGENT_QUORUM_APPROVED_EVAL": 8,
+      "QUARANTINED": 12
+    }
+  ]
+}

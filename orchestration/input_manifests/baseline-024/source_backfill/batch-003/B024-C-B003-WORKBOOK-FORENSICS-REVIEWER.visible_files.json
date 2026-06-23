@@ -1,0 +1,79 @@
+{
+  "task_id": "B024-C-B003-WORKBOOK-FORENSICS-REVIEWER",
+  "baseline_id": "baseline-024-cycle-000",
+  "batch_id": "batch-003",
+  "role": "workbook_forensics_reviewer",
+  "allowed_files": [
+    {
+      "path": "scripts\\autonomous_eval_source_approval.py",
+      "sha256": "AA17749A7948A197A2EC387C3B7DD907138C47F350A50D30859165777703350B"
+    },
+    {
+      "path": "schemas\\source_quorum_review.schema.json",
+      "sha256": "BB8A3AAD6EA3D3F735DC6A5CA7470D59D9CFDB1D0139BAE3FD828CB90FE02CEC"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\batch_manifest.json",
+      "sha256": "5D0892C783C311CC1660607FF77523D629CB644DE3B7FCBBD356342B2981876E"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110701\\deterministic_prefilter.json",
+      "sha256": "ECCEBDA33444ABDF03BB539DE0E374E6817A0C4D6818FD6565C60C22E55E1A55"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110704\\deterministic_prefilter.json",
+      "sha256": "526FB706D989A982399204F50E964E4C60D0F719C72F6FD075362B36D6FB9B5D"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110706\\deterministic_prefilter.json",
+      "sha256": "2C1A2AFB471F9A0A22298EA382CB27D53C1776FF243A003517C25C05199AAF2F"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1120305\\deterministic_prefilter.json",
+      "sha256": "9897CE78DFB83430BF227C22662C54D30F4C6A8C4915EB8244D4AC5607FFAD2F"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110402\\deterministic_prefilter.json",
+      "sha256": "E12B2C4914EFDF8B41FF8ECFE11B4443891DC1A4F17FE39E3111EAB534EEC216"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1120102\\deterministic_prefilter.json",
+      "sha256": "3451C8FD436B4F289F0F50791D05D08AE92E08C4B1D19F0E91A4278834AB4677"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110701\\review_input.json",
+      "sha256": "ECAC94E51449C6BD26E2CC476066812122B382D88DA6F885895770305F677E19"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110704\\review_input.json",
+      "sha256": "C166958E462F19AC226E365F76FC9B0DF3CB63BEB74DF8866DA9AD564F774481"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110706\\review_input.json",
+      "sha256": "4C37B1AA916D111ADDC930D8A19D1ED4D160AF5BE4685B4F19B8BFC9562B5D9F"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1120305\\review_input.json",
+      "sha256": "3A722D6F5CE6623680405DFA900D4CDFF8D3DE3EF14640674B8D8BA060ED51B4"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110402\\review_input.json",
+      "sha256": "467774CCBF7EC37EDF8AE6BF790C2C273660DE446D08FB4690819969515C523C"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1120102\\review_input.json",
+      "sha256": "AA4474386B3AFFEC19725F0901FAAC1744DDCD0129005196B50FB36B7691E5DA"
+    }
+  ],
+  "forbidden_inputs": [
+    "completed target drawings",
+    "target thumbnails or hashes",
+    "expected answers",
+    "reviewer findings or scores",
+    "other specialist review outputs",
+    "adjudicator recommendations",
+    "raw completed-reference content"
+  ],
+  "output_path": "manifests\\baseline-024\\source_approvals\\batch-003\\reviews\\workbook_forensics_reviewer_review.json",
+  "schema": "schemas/source_quorum_review.schema.json"
+}

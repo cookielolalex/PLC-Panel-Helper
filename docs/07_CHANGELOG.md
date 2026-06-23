@@ -66,3 +66,7 @@
 - Ran deterministic prefiltering, four independent specialist reviews, quorum adjudication, sanitized bundle verification, and independent source-bundle audit for six more candidate projects.
 - Accepted `1110103`, `1110203`, and `1120308` as evaluation-only additions; preserved verifier rejections for `1110404` and `1120202`; left `1120309` quarantined/no-bundle.
 - Current baseline-024 `ALLOWED_EVAL` count is `11`; generation remains blocked.
+- Continued Phase C source backfill with `baseline-024` batch-003.
+- Ran deterministic prefiltering, four independent specialist reviews, quorum adjudication, sanitized bundle verification, and independent source-bundle audit for six more candidate projects.
+- Accepted `1110704` and `1120305` as evaluation-only additions; preserved verifier rejection for `1110701`; left `1110402`, `1110706`, and `1120102` no-bundle/quarantined.
+- Current baseline-024 `ALLOWED_EVAL` count is `13`; generation remains blocked.

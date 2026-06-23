@@ -1,0 +1,61 @@
+{
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "projects": [
+    {
+      "project_id": "1110701",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "QUARANTINED": 12,
+        "SUBMIT_TO_REVIEW": 12
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110701\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110701\\review_input.json"
+    },
+    {
+      "project_id": "1110704",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "QUARANTINED": 12,
+        "SUBMIT_TO_REVIEW": 6
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110704\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110704\\review_input.json"
+    },
+    {
+      "project_id": "1110706",
+      "status": "NO_REVIEWABLE_ITEMS",
+      "summary": {
+        "QUARANTINED": 2
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110706\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110706\\review_input.json"
+    },
+    {
+      "project_id": "1120305",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 8,
+        "QUARANTINED": 12
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1120305\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1120305\\review_input.json"
+    },
+    {
+      "project_id": "1110402",
+      "status": "NO_REVIEWABLE_ITEMS",
+      "summary": {},
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110402\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1110402\\review_input.json"
+    },
+    {
+      "project_id": "1120102",
+      "status": "NO_REVIEWABLE_ITEMS",
+      "summary": {
+        "AUTO_DENIED": 1,
+        "QUARANTINED": 1
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1120102\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests\\1120102\\review_input.json"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "project_id": "1120102",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-3C05D07F7E3ACA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-615DF5796758",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-615DF5796758-SHEET-001",
+      "project_id": "1120102",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120102核陽工程-紅外線控制板\\紅外線控制板-順大.xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "BCDA6666F5AC3544268E6ABF13F2CDB88D2455356C0526212A2596D348FCF183",
+      "worksheet_name": "報價單 ",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "",
+      "proposed_decision": "AUTO_DENIED",
+      "prefilter_state": "AUTO_DENIED",
+      "reason_codes": [
+        "CROSS_PROJECT_IDENTITY",
+        "FORBIDDEN_LABEL_OR_ROLE",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "STALE_TEMPLATE_SHEET"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "BCDA6666F5AC3544268E6ABF13F2CDB88D2455356C0526212A2596D348FCF183"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-D5F9CE32F732A0",
+      "file_id": "SRC-ALL-PROJECTS-FILE-805F758C8378",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-805F758C8378-XLS-SHEET-001",
+      "project_id": "1120102",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120102核陽工程-紅外線控制板\\核陽-紅外線控制板工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "15CB77CC74EE19928CD20A2850B8CFB671D5DC3D7D0D8F59F4CD208785DD5DF8",
+      "worksheet_name": "至得金屬追加",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "9F7ACDFECC336B5401964C1F7768EDF59B6222018DAE721653DD0E288A47E4F8",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "15CB77CC74EE19928CD20A2850B8CFB671D5DC3D7D0D8F59F4CD208785DD5DF8"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "2AA7E37E7EA876749E194418A68CAACDC72575BEABDE81EDA23793E8BBF36269"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}

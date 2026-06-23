@@ -1,0 +1,54 @@
+[
+  {
+    "decision_id": "SGD-D5F9CE32F732A0",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120102",
+    "family_id": "核陽工程",
+    "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120102核陽工程-紅外線控制板\\核陽-紅外線控制板工作紀錄單.xls",
+    "file_name": "核陽-紅外線控制板工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-805F758C8378",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-805F758C8378-XLS-SHEET-001",
+    "file_sha256": "15CB77CC74EE19928CD20A2850B8CFB671D5DC3D7D0D8F59F4CD208785DD5DF8",
+    "file_size": "50688",
+    "workbook_format": "xls",
+    "worksheet_name": "至得金屬追加",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "9F7ACDFECC336B5401964C1F7768EDF59B6222018DAE721653DD0E288A47E4F8",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1120102"
+    ],
+    "detected_customer_identifiers": [
+      "核陽工程"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-805F758C8378",
+      "SRC-ALL-PROJECTS-FILE-805F758C8378-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1120102\\legacy_xls_parse\\1120102\\SRC-ALL-PROJECTS-FILE-805F758C8378\\001_至得金屬追加.csv",
+    "sanitized_csv_sha256": "2AA7E37E7EA876749E194418A68CAACDC72575BEABDE81EDA23793E8BBF36269",
+    "non_empty_rows": 35
+  }
+]

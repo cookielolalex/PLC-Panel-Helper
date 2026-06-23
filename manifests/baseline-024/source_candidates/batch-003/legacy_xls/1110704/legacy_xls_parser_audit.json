@@ -1,0 +1,78 @@
+{
+  "project_id": "1110704",
+  "created_at": "2026-06-23T04:18:41Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110704\\source_decisions_1110704_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-417B53C98328",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110704超控鏡面淨水場廢水處理\\超控鏡面淨水場廢水生產能力分表.xls",
+      "file_sha256": "6D413F092513FF53357861BC5343364ED75BC4CBB33BADE770C80652E29FAD46",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110704\\legacy_xls_parse\\1110704\\SRC-ALL-PROJECTS-FILE-417B53C98328",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B89653F2A88",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110704超控鏡面淨水場廢水處理\\南化鏡面淨水場增設廢水材料清單.xls",
+      "file_sha256": "90BA66A47D30633A2AC8FCC489ED5066AFF64D6E836A3C2AC270EF0830E845C2",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110704\\legacy_xls_parse\\1110704\\SRC-ALL-PROJECTS-FILE-5B89653F2A88",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110704超控鏡面淨水場廢水處理\\工作紀錄單超控鏡面淨水場.xls",
+      "file_sha256": "EEB902692E42995E87CEE1871D51140A6CEA901DF6EDF5DEFD1F8437B52E853D",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110704\\legacy_xls_parse\\1110704\\SRC-ALL-PROJECTS-FILE-A642C72DC326",
+      "sheet_count": 6
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-CBEF412646C8",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110704超控鏡面淨水場廢水處理\\超控鏡面淨水場廢水會議審查.xls",
+      "file_sha256": "D8D2D583831F77B40F3A26C9D05BB5EDAA500FDFD47E76EADD6244C227739B69",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110704\\legacy_xls_parse\\1110704\\SRC-ALL-PROJECTS-FILE-CBEF412646C8",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110704超控鏡面淨水場廢水處理\\南化鏡面淨水場增設廢水合約.xls",
+      "file_sha256": "FF45D95B5FBF620E0CB6FD88C819EAA45B3913D33CB5326A9985F13C9D1E6433",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110704\\legacy_xls_parse\\1110704\\SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B",
+      "sheet_count": 3
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-417B53C98328",
+      "first_metadata_hash": "804D48FDC19DD192972BBA93DFB353A9CEEBFB284D65B2DE6279FF5A8D169851",
+      "second_metadata_hash": "804D48FDC19DD192972BBA93DFB353A9CEEBFB284D65B2DE6279FF5A8D169851",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B89653F2A88",
+      "first_metadata_hash": "BDB758F54B82D9E6F7C8956FCBE5B9D5A72388AF0808B1286717D35E98A7A303",
+      "second_metadata_hash": "BDB758F54B82D9E6F7C8956FCBE5B9D5A72388AF0808B1286717D35E98A7A303",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+      "first_metadata_hash": "1FD00593AAB9D75F29BE86AD8C9FD11BF83155E69CFAF30615E1ACCB6E99AC15",
+      "second_metadata_hash": "1FD00593AAB9D75F29BE86AD8C9FD11BF83155E69CFAF30615E1ACCB6E99AC15",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-CBEF412646C8",
+      "first_metadata_hash": "21EB8A883945022B14965367C6BF9A2C238DA928C051C72875480E90CEBD25D4",
+      "second_metadata_hash": "21EB8A883945022B14965367C6BF9A2C238DA928C051C72875480E90CEBD25D4",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B",
+      "first_metadata_hash": "20673245A401EE914BFEE87987112E1C9EA13156DA226ACAEF6AC8CCA2FF559E",
+      "second_metadata_hash": "20673245A401EE914BFEE87987112E1C9EA13156DA226ACAEF6AC8CCA2FF559E",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 6,
+  "excluded_count": 12
+}

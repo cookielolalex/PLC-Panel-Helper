@@ -1,0 +1,39 @@
+{
+  "project_id": "1110706",
+  "created_at": "2026-06-23T04:19:02Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110706\\source_decisions_1110706_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-05BCBD65FF18",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110706核陽工程-聯電 12A P3 CUB 2F DRYER一次配電\\聯電 12A P3 CUB 2F DRYER一次配電工程標單-材料清單.xls",
+      "file_sha256": "6E97D0ABDE9D40F2D60F27692ACF72B93377AC3308EFB69F0B9A5DDCCFF7AF7D",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110706\\legacy_xls_parse\\1110706\\SRC-ALL-PROJECTS-FILE-05BCBD65FF18",
+      "sheet_count": 1
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-9983923C09B5",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110706核陽工程-聯電 12A P3 CUB 2F DRYER一次配電\\聯電 12A P3 CUB 2F DRYER一次配電工程(工作紀錄單).xls",
+      "file_sha256": "3EEEF063ABEE4CA4AB00E67AF0C63CE751A43C58F09BE7A28FCBBC8CBDBBDBF7",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1110706\\legacy_xls_parse\\1110706\\SRC-ALL-PROJECTS-FILE-9983923C09B5",
+      "sheet_count": 1
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-05BCBD65FF18",
+      "first_metadata_hash": "64AD7BCB29F7903C83A58C5B8A145A72B3D1B3D8E17DF833A0274B58EA04E3D8",
+      "second_metadata_hash": "64AD7BCB29F7903C83A58C5B8A145A72B3D1B3D8E17DF833A0274B58EA04E3D8",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-9983923C09B5",
+      "first_metadata_hash": "AE288619B144C9036874D1BC61B0EC73AB052E9599EE1805EBAC147FD1055791",
+      "second_metadata_hash": "AE288619B144C9036874D1BC61B0EC73AB052E9599EE1805EBAC147FD1055791",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 0,
+  "excluded_count": 2
+}

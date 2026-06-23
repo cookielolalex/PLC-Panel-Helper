@@ -1,16 +1,18 @@
 {
   "baseline_id": "baseline-024-cycle-000",
   "phase": "cycle-000-C",
-  "status": "PHASE_C_BATCH_002_AUDIT_PASS_CONTINUE_BACKFILL",
-  "current_allowed_eval_count": 11,
+  "status": "PHASE_C_BATCH_003_AUDIT_PASS_CONTINUE_BACKFILL",
+  "current_allowed_eval_count": 13,
   "new_allowed_eval_projects": [
     "1110801",
     "1120207",
     "1110103",
     "1110203",
-    "1120308"
+    "1120308",
+    "1110704",
+    "1120305"
   ],
-  "remaining_additional_allowed_eval_required": 13,
+  "remaining_additional_allowed_eval_required": 11,
   "batches": [
     {
       "batch_id": "batch-001",
@@ -73,16 +75,47 @@
       },
       "source_bundle_audit": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
       "independent_audit": "BATCH002_SOURCE_BACKFILL_AUDIT_PASS"
+    },
+    {
+      "batch_id": "batch-003",
+      "status": "BATCH003_SOURCE_BACKFILL_AUDIT_PASS",
+      "candidate_project_ids": [
+        "1110701",
+        "1110704",
+        "1110706",
+        "1120305",
+        "1110402",
+        "1120102"
+      ],
+      "accepted_project_ids": [
+        "1110704",
+        "1120305"
+      ],
+      "quarantined_project_ids": [
+        "1110402",
+        "1110706",
+        "1120102"
+      ],
+      "bundle_rejected_project_ids": [
+        "1110701"
+      ],
+      "adjudication_item_counts": {
+        "AGENT_QUORUM_APPROVED_EVAL": 26,
+        "QUARANTINED": 39,
+        "AUTO_DENIED": 1
+      },
+      "source_bundle_audit": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+      "independent_audit": "BATCH003_SOURCE_BACKFILL_AUDIT_PASS"
     }
   ],
   "generation_authorized": false,
   "next_action": "continue Phase C source backfill from remaining metadata-only candidates; do not start generation",
   "evidence": {
     "backfill_plan": "manifests/baseline-024/source_candidates/backfill_plan.json",
-    "latest_batch_manifest": "manifests/baseline-024/source_candidates/batch-002/batch_manifest.json",
-    "latest_bundle_build_summary": "manifests/baseline-024/project_bundles/batch-002/bundle_build_summary.json",
-    "latest_source_bundle_audit": "reports/baseline-024/source_bundle_audit_batch_002.json",
-    "latest_independent_audit": "reports/baseline-024/source_bundle_audit_batch_002_independent.json",
+    "latest_batch_manifest": "manifests/baseline-024/source_candidates/batch-003/batch_manifest.json",
+    "latest_bundle_build_summary": "manifests/baseline-024/project_bundles/batch-003/bundle_build_summary.json",
+    "latest_source_bundle_audit": "reports/baseline-024/source_bundle_audit_batch_003.json",
+    "latest_independent_audit": "reports/baseline-024/source_bundle_audit_batch_003_independent.json",
     "aggregate_source_bundle_audit": "reports/baseline-024/source_bundle_audit.json"
   }
 }

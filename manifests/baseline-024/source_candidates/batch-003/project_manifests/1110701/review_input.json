@@ -1,0 +1,920 @@
+{
+  "project_id": "1110701",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [
+    {
+      "decision_id": "SGD-EFF26501E7ED41",
+      "file_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB-XLS-SHEET-001",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫高鐵台南車站配水池改善成本分析分項.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "1ECAEA6D400D7E7E65226FCA2EB457CF1F117C66928F91319646ADE86D54CB2F",
+      "worksheet_name": "Sheet1",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "23C2BE09091145DBA7D58EFA8104DDD311915EC9B255BB7A9924B9504CC388BB",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "1ECAEA6D400D7E7E65226FCA2EB457CF1F117C66928F91319646ADE86D54CB2F"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "79F1214B6F3ADCA91B68D6AD9E02029D763EB7CE3EDAA7F10D74D5DCCAA2E32A"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-13E4A2DE95F0F7",
+      "file_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB-XLS-SHEET-002",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫高鐵台南車站配水池改善成本分析分項.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "1ECAEA6D400D7E7E65226FCA2EB457CF1F117C66928F91319646ADE86D54CB2F",
+      "worksheet_name": "Sheet2",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "1ECAEA6D400D7E7E65226FCA2EB457CF1F117C66928F91319646ADE86D54CB2F"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-8EB47DCA9D648E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB-XLS-SHEET-003",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫高鐵台南車站配水池改善成本分析分項.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "1ECAEA6D400D7E7E65226FCA2EB457CF1F117C66928F91319646ADE86D54CB2F",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "1ECAEA6D400D7E7E65226FCA2EB457CF1F117C66928F91319646ADE86D54CB2F"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-1F4DD9AD1DCF5E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-518581B2789A",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-518581B2789A-XLS-SHEET-001",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\台南高鐵配水池改善材料清單.xls",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "81869648CCA051FF22028B16EC94457F03E7E115E8A238CED542FD70CDE22C60",
+      "worksheet_name": "標單總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "69B419A89966BC4055506AE1065875A5A81B43AEA8EC74AB038F2025764DD94E",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "81869648CCA051FF22028B16EC94457F03E7E115E8A238CED542FD70CDE22C60"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "620B6AC32C1FCB722329F4E9CD587A4714A041F6A69002FBFDF5BDD6BC662498"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-C5997B5BC85C01",
+      "file_id": "SRC-ALL-PROJECTS-FILE-518581B2789A",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-518581B2789A-XLS-SHEET-002",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\台南高鐵配水池改善材料清單.xls",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "81869648CCA051FF22028B16EC94457F03E7E115E8A238CED542FD70CDE22C60",
+      "worksheet_name": "標單詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "327B19A81D88F9D13A45305E7AC29059CB7A09DF5C32EC891DE3BAECEE2546EC",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "81869648CCA051FF22028B16EC94457F03E7E115E8A238CED542FD70CDE22C60"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "905604091B688BA581C77E3CFE7BD5591EC96AC3E9CCC8D8FE411CB1BFCCAF57"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-4455FEFE0CBE66",
+      "file_id": "SRC-ALL-PROJECTS-FILE-518581B2789A",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-518581B2789A-XLS-SHEET-003",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\台南高鐵配水池改善材料清單.xls",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "81869648CCA051FF22028B16EC94457F03E7E115E8A238CED542FD70CDE22C60",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "45967A551C312E7BAA1D5F3BC6AFFB4BE0FBC640C1D7FE8F1844118516048EA2",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "81869648CCA051FF22028B16EC94457F03E7E115E8A238CED542FD70CDE22C60"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "B156AE11E75D331B22CBD3A2EAD4F715E9F8DBA778E92F8C94EB5B880D018AAE"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-28D54E32691B39",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE-XLS-SHEET-001",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\台南高鐵配水池改善合約.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "5AD4CF7FED23BF8D08709AFACD27A2D5C5913A7B5CE4FA7778E724548CD1F636",
+      "worksheet_name": "標單總表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "69B419A89966BC4055506AE1065875A5A81B43AEA8EC74AB038F2025764DD94E",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "5AD4CF7FED23BF8D08709AFACD27A2D5C5913A7B5CE4FA7778E724548CD1F636"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "620B6AC32C1FCB722329F4E9CD587A4714A041F6A69002FBFDF5BDD6BC662498"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-CBE0E64C1A998D",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE-XLS-SHEET-002",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\台南高鐵配水池改善合約.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "5AD4CF7FED23BF8D08709AFACD27A2D5C5913A7B5CE4FA7778E724548CD1F636",
+      "worksheet_name": "標單詳細表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "C6EF0E01B1F27F9F41A7DE00550D1BDCA290645779042524EDF4CD41F4764DCE",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "5AD4CF7FED23BF8D08709AFACD27A2D5C5913A7B5CE4FA7778E724548CD1F636"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "AD742426F27F268B8DEB75E80FF1A8E97421095CC27C347F6616709933CF3773"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-70561B77CFF5EF",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE-XLS-SHEET-003",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\台南高鐵配水池改善合約.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "5AD4CF7FED23BF8D08709AFACD27A2D5C5913A7B5CE4FA7778E724548CD1F636",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "45967A551C312E7BAA1D5F3BC6AFFB4BE0FBC640C1D7FE8F1844118516048EA2",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "5AD4CF7FED23BF8D08709AFACD27A2D5C5913A7B5CE4FA7778E724548CD1F636"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "B156AE11E75D331B22CBD3A2EAD4F715E9F8DBA778E92F8C94EB5B880D018AAE"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-1C40F913C6DE05",
+      "file_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13-XLS-SHEET-001",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫高鐵台南車站配水池改善成本分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "4C15AC7D5EDA6945AECD62BA87FADD60AE46D103788A9342B55D665BC33A3CBD",
+      "worksheet_name": "Sheet2",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "4C15AC7D5EDA6945AECD62BA87FADD60AE46D103788A9342B55D665BC33A3CBD"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-FE29A796FDE5F6",
+      "file_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13-XLS-SHEET-002",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫高鐵台南車站配水池改善成本分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "4C15AC7D5EDA6945AECD62BA87FADD60AE46D103788A9342B55D665BC33A3CBD",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "4C15AC7D5EDA6945AECD62BA87FADD60AE46D103788A9342B55D665BC33A3CBD"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-675B221A9DBA99",
+      "file_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13-XLS-SHEET-003",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫高鐵台南車站配水池改善成本分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "4C15AC7D5EDA6945AECD62BA87FADD60AE46D103788A9342B55D665BC33A3CBD",
+      "worksheet_name": "Sheet1",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "FE162748ED0E8009F65998D5310E3034CB7EBFAEBFF5F7820818C1A95CB2CE56",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "4C15AC7D5EDA6945AECD62BA87FADD60AE46D103788A9342B55D665BC33A3CBD"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F70E4FA2401A0768D0FFA6D2D5238232E3A0ED6097C4344ED4684865EF7F0F03"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-1734832793CEFC",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1805B1422618",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-1805B1422618-XLS-SHEET-001",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫水電高鐵台南車站配水池改善生產能力分表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "CF1FCD73F67F8476708F741D337AF28555486F07988974249F8F186C34B7CDB4",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "D362E8C74B47A96272240F3FDDB415A6E40E4863E61E4E15523E559F2203ED09",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "CF1FCD73F67F8476708F741D337AF28555486F07988974249F8F186C34B7CDB4"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "998CCC28707D691BCEB834D8C41801D8BCEE228C925EEC2EC9D1C7682CC21060"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-9F87F64D647325",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1805B1422618",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-1805B1422618-XLS-SHEET-002",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫水電高鐵台南車站配水池改善生產能力分表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "CF1FCD73F67F8476708F741D337AF28555486F07988974249F8F186C34B7CDB4",
+      "worksheet_name": "會議審查",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "D71887E3DEC9BCA4F985796C64CA935621FBCBF7949AE3757C7E8B7F3A242E08",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "CF1FCD73F67F8476708F741D337AF28555486F07988974249F8F186C34B7CDB4"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "986E47459BA7EF38F46F08D07CD9E0269274B83420D724482F2B0C672E84FCAE"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-3A150930132FDA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1805B1422618",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-1805B1422618-XLS-SHEET-003",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫水電高鐵台南車站配水池改善生產能力分表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "CF1FCD73F67F8476708F741D337AF28555486F07988974249F8F186C34B7CDB4",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "CF1FCD73F67F8476708F741D337AF28555486F07988974249F8F186C34B7CDB4"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-51E910E0841C3A",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-001",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\工作記錄單國倫高鐵台南車站配水池改善ls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "0413",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "44B250AE62DD3B0BC927C3C0EBF31D46567F1342287E2EFDFBA771BAAA7F9D65",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "AD0F33A7A0D4F68F87DCB8B78EF61DB3BC12674CC10FF4BB5F19DDA6868DAEA0"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-A9E24B9687016F",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-002",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\工作記錄單國倫高鐵台南車站配水池改善ls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "0415",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "80F99AC9C6518B1C241192861715CA6A227CACBF8E8B08CB512EBB3C660380EC",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "85443C0FDC9678CCFB657AECCCB90A88F859E5FA16AB8B2EA7210B1053FE7B9A"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-6597A061D0E497",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-003",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\工作記錄單國倫高鐵台南車站配水池改善ls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "空白",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "B5AD89DF08DECDCE5F994AD3DA7C3BBEA1E45E17C3F9FE8E167667935B3A6262",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "1D9CD85BBEF8C721BBFD1971DE053612BFD9145A72AF191B7F8FFF5830E74A9D"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-F9952E2093E866",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-004",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\工作記錄單國倫高鐵台南車站配水池改善ls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "05",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "C486E895C071C0C972EC1931CBA0899016DCFC94173F74D32DAB9D6E9DFCD142",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "768EF9E29A9A541E53DBA9A61496CBC5EA46A9498F86F833F1E0BEB02A18C41C"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-E201276AC2512B",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-005",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\工作記錄單國倫高鐵台南車站配水池改善ls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "05 (2)",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "AB9BB32E176B865C84DBA725CE82266BEFF1495F0C2BAF3232E972E6C74BD8B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "AD46148889E6540EA6AC05F9BEE96AC0C92B5655F2025D70C3192CBEA5ED1990"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-AAFE95BFC84612",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-006",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\工作記錄單國倫高鐵台南車站配水池改善ls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "0505",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "57704E40D688BC3C50FB45A7A772C06FDED685D61AAD5E0D2D8C702A299D384F",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "0FCE6390FE48D358BC70A5744E3A519DEAACAEFF492C2FCAD178B18C3D50DDAD"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-EF5D32F598BEB4",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD-XLS-SHEET-001",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫水電高鐵台南車站配水池改善會議審查表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "71BAE4F5331546A964589AEB9B7C2A5AFE2A571A0FE46F4658C8A819F438C74E",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "DA5E61A3AD3BCD092F447F2D757AD0F4CC05B68BFC88C68CCFEB64AECF610FA6",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "71BAE4F5331546A964589AEB9B7C2A5AFE2A571A0FE46F4658C8A819F438C74E"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "D9F93A9BDCF511BBD053D0A322CC307016C7A8B6C5A81972A645CDF568942F54"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-AE7E1799484930",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD-XLS-SHEET-002",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫水電高鐵台南車站配水池改善會議審查表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "71BAE4F5331546A964589AEB9B7C2A5AFE2A571A0FE46F4658C8A819F438C74E",
+      "worksheet_name": "會議審查",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "003A2F1A3214959CF63018EB036E02C80C1437A036E262183326E15BC5969A56",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "71BAE4F5331546A964589AEB9B7C2A5AFE2A571A0FE46F4658C8A819F438C74E"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "EB8B7FE91720F5B60869B1647360797ED5798122F512C03B3FDE3E26E2CCC953"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-54272996443934",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD-XLS-SHEET-003",
+      "project_id": "1110701",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110701國倫高鐵台南車站清水池改善\\國倫水電高鐵台南車站配水池改善會議審查表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "71BAE4F5331546A964589AEB9B7C2A5AFE2A571A0FE46F4658C8A819F438C74E",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "71BAE4F5331546A964589AEB9B7C2A5AFE2A571A0FE46F4658C8A819F438C74E"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}

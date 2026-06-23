@@ -1,0 +1,1861 @@
+{
+  "review_id": "project_identity_reviewer_batch_001",
+  "reviewer_role": "project_identity_reviewer",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "items": [
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1805B1422618",
+      "decision_id": "SGD-1734832793CEFC",
+      "file_sha256": "CF1FCD73F67F8476708F741D337AF28555486F07988974249F8F186C34B7CDB4",
+      "worksheet_name": "分析表",
+      "worksheet_fingerprint": "D362E8C74B47A96272240F3FDDB415A6E40E4863E61E4E15523E559F2203ED09",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-1734832793CEFC",
+        "SRC-ALL-PROJECTS-FILE-1805B1422618",
+        "SRC-ALL-PROJECTS-FILE-1805B1422618-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1805B1422618",
+      "decision_id": "SGD-9F87F64D647325",
+      "file_sha256": "CF1FCD73F67F8476708F741D337AF28555486F07988974249F8F186C34B7CDB4",
+      "worksheet_name": "會議審查",
+      "worksheet_fingerprint": "D71887E3DEC9BCA4F985796C64CA935621FBCBF7949AE3757C7E8B7F3A242E08",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-9F87F64D647325",
+        "SRC-ALL-PROJECTS-FILE-1805B1422618",
+        "SRC-ALL-PROJECTS-FILE-1805B1422618-XLS-SHEET-002"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-1805B1422618",
+      "decision_id": "SGD-3A150930132FDA",
+      "file_sha256": "CF1FCD73F67F8476708F741D337AF28555486F07988974249F8F186C34B7CDB4",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-3A150930132FDA",
+        "SRC-ALL-PROJECTS-FILE-1805B1422618",
+        "SRC-ALL-PROJECTS-FILE-1805B1422618-XLS-SHEET-003"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+      "decision_id": "SGD-EFF26501E7ED41",
+      "file_sha256": "1ECAEA6D400D7E7E65226FCA2EB457CF1F117C66928F91319646ADE86D54CB2F",
+      "worksheet_name": "Sheet1",
+      "worksheet_fingerprint": "23C2BE09091145DBA7D58EFA8104DDD311915EC9B255BB7A9924B9504CC388BB",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-EFF26501E7ED41",
+        "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+        "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB-XLS-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+      "decision_id": "SGD-13E4A2DE95F0F7",
+      "file_sha256": "1ECAEA6D400D7E7E65226FCA2EB457CF1F117C66928F91319646ADE86D54CB2F",
+      "worksheet_name": "Sheet2",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-13E4A2DE95F0F7",
+        "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+        "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB-XLS-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+      "decision_id": "SGD-8EB47DCA9D648E",
+      "file_sha256": "1ECAEA6D400D7E7E65226FCA2EB457CF1F117C66928F91319646ADE86D54CB2F",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-8EB47DCA9D648E",
+        "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB",
+        "SRC-ALL-PROJECTS-FILE-50EDCEA3A3FB-XLS-SHEET-003"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-518581B2789A",
+      "decision_id": "SGD-1F4DD9AD1DCF5E",
+      "file_sha256": "81869648CCA051FF22028B16EC94457F03E7E115E8A238CED542FD70CDE22C60",
+      "worksheet_name": "標單總表",
+      "worksheet_fingerprint": "69B419A89966BC4055506AE1065875A5A81B43AEA8EC74AB038F2025764DD94E",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-1F4DD9AD1DCF5E",
+        "SRC-ALL-PROJECTS-FILE-518581B2789A",
+        "SRC-ALL-PROJECTS-FILE-518581B2789A-XLS-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-518581B2789A",
+      "decision_id": "SGD-C5997B5BC85C01",
+      "file_sha256": "81869648CCA051FF22028B16EC94457F03E7E115E8A238CED542FD70CDE22C60",
+      "worksheet_name": "標單詳細表",
+      "worksheet_fingerprint": "327B19A81D88F9D13A45305E7AC29059CB7A09DF5C32EC891DE3BAECEE2546EC",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-C5997B5BC85C01",
+        "SRC-ALL-PROJECTS-FILE-518581B2789A",
+        "SRC-ALL-PROJECTS-FILE-518581B2789A-XLS-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-518581B2789A",
+      "decision_id": "SGD-4455FEFE0CBE66",
+      "file_sha256": "81869648CCA051FF22028B16EC94457F03E7E115E8A238CED542FD70CDE22C60",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_fingerprint": "45967A551C312E7BAA1D5F3BC6AFFB4BE0FBC640C1D7FE8F1844118516048EA2",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-4455FEFE0CBE66",
+        "SRC-ALL-PROJECTS-FILE-518581B2789A",
+        "SRC-ALL-PROJECTS-FILE-518581B2789A-XLS-SHEET-003"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "decision_id": "SGD-51E910E0841C3A",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "0413",
+      "worksheet_fingerprint": "44B250AE62DD3B0BC927C3C0EBF31D46567F1342287E2EFDFBA771BAAA7F9D65",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-51E910E0841C3A",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "decision_id": "SGD-A9E24B9687016F",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "0415",
+      "worksheet_fingerprint": "80F99AC9C6518B1C241192861715CA6A227CACBF8E8B08CB512EBB3C660380EC",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-A9E24B9687016F",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-002"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "decision_id": "SGD-6597A061D0E497",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "空白",
+      "worksheet_fingerprint": "B5AD89DF08DECDCE5F994AD3DA7C3BBEA1E45E17C3F9FE8E167667935B3A6262",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-6597A061D0E497",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-003"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "decision_id": "SGD-F9952E2093E866",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "05",
+      "worksheet_fingerprint": "C486E895C071C0C972EC1931CBA0899016DCFC94173F74D32DAB9D6E9DFCD142",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-F9952E2093E866",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-004"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "decision_id": "SGD-E201276AC2512B",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "05 (2)",
+      "worksheet_fingerprint": "AB9BB32E176B865C84DBA725CE82266BEFF1495F0C2BAF3232E972E6C74BD8B2",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-E201276AC2512B",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-005"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+      "decision_id": "SGD-AAFE95BFC84612",
+      "file_sha256": "20373D3EBB7A58462AC4EAC4623F60A87349F6F2D4A08203A1095349DC1C6010",
+      "worksheet_name": "0505",
+      "worksheet_fingerprint": "57704E40D688BC3C50FB45A7A772C06FDED685D61AAD5E0D2D8C702A299D384F",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-AAFE95BFC84612",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D",
+        "SRC-ALL-PROJECTS-FILE-5B4CC789877D-XLS-SHEET-006"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+      "decision_id": "SGD-EF5D32F598BEB4",
+      "file_sha256": "71BAE4F5331546A964589AEB9B7C2A5AFE2A571A0FE46F4658C8A819F438C74E",
+      "worksheet_name": "分析表",
+      "worksheet_fingerprint": "DA5E61A3AD3BCD092F447F2D757AD0F4CC05B68BFC88C68CCFEB64AECF610FA6",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-EF5D32F598BEB4",
+        "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+        "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+      "decision_id": "SGD-AE7E1799484930",
+      "file_sha256": "71BAE4F5331546A964589AEB9B7C2A5AFE2A571A0FE46F4658C8A819F438C74E",
+      "worksheet_name": "會議審查",
+      "worksheet_fingerprint": "003A2F1A3214959CF63018EB036E02C80C1437A036E262183326E15BC5969A56",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-AE7E1799484930",
+        "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+        "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD-XLS-SHEET-002"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+      "decision_id": "SGD-54272996443934",
+      "file_sha256": "71BAE4F5331546A964589AEB9B7C2A5AFE2A571A0FE46F4658C8A819F438C74E",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "project_identity": "1110701",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-54272996443934",
+        "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD",
+        "SRC-ALL-PROJECTS-FILE-5FF5886E7DAD-XLS-SHEET-003"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+      "decision_id": "SGD-28D54E32691B39",
+      "file_sha256": "5AD4CF7FED23BF8D08709AFACD27A2D5C5913A7B5CE4FA7778E724548CD1F636",
+      "worksheet_name": "標單總表",
+      "worksheet_fingerprint": "69B419A89966BC4055506AE1065875A5A81B43AEA8EC74AB038F2025764DD94E",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-28D54E32691B39",
+        "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+        "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE-XLS-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+      "decision_id": "SGD-CBE0E64C1A998D",
+      "file_sha256": "5AD4CF7FED23BF8D08709AFACD27A2D5C5913A7B5CE4FA7778E724548CD1F636",
+      "worksheet_name": "標單詳細表",
+      "worksheet_fingerprint": "C6EF0E01B1F27F9F41A7DE00550D1BDCA290645779042524EDF4CD41F4764DCE",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-CBE0E64C1A998D",
+        "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+        "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE-XLS-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+      "decision_id": "SGD-70561B77CFF5EF",
+      "file_sha256": "5AD4CF7FED23BF8D08709AFACD27A2D5C5913A7B5CE4FA7778E724548CD1F636",
+      "worksheet_name": "標單單價分析表",
+      "worksheet_fingerprint": "45967A551C312E7BAA1D5F3BC6AFFB4BE0FBC640C1D7FE8F1844118516048EA2",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-70561B77CFF5EF",
+        "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE",
+        "SRC-ALL-PROJECTS-FILE-7FA9DFDF99CE-XLS-SHEET-003"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+      "decision_id": "SGD-1C40F913C6DE05",
+      "file_sha256": "4C15AC7D5EDA6945AECD62BA87FADD60AE46D103788A9342B55D665BC33A3CBD",
+      "worksheet_name": "Sheet2",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-1C40F913C6DE05",
+        "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+        "SRC-ALL-PROJECTS-FILE-B177D8660A13-XLS-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+      "decision_id": "SGD-FE29A796FDE5F6",
+      "file_sha256": "4C15AC7D5EDA6945AECD62BA87FADD60AE46D103788A9342B55D665BC33A3CBD",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-FE29A796FDE5F6",
+        "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+        "SRC-ALL-PROJECTS-FILE-B177D8660A13-XLS-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110701",
+      "file_id": "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+      "decision_id": "SGD-675B221A9DBA99",
+      "file_sha256": "4C15AC7D5EDA6945AECD62BA87FADD60AE46D103788A9342B55D665BC33A3CBD",
+      "worksheet_name": "Sheet1",
+      "worksheet_fingerprint": "FE162748ED0E8009F65998D5310E3034CB7EBFAEBFF5F7820818C1A95CB2CE56",
+      "project_identity": "1110701",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-675B221A9DBA99",
+        "SRC-ALL-PROJECTS-FILE-B177D8660A13",
+        "SRC-ALL-PROJECTS-FILE-B177D8660A13-XLS-SHEET-003"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-417B53C98328",
+      "decision_id": "SGD-3429FB51A099C8",
+      "file_sha256": "6D413F092513FF53357861BC5343364ED75BC4CBB33BADE770C80652E29FAD46",
+      "worksheet_name": "分析表",
+      "worksheet_fingerprint": "DC4AA14AB7216A27E2EC4C22256F3F1922483B1F3B9272A13133184A0613412E",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-3429FB51A099C8",
+        "SRC-ALL-PROJECTS-FILE-417B53C98328",
+        "SRC-ALL-PROJECTS-FILE-417B53C98328-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-417B53C98328",
+      "decision_id": "SGD-73DE1CB46D746A",
+      "file_sha256": "6D413F092513FF53357861BC5343364ED75BC4CBB33BADE770C80652E29FAD46",
+      "worksheet_name": "會議審查",
+      "worksheet_fingerprint": "D71887E3DEC9BCA4F985796C64CA935621FBCBF7949AE3757C7E8B7F3A242E08",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-73DE1CB46D746A",
+        "SRC-ALL-PROJECTS-FILE-417B53C98328",
+        "SRC-ALL-PROJECTS-FILE-417B53C98328-XLS-SHEET-002"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-417B53C98328",
+      "decision_id": "SGD-E26B1C793A741F",
+      "file_sha256": "6D413F092513FF53357861BC5343364ED75BC4CBB33BADE770C80652E29FAD46",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-E26B1C793A741F",
+        "SRC-ALL-PROJECTS-FILE-417B53C98328",
+        "SRC-ALL-PROJECTS-FILE-417B53C98328-XLS-SHEET-003"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B89653F2A88",
+      "decision_id": "SGD-5DA97EDF789506",
+      "file_sha256": "90BA66A47D30633A2AC8FCC489ED5066AFF64D6E836A3C2AC270EF0830E845C2",
+      "worksheet_name": "Sheet1",
+      "worksheet_fingerprint": "AEC10975E1B252D79C4BD6FB0D3F75A6FF4B7BE9612BB5222C9A3E88E4C83332",
+      "project_identity": "1110704",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-5DA97EDF789506",
+        "SRC-ALL-PROJECTS-FILE-5B89653F2A88",
+        "SRC-ALL-PROJECTS-FILE-5B89653F2A88-XLS-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B89653F2A88",
+      "decision_id": "SGD-1A2E70B6D89867",
+      "file_sha256": "90BA66A47D30633A2AC8FCC489ED5066AFF64D6E836A3C2AC270EF0830E845C2",
+      "worksheet_name": "Sheet2",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "project_identity": "1110704",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-1A2E70B6D89867",
+        "SRC-ALL-PROJECTS-FILE-5B89653F2A88",
+        "SRC-ALL-PROJECTS-FILE-5B89653F2A88-XLS-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5B89653F2A88",
+      "decision_id": "SGD-7D11A6F1000812",
+      "file_sha256": "90BA66A47D30633A2AC8FCC489ED5066AFF64D6E836A3C2AC270EF0830E845C2",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "project_identity": "1110704",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-7D11A6F1000812",
+        "SRC-ALL-PROJECTS-FILE-5B89653F2A88",
+        "SRC-ALL-PROJECTS-FILE-5B89653F2A88-XLS-SHEET-003"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+      "decision_id": "SGD-FA7A9E3A45902B",
+      "file_sha256": "EEB902692E42995E87CEE1871D51140A6CEA901DF6EDF5DEFD1F8437B52E853D",
+      "worksheet_name": "0413",
+      "worksheet_fingerprint": "44B250AE62DD3B0BC927C3C0EBF31D46567F1342287E2EFDFBA771BAAA7F9D65",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-FA7A9E3A45902B",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+      "decision_id": "SGD-B4067AA9B4EE9E",
+      "file_sha256": "EEB902692E42995E87CEE1871D51140A6CEA901DF6EDF5DEFD1F8437B52E853D",
+      "worksheet_name": "0415",
+      "worksheet_fingerprint": "80F99AC9C6518B1C241192861715CA6A227CACBF8E8B08CB512EBB3C660380EC",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-B4067AA9B4EE9E",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326-XLS-SHEET-002"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+      "decision_id": "SGD-5229CA54A29840",
+      "file_sha256": "EEB902692E42995E87CEE1871D51140A6CEA901DF6EDF5DEFD1F8437B52E853D",
+      "worksheet_name": "空白",
+      "worksheet_fingerprint": "B5AD89DF08DECDCE5F994AD3DA7C3BBEA1E45E17C3F9FE8E167667935B3A6262",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-5229CA54A29840",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326-XLS-SHEET-003"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+      "decision_id": "SGD-9869278DE51569",
+      "file_sha256": "EEB902692E42995E87CEE1871D51140A6CEA901DF6EDF5DEFD1F8437B52E853D",
+      "worksheet_name": "05",
+      "worksheet_fingerprint": "C486E895C071C0C972EC1931CBA0899016DCFC94173F74D32DAB9D6E9DFCD142",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-9869278DE51569",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326-XLS-SHEET-004"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+      "decision_id": "SGD-02B8C166929D8D",
+      "file_sha256": "EEB902692E42995E87CEE1871D51140A6CEA901DF6EDF5DEFD1F8437B52E853D",
+      "worksheet_name": "05 (2)",
+      "worksheet_fingerprint": "AB9BB32E176B865C84DBA725CE82266BEFF1495F0C2BAF3232E972E6C74BD8B2",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-02B8C166929D8D",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326-XLS-SHEET-005"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+      "decision_id": "SGD-A75C22153F06E1",
+      "file_sha256": "EEB902692E42995E87CEE1871D51140A6CEA901DF6EDF5DEFD1F8437B52E853D",
+      "worksheet_name": "0505",
+      "worksheet_fingerprint": "EBFFC96BE3F9DDCA2E3DD751B97E063542EC12159A549B4613C7E8B15FE46E7C",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-A75C22153F06E1",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326",
+        "SRC-ALL-PROJECTS-FILE-A642C72DC326-XLS-SHEET-006"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-CBEF412646C8",
+      "decision_id": "SGD-5DC39491142F54",
+      "file_sha256": "D8D2D583831F77B40F3A26C9D05BB5EDAA500FDFD47E76EADD6244C227739B69",
+      "worksheet_name": "分析表",
+      "worksheet_fingerprint": "6C4228887E1154F44D16833E5FB5C3FFE88E490F6374EF7D601C7446474701B0",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-5DC39491142F54",
+        "SRC-ALL-PROJECTS-FILE-CBEF412646C8",
+        "SRC-ALL-PROJECTS-FILE-CBEF412646C8-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-CBEF412646C8",
+      "decision_id": "SGD-C0BD6B60A51560",
+      "file_sha256": "D8D2D583831F77B40F3A26C9D05BB5EDAA500FDFD47E76EADD6244C227739B69",
+      "worksheet_name": "會議審查",
+      "worksheet_fingerprint": "3ABDDED24E696C2C6E43C1D5CCEE18DDAE854E8C32AC08BFC84DA634D7281CCD",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-C0BD6B60A51560",
+        "SRC-ALL-PROJECTS-FILE-CBEF412646C8",
+        "SRC-ALL-PROJECTS-FILE-CBEF412646C8-XLS-SHEET-002"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-CBEF412646C8",
+      "decision_id": "SGD-BDCB9F78E749A9",
+      "file_sha256": "D8D2D583831F77B40F3A26C9D05BB5EDAA500FDFD47E76EADD6244C227739B69",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "project_identity": "1110704",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-BDCB9F78E749A9",
+        "SRC-ALL-PROJECTS-FILE-CBEF412646C8",
+        "SRC-ALL-PROJECTS-FILE-CBEF412646C8-XLS-SHEET-003"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B",
+      "decision_id": "SGD-2A177EAB680A6E",
+      "file_sha256": "FF45D95B5FBF620E0CB6FD88C819EAA45B3913D33CB5326A9985F13C9D1E6433",
+      "worksheet_name": "Sheet1",
+      "worksheet_fingerprint": "4C7FD938C8E0484E67E579B6A2C29514A14E14DDDC4B0F58A538B0ED839D1028",
+      "project_identity": "1110704",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-2A177EAB680A6E",
+        "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B",
+        "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B-XLS-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B",
+      "decision_id": "SGD-2318CC44DC27F0",
+      "file_sha256": "FF45D95B5FBF620E0CB6FD88C819EAA45B3913D33CB5326A9985F13C9D1E6433",
+      "worksheet_name": "Sheet2",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "project_identity": "1110704",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-2318CC44DC27F0",
+        "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B",
+        "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B-XLS-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110704",
+      "file_id": "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B",
+      "decision_id": "SGD-6702D737B1585B",
+      "file_sha256": "FF45D95B5FBF620E0CB6FD88C819EAA45B3913D33CB5326A9985F13C9D1E6433",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "project_identity": "1110704",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-6702D737B1585B",
+        "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B",
+        "SRC-ALL-PROJECTS-FILE-FD2AEFFAE00B-XLS-SHEET-003"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110706",
+      "file_id": "SRC-ALL-PROJECTS-FILE-05BCBD65FF18",
+      "decision_id": "SGD-256C8D049134D9",
+      "file_sha256": "6E97D0ABDE9D40F2D60F27692ACF72B93377AC3308EFB69F0B9A5DDCCFF7AF7D",
+      "worksheet_name": "材料設備",
+      "worksheet_fingerprint": "70810DFF15348FE62927765C21BCEF2BC5DBFFFE90B452008D588D01F40B9D1E",
+      "project_identity": "1110706",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-256C8D049134D9",
+        "SRC-ALL-PROJECTS-FILE-05BCBD65FF18",
+        "SRC-ALL-PROJECTS-FILE-05BCBD65FF18-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1110706",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9983923C09B5",
+      "decision_id": "SGD-B487A77172D9CE",
+      "file_sha256": "3EEEF063ABEE4CA4AB00E67AF0C63CE751A43C58F09BE7A28FCBBC8CBDBBDBF7",
+      "worksheet_name": "聯電 12A P3 CUB 2F DRYER一次配電工程",
+      "worksheet_fingerprint": "83FAB16D374EC6834C9937C8463CB9BB0A84027D1895135C6DE4693A1AD62A87",
+      "project_identity": "1110706",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-B487A77172D9CE",
+        "SRC-ALL-PROJECTS-FILE-9983923C09B5",
+        "SRC-ALL-PROJECTS-FILE-9983923C09B5-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120102",
+      "file_id": "SRC-ALL-PROJECTS-FILE-615DF5796758",
+      "decision_id": "SGD-3C05D07F7E3ACA",
+      "file_sha256": "BCDA6666F5AC3544268E6ABF13F2CDB88D2455356C0526212A2596D348FCF183",
+      "worksheet_name": "報價單 ",
+      "worksheet_fingerprint": "",
+      "project_identity": "1120102",
+      "decision": "DENY",
+      "reason_codes": [
+        "CROSS_PROJECT_IDENTITY",
+        "FORBIDDEN_LABEL_OR_ROLE",
+        "MISSING_WORKSHEET_FINGERPRINT",
+        "STALE_TEMPLATE_SHEET"
+      ],
+      "evidence_ids": [
+        "SGD-3C05D07F7E3ACA",
+        "SRC-ALL-PROJECTS-FILE-615DF5796758",
+        "SRC-ALL-PROJECTS-FILE-615DF5796758-SHEET-001"
+      ],
+      "detected_risks": [
+        "DETERMINISTIC_DENIAL"
+      ],
+      "unresolved_issues": [],
+      "confidence": 1.0,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120102",
+      "file_id": "SRC-ALL-PROJECTS-FILE-805F758C8378",
+      "decision_id": "SGD-D5F9CE32F732A0",
+      "file_sha256": "15CB77CC74EE19928CD20A2850B8CFB671D5DC3D7D0D8F59F4CD208785DD5DF8",
+      "worksheet_name": "至得金屬追加",
+      "worksheet_fingerprint": "9F7ACDFECC336B5401964C1F7768EDF59B6222018DAE721653DD0E288A47E4F8",
+      "project_identity": "1120102",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-D5F9CE32F732A0",
+        "SRC-ALL-PROJECTS-FILE-805F758C8378",
+        "SRC-ALL-PROJECTS-FILE-805F758C8378-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-2EA1C2D26428",
+      "decision_id": "SGD-D93A4F7F6DD2F9",
+      "file_sha256": "059054C63C52D2FEAF6BABB68DEFD1001D42181BA4FAB322F08B4A18135C0324",
+      "worksheet_name": "新設1500蝶閥",
+      "worksheet_fingerprint": "6B092E4453B64D5DD768DC10859FFB73614017D6427B318DE839EE1FB7053BD2",
+      "project_identity": "1120305",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-D93A4F7F6DD2F9",
+        "SRC-ALL-PROJECTS-FILE-2EA1C2D26428",
+        "SRC-ALL-PROJECTS-FILE-2EA1C2D26428-XLS-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5202CD559517",
+      "decision_id": "SGD-C476B1356C35A0",
+      "file_sha256": "0420D3E51EA0CF76E2A053280D9C433F9B40DEF41B0E61826320E66A8C462901",
+      "worksheet_name": "分析表",
+      "worksheet_fingerprint": "02489BFBE60E3892AA26AC2C8E11583741B856D125DC89346855FE12624FC33E",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-C476B1356C35A0",
+        "SRC-ALL-PROJECTS-FILE-5202CD559517",
+        "SRC-ALL-PROJECTS-FILE-5202CD559517-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5202CD559517",
+      "decision_id": "SGD-4C70CA936D8D28",
+      "file_sha256": "0420D3E51EA0CF76E2A053280D9C433F9B40DEF41B0E61826320E66A8C462901",
+      "worksheet_name": "會議審查",
+      "worksheet_fingerprint": "D71887E3DEC9BCA4F985796C64CA935621FBCBF7949AE3757C7E8B7F3A242E08",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-4C70CA936D8D28",
+        "SRC-ALL-PROJECTS-FILE-5202CD559517",
+        "SRC-ALL-PROJECTS-FILE-5202CD559517-XLS-SHEET-002"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5202CD559517",
+      "decision_id": "SGD-E574AB6813A6B2",
+      "file_sha256": "0420D3E51EA0CF76E2A053280D9C433F9B40DEF41B0E61826320E66A8C462901",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-E574AB6813A6B2",
+        "SRC-ALL-PROJECTS-FILE-5202CD559517",
+        "SRC-ALL-PROJECTS-FILE-5202CD559517-XLS-SHEET-003"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-74F42E453FE8",
+      "decision_id": "SGD-517230DF119629",
+      "file_sha256": "C532FFB07C0EE120757EBC6FDA9CE08DCE5745BB8E5D142A61C74F2C814286B9",
+      "worksheet_name": "Sheet2",
+      "worksheet_fingerprint": "7E4AC866D15583F077FBCFFBA271E7A06E34505A1A2D08CD32D670A57D798C7D",
+      "project_identity": "1120305",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-517230DF119629",
+        "SRC-ALL-PROJECTS-FILE-74F42E453FE8",
+        "SRC-ALL-PROJECTS-FILE-74F42E453FE8-XLS-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-74F42E453FE8",
+      "decision_id": "SGD-A213F9C69B7BB3",
+      "file_sha256": "C532FFB07C0EE120757EBC6FDA9CE08DCE5745BB8E5D142A61C74F2C814286B9",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "92F08BD1419E91EF7839DC739DC4A1009C3BEDC83095CCC7B6EB5E93973D4128",
+      "project_identity": "1120305",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-A213F9C69B7BB3",
+        "SRC-ALL-PROJECTS-FILE-74F42E453FE8",
+        "SRC-ALL-PROJECTS-FILE-74F42E453FE8-XLS-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-74F42E453FE8",
+      "decision_id": "SGD-22905D1DCAD353",
+      "file_sha256": "C532FFB07C0EE120757EBC6FDA9CE08DCE5745BB8E5D142A61C74F2C814286B9",
+      "worksheet_name": "Sheet1",
+      "worksheet_fingerprint": "35F652C61C2FD7B7409EE7959EEFD9F640110595A3492F32D668EDFE7D96B920",
+      "project_identity": "1120305",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-22905D1DCAD353",
+        "SRC-ALL-PROJECTS-FILE-74F42E453FE8",
+        "SRC-ALL-PROJECTS-FILE-74F42E453FE8-XLS-SHEET-003"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "decision_id": "SGD-BCB03D0D8B1D22",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "0413",
+      "worksheet_fingerprint": "44B250AE62DD3B0BC927C3C0EBF31D46567F1342287E2EFDFBA771BAAA7F9D65",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-BCB03D0D8B1D22",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "decision_id": "SGD-818B9834F387F1",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "0415",
+      "worksheet_fingerprint": "80F99AC9C6518B1C241192861715CA6A227CACBF8E8B08CB512EBB3C660380EC",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-818B9834F387F1",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-002"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "decision_id": "SGD-05202CE7E755E1",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "空白",
+      "worksheet_fingerprint": "B5AD89DF08DECDCE5F994AD3DA7C3BBEA1E45E17C3F9FE8E167667935B3A6262",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-05202CE7E755E1",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-003"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "decision_id": "SGD-AE8B0DF32D4102",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "05",
+      "worksheet_fingerprint": "C486E895C071C0C972EC1931CBA0899016DCFC94173F74D32DAB9D6E9DFCD142",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-AE8B0DF32D4102",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-004"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "decision_id": "SGD-086E4A4FD3E3B3",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "05 (2)",
+      "worksheet_fingerprint": "AB9BB32E176B865C84DBA725CE82266BEFF1495F0C2BAF3232E972E6C74BD8B2",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-086E4A4FD3E3B3",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-005"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "decision_id": "SGD-CB13279375BE2B",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "0505",
+      "worksheet_fingerprint": "6621A3ABC7F5CFC52C4C4F31E889DC226ADF8C9A7EB4A1FD5A1F388D8FA6B978",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-CB13279375BE2B",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+        "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-006"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-996E26CDD24C",
+      "decision_id": "SGD-8FB656A7E3F0B7",
+      "file_sha256": "467580CA24F18BD3411F4338578A96FAC25B601178529B716046406C7AF9CC5F",
+      "worksheet_name": "分析表",
+      "worksheet_fingerprint": "6C4228887E1154F44D16833E5FB5C3FFE88E490F6374EF7D601C7446474701B0",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-8FB656A7E3F0B7",
+        "SRC-ALL-PROJECTS-FILE-996E26CDD24C",
+        "SRC-ALL-PROJECTS-FILE-996E26CDD24C-XLS-SHEET-001"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-996E26CDD24C",
+      "decision_id": "SGD-ED76CFEDDB11C1",
+      "file_sha256": "467580CA24F18BD3411F4338578A96FAC25B601178529B716046406C7AF9CC5F",
+      "worksheet_name": "會議審查",
+      "worksheet_fingerprint": "D248623800001784D4C72BE25A42410F76E466F78F43889021AE600362933121",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-ED76CFEDDB11C1",
+        "SRC-ALL-PROJECTS-FILE-996E26CDD24C",
+        "SRC-ALL-PROJECTS-FILE-996E26CDD24C-XLS-SHEET-002"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-996E26CDD24C",
+      "decision_id": "SGD-2C22F76A856BBF",
+      "file_sha256": "467580CA24F18BD3411F4338578A96FAC25B601178529B716046406C7AF9CC5F",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "project_identity": "1120305",
+      "decision": "QUARANTINE",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "evidence_ids": [
+        "SGD-2C22F76A856BBF",
+        "SRC-ALL-PROJECTS-FILE-996E26CDD24C",
+        "SRC-ALL-PROJECTS-FILE-996E26CDD24C-XLS-SHEET-003"
+      ],
+      "detected_risks": [
+        "PREFILTER_QUARANTINE"
+      ],
+      "unresolved_issues": [],
+      "confidence": 0.95,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DA76805559E7",
+      "decision_id": "SGD-44418D7DCCFE76",
+      "file_sha256": "A54B42B6E5F365D950AA0576B70F1F25ED67109D63409AFBEE587B54BEDBA725",
+      "worksheet_name": "新設1500蝶閥",
+      "worksheet_fingerprint": "B188670011B7B2692534628916B606DCCD68938ABB7AA39BD906FB4554E7C737",
+      "project_identity": "1120305",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-44418D7DCCFE76",
+        "SRC-ALL-PROJECTS-FILE-DA76805559E7",
+        "SRC-ALL-PROJECTS-FILE-DA76805559E7-XLS-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF",
+      "decision_id": "SGD-A0A39ADA704F4A",
+      "file_sha256": "A13905DEC22D3D564FB17B6A89D178730C68FA24EA7BA7481C8F58B471A7AF8C",
+      "worksheet_name": "Sheet2",
+      "worksheet_fingerprint": "1B1BE9FCA56F599EB5DE9E67FA521B6886F468EB3F73470755752A6EE05072C8",
+      "project_identity": "1120305",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-A0A39ADA704F4A",
+        "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF",
+        "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF-XLS-SHEET-001"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF",
+      "decision_id": "SGD-CAC3AB6F4E8AA8",
+      "file_sha256": "A13905DEC22D3D564FB17B6A89D178730C68FA24EA7BA7481C8F58B471A7AF8C",
+      "worksheet_name": "Sheet3",
+      "worksheet_fingerprint": "BEFEA3E3836D39C53C3DDA7D44A3D2251F3AFCBD872EAA520F10C2E666A430B2",
+      "project_identity": "1120305",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-CAC3AB6F4E8AA8",
+        "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF",
+        "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF-XLS-SHEET-002"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    },
+    {
+      "project_id": "1120305",
+      "file_id": "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF",
+      "decision_id": "SGD-1306F542398907",
+      "file_sha256": "A13905DEC22D3D564FB17B6A89D178730C68FA24EA7BA7481C8F58B471A7AF8C",
+      "worksheet_name": "Sheet1",
+      "worksheet_fingerprint": "35F652C61C2FD7B7409EE7959EEFD9F640110595A3492F32D668EDFE7D96B920",
+      "project_identity": "1120305",
+      "decision": "ALLOW_EVAL",
+      "reason_codes": [
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "NO_CROSS_PROJECT_SIGNAL"
+      ],
+      "evidence_ids": [
+        "SGD-1306F542398907",
+        "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF",
+        "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF-XLS-SHEET-003"
+      ],
+      "detected_risks": [],
+      "unresolved_issues": [],
+      "confidence": 0.8,
+      "run_metadata": {
+        "mode": "deterministic_specialist_review"
+      }
+    }
+  ],
+  "run_metadata": {
+    "prefilter_root": "manifests\\baseline-024\\source_candidates\\batch-003\\project_manifests",
+    "created_at": "2026-06-23T04:23:03Z",
+    "independence_note": "Generated from role-specific deterministic rules without reading other reviewer outputs."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "project_id": "1120102",
+  "created_at": "2026-06-23T04:21:27Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1120102\\source_decisions_1120102_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-805F758C8378",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120102核陽工程-紅外線控制板\\核陽-紅外線控制板工作紀錄單.xls",
+      "file_sha256": "15CB77CC74EE19928CD20A2850B8CFB671D5DC3D7D0D8F59F4CD208785DD5DF8",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-003\\legacy_xls\\1120102\\legacy_xls_parse\\1120102\\SRC-ALL-PROJECTS-FILE-805F758C8378",
+      "sheet_count": 1
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-805F758C8378",
+      "first_metadata_hash": "2C06B7C37E31C0A3478AF9899AB038E4E859A299598424B50C0C0134B4CF4A4C",
+      "second_metadata_hash": "2C06B7C37E31C0A3478AF9899AB038E4E859A299598424B50C0C0134B4CF4A4C",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 0,
+  "excluded_count": 1
+}

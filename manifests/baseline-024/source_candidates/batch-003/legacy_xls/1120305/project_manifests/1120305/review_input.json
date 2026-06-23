@@ -1,0 +1,860 @@
+{
+  "project_id": "1120305",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [
+    {
+      "decision_id": "SGD-D93A4F7F6DD2F9",
+      "file_id": "SRC-ALL-PROJECTS-FILE-2EA1C2D26428",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-2EA1C2D26428-XLS-SHEET-001",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\鳥嘴潭管九追加PN2盤材料清單.xls",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "059054C63C52D2FEAF6BABB68DEFD1001D42181BA4FAB322F08B4A18135C0324",
+      "worksheet_name": "新設1500蝶閥",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "6B092E4453B64D5DD768DC10859FFB73614017D6427B318DE839EE1FB7053BD2",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "059054C63C52D2FEAF6BABB68DEFD1001D42181BA4FAB322F08B4A18135C0324"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "6B092E4453B64D5DD768DC10859FFB73614017D6427B318DE839EE1FB7053BD2"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-517230DF119629",
+      "file_id": "SRC-ALL-PROJECTS-FILE-74F42E453FE8",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-74F42E453FE8-XLS-SHEET-001",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追加PN2盤訂單成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "C532FFB07C0EE120757EBC6FDA9CE08DCE5745BB8E5D142A61C74F2C814286B9",
+      "worksheet_name": "Sheet2",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "7E4AC866D15583F077FBCFFBA271E7A06E34505A1A2D08CD32D670A57D798C7D",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "C532FFB07C0EE120757EBC6FDA9CE08DCE5745BB8E5D142A61C74F2C814286B9"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "7E4AC866D15583F077FBCFFBA271E7A06E34505A1A2D08CD32D670A57D798C7D"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-A213F9C69B7BB3",
+      "file_id": "SRC-ALL-PROJECTS-FILE-74F42E453FE8",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-74F42E453FE8-XLS-SHEET-002",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追加PN2盤訂單成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "C532FFB07C0EE120757EBC6FDA9CE08DCE5745BB8E5D142A61C74F2C814286B9",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "92F08BD1419E91EF7839DC739DC4A1009C3BEDC83095CCC7B6EB5E93973D4128",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "C532FFB07C0EE120757EBC6FDA9CE08DCE5745BB8E5D142A61C74F2C814286B9"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "92F08BD1419E91EF7839DC739DC4A1009C3BEDC83095CCC7B6EB5E93973D4128"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-22905D1DCAD353",
+      "file_id": "SRC-ALL-PROJECTS-FILE-74F42E453FE8",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-74F42E453FE8-XLS-SHEET-003",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追加PN2盤訂單成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "C532FFB07C0EE120757EBC6FDA9CE08DCE5745BB8E5D142A61C74F2C814286B9",
+      "worksheet_name": "Sheet1",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "35F652C61C2FD7B7409EE7959EEFD9F640110595A3492F32D668EDFE7D96B920",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "C532FFB07C0EE120757EBC6FDA9CE08DCE5745BB8E5D142A61C74F2C814286B9"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "35F652C61C2FD7B7409EE7959EEFD9F640110595A3492F32D668EDFE7D96B920"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-44418D7DCCFE76",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DA76805559E7",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-DA76805559E7-XLS-SHEET-001",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\鳥嘴潭管九追加PN2盤合約.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "A54B42B6E5F365D950AA0576B70F1F25ED67109D63409AFBEE587B54BEDBA725",
+      "worksheet_name": "新設1500蝶閥",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "B188670011B7B2692534628916B606DCCD68938ABB7AA39BD906FB4554E7C737",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A54B42B6E5F365D950AA0576B70F1F25ED67109D63409AFBEE587B54BEDBA725"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "B188670011B7B2692534628916B606DCCD68938ABB7AA39BD906FB4554E7C737"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-A0A39ADA704F4A",
+      "file_id": "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF-XLS-SHEET-001",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追家PN2盤訂單成本分析分項.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "A13905DEC22D3D564FB17B6A89D178730C68FA24EA7BA7481C8F58B471A7AF8C",
+      "worksheet_name": "Sheet2",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "1B1BE9FCA56F599EB5DE9E67FA521B6886F468EB3F73470755752A6EE05072C8",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A13905DEC22D3D564FB17B6A89D178730C68FA24EA7BA7481C8F58B471A7AF8C"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "1B1BE9FCA56F599EB5DE9E67FA521B6886F468EB3F73470755752A6EE05072C8"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-CAC3AB6F4E8AA8",
+      "file_id": "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF-XLS-SHEET-002",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追家PN2盤訂單成本分析分項.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "A13905DEC22D3D564FB17B6A89D178730C68FA24EA7BA7481C8F58B471A7AF8C",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "BEFEA3E3836D39C53C3DDA7D44A3D2251F3AFCBD872EAA520F10C2E666A430B2",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A13905DEC22D3D564FB17B6A89D178730C68FA24EA7BA7481C8F58B471A7AF8C"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "BEFEA3E3836D39C53C3DDA7D44A3D2251F3AFCBD872EAA520F10C2E666A430B2"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-1306F542398907",
+      "file_id": "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-EAB826EF5CCF-XLS-SHEET-003",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追家PN2盤訂單成本分析分項.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "A13905DEC22D3D564FB17B6A89D178730C68FA24EA7BA7481C8F58B471A7AF8C",
+      "worksheet_name": "Sheet1",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "35F652C61C2FD7B7409EE7959EEFD9F640110595A3492F32D668EDFE7D96B920",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A13905DEC22D3D564FB17B6A89D178730C68FA24EA7BA7481C8F58B471A7AF8C"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "35F652C61C2FD7B7409EE7959EEFD9F640110595A3492F32D668EDFE7D96B920"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-C476B1356C35A0",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5202CD559517",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5202CD559517-XLS-SHEET-001",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追加PN2盤生產能力分表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "0420D3E51EA0CF76E2A053280D9C433F9B40DEF41B0E61826320E66A8C462901",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "02489BFBE60E3892AA26AC2C8E11583741B856D125DC89346855FE12624FC33E",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "0420D3E51EA0CF76E2A053280D9C433F9B40DEF41B0E61826320E66A8C462901"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "02489BFBE60E3892AA26AC2C8E11583741B856D125DC89346855FE12624FC33E"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-4C70CA936D8D28",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5202CD559517",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5202CD559517-XLS-SHEET-002",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追加PN2盤生產能力分表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "0420D3E51EA0CF76E2A053280D9C433F9B40DEF41B0E61826320E66A8C462901",
+      "worksheet_name": "會議審查",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "D71887E3DEC9BCA4F985796C64CA935621FBCBF7949AE3757C7E8B7F3A242E08",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "0420D3E51EA0CF76E2A053280D9C433F9B40DEF41B0E61826320E66A8C462901"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "D71887E3DEC9BCA4F985796C64CA935621FBCBF7949AE3757C7E8B7F3A242E08"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-E574AB6813A6B2",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5202CD559517",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5202CD559517-XLS-SHEET-003",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追加PN2盤生產能力分表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "0420D3E51EA0CF76E2A053280D9C433F9B40DEF41B0E61826320E66A8C462901",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "0420D3E51EA0CF76E2A053280D9C433F9B40DEF41B0E61826320E66A8C462901"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-BCB03D0D8B1D22",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-001",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\工作記錄單榮陳鳥嘴潭下游管九追加PN2盤.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "0413",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "44B250AE62DD3B0BC927C3C0EBF31D46567F1342287E2EFDFBA771BAAA7F9D65",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "44B250AE62DD3B0BC927C3C0EBF31D46567F1342287E2EFDFBA771BAAA7F9D65"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-818B9834F387F1",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-002",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\工作記錄單榮陳鳥嘴潭下游管九追加PN2盤.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "0415",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "80F99AC9C6518B1C241192861715CA6A227CACBF8E8B08CB512EBB3C660380EC",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "80F99AC9C6518B1C241192861715CA6A227CACBF8E8B08CB512EBB3C660380EC"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-05202CE7E755E1",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-003",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\工作記錄單榮陳鳥嘴潭下游管九追加PN2盤.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "空白",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "B5AD89DF08DECDCE5F994AD3DA7C3BBEA1E45E17C3F9FE8E167667935B3A6262",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "B5AD89DF08DECDCE5F994AD3DA7C3BBEA1E45E17C3F9FE8E167667935B3A6262"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-AE8B0DF32D4102",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-004",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\工作記錄單榮陳鳥嘴潭下游管九追加PN2盤.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "05",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "C486E895C071C0C972EC1931CBA0899016DCFC94173F74D32DAB9D6E9DFCD142",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "C486E895C071C0C972EC1931CBA0899016DCFC94173F74D32DAB9D6E9DFCD142"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-086E4A4FD3E3B3",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-005",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\工作記錄單榮陳鳥嘴潭下游管九追加PN2盤.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "05 (2)",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "AB9BB32E176B865C84DBA725CE82266BEFF1495F0C2BAF3232E972E6C74BD8B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "AB9BB32E176B865C84DBA725CE82266BEFF1495F0C2BAF3232E972E6C74BD8B2"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-CB13279375BE2B",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9159D6390E71-XLS-SHEET-006",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\工作記錄單榮陳鳥嘴潭下游管九追加PN2盤.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097",
+      "worksheet_name": "0505",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "6621A3ABC7F5CFC52C4C4F31E889DC226ADF8C9A7EB4A1FD5A1F388D8FA6B978",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "3DA59416E7DD7277D3DE94A7A6A076D4C484E7202239D7C9E54BDB2F0DA54097"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "6621A3ABC7F5CFC52C4C4F31E889DC226ADF8C9A7EB4A1FD5A1F388D8FA6B978"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-8FB656A7E3F0B7",
+      "file_id": "SRC-ALL-PROJECTS-FILE-996E26CDD24C",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-996E26CDD24C-XLS-SHEET-001",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追加PN2盤會議審查.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "467580CA24F18BD3411F4338578A96FAC25B601178529B716046406C7AF9CC5F",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "6C4228887E1154F44D16833E5FB5C3FFE88E490F6374EF7D601C7446474701B0",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "467580CA24F18BD3411F4338578A96FAC25B601178529B716046406C7AF9CC5F"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "6C4228887E1154F44D16833E5FB5C3FFE88E490F6374EF7D601C7446474701B0"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-ED76CFEDDB11C1",
+      "file_id": "SRC-ALL-PROJECTS-FILE-996E26CDD24C",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-996E26CDD24C-XLS-SHEET-002",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追加PN2盤會議審查.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "467580CA24F18BD3411F4338578A96FAC25B601178529B716046406C7AF9CC5F",
+      "worksheet_name": "會議審查",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "D248623800001784D4C72BE25A42410F76E466F78F43889021AE600362933121",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "467580CA24F18BD3411F4338578A96FAC25B601178529B716046406C7AF9CC5F"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "D248623800001784D4C72BE25A42410F76E466F78F43889021AE600362933121"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-2C22F76A856BBF",
+      "file_id": "SRC-ALL-PROJECTS-FILE-996E26CDD24C",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-996E26CDD24C-XLS-SHEET-003",
+      "project_id": "1120305",
+      "relative_path": "112年度工作\\112年度工作\\1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)\\榮陳鳥嘴潭下游管九追加PN2盤會議審查.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "467580CA24F18BD3411F4338578A96FAC25B601178529B716046406C7AF9CC5F",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "467580CA24F18BD3411F4338578A96FAC25B601178529B716046406C7AF9CC5F"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}
