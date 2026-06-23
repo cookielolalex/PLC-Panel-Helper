@@ -1,0 +1,136 @@
+{
+  "project_id": "1120204",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [
+    {
+      "decision_id": "SGD-1422400433846E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-D50AF9C15846",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-D50AF9C15846-XLS-SHEET-001",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程(成本分析表).xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "EF11B530947E654AB4487B0EB8D561379F86FC63E367C714357FC73445BDAEC2",
+      "worksheet_name": "Sheet1 (3)",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "985C43E98D795D8C6B57D6E153D78E9167AAFA1F6458F8C683D97C4C667F5CEE",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "EF11B530947E654AB4487B0EB8D561379F86FC63E367C714357FC73445BDAEC2"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "985C43E98D795D8C6B57D6E153D78E9167AAFA1F6458F8C683D97C4C667F5CEE"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-35AB5A021C3A72",
+      "file_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3-XLS-SHEET-001",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00",
+      "worksheet_name": "含稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-8CBD5F3034704F",
+      "file_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3-XLS-SHEET-002",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00",
+      "worksheet_name": "未稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "05C492E5F09EA193E94CCA68349474F1B13C0F4B921E156D581A74D81DFAD3FA",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "05C492E5F09EA193E94CCA68349474F1B13C0F4B921E156D581A74D81DFAD3FA"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "prefilter_id": "deterministic_prefilter_1120201_legacy_xls",
+  "project_id": "1120201",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "NO_REVIEWABLE_ITEMS",
+  "items": [
+    {
+      "decision_id": "SGD-35FFCCDCE5550D",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E039B2D5783C",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-E039B2D5783C-XLS-SHEET-001",
+      "project_id": "1120201",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120201立岳-南工處第三工務所辦公室整遷工程\\立岳-南工處第三工務所整遷工程工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "30834CC0B9EB691AAA6D7A1F3FA745CFA6FADAF1FCF51DC058440E9ED3CD8B1E",
+      "worksheet_name": "未稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "18C6689C3803AC5B07B210D9151AEEB0795D71349B4726497A78068D7103C6EC",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "30834CC0B9EB691AAA6D7A1F3FA745CFA6FADAF1FCF51DC058440E9ED3CD8B1E"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "18C6689C3803AC5B07B210D9151AEEB0795D71349B4726497A78068D7103C6EC"
+        }
+      ],
+      "reviewable": false
+    }
+  ],
+  "summary": {
+    "QUARANTINED": 1
+  },
+  "run_metadata": {
+    "created_at": "2026-06-23T03:20:11Z",
+    "parser": "excel_com_legacy_xls_v1",
+    "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120201\\source_decisions_1120201_legacy_xls.csv"
+  }
+}

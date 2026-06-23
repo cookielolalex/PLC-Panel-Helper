@@ -1,0 +1,39 @@
+{
+  "project_id": "1120204",
+  "created_at": "2026-06-23T03:18:38Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120204\\source_decisions_1120204_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程工作紀錄單.xls",
+      "file_sha256": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120204\\legacy_xls_parse\\1120204\\SRC-ALL-PROJECTS-FILE-444B06C024A3",
+      "sheet_count": 2
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-D50AF9C15846",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程(成本分析表).xls",
+      "file_sha256": "EF11B530947E654AB4487B0EB8D561379F86FC63E367C714357FC73445BDAEC2",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120204\\legacy_xls_parse\\1120204\\SRC-ALL-PROJECTS-FILE-D50AF9C15846",
+      "sheet_count": 1
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3",
+      "first_metadata_hash": "D588BBAC84A29EE7CE5B6450F9415F8EBD2ED683AE1A83207BDD755780A81E16",
+      "second_metadata_hash": "D588BBAC84A29EE7CE5B6450F9415F8EBD2ED683AE1A83207BDD755780A81E16",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-D50AF9C15846",
+      "first_metadata_hash": "54AA982AC65376FF0B98395EFB15D76842A88FDD1A3798C3AEA83571839EE149",
+      "second_metadata_hash": "54AA982AC65376FF0B98395EFB15D76842A88FDD1A3798C3AEA83571839EE149",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 1,
+  "excluded_count": 2
+}

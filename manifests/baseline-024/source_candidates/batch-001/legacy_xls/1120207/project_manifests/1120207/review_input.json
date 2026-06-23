@@ -1,0 +1,50 @@
+{
+  "project_id": "1120207",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-6BAAC9B9A05320",
+      "file_id": "SRC-ALL-PROJECTS-FILE-644BF6068BFC",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-644BF6068BFC-XLS-SHEET-001",
+      "project_id": "1120207",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120207顯茂-臨時盤\\顯茂-臨時盤工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "8D7F737A58DD9DAD775E77F106A54A64C3D4894A65DC832FDF5551EBBFF090DF",
+      "worksheet_name": "未稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "589CEF755855BE96D59514EEFC88D89DAE2D4EB44BE42ED81A6F5C09FEADA423",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "8D7F737A58DD9DAD775E77F106A54A64C3D4894A65DC832FDF5551EBBFF090DF"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "589CEF755855BE96D59514EEFC88D89DAE2D4EB44BE42ED81A6F5C09FEADA423"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}

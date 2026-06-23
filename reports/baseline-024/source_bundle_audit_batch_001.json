@@ -1,0 +1,24 @@
+{
+  "audit_id": "baseline024_batch-001_source_bundle_audit",
+  "baseline_id": "baseline-024-cycle-000",
+  "batch_id": "batch-001",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+  "projects": [
+    {
+      "project_id": "1110801",
+      "artifact_count": 2,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "project_id": "1120207",
+      "artifact_count": 2,
+      "status": "PASS",
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "created_at": "2026-06-23T03:24:30Z",
+  "git_head": "fac44321491633181f1fa53a062084d072b0b582"
+}

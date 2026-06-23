@@ -1,0 +1,106 @@
+[
+  {
+    "decision_id": "SGD-EB7F6CF56E271C",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1110801",
+    "family_id": "華格",
+    "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110801華格-內埔工業區汙水管路工程\\華格-內埔工業區汙水管路工程工作紀錄單.xls",
+    "file_name": "華格-內埔工業區汙水管路工程工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283-XLS-SHEET-001",
+    "file_sha256": "881608D165CE55F96CBF349890C72500DFB2D7BDA67F23CEBE57CA93DF0D1027",
+    "file_size": "71680",
+    "workbook_format": "xls",
+    "worksheet_name": "含稅",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+    "workbook_sheet_count": 2,
+    "detected_project_identifiers": [
+      "1110801"
+    ],
+    "detected_customer_identifiers": [
+      "華格"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-3FB79B273283",
+      "SRC-ALL-PROJECTS-FILE-3FB79B273283-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1110801\\legacy_xls_parse\\1110801\\SRC-ALL-PROJECTS-FILE-3FB79B273283\\001_含稅.csv",
+    "sanitized_csv_sha256": "1B204C5C2261878D2216C81F432548D2DFB0D080C5A7F39CFB670AB745D9E191",
+    "non_empty_rows": 35
+  },
+  {
+    "decision_id": "SGD-3FF5DBB45D6CAA",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1110801",
+    "family_id": "華格",
+    "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110801華格-內埔工業區汙水管路工程\\華格-內埔工業區汙水管路工程工作紀錄單.xls",
+    "file_name": "華格-內埔工業區汙水管路工程工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283-XLS-SHEET-002",
+    "file_sha256": "881608D165CE55F96CBF349890C72500DFB2D7BDA67F23CEBE57CA93DF0D1027",
+    "file_size": "71680",
+    "workbook_format": "xls",
+    "worksheet_name": "未稅",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "AB3733DD575934A0AC790F32D0FDEEB7D3DCFD6E772FAB3384F45643C99796C3",
+    "workbook_sheet_count": 2,
+    "detected_project_identifiers": [
+      "1110801"
+    ],
+    "detected_customer_identifiers": [
+      "華格"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-3FB79B273283",
+      "SRC-ALL-PROJECTS-FILE-3FB79B273283-XLS-SHEET-002"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1110801\\legacy_xls_parse\\1110801\\SRC-ALL-PROJECTS-FILE-3FB79B273283\\002_未稅.csv",
+    "sanitized_csv_sha256": "E88DE4CDE5E5263103FEF7F423974CCCCFCC6A941FE40414DCA8AAAF91B1EFD5",
+    "non_empty_rows": 29
+  }
+]

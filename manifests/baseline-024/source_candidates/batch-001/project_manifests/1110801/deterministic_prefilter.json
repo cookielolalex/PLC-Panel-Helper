@@ -1,0 +1,168 @@
+{
+  "prefilter_id": "baseline024_batch-001_prefilter_1110801",
+  "project_id": "1110801",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS_SUBMIT_TO_REVIEW",
+  "items": [
+    {
+      "decision_id": "SGD-2EFCB06FD12D4A",
+      "file_id": "SRC-ALL-PROJECTS-FILE-2319F0B616C7",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-2319F0B616C7-SHEET-001",
+      "project_id": "1110801",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110801華格-內埔工業區汙水管路工程\\華格-內埔工業區汙水管路工程材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "74CBACBA2A1738DF54A6B1ACF5EFCE5F3CFA4401AE2A4580EDD32E9D93DB35EA",
+      "worksheet_name": "材料清單",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "62EC415FA59ADD466D626BFDD4EF16182897127F27C03F642A2F6FA7C677CA45",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "74CBACBA2A1738DF54A6B1ACF5EFCE5F3CFA4401AE2A4580EDD32E9D93DB35EA"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "62EC415FA59ADD466D626BFDD4EF16182897127F27C03F642A2F6FA7C677CA45"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-EB7F6CF56E271C",
+      "file_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283-XLS-SHEET-001",
+      "project_id": "1110801",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110801華格-內埔工業區汙水管路工程\\華格-內埔工業區汙水管路工程工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "881608D165CE55F96CBF349890C72500DFB2D7BDA67F23CEBE57CA93DF0D1027",
+      "worksheet_name": "含稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "881608D165CE55F96CBF349890C72500DFB2D7BDA67F23CEBE57CA93DF0D1027"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "1B204C5C2261878D2216C81F432548D2DFB0D080C5A7F39CFB670AB745D9E191"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-3FF5DBB45D6CAA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283-XLS-SHEET-002",
+      "project_id": "1110801",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110801華格-內埔工業區汙水管路工程\\華格-內埔工業區汙水管路工程工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "881608D165CE55F96CBF349890C72500DFB2D7BDA67F23CEBE57CA93DF0D1027",
+      "worksheet_name": "未稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "AB3733DD575934A0AC790F32D0FDEEB7D3DCFD6E772FAB3384F45643C99796C3",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "881608D165CE55F96CBF349890C72500DFB2D7BDA67F23CEBE57CA93DF0D1027"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "E88DE4CDE5E5263103FEF7F423974CCCCFCC6A941FE40414DCA8AAAF91B1EFD5"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-F4D46DEE98D81E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-6100F13D3B76",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-6100F13D3B76-SHEET-001",
+      "project_id": "1110801",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110801華格-內埔工業區汙水管路工程\\華格-內埔工業區汙水管路工程報價單.xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "682013ADF2692AB6666DDD75EA5EBFC85907C917E74819C9E3D3954FE557C8E4",
+      "worksheet_name": "報價",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "0F0C1DE97E5C07DEC75930122CA34642C78243F499AE2D417545727D980631D6",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "682013ADF2692AB6666DDD75EA5EBFC85907C917E74819C9E3D3954FE557C8E4"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "0F0C1DE97E5C07DEC75930122CA34642C78243F499AE2D417545727D980631D6"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "summary": {
+    "SUBMIT_TO_REVIEW": 2,
+    "QUARANTINED": 2
+  },
+  "run_metadata": {
+    "baseline_id": "baseline-024-cycle-000",
+    "batch_id": "batch-001",
+    "created_at": "2026-06-23T03:19:30Z",
+    "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-001\\source_decisions.csv",
+    "file_index": "manifests\\all_projects_file_role_index.csv",
+    "sheet_index": "manifests\\all_projects_workbook_sheet_index.csv"
+  }
+}

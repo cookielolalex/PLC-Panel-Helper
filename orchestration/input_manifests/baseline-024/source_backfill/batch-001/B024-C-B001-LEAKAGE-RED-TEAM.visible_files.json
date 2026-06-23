@@ -1,0 +1,79 @@
+{
+  "task_id": "B024-C-B001-LEAKAGE-RED-TEAM",
+  "baseline_id": "baseline-024-cycle-000",
+  "batch_id": "batch-001",
+  "role": "leakage_red_team",
+  "allowed_files": [
+    {
+      "path": "scripts\\autonomous_eval_source_approval.py",
+      "sha256": "AA17749A7948A197A2EC387C3B7DD907138C47F350A50D30859165777703350B"
+    },
+    {
+      "path": "schemas\\source_quorum_review.schema.json",
+      "sha256": "BB8A3AAD6EA3D3F735DC6A5CA7470D59D9CFDB1D0139BAE3FD828CB90FE02CEC"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\batch_manifest.json",
+      "sha256": "A6A809A411B8FFC14E2D289250325E84EC6A51BD1C4A35C6A8C4C63A1E891C80"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1110801\\deterministic_prefilter.json",
+      "sha256": "1E47B6B07AEC914E1FD5DA922BDE967A7454FD6AD04D4B33C2C532E541BF8FC4"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120101\\deterministic_prefilter.json",
+      "sha256": "C9FB3652C21CCAFF68C7204AB13C08A6C244EA9C26C25D140150A01E3EF18FE2"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120201\\deterministic_prefilter.json",
+      "sha256": "A011BBFBF01F707868BD34FF24B0AA784BD3D05C26B500602C15B81C1A41896C"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120204\\deterministic_prefilter.json",
+      "sha256": "B3929EBB9152497130385F2E1781F520129EDC15AAF85F55EB37AC0BD79BEC30"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120207\\deterministic_prefilter.json",
+      "sha256": "9427E9446F44483B7969E546EBADE7CA4CC5AED564FEBF0216192DBE8C721C94"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120301\\deterministic_prefilter.json",
+      "sha256": "B93AD1DFDE78C2A8643747BD22F0658EC1F7FDC434C1ED5777721F08F110743A"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1110801\\review_input.json",
+      "sha256": "BE381134435E727F7DFF2784EF999919050198035C0CE1BDA4312DEAE9235A6E"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120101\\review_input.json",
+      "sha256": "037702FDACB1AFBE3062ECB3DEDED80E7E66E97DD9ED981BD8FD7698323D7A71"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120201\\review_input.json",
+      "sha256": "10943F2A63D29D52F016E2C599E98AC42F311C408E5BD7633382C7786108BC5A"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120204\\review_input.json",
+      "sha256": "7784267A8E70844ADA33614E4D20DECB6CCBCD33C60E6F4FF7F07CF533D29404"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120207\\review_input.json",
+      "sha256": "2AE6A72A9863FE1913DE6127B2D765142D55FB0F7E3E98CBBFEC8BF1CAF27248"
+    },
+    {
+      "path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120301\\review_input.json",
+      "sha256": "45FD4FBA4EF57636BA8F71470DE0353196B2C7063ECF708E726F3660F83C5F37"
+    }
+  ],
+  "forbidden_inputs": [
+    "completed target drawings",
+    "target thumbnails or hashes",
+    "expected answers",
+    "reviewer findings or scores",
+    "other specialist review outputs",
+    "adjudicator recommendations",
+    "raw completed-reference content"
+  ],
+  "output_path": "manifests\\baseline-024\\source_approvals\\batch-001\\reviews\\leakage_red_team_review.json",
+  "schema": "schemas/source_quorum_review.schema.json"
+}

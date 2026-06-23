@@ -1,0 +1,10 @@
+{
+  "task_id": "B024-C-B001-COORDINATOR",
+  "events": [
+    "planned batch-001 from frozen metadata-only candidate pool",
+    "prepared deterministic prefilter and review inputs",
+    "copied adjudications to source_approvals",
+    "built accepted/rejected bundle evidence",
+    "wrote aggregate Phase C status"
+  ]
+}

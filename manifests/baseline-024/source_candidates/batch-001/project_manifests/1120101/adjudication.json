@@ -1,0 +1,255 @@
+{
+  "adjudication_id": "source_quorum_adjudication_1120101",
+  "project_id": "1120101",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "AGENT_QUORUM_APPROVED_EVAL",
+  "items": [
+    {
+      "decision_id": "SGD-BAECAB434E05EA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-4FACB8438624",
+      "file_sha256": "0E9D62E5493F02930BC8C739FDA25FB0692FE4C51DAD293F5FF6E45C07673C7B",
+      "worksheet_name": "電氣工程A標標單明細",
+      "worksheet_fingerprint": "E207D101E6992A66F43FEBB0E30ED8F5FB11F2A7DF47D0A8693D8C3CB4011CDF",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-5B7F51B8CC8506",
+      "file_id": "SRC-ALL-PROJECTS-FILE-4FACB8438624",
+      "file_sha256": "0E9D62E5493F02930BC8C739FDA25FB0692FE4C51DAD293F5FF6E45C07673C7B",
+      "worksheet_name": "三菱",
+      "worksheet_fingerprint": "5FE97D4E3E280E67BBC6D74C96118B59C3B1EAD565142422FA4D5ABC8895A150",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-AEF832B09557EF",
+      "file_id": "SRC-ALL-PROJECTS-FILE-56A187B15455",
+      "file_sha256": "883F639DC00385B813DFF35E8FE3873E3E547C7F3B1C9716855C3B0FA85A36C1",
+      "worksheet_name": "含稅",
+      "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-B0F75172BDF2A3",
+      "file_id": "SRC-ALL-PROJECTS-FILE-56A187B15455",
+      "file_sha256": "883F639DC00385B813DFF35E8FE3873E3E547C7F3B1C9716855C3B0FA85A36C1",
+      "worksheet_name": "未稅",
+      "worksheet_fingerprint": "B0B201433915C0A055BC1EACB9AB3CC363C174FA5D2D936DB7344B2806319408",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-8B0C9D84721D54",
+      "file_id": "SRC-ALL-PROJECTS-FILE-72227B7B1BED",
+      "file_sha256": "E4279FC9A3FDC7EFFE02B66C0170C75A2786048AA0D3B760014AB0A028A085E1",
+      "worksheet_name": "電氣工程A標標單明細",
+      "worksheet_fingerprint": "E207D101E6992A66F43FEBB0E30ED8F5FB11F2A7DF47D0A8693D8C3CB4011CDF",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-CA0E1F51E7C2B3",
+      "file_id": "SRC-ALL-PROJECTS-FILE-72227B7B1BED",
+      "file_sha256": "E4279FC9A3FDC7EFFE02B66C0170C75A2786048AA0D3B760014AB0A028A085E1",
+      "worksheet_name": "三菱",
+      "worksheet_fingerprint": "4878F92117479F2CD880BB2B8AA85E214FCA73F98DD82A2E6B1B730070996DC4",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-47ADC3CC07E7ED",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7C35EAD912DA",
+      "file_sha256": "838F138BC18DDCDFA208038B85A0FF48687D1B9D3E57F2496E8BDA9AD38C34A6",
+      "worksheet_name": "分析表",
+      "worksheet_fingerprint": "02FB6DCC8162CCCDD5C08C3C12CFFA9FAE968704C6651A376E7F26B6983B9059",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-BECDB9C5C32B0C",
+      "file_id": "SRC-ALL-PROJECTS-FILE-AA9926E01A25",
+      "file_sha256": "433B157E0BD338E9406BE270700C9C40DFD77529A63F5CC51FC42F16E25717CE",
+      "worksheet_name": "Sheet1 (3)",
+      "worksheet_fingerprint": "BC93BC93CA93E53693CF4762685953010AC4C40E1B0581FBD73A3BC456E932C5",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-17D0D1656FD4EA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C073614189FA",
+      "file_sha256": "06E6B7C82037C39621BE492FEB2CE68056CC7AC3FF91F84C0454CA3634077C14",
+      "worksheet_name": "電氣工程A標標單明細",
+      "worksheet_fingerprint": "2EF4672DD08816D9721A91A098F4A9D429D2EF24C34C158C53CBD5A2D19DE5F6",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-3CDF9708BAAF14",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DC3DC665590C",
+      "file_sha256": "147D23825CAD4A2EFB9F6D8ECFD41A6D6524B32F4E03848BC05219E7ABB97AF0",
+      "worksheet_name": "電氣工程A標標單明細",
+      "worksheet_fingerprint": "CC1324177FB953A0A3C4F977E85F8D77A5AD4E7C703C9B7DD1F7191079CAEED1",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    }
+  ],
+  "summary": {
+    "AGENT_QUORUM_APPROVED_EVAL": 8,
+    "QUARANTINED": 2
+  },
+  "run_metadata": {
+    "prefilter": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120101\\deterministic_prefilter.json",
+    "review_root": "manifests\\baseline-024\\source_approvals\\batch-001\\reviews",
+    "created_at": "2026-06-23T03:22:43Z"
+  }
+}

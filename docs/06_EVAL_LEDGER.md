@@ -75,3 +75,19 @@ Current cohort readiness: 6 `ALLOWED_EVAL` calibration anchors retained as fresh
 Generation status: not authorized. Baseline generation may begin only after exactly 24 projects have verified `ALLOWED_EVAL` bundles and a final cohort manifest is frozen.
 
 Evidence: `docs/specs/24_PROJECT_BASELINE_PROTOCOL.md`, `evals/baseline-024/cohort_manifest.json`, `evals/baseline-024/cohort_selection_report.md`, `evals/baseline-024/frozen_workflow_manifest.json`, `evals/baseline-024/source_readiness.json`, and `evals/baseline-024/run_plan.json`.
+
+## baseline-024-cycle-000 Phase C batch-001 source backfill
+
+Status: `PHASE_C_BATCH_001_AUDIT_PASS_CONTINUE_BACKFILL`.
+
+Candidate projects: `1120101, 1120204, 1120301, 1110801, 1120207, 1120201`.
+
+Accepted evaluation-only additions: `1110801, 1120207`.
+
+Rejected or quarantined: `1120101, 1120204, 1120301` failed sanitized bundle verification on forbidden modification-content sentinel; `1120201` remained `QUARANTINED` with no approved bundle.
+
+Current baseline-024 readiness: 6 anchor projects plus 2 new Phase C additions, for 8 verified `ALLOWED_EVAL` projects. Sixteen additional verified projects are still required before generation.
+
+Generation status: not authorized.
+
+Evidence: `manifests/baseline-024/source_approvals/phase_c_status.json`, `reports/baseline-024/source_backfill_summary.md`, `reports/baseline-024/source_bundle_audit.json`, `reports/baseline-024/source_bundle_audit_batch_001.json`, and `reports/baseline-024/source_bundle_audit_batch_001_independent.json`.

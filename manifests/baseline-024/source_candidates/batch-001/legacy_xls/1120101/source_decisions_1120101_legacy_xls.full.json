@@ -1,0 +1,157 @@
+[
+  {
+    "decision_id": "SGD-AEF832B09557EF",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120101",
+    "family_id": "顯茂工程",
+    "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\顯茂-聯電P6倉庫棟新建工程工作紀錄單.xls",
+    "file_name": "顯茂-聯電P6倉庫棟新建工程工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-56A187B15455",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-56A187B15455-XLS-SHEET-001",
+    "file_sha256": "883F639DC00385B813DFF35E8FE3873E3E547C7F3B1C9716855C3B0FA85A36C1",
+    "file_size": "71680",
+    "workbook_format": "xls",
+    "worksheet_name": "含稅",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+    "workbook_sheet_count": 2,
+    "detected_project_identifiers": [
+      "1120101"
+    ],
+    "detected_customer_identifiers": [
+      "顯茂工程"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-56A187B15455",
+      "SRC-ALL-PROJECTS-FILE-56A187B15455-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120101\\legacy_xls_parse\\1120101\\SRC-ALL-PROJECTS-FILE-56A187B15455\\001_含稅.csv",
+    "sanitized_csv_sha256": "1B204C5C2261878D2216C81F432548D2DFB0D080C5A7F39CFB670AB745D9E191",
+    "non_empty_rows": 35
+  },
+  {
+    "decision_id": "SGD-B0F75172BDF2A3",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120101",
+    "family_id": "顯茂工程",
+    "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\顯茂-聯電P6倉庫棟新建工程工作紀錄單.xls",
+    "file_name": "顯茂-聯電P6倉庫棟新建工程工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-56A187B15455",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-56A187B15455-XLS-SHEET-002",
+    "file_sha256": "883F639DC00385B813DFF35E8FE3873E3E547C7F3B1C9716855C3B0FA85A36C1",
+    "file_size": "71680",
+    "workbook_format": "xls",
+    "worksheet_name": "未稅",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "B0B201433915C0A055BC1EACB9AB3CC363C174FA5D2D936DB7344B2806319408",
+    "workbook_sheet_count": 2,
+    "detected_project_identifiers": [
+      "1120101"
+    ],
+    "detected_customer_identifiers": [
+      "顯茂工程"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-56A187B15455",
+      "SRC-ALL-PROJECTS-FILE-56A187B15455-XLS-SHEET-002"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120101\\legacy_xls_parse\\1120101\\SRC-ALL-PROJECTS-FILE-56A187B15455\\002_未稅.csv",
+    "sanitized_csv_sha256": "B7426C51FEAF32F78B6AD19D99630D7F7A1FED0D3E77FCC893F810287E27C137",
+    "non_empty_rows": 29
+  },
+  {
+    "decision_id": "SGD-BECDB9C5C32B0C",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120101",
+    "family_id": "顯茂工程",
+    "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\顯茂-聯電P6倉庫棟新建工程(訂單成本分析表).xls",
+    "file_name": "顯茂-聯電P6倉庫棟新建工程(訂單成本分析表).xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-AA9926E01A25",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-AA9926E01A25-XLS-SHEET-001",
+    "file_sha256": "433B157E0BD338E9406BE270700C9C40DFD77529A63F5CC51FC42F16E25717CE",
+    "file_size": "39424",
+    "workbook_format": "xls",
+    "worksheet_name": "Sheet1 (3)",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "BC93BC93CA93E53693CF4762685953010AC4C40E1B0581FBD73A3BC456E932C5",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1120101"
+    ],
+    "detected_customer_identifiers": [
+      "顯茂工程"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NONE",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "CANDIDATE",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-AA9926E01A25",
+      "SRC-ALL-PROJECTS-FILE-AA9926E01A25-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120101\\legacy_xls_parse\\1120101\\SRC-ALL-PROJECTS-FILE-AA9926E01A25\\001_Sheet1 (3).csv",
+    "sanitized_csv_sha256": "BFB744652852613EE7B2A98E996A3D14BE0C4D9D6AEDDBFE39D76E30EAE6E72C",
+    "non_empty_rows": 24
+  }
+]

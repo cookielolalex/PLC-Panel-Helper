@@ -1,0 +1,380 @@
+{
+  "prefilter_id": "baseline024_batch-001_prefilter_1120101",
+  "project_id": "1120101",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS_SUBMIT_TO_REVIEW",
+  "items": [
+    {
+      "decision_id": "SGD-BAECAB434E05EA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-4FACB8438624",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-4FACB8438624-SHEET-001",
+      "project_id": "1120101",
+      "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\聯電 12A P6新建WH棟電氣工程標單 -分電盤用順大材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "0E9D62E5493F02930BC8C739FDA25FB0692FE4C51DAD293F5FF6E45C07673C7B",
+      "worksheet_name": "電氣工程A標標單明細",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "E207D101E6992A66F43FEBB0E30ED8F5FB11F2A7DF47D0A8693D8C3CB4011CDF",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "0E9D62E5493F02930BC8C739FDA25FB0692FE4C51DAD293F5FF6E45C07673C7B"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "E207D101E6992A66F43FEBB0E30ED8F5FB11F2A7DF47D0A8693D8C3CB4011CDF"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-5B7F51B8CC8506",
+      "file_id": "SRC-ALL-PROJECTS-FILE-4FACB8438624",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-4FACB8438624-SHEET-002",
+      "project_id": "1120101",
+      "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\聯電 12A P6新建WH棟電氣工程標單 -分電盤用順大材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "0E9D62E5493F02930BC8C739FDA25FB0692FE4C51DAD293F5FF6E45C07673C7B",
+      "worksheet_name": "三菱",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "5FE97D4E3E280E67BBC6D74C96118B59C3B1EAD565142422FA4D5ABC8895A150",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "0E9D62E5493F02930BC8C739FDA25FB0692FE4C51DAD293F5FF6E45C07673C7B"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "5FE97D4E3E280E67BBC6D74C96118B59C3B1EAD565142422FA4D5ABC8895A150"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-AEF832B09557EF",
+      "file_id": "SRC-ALL-PROJECTS-FILE-56A187B15455",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-56A187B15455-XLS-SHEET-001",
+      "project_id": "1120101",
+      "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\顯茂-聯電P6倉庫棟新建工程工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "883F639DC00385B813DFF35E8FE3873E3E547C7F3B1C9716855C3B0FA85A36C1",
+      "worksheet_name": "含稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "883F639DC00385B813DFF35E8FE3873E3E547C7F3B1C9716855C3B0FA85A36C1"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "1B204C5C2261878D2216C81F432548D2DFB0D080C5A7F39CFB670AB745D9E191"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-B0F75172BDF2A3",
+      "file_id": "SRC-ALL-PROJECTS-FILE-56A187B15455",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-56A187B15455-XLS-SHEET-002",
+      "project_id": "1120101",
+      "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\顯茂-聯電P6倉庫棟新建工程工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "883F639DC00385B813DFF35E8FE3873E3E547C7F3B1C9716855C3B0FA85A36C1",
+      "worksheet_name": "未稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "B0B201433915C0A055BC1EACB9AB3CC363C174FA5D2D936DB7344B2806319408",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "883F639DC00385B813DFF35E8FE3873E3E547C7F3B1C9716855C3B0FA85A36C1"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "B7426C51FEAF32F78B6AD19D99630D7F7A1FED0D3E77FCC893F810287E27C137"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-8B0C9D84721D54",
+      "file_id": "SRC-ALL-PROJECTS-FILE-72227B7B1BED",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-72227B7B1BED-SHEET-001",
+      "project_id": "1120101",
+      "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\聯電 12A P6新建WH棟電氣工程標單 -佳樺 改(業務需辦追加).xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "E4279FC9A3FDC7EFFE02B66C0170C75A2786048AA0D3B760014AB0A028A085E1",
+      "worksheet_name": "電氣工程A標標單明細",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "E207D101E6992A66F43FEBB0E30ED8F5FB11F2A7DF47D0A8693D8C3CB4011CDF",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "E4279FC9A3FDC7EFFE02B66C0170C75A2786048AA0D3B760014AB0A028A085E1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "E207D101E6992A66F43FEBB0E30ED8F5FB11F2A7DF47D0A8693D8C3CB4011CDF"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-CA0E1F51E7C2B3",
+      "file_id": "SRC-ALL-PROJECTS-FILE-72227B7B1BED",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-72227B7B1BED-SHEET-002",
+      "project_id": "1120101",
+      "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\聯電 12A P6新建WH棟電氣工程標單 -佳樺 改(業務需辦追加).xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "E4279FC9A3FDC7EFFE02B66C0170C75A2786048AA0D3B760014AB0A028A085E1",
+      "worksheet_name": "三菱",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "4878F92117479F2CD880BB2B8AA85E214FCA73F98DD82A2E6B1B730070996DC4",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "E4279FC9A3FDC7EFFE02B66C0170C75A2786048AA0D3B760014AB0A028A085E1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "4878F92117479F2CD880BB2B8AA85E214FCA73F98DD82A2E6B1B730070996DC4"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-47ADC3CC07E7ED",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7C35EAD912DA",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-7C35EAD912DA-SHEET-001",
+      "project_id": "1120101",
+      "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\顯茂-聯電P6倉庫棟新建工程(分析表).xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "838F138BC18DDCDFA208038B85A0FF48687D1B9D3E57F2496E8BDA9AD38C34A6",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "02FB6DCC8162CCCDD5C08C3C12CFFA9FAE968704C6651A376E7F26B6983B9059",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "838F138BC18DDCDFA208038B85A0FF48687D1B9D3E57F2496E8BDA9AD38C34A6"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "02FB6DCC8162CCCDD5C08C3C12CFFA9FAE968704C6651A376E7F26B6983B9059"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-BECDB9C5C32B0C",
+      "file_id": "SRC-ALL-PROJECTS-FILE-AA9926E01A25",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-AA9926E01A25-XLS-SHEET-001",
+      "project_id": "1120101",
+      "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\顯茂-聯電P6倉庫棟新建工程(訂單成本分析表).xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "433B157E0BD338E9406BE270700C9C40DFD77529A63F5CC51FC42F16E25717CE",
+      "worksheet_name": "Sheet1 (3)",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "BC93BC93CA93E53693CF4762685953010AC4C40E1B0581FBD73A3BC456E932C5",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "433B157E0BD338E9406BE270700C9C40DFD77529A63F5CC51FC42F16E25717CE"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "BFB744652852613EE7B2A98E996A3D14BE0C4D9D6AEDDBFE39D76E30EAE6E72C"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-17D0D1656FD4EA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C073614189FA",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-C073614189FA-SHEET-001",
+      "project_id": "1120101",
+      "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\聯電 12A P6新建WH棟電氣工程標單 -分電盤用順大追加減後價(合約).xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "06E6B7C82037C39621BE492FEB2CE68056CC7AC3FF91F84C0454CA3634077C14",
+      "worksheet_name": "電氣工程A標標單明細",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2EF4672DD08816D9721A91A098F4A9D429D2EF24C34C158C53CBD5A2D19DE5F6",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "06E6B7C82037C39621BE492FEB2CE68056CC7AC3FF91F84C0454CA3634077C14"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "2EF4672DD08816D9721A91A098F4A9D429D2EF24C34C158C53CBD5A2D19DE5F6"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-3CDF9708BAAF14",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DC3DC665590C",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-DC3DC665590C-SHEET-001",
+      "project_id": "1120101",
+      "relative_path": "112年度工作\\112年度工作\\1120101顯茂工程-聯電P6 WH棟新建工程\\聯電 12A P6新建WH棟電氣工程標單 -分電盤用順大承製價(合約).xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "147D23825CAD4A2EFB9F6D8ECFD41A6D6524B32F4E03848BC05219E7ABB97AF0",
+      "worksheet_name": "電氣工程A標標單明細",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "CC1324177FB953A0A3C4F977E85F8D77A5AD4E7C703C9B7DD1F7191079CAEED1",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "147D23825CAD4A2EFB9F6D8ECFD41A6D6524B32F4E03848BC05219E7ABB97AF0"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "CC1324177FB953A0A3C4F977E85F8D77A5AD4E7C703C9B7DD1F7191079CAEED1"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "summary": {
+    "SUBMIT_TO_REVIEW": 8,
+    "QUARANTINED": 2
+  },
+  "run_metadata": {
+    "baseline_id": "baseline-024-cycle-000",
+    "batch_id": "batch-001",
+    "created_at": "2026-06-23T03:18:13Z",
+    "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-001\\source_decisions.csv",
+    "file_index": "manifests\\all_projects_file_role_index.csv",
+    "sheet_index": "manifests\\all_projects_workbook_sheet_index.csv"
+  }
+}

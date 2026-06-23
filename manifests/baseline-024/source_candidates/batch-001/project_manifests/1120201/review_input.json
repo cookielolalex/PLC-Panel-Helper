@@ -1,0 +1,77 @@
+{
+  "project_id": "1120201",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-811E181DDBE13A",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5C4BB4063A63",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5C4BB4063A63-SHEET-001",
+      "project_id": "1120201",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120201立岳-南工處第三工務所辦公室整遷工程\\南工處第三工務所辦公室整遷工程-順大報價單1120117.xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "77512E31760E59812B5154291E39A0CBA81F98DD60BFA1402515B0E2F6678FA9",
+      "worksheet_name": "工作表1",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "CC70641B65C133703A6206D6803C3351B95D2A27465119296056DDAFFEEB4FFB",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "AUTO_DENIED",
+      "reason_codes": [
+        "CROSS_PROJECT_IDENTITY",
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "77512E31760E59812B5154291E39A0CBA81F98DD60BFA1402515B0E2F6678FA9"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-35FFCCDCE5550D",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E039B2D5783C",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-E039B2D5783C-XLS-SHEET-001",
+      "project_id": "1120201",
+      "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120201立岳-南工處第三工務所辦公室整遷工程\\立岳-南工處第三工務所整遷工程工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "30834CC0B9EB691AAA6D7A1F3FA745CFA6FADAF1FCF51DC058440E9ED3CD8B1E",
+      "worksheet_name": "未稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "18C6689C3803AC5B07B210D9151AEEB0795D71349B4726497A78068D7103C6EC",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "30834CC0B9EB691AAA6D7A1F3FA745CFA6FADAF1FCF51DC058440E9ED3CD8B1E"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "08B2EC19545A749875D5EE7C562E24634F0F6B6BB441E20A92B5983E4B9C7799"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}

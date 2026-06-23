@@ -1,0 +1,109 @@
+{
+  "adjudication_id": "source_quorum_adjudication_1110801",
+  "project_id": "1110801",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "AGENT_QUORUM_APPROVED_EVAL",
+  "items": [
+    {
+      "decision_id": "SGD-2EFCB06FD12D4A",
+      "file_id": "SRC-ALL-PROJECTS-FILE-2319F0B616C7",
+      "file_sha256": "74CBACBA2A1738DF54A6B1ACF5EFCE5F3CFA4401AE2A4580EDD32E9D93DB35EA",
+      "worksheet_name": "材料清單",
+      "worksheet_fingerprint": "62EC415FA59ADD466D626BFDD4EF16182897127F27C03F642A2F6FA7C677CA45",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-EB7F6CF56E271C",
+      "file_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283",
+      "file_sha256": "881608D165CE55F96CBF349890C72500DFB2D7BDA67F23CEBE57CA93DF0D1027",
+      "worksheet_name": "含稅",
+      "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-3FF5DBB45D6CAA",
+      "file_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283",
+      "file_sha256": "881608D165CE55F96CBF349890C72500DFB2D7BDA67F23CEBE57CA93DF0D1027",
+      "worksheet_name": "未稅",
+      "worksheet_fingerprint": "AB3733DD575934A0AC790F32D0FDEEB7D3DCFD6E772FAB3384F45643C99796C3",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-F4D46DEE98D81E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-6100F13D3B76",
+      "file_sha256": "682013ADF2692AB6666DDD75EA5EBFC85907C917E74819C9E3D3954FE557C8E4",
+      "worksheet_name": "報價",
+      "worksheet_fingerprint": "0F0C1DE97E5C07DEC75930122CA34642C78243F499AE2D417545727D980631D6",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    }
+  ],
+  "summary": {
+    "AGENT_QUORUM_APPROVED_EVAL": 2,
+    "QUARANTINED": 2
+  },
+  "run_metadata": {
+    "prefilter": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1110801\\deterministic_prefilter.json",
+    "review_root": "manifests\\baseline-024\\source_approvals\\batch-001\\reviews",
+    "created_at": "2026-06-23T03:22:43Z"
+  }
+}

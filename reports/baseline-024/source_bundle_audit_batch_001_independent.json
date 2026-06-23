@@ -1,0 +1,280 @@
+{
+  "audit_id": "B024-C-B001-SOURCE-BUNDLE-INDEPENDENT-AUDIT",
+  "baseline_id": "baseline-024-cycle-000",
+  "batch_id": "batch-001",
+  "status": "BATCH001_SOURCE_BACKFILL_AUDIT_PASS",
+  "created_at": "2026-06-23T11:29:36.2874355+08:00",
+  "scope": {
+    "read_paths": "Limited to the task brief allowed read paths.",
+    "forbidden_material": "No completed target drawings, target thumbnails/hashes, expected answers, review scores, generator outputs, or raw completed-reference content were opened.",
+    "write_paths": [
+      "reports/baseline-024/source_bundle_audit_batch_001_independent.json",
+      "reports/baseline-024/source_bundle_audit_batch_001_independent.md"
+    ],
+    "verifier_note": "scripts/verify_generator_bundle.py was read but not executed because it writes an output file; this audit used existing verification_results.json plus a read-only verifier-equivalent check of manifests, artifact hashes, extensions, symlinks, and forbidden sentinels."
+  },
+  "command_evidence": [
+    {
+      "command": "Node read-only audit script via mcp__node_repl.js title='Run read-only audit checks'",
+      "result": "reviews schema-valid; 4 role-distinct review files; same 33 decision_ids as prefilter; adjudications schema-valid; approved_count=23; quorum_violations=[]; accepted_dirs=[1110801,1120207]; accepted hash_mismatches=[]; accepted workbook_files=[]; rejected verification failures present; operational production/drawing scan hits=[]"
+    },
+    {
+      "command": "Node read-only audit script via mcp__node_repl.js title='Compare adjudication copies'",
+      "result": "source_candidates adjudication copies match source_approvals adjudication copies for 1110801, 1120101, 1120201, 1120204, 1120207, and 1120301"
+    },
+    {
+      "command": "Get-Date -Format o",
+      "result": "2026-06-23T11:29:36.2874355+08:00"
+    }
+  ],
+  "schema_evidence": {
+    "source_quorum_review.schema.json": "BB8A3AAD6EA3D3F735DC6A5CA7470D59D9CFDB1D0139BAE3FD828CB90FE02CEC",
+    "source_quorum_adjudication.schema.json": "678DA3E1CC57B0F23D26068962F753813560B438ECC9C03937694F71B3457D06"
+  },
+  "criteria": [
+    {
+      "id": 1,
+      "criterion": "batch-001 used only metadata/source-candidate evidence, not completed-reference content",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "manifests/baseline-024/source_candidates/backfill_plan.json",
+          "sha256": "C7E6416891238D5A810A90D7F3A671B223E55A986CC30EFAB7C5610CBE872560",
+          "facts": [
+            "completed_reference_content_inspected_for_selection=false at plan level",
+            "batch-001 per-project flags all false"
+          ]
+        },
+        {
+          "path": "manifests/baseline-024/source_candidates/batch-001/batch_manifest.json",
+          "sha256": "A6A809A411B8FFC14E2D289250325E84EC6A51BD1C4A35C6A8C4C63A1E891C80",
+          "facts": [
+            "completed_reference_content_inspected_for_selection=false",
+            "source_decision counts total 33 candidate metadata rows"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "criterion": "four specialist review JSONs are present, role-distinct, schema-valid, and cover the same 33 items",
+      "status": "PASS",
+      "evidence": [
+        {
+          "facts": [
+            "review file count=4",
+            "roles=[leakage_red_team, project_identity_reviewer, source_role_classifier, workbook_forensics_reviewer]",
+            "all four files validate against source_quorum_review.schema.json",
+            "each file has 33 items",
+            "same_33_items=true",
+            "same_as_prefilter=true"
+          ]
+        },
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/reviews/leakage_red_team_review.json",
+          "sha256": "08B4869459510DCF5D04433F2FAC7FDC8B7307B57D629AD8DF0C77C2DAD2C0A1"
+        },
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/reviews/project_identity_reviewer_review.json",
+          "sha256": "ADC83D09184600E27D4B9A3C621A00F79E4300088C683E85E7B1D2606EA5AC82"
+        },
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/reviews/source_role_classifier_review.json",
+          "sha256": "A0901DE709C6651F74AD612BA07A05100011BDADC4FBC511B68EAFFEFF4C0047"
+        },
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/reviews/workbook_forensics_reviewer_review.json",
+          "sha256": "CA4EF676C718BA89E33FE975CE8B68C7DA970ACC2C6A8CA02B42404AB7548612"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "criterion": "adjudication only approved items with four ALLOW_EVAL votes and current matching hashes/fingerprints",
+      "status": "PASS",
+      "evidence": [
+        {
+          "facts": [
+            "six adjudications validate against source_quorum_adjudication.schema.json",
+            "approved_count=23",
+            "quorum_violations=[]",
+            "every AGENT_QUORUM_APPROVED_EVAL item had four ALLOW_EVAL votes, matching file_sha256, matching worksheet_fingerprint, no unresolved issues, and matching prefilter PASS checks for file hash and worksheet fingerprint/parser output"
+          ]
+        },
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/adjudication_summary.json",
+          "sha256": "0840100299A80BBA7F6FC0A2F782999188BC53D00B09B4ACDB3E208E689C518B"
+        },
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/adjudications/1110801/adjudication.json",
+          "sha256": "7C9C0DAF2E80A5E91E86AB784C1B90A0F4623AFDBCD3C79C1CEC8E3CB6886AB4"
+        },
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/adjudications/1120101/adjudication.json",
+          "sha256": "DF13EBD2B1C2A3C99BB56822A7E9E0F80DC53ECFD389136E97B3CF938A76E3A0"
+        },
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/adjudications/1120204/adjudication.json",
+          "sha256": "53EB8D8A8F5D439A246A18F60BC95F7CAC970B8A0C4BD487C4FEA28F0CCF760A"
+        },
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/adjudications/1120207/adjudication.json",
+          "sha256": "C30FCA4213B746C1E5A0ADA48938609230C835E027E9F47D49CCCBAE26E02C0C"
+        },
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/adjudications/1120301/adjudication.json",
+          "sha256": "1857488B07CD97196F2E9FACD8D4059FE163851E9053C8B3BA90045F1EFE8CC1"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "criterion": "1120201 remains quarantined/no approved bundle",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "manifests/baseline-024/source_approvals/batch-001/adjudications/1120201/adjudication.json",
+          "sha256": "E6076F8594D83750F91BAA0BC36BB5DF7EF29662865AC17C74876C9182DDB85D",
+          "facts": [
+            "status=QUARANTINED",
+            "counts={AUTO_DENIED:1, QUARANTINED:1}",
+            "AGENT_QUORUM_APPROVED_EVAL count=0"
+          ]
+        },
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/bundle_build_summary.json",
+          "sha256": "1A1F5D0FD2EF16A11C9CAA7A72E4DD82F0BF7B02C42F611EDC4B6471D636317C",
+          "facts": [
+            "built projects=[1110801,1120207]",
+            "1120201 absent from built and rejected bundle lists"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "criterion": "accepted bundles exist only for 1110801 and 1120207, contain no original workbooks, pass verification, and have approval mode AUTONOMOUS_EVALUATION_ONLY",
+      "status": "PASS",
+      "evidence": [
+        {
+          "facts": [
+            "accepted_dirs=[1110801,1120207]",
+            "bundle_build_summary built projects=[1110801,1120207]",
+            "both accepted bundles verification_status=PASS, verification_errors=[]",
+            "read-only scan found workbook_files=[], symlinks=[], forbidden_hits=[], hash_mismatches=[]",
+            "bundle_manifest.approval_mode=AUTONOMOUS_EVALUATION_ONLY and approval_manifest.approval_mode=AUTONOMOUS_EVALUATION_ONLY for both bundles"
+          ]
+        },
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1110801/bundle_manifest.json",
+          "sha256": "DA5232B8A0ADDF18B19F58E0858316394F72D5EE6C85C5F6349597A6FCAD2664"
+        },
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1110801/approval_manifest.json",
+          "sha256": "B66D08CDD38928C0F68B564838C02CCE87DBC4903BE9C5BA6709FC1903C76AAE"
+        },
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1110801/verification_results.json",
+          "sha256": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16"
+        },
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1120207/bundle_manifest.json",
+          "sha256": "07B55181514614CD5EE07183786D08724098A32110DA5576BF53DEB7EFC39E13"
+        },
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1120207/approval_manifest.json",
+          "sha256": "C7351FD9A80CC5376F7B2C5C1CF9100B4B636D87B6FBF584983CA5D25815DC3F"
+        },
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1120207/verification_results.json",
+          "sha256": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "criterion": "rejected bundles for 1120101, 1120204, and 1120301 are not counted as ALLOWED_EVAL and record verification failure on forbidden modification-content sentinel",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/bundle_build_summary.json",
+          "sha256": "1A1F5D0FD2EF16A11C9CAA7A72E4DD82F0BF7B02C42F611EDC4B6471D636317C",
+          "facts": [
+            "rejected projects=[1120101,1120204,1120301]",
+            "reason=BUNDLE_VERIFICATION_FAILED for all three",
+            "built/accepted projects only [1110801,1120207]"
+          ]
+        },
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/rejected/1120101/verification_results.json",
+          "sha256": "107D129DDF443E8B36042CAE97E01442FA438BA48087AF66CD4326FFD3555FC1",
+          "facts": [
+            "status=FAIL",
+            "errors include FORBIDDEN_CONTENT ... :修改",
+            "artifact_count=8"
+          ]
+        },
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/rejected/1120204/verification_results.json",
+          "sha256": "45026BE7DDD0266B47923F09B6C0BF1C906339117578751AB66BD731266EE20F",
+          "facts": [
+            "status=FAIL",
+            "errors include FORBIDDEN_CONTENT ... :修改",
+            "artifact_count=6"
+          ]
+        },
+        {
+          "path": "manifests/baseline-024/project_bundles/batch-001/rejected/1120301/verification_results.json",
+          "sha256": "D5A0E1E158E0E11E6FB4585E4103F65C6B578FC92375C097E1FA8865D7FED1A5",
+          "facts": [
+            "status=FAIL",
+            "errors include FORBIDDEN_CONTENT ... :修改",
+            "artifact_count=5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "criterion": "source bundle audit status is EVAL_SOURCE_BUNDLE_AUDIT_PASS for the accepted bundle set",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "reports/baseline-024/source_bundle_audit_batch_001.json",
+          "sha256": "7E4F39B40903887B63EB9CB58434A3CC7F5237906D7AADC735652F6F93F73292",
+          "facts": [
+            "status=EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+            "projects=[1110801,1120207]",
+            "each project status=PASS",
+            "errors=[]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "criterion": "no production approval or drawing generation was started",
+      "status": "PASS",
+      "evidence": [
+        {
+          "facts": [
+            "accepted approval manifests use human_decision=NOT_APPLICABLE_EVAL and notes 'not production approval'",
+            "accepted approval modes are AUTONOMOUS_EVALUATION_ONLY",
+            "read-only operational scan of 27 allowed source/bundle/audit files found production_hits=[] for PRODUCTION_APPROVED, ALLOWED_PRODUCTION, HUMAN_APPROVED",
+            "same scan found drawing_generation_hits=[] for target drawing names and .pdf tokens",
+            "accepted bundle file scan found no .pdf files and no original workbook files"
+          ]
+        }
+      ]
+    }
+  ],
+  "adjudication_copy_consistency": {
+    "1110801": "MATCH",
+    "1120101": "MATCH",
+    "1120201": "MATCH",
+    "1120204": "MATCH",
+    "1120207": "MATCH",
+    "1120301": "MATCH"
+  },
+  "conclusion": "All eight audit criteria are PASS within the allowed evidence scope. The accepted ALLOWED_EVAL bundle set is limited to 1110801 and 1120207."
+}

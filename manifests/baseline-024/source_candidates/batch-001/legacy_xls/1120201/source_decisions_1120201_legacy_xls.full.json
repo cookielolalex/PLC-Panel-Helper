@@ -1,0 +1,54 @@
+[
+  {
+    "decision_id": "SGD-35FFCCDCE5550D",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120201",
+    "family_id": "立岳",
+    "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120201立岳-南工處第三工務所辦公室整遷工程\\立岳-南工處第三工務所整遷工程工作紀錄單.xls",
+    "file_name": "立岳-南工處第三工務所整遷工程工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-E039B2D5783C",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-E039B2D5783C-XLS-SHEET-001",
+    "file_sha256": "30834CC0B9EB691AAA6D7A1F3FA745CFA6FADAF1FCF51DC058440E9ED3CD8B1E",
+    "file_size": "50176",
+    "workbook_format": "xls",
+    "worksheet_name": "未稅",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "18C6689C3803AC5B07B210D9151AEEB0795D71349B4726497A78068D7103C6EC",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1120201"
+    ],
+    "detected_customer_identifiers": [
+      "立岳"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-E039B2D5783C",
+      "SRC-ALL-PROJECTS-FILE-E039B2D5783C-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120201\\legacy_xls_parse\\1120201\\SRC-ALL-PROJECTS-FILE-E039B2D5783C\\001_未稅.csv",
+    "sanitized_csv_sha256": "08B2EC19545A749875D5EE7C562E24634F0F6B6BB441E20A92B5983E4B9C7799",
+    "non_empty_rows": 29
+  }
+]

@@ -1,0 +1,298 @@
+{
+  "project_id": "1120204",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [
+    {
+      "decision_id": "SGD-09DA06DF2B167E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-3EC37639CD37",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-3EC37639CD37-SHEET-001",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\20230209-聯電P34壓降改善工程新-順大材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "9FD93DE0B2C29AFFE222B6861BF34A21CB8A9895A259A939AC0F8D9B7E8897A2",
+      "worksheet_name": "標單",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "A4CB1FDEA734533361A0C90FD8F2B1156F91D27CCCC6F5C1741FCC7DA9EBA6FD",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "9FD93DE0B2C29AFFE222B6861BF34A21CB8A9895A259A939AC0F8D9B7E8897A2"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "A4CB1FDEA734533361A0C90FD8F2B1156F91D27CCCC6F5C1741FCC7DA9EBA6FD"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-A803CE6A96E85D",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5BAD9449EA5D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5BAD9449EA5D-SHEET-001",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\20230209-聯電P34壓降改善工程-順大成本.xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "F0819A701F8A75A264C38CD2AF9E9A633385F586FAD5F439ACA9189912C93C8E",
+      "worksheet_name": "標單",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "3AFFC25EE7023B00F7B4B5F127A4C58EAE8CB6A72FB041A52D0A49423623EC12",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "F0819A701F8A75A264C38CD2AF9E9A633385F586FAD5F439ACA9189912C93C8E"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "3AFFC25EE7023B00F7B4B5F127A4C58EAE8CB6A72FB041A52D0A49423623EC12"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-444A59582C9342",
+      "file_id": "SRC-ALL-PROJECTS-FILE-BD4E23EA99A3",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-BD4E23EA99A3-SHEET-001",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程(分析表).xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "347D0B79091772A4D077640E769E8DD296C744016A94EA63A48E877E067AC987",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "95194BB5E83C53002A50F163C117181904939D33B737A4BD5BBD0B04B2CD6A30",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "347D0B79091772A4D077640E769E8DD296C744016A94EA63A48E877E067AC987"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "95194BB5E83C53002A50F163C117181904939D33B737A4BD5BBD0B04B2CD6A30"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-1422400433846E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-D50AF9C15846",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-D50AF9C15846-XLS-SHEET-001",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程(成本分析表).xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "EF11B530947E654AB4487B0EB8D561379F86FC63E367C714357FC73445BDAEC2",
+      "worksheet_name": "Sheet1 (3)",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "985C43E98D795D8C6B57D6E153D78E9167AAFA1F6458F8C683D97C4C667F5CEE",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "EF11B530947E654AB4487B0EB8D561379F86FC63E367C714357FC73445BDAEC2"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "EFFCEEF0F668DA82134BD8BE95B2278291D826102C94CAAEC19A937695C7E74F"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-CFDBF4ED1D92E9",
+      "file_id": "SRC-ALL-PROJECTS-FILE-FE5FFEA29A5D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-FE5FFEA29A5D-SHEET-001",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\20230218-聯電P34壓降改善工程-順大報價(承製價).xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "4D4BF5BFC4CDF110C5E9BAE7B0EF72F67DDB2D99EEEF87920450666EACC33A85",
+      "worksheet_name": "標單",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "743C5FCD8F4F36086E55C406B8978B5301AAFA31933724CD0D7355BA6FC6E2FF",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "4D4BF5BFC4CDF110C5E9BAE7B0EF72F67DDB2D99EEEF87920450666EACC33A85"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "743C5FCD8F4F36086E55C406B8978B5301AAFA31933724CD0D7355BA6FC6E2FF"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-21CA6EB02B3F9E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-FF2285677A4F",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-FF2285677A4F-SHEET-001",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程(會議審查).xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "5444325CB46DD43A573C105C606FABF3EAB7F60EE254231169D4F343F9965544",
+      "worksheet_name": "會議審查",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "44807A1024F17B0B161374431303DB6F8BB77161CB9C1D5C7F1A6643873E7B5E",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "5444325CB46DD43A573C105C606FABF3EAB7F60EE254231169D4F343F9965544"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "44807A1024F17B0B161374431303DB6F8BB77161CB9C1D5C7F1A6643873E7B5E"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-35AB5A021C3A72",
+      "file_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3-XLS-SHEET-001",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00",
+      "worksheet_name": "含稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "1B204C5C2261878D2216C81F432548D2DFB0D080C5A7F39CFB670AB745D9E191"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-8CBD5F3034704F",
+      "file_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3-XLS-SHEET-002",
+      "project_id": "1120204",
+      "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程工作紀錄單.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00",
+      "worksheet_name": "未稅",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "05C492E5F09EA193E94CCA68349474F1B13C0F4B921E156D581A74D81DFAD3FA",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "00E01C7E65982646422C528A18FF32B17232BF5111A4343B6FB100D1A95DBCDB"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}

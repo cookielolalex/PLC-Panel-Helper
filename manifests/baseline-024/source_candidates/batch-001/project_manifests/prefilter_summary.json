@@ -1,0 +1,65 @@
+{
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "projects": [
+    {
+      "project_id": "1120101",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 8,
+        "QUARANTINED": 2
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120101\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120101\\review_input.json"
+    },
+    {
+      "project_id": "1120204",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 6,
+        "QUARANTINED": 2
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120204\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120204\\review_input.json"
+    },
+    {
+      "project_id": "1120301",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 5,
+        "AUTO_DENIED": 1
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120301\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120301\\review_input.json"
+    },
+    {
+      "project_id": "1110801",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 2,
+        "QUARANTINED": 2
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1110801\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1110801\\review_input.json"
+    },
+    {
+      "project_id": "1120207",
+      "status": "PASS_SUBMIT_TO_REVIEW",
+      "summary": {
+        "SUBMIT_TO_REVIEW": 2,
+        "QUARANTINED": 1
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120207\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120207\\review_input.json"
+    },
+    {
+      "project_id": "1120201",
+      "status": "NO_REVIEWABLE_ITEMS",
+      "summary": {
+        "AUTO_DENIED": 1,
+        "QUARANTINED": 1
+      },
+      "prefilter_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120201\\deterministic_prefilter.json",
+      "review_input_path": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120201\\review_input.json"
+    }
+  ]
+}

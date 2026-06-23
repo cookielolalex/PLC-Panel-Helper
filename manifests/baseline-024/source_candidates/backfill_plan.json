@@ -1,0 +1,397 @@
+{
+  "plan_id": "baseline024_phase_c_backfill_plan_v1",
+  "baseline_id": "baseline-024-cycle-000",
+  "status": "PHASE_C_BACKFILL_PLAN_READY",
+  "created_at": "2026-06-23T03:17:29Z",
+  "git_head": "fac44321491633181f1fa53a062084d072b0b582",
+  "source_readiness": "evals\\baseline-024\\source_readiness.json",
+  "batch_size": 6,
+  "candidate_count": 20,
+  "batches": [
+    {
+      "batch_id": "batch-001",
+      "project_ids": [
+        "1120101",
+        "1120204",
+        "1120301",
+        "1110801",
+        "1120207",
+        "1120201"
+      ],
+      "projects": [
+        {
+          "project_id": "1120101",
+          "project_name": "1120101顯茂工程-聯電P6 WH棟新建工程",
+          "workbook_count": 16,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 7,
+          "parser_required_rows": 2,
+          "decision_counts": {
+            "NEEDS_HUMAN_REVIEW": 7,
+            "PARSER_REQUIRED": 2
+          },
+          "workbook_formats": {
+            "xlsx": 7,
+            "xls": 2
+          },
+          "ranking_score": 714
+        },
+        {
+          "project_id": "1120204",
+          "project_name": "1120204西富-聯電P34壓降改善工程",
+          "workbook_count": 11,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 5,
+          "parser_required_rows": 2,
+          "decision_counts": {
+            "NEEDS_HUMAN_REVIEW": 4,
+            "PARSER_REQUIRED": 2,
+            "CANDIDATE": 1
+          },
+          "workbook_formats": {
+            "xlsx": 5,
+            "xls": 2
+          },
+          "ranking_score": 509
+        },
+        {
+          "project_id": "1120301",
+          "project_name": "1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程",
+          "workbook_count": 12,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 3,
+          "parser_required_rows": 3,
+          "decision_counts": {
+            "CANDIDATE": 1,
+            "PARSER_REQUIRED": 3,
+            "NEEDS_HUMAN_REVIEW": 2
+          },
+          "workbook_formats": {
+            "xlsx": 3,
+            "xls": 3
+          },
+          "ranking_score": 309
+        },
+        {
+          "project_id": "1110801",
+          "project_name": "1110801華格-內埔工業區汙水管路工程",
+          "workbook_count": 8,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 2,
+          "parser_required_rows": 1,
+          "decision_counts": {
+            "NEEDS_HUMAN_REVIEW": 2,
+            "PARSER_REQUIRED": 1
+          },
+          "workbook_formats": {
+            "xlsx": 2,
+            "xls": 1
+          },
+          "ranking_score": 207
+        },
+        {
+          "project_id": "1120207",
+          "project_name": "1120207顯茂-臨時盤",
+          "workbook_count": 6,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 2,
+          "parser_required_rows": 1,
+          "decision_counts": {
+            "NEEDS_HUMAN_REVIEW": 2,
+            "PARSER_REQUIRED": 1
+          },
+          "workbook_formats": {
+            "xlsx": 2,
+            "xls": 1
+          },
+          "ranking_score": 205
+        },
+        {
+          "project_id": "1120201",
+          "project_name": "1120201立岳-南工處第三工務所辦公室整遷工程",
+          "workbook_count": 5,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 1,
+          "parser_required_rows": 1,
+          "decision_counts": {
+            "NEEDS_HUMAN_REVIEW": 1,
+            "PARSER_REQUIRED": 1
+          },
+          "workbook_formats": {
+            "xlsx": 1,
+            "xls": 1
+          },
+          "ranking_score": 104
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-002",
+      "project_ids": [
+        "1120309",
+        "1120202",
+        "1120308",
+        "1110103",
+        "1110203",
+        "1110404"
+      ],
+      "projects": [
+        {
+          "project_id": "1120309",
+          "project_name": "1120309西富-聯電用消防箱",
+          "workbook_count": 5,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 1,
+          "parser_required_rows": 1,
+          "decision_counts": {
+            "PARSER_REQUIRED": 1,
+            "NEEDS_HUMAN_REVIEW": 1
+          },
+          "workbook_formats": {
+            "xls": 1,
+            "xlsx": 1
+          },
+          "ranking_score": 104
+        },
+        {
+          "project_id": "1120202",
+          "project_name": "1120202榮陳-新竹富百田社區開發供水",
+          "workbook_count": 11,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 7,
+          "decision_counts": {
+            "PARSER_REQUIRED": 7
+          },
+          "workbook_formats": {
+            "xls": 7
+          },
+          "ranking_score": 4
+        },
+        {
+          "project_id": "1120308",
+          "project_name": "1120308濬創-馬稠後儀表箱",
+          "workbook_count": 11,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 7,
+          "decision_counts": {
+            "PARSER_REQUIRED": 7
+          },
+          "workbook_formats": {
+            "xls": 7
+          },
+          "ranking_score": 4
+        },
+        {
+          "project_id": "1110103",
+          "project_name": "1110103國倫水電控制箱",
+          "workbook_count": 6,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 3,
+          "decision_counts": {
+            "PARSER_REQUIRED": 3
+          },
+          "workbook_formats": {
+            "xls": 3
+          },
+          "ranking_score": 3
+        },
+        {
+          "project_id": "1110203",
+          "project_name": "1110203宇博高雄廠大樹深井",
+          "workbook_count": 10,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 7,
+          "decision_counts": {
+            "PARSER_REQUIRED": 7
+          },
+          "workbook_formats": {
+            "xls": 7
+          },
+          "ranking_score": 3
+        },
+        {
+          "project_id": "1110404",
+          "project_name": "1110404宇博實業-芬園利民橋",
+          "workbook_count": 10,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 7,
+          "decision_counts": {
+            "PARSER_REQUIRED": 7
+          },
+          "workbook_formats": {
+            "xls": 7
+          },
+          "ranking_score": 3
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-003",
+      "project_ids": [
+        "1110701",
+        "1110704",
+        "1110706",
+        "1120305",
+        "1110402",
+        "1120102"
+      ],
+      "projects": [
+        {
+          "project_id": "1110701",
+          "project_name": "1110701國倫高鐵台南車站清水池改善",
+          "workbook_count": 10,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 7,
+          "decision_counts": {
+            "PARSER_REQUIRED": 7
+          },
+          "workbook_formats": {
+            "xls": 7
+          },
+          "ranking_score": 3
+        },
+        {
+          "project_id": "1110704",
+          "project_name": "1110704超控鏡面淨水場廢水處理",
+          "workbook_count": 8,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 5,
+          "decision_counts": {
+            "PARSER_REQUIRED": 5
+          },
+          "workbook_formats": {
+            "xls": 5
+          },
+          "ranking_score": 3
+        },
+        {
+          "project_id": "1110706",
+          "project_name": "1110706核陽工程-聯電 12A P3 CUB 2F DRYER一次配電",
+          "workbook_count": 5,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 2,
+          "decision_counts": {
+            "PARSER_REQUIRED": 2
+          },
+          "workbook_formats": {
+            "xls": 2
+          },
+          "ranking_score": 3
+        },
+        {
+          "project_id": "1120305",
+          "project_name": "1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)",
+          "workbook_count": 9,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 7,
+          "decision_counts": {
+            "PARSER_REQUIRED": 7
+          },
+          "workbook_formats": {
+            "xls": 7
+          },
+          "ranking_score": 2
+        },
+        {
+          "project_id": "1110402",
+          "project_name": "1110402西富-工具箱S3二次配",
+          "workbook_count": 0,
+          "generator_candidate_status": "NO_APPROVED_WORKSHEETS",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 0,
+          "decision_counts": {},
+          "workbook_formats": {},
+          "ranking_score": 0
+        },
+        {
+          "project_id": "1120102",
+          "project_name": "1120102核陽工程-紅外線控制板",
+          "workbook_count": 5,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 1,
+          "decision_counts": {
+            "AUTO_DENIED": 1,
+            "PARSER_REQUIRED": 1
+          },
+          "workbook_formats": {
+            "xlsx": 1,
+            "xls": 1
+          },
+          "ranking_score": -11
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-004",
+      "project_ids": [
+        "1110501",
+        "1110504"
+      ],
+      "projects": [
+        {
+          "project_id": "1110501",
+          "project_name": "1110501詠翔鑫-凱倫傘業有限公司 作業廠房、辦公室新建工程",
+          "workbook_count": 7,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 2,
+          "decision_counts": {
+            "PARSER_REQUIRED": 2,
+            "QUARANTINED": 3
+          },
+          "workbook_formats": {
+            "xls": 2,
+            "xlsx": 3
+          },
+          "ranking_score": -19
+        },
+        {
+          "project_id": "1110504",
+          "project_name": "1110504三裕正-台江國家公園保育植物苗圃新建工程",
+          "workbook_count": 4,
+          "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+          "completed_reference_content_inspected_for_selection": false,
+          "current_reviewable_rows": 0,
+          "parser_required_rows": 0,
+          "decision_counts": {
+            "QUARANTINED": 4
+          },
+          "workbook_formats": {
+            "xlsx": 4
+          },
+          "ranking_score": -28
+        }
+      ]
+    }
+  ],
+  "completed_reference_content_inspected_for_selection": false
+}

@@ -1,0 +1,227 @@
+{
+  "project_id": "1120301",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [
+    {
+      "decision_id": "SGD-C9DC0B02531B05",
+      "file_id": "SRC-ALL-PROJECTS-FILE-418A5E272D5E",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-418A5E272D5E-SHEET-001",
+      "project_id": "1120301",
+      "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(合約審查會議記錄表).xlsx",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "B9F0445F5B0FC2FA7FB524717CD95A032CF096979DEB50E98DCC8F28178A4A19",
+      "worksheet_name": "會議審查",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "5234714507ACE8AF73CF54F0F4EA7A81BFB73F7448472D3A8FD6066D916DCD1B",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B9F0445F5B0FC2FA7FB524717CD95A032CF096979DEB50E98DCC8F28178A4A19"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "5234714507ACE8AF73CF54F0F4EA7A81BFB73F7448472D3A8FD6066D916DCD1B"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-A253FCC2E4CA24",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5F0650859878",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5F0650859878-XLS-SHEET-001",
+      "project_id": "1120301",
+      "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(分析表).xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "C8426DBCD60B560DB8EE5466C4553C19C12ACD4F2CEE5E39783E50908A9B61BE",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "648E20698B82ECB272842D2C245260964ED48D1FCA4200383F83513B4B53B28F",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "C8426DBCD60B560DB8EE5466C4553C19C12ACD4F2CEE5E39783E50908A9B61BE"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "EA83FC8AC1E28D1EFD679093ACB7ACBDC0771F9E6E569276C6E5EF1D22015D8B"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-14ED503CE84CB9",
+      "file_id": "SRC-ALL-PROJECTS-FILE-A447BF4C2EFD",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-A447BF4C2EFD-SHEET-001",
+      "project_id": "1120301",
+      "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程詢價單(112.02.22)--順大電機議價後報價.xlsx",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "4EBCFB2A6E8489B92AA81A84592E8D6D643C62DE82A50F0FE8494908A0A3E79E",
+      "worksheet_name": "詢價單 ",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2732101DF28E69F444EB3705687EE466C41D3C00D7CCDB6973B5E257CD847726",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "4EBCFB2A6E8489B92AA81A84592E8D6D643C62DE82A50F0FE8494908A0A3E79E"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "2732101DF28E69F444EB3705687EE466C41D3C00D7CCDB6973B5E257CD847726"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-3F9F9F236E30A8",
+      "file_id": "SRC-ALL-PROJECTS-FILE-BE00442E2B45",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-BE00442E2B45-SHEET-001",
+      "project_id": "1120301",
+      "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程詢價單(112.02.18)-材料清單.xlsx",
+      "detected_document_role": "allowed_material_list_workbook",
+      "file_sha256": "ED5544A787F2752510CE1C99439AECB2BECCE3CF50CB06A251EE014CDC2C77C9",
+      "worksheet_name": "詢價單 ",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "383236239EEFAF6921B8220F24338CE5C484B0CF26FBDA7F74460ECB2B8D7247",
+      "proposed_decision": "NEEDS_HUMAN_REVIEW",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "ED5544A787F2752510CE1C99439AECB2BECCE3CF50CB06A251EE014CDC2C77C9"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "383236239EEFAF6921B8220F24338CE5C484B0CF26FBDA7F74460ECB2B8D7247"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-976288E18235C6",
+      "file_id": "SRC-ALL-PROJECTS-FILE-F7664E25D83B",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-F7664E25D83B-XLS-SHEET-001",
+      "project_id": "1120301",
+      "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(訂單成本分析表).xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "98D6F77EF49273A41B20568E7ADC90630573503D4F1A32D8B5B2E2BC3D453F52",
+      "worksheet_name": "訂單成本分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "B56670B74593F3155468DED35D038684EF3EF5859B27531D93AC94BE651C5ACB",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "98D6F77EF49273A41B20568E7ADC90630573503D4F1A32D8B5B2E2BC3D453F52"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "84F27BD5A27B2E39111ABE5F558E429FBC6F5F9F8E5ADEC0433B9B92E1920446"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-1376E169824D3A",
+      "file_id": "SRC-ALL-PROJECTS-FILE-78D4762D6A2F",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-78D4762D6A2F-XLS-SHEET-001",
+      "project_id": "1120301",
+      "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(工作紀錄單).xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "335866E786DF54ED6FF072BAFF932D1B2F33E00D784C0373C93A6437714F74DD",
+      "worksheet_name": "至得金屬追加",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "9A36C0B0DE7DC438F9D2F54D0F8C3F1172571215EB25A74A0664C302D86F9C93",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "AUTO_DENIED",
+      "reason_codes": [
+        "CROSS_PROJECT_IDENTITY",
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "335866E786DF54ED6FF072BAFF932D1B2F33E00D784C0373C93A6437714F74DD"
+        },
+        {
+          "check": "legacy_xls_parser_output",
+          "status": "PASS",
+          "evidence": "31EA5D7B93DB1C701DC40C61E6092007448A8DF6043B904268005EED63EA2EFB"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}

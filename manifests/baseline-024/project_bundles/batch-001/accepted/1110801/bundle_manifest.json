@@ -1,0 +1,21 @@
+{
+  "bundle_id": "baseline024-batch-001-1110801",
+  "project_id": "1110801",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "BUILT_PENDING_VERIFICATION",
+  "approval_mode": "AUTONOMOUS_EVALUATION_ONLY",
+  "artifacts": [
+    {
+      "artifact_id": "SGD-2EFCB06FD12D4A",
+      "path": "sanitized_inputs\\SGD-2EFCB06FD12D4A_材料清單.csv",
+      "sha256": "0D28EF76D4A1B5A053F82EEA08B634CC7855F1F304B3AB7CE69FE8921ACAE063",
+      "source_decision_id": "SGD-2EFCB06FD12D4A"
+    },
+    {
+      "artifact_id": "SGD-F4D46DEE98D81E",
+      "path": "sanitized_inputs\\SGD-F4D46DEE98D81E_報價.csv",
+      "sha256": "5BDE020AE3D4AD5E93C18AC96F18C348B6DD0C6F74670319905A3F65EA8DA5E8",
+      "source_decision_id": "SGD-F4D46DEE98D81E"
+    }
+  ]
+}

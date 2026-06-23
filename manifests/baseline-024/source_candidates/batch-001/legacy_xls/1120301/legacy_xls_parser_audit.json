@@ -1,0 +1,52 @@
+{
+  "project_id": "1120301",
+  "created_at": "2026-06-23T03:18:59Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120301\\source_decisions_1120301_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5F0650859878",
+      "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(分析表).xls",
+      "file_sha256": "C8426DBCD60B560DB8EE5466C4553C19C12ACD4F2CEE5E39783E50908A9B61BE",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120301\\legacy_xls_parse\\1120301\\SRC-ALL-PROJECTS-FILE-5F0650859878",
+      "sheet_count": 1
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-78D4762D6A2F",
+      "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(工作紀錄單).xls",
+      "file_sha256": "335866E786DF54ED6FF072BAFF932D1B2F33E00D784C0373C93A6437714F74DD",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120301\\legacy_xls_parse\\1120301\\SRC-ALL-PROJECTS-FILE-78D4762D6A2F",
+      "sheet_count": 1
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-F7664E25D83B",
+      "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(訂單成本分析表).xls",
+      "file_sha256": "98D6F77EF49273A41B20568E7ADC90630573503D4F1A32D8B5B2E2BC3D453F52",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120301\\legacy_xls_parse\\1120301\\SRC-ALL-PROJECTS-FILE-F7664E25D83B",
+      "sheet_count": 1
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5F0650859878",
+      "first_metadata_hash": "B35799579BAC28651E0F17390826851088D25919CFB4BD949B5BDABDFA42A608",
+      "second_metadata_hash": "B35799579BAC28651E0F17390826851088D25919CFB4BD949B5BDABDFA42A608",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-78D4762D6A2F",
+      "first_metadata_hash": "4A9E485CB3988DEC64D127BA08DE1BC137CD6C37601DCD3519ACB63FBC246168",
+      "second_metadata_hash": "4A9E485CB3988DEC64D127BA08DE1BC137CD6C37601DCD3519ACB63FBC246168",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-F7664E25D83B",
+      "first_metadata_hash": "8338DB1D18384B275AC75E2B726B6D5F32A1CE85AD342565DEA1EC0D91C09730",
+      "second_metadata_hash": "8338DB1D18384B275AC75E2B726B6D5F32A1CE85AD342565DEA1EC0D91C09730",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 2,
+  "excluded_count": 1
+}

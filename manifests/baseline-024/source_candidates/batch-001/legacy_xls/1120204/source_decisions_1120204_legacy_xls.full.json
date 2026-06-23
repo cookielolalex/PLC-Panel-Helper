@@ -1,0 +1,157 @@
+[
+  {
+    "decision_id": "SGD-35AB5A021C3A72",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120204",
+    "family_id": "西富",
+    "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程工作紀錄單.xls",
+    "file_name": "西富-聯電P34壓降改善工程工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3-XLS-SHEET-001",
+    "file_sha256": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00",
+    "file_size": "72192",
+    "workbook_format": "xls",
+    "worksheet_name": "含稅",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "8D6D4E7DFF5BE2B239C4195E6B649D92BC72C21554DF166FD6BDF04CF8E6BEC5",
+    "workbook_sheet_count": 2,
+    "detected_project_identifiers": [
+      "1120204"
+    ],
+    "detected_customer_identifiers": [
+      "西富"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-444B06C024A3",
+      "SRC-ALL-PROJECTS-FILE-444B06C024A3-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120204\\legacy_xls_parse\\1120204\\SRC-ALL-PROJECTS-FILE-444B06C024A3\\001_含稅.csv",
+    "sanitized_csv_sha256": "1B204C5C2261878D2216C81F432548D2DFB0D080C5A7F39CFB670AB745D9E191",
+    "non_empty_rows": 35
+  },
+  {
+    "decision_id": "SGD-8CBD5F3034704F",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120204",
+    "family_id": "西富",
+    "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程工作紀錄單.xls",
+    "file_name": "西富-聯電P34壓降改善工程工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-444B06C024A3-XLS-SHEET-002",
+    "file_sha256": "B80DD2A7ADD81F4585C9814817080DDB9C49BC60BB8105F8336A7E448E842E00",
+    "file_size": "72192",
+    "workbook_format": "xls",
+    "worksheet_name": "未稅",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "05C492E5F09EA193E94CCA68349474F1B13C0F4B921E156D581A74D81DFAD3FA",
+    "workbook_sheet_count": 2,
+    "detected_project_identifiers": [
+      "1120204"
+    ],
+    "detected_customer_identifiers": [
+      "西富"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-444B06C024A3",
+      "SRC-ALL-PROJECTS-FILE-444B06C024A3-XLS-SHEET-002"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120204\\legacy_xls_parse\\1120204\\SRC-ALL-PROJECTS-FILE-444B06C024A3\\002_未稅.csv",
+    "sanitized_csv_sha256": "00E01C7E65982646422C528A18FF32B17232BF5111A4343B6FB100D1A95DBCDB",
+    "non_empty_rows": 29
+  },
+  {
+    "decision_id": "SGD-1422400433846E",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120204",
+    "family_id": "西富",
+    "relative_path": "112年度工作\\112年度工作\\1120204西富-聯電P34壓降改善工程\\西富-聯電P34壓降改善工程(成本分析表).xls",
+    "file_name": "西富-聯電P34壓降改善工程(成本分析表).xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-D50AF9C15846",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-D50AF9C15846-XLS-SHEET-001",
+    "file_sha256": "EF11B530947E654AB4487B0EB8D561379F86FC63E367C714357FC73445BDAEC2",
+    "file_size": "39424",
+    "workbook_format": "xls",
+    "worksheet_name": "Sheet1 (3)",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "985C43E98D795D8C6B57D6E153D78E9167AAFA1F6458F8C683D97C4C667F5CEE",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1120204"
+    ],
+    "detected_customer_identifiers": [
+      "西富"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NONE",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "CANDIDATE",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-D50AF9C15846",
+      "SRC-ALL-PROJECTS-FILE-D50AF9C15846-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120204\\legacy_xls_parse\\1120204\\SRC-ALL-PROJECTS-FILE-D50AF9C15846\\001_Sheet1 (3).csv",
+    "sanitized_csv_sha256": "EFFCEEF0F668DA82134BD8BE95B2278291D826102C94CAAEC19A937695C7E74F",
+    "non_empty_rows": 24
+  }
+]

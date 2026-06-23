@@ -1,0 +1,87 @@
+{
+  "adjudication_id": "source_quorum_adjudication_1120207",
+  "project_id": "1120207",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "AGENT_QUORUM_APPROVED_EVAL",
+  "items": [
+    {
+      "decision_id": "SGD-785FE5334EEEB3",
+      "file_id": "SRC-ALL-PROJECTS-FILE-21E36BF89629",
+      "file_sha256": "C4746F1B3979EEAB5FEEBD09B71AEA57B7057FCAEF29672FA5FDCC1A7EC6E775",
+      "worksheet_name": "報價",
+      "worksheet_fingerprint": "35CCE23F56AC4393A1C433D2B6E7F85AB546AEC2381CEA3E55FEB59784635F25",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-6BAAC9B9A05320",
+      "file_id": "SRC-ALL-PROJECTS-FILE-644BF6068BFC",
+      "file_sha256": "8D7F737A58DD9DAD775E77F106A54A64C3D4894A65DC832FDF5551EBBFF090DF",
+      "worksheet_name": "未稅",
+      "worksheet_fingerprint": "589CEF755855BE96D59514EEFC88D89DAE2D4EB44BE42ED81A6F5C09FEADA423",
+      "final_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_NOT_NONE",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "review_votes": {
+        "source_role_classifier": "QUARANTINE",
+        "project_identity_reviewer": "QUARANTINE",
+        "workbook_forensics_reviewer": "QUARANTINE",
+        "leakage_red_team": "QUARANTINE"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "decision_id": "SGD-BBFD5838CEAFBB",
+      "file_id": "SRC-ALL-PROJECTS-FILE-ED183D02B45A",
+      "file_sha256": "52F64916DBC79BF8873BC1146A51E0A98C0BBFFE40A112F1A6AF39E66CDA385A",
+      "worksheet_name": "報價",
+      "worksheet_fingerprint": "7CFA94F32A709E3E59FF0506B57811B00517CCFD818ED0428E64554654D2A561",
+      "final_state": "AGENT_QUORUM_APPROVED_EVAL",
+      "reason_codes": [
+        "INSUFFICIENT_IDENTITY",
+        "NO_CROSS_PROJECT_SIGNAL",
+        "NO_EXTERNAL_LINKS_OR_DENIED_DEPENDENCIES",
+        "NO_REFERENCE_LEAKAGE_SIGNAL_IN_ALLOWED_METADATA",
+        "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+        "PROJECT_ID_SUPPORTED_BY_PATH_AND_INVENTORY",
+        "VISIBLE_SUPPORTED_WORKSHEET"
+      ],
+      "review_votes": {
+        "source_role_classifier": "ALLOW_EVAL",
+        "project_identity_reviewer": "ALLOW_EVAL",
+        "workbook_forensics_reviewer": "ALLOW_EVAL",
+        "leakage_red_team": "ALLOW_EVAL"
+      },
+      "unresolved_issues": []
+    }
+  ],
+  "summary": {
+    "AGENT_QUORUM_APPROVED_EVAL": 2,
+    "QUARANTINED": 1
+  },
+  "run_metadata": {
+    "prefilter": "manifests\\baseline-024\\source_candidates\\batch-001\\project_manifests\\1120207\\deterministic_prefilter.json",
+    "review_root": "manifests\\baseline-024\\source_approvals\\batch-001\\reviews",
+    "created_at": "2026-06-23T03:22:43Z"
+  }
+}

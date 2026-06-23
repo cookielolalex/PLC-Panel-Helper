@@ -1,0 +1,54 @@
+[
+  {
+    "decision_id": "SGD-6BAAC9B9A05320",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120207",
+    "family_id": "顯茂",
+    "relative_path": "112年度工作\\112年度工作\\112年度工作(已完成)\\1120207顯茂-臨時盤\\顯茂-臨時盤工作紀錄單.xls",
+    "file_name": "顯茂-臨時盤工作紀錄單.xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-644BF6068BFC",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-644BF6068BFC-XLS-SHEET-001",
+    "file_sha256": "8D7F737A58DD9DAD775E77F106A54A64C3D4894A65DC832FDF5551EBBFF090DF",
+    "file_size": "50176",
+    "workbook_format": "xls",
+    "worksheet_name": "未稅",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "589CEF755855BE96D59514EEFC88D89DAE2D4EB44BE42ED81A6F5C09FEADA423",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1120207"
+    ],
+    "detected_customer_identifiers": [
+      "顯茂"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-644BF6068BFC",
+      "SRC-ALL-PROJECTS-FILE-644BF6068BFC-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120207\\legacy_xls_parse\\1120207\\SRC-ALL-PROJECTS-FILE-644BF6068BFC\\001_未稅.csv",
+    "sanitized_csv_sha256": "81635DC2F9DFBAC604B917B069040DD68E8FA487D24E4CC296DD36EA743E98D1",
+    "non_empty_rows": 29
+  }
+]

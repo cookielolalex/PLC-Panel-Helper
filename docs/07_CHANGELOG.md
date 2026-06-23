@@ -58,3 +58,7 @@
 - Froze the cycle-000 24-project baseline protocol as `FROZEN_PROTOCOL_V1` with seed `BASELINE024-CYCLE000-20260623`.
 - Added `evals/baseline-024/` protocol manifests for cohort placeholders, workflow hashes, source readiness, and the four-wave run plan.
 - Stopped before Phase C source backfill and before any 24-project generation; 18 additional verified `ALLOWED_EVAL` projects are still required.
+- Began Phase C source backfill with `baseline-024` batch-001.
+- Ran deterministic prefiltering, four independent specialist reviews, quorum adjudication, sanitized bundle verification, and independent source-bundle audit for six candidate projects.
+- Accepted `1110801` and `1120207` as evaluation-only additions; preserved verifier rejections for `1120101`, `1120204`, and `1120301`; left `1120201` quarantined/no-bundle.
+- Current baseline-024 `ALLOWED_EVAL` count is `8`; generation remains blocked.

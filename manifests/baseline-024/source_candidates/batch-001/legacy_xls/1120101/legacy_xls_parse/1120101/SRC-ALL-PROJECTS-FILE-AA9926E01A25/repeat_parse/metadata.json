@@ -1,0 +1,34 @@
+﻿{
+    "workbook_file_name":  "顯茂-聯電P6倉庫棟新建工程(訂單成本分析表).xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "Sheet1 (3)",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  33,
+                       "used_columns":  8,
+                       "non_empty_rows":  24,
+                       "formula_count":  1,
+                       "formulas":  [
+                                        {
+                                            "row":  14,
+                                            "column":  4,
+                                            "address":  "D14",
+                                            "formula":  "=E7+E8+E9+E10+E11",
+                                            "text":  "                           1,918,062 "
+                                        }
+                                    ],
+                       "csv_file_name":  "001_Sheet1 (3).csv"
+                   }
+               ]
+}

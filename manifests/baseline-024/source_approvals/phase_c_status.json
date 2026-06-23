@@ -1,0 +1,53 @@
+{
+  "baseline_id": "baseline-024-cycle-000",
+  "phase": "cycle-000-C",
+  "status": "PHASE_C_BATCH_001_AUDIT_PASS_CONTINUE_BACKFILL",
+  "current_allowed_eval_count": 8,
+  "new_allowed_eval_projects": [
+    "1110801",
+    "1120207"
+  ],
+  "remaining_additional_allowed_eval_required": 16,
+  "batches": [
+    {
+      "batch_id": "batch-001",
+      "status": "BATCH001_SOURCE_BACKFILL_AUDIT_PASS",
+      "candidate_project_ids": [
+        "1110801",
+        "1120101",
+        "1120201",
+        "1120204",
+        "1120207",
+        "1120301"
+      ],
+      "accepted_project_ids": [
+        "1110801",
+        "1120207"
+      ],
+      "quarantined_project_ids": [
+        "1120201"
+      ],
+      "bundle_rejected_project_ids": [
+        "1120101",
+        "1120204",
+        "1120301"
+      ],
+      "adjudication_item_counts": {
+        "AGENT_QUORUM_APPROVED_EVAL": 23,
+        "QUARANTINED": 8,
+        "AUTO_DENIED": 2
+      },
+      "source_bundle_audit": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+      "independent_audit": "BATCH001_SOURCE_BACKFILL_AUDIT_PASS"
+    }
+  ],
+  "generation_authorized": false,
+  "next_action": "continue Phase C source backfill from remaining metadata-only candidates; do not start generation",
+  "evidence": {
+    "backfill_plan": "manifests/baseline-024/source_candidates/backfill_plan.json",
+    "batch_manifest": "manifests/baseline-024/source_candidates/batch-001/batch_manifest.json",
+    "bundle_build_summary": "manifests/baseline-024/project_bundles/batch-001/bundle_build_summary.json",
+    "source_bundle_audit": "reports/baseline-024/source_bundle_audit_batch_001.json",
+    "independent_audit": "reports/baseline-024/source_bundle_audit_batch_001_independent.json"
+  }
+}

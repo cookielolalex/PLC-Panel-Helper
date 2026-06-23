@@ -1,0 +1,32 @@
+{
+  "baseline_id": "baseline-024-cycle-000",
+  "status": "PHASE_C_SOURCE_BUNDLE_AUDIT_PARTIAL_PASS",
+  "accepted_project_count": 2,
+  "accepted_project_ids": [
+    "1110801",
+    "1120207"
+  ],
+  "batch_audits": [
+    {
+      "batch_id": "batch-001",
+      "source_bundle_audit_status": "EVAL_SOURCE_BUNDLE_AUDIT_PASS",
+      "independent_audit_status": "BATCH001_SOURCE_BACKFILL_AUDIT_PASS",
+      "accepted_project_ids": [
+        "1110801",
+        "1120207"
+      ],
+      "bundle_rejected_project_ids": [
+        "1120101",
+        "1120204",
+        "1120301"
+      ],
+      "quarantined_project_ids": [
+        "1120201"
+      ],
+      "audit_hash": "7E4F39B40903887B63EB9CB58434A3CC7F5237906D7AADC735652F6F93F73292",
+      "independent_audit_hash": "D45B379324F49A266CF7049962B637E7E3344AB35DC5E4573B3CC9C7B2B1B1B6"
+    }
+  ],
+  "generation_authorized": false,
+  "remaining_additional_allowed_eval_required": 16
+}

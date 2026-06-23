@@ -1,0 +1,38 @@
+{
+  "baseline_id": "baseline-024-cycle-000",
+  "batch_id": "batch-001",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS_WITH_REJECTIONS",
+  "built": [
+    {
+      "project_id": "1110801",
+      "bundle_dir": "manifests\\baseline-024\\project_bundles\\batch-001\\accepted\\1110801",
+      "artifact_count": 2
+    },
+    {
+      "project_id": "1120207",
+      "bundle_dir": "manifests\\baseline-024\\project_bundles\\batch-001\\accepted\\1120207",
+      "artifact_count": 2
+    }
+  ],
+  "rejected": [
+    {
+      "project_id": "1120101",
+      "bundle_dir": "manifests\\baseline-024\\project_bundles\\batch-001\\rejected\\1120101",
+      "artifact_count": 8,
+      "reason": "BUNDLE_VERIFICATION_FAILED"
+    },
+    {
+      "project_id": "1120204",
+      "bundle_dir": "manifests\\baseline-024\\project_bundles\\batch-001\\rejected\\1120204",
+      "artifact_count": 6,
+      "reason": "BUNDLE_VERIFICATION_FAILED"
+    },
+    {
+      "project_id": "1120301",
+      "bundle_dir": "manifests\\baseline-024\\project_bundles\\batch-001\\rejected\\1120301",
+      "artifact_count": 5,
+      "reason": "BUNDLE_VERIFICATION_FAILED"
+    }
+  ]
+}

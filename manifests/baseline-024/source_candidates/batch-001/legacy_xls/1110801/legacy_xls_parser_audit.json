@@ -1,0 +1,26 @@
+{
+  "project_id": "1110801",
+  "created_at": "2026-06-23T03:19:25Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1110801\\source_decisions_1110801_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110801華格-內埔工業區汙水管路工程\\華格-內埔工業區汙水管路工程工作紀錄單.xls",
+      "file_sha256": "881608D165CE55F96CBF349890C72500DFB2D7BDA67F23CEBE57CA93DF0D1027",
+      "parser_output": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1110801\\legacy_xls_parse\\1110801\\SRC-ALL-PROJECTS-FILE-3FB79B273283",
+      "sheet_count": 2
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-3FB79B273283",
+      "first_metadata_hash": "9B75D40561CB653660C582C799EA43B35AA77D092B2187832BD9BA07C3BB2410",
+      "second_metadata_hash": "9B75D40561CB653660C582C799EA43B35AA77D092B2187832BD9BA07C3BB2410",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 0,
+  "excluded_count": 2
+}

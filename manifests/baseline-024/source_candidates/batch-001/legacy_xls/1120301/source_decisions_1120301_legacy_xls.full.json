@@ -1,0 +1,157 @@
+[
+  {
+    "decision_id": "SGD-A253FCC2E4CA24",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120301",
+    "family_id": "核陽",
+    "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(分析表).xls",
+    "file_name": "聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(分析表).xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-5F0650859878",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-5F0650859878-XLS-SHEET-001",
+    "file_sha256": "C8426DBCD60B560DB8EE5466C4553C19C12ACD4F2CEE5E39783E50908A9B61BE",
+    "file_size": "35328",
+    "workbook_format": "xls",
+    "worksheet_name": "分析表",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "648E20698B82ECB272842D2C245260964ED48D1FCA4200383F83513B4B53B28F",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1120301"
+    ],
+    "detected_customer_identifiers": [
+      "核陽"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NONE",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "CANDIDATE",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-5F0650859878",
+      "SRC-ALL-PROJECTS-FILE-5F0650859878-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120301\\legacy_xls_parse\\1120301\\SRC-ALL-PROJECTS-FILE-5F0650859878\\001_分析表.csv",
+    "sanitized_csv_sha256": "EA83FC8AC1E28D1EFD679093ACB7ACBDC0771F9E6E569276C6E5EF1D22015D8B",
+    "non_empty_rows": 13
+  },
+  {
+    "decision_id": "SGD-1376E169824D3A",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120301",
+    "family_id": "核陽",
+    "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(工作紀錄單).xls",
+    "file_name": "聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(工作紀錄單).xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-78D4762D6A2F",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-78D4762D6A2F-XLS-SHEET-001",
+    "file_sha256": "335866E786DF54ED6FF072BAFF932D1B2F33E00D784C0373C93A6437714F74DD",
+    "file_size": "50688",
+    "workbook_format": "xls",
+    "worksheet_name": "至得金屬追加",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "9A36C0B0DE7DC438F9D2F54D0F8C3F1172571215EB25A74A0664C302D86F9C93",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1110301",
+      "1120301"
+    ],
+    "detected_customer_identifiers": [
+      "核陽"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NAMED_RANGE_REVIEW_REQUIRED",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "QUARANTINED",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED",
+      "NAMED_RANGE_PRESENT"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-78D4762D6A2F",
+      "SRC-ALL-PROJECTS-FILE-78D4762D6A2F-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120301\\legacy_xls_parse\\1120301\\SRC-ALL-PROJECTS-FILE-78D4762D6A2F\\001_至得金屬追加.csv",
+    "sanitized_csv_sha256": "31EA5D7B93DB1C701DC40C61E6092007448A8DF6043B904268005EED63EA2EFB",
+    "non_empty_rows": 35
+  },
+  {
+    "decision_id": "SGD-976288E18235C6",
+    "source_root_id": "SRC-ALL-PROJECTS",
+    "project_id": "1120301",
+    "family_id": "核陽",
+    "relative_path": "112年度工作\\112年度工作\\1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程\\聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(訂單成本分析表).xls",
+    "file_name": "聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程(訂單成本分析表).xls",
+    "file_id": "SRC-ALL-PROJECTS-FILE-F7664E25D83B",
+    "sheet_id": "SRC-ALL-PROJECTS-FILE-F7664E25D83B-XLS-SHEET-001",
+    "file_sha256": "98D6F77EF49273A41B20568E7ADC90630573503D4F1A32D8B5B2E2BC3D453F52",
+    "file_size": "38400",
+    "workbook_format": "xls",
+    "worksheet_name": "訂單成本分析表",
+    "worksheet_visibility": "visible",
+    "worksheet_fingerprint": "B56670B74593F3155468DED35D038684EF3EF5859B27531D93AC94BE651C5ACB",
+    "workbook_sheet_count": 1,
+    "detected_project_identifiers": [
+      "1120301"
+    ],
+    "detected_customer_identifiers": [
+      "核陽"
+    ],
+    "detected_document_role": "spreadsheet_other",
+    "parser_name": "excel_com_legacy_xls",
+    "parser_version": "16.0",
+    "parse_status": "PARSED_WITH_FINGERPRINT",
+    "formula_dependency_status": "NONE",
+    "external_link_status": "NONE",
+    "named_range_status": "NONE",
+    "revision_status": "CURRENT_OR_UNKNOWN",
+    "duplicate_or_supersession": "",
+    "proposed_decision": "CANDIDATE",
+    "final_decision": "UNREVIEWED",
+    "reason_codes": [
+      "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+      "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+      "MACROS_DISABLED"
+    ],
+    "evidence_references": [
+      "SRC-ALL-PROJECTS-FILE-F7664E25D83B",
+      "SRC-ALL-PROJECTS-FILE-F7664E25D83B-XLS-SHEET-001"
+    ],
+    "policy_version": "source_guard_policy_v2_autonomous_eval",
+    "reviewer_or_approver": "",
+    "decision_timestamp": "",
+    "approval_manifest_hash": "",
+    "sanitized_artifact_hash": "",
+    "sanitized_csv_path": "manifests\\baseline-024\\source_candidates\\batch-001\\legacy_xls\\1120301\\legacy_xls_parse\\1120301\\SRC-ALL-PROJECTS-FILE-F7664E25D83B\\001_訂單成本分析表.csv",
+    "sanitized_csv_sha256": "84F27BD5A27B2E39111ABE5F558E429FBC6F5F9F8E5ADEC0433B9B92E1920446",
+    "non_empty_rows": 24
+  }
+]

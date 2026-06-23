@@ -1,0 +1,23 @@
+# Baseline-024 Source Backfill Summary
+
+Status: `PHASE_C_BATCH_001_AUDIT_PASS_CONTINUE_BACKFILL`
+
+No completed-reference content was inspected for source selection or source approval. No drawing generation was started.
+
+## Batch 001
+
+- Candidate projects: `1110801, 1120101, 1120201, 1120204, 1120207, 1120301`
+- Accepted ALLOWED_EVAL additions: `1110801, 1120207`
+- Bundle-verification rejected projects: `1120101, 1120204, 1120301`
+- Quarantined/no-bundle projects: `1120201`
+- Source bundle audit: `EVAL_SOURCE_BUNDLE_AUDIT_PASS`
+- Independent audit: `BATCH001_SOURCE_BACKFILL_AUDIT_PASS`
+
+## Current Count
+
+- Existing anchors: `6`
+- New Phase C accepted projects: `2`
+- Current ALLOWED_EVAL count for baseline-024: `8`
+- Additional projects still required before generation: `16`
+
+Generation remains blocked until exactly 24 verified `ALLOWED_EVAL` projects are frozen in the final cohort manifest.
