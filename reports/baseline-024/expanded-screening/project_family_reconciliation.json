@@ -1,0 +1,3388 @@
+{
+  "status": "SCREENING_ONLY_NO_CANONICAL_FAMILY_CHANGES",
+  "policy": "Any changed family assignment requires old value, proposed value, evidence, affected cohorts, leakage-risk analysis, and independent audit.",
+  "family_assignments": [
+    {
+      "project_id": "1110101",
+      "project_family": "飛達鳥嘴潭下游送水管E",
+      "project_family_source": "frozen_cohort_manifest",
+      "current_cohort": "ANCHOR_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": false
+    },
+    {
+      "project_id": "1110102",
+      "project_family": "聯電FAB 12A P6擴建工程氨氮廢水處理廠電氣工程",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "EXCLUDED_BY_PROTOCOL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110103",
+      "project_family": "國倫水電控制箱",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "PHASE_C_ACCEPTED_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110104",
+      "project_family": "飛達機電",
+      "project_family_source": "frozen_cohort_manifest",
+      "current_cohort": "ANCHOR_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": false
+    },
+    {
+      "project_id": "1110105",
+      "project_family": "宇博彰化番雅橋前操作箱",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110202",
+      "project_family": "宇博鹽埔及竹田淨水場",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110203",
+      "project_family": "宇博高雄廠大樹深井",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "PHASE_C_ACCEPTED_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110204",
+      "project_family": "宇博義竹",
+      "project_family_source": "frozen_cohort_manifest",
+      "current_cohort": "ANCHOR_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": false
+    },
+    {
+      "project_id": "1110205",
+      "project_family": "昕辰嘉義",
+      "project_family_source": "frozen_cohort_manifest",
+      "current_cohort": "ANCHOR_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": false
+    },
+    {
+      "project_id": "1110206",
+      "project_family": "榮陳義竹所傳訊箱修改",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110301",
+      "project_family": "三裕正下營鐵道綠廊道",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110309",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110402",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_QUARANTINED_OR_NO_BUNDLE",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110403",
+      "project_family": "臻輊營造",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110404",
+      "project_family": "宇博實業",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_BUNDLE_REJECTED",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110405",
+      "project_family": "國倫水電",
+      "project_family_source": "frozen_cohort_manifest",
+      "current_cohort": "ANCHOR_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": false
+    },
+    {
+      "project_id": "1110406",
+      "project_family": "宇博二林芳苑8號井",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110410",
+      "project_family": "國倫水電",
+      "project_family_source": "frozen_cohort_manifest",
+      "current_cohort": "ANCHOR_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": false
+    },
+    {
+      "project_id": "1110411",
+      "project_family": "証銓工業",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110501",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_BUNDLE_REJECTED",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110504",
+      "project_family": "三裕正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_QUARANTINED_OR_NO_BUNDLE",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110505",
+      "project_family": "正安消防",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110601",
+      "project_family": "三民營造",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110606",
+      "project_family": "佑典",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110701",
+      "project_family": "國倫高鐵台南車站清水池改善",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "PREVIOUS_BUNDLE_REJECTED",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110704",
+      "project_family": "超控鏡面淨水場廢水處理",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "PHASE_C_ACCEPTED_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110706",
+      "project_family": "核陽工程",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_QUARANTINED_OR_NO_BUNDLE",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110707",
+      "project_family": "鈺興豐電錶更換",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110708",
+      "project_family": "華格",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110801",
+      "project_family": "華格",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PHASE_C_ACCEPTED_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110807",
+      "project_family": "正安消防",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110808",
+      "project_family": "三裕正下營綠廊道追加接線箱",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1110901",
+      "project_family": "京鼎(三裕正)",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120101",
+      "project_family": "顯茂工程",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_BUNDLE_REJECTED",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120102",
+      "project_family": "核陽工程",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_QUARANTINED_OR_NO_BUNDLE",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120103",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120104",
+      "project_family": "華格水電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120105",
+      "project_family": "正安消防",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120106",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120107",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120108",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120201",
+      "project_family": "立岳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_QUARANTINED_OR_NO_BUNDLE",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120202",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_BUNDLE_REJECTED",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120203",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120204",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_BUNDLE_REJECTED",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120205",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120206",
+      "project_family": "盛福",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120207",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PHASE_C_ACCEPTED_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120301",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_BUNDLE_REJECTED",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120302",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120303",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120304",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120305",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PHASE_C_ACCEPTED_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120306",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120307",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120308",
+      "project_family": "濬創",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PHASE_C_ACCEPTED_ALLOWED_EVAL",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120309",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "PREVIOUS_QUARANTINED_OR_NO_BUNDLE",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120310",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120311",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120312",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120401",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120402",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120404",
+      "project_family": "亞翔",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120405",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120406",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120407",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120408",
+      "project_family": "國策",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120409",
+      "project_family": "宗正水位計更換",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120410",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120501",
+      "project_family": "亞翔",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120502",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120503",
+      "project_family": "國倫竹崎鄉緞繻村等供水",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120504",
+      "project_family": "榮陳寶山鄉華安段社區水位站",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120505",
+      "project_family": "榮陳屏東科學園區深井機電",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120506",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120601",
+      "project_family": "宇博",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120701",
+      "project_family": "正安消防",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120702",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120703",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120704",
+      "project_family": "宗正廠房打掃整理",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120705",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120706",
+      "project_family": "皓宇",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120707",
+      "project_family": "宗正產業",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120708",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120801",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120802",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120803",
+      "project_family": "瑨億水電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120804",
+      "project_family": "亞睿科技",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120805",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120806",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120807",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120808",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120809",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120901",
+      "project_family": "金展空調",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120902",
+      "project_family": "辰永亮",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120903",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120904",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120905",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120906",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120907",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120908",
+      "project_family": "政東",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120909",
+      "project_family": "飛達機電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120910",
+      "project_family": "華格",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120911",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1120912",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121001",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121002",
+      "project_family": "宇博",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121003",
+      "project_family": "宇博",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121004",
+      "project_family": "昶源",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121005",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121006",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121007",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121101",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121102",
+      "project_family": "玖聖",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121103",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121104",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121105",
+      "project_family": "利信鳥嘴潭下游送水管B",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121106",
+      "project_family": "三民營造",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121107",
+      "project_family": "器識工程",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121201",
+      "project_family": "榮陳馬稠後園區配水池二期",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121202",
+      "project_family": "昱成機電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121203",
+      "project_family": "榮陳員林出水里四百崁延管",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121204",
+      "project_family": "卓文彬",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1121205",
+      "project_family": "西富聯電P4零星工程(堆高機充電控制箱)",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130101",
+      "project_family": "新陳浮洲加壓站至板新場管六",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130102",
+      "project_family": "燁誠",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130103",
+      "project_family": "西富銘牌及買料",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130104",
+      "project_family": "瑞震工程",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130105",
+      "project_family": "新陳浮洲加壓站至板新場管七",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130106",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130107",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130108",
+      "project_family": "榮陳高樹泰山2號井",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130109",
+      "project_family": "國倫竹崎鄉中和村石棹供水",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130110",
+      "project_family": "榮陳花壇大葉5號井",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130201",
+      "project_family": "華格",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130202",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130203",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130204",
+      "project_family": "榮陳北斗永靖7號井",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130205",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130206",
+      "project_family": "國倫鹿港13號重鑿井",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130207",
+      "project_family": "飛達機電曾文二期場外1500MM管線",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130208",
+      "project_family": "進一水電新竹市大中區管線建置",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130301",
+      "project_family": "核楊",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130302",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130303",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130304",
+      "project_family": "新陳濁幹線(27K+257)改善工程",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130305",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130306",
+      "project_family": "義竹營運所操作盤BTS更換",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130307",
+      "project_family": "台灣色譜",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130308",
+      "project_family": "金坐營造",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130309",
+      "project_family": "桂田",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130310",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130311",
+      "project_family": "利信鳥嘴潭下游送水管B",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130312",
+      "project_family": "國倫楠玉及鏡面場監控盤增設",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130313",
+      "project_family": "卓文彬",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130314",
+      "project_family": "器識",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130401",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130402",
+      "project_family": "飛達機電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130403",
+      "project_family": "榮陳員林第三淨水場快濾桶更新",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130404",
+      "project_family": "皓宇水電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130405",
+      "project_family": "榮陳牡丹廠北送中繼加壓站",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130406",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130501",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130502",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130503",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130504",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130505",
+      "project_family": "國倫竹崎鄉龍山村南靖寮",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130506",
+      "project_family": "國倫中埔鄉社口村內埔供水",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130507",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130508",
+      "project_family": "桂田",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130509",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130510",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130511",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130512",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130513",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130601",
+      "project_family": "盛福",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130602",
+      "project_family": "桂田",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130603",
+      "project_family": "器識",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130604",
+      "project_family": "器識",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130605",
+      "project_family": "宇博通霄鎮福源里供水",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130606",
+      "project_family": "宇博",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130607",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130608",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130609",
+      "project_family": "卓文彬",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130610",
+      "project_family": "林東憲永華路住宅工程",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130701",
+      "project_family": "南寶球場",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130702",
+      "project_family": "榮陳西屯區市政路延伸",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130703",
+      "project_family": "飛達機電南科八路送水管",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130704",
+      "project_family": "國倫各場儀表箱",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130705",
+      "project_family": "宇博台水名牌及保險絲",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130706",
+      "project_family": "昶源粉體塗料",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130707",
+      "project_family": "榮陳台南市楠西區灣丘里竹仔圾延管",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130708",
+      "project_family": "利信",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130709",
+      "project_family": "榮陳港務局供水閥箱",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130710",
+      "project_family": "榮陳馬稠後園區追加TR",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130711",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130712",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130801",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130802",
+      "project_family": "台灣色譜",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130803",
+      "project_family": "飛達",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130804",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130805",
+      "project_family": "飛宏三場現場舊臨時盤更換工程",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130806",
+      "project_family": "華格",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130807",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130808",
+      "project_family": "三裕正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130809",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130810",
+      "project_family": "瑨億霧峰區仁德巷11",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130901",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130902",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130903",
+      "project_family": "器識",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130904",
+      "project_family": "卓文彬",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130905",
+      "project_family": "姚銓",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130906",
+      "project_family": "利信",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1130907",
+      "project_family": "瑨億水電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131001",
+      "project_family": "器識",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131002",
+      "project_family": "旺邦營造",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131003",
+      "project_family": "濬創",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131004",
+      "project_family": "玖堡西螺水管橋增設儀表箱",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131005",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131006",
+      "project_family": "榮陳彰化市福田淨水場寬口井取水口",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131007",
+      "project_family": "榮陳114白河所加壓站抽水機汰換",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131008",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131101",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131102",
+      "project_family": "國倫竹崎所阿里山場原水取水",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131103",
+      "project_family": "國倫古坑所APFR更換",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131104",
+      "project_family": "宇博台水名牌",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131105",
+      "project_family": "橙富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131106",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131107",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131108",
+      "project_family": "華格",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131109",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131110",
+      "project_family": "臻輊",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131111",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131112",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131113",
+      "project_family": "卓文彬",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131201",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131202",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131203",
+      "project_family": "宏展水電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131204",
+      "project_family": "盛福",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131205",
+      "project_family": "昱成機電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131206",
+      "project_family": "飛達機電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131207",
+      "project_family": "亞睿科技",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131208",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1131209",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140101",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140102",
+      "project_family": "澄富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140103",
+      "project_family": "宗正",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140104",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140201",
+      "project_family": "華格",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140202",
+      "project_family": "昱成機電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140203",
+      "project_family": "橙富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140204",
+      "project_family": "何先生",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140205",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140206",
+      "project_family": "玖堡",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140207",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140208",
+      "project_family": "楊怡文",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140209",
+      "project_family": "宗正",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140301",
+      "project_family": "桂田",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140302",
+      "project_family": "瑨億",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140303",
+      "project_family": "香閣食品廠",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140304",
+      "project_family": "盛福",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140305",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140306",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140307",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140308",
+      "project_family": "國翊",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140309",
+      "project_family": "昀興",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140310",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140311",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140312",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140313",
+      "project_family": "宗正",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140401",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140402",
+      "project_family": "禾協水電",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140403",
+      "project_family": "昱成",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140404",
+      "project_family": "宥騰",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140405",
+      "project_family": "台灣色譜",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140406",
+      "project_family": "盛福",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140407",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140408",
+      "project_family": "正安消防",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140409",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140410",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140501",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140502",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140503",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140504",
+      "project_family": "宇博台水名牌",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140505",
+      "project_family": "詠翔鑫變壓器購買(零料)",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140506",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140507",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140508",
+      "project_family": "飛達",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140509",
+      "project_family": "橙富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140510",
+      "project_family": "台灣色譜",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140511",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140601",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140602",
+      "project_family": "香閣食品",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140603",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140604",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140605",
+      "project_family": "國倫114年各站儀表箱",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140606",
+      "project_family": "橙富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140607",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140608",
+      "project_family": "飛達",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140609",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140610",
+      "project_family": "宇博",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140701",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140702",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140703",
+      "project_family": "卓文彬",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140704",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140705",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140706",
+      "project_family": "台灣色譜",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140707",
+      "project_family": "金坐營造",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140708",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140709",
+      "project_family": "國策",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140710",
+      "project_family": "宗正",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140711",
+      "project_family": "宇博",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140801",
+      "project_family": "臻輊營造",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140802",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140803",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140804",
+      "project_family": "宗正實業",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140805",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140806",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140807",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140808",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140809",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140901",
+      "project_family": "台灣色譜",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140902",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140903",
+      "project_family": "昱成",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140904",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140905",
+      "project_family": "允承科技",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140906",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140907",
+      "project_family": "宗正實業",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140908",
+      "project_family": "利信",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140909",
+      "project_family": "利信",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140910",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1140911",
+      "project_family": "宗正",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141001",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141002",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141003",
+      "project_family": "漢泰",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141004",
+      "project_family": "利信",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141005",
+      "project_family": "利信",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141006",
+      "project_family": "利信",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141007",
+      "project_family": "台灣色譜",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141008",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141009",
+      "project_family": "濬創科技",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141101",
+      "project_family": "瑨億",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141102",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141103",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141104",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141105",
+      "project_family": "華泰",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141106",
+      "project_family": "台灣色譜",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141107",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141108",
+      "project_family": "國倫員林一場15號井機電",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141201",
+      "project_family": "聯邦",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141202",
+      "project_family": "桂田大樹",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141203",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141204",
+      "project_family": "西富",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141205",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141206",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141207",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141208",
+      "project_family": "濬創",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141209",
+      "project_family": "利信",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141210",
+      "project_family": "國倫－嘉東加壓站抽水機汰換",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141211",
+      "project_family": "玖堡實業儀表箱",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141212",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1141213",
+      "project_family": "宗正",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150101",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150102",
+      "project_family": "盛福八掌溪支線(3K+730~4K+240)",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150103",
+      "project_family": "盛福八掌溪支線(4K+600~5K+130)",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150104",
+      "project_family": "臻輊",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150105",
+      "project_family": "昀興",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150106",
+      "project_family": "器識",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150107",
+      "project_family": "瑨億",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150108",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150109",
+      "project_family": "文勝科技",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150110",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150201",
+      "project_family": "臻輊",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150202",
+      "project_family": "榮陳抗旱2.0計畫緊急伏流水三口深井改善",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150203",
+      "project_family": "新僑工程新埔鎮五埔里6鄰石坑街供水",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150204",
+      "project_family": "新僑工程關西鎮東安里11",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150205",
+      "project_family": "核陽",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150301",
+      "project_family": "互信科技",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150302",
+      "project_family": "盛福",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150303",
+      "project_family": "器識",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150304",
+      "project_family": "宗正實業",
+      "project_family_source": "derived_from_project_name",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150305",
+      "project_family": "盛福",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150306",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150307",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150401",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150402",
+      "project_family": "新陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150403",
+      "project_family": "卓文彬",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150404",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150501",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150502",
+      "project_family": "器識",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150503",
+      "project_family": "盛福",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150504",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150505",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150506",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150507",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150508",
+      "project_family": "詠翔鑫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150509",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150510",
+      "project_family": "顯茂",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150511",
+      "project_family": "育鎮",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150601",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150602",
+      "project_family": "皓宇",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150603",
+      "project_family": "國倫",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150604",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    },
+    {
+      "project_id": "1150605",
+      "project_family": "榮陳",
+      "project_family_source": "file_index_customer",
+      "current_cohort": "UNASSIGNED_DEVELOPMENT_INVENTORY",
+      "proposed_canonical_change": false,
+      "audit_required_before_change": true
+    }
+  ],
+  "proposed_family_assignment_changes": [],
+  "family_counts": {
+    "飛達鳥嘴潭下游送水管E": 1,
+    "聯電FAB 12A P6擴建工程氨氮廢水處理廠電氣工程": 1,
+    "國倫水電控制箱": 1,
+    "飛達機電": 4,
+    "宇博彰化番雅橋前操作箱": 1,
+    "宇博鹽埔及竹田淨水場": 1,
+    "宇博高雄廠大樹深井": 1,
+    "宇博義竹": 1,
+    "昕辰嘉義": 1,
+    "榮陳義竹所傳訊箱修改": 1,
+    "三裕正下營鐵道綠廊道": 1,
+    "西富": 15,
+    "臻輊營造": 2,
+    "宇博實業": 1,
+    "國倫水電": 2,
+    "宇博二林芳苑8號井": 1,
+    "証銓工業": 1,
+    "詠翔鑫": 17,
+    "三裕正": 2,
+    "正安消防": 5,
+    "三民營造": 2,
+    "佑典": 1,
+    "國倫高鐵台南車站清水池改善": 1,
+    "超控鏡面淨水場廢水處理": 1,
+    "核陽工程": 2,
+    "鈺興豐電錶更換": 1,
+    "華格": 7,
+    "三裕正下營綠廊道追加接線箱": 1,
+    "京鼎(三裕正)": 1,
+    "顯茂工程": 1,
+    "國倫": 16,
+    "華格水電": 1,
+    "榮陳": 69,
+    "新陳": 14,
+    "立岳": 1,
+    "顯茂": 11,
+    "盛福": 8,
+    "核陽": 22,
+    "濬創": 3,
+    "亞翔": 2,
+    "國策": 2,
+    "宗正水位計更換": 1,
+    "國倫竹崎鄉緞繻村等供水": 1,
+    "榮陳寶山鄉華安段社區水位站": 1,
+    "榮陳屏東科學園區深井機電": 1,
+    "宇博": 6,
+    "宗正廠房打掃整理": 1,
+    "皓宇": 2,
+    "宗正產業": 1,
+    "瑨億水電": 2,
+    "亞睿科技": 2,
+    "金展空調": 1,
+    "辰永亮": 1,
+    "政東": 1,
+    "宗正": 16,
+    "昶源": 1,
+    "玖聖": 1,
+    "利信鳥嘴潭下游送水管B": 2,
+    "器識工程": 1,
+    "榮陳馬稠後園區配水池二期": 1,
+    "昱成機電": 3,
+    "榮陳員林出水里四百崁延管": 1,
+    "卓文彬": 7,
+    "西富聯電P4零星工程(堆高機充電控制箱)": 1,
+    "新陳浮洲加壓站至板新場管六": 1,
+    "燁誠": 1,
+    "西富銘牌及買料": 1,
+    "瑞震工程": 1,
+    "新陳浮洲加壓站至板新場管七": 1,
+    "榮陳高樹泰山2號井": 1,
+    "國倫竹崎鄉中和村石棹供水": 1,
+    "榮陳花壇大葉5號井": 1,
+    "榮陳北斗永靖7號井": 1,
+    "國倫鹿港13號重鑿井": 1,
+    "飛達機電曾文二期場外1500MM管線": 1,
+    "進一水電新竹市大中區管線建置": 1,
+    "核楊": 1,
+    "新陳濁幹線(27K+257)改善工程": 1,
+    "義竹營運所操作盤BTS更換": 1,
+    "台灣色譜": 8,
+    "金坐營造": 2,
+    "桂田": 4,
+    "國倫楠玉及鏡面場監控盤增設": 1,
+    "器識": 8,
+    "榮陳員林第三淨水場快濾桶更新": 1,
+    "皓宇水電": 1,
+    "榮陳牡丹廠北送中繼加壓站": 1,
+    "國倫竹崎鄉龍山村南靖寮": 1,
+    "國倫中埔鄉社口村內埔供水": 1,
+    "宇博通霄鎮福源里供水": 1,
+    "林東憲永華路住宅工程": 1,
+    "南寶球場": 1,
+    "榮陳西屯區市政路延伸": 1,
+    "飛達機電南科八路送水管": 1,
+    "國倫各場儀表箱": 1,
+    "宇博台水名牌及保險絲": 1,
+    "昶源粉體塗料": 1,
+    "榮陳台南市楠西區灣丘里竹仔圾延管": 1,
+    "利信": 8,
+    "榮陳港務局供水閥箱": 1,
+    "榮陳馬稠後園區追加TR": 1,
+    "飛達": 3,
+    "飛宏三場現場舊臨時盤更換工程": 1,
+    "瑨億霧峰區仁德巷11": 1,
+    "姚銓": 1,
+    "旺邦營造": 1,
+    "玖堡西螺水管橋增設儀表箱": 1,
+    "榮陳彰化市福田淨水場寬口井取水口": 1,
+    "榮陳114白河所加壓站抽水機汰換": 1,
+    "國倫竹崎所阿里山場原水取水": 1,
+    "國倫古坑所APFR更換": 1,
+    "宇博台水名牌": 2,
+    "橙富": 4,
+    "臻輊": 3,
+    "宏展水電": 1,
+    "澄富": 1,
+    "何先生": 1,
+    "玖堡": 1,
+    "楊怡文": 1,
+    "瑨億": 3,
+    "香閣食品廠": 1,
+    "國翊": 1,
+    "昀興": 2,
+    "禾協水電": 1,
+    "昱成": 2,
+    "宥騰": 1,
+    "詠翔鑫變壓器購買(零料)": 1,
+    "香閣食品": 1,
+    "國倫114年各站儀表箱": 1,
+    "宗正實業": 3,
+    "允承科技": 1,
+    "漢泰": 1,
+    "濬創科技": 1,
+    "華泰": 1,
+    "國倫員林一場15號井機電": 1,
+    "聯邦": 1,
+    "桂田大樹": 1,
+    "國倫－嘉東加壓站抽水機汰換": 1,
+    "玖堡實業儀表箱": 1,
+    "盛福八掌溪支線(3K+730~4K+240)": 1,
+    "盛福八掌溪支線(4K+600~5K+130)": 1,
+    "文勝科技": 1,
+    "榮陳抗旱2.0計畫緊急伏流水三口深井改善": 1,
+    "新僑工程新埔鎮五埔里6鄰石坑街供水": 1,
+    "新僑工程關西鎮東安里11": 1,
+    "互信科技": 1,
+    "育鎮": 1
+  }
+}
