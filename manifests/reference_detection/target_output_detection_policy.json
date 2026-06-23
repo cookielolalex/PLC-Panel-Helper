@@ -1,0 +1,48 @@
+{
+  "policy_id": "target_output_detection_policy_v2",
+  "version": "target_output_detection_v2_metadata_first",
+  "metadata_inspection_order": [
+    "filename",
+    "relative_path",
+    "extension",
+    "hash",
+    "size",
+    "page_count",
+    "pdf_metadata",
+    "existing_inventory_classification"
+  ],
+  "root_metadata_pass": "Does not open completed PDFs; page_count and PDF metadata remain null unless an isolated reference_presence_classifier is required.",
+  "classification_values": [
+    "VERIFIED_ALL_THREE",
+    "PROBABLE_ALL_THREE",
+    "PARTIAL_REFERENCE_SET",
+    "AMBIGUOUS_REFERENCE_SET",
+    "NO_REFERENCE_SET",
+    "INACCESSIBLE_REFERENCE_SET"
+  ],
+  "reference_content_isolation": {
+    "source_review_agents_receive": [
+      "completed reference set exists",
+      "three output types verified",
+      "neutral file IDs",
+      "reference manifest hash"
+    ],
+    "generators_receive": [
+      "completed reference set exists",
+      "three output types verified",
+      "neutral file IDs",
+      "reference manifest hash"
+    ],
+    "forbidden_to_source_reviewers_and_generators": [
+      "reference dimensions",
+      "component names",
+      "quantities",
+      "layout descriptions",
+      "drawing text",
+      "images",
+      "thumbnails",
+      "title block details beyond role classification",
+      "reference-derived design decisions"
+    ]
+  }
+}
