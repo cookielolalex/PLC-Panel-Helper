@@ -1,0 +1,35 @@
+{
+  "profile_id": "plc_layout_v2",
+  "status": "FROZEN_AFTER_EVALUATOR_SENSITIVITY_FIX",
+  "supersedes": "plc_layout_v1",
+  "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+  "change_reason": "Replace hardcoded calibration score shell with explicit scoring records, arithmetic recomputation, hard-gate handling, coverage denominator handling, and finding deduplication.",
+  "highest_automated_status": "READY_FOR_PRIVATE_PREVIEW",
+  "validity_gates": [
+    "REFERENCE_LEAKAGE",
+    "STALE_OR_UNRELATED_WORKSHEET",
+    "MISSING_REQUIRED_PDF",
+    "BLANK_CORRUPT_OR_WRONG_PROJECT_PDF",
+    "INVENTED_CRITICAL_VALUE",
+    "SILENT_CRITICAL_CONFLICT_RESOLUTION",
+    "MISSING_CRITICAL_PROVENANCE",
+    "POST_FREEZE_MUTATION",
+    "CRITICAL_CROSS_PDF_CONTRADICTION",
+    "UNSUPPORTED_APPROVAL_OR_CERTIFICATION_CLAIM"
+  ],
+  "weights": {
+    "source_selection_provenance_conflict": 20,
+    "panel_schedule_enclosure_facts": 15,
+    "device_bom_quantity_tag_fidelity": 20,
+    "shared_geometry_cross_pdf_consistency": 15,
+    "production_drawing_quality": 10,
+    "punch_drawing_quality": 10,
+    "sheetmetal_drawing_quality": 10
+  },
+  "item_scores": [1.0, 0.75, 0.5, 0.25, 0.0],
+  "criticality_multipliers": {
+    "fabrication_safety_identity_critical": 5,
+    "engineering_significant": 3,
+    "drafting_style_preference": 1
+  }
+}

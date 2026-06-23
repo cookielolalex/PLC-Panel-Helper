@@ -63,6 +63,82 @@ def test_grading_weights() -> None:
     assert_true(profile["highest_automated_status"] == "READY_FOR_PRIVATE_PREVIEW", "highest automated status guard changed")
 
 
+def test_evaluator_sensitivity_monotonicity() -> None:
+    from evaluator_scoring import compute_score
+
+    base = {
+        "run_id": "SENS-BASE",
+        "validity_inputs": {"required_outputs_present": True, "hard_gate_failures": []},
+        "coverage": {"scorable_elements": 38, "total_elements": 100},
+        "dimension_items": {
+            "source_selection_provenance_conflict": [
+                {"item_id": "source_bundle", "score": 14, "max_score": 20, "classification": "EXPLICIT_IN_ALLOWED_INPUT"}
+            ],
+            "panel_schedule_enclosure_facts": [
+                {"item_id": "panel_facts", "score": 5, "max_score": 15, "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"}
+            ],
+            "device_bom_quantity_tag_fidelity": [
+                {"item_id": "device_fidelity", "score": 8, "max_score": 20, "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"}
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+                {"item_id": "cross_pdf", "score": 8, "max_score": 15, "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"}
+            ],
+            "production_drawing_quality": [
+                {"item_id": "production", "score": 3, "max_score": 10, "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"}
+            ],
+            "punch_drawing_quality": [
+                {"item_id": "punch", "score": 2, "max_score": 10, "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"}
+            ],
+            "sheetmetal_drawing_quality": [
+                {"item_id": "sheetmetal", "score": 2, "max_score": 10, "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"}
+            ],
+        },
+        "findings": [
+            {"finding_id": "F1", "severity": "HIGH", "dedupe_key": "missing_exact_dimensions", "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"},
+            {"finding_id": "F2", "severity": "HIGH", "dedupe_key": "reference_layout_unavailable", "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"},
+            {"finding_id": "F3", "severity": "HIGH", "dedupe_key": "schematic_minimal", "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"},
+        ],
+    }
+
+    baseline = compute_score(base)
+    assert_true(baseline["quality_score"] == 42, "baseline score should be arithmetic sum of dimension items")
+    assert_true(baseline["scorable_coverage"] == 38, "coverage should come from the explicit denominator")
+
+    missing = json.loads(json.dumps(base))
+    missing["validity_inputs"]["required_outputs_present"] = False
+    assert_true(compute_score(missing)["validity"] == "FAIL", "missing output must fail validity")
+
+    corrected = json.loads(json.dumps(base))
+    corrected["dimension_items"]["panel_schedule_enclosure_facts"][0]["score"] = 9
+    assert_true(compute_score(corrected)["quality_score"] > baseline["quality_score"], "proven correction must improve score")
+
+    worse = json.loads(json.dumps(base))
+    worse["dimension_items"]["device_bom_quantity_tag_fidelity"][0]["score"] = 4
+    assert_true(compute_score(worse)["quality_score"] < baseline["quality_score"], "new high defect must worsen score")
+
+    unsupported = json.loads(json.dumps(base))
+    unsupported["validity_inputs"]["hard_gate_failures"] = ["INVENTED_CRITICAL_VALUE"]
+    gated = compute_score(unsupported)
+    assert_true(gated["validity"] == "FAIL" and gated["quality_score"] == 0, "hard gate must override numerical score")
+
+    no_scorable = json.loads(json.dumps(base))
+    no_scorable["coverage"] = {"scorable_elements": 0, "total_elements": 0}
+    low = compute_score(no_scorable)
+    assert_true(low["evidence_strength"] == "INSUFFICIENT_COVERAGE", "zero scorable elements must not look like an ordinary score")
+
+    duplicate = json.loads(json.dumps(base))
+    duplicate["findings"].append(dict(duplicate["findings"][0], finding_id="F1_DUP"))
+    deduped = compute_score(duplicate)
+    assert_true(deduped["high_findings"] == baseline["high_findings"], "duplicate findings must not add accidental penalties")
+
+    same_total = json.loads(json.dumps(base))
+    same_total["dimension_items"]["production_drawing_quality"][0]["score"] = 4
+    same_total["dimension_items"]["punch_drawing_quality"][0]["score"] = 1
+    alt = compute_score(same_total)
+    assert_true(alt["quality_score"] == baseline["quality_score"], "fixture should preserve same total")
+    assert_true(alt["dimension_scores"] != baseline["dimension_scores"], "same total must preserve different dimension vectors")
+
+
 def test_synthetic_render_grade() -> None:
     work_dir = ROOT / "tmp" / "phase0_test_harness"
     run([PY, "scripts/eval_harness.py", "--work-dir", str(work_dir)])
@@ -305,6 +381,7 @@ def main() -> None:
         test_utf8_fixture_labels,
         test_forbidden_classification,
         test_grading_weights,
+        test_evaluator_sensitivity_monotonicity,
         test_synthetic_render_grade,
         test_positive_bundle_and_contamination_scan,
         test_source_guard_fail_closed_decisions,

@@ -8,6 +8,7 @@ import time
 from pathlib import Path
 from typing import Any
 
+from evaluator_scoring import build_calibration_scoring_record, compute_score
 from harness_lib import sha256_file, validate_file, write_json
 
 
@@ -161,53 +162,11 @@ def main() -> None:
             "Scoring separates unavailable dimensions from unsupported invented values.",
         ],
     }
-    grading = {
-        "run_id": args.run_id,
-        "validity": "PASS",
-        "quality_score": 42,
-        "scorable_coverage": 38,
-        "confidence": "LOW",
-        "critical_findings": 0,
-        "high_findings": 3,
-        "dimension_scores": {
-            "source_selection_provenance_conflict": 14,
-            "panel_schedule_enclosure_facts": 5,
-            "device_bom_quantity_tag_fidelity": 8,
-            "shared_geometry_cross_pdf_consistency": 8,
-            "production_drawing_quality": 3,
-            "punch_drawing_quality": 2,
-            "sheetmetal_drawing_quality": 2
-        },
-        "hard_gate_failures": [],
-        "output_type_scores": {
-            "production": 14,
-            "sheetmetal": 14,
-            "punch": 14
-        },
-        "findings": [
-            {
-                "severity": "HIGH",
-                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
-                "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
-            },
-            {
-                "severity": "HIGH",
-                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
-                "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
-            },
-            {
-                "severity": "HIGH",
-                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
-                "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
-            }
-        ],
-        "comparison_limitations": comparison["limitations"],
-        "run_metadata": {
-            "reference_access_after_freeze": True,
-            "reviewer_workspace": str(sandbox),
-            "rubric": "plc_layout_v1",
-        },
-    }
+    scoring_record = build_calibration_scoring_record(run_dir, args.project_id, comparison)
+    scoring_record["run_metadata"]["reviewer_workspace"] = str(sandbox)
+    write_json(review_dir / "scoring_record_v2.json", scoring_record)
+    scoring_record["scoring_record_sha256"] = sha256_file(review_dir / "scoring_record_v2.json")
+    grading = compute_score(scoring_record)
     write_json(review_dir / "effective_sheet_revision_manifest.json", effective_manifest)
     write_json(review_dir / "comparison_metrics.json", comparison)
     write_json(review_dir / "grading_result.json", grading)
