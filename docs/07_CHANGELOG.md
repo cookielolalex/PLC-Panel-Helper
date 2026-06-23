@@ -55,3 +55,6 @@
 - Added `scripts/evaluator_scoring.py`, `evals/grading_profiles/plc_layout_v2.json`, counterfactual fixtures, and Phase A reports under `reports/evaluator-sensitivity/`.
 - Rescored the 12 frozen calibration outputs with v2; scores remain `42/38`, now from explicit scoring records and coverage arithmetic.
 - Completed fresh independent evaluator-sensitivity audit with result `EVALUATOR_SENSITIVITY_PASS`.
+- Froze the cycle-000 24-project baseline protocol as `FROZEN_PROTOCOL_V1` with seed `BASELINE024-CYCLE000-20260623`.
+- Added `evals/baseline-024/` protocol manifests for cohort placeholders, workflow hashes, source readiness, and the four-wave run plan.
+- Stopped before Phase C source backfill and before any 24-project generation; 18 additional verified `ALLOWED_EVAL` projects are still required.

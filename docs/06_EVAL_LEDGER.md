@@ -59,3 +59,19 @@ Fix: added `plc_layout_evaluator_v2_sensitivity` with explicit scoring records, 
 Rescore result: all 12 frozen calibration runs rescore to score `42` and scorable coverage `38` under v2; validity remains `PASS`; critical findings remain `0`; high findings remain `36`.
 
 Evidence: `reports/evaluator-sensitivity/calibration_score_recomputation.json`, `reports/evaluator-sensitivity/project_differentiation.json`, `reports/evaluator-sensitivity/counterfactual_results.json`, `reports/evaluator-sensitivity/test_results.json`, and `reports/evaluator-sensitivity/subagent_independent_audit.json`.
+
+## baseline-024-cycle-000 Phase B protocol freeze
+
+Status: `BASELINE024_PROTOCOL_FROZEN - PHASE_C_SOURCE_BACKFILL_PENDING`.
+
+Purpose: freeze the rules for the first 24-project development baseline before source backfill or generation.
+
+Frozen seed: `BASELINE024-CYCLE000-20260623`.
+
+Evaluator: `plc_layout_evaluator_v2_sensitivity`.
+
+Current cohort readiness: 6 `ALLOWED_EVAL` calibration anchors retained as fresh-run anchors; 18 additional project slots remain pending Phase C source backfill; metadata-only candidate pool contains 20 reference-complete non-anchor candidates; project `1110102` remains excluded until its prior bundle-verification defect is fixed, regression-tested, and independently audited.
+
+Generation status: not authorized. Baseline generation may begin only after exactly 24 projects have verified `ALLOWED_EVAL` bundles and a final cohort manifest is frozen.
+
+Evidence: `docs/specs/24_PROJECT_BASELINE_PROTOCOL.md`, `evals/baseline-024/cohort_manifest.json`, `evals/baseline-024/cohort_selection_report.md`, `evals/baseline-024/frozen_workflow_manifest.json`, `evals/baseline-024/source_readiness.json`, and `evals/baseline-024/run_plan.json`.

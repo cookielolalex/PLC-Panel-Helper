@@ -1,0 +1,131 @@
+{
+  "baseline_id": "baseline-024-cycle-000",
+  "status": "PROTOCOL_FROZEN_PENDING_FINAL_COHORT",
+  "random_seed": "BASELINE024-CYCLE000-20260623",
+  "waves": [
+    {
+      "wave": 1,
+      "max_concurrency": 6,
+      "slots": [
+        {
+          "project_id": "1110101",
+          "status": "ANCHOR_NEEDS_FRESH_BASELINE_RUN"
+        },
+        {
+          "project_id": "1110104",
+          "status": "ANCHOR_NEEDS_FRESH_BASELINE_RUN"
+        },
+        {
+          "project_id": "1110204",
+          "status": "ANCHOR_NEEDS_FRESH_BASELINE_RUN"
+        },
+        {
+          "project_id": "1110205",
+          "status": "ANCHOR_NEEDS_FRESH_BASELINE_RUN"
+        },
+        {
+          "project_id": "1110405",
+          "status": "ANCHOR_NEEDS_FRESH_BASELINE_RUN"
+        },
+        {
+          "project_id": "1110410",
+          "status": "ANCHOR_NEEDS_FRESH_BASELINE_RUN"
+        }
+      ]
+    },
+    {
+      "wave": 2,
+      "max_concurrency": 6,
+      "slots": [
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_01",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_02",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_03",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_04",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_05",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_06",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        }
+      ]
+    },
+    {
+      "wave": 3,
+      "max_concurrency": 6,
+      "slots": [
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_07",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_08",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_09",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_10",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_11",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_12",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        }
+      ]
+    },
+    {
+      "wave": 4,
+      "max_concurrency": 6,
+      "slots": [
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_13",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_14",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_15",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_16",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_17",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        },
+        {
+          "project_id": "PENDING_PHASE_C_SLOT_18",
+          "status": "PENDING_PHASE_C_SOURCE_BACKFILL"
+        }
+      ]
+    }
+  ],
+  "fresh_generation_required_for_anchors": true,
+  "secondary_review_selection_rule": "Use frozen seed after 24 primary reviews: one per wave, one low coverage, one relatively high coverage, one complex/revision-sensitive, fill overlaps by distinct family.",
+  "generator_task_wording_hash_source": "docs/specs/24_PROJECT_BASELINE_PROTOCOL.md",
+  "review_task_wording_hash_source": "docs/specs/24_PROJECT_BASELINE_PROTOCOL.md"
+}

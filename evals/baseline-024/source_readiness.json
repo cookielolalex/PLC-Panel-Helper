@@ -1,0 +1,329 @@
+{
+  "baseline_id": "baseline-024-cycle-000",
+  "status": "SIX_ALLOWED_EVAL_ANCHORS_EIGHTEEN_PENDING",
+  "current_allowed_eval_count": 6,
+  "additional_allowed_eval_required": 18,
+  "current_allowed_eval_projects": [
+    {
+      "project_id": "1110101",
+      "status": "ALLOWED_EVAL",
+      "bundle_manifest_hash": "094620F16074DB72589944E99080025A623BBCC14B632982DBC24B3D82929DEA",
+      "verification_results_hash": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699",
+      "reference_manifest_hash": "9A0ABF5ED89AD4B979D1D1BAAB6580B6C87558673C56B2DECB98AF3B194DD505",
+      "readiness_row": {
+        "project_id": "1110101",
+        "project_year_prefix": "111",
+        "path_year_prefix": "111",
+        "family_id": "飛達鳥嘴潭下游送水管E",
+        "batch_stratum": "straightforward_visible_candidate",
+        "has_all_three_completed_targets": "true",
+        "workbook_count": "5",
+        "candidate_decision_rows": "5",
+        "needs_human_review_rows": "0",
+        "parser_required_rows": "5",
+        "quarantined_rows": "0",
+        "auto_denied_rows": "0",
+        "parsed_with_fingerprint_rows": "0",
+        "reviewable_fingerprinted_visible_xlsx_rows": "0",
+        "current_parser_bundle_possible": "false",
+        "primary_blocker": "all candidate rows require the unsupported legacy xls parser"
+      }
+    },
+    {
+      "project_id": "1110104",
+      "status": "ALLOWED_EVAL",
+      "bundle_manifest_hash": "DF4068D4D10C4DF8FD084B4B4960E6604D45EAB307995BFC213B49BA723CEFC2",
+      "verification_results_hash": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16",
+      "reference_manifest_hash": "D75BDD7B1BED277C478B05CD0E887C5B1D7D8A0109C3DEDDD0466972AC56983F",
+      "readiness_row": {
+        "project_id": "1110104",
+        "project_year_prefix": "111",
+        "path_year_prefix": "111",
+        "family_id": "飛達機電",
+        "batch_stratum": "multi_panel_or_multi_workbook",
+        "has_all_three_completed_targets": "true",
+        "workbook_count": "9",
+        "candidate_decision_rows": "6",
+        "needs_human_review_rows": "2",
+        "parser_required_rows": "4",
+        "quarantined_rows": "0",
+        "auto_denied_rows": "0",
+        "parsed_with_fingerprint_rows": "2",
+        "reviewable_fingerprinted_visible_xlsx_rows": "2",
+        "current_parser_bundle_possible": "true",
+        "primary_blocker": "visible xlsx rows are parsed and fingerprinted pending human approval"
+      }
+    },
+    {
+      "project_id": "1110204",
+      "status": "ALLOWED_EVAL",
+      "bundle_manifest_hash": "8F9F8486E9E23BA5DB3B1A0F8BA83A3C735BFF01669067F283E6C1E90DCBB672",
+      "verification_results_hash": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16",
+      "reference_manifest_hash": "169A414A317C574B6B7AA3BDA69C19E74C87ECC6846F1F6F9A51B065BD380916",
+      "readiness_row": {
+        "project_id": "1110204",
+        "project_year_prefix": "111",
+        "path_year_prefix": "111",
+        "family_id": "宇博義竹",
+        "batch_stratum": "stale_or_unrelated_sheet_risk",
+        "has_all_three_completed_targets": "true",
+        "workbook_count": "9",
+        "candidate_decision_rows": "8",
+        "needs_human_review_rows": "2",
+        "parser_required_rows": "5",
+        "quarantined_rows": "0",
+        "auto_denied_rows": "1",
+        "parsed_with_fingerprint_rows": "2",
+        "reviewable_fingerprinted_visible_xlsx_rows": "2",
+        "current_parser_bundle_possible": "true",
+        "primary_blocker": "visible xlsx rows are parsed and fingerprinted pending human approval with one auto-denied stale or forbidden row"
+      }
+    },
+    {
+      "project_id": "1110205",
+      "status": "ALLOWED_EVAL",
+      "bundle_manifest_hash": "77DB6B84667FADC3A81ADBDFCFDF8E1704997DF22CC581ED016780A6943CDF1F",
+      "verification_results_hash": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34",
+      "reference_manifest_hash": "F42304DC3A9EAD3BE211A69F6D0D1AE206284E9DB1FE4DBE0196DFC51B6DB5E6",
+      "readiness_row": {
+        "project_id": "1110205",
+        "project_year_prefix": "111",
+        "path_year_prefix": "111",
+        "family_id": "昕辰嘉義",
+        "batch_stratum": "parser_required_risk",
+        "has_all_three_completed_targets": "true",
+        "workbook_count": "10",
+        "candidate_decision_rows": "11",
+        "needs_human_review_rows": "4",
+        "parser_required_rows": "5",
+        "quarantined_rows": "0",
+        "auto_denied_rows": "2",
+        "parsed_with_fingerprint_rows": "4",
+        "reviewable_fingerprinted_visible_xlsx_rows": "4",
+        "current_parser_bundle_possible": "true",
+        "primary_blocker": "visible xlsx rows are parsed and fingerprinted pending human approval with auto-denied rows excluded"
+      }
+    },
+    {
+      "project_id": "1110405",
+      "status": "ALLOWED_EVAL",
+      "bundle_manifest_hash": "1026CBF59DE86B745FE3D841D890BC542FBA4442640D2E67A5924EE021DABCE5",
+      "verification_results_hash": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34",
+      "reference_manifest_hash": "ED7F31EB004598C74C1C8142931B0DF49F2907545986543E930AA294395FF316",
+      "readiness_row": {
+        "project_id": "1110405",
+        "project_year_prefix": "111",
+        "path_year_prefix": "111",
+        "family_id": "國倫水電",
+        "batch_stratum": "seeded_random_family_separated",
+        "has_all_three_completed_targets": "true",
+        "workbook_count": "10",
+        "candidate_decision_rows": "9",
+        "needs_human_review_rows": "4",
+        "parser_required_rows": "5",
+        "quarantined_rows": "0",
+        "auto_denied_rows": "0",
+        "parsed_with_fingerprint_rows": "4",
+        "reviewable_fingerprinted_visible_xlsx_rows": "4",
+        "current_parser_bundle_possible": "true",
+        "primary_blocker": "visible xlsx rows are parsed and fingerprinted pending human approval"
+      }
+    },
+    {
+      "project_id": "1110410",
+      "status": "ALLOWED_EVAL",
+      "bundle_manifest_hash": "02A160018835FD76806AB1B6137EAA5B339021E6E4049A4A1F314451A03CDDE8",
+      "verification_results_hash": "A714645AFEBA50596013C453F14E5E5FF93F5C82688810C3ECFD3F162534BA20",
+      "reference_manifest_hash": "97DA3F6F0EDA5CA2B7907D39A1DA09AFB523596842296E0104D8C4650FF91583",
+      "readiness_row": {
+        "project_id": "1110410",
+        "project_year_prefix": "111",
+        "path_year_prefix": "111",
+        "family_id": "國倫水電",
+        "batch_stratum": "backfill_reference_complete",
+        "has_all_three_completed_targets": "true",
+        "workbook_count": "4",
+        "candidate_decision_rows": "4",
+        "needs_human_review_rows": "3",
+        "parser_required_rows": "1",
+        "quarantined_rows": "0",
+        "auto_denied_rows": "0",
+        "parsed_with_fingerprint_rows": "3",
+        "reviewable_fingerprinted_visible_xlsx_rows": "3",
+        "current_parser_bundle_possible": "true",
+        "primary_blocker": "visible xlsx rows are parsed and fingerprinted pending human approval"
+      }
+    }
+  ],
+  "metadata_only_candidate_pool": {
+    "reference_complete_not_anchor_not_excluded_count": 20,
+    "projects": [
+      {
+        "project_id": "1110103",
+        "project_name": "1110103國倫水電控制箱",
+        "workbook_count": 6,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1110203",
+        "project_name": "1110203宇博高雄廠大樹深井",
+        "workbook_count": 10,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1110402",
+        "project_name": "1110402西富-工具箱S3二次配",
+        "workbook_count": 0,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "NO_APPROVED_WORKSHEETS",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1110404",
+        "project_name": "1110404宇博實業-芬園利民橋",
+        "workbook_count": 10,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1110501",
+        "project_name": "1110501詠翔鑫-凱倫傘業有限公司 作業廠房、辦公室新建工程",
+        "workbook_count": 7,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1110504",
+        "project_name": "1110504三裕正-台江國家公園保育植物苗圃新建工程",
+        "workbook_count": 4,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1110701",
+        "project_name": "1110701國倫高鐵台南車站清水池改善",
+        "workbook_count": 10,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1110704",
+        "project_name": "1110704超控鏡面淨水場廢水處理",
+        "workbook_count": 8,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1110706",
+        "project_name": "1110706核陽工程-聯電 12A P3 CUB 2F DRYER一次配電",
+        "workbook_count": 5,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1110801",
+        "project_name": "1110801華格-內埔工業區汙水管路工程",
+        "workbook_count": 8,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1120101",
+        "project_name": "1120101顯茂工程-聯電P6 WH棟新建工程",
+        "workbook_count": 16,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1120102",
+        "project_name": "1120102核陽工程-紅外線控制板",
+        "workbook_count": 5,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1120201",
+        "project_name": "1120201立岳-南工處第三工務所辦公室整遷工程",
+        "workbook_count": 5,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1120202",
+        "project_name": "1120202榮陳-新竹富百田社區開發供水",
+        "workbook_count": 11,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1120204",
+        "project_name": "1120204西富-聯電P34壓降改善工程",
+        "workbook_count": 11,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1120207",
+        "project_name": "1120207顯茂-臨時盤",
+        "workbook_count": 6,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1120301",
+        "project_name": "1120301核陽-聯電 12A P1_P2 CUB棟 CDA,冰機盤控制配電工程",
+        "workbook_count": 12,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1120305",
+        "project_name": "1120305榮陳-鳥嘴潭管九追加PN2盤(臺中鐵路高架化騰空廊道下)",
+        "workbook_count": 9,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1120308",
+        "project_name": "1120308濬創-馬稠後儀表箱",
+        "workbook_count": 11,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      },
+      {
+        "project_id": "1120309",
+        "project_name": "1120309西富-聯電用消防箱",
+        "workbook_count": 5,
+        "has_forbidden_sources": "True",
+        "generator_candidate_status": "REFERENCE_COMPLETE_WORKSHEET_REVIEW_REQUIRED",
+        "completed_reference_content_inspected_for_selection": false
+      }
+    ],
+    "completed_reference_content_inspected_for_selection": false
+  },
+  "phase_c_batch_size": 6,
+  "known_blockers_from_prior_readiness": {
+    "1110102": "excluded until bundle-verification defect corrected and audited",
+    "parser_required_common_blocker": "legacy .xls rows appear in prior readiness metadata; parser work may be required during Phase C"
+  }
+}
