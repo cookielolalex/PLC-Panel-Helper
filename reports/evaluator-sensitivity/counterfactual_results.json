@@ -1,0 +1,1712 @@
+{
+  "status": "PASS",
+  "baseline": {
+    "run_id": "COUNTERFACTUAL-BASE",
+    "validity": "PASS",
+    "quality_score": 42,
+    "scorable_coverage": 38,
+    "confidence": "LOW",
+    "critical_findings": 0,
+    "high_findings": 3,
+    "dimension_scores": {
+      "source_selection_provenance_conflict": 14,
+      "panel_schedule_enclosure_facts": 5,
+      "device_bom_quantity_tag_fidelity": 8,
+      "shared_geometry_cross_pdf_consistency": 8,
+      "production_drawing_quality": 3,
+      "punch_drawing_quality": 2,
+      "sheetmetal_drawing_quality": 2
+    },
+    "hard_gate_failures": [],
+    "output_type_scores": {
+      "production": 14,
+      "sheetmetal": 14,
+      "punch": 14
+    },
+    "findings": [
+      {
+        "severity": "HIGH",
+        "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+        "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+      },
+      {
+        "severity": "HIGH",
+        "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+        "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+      },
+      {
+        "severity": "HIGH",
+        "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+        "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+      }
+    ],
+    "comparison_limitations": [
+      "No exact geometry overlay was produced because registration was not established as reliable.",
+      "Completed references are used only in reviewer workspace after generation freeze.",
+      "Scoring separates unavailable dimensions from unsupported invented values."
+    ],
+    "run_metadata": {
+      "reference_access_after_freeze": true,
+      "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+      "rubric": "plc_layout_v2",
+      "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+      "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+      "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+      "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+      "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+      "scoring_record_sha256": null,
+      "evidence_strength": "LOW_EVIDENCE"
+    },
+    "scoring_evidence": {
+      "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+      "coverage": {
+        "scorable_elements": 38,
+        "total_elements": 100,
+        "items": [
+          {
+            "item_id": "verified_source_provenance",
+            "scorable": 20,
+            "denominator": 20
+          },
+          {
+            "item_id": "required_pdf_readability",
+            "scorable": 9,
+            "denominator": 9
+          },
+          {
+            "item_id": "canonical_model_panel_structure",
+            "scorable": 9,
+            "denominator": 9
+          },
+          {
+            "item_id": "exact_reference_geometry",
+            "scorable": 0,
+            "denominator": 34
+          },
+          {
+            "item_id": "device_and_material_specifics",
+            "scorable": 0,
+            "denominator": 28
+          }
+        ]
+      },
+      "dimension_items": {
+        "source_selection_provenance_conflict": [
+          {
+            "item_id": "verified_source_bundle_and_provenance",
+            "score": 14,
+            "max_score": 20,
+            "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+          }
+        ],
+        "panel_schedule_enclosure_facts": [
+          {
+            "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+            "score": 5,
+            "max_score": 15,
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+          }
+        ],
+        "device_bom_quantity_tag_fidelity": [
+          {
+            "item_id": "device_bom_not_extracted_from_allowed_bundle",
+            "score": 8,
+            "max_score": 20,
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+          }
+        ],
+        "shared_geometry_cross_pdf_consistency": [
+          {
+            "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+            "score": 8,
+            "max_score": 15,
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+          }
+        ],
+        "production_drawing_quality": [
+          {
+            "item_id": "production_pdf_schematic_readable",
+            "score": 3,
+            "max_score": 10,
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+          }
+        ],
+        "punch_drawing_quality": [
+          {
+            "item_id": "punch_pdf_schematic_readable",
+            "score": 2,
+            "max_score": 10,
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+          }
+        ],
+        "sheetmetal_drawing_quality": [
+          {
+            "item_id": "sheetmetal_pdf_schematic_readable",
+            "score": 2,
+            "max_score": 10,
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+          }
+        ]
+      },
+      "deduped_finding_count": 3
+    },
+    "evidence_strength": "LOW_EVIDENCE"
+  },
+  "cases": [
+    {
+      "case_id": "missing_required_output",
+      "description": "Remove a required output artifact.",
+      "result": {
+        "run_id": "COUNTERFACTUAL-BASE",
+        "validity": "FAIL",
+        "quality_score": 0,
+        "scorable_coverage": 38,
+        "confidence": "LOW",
+        "critical_findings": 0,
+        "high_findings": 3,
+        "dimension_scores": {
+          "source_selection_provenance_conflict": 14,
+          "panel_schedule_enclosure_facts": 5,
+          "device_bom_quantity_tag_fidelity": 8,
+          "shared_geometry_cross_pdf_consistency": 8,
+          "production_drawing_quality": 3,
+          "punch_drawing_quality": 2,
+          "sheetmetal_drawing_quality": 2
+        },
+        "hard_gate_failures": [
+          "MISSING_REQUIRED_PDF"
+        ],
+        "output_type_scores": {
+          "production": 14,
+          "sheetmetal": 14,
+          "punch": 14
+        },
+        "findings": [
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+            "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+          }
+        ],
+        "comparison_limitations": [
+          "No exact geometry overlay was produced because registration was not established as reliable.",
+          "Completed references are used only in reviewer workspace after generation freeze.",
+          "Scoring separates unavailable dimensions from unsupported invented values."
+        ],
+        "run_metadata": {
+          "reference_access_after_freeze": true,
+          "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+          "rubric": "plc_layout_v2",
+          "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+          "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+          "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+          "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "scoring_record_sha256": null,
+          "evidence_strength": "LOW_EVIDENCE"
+        },
+        "scoring_evidence": {
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "coverage": {
+            "scorable_elements": 38,
+            "total_elements": 100,
+            "items": [
+              {
+                "item_id": "verified_source_provenance",
+                "scorable": 20,
+                "denominator": 20
+              },
+              {
+                "item_id": "required_pdf_readability",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "canonical_model_panel_structure",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "exact_reference_geometry",
+                "scorable": 0,
+                "denominator": 34
+              },
+              {
+                "item_id": "device_and_material_specifics",
+                "scorable": 0,
+                "denominator": 28
+              }
+            ]
+          },
+          "dimension_items": {
+            "source_selection_provenance_conflict": [
+              {
+                "item_id": "verified_source_bundle_and_provenance",
+                "score": 14,
+                "max_score": 20,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "panel_schedule_enclosure_facts": [
+              {
+                "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+                "score": 5,
+                "max_score": 15,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "device_bom_quantity_tag_fidelity": [
+              {
+                "item_id": "device_bom_not_extracted_from_allowed_bundle",
+                "score": 8,
+                "max_score": 20,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+              {
+                "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+                "score": 8,
+                "max_score": 15,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "production_drawing_quality": [
+              {
+                "item_id": "production_pdf_schematic_readable",
+                "score": 3,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "punch_drawing_quality": [
+              {
+                "item_id": "punch_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "sheetmetal_drawing_quality": [
+              {
+                "item_id": "sheetmetal_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ]
+          },
+          "deduped_finding_count": 3
+        },
+        "evidence_strength": "LOW_EVIDENCE"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "unsupported_critical_value",
+      "description": "Add an unsupported critical exact fabrication value.",
+      "result": {
+        "run_id": "COUNTERFACTUAL-BASE",
+        "validity": "FAIL",
+        "quality_score": 0,
+        "scorable_coverage": 38,
+        "confidence": "LOW",
+        "critical_findings": 0,
+        "high_findings": 3,
+        "dimension_scores": {
+          "source_selection_provenance_conflict": 14,
+          "panel_schedule_enclosure_facts": 5,
+          "device_bom_quantity_tag_fidelity": 8,
+          "shared_geometry_cross_pdf_consistency": 8,
+          "production_drawing_quality": 3,
+          "punch_drawing_quality": 2,
+          "sheetmetal_drawing_quality": 2
+        },
+        "hard_gate_failures": [
+          "INVENTED_CRITICAL_VALUE"
+        ],
+        "output_type_scores": {
+          "production": 14,
+          "sheetmetal": 14,
+          "punch": 14
+        },
+        "findings": [
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+            "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+          }
+        ],
+        "comparison_limitations": [
+          "No exact geometry overlay was produced because registration was not established as reliable.",
+          "Completed references are used only in reviewer workspace after generation freeze.",
+          "Scoring separates unavailable dimensions from unsupported invented values."
+        ],
+        "run_metadata": {
+          "reference_access_after_freeze": true,
+          "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+          "rubric": "plc_layout_v2",
+          "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+          "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+          "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+          "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "scoring_record_sha256": null,
+          "evidence_strength": "LOW_EVIDENCE"
+        },
+        "scoring_evidence": {
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "coverage": {
+            "scorable_elements": 38,
+            "total_elements": 100,
+            "items": [
+              {
+                "item_id": "verified_source_provenance",
+                "scorable": 20,
+                "denominator": 20
+              },
+              {
+                "item_id": "required_pdf_readability",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "canonical_model_panel_structure",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "exact_reference_geometry",
+                "scorable": 0,
+                "denominator": 34
+              },
+              {
+                "item_id": "device_and_material_specifics",
+                "scorable": 0,
+                "denominator": 28
+              }
+            ]
+          },
+          "dimension_items": {
+            "source_selection_provenance_conflict": [
+              {
+                "item_id": "verified_source_bundle_and_provenance",
+                "score": 14,
+                "max_score": 20,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "panel_schedule_enclosure_facts": [
+              {
+                "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+                "score": 5,
+                "max_score": 15,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "device_bom_quantity_tag_fidelity": [
+              {
+                "item_id": "device_bom_not_extracted_from_allowed_bundle",
+                "score": 8,
+                "max_score": 20,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+              {
+                "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+                "score": 8,
+                "max_score": 15,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "production_drawing_quality": [
+              {
+                "item_id": "production_pdf_schematic_readable",
+                "score": 3,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "punch_drawing_quality": [
+              {
+                "item_id": "punch_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "sheetmetal_drawing_quality": [
+              {
+                "item_id": "sheetmetal_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ]
+          },
+          "deduped_finding_count": 3
+        },
+        "evidence_strength": "LOW_EVIDENCE"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "unavailable_to_scorable",
+      "description": "Convert one unavailable historical decision into a scorable explicit-input element.",
+      "result": {
+        "run_id": "COUNTERFACTUAL-BASE",
+        "validity": "PASS",
+        "quality_score": 46,
+        "scorable_coverage": 42,
+        "confidence": "LOW",
+        "critical_findings": 0,
+        "high_findings": 3,
+        "dimension_scores": {
+          "source_selection_provenance_conflict": 14,
+          "panel_schedule_enclosure_facts": 9,
+          "device_bom_quantity_tag_fidelity": 8,
+          "shared_geometry_cross_pdf_consistency": 8,
+          "production_drawing_quality": 3,
+          "punch_drawing_quality": 2,
+          "sheetmetal_drawing_quality": 2
+        },
+        "hard_gate_failures": [],
+        "output_type_scores": {
+          "production": 14,
+          "sheetmetal": 14,
+          "punch": 14
+        },
+        "findings": [
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+            "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+          }
+        ],
+        "comparison_limitations": [
+          "No exact geometry overlay was produced because registration was not established as reliable.",
+          "Completed references are used only in reviewer workspace after generation freeze.",
+          "Scoring separates unavailable dimensions from unsupported invented values."
+        ],
+        "run_metadata": {
+          "reference_access_after_freeze": true,
+          "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+          "rubric": "plc_layout_v2",
+          "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+          "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+          "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+          "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "scoring_record_sha256": null,
+          "evidence_strength": "LOW_EVIDENCE"
+        },
+        "scoring_evidence": {
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "coverage": {
+            "scorable_elements": 42,
+            "total_elements": 100,
+            "items": [
+              {
+                "item_id": "verified_source_provenance",
+                "scorable": 20,
+                "denominator": 20
+              },
+              {
+                "item_id": "required_pdf_readability",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "canonical_model_panel_structure",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "exact_reference_geometry",
+                "scorable": 0,
+                "denominator": 34
+              },
+              {
+                "item_id": "device_and_material_specifics",
+                "scorable": 0,
+                "denominator": 28
+              }
+            ]
+          },
+          "dimension_items": {
+            "source_selection_provenance_conflict": [
+              {
+                "item_id": "verified_source_bundle_and_provenance",
+                "score": 14,
+                "max_score": 20,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "panel_schedule_enclosure_facts": [
+              {
+                "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+                "score": 9,
+                "max_score": 15,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "device_bom_quantity_tag_fidelity": [
+              {
+                "item_id": "device_bom_not_extracted_from_allowed_bundle",
+                "score": 8,
+                "max_score": 20,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+              {
+                "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+                "score": 8,
+                "max_score": 15,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "production_drawing_quality": [
+              {
+                "item_id": "production_pdf_schematic_readable",
+                "score": 3,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "punch_drawing_quality": [
+              {
+                "item_id": "punch_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "sheetmetal_drawing_quality": [
+              {
+                "item_id": "sheetmetal_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ]
+          },
+          "deduped_finding_count": 3
+        },
+        "evidence_strength": "LOW_EVIDENCE"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "correct_high_defect",
+      "description": "Correct one known high-severity scorable defect.",
+      "result": {
+        "run_id": "COUNTERFACTUAL-BASE",
+        "validity": "PASS",
+        "quality_score": 46,
+        "scorable_coverage": 38,
+        "confidence": "LOW",
+        "critical_findings": 0,
+        "high_findings": 3,
+        "dimension_scores": {
+          "source_selection_provenance_conflict": 14,
+          "panel_schedule_enclosure_facts": 5,
+          "device_bom_quantity_tag_fidelity": 12,
+          "shared_geometry_cross_pdf_consistency": 8,
+          "production_drawing_quality": 3,
+          "punch_drawing_quality": 2,
+          "sheetmetal_drawing_quality": 2
+        },
+        "hard_gate_failures": [],
+        "output_type_scores": {
+          "production": 14,
+          "sheetmetal": 14,
+          "punch": 14
+        },
+        "findings": [
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+            "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+          }
+        ],
+        "comparison_limitations": [
+          "No exact geometry overlay was produced because registration was not established as reliable.",
+          "Completed references are used only in reviewer workspace after generation freeze.",
+          "Scoring separates unavailable dimensions from unsupported invented values."
+        ],
+        "run_metadata": {
+          "reference_access_after_freeze": true,
+          "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+          "rubric": "plc_layout_v2",
+          "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+          "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+          "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+          "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "scoring_record_sha256": null,
+          "evidence_strength": "LOW_EVIDENCE"
+        },
+        "scoring_evidence": {
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "coverage": {
+            "scorable_elements": 38,
+            "total_elements": 100,
+            "items": [
+              {
+                "item_id": "verified_source_provenance",
+                "scorable": 20,
+                "denominator": 20
+              },
+              {
+                "item_id": "required_pdf_readability",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "canonical_model_panel_structure",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "exact_reference_geometry",
+                "scorable": 0,
+                "denominator": 34
+              },
+              {
+                "item_id": "device_and_material_specifics",
+                "scorable": 0,
+                "denominator": 28
+              }
+            ]
+          },
+          "dimension_items": {
+            "source_selection_provenance_conflict": [
+              {
+                "item_id": "verified_source_bundle_and_provenance",
+                "score": 14,
+                "max_score": 20,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "panel_schedule_enclosure_facts": [
+              {
+                "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+                "score": 5,
+                "max_score": 15,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "device_bom_quantity_tag_fidelity": [
+              {
+                "item_id": "device_bom_not_extracted_from_allowed_bundle",
+                "score": 12,
+                "max_score": 20,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+              {
+                "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+                "score": 8,
+                "max_score": 15,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "production_drawing_quality": [
+              {
+                "item_id": "production_pdf_schematic_readable",
+                "score": 3,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "punch_drawing_quality": [
+              {
+                "item_id": "punch_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "sheetmetal_drawing_quality": [
+              {
+                "item_id": "sheetmetal_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ]
+          },
+          "deduped_finding_count": 3
+        },
+        "evidence_strength": "LOW_EVIDENCE"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "add_high_defect",
+      "description": "Add one new high-severity scorable defect.",
+      "result": {
+        "run_id": "COUNTERFACTUAL-BASE",
+        "validity": "PASS",
+        "quality_score": 38,
+        "scorable_coverage": 38,
+        "confidence": "LOW",
+        "critical_findings": 0,
+        "high_findings": 3,
+        "dimension_scores": {
+          "source_selection_provenance_conflict": 14,
+          "panel_schedule_enclosure_facts": 5,
+          "device_bom_quantity_tag_fidelity": 8,
+          "shared_geometry_cross_pdf_consistency": 4,
+          "production_drawing_quality": 3,
+          "punch_drawing_quality": 2,
+          "sheetmetal_drawing_quality": 2
+        },
+        "hard_gate_failures": [],
+        "output_type_scores": {
+          "production": 14,
+          "sheetmetal": 14,
+          "punch": 14
+        },
+        "findings": [
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+            "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+          }
+        ],
+        "comparison_limitations": [
+          "No exact geometry overlay was produced because registration was not established as reliable.",
+          "Completed references are used only in reviewer workspace after generation freeze.",
+          "Scoring separates unavailable dimensions from unsupported invented values."
+        ],
+        "run_metadata": {
+          "reference_access_after_freeze": true,
+          "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+          "rubric": "plc_layout_v2",
+          "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+          "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+          "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+          "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "scoring_record_sha256": null,
+          "evidence_strength": "LOW_EVIDENCE"
+        },
+        "scoring_evidence": {
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "coverage": {
+            "scorable_elements": 38,
+            "total_elements": 100,
+            "items": [
+              {
+                "item_id": "verified_source_provenance",
+                "scorable": 20,
+                "denominator": 20
+              },
+              {
+                "item_id": "required_pdf_readability",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "canonical_model_panel_structure",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "exact_reference_geometry",
+                "scorable": 0,
+                "denominator": 34
+              },
+              {
+                "item_id": "device_and_material_specifics",
+                "scorable": 0,
+                "denominator": 28
+              }
+            ]
+          },
+          "dimension_items": {
+            "source_selection_provenance_conflict": [
+              {
+                "item_id": "verified_source_bundle_and_provenance",
+                "score": 14,
+                "max_score": 20,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "panel_schedule_enclosure_facts": [
+              {
+                "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+                "score": 5,
+                "max_score": 15,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "device_bom_quantity_tag_fidelity": [
+              {
+                "item_id": "device_bom_not_extracted_from_allowed_bundle",
+                "score": 8,
+                "max_score": 20,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+              {
+                "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+                "score": 4,
+                "max_score": 15,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "production_drawing_quality": [
+              {
+                "item_id": "production_pdf_schematic_readable",
+                "score": 3,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "punch_drawing_quality": [
+              {
+                "item_id": "punch_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "sheetmetal_drawing_quality": [
+              {
+                "item_id": "sheetmetal_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ]
+          },
+          "deduped_finding_count": 3
+        },
+        "evidence_strength": "LOW_EVIDENCE"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "registration_unsuitable",
+      "description": "Change registration confidence from reliable to unsuitable.",
+      "result": {
+        "run_id": "COUNTERFACTUAL-BASE",
+        "validity": "PASS",
+        "quality_score": 42,
+        "scorable_coverage": 38,
+        "confidence": "LOW",
+        "critical_findings": 0,
+        "high_findings": 3,
+        "dimension_scores": {
+          "source_selection_provenance_conflict": 14,
+          "panel_schedule_enclosure_facts": 5,
+          "device_bom_quantity_tag_fidelity": 8,
+          "shared_geometry_cross_pdf_consistency": 8,
+          "production_drawing_quality": 3,
+          "punch_drawing_quality": 2,
+          "sheetmetal_drawing_quality": 2
+        },
+        "hard_gate_failures": [],
+        "output_type_scores": {
+          "production": 14,
+          "sheetmetal": 14,
+          "punch": 14
+        },
+        "findings": [
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+            "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+          }
+        ],
+        "comparison_limitations": [
+          "No exact geometry overlay was produced because registration was not established as reliable.",
+          "Completed references are used only in reviewer workspace after generation freeze.",
+          "Scoring separates unavailable dimensions from unsupported invented values."
+        ],
+        "run_metadata": {
+          "reference_access_after_freeze": true,
+          "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+          "rubric": "plc_layout_v2",
+          "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+          "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+          "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+          "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "scoring_record_sha256": null,
+          "evidence_strength": "LOW_EVIDENCE"
+        },
+        "scoring_evidence": {
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "coverage": {
+            "scorable_elements": 38,
+            "total_elements": 100,
+            "items": [
+              {
+                "item_id": "verified_source_provenance",
+                "scorable": 20,
+                "denominator": 20
+              },
+              {
+                "item_id": "required_pdf_readability",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "canonical_model_panel_structure",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "exact_reference_geometry",
+                "scorable": 0,
+                "denominator": 34
+              },
+              {
+                "item_id": "device_and_material_specifics",
+                "scorable": 0,
+                "denominator": 28
+              }
+            ]
+          },
+          "dimension_items": {
+            "source_selection_provenance_conflict": [
+              {
+                "item_id": "verified_source_bundle_and_provenance",
+                "score": 14,
+                "max_score": 20,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "panel_schedule_enclosure_facts": [
+              {
+                "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+                "score": 5,
+                "max_score": 15,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "device_bom_quantity_tag_fidelity": [
+              {
+                "item_id": "device_bom_not_extracted_from_allowed_bundle",
+                "score": 8,
+                "max_score": 20,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+              {
+                "item_id": "registration_unsuitable_metadata_only",
+                "score": 8,
+                "max_score": 15,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "production_drawing_quality": [
+              {
+                "item_id": "production_pdf_schematic_readable",
+                "score": 3,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "punch_drawing_quality": [
+              {
+                "item_id": "punch_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "sheetmetal_drawing_quality": [
+              {
+                "item_id": "sheetmetal_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ]
+          },
+          "deduped_finding_count": 3
+        },
+        "evidence_strength": "LOW_EVIDENCE"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "remove_all_scorable",
+      "description": "Remove all scorable elements.",
+      "result": {
+        "run_id": "COUNTERFACTUAL-BASE",
+        "validity": "PASS",
+        "quality_score": 42,
+        "scorable_coverage": 0,
+        "confidence": "LOW",
+        "critical_findings": 0,
+        "high_findings": 3,
+        "dimension_scores": {
+          "source_selection_provenance_conflict": 14,
+          "panel_schedule_enclosure_facts": 5,
+          "device_bom_quantity_tag_fidelity": 8,
+          "shared_geometry_cross_pdf_consistency": 8,
+          "production_drawing_quality": 3,
+          "punch_drawing_quality": 2,
+          "sheetmetal_drawing_quality": 2
+        },
+        "hard_gate_failures": [],
+        "output_type_scores": {
+          "production": 14,
+          "sheetmetal": 14,
+          "punch": 14
+        },
+        "findings": [
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+            "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+          }
+        ],
+        "comparison_limitations": [
+          "No exact geometry overlay was produced because registration was not established as reliable.",
+          "Completed references are used only in reviewer workspace after generation freeze.",
+          "Scoring separates unavailable dimensions from unsupported invented values."
+        ],
+        "run_metadata": {
+          "reference_access_after_freeze": true,
+          "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+          "rubric": "plc_layout_v2",
+          "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+          "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+          "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+          "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "scoring_record_sha256": null,
+          "evidence_strength": "INSUFFICIENT_COVERAGE"
+        },
+        "scoring_evidence": {
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "coverage": {
+            "scorable_elements": 0,
+            "total_elements": 0,
+            "items": []
+          },
+          "dimension_items": {
+            "source_selection_provenance_conflict": [
+              {
+                "item_id": "verified_source_bundle_and_provenance",
+                "score": 14,
+                "max_score": 20,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "panel_schedule_enclosure_facts": [
+              {
+                "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+                "score": 5,
+                "max_score": 15,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "device_bom_quantity_tag_fidelity": [
+              {
+                "item_id": "device_bom_not_extracted_from_allowed_bundle",
+                "score": 8,
+                "max_score": 20,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+              {
+                "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+                "score": 8,
+                "max_score": 15,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "production_drawing_quality": [
+              {
+                "item_id": "production_pdf_schematic_readable",
+                "score": 3,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "punch_drawing_quality": [
+              {
+                "item_id": "punch_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "sheetmetal_drawing_quality": [
+              {
+                "item_id": "sheetmetal_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ]
+          },
+          "deduped_finding_count": 3
+        },
+        "evidence_strength": "INSUFFICIENT_COVERAGE"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "duplicate_finding",
+      "description": "Duplicate findings.",
+      "result": {
+        "run_id": "COUNTERFACTUAL-BASE",
+        "validity": "PASS",
+        "quality_score": 42,
+        "scorable_coverage": 38,
+        "confidence": "LOW",
+        "critical_findings": 0,
+        "high_findings": 3,
+        "dimension_scores": {
+          "source_selection_provenance_conflict": 14,
+          "panel_schedule_enclosure_facts": 5,
+          "device_bom_quantity_tag_fidelity": 8,
+          "shared_geometry_cross_pdf_consistency": 8,
+          "production_drawing_quality": 3,
+          "punch_drawing_quality": 2,
+          "sheetmetal_drawing_quality": 2
+        },
+        "hard_gate_failures": [],
+        "output_type_scores": {
+          "production": 14,
+          "sheetmetal": 14,
+          "punch": 14
+        },
+        "findings": [
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+            "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+          }
+        ],
+        "comparison_limitations": [
+          "No exact geometry overlay was produced because registration was not established as reliable.",
+          "Completed references are used only in reviewer workspace after generation freeze.",
+          "Scoring separates unavailable dimensions from unsupported invented values."
+        ],
+        "run_metadata": {
+          "reference_access_after_freeze": true,
+          "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+          "rubric": "plc_layout_v2",
+          "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+          "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+          "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+          "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "scoring_record_sha256": null,
+          "evidence_strength": "LOW_EVIDENCE"
+        },
+        "scoring_evidence": {
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "coverage": {
+            "scorable_elements": 38,
+            "total_elements": 100,
+            "items": [
+              {
+                "item_id": "verified_source_provenance",
+                "scorable": 20,
+                "denominator": 20
+              },
+              {
+                "item_id": "required_pdf_readability",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "canonical_model_panel_structure",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "exact_reference_geometry",
+                "scorable": 0,
+                "denominator": 34
+              },
+              {
+                "item_id": "device_and_material_specifics",
+                "scorable": 0,
+                "denominator": 28
+              }
+            ]
+          },
+          "dimension_items": {
+            "source_selection_provenance_conflict": [
+              {
+                "item_id": "verified_source_bundle_and_provenance",
+                "score": 14,
+                "max_score": 20,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "panel_schedule_enclosure_facts": [
+              {
+                "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+                "score": 5,
+                "max_score": 15,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "device_bom_quantity_tag_fidelity": [
+              {
+                "item_id": "device_bom_not_extracted_from_allowed_bundle",
+                "score": 8,
+                "max_score": 20,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+              {
+                "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+                "score": 8,
+                "max_score": 15,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "production_drawing_quality": [
+              {
+                "item_id": "production_pdf_schematic_readable",
+                "score": 3,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "punch_drawing_quality": [
+              {
+                "item_id": "punch_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "sheetmetal_drawing_quality": [
+              {
+                "item_id": "sheetmetal_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ]
+          },
+          "deduped_finding_count": 3
+        },
+        "evidence_strength": "LOW_EVIDENCE"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "large_project_equal_weight",
+      "description": "Change project size substantially.",
+      "result": {
+        "run_id": "COUNTERFACTUAL-BASE",
+        "validity": "PASS",
+        "quality_score": 42,
+        "scorable_coverage": 38,
+        "confidence": "LOW",
+        "critical_findings": 0,
+        "high_findings": 3,
+        "dimension_scores": {
+          "source_selection_provenance_conflict": 14,
+          "panel_schedule_enclosure_facts": 5,
+          "device_bom_quantity_tag_fidelity": 8,
+          "shared_geometry_cross_pdf_consistency": 8,
+          "production_drawing_quality": 3,
+          "punch_drawing_quality": 2,
+          "sheetmetal_drawing_quality": 2
+        },
+        "hard_gate_failures": [],
+        "output_type_scores": {
+          "production": 14,
+          "sheetmetal": 14,
+          "punch": 14
+        },
+        "findings": [
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+            "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+          }
+        ],
+        "comparison_limitations": [
+          "No exact geometry overlay was produced because registration was not established as reliable.",
+          "Completed references are used only in reviewer workspace after generation freeze.",
+          "Scoring separates unavailable dimensions from unsupported invented values."
+        ],
+        "run_metadata": {
+          "reference_access_after_freeze": true,
+          "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+          "rubric": "plc_layout_v2",
+          "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+          "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+          "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+          "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "scoring_record_sha256": null,
+          "evidence_strength": "LOW_EVIDENCE"
+        },
+        "scoring_evidence": {
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "coverage": {
+            "scorable_elements": 38,
+            "total_elements": 100,
+            "items": [
+              {
+                "item_id": "verified_source_provenance",
+                "scorable": 20,
+                "denominator": 20
+              },
+              {
+                "item_id": "required_pdf_readability",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "canonical_model_panel_structure",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "exact_reference_geometry",
+                "scorable": 0,
+                "denominator": 34
+              },
+              {
+                "item_id": "device_and_material_specifics",
+                "scorable": 0,
+                "denominator": 28
+              }
+            ]
+          },
+          "dimension_items": {
+            "source_selection_provenance_conflict": [
+              {
+                "item_id": "verified_source_bundle_and_provenance",
+                "score": 14,
+                "max_score": 20,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "panel_schedule_enclosure_facts": [
+              {
+                "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+                "score": 5,
+                "max_score": 15,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "device_bom_quantity_tag_fidelity": [
+              {
+                "item_id": "device_bom_not_extracted_from_allowed_bundle",
+                "score": 8,
+                "max_score": 20,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+              {
+                "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+                "score": 8,
+                "max_score": 15,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "production_drawing_quality": [
+              {
+                "item_id": "production_pdf_schematic_readable",
+                "score": 3,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "punch_drawing_quality": [
+              {
+                "item_id": "punch_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "sheetmetal_drawing_quality": [
+              {
+                "item_id": "sheetmetal_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ]
+          },
+          "deduped_finding_count": 3
+        },
+        "evidence_strength": "LOW_EVIDENCE"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "same_total_different_vector",
+      "description": "Use two different valid score vectors with the same total.",
+      "result": {
+        "run_id": "COUNTERFACTUAL-BASE",
+        "validity": "PASS",
+        "quality_score": 42,
+        "scorable_coverage": 38,
+        "confidence": "LOW",
+        "critical_findings": 0,
+        "high_findings": 3,
+        "dimension_scores": {
+          "source_selection_provenance_conflict": 14,
+          "panel_schedule_enclosure_facts": 5,
+          "device_bom_quantity_tag_fidelity": 8,
+          "shared_geometry_cross_pdf_consistency": 8,
+          "production_drawing_quality": 4,
+          "punch_drawing_quality": 1,
+          "sheetmetal_drawing_quality": 2
+        },
+        "hard_gate_failures": [],
+        "output_type_scores": {
+          "production": 14,
+          "sheetmetal": 14,
+          "punch": 14
+        },
+        "findings": [
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+            "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+          },
+          {
+            "severity": "HIGH",
+            "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+            "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+          }
+        ],
+        "comparison_limitations": [
+          "No exact geometry overlay was produced because registration was not established as reliable.",
+          "Completed references are used only in reviewer workspace after generation freeze.",
+          "Scoring separates unavailable dimensions from unsupported invented values."
+        ],
+        "run_metadata": {
+          "reference_access_after_freeze": true,
+          "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-A\\reviewer_workspace",
+          "rubric": "plc_layout_v2",
+          "freeze_hash": "9887F9283750D5A26D7B9DD4C9C77082B181D3FD20EAA332F8CF08B6339A2B98",
+          "generation_complete_sha256": "BE4294FBC38E780C8A26B19DAB0FF8FC7EAD21384DC7A7CFCABE5E210BF9B426",
+          "freeze_manifest_sha256": "CEAD50B5D7CC2EC6D63A2F9B15081F0B09D08588CD1C4C8BDB210FAE27115F94",
+          "pdf_validation_sha256": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "scoring_record_sha256": null,
+          "evidence_strength": "LOW_EVIDENCE"
+        },
+        "scoring_evidence": {
+          "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+          "coverage": {
+            "scorable_elements": 38,
+            "total_elements": 100,
+            "items": [
+              {
+                "item_id": "verified_source_provenance",
+                "scorable": 20,
+                "denominator": 20
+              },
+              {
+                "item_id": "required_pdf_readability",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "canonical_model_panel_structure",
+                "scorable": 9,
+                "denominator": 9
+              },
+              {
+                "item_id": "exact_reference_geometry",
+                "scorable": 0,
+                "denominator": 34
+              },
+              {
+                "item_id": "device_and_material_specifics",
+                "scorable": 0,
+                "denominator": 28
+              }
+            ]
+          },
+          "dimension_items": {
+            "source_selection_provenance_conflict": [
+              {
+                "item_id": "verified_source_bundle_and_provenance",
+                "score": 14,
+                "max_score": 20,
+                "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+              }
+            ],
+            "panel_schedule_enclosure_facts": [
+              {
+                "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+                "score": 5,
+                "max_score": 15,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "device_bom_quantity_tag_fidelity": [
+              {
+                "item_id": "device_bom_not_extracted_from_allowed_bundle",
+                "score": 8,
+                "max_score": 20,
+                "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+              }
+            ],
+            "shared_geometry_cross_pdf_consistency": [
+              {
+                "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+                "score": 8,
+                "max_score": 15,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "production_drawing_quality": [
+              {
+                "item_id": "production_pdf_schematic_readable",
+                "score": 4,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "punch_drawing_quality": [
+              {
+                "item_id": "punch_pdf_schematic_readable",
+                "score": 1,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ],
+            "sheetmetal_drawing_quality": [
+              {
+                "item_id": "sheetmetal_pdf_schematic_readable",
+                "score": 2,
+                "max_score": 10,
+                "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+              }
+            ]
+          },
+          "deduped_finding_count": 3
+        },
+        "evidence_strength": "LOW_EVIDENCE"
+      },
+      "passed": true
+    }
+  ],
+  "required_properties": {
+    "worse_counterfactual_never_scores_higher": true,
+    "proven_correction_never_scores_lower": true,
+    "validity_gates_override_numerical_score": true,
+    "coverage_responds_to_denominator": true,
+    "no_magic_constant": true
+  }
+}

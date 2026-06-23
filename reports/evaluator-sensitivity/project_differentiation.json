@@ -1,0 +1,716 @@
+{
+  "status": "PASS",
+  "items": [
+    {
+      "run_id": "RUN-1110101-CAL006-A",
+      "project_id": "1110101",
+      "source_evidence_ids": [
+        "SGD-419C4426214114",
+        "SGD-96F5B42AF2AC0D",
+        "SGD-4D05D836BBA6D4",
+        "SGD-909B67C6D196A6",
+        "SGD-11740DEB2744E6",
+        "SGD-43F93E34D49CE2"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "094620F16074DB72589944E99080025A623BBCC14B632982DBC24B3D82929DEA",
+        "approval_manifest": "BD37CF07402B41C5BAC1F559A9277FE82D02A81978EA813C23F7B952A39B5545",
+        "visible_file_manifest": "8BEBEF3D02FA74A7A072736808E8CCC0E026503BC47960316752D71F8279E23C"
+      },
+      "reference_manifest_hash": "9A0ABF5ED89AD4B979D1D1BAAB6580B6C87558673C56B2DECB98AF3B194DD505",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-7ABB80368FBD",
+          "reference_sha256": "972AAFD5E2D72636871E799899B53B91EE5EE0230DA73B2A6BDF936B37F4120A",
+          "generated_sha256": "14A2E054D682392D8B78CDF0FD0785B9930A2C9EA1DFCB75298CF55AD2364F41"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-9BAC035FA277",
+          "reference_sha256": "F653AB4388A9A48890FB04D7163322C95408C0DD2FFCBBF2B7BF45EB0F450EED",
+          "generated_sha256": "80693A77C2AC9A736E0816EA847C239A529E2D2EF18433A193B3C8A7F4E61749"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-5C3AF14EB985",
+          "reference_sha256": "6288AB656E1FC1A45E91B3EE50879FE304791BB8655C9D28BA7ACB0600BF80D7",
+          "generated_sha256": "12035AEF9E6E4161928342F5DA378629CEB8AE22D0F6397570268130618DA760"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110101.json": "F21FB0696F45322851BEFB788B311DE2674D93B716681FBCA580BBFC2E4801CD",
+        "job_spec_1110101.json": "9C5DB89029E5BCCF9330966CE65029D700D77DACF9203CFEE6EBCE9E4665BB7C",
+        "pdf_validation.json": "3AE1AF7B9955438AF79DD90835492123402ED47A25A8C2FEB65AB20ED2238773",
+        "pdfs\\01_生管課用圖_1110101.pdf": "14A2E054D682392D8B78CDF0FD0785B9930A2C9EA1DFCB75298CF55AD2364F41",
+        "pdfs\\02_鈑金施工圖_1110101.pdf": "80693A77C2AC9A736E0816EA847C239A529E2D2EF18433A193B3C8A7F4E61749",
+        "pdfs\\03_沖孔施工圖_1110101.pdf": "12035AEF9E6E4161928342F5DA378629CEB8AE22D0F6397570268130618DA760",
+        "pdfs\\drawing_index_1110101.csv": "30F725CE2F75E4836A00C2CF47AB9A1B5E7CD22DD7A75A7260A16D5FCA4C72DE",
+        "pdfs\\render_manifest_1110101.json": "2F2CB7F64E7AC26A08E8FFED56B86F877EA2B84FFB9BD8E4EC3E656E8360D2EB",
+        "provenance.json": "4BBB2C79329F45315F531DA4D2CCCC641606360D1772B8F2C8E11B135CFAA0C4",
+        "validation_summary.json": "37A0584245F3F830EA409452835215C335B5F8E48A47304E8BD789B193C883BF"
+      },
+      "finding_ids": [
+        "RUN-1110101-CAL006-A:missing_exact_dimensions",
+        "RUN-1110101-CAL006-A:reference_layout_unavailable",
+        "RUN-1110101-CAL006-A:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "47ED8462C7872BC924A5D807E6B75346AD2604D89E2B3434DE2CC671B431C608"
+    },
+    {
+      "run_id": "RUN-1110101-CAL006-B",
+      "project_id": "1110101",
+      "source_evidence_ids": [
+        "SGD-419C4426214114",
+        "SGD-96F5B42AF2AC0D",
+        "SGD-4D05D836BBA6D4",
+        "SGD-909B67C6D196A6",
+        "SGD-11740DEB2744E6",
+        "SGD-43F93E34D49CE2"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "094620F16074DB72589944E99080025A623BBCC14B632982DBC24B3D82929DEA",
+        "approval_manifest": "BD37CF07402B41C5BAC1F559A9277FE82D02A81978EA813C23F7B952A39B5545",
+        "visible_file_manifest": "8BEBEF3D02FA74A7A072736808E8CCC0E026503BC47960316752D71F8279E23C"
+      },
+      "reference_manifest_hash": "9A0ABF5ED89AD4B979D1D1BAAB6580B6C87558673C56B2DECB98AF3B194DD505",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-7ABB80368FBD",
+          "reference_sha256": "972AAFD5E2D72636871E799899B53B91EE5EE0230DA73B2A6BDF936B37F4120A",
+          "generated_sha256": "32A47A252C4A2FA2EB61F97E61BF57EB930E592319419660923C7C50EE1427E7"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-9BAC035FA277",
+          "reference_sha256": "F653AB4388A9A48890FB04D7163322C95408C0DD2FFCBBF2B7BF45EB0F450EED",
+          "generated_sha256": "68A00E51EC9490DD41DFD7194BB20DEDA6AD569F7CEF2721189FD54F256517F7"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-5C3AF14EB985",
+          "reference_sha256": "6288AB656E1FC1A45E91B3EE50879FE304791BB8655C9D28BA7ACB0600BF80D7",
+          "generated_sha256": "5C465F2D60E1EEAEB0E2D1D8665166ACD70ECBD1FB71746B4068E9E26FAF1694"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110101.json": "F21FB0696F45322851BEFB788B311DE2674D93B716681FBCA580BBFC2E4801CD",
+        "job_spec_1110101.json": "9C5DB89029E5BCCF9330966CE65029D700D77DACF9203CFEE6EBCE9E4665BB7C",
+        "pdf_validation.json": "951A6E1189F655EAA79D3C8D6B6ADF61D971245164A8B1BEF18C1F709F27A6BE",
+        "pdfs\\01_生管課用圖_1110101.pdf": "32A47A252C4A2FA2EB61F97E61BF57EB930E592319419660923C7C50EE1427E7",
+        "pdfs\\02_鈑金施工圖_1110101.pdf": "68A00E51EC9490DD41DFD7194BB20DEDA6AD569F7CEF2721189FD54F256517F7",
+        "pdfs\\03_沖孔施工圖_1110101.pdf": "5C465F2D60E1EEAEB0E2D1D8665166ACD70ECBD1FB71746B4068E9E26FAF1694",
+        "pdfs\\drawing_index_1110101.csv": "5B6C53C8B9ABD49153D498C155FA45D3AF26F1FFD07784DB1A62822E73784132",
+        "pdfs\\render_manifest_1110101.json": "E32E46D0A6F6E47EE5668EBCAA47C3BC824AA1A2D9CCEE0C5E96A11E55F9EC56",
+        "provenance.json": "1024F7E8DEC4F0229F3BD6EB46058549F8B337FF6B46F3ADE3A09F0FD1898466",
+        "validation_summary.json": "FA655012A48B6C96844E3DB070C365B1418BBFC8D4FD51259CEFCACB32E52996"
+      },
+      "finding_ids": [
+        "RUN-1110101-CAL006-B:missing_exact_dimensions",
+        "RUN-1110101-CAL006-B:reference_layout_unavailable",
+        "RUN-1110101-CAL006-B:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "1C7D3599358F484DB54E7CE092150F7046A082C88188F144698523F90DCC587B"
+    },
+    {
+      "run_id": "RUN-1110104-CAL006-A",
+      "project_id": "1110104",
+      "source_evidence_ids": [
+        "SGD-628D223B34A365",
+        "SGD-29710C0EE48604"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "DF4068D4D10C4DF8FD084B4B4960E6604D45EAB307995BFC213B49BA723CEFC2",
+        "approval_manifest": "4CBFF5FE88671AF3C61B1855B970997A5F22654AB94517164CE946E8B2BFA845",
+        "visible_file_manifest": "01169C6A9A933522374E88FD586A81287434F49366B2EFA9B06544B5C796FF61"
+      },
+      "reference_manifest_hash": "D75BDD7B1BED277C478B05CD0E887C5B1D7D8A0109C3DEDDD0466972AC56983F",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-AD4BDE5D08FA",
+          "reference_sha256": "4D9EA06C5C0DE62DC9B337685F6A28BE5F1413D3D09C9E3CABCD25B240AF0BAD",
+          "generated_sha256": "D124FCA8EB194CFD0F78683678D1E2146EEB284F27472213FC251B3A3F1907BF"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-95A866291A8D",
+          "reference_sha256": "AC9A9CA413B869B9A9C7674F24441964BD1652785719A193649DE27EDED62ABA",
+          "generated_sha256": "E6EE4D260A09D201F23733E93A00BCE7648A4F6F09DCE99B2EEBCF7C46E94B78"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-2EFA3452D018",
+          "reference_sha256": "732E24F061555D0FE6BE00556E9B691001AD25D1F84F9E62E219343B5F5EB618",
+          "generated_sha256": "62FB7D610A06DC434666BBC40E33530EC704F0E0517BFFB004F420C6CFCEFC80"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110104.json": "E7A5E14B6CBB9389838CFBEF6E31030A18FD2144232830B50725E701D2004E77",
+        "job_spec_1110104.json": "E946CF54A513021E75FA211C54D48A1F3DFCCA630691B6FB7F8FB4B18307A2F9",
+        "pdf_validation.json": "DCCA30224616C790679FC1B70B3A6B7F1532E0D5032E5BC8529075FC005B9061",
+        "pdfs\\01_生管課用圖_1110104.pdf": "D124FCA8EB194CFD0F78683678D1E2146EEB284F27472213FC251B3A3F1907BF",
+        "pdfs\\02_鈑金施工圖_1110104.pdf": "E6EE4D260A09D201F23733E93A00BCE7648A4F6F09DCE99B2EEBCF7C46E94B78",
+        "pdfs\\03_沖孔施工圖_1110104.pdf": "62FB7D610A06DC434666BBC40E33530EC704F0E0517BFFB004F420C6CFCEFC80",
+        "pdfs\\drawing_index_1110104.csv": "FD0421EBE29170B84763F8785E668E88C988B5EAC17F66F54B1FD2BC8BC924F7",
+        "pdfs\\render_manifest_1110104.json": "3C0679C05C0B33B4E2324078E9B8F418CB6538C2BF5B93DCA1252A17E3C6BD68",
+        "provenance.json": "5CDC48009DE6BB043648BA1DC521FC6D1DE0D6F1870CB4A06CB93FFC9C3C8D0D",
+        "validation_summary.json": "C026D31B74276A0162870A792B3D25CF52C18D3848748FA4CE81171B893A56E4"
+      },
+      "finding_ids": [
+        "RUN-1110104-CAL006-A:missing_exact_dimensions",
+        "RUN-1110104-CAL006-A:reference_layout_unavailable",
+        "RUN-1110104-CAL006-A:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "3D6C542EB16A2E7460C15033E995233AC38E537B1FEF53774AE977416010A82D"
+    },
+    {
+      "run_id": "RUN-1110104-CAL006-B",
+      "project_id": "1110104",
+      "source_evidence_ids": [
+        "SGD-628D223B34A365",
+        "SGD-29710C0EE48604"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "DF4068D4D10C4DF8FD084B4B4960E6604D45EAB307995BFC213B49BA723CEFC2",
+        "approval_manifest": "4CBFF5FE88671AF3C61B1855B970997A5F22654AB94517164CE946E8B2BFA845",
+        "visible_file_manifest": "01169C6A9A933522374E88FD586A81287434F49366B2EFA9B06544B5C796FF61"
+      },
+      "reference_manifest_hash": "D75BDD7B1BED277C478B05CD0E887C5B1D7D8A0109C3DEDDD0466972AC56983F",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-AD4BDE5D08FA",
+          "reference_sha256": "4D9EA06C5C0DE62DC9B337685F6A28BE5F1413D3D09C9E3CABCD25B240AF0BAD",
+          "generated_sha256": "84CDFBDD58D78A98828E09FAA7AEDCE1EFB127C23D3414B3AB9581C6B5751D51"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-95A866291A8D",
+          "reference_sha256": "AC9A9CA413B869B9A9C7674F24441964BD1652785719A193649DE27EDED62ABA",
+          "generated_sha256": "7D8024B61814BBCC349331EBA864E6BFF7DA47D77C48CE7B1CC21DE3AC8C73E8"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-2EFA3452D018",
+          "reference_sha256": "732E24F061555D0FE6BE00556E9B691001AD25D1F84F9E62E219343B5F5EB618",
+          "generated_sha256": "04ED5B40760A07D71EECC86F390795A8CCDF8F761CAC864ADD972783DFBB5085"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110104.json": "E7A5E14B6CBB9389838CFBEF6E31030A18FD2144232830B50725E701D2004E77",
+        "job_spec_1110104.json": "E946CF54A513021E75FA211C54D48A1F3DFCCA630691B6FB7F8FB4B18307A2F9",
+        "pdf_validation.json": "24EFCAC845FA2229AFE172B024AE4F8A8F512FC309CFA86F6E097C35A9B53CC4",
+        "pdfs\\01_生管課用圖_1110104.pdf": "84CDFBDD58D78A98828E09FAA7AEDCE1EFB127C23D3414B3AB9581C6B5751D51",
+        "pdfs\\02_鈑金施工圖_1110104.pdf": "7D8024B61814BBCC349331EBA864E6BFF7DA47D77C48CE7B1CC21DE3AC8C73E8",
+        "pdfs\\03_沖孔施工圖_1110104.pdf": "04ED5B40760A07D71EECC86F390795A8CCDF8F761CAC864ADD972783DFBB5085",
+        "pdfs\\drawing_index_1110104.csv": "D23C9C014D474273D034335DE0096492C6080BD4C5AF8C1A7B10C154948F6051",
+        "pdfs\\render_manifest_1110104.json": "0A679EA50C44639954B91CE204E752587F4488AD174D81FFC14FB4162E9FA1D3",
+        "provenance.json": "6D2DE246B80BA9091AAE0476E8D18B77DD9FC7391A5A996554C4E5054E225A58",
+        "validation_summary.json": "369A2D958D5B608CFBAAC89098BA7AD0483C2F88A956AAEFD0EA1CE0AB656C31"
+      },
+      "finding_ids": [
+        "RUN-1110104-CAL006-B:missing_exact_dimensions",
+        "RUN-1110104-CAL006-B:reference_layout_unavailable",
+        "RUN-1110104-CAL006-B:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "284FCCAD04435B8AC054920732C9E51609643F6B81F9FC8419C23F3A2B69B829"
+    },
+    {
+      "run_id": "RUN-1110204-CAL006-A",
+      "project_id": "1110204",
+      "source_evidence_ids": [
+        "SGD-5F108DF896D683",
+        "SGD-1F9E956311AE35"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "8F9F8486E9E23BA5DB3B1A0F8BA83A3C735BFF01669067F283E6C1E90DCBB672",
+        "approval_manifest": "3F62442C8E3BC5A13819560E4B3DB00FFDA270C7EC358E36D85B0B16A612DAF2",
+        "visible_file_manifest": "99C1E83C44D83DDD8CED30365A50251820063B23EA22DDC97921930B26F4F7B6"
+      },
+      "reference_manifest_hash": "169A414A317C574B6B7AA3BDA69C19E74C87ECC6846F1F6F9A51B065BD380916",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-34D7E26D26C1",
+          "reference_sha256": "90FF3C0E1A1705C3085C06D230B06ECF5D31B8D4F3B785BEEE30C776E27E5C71",
+          "generated_sha256": "086FE223EE81F7DF511CD027A27DE1C262DF4FCFCF243955321E64A2665EC718"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-E7C607741CFE",
+          "reference_sha256": "B32B3160FE9C721ED9A097A2456C5A26C6E0CB1570669E0E7D487B6C31418A55",
+          "generated_sha256": "8F6881B7A3ED3827957D028FC796485B936B5EED37F7CFC609B3827986EF6B7B"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-B0C05DF7C0AC",
+          "reference_sha256": "8CF2B623EBB9D389B44F5125739125618CABACAEB448CD21DF9FF161CD7E004B",
+          "generated_sha256": "56D59274A4FA135EB1C4312ACCCD2A289879A3545B158116F09A29FEB19947BC"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110204.json": "E648F0E645961B7A84CEC15D35DD9F591B256C953C03FF706863C9B2DD7FE42C",
+        "job_spec_1110204.json": "C88E2A7735D77B539D7150C77FA6C958B9F58D4460DAC25DA12BCA70D6DB66D9",
+        "pdf_validation.json": "1BE751DEA7D87F798EA48194C42E701FEC2CF7B9B95A9742B24351ABF3C45D4A",
+        "pdfs\\01_生管課用圖_1110204.pdf": "086FE223EE81F7DF511CD027A27DE1C262DF4FCFCF243955321E64A2665EC718",
+        "pdfs\\02_鈑金施工圖_1110204.pdf": "8F6881B7A3ED3827957D028FC796485B936B5EED37F7CFC609B3827986EF6B7B",
+        "pdfs\\03_沖孔施工圖_1110204.pdf": "56D59274A4FA135EB1C4312ACCCD2A289879A3545B158116F09A29FEB19947BC",
+        "pdfs\\drawing_index_1110204.csv": "AD4F260B10DD45B42C34302F16E275DCE8000F8801EB0FA7C4838A9622F78125",
+        "pdfs\\render_manifest_1110204.json": "287D2F65F72590BA89FEF0C04EB545EFCCD19680D8096BADDC322A448AB32CFB",
+        "provenance.json": "9265ACE47AF7E8F1440BC84A6EE2E698B32E43F1572B1189F6BF6B63FA080027",
+        "validation_summary.json": "9112FCEB2A3ACFE9FF4DC5ED20529B2B290BA1BEC61434B38914FB584A731EAB"
+      },
+      "finding_ids": [
+        "RUN-1110204-CAL006-A:missing_exact_dimensions",
+        "RUN-1110204-CAL006-A:reference_layout_unavailable",
+        "RUN-1110204-CAL006-A:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "7A9D884CDB6B3A27C7E0241AE9F6FF25CAEBF30C58DF0DC3B05C5FF0101875F6"
+    },
+    {
+      "run_id": "RUN-1110204-CAL006-B",
+      "project_id": "1110204",
+      "source_evidence_ids": [
+        "SGD-5F108DF896D683",
+        "SGD-1F9E956311AE35"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "8F9F8486E9E23BA5DB3B1A0F8BA83A3C735BFF01669067F283E6C1E90DCBB672",
+        "approval_manifest": "3F62442C8E3BC5A13819560E4B3DB00FFDA270C7EC358E36D85B0B16A612DAF2",
+        "visible_file_manifest": "99C1E83C44D83DDD8CED30365A50251820063B23EA22DDC97921930B26F4F7B6"
+      },
+      "reference_manifest_hash": "169A414A317C574B6B7AA3BDA69C19E74C87ECC6846F1F6F9A51B065BD380916",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-34D7E26D26C1",
+          "reference_sha256": "90FF3C0E1A1705C3085C06D230B06ECF5D31B8D4F3B785BEEE30C776E27E5C71",
+          "generated_sha256": "0D3C7A3334A359B4794E3C9FDBB73C495014BFA67B5580F7AE8FFC18BE8344F8"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-E7C607741CFE",
+          "reference_sha256": "B32B3160FE9C721ED9A097A2456C5A26C6E0CB1570669E0E7D487B6C31418A55",
+          "generated_sha256": "A2A787663448603808B653356E1762DCC87ACA267B072227914BB29977E44F98"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-B0C05DF7C0AC",
+          "reference_sha256": "8CF2B623EBB9D389B44F5125739125618CABACAEB448CD21DF9FF161CD7E004B",
+          "generated_sha256": "8DE10F5D5CACC22D7FDB1FCD59DD2B2B7706FBD75A3811F92206C84F82F6CE10"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110204.json": "E648F0E645961B7A84CEC15D35DD9F591B256C953C03FF706863C9B2DD7FE42C",
+        "job_spec_1110204.json": "C88E2A7735D77B539D7150C77FA6C958B9F58D4460DAC25DA12BCA70D6DB66D9",
+        "pdf_validation.json": "3F6115AD57F03A3C1B16851F5DFD6102C0E16C6971D2801BD243067C3A755A66",
+        "pdfs\\01_生管課用圖_1110204.pdf": "0D3C7A3334A359B4794E3C9FDBB73C495014BFA67B5580F7AE8FFC18BE8344F8",
+        "pdfs\\02_鈑金施工圖_1110204.pdf": "A2A787663448603808B653356E1762DCC87ACA267B072227914BB29977E44F98",
+        "pdfs\\03_沖孔施工圖_1110204.pdf": "8DE10F5D5CACC22D7FDB1FCD59DD2B2B7706FBD75A3811F92206C84F82F6CE10",
+        "pdfs\\drawing_index_1110204.csv": "3B0F9BF0A8CBD4D3B8BC20D27EB2D0A5817D01046B4737C5CA2C78FD087657CE",
+        "pdfs\\render_manifest_1110204.json": "F4E84A57BBAA1335B39491E54D0157A0A03DD12B4D162CBF5CB7DE72DA1A1CDD",
+        "provenance.json": "5D9C56B8503EB8F883770D64859733790E1FDC9D42BE8055147BB2FD6581C4C6",
+        "validation_summary.json": "5D0A459028F8F5CEA621B4333E8EEB036D84FEE643D3ADA3BDFCA0E88F74AFB8"
+      },
+      "finding_ids": [
+        "RUN-1110204-CAL006-B:missing_exact_dimensions",
+        "RUN-1110204-CAL006-B:reference_layout_unavailable",
+        "RUN-1110204-CAL006-B:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "D387DF2911ADDA851EE7B75FCEE4954030BE40241D881D4B304880443D2FAD7F"
+    },
+    {
+      "run_id": "RUN-1110205-CAL006-A",
+      "project_id": "1110205",
+      "source_evidence_ids": [
+        "SGD-FD5565DC7BCF22",
+        "SGD-9E7AE8F36A74FD",
+        "SGD-B5CBB9DE92A78B",
+        "SGD-289C4E13989C26"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "77DB6B84667FADC3A81ADBDFCFDF8E1704997DF22CC581ED016780A6943CDF1F",
+        "approval_manifest": "988254F2AE79EC0B1FC35E7354675B52827998F6E69F9A3C54C8BF11576FE7D8",
+        "visible_file_manifest": "ED723B3920F5332E2EB985A92FC75F23F49390F53A5A2033661DC9683309F13D"
+      },
+      "reference_manifest_hash": "F42304DC3A9EAD3BE211A69F6D0D1AE206284E9DB1FE4DBE0196DFC51B6DB5E6",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-0A33EBAEC376",
+          "reference_sha256": "6EE2007168586349D50D57A220509755A189B47EBB639729B4485535693AF307",
+          "generated_sha256": "DC7A6A13299944E6DC78381ABBD9A599A22382094A0B4F42795B169229F73D1B"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-85794537F301",
+          "reference_sha256": "4D02CBA053229C5835F6CF77032B0863183AAF6127995DF7420835BD94B8858D",
+          "generated_sha256": "479E655CD313100FCA2D5E65096B21E1B453773EF1B49EE4FA321CF6459165A8"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-3AB3DD15BA07",
+          "reference_sha256": "706D84122196CF6C7FEA3F8D5BA3B745D2CE4145B2580D4A53E334DFEACC7C45",
+          "generated_sha256": "EEF925FEB27E10DD9BC1101E586C8CDE93FA9B1908EB491D35F0E323D8F741F6"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110205.json": "065D1967CCB2DFA72FA1C92C88413B23B713ABCE0022319DE274A6DAB574D884",
+        "job_spec_1110205.json": "D084BBF41DE2498CF5BFD94612035F85EE6EE9F52F07110EB543528E4411C571",
+        "pdf_validation.json": "ADF82358A5F36CCD0CEB7214E009AD81749B6289269D319153C35EA659B03D4C",
+        "pdfs\\01_生管課用圖_1110205.pdf": "DC7A6A13299944E6DC78381ABBD9A599A22382094A0B4F42795B169229F73D1B",
+        "pdfs\\02_鈑金施工圖_1110205.pdf": "479E655CD313100FCA2D5E65096B21E1B453773EF1B49EE4FA321CF6459165A8",
+        "pdfs\\03_沖孔施工圖_1110205.pdf": "EEF925FEB27E10DD9BC1101E586C8CDE93FA9B1908EB491D35F0E323D8F741F6",
+        "pdfs\\drawing_index_1110205.csv": "50B88CDD96A386B7EA9786FC46A6A2FF8F57402A50F30F2F4FC6459418AF2FBC",
+        "pdfs\\render_manifest_1110205.json": "14F03737A2EC50B67B2EA74D0247EB1C2FC97C75621957D789B68F6069A09D7C",
+        "provenance.json": "D3AB39D5143ED36B14A9F5E5424D4E30A17A938362B8FDEF47167D25B6192752",
+        "validation_summary.json": "98F85789CB3BBC3AF82AC277DF4A7DB56FFFB764B3328651C6A71F81CFD055E7"
+      },
+      "finding_ids": [
+        "RUN-1110205-CAL006-A:missing_exact_dimensions",
+        "RUN-1110205-CAL006-A:reference_layout_unavailable",
+        "RUN-1110205-CAL006-A:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "00C460F33EC7A6F48FF7574900A92685C6D9B97ED6C890AE5CACC62519A0A442"
+    },
+    {
+      "run_id": "RUN-1110205-CAL006-B",
+      "project_id": "1110205",
+      "source_evidence_ids": [
+        "SGD-FD5565DC7BCF22",
+        "SGD-9E7AE8F36A74FD",
+        "SGD-B5CBB9DE92A78B",
+        "SGD-289C4E13989C26"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "77DB6B84667FADC3A81ADBDFCFDF8E1704997DF22CC581ED016780A6943CDF1F",
+        "approval_manifest": "988254F2AE79EC0B1FC35E7354675B52827998F6E69F9A3C54C8BF11576FE7D8",
+        "visible_file_manifest": "ED723B3920F5332E2EB985A92FC75F23F49390F53A5A2033661DC9683309F13D"
+      },
+      "reference_manifest_hash": "F42304DC3A9EAD3BE211A69F6D0D1AE206284E9DB1FE4DBE0196DFC51B6DB5E6",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-0A33EBAEC376",
+          "reference_sha256": "6EE2007168586349D50D57A220509755A189B47EBB639729B4485535693AF307",
+          "generated_sha256": "D33AD22CBD721628E19E1A2D0865A62FF6F77C3CEB34FED372CBD43324B8B3DF"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-85794537F301",
+          "reference_sha256": "4D02CBA053229C5835F6CF77032B0863183AAF6127995DF7420835BD94B8858D",
+          "generated_sha256": "63CE76D8BD600C826A9993D3D293EF1C3D1B494D0B29B2681414B7EBFAA4556A"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-3AB3DD15BA07",
+          "reference_sha256": "706D84122196CF6C7FEA3F8D5BA3B745D2CE4145B2580D4A53E334DFEACC7C45",
+          "generated_sha256": "9A5C830D18F62D70B256140C4C4A7DB25AD0F3B0BC95A5E8EC1ECD8B91C3306F"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110205.json": "065D1967CCB2DFA72FA1C92C88413B23B713ABCE0022319DE274A6DAB574D884",
+        "job_spec_1110205.json": "D084BBF41DE2498CF5BFD94612035F85EE6EE9F52F07110EB543528E4411C571",
+        "pdf_validation.json": "370F17914F40551C90C552ABC4A12F68C1BADB4A8E1B50E360CCFD945D39EBF1",
+        "pdfs\\01_生管課用圖_1110205.pdf": "D33AD22CBD721628E19E1A2D0865A62FF6F77C3CEB34FED372CBD43324B8B3DF",
+        "pdfs\\02_鈑金施工圖_1110205.pdf": "63CE76D8BD600C826A9993D3D293EF1C3D1B494D0B29B2681414B7EBFAA4556A",
+        "pdfs\\03_沖孔施工圖_1110205.pdf": "9A5C830D18F62D70B256140C4C4A7DB25AD0F3B0BC95A5E8EC1ECD8B91C3306F",
+        "pdfs\\drawing_index_1110205.csv": "FCB160FD0B3CA4A4C565AD8F1B17CA35C56F0E9345D2F5B9853B8B05B6E1737E",
+        "pdfs\\render_manifest_1110205.json": "F2196DE4C19164D6A6EC467FC65D47C2DB7CA03EEE2542744C5458F4CDACF6CF",
+        "provenance.json": "4DD4072D8B18364E40951F6E37D051CE87D17EC621225807EE59A4B12045C2F1",
+        "validation_summary.json": "55D56F1FF1E4C0FDD0D29F152EB4A16F0C3F0E47C0944C4803EC071A8928210A"
+      },
+      "finding_ids": [
+        "RUN-1110205-CAL006-B:missing_exact_dimensions",
+        "RUN-1110205-CAL006-B:reference_layout_unavailable",
+        "RUN-1110205-CAL006-B:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "954B49DC2F649FFF32B195B667D0E72506403A117BB12F84C7A519BFC78EEC93"
+    },
+    {
+      "run_id": "RUN-1110405-CAL006-A",
+      "project_id": "1110405",
+      "source_evidence_ids": [
+        "SGD-2BB8F4C5348957",
+        "SGD-60695E46370264",
+        "SGD-0934CE53139606",
+        "SGD-F941FF6BCB2B6C"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "1026CBF59DE86B745FE3D841D890BC542FBA4442640D2E67A5924EE021DABCE5",
+        "approval_manifest": "9B21CEBF30A19A61C01F0C2CD2C69EFBC18E7F3432650D57CCCFA60DEFBDE6BE",
+        "visible_file_manifest": "126ECF288731442EAAA50C3EFB4161365713437D7B9C0774595AEACA420D7540"
+      },
+      "reference_manifest_hash": "ED7F31EB004598C74C1C8142931B0DF49F2907545986543E930AA294395FF316",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-63E29B24AD5F",
+          "reference_sha256": "E3AD35B083AD64C290D596B48A077466B48F134621CBCB24F6E3F445C4182504",
+          "generated_sha256": "AF92B47D635AFC3E32400DB5F07D575A9980F0E4E93CEBED68B30234F9CEA080"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-69B8C07CD1B3",
+          "reference_sha256": "95CF285F594BEAE93D5092B73BEED643A7467B3AC2E7AA8209A998CC10F8600E",
+          "generated_sha256": "6D8E1FDD969FB779AFC6F6DA9B75611D63584CB3CDFC8E3C751439D98995077C"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-3B49DC17A48A",
+          "reference_sha256": "6F985D2B874F096BEAE8AB9C52786B84675AF6C846847065DE1F38D0E9B345E5",
+          "generated_sha256": "E04E53E5636457E8509116EC323C9A35132D29C58BF20BD437487EF25539D041"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110405.json": "DF0BB4B0E402B48B13B32A9A54DF6A043FE3E991375F344F69648EE2D2353035",
+        "job_spec_1110405.json": "B7534A7FBAC3787A3F86BBEA1E9BCF1842E493FFE09D3F63D81353B21E7AA2CE",
+        "pdf_validation.json": "737C118AA14913CF13C33E7A1F75DC6564AE000E00E8E8D4DF7DAE37443E29BC",
+        "pdfs\\01_生管課用圖_1110405.pdf": "AF92B47D635AFC3E32400DB5F07D575A9980F0E4E93CEBED68B30234F9CEA080",
+        "pdfs\\02_鈑金施工圖_1110405.pdf": "6D8E1FDD969FB779AFC6F6DA9B75611D63584CB3CDFC8E3C751439D98995077C",
+        "pdfs\\03_沖孔施工圖_1110405.pdf": "E04E53E5636457E8509116EC323C9A35132D29C58BF20BD437487EF25539D041",
+        "pdfs\\drawing_index_1110405.csv": "F1DF1082A524907F1A47729D33BDAC65B5B228B5BE8DAD16A9368493FCAFE0A5",
+        "pdfs\\render_manifest_1110405.json": "DD59675BC3FFAF2BDA6362F77E04D3FD387E274AAA04A467D0F471D2ECC2171F",
+        "provenance.json": "38AA449F9DEB6C20B961AC9150D4DA6502AF6B57637FA53685E4332716A32F52",
+        "validation_summary.json": "0C5086FE290F5BE922284CDB2AB55320E7C6694D04BD143CA2E8453E639039D7"
+      },
+      "finding_ids": [
+        "RUN-1110405-CAL006-A:missing_exact_dimensions",
+        "RUN-1110405-CAL006-A:reference_layout_unavailable",
+        "RUN-1110405-CAL006-A:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "6334ED13327110DB70C6ED7B953E9ECD233E0F21A4B76E75B58DB5A663331EE2"
+    },
+    {
+      "run_id": "RUN-1110405-CAL006-B",
+      "project_id": "1110405",
+      "source_evidence_ids": [
+        "SGD-2BB8F4C5348957",
+        "SGD-60695E46370264",
+        "SGD-0934CE53139606",
+        "SGD-F941FF6BCB2B6C"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "1026CBF59DE86B745FE3D841D890BC542FBA4442640D2E67A5924EE021DABCE5",
+        "approval_manifest": "9B21CEBF30A19A61C01F0C2CD2C69EFBC18E7F3432650D57CCCFA60DEFBDE6BE",
+        "visible_file_manifest": "126ECF288731442EAAA50C3EFB4161365713437D7B9C0774595AEACA420D7540"
+      },
+      "reference_manifest_hash": "ED7F31EB004598C74C1C8142931B0DF49F2907545986543E930AA294395FF316",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-63E29B24AD5F",
+          "reference_sha256": "E3AD35B083AD64C290D596B48A077466B48F134621CBCB24F6E3F445C4182504",
+          "generated_sha256": "D934B71976F2BB938DAA1AE11645A5A9408859AB5966470BDE7DC9F8418D0019"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-69B8C07CD1B3",
+          "reference_sha256": "95CF285F594BEAE93D5092B73BEED643A7467B3AC2E7AA8209A998CC10F8600E",
+          "generated_sha256": "0AEDF0CE0D94BE3BFE2A098EB0A1B4ACD5444F9C14C6F477D8508B72BF5C68CE"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-3B49DC17A48A",
+          "reference_sha256": "6F985D2B874F096BEAE8AB9C52786B84675AF6C846847065DE1F38D0E9B345E5",
+          "generated_sha256": "65883193E62ECE53911DAA43CF5254B9593C58A5E53DC8A051B291379D54A4CD"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110405.json": "DF0BB4B0E402B48B13B32A9A54DF6A043FE3E991375F344F69648EE2D2353035",
+        "job_spec_1110405.json": "B7534A7FBAC3787A3F86BBEA1E9BCF1842E493FFE09D3F63D81353B21E7AA2CE",
+        "pdf_validation.json": "929E8225E5F8338047403BB32E31D0FE1BF631D3CADF4BDB2CA138D7A9FB10D1",
+        "pdfs\\01_生管課用圖_1110405.pdf": "D934B71976F2BB938DAA1AE11645A5A9408859AB5966470BDE7DC9F8418D0019",
+        "pdfs\\02_鈑金施工圖_1110405.pdf": "0AEDF0CE0D94BE3BFE2A098EB0A1B4ACD5444F9C14C6F477D8508B72BF5C68CE",
+        "pdfs\\03_沖孔施工圖_1110405.pdf": "65883193E62ECE53911DAA43CF5254B9593C58A5E53DC8A051B291379D54A4CD",
+        "pdfs\\drawing_index_1110405.csv": "837D4996766A36D800C2182EF8137971D1B5AA19B4F7EED9A5E2D809E8016D3E",
+        "pdfs\\render_manifest_1110405.json": "B7F9771D3A654887A624ABA407F88F8F85F8805A043C38517AA72E3F53A1F408",
+        "provenance.json": "C13651BBA5D7E3B7B319351DB00724E550D338C616D3F5532B1CF6CEF9CED813",
+        "validation_summary.json": "E2B45DCD202EC6B987B46A42895D6BED02842B6B768DB310FC5CF9F0793AEAFF"
+      },
+      "finding_ids": [
+        "RUN-1110405-CAL006-B:missing_exact_dimensions",
+        "RUN-1110405-CAL006-B:reference_layout_unavailable",
+        "RUN-1110405-CAL006-B:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "3412D4266AC2639A5091E4A2D084A690A4D5C0144DF104CCF677855B1239D969"
+    },
+    {
+      "run_id": "RUN-1110410-CAL006-A",
+      "project_id": "1110410",
+      "source_evidence_ids": [
+        "SGD-F3A5C9E7B2674E",
+        "SGD-E25373215632FB",
+        "SGD-89E1E5092FF4EC"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "02A160018835FD76806AB1B6137EAA5B339021E6E4049A4A1F314451A03CDDE8",
+        "approval_manifest": "E33569F069D6C0309E0ADEBCFCC240F8B858B56CE0F70622C41868B2016A34D2",
+        "visible_file_manifest": "91CB6D870B9F57F297BDBADC2080C352DB22AB6DF0E6091D7748C9B5D42BA4F4"
+      },
+      "reference_manifest_hash": "97DA3F6F0EDA5CA2B7907D39A1DA09AFB523596842296E0104D8C4650FF91583",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-0A0BAA12D703",
+          "reference_sha256": "6779474CCE3DC578CE087A0237153E2275D0639661C83022E465D71ECDCCEA1A",
+          "generated_sha256": "2524EB80296617C27F74CA6EBFAF410A1F52BBC09D516E19B5849243B7EA3B1B"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-55662875E123",
+          "reference_sha256": "D27E59E5EE6251514099F0B30C2D0A0B00FF6B47F1C61CE8F69BA4DCD852F93F",
+          "generated_sha256": "25E246BD614F96B09D9138AA5A30C1A1039CE9B8B7B1CF17FFC45473D49C6FBE"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-9800A25AFC8E",
+          "reference_sha256": "0CE66FEC93F2A6D3A0E94F6CF69522A7048596639B0FB37F4646F10DBAD799E0",
+          "generated_sha256": "69979754026A42F910737D2D06822FF877810467807AAC92E27B0E5E2661CCAF"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110410.json": "F34CE8CE5DD9926E4B42C02F78BAA5A57303CE26D39849B4FDBC0932B93CBCD0",
+        "job_spec_1110410.json": "2A828ADD48AC1638D0667EBA9B32EAC00B036CCACE1B2E6CD338EDB6C903D079",
+        "pdf_validation.json": "356CBE44CA5CD82300B18B17C5F18AC718324CE9ACE6EF2B743340861FC655FB",
+        "pdfs\\01_生管課用圖_1110410.pdf": "2524EB80296617C27F74CA6EBFAF410A1F52BBC09D516E19B5849243B7EA3B1B",
+        "pdfs\\02_鈑金施工圖_1110410.pdf": "25E246BD614F96B09D9138AA5A30C1A1039CE9B8B7B1CF17FFC45473D49C6FBE",
+        "pdfs\\03_沖孔施工圖_1110410.pdf": "69979754026A42F910737D2D06822FF877810467807AAC92E27B0E5E2661CCAF",
+        "pdfs\\drawing_index_1110410.csv": "D5A88EECC7B3707FD7328CA9ECF075153DC32DC5704027C5292124B58F0527F7",
+        "pdfs\\render_manifest_1110410.json": "18F09D45780A8F5475611B1611161CAC8B74220372E1437F217C6EFEE547C8A4",
+        "provenance.json": "0BAE98D4BA40619CB4B0FAD3943D53A4112F00C8F1764D1076C35A8773EF5E9A",
+        "validation_summary.json": "7C890F966CD47DEB4AD785270568E5C15227C50EB8BF0EC00FDB807138AFD9C7"
+      },
+      "finding_ids": [
+        "RUN-1110410-CAL006-A:missing_exact_dimensions",
+        "RUN-1110410-CAL006-A:reference_layout_unavailable",
+        "RUN-1110410-CAL006-A:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "2B451866E9285E9C83722B5537D38BB86B06F344ECF7100D37D2DB87455842FB"
+    },
+    {
+      "run_id": "RUN-1110410-CAL006-B",
+      "project_id": "1110410",
+      "source_evidence_ids": [
+        "SGD-F3A5C9E7B2674E",
+        "SGD-E25373215632FB",
+        "SGD-89E1E5092FF4EC"
+      ],
+      "source_manifest_hashes": {
+        "bundle_manifest": "02A160018835FD76806AB1B6137EAA5B339021E6E4049A4A1F314451A03CDDE8",
+        "approval_manifest": "E33569F069D6C0309E0ADEBCFCC240F8B858B56CE0F70622C41868B2016A34D2",
+        "visible_file_manifest": "91CB6D870B9F57F297BDBADC2080C352DB22AB6DF0E6091D7748C9B5D42BA4F4"
+      },
+      "reference_manifest_hash": "97DA3F6F0EDA5CA2B7907D39A1DA09AFB523596842296E0104D8C4650FF91583",
+      "page_sheet_pairings": [
+        {
+          "output_type": "production",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-0A0BAA12D703",
+          "reference_sha256": "6779474CCE3DC578CE087A0237153E2275D0639661C83022E465D71ECDCCEA1A",
+          "generated_sha256": "7C37D6D25BE6DC8662C81C91175C49ED556E71456C0FE91D8AF372AE87105EAD"
+        },
+        {
+          "output_type": "sheetmetal",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-55662875E123",
+          "reference_sha256": "D27E59E5EE6251514099F0B30C2D0A0B00FF6B47F1C61CE8F69BA4DCD852F93F",
+          "generated_sha256": "8B7A63768238FFF31038003628454988EE497606CBEA422C3CA3C6351A9148BC"
+        },
+        {
+          "output_type": "punch",
+          "reference_file_id": "SRC-ALL-PROJECTS-FILE-9800A25AFC8E",
+          "reference_sha256": "0CE66FEC93F2A6D3A0E94F6CF69522A7048596639B0FB37F4646F10DBAD799E0",
+          "generated_sha256": "1F3D6A92ACFC1F69D09AE6603A3B77788D39D11740954A05DCDA5544B34CE9AC"
+        }
+      ],
+      "generated_artifact_hashes": {
+        "drawing_model_1110410.json": "F34CE8CE5DD9926E4B42C02F78BAA5A57303CE26D39849B4FDBC0932B93CBCD0",
+        "job_spec_1110410.json": "2A828ADD48AC1638D0667EBA9B32EAC00B036CCACE1B2E6CD338EDB6C903D079",
+        "pdf_validation.json": "991DA6BB339F958726CF963C9DF516B3CEB7BDA1D9AAB448A2CE6A0F985B1F2D",
+        "pdfs\\01_生管課用圖_1110410.pdf": "7C37D6D25BE6DC8662C81C91175C49ED556E71456C0FE91D8AF372AE87105EAD",
+        "pdfs\\02_鈑金施工圖_1110410.pdf": "8B7A63768238FFF31038003628454988EE497606CBEA422C3CA3C6351A9148BC",
+        "pdfs\\03_沖孔施工圖_1110410.pdf": "1F3D6A92ACFC1F69D09AE6603A3B77788D39D11740954A05DCDA5544B34CE9AC",
+        "pdfs\\drawing_index_1110410.csv": "735E000379E53E1AB2962BF9FD0DE5D5634B94E767D7CB604A91ECACE11EFEAE",
+        "pdfs\\render_manifest_1110410.json": "994E87EBE14990101F0E9CC331857A989FB82A364225A59D1D39C9D2C6DB4450",
+        "provenance.json": "10915882C3D4FD47D9F64E4A10421DE048E9B51A5EA7067C56545599F863A98C",
+        "validation_summary.json": "5510BAB0E48C23CDB2F86FDD54E5BFC01A3ADA0551F808DA9DF2346F49977B30"
+      },
+      "finding_ids": [
+        "RUN-1110410-CAL006-B:missing_exact_dimensions",
+        "RUN-1110410-CAL006-B:reference_layout_unavailable",
+        "RUN-1110410-CAL006-B:schematic_minimal"
+      ],
+      "finding_dedupe_keys": [
+        "missing_exact_dimensions",
+        "reference_layout_unavailable",
+        "schematic_minimal"
+      ],
+      "scoring_record_sha256": "1CDCCA1D5E555F167993BDC35AF959120EB5BCCA25DE2762AA22D3AB8D822798"
+    }
+  ],
+  "identical_generated_pdf_pairs": [],
+  "checks": {
+    "correct_project_ids": true,
+    "distinct_source_evidence_by_project": true,
+    "distinct_reference_manifest_by_project": true,
+    "project_specific_generated_hashes": true,
+    "finding_ids_project_specific": true,
+    "dedupe_keys_intentionally_shared": true
+  }
+}

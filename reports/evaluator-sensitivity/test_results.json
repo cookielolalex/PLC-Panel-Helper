@@ -1,0 +1,6 @@
+{
+  "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/run_tests.py",
+  "returncode": 0,
+  "stdout_tail": "PASS test_positive_bundle_and_contamination_scan\nPASS test_source_guard_fail_closed_decisions\nPASS test_source_approval_and_bundle_fail_closed\nPASS test_bundle_verifier_rejects_leaks_and_traversal\n{\n  \"status\": \"PASS\",\n  \"tests\": [\n    \"test_json_schemas_parse\",\n    \"test_declared_json_artifacts_validate\",\n    \"test_utf8_fixture_labels\",\n    \"test_forbidden_classification\",\n    \"test_grading_weights\",\n    \"test_evaluator_sensitivity_monotonicity\",\n    \"test_synthetic_render_grade\",\n    \"test_positive_bundle_and_contamination_scan\",\n    \"test_source_guard_fail_closed_decisions\",\n    \"test_source_approval_and_bundle_fail_closed\",\n    \"test_bundle_verifier_rejects_leaks_and_traversal\"\n  ]\n}",
+  "stderr_tail": ""
+}

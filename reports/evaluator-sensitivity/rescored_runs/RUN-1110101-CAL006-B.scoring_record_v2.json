@@ -1,0 +1,141 @@
+{
+  "record_version": "calibration_scoring_record_v2",
+  "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+  "run_id": "RUN-1110101-CAL006-B",
+  "project_id": "1110101",
+  "validity_inputs": {
+    "required_outputs_present": true,
+    "hard_gate_failures": []
+  },
+  "coverage": {
+    "scorable_elements": 38,
+    "total_elements": 100,
+    "items": [
+      {
+        "item_id": "verified_source_provenance",
+        "scorable": 20,
+        "denominator": 20
+      },
+      {
+        "item_id": "required_pdf_readability",
+        "scorable": 9,
+        "denominator": 9
+      },
+      {
+        "item_id": "canonical_model_panel_structure",
+        "scorable": 9,
+        "denominator": 9
+      },
+      {
+        "item_id": "exact_reference_geometry",
+        "scorable": 0,
+        "denominator": 34
+      },
+      {
+        "item_id": "device_and_material_specifics",
+        "scorable": 0,
+        "denominator": 28
+      }
+    ]
+  },
+  "dimension_items": {
+    "source_selection_provenance_conflict": [
+      {
+        "item_id": "verified_source_bundle_and_provenance",
+        "score": 14,
+        "max_score": 20,
+        "classification": "EXPLICIT_IN_ALLOWED_INPUT"
+      }
+    ],
+    "panel_schedule_enclosure_facts": [
+      {
+        "item_id": "panel_schedule_with_unresolved_fabrication_facts",
+        "score": 5,
+        "max_score": 15,
+        "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+      }
+    ],
+    "device_bom_quantity_tag_fidelity": [
+      {
+        "item_id": "device_bom_not_extracted_from_allowed_bundle",
+        "score": 8,
+        "max_score": 20,
+        "classification": "UNAVAILABLE_IN_ALLOWED_INPUT"
+      }
+    ],
+    "shared_geometry_cross_pdf_consistency": [
+      {
+        "item_id": "canonical_model_cross_pdf_consistency_metadata_only",
+        "score": 8,
+        "max_score": 15,
+        "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+      }
+    ],
+    "production_drawing_quality": [
+      {
+        "item_id": "production_pdf_schematic_readable",
+        "score": 3,
+        "max_score": 10,
+        "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+      }
+    ],
+    "punch_drawing_quality": [
+      {
+        "item_id": "punch_pdf_schematic_readable",
+        "score": 2,
+        "max_score": 10,
+        "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+      }
+    ],
+    "sheetmetal_drawing_quality": [
+      {
+        "item_id": "sheetmetal_pdf_schematic_readable",
+        "score": 2,
+        "max_score": 10,
+        "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS"
+      }
+    ]
+  },
+  "output_type_scores": {
+    "production": 14,
+    "sheetmetal": 14,
+    "punch": 14
+  },
+  "findings": [
+    {
+      "finding_id": "RUN-1110101-CAL006-B:missing_exact_dimensions",
+      "dedupe_key": "missing_exact_dimensions",
+      "severity": "HIGH",
+      "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+      "finding": "Exact enclosure and cutout dimensions were not available in the allowed sanitized bundle; generated drawings remain schematic/TBD."
+    },
+    {
+      "finding_id": "RUN-1110101-CAL006-B:reference_layout_unavailable",
+      "dedupe_key": "reference_layout_unavailable",
+      "severity": "HIGH",
+      "classification": "UNAVAILABLE_IN_ALLOWED_INPUT",
+      "finding": "Reference-specific layout decisions could not be scored as source-supported because completed references were unavailable to the generator."
+    },
+    {
+      "finding_id": "RUN-1110101-CAL006-B:schematic_minimal",
+      "dedupe_key": "schematic_minimal",
+      "severity": "HIGH",
+      "classification": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+      "finding": "All three PDFs are internally consistent but minimal and not fabrication-ready."
+    }
+  ],
+  "comparison_limitations": [
+    "No exact geometry overlay was produced because registration was not established as reliable.",
+    "Completed references are used only in reviewer workspace after generation freeze.",
+    "Scoring separates unavailable dimensions from unsupported invented values."
+  ],
+  "run_metadata": {
+    "reference_access_after_freeze": true,
+    "reviewer_workspace": "evals\\sandboxes\\RUN-1110101-CAL006-B\\reviewer_workspace",
+    "rubric": "plc_layout_v2",
+    "freeze_hash": "42F61E41A0D5425F2B469B51367DC3C19E89AEA549282967E7C014E8C19735A9",
+    "generation_complete_sha256": "A231EDBFA362E4B9FF9DF67A82C203AA23CDBD2D7A2264DDA91D02017CFDC4AA",
+    "freeze_manifest_sha256": "E1292ED2B662C59885286550420ACAB98C99ABE3508CEBF628F039858B7BB642",
+    "pdf_validation_sha256": "951A6E1189F655EAA79D3C8D6B6ADF61D971245164A8B1BEF18C1F709F27A6BE"
+  }
+}

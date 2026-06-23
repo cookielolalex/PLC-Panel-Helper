@@ -49,3 +49,9 @@
 - Backfilled project `1110101` using a local deterministic legacy `.xls` parser and evaluation-only source quorum.
 - Completed 12 fresh generation runs, 12 primary reviews, 6 secondary reviews, portfolio analysis, and independent audit.
 - Stopped before drawing-workflow optimization and before any 24-project baseline.
+- Began cycle-000 Phase A evaluator-sensitivity qualification.
+- Identified the original calibration scorer as writing `quality_score=42` and `scorable_coverage=38` directly.
+- Added the failing evaluator-sensitivity regression before implementing `plc_layout_evaluator_v2_sensitivity`.
+- Added `scripts/evaluator_scoring.py`, `evals/grading_profiles/plc_layout_v2.json`, counterfactual fixtures, and Phase A reports under `reports/evaluator-sensitivity/`.
+- Rescored the 12 frozen calibration outputs with v2; scores remain `42/38`, now from explicit scoring records and coverage arithmetic.
+- Completed fresh independent evaluator-sensitivity audit with result `EVALUATOR_SENSITIVITY_PASS`.

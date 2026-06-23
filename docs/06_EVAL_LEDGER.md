@@ -45,3 +45,17 @@ Generation attempts: `12`; valid generation runs: `12`; primary reviews: `12`; s
 Portfolio mean score: `42`; mean coverage: `38`; critical findings: `0`; high findings: `36`.
 
 Evidence: `reports/calibration-006/calibration_summary.md`, `optimization/calibration-006/machine_summary.json`, and `reports/calibration-006/independent_audit.json`.
+
+## cycle-000 Phase A evaluator-sensitivity
+
+Status: `EVALUATOR_SENSITIVITY_PASS - READY_FOR_24_PROJECT_BASELINE_PROTOCOL`.
+
+Purpose: qualify evaluator sensitivity before scaling from the six-project calibration set to the 24-project baseline.
+
+Finding: original calibration reviewer mechanics wrote score `42` and coverage `38` as constants, so original `42/38` was an evaluator-mechanics defect rather than proven independent scoring.
+
+Fix: added `plc_layout_evaluator_v2_sensitivity` with explicit scoring records, arithmetic dimension sums, coverage denominators, hard-gate overrides, low-coverage handling, and finding deduplication. Drawing-generation behavior was not changed.
+
+Rescore result: all 12 frozen calibration runs rescore to score `42` and scorable coverage `38` under v2; validity remains `PASS`; critical findings remain `0`; high findings remain `36`.
+
+Evidence: `reports/evaluator-sensitivity/calibration_score_recomputation.json`, `reports/evaluator-sensitivity/project_differentiation.json`, `reports/evaluator-sensitivity/counterfactual_results.json`, `reports/evaluator-sensitivity/test_results.json`, and `reports/evaluator-sensitivity/subagent_independent_audit.json`.

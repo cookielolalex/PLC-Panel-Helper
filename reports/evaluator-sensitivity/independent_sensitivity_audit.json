@@ -1,0 +1,42 @@
+{
+  "audit_id": "evaluator_sensitivity_audit_cycle_000",
+  "status": "EVALUATOR_SENSITIVITY_PASS",
+  "evaluator_version": "plc_layout_evaluator_v2_sensitivity",
+  "git_head": "b8c26b5e92608ae3c2c045ca18d08e320ae78747",
+  "git_status_after_phase_a": " M scripts/compare_one_project.py\n M scripts/run_tests.py\n?? evals/fixtures/evaluator_sensitivity/\n?? evals/grading_profiles/plc_layout_v2.json\n?? reports/evaluator-sensitivity/\n?? scripts/evaluator_scoring.py\n?? scripts/run_evaluator_sensitivity.py\n?? tests/evaluator_sensitivity/\n",
+  "criteria": [
+    {
+      "id": "score_arithmetic",
+      "status": "PASS"
+    },
+    {
+      "id": "coverage_arithmetic",
+      "status": "PASS"
+    },
+    {
+      "id": "hardcoded_42_38_identified",
+      "status": "PASS"
+    },
+    {
+      "id": "monotonicity",
+      "status": "PASS"
+    },
+    {
+      "id": "project_differentiation",
+      "status": "PASS"
+    },
+    {
+      "id": "test_results",
+      "status": "PASS"
+    },
+    {
+      "id": "drawing_workflow_unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "tracked_worktree_clean_before_phase_a_edits",
+      "status": "PASS",
+      "note": "Checkpoint verification before edits was clean; Phase A report/fix files are now intentionally modified."
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "task_id": "CYCLE000-A4-EVALUATOR-SENSITIVITY-AUDIT",
+  "audit_id": "subagent_independent_audit_cycle000_a4",
+  "created_at": "2026-06-23T11:02:27+08:00",
+  "auditor_role": "fresh_independent_auditor",
+  "final_status": "EVALUATOR_SENSITIVITY_PASS",
+  "read_scope": {
+    "status": "CONSTRAINED_TO_TASK_BRIEF",
+    "notes": [
+      "Did not inspect raw source roots, archived conversations, raw portfolio PDFs, checkpoint-validation packs, or final-held-out references.",
+      "Trajectory file contents were not opened because orchestration/trajectories was not in the allowed read path set; TASK_REGISTRY trajectory references were read."
+    ]
+  },
+  "git_evidence": {
+    "bundled_git": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.exe",
+    "head_command": "git rev-parse HEAD",
+    "head": "b8c26b5e92608ae3c2c045ca18d08e320ae78747",
+    "scoped_status_command": "git status --short -- <allowed paths>",
+    "scoped_status_lines": [
+      " M scripts/compare_one_project.py",
+      " M scripts/run_tests.py",
+      "?? evals/fixtures/evaluator_sensitivity/",
+      "?? evals/grading_profiles/plc_layout_v2.json",
+      "?? reports/evaluator-sensitivity/",
+      "?? scripts/evaluator_scoring.py",
+      "?? scripts/run_evaluator_sensitivity.py",
+      "?? tests/evaluator_sensitivity/"
+    ],
+    "scoped_diff_name_status_command": "git diff --name-status -- <allowed paths>",
+    "scoped_diff_name_status_lines": [
+      "M scripts/compare_one_project.py",
+      "M scripts/run_tests.py"
+    ],
+    "scoped_diff_stat": "scripts/compare_one_project.py | 53 ++++-------------------------; scripts/run_tests.py | 77 ++++++++++++++++++++++++++++++++++++++++++; 2 files changed, 83 insertions(+), 47 deletions(-)",
+    "scoped_log_command": "git log -n 12 --oneline --decorate -- <allowed paths>",
+    "scoped_log_head_lines": [
+      "b8c26b5 (HEAD -> main) Record six-project calibration audit",
+      "41fb938 Summarize six-project calibration results",
+      "f65f541 Record six-project review pass",
+      "39e86db Record six-project generation wave",
+      "a956df3 Freeze six-project calibration set",
+      "549d486 Backfill sixth calibration source bundle",
+      "cc8580b Add six-project score sanity mechanics"
+    ]
+  },
+  "key_file_hashes": {
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt": "eba9a30139a43862a7705f3123b050245dfa47fe3234d6a4e7579c6213e8ff09",
+    "AGENTS.md": "6298e5eeb469deba38cd3f83d5697c402815b7e0c94f61e7f355d6d704d8e433",
+    "docs/01_CURRENT_STATE.md": "34d18598a665eb1625b72ed5b7240f283177354a1dff6aa5e6c927d25ad99e38",
+    "docs/04_DECISION_LEDGER.md": "ab9116e266a7133e708eedd2871d994f1ecf1de5c25c6dc6e4c3fc44830bf32c",
+    "docs/06_EVAL_LEDGER.md": "b367e963603a4559a6e42c7814eb3cbe5371cea72949ff6d5b867b3370473fca",
+    "docs/07_CHANGELOG.md": "40e353c3230e67845b2ca3f6daa84fd21c5cd7eb0a8a2870944917c9fbc0e8c3",
+    "docs/SESSION_CHECKPOINT.md": "c96ab36e3bec109f624b8b638954f445ded7ad0aea55968eaf02bd65ec1d8e81",
+    "orchestration/TASK_REGISTRY.csv": "77bf46d3d51ba33aac24e69ba99fa97c6851e849c06bfb5a9f72eaf8c72f3b8d",
+    "orchestration/NEXT_THREAD_PROMPT.txt": "9d76b9f949c633273ae5005ef6f4d9ead44bfc65fc1c66a2896b4eb4ed1071a9",
+    "evals/calibration-006/run_plan.json": "fdb5488475bb89c357571a6a54c3f014890adbb144af78dd522c42ab52df87f2",
+    "evals/calibration-006/calibration_set_manifest.json": "2665fd06c455066a2b45f57a61f2f22817e5fa4db7b809a6a0a35eb1d559b246",
+    "evals/calibration-006/frozen_workflow_manifest.json": "67a404c3634bb64378a9dedf26a85c6fec1f5d06f85fb073f3a0f727ca01bb14",
+    "evals/grading_profiles/plc_layout_v1.json": "a2abcdc0ef766c968463d1b4d7c2a42ef0c5fe31f122f09727e323615f426e83",
+    "evals/grading_profiles/plc_layout_v2.json": "efbf014e0c6e98e09af9d4309aac96519a3c114c4975ef4a243914412dbfac52",
+    "evals/tolerance_profiles/plc_layout_tolerances_v1.json": "09268f208ff5d292ae2fada7d234e4dd03a3067413c0f514b34e19a48ad92e4a",
+    "scripts/evaluator_scoring.py": "83c8fb6f0198129cc6b0a6e8f18cc15dae692db9b2080f56d6e4fa7a7baa436b",
+    "scripts/run_evaluator_sensitivity.py": "e17dda9cc45f7c761400791b1a7c7ac5400d9f63d1a5d56d0a6dd96d11821b7f",
+    "scripts/compare_one_project.py": "55e1b5fd0a7db45eb4ec57e58814d966c4aad8b46c4d5c6e514a8e416603d48f",
+    "scripts/run_tests.py": "c530f257d3445b5fa3be3d5bfe2674102c29626376df6dbd8216c304f44c8c59",
+    "reports/evaluator-sensitivity/calibration_score_recomputation.json": "c155bce68e1e11c5222de6a0a2d51a38636f175663eaf2f8909972b43ecb9f2d",
+    "reports/evaluator-sensitivity/counterfactual_results.json": "f5353a73af8699396c7a4dd74c03362992eb71590cf3d5492b89215a3c9e539f",
+    "reports/evaluator-sensitivity/project_differentiation.json": "90675d75b7fefad8b66fdf8ae3209cc8351a9ea7b6f5bbc9f6a9dd130d5f194b",
+    "reports/evaluator-sensitivity/test_results.json": "4db893b7877799705cc2d1f653e7ff304063c5d64b0efb9e5a6b5602da54a5f5",
+    "reports/evaluator-sensitivity/independent_sensitivity_audit.json": "9356224ebcf1a86219b4a21bd8d5d16a7131a6571bdb9bd6b4e95247c92a5233",
+    "reports/calibration-006/independent_audit.json": "f57a428653a355befcefc7f0b54881e2031b1926bbf0ac990d6e5ecce2a43412",
+    "optimization/calibration-006/machine_summary.json": "384586bea06908300f8211bfa3f5e3622746d3f14a1b1169c54291eaa37b8dff"
+  },
+  "criteria": [
+    {
+      "id": "score_arithmetic",
+      "status": "PASS",
+      "evidence": [
+        "Command: PowerShell recomputed all reports/evaluator-sensitivity/rescored_runs/*.scoring_record_v2.json dimension sums and matched every paired *.grading_result_v2.json quality_score.",
+        "records_checked=12; all_score_arithmetic_pass=True; every record_dimension_sum=result_dimension_sum=result_quality_score=42.",
+        "Example hash: RUN-1110101-CAL006-A scoring_record_v2 sha256 47ed8462c7872bc924a5d807e6b75346ad2604d89e2b3434de2cc671b431c608; grading_result_v2 sha256 57f3a92941c74adf82e54797284a49f7a22c896437d6c917791007f51d527779."
+      ]
+    },
+    {
+      "id": "coverage_arithmetic",
+      "status": "PASS",
+      "evidence": [
+        "Command: PowerShell recomputed coverage as scorable_elements/total_elements*100 from all rescored scoring records.",
+        "records_checked=12; all_coverage_arithmetic_pass=True; every expected coverage was 38 from 38/100*100 and matched grading_result_v2.scorable_coverage.",
+        "Aggregate report reports/evaluator-sensitivity/calibration_score_recomputation.json sha256 c155bce68e1e11c5222de6a0a2d51a38636f175663eaf2f8909972b43ecb9f2d reports mean_coverage=38."
+      ]
+    },
+    {
+      "id": "original_hardcoded_42_38_defect_identification",
+      "status": "PASS",
+      "evidence": [
+        "Command: git diff -- scripts/compare_one_project.py scripts/run_tests.py.",
+        "Diff removes literal grading object from scripts/compare_one_project.py with quality_score: 42 and scorable_coverage: 38, replacing it with build_calibration_scoring_record(...) and compute_score(...).",
+        "reports/evaluator-sensitivity/calibration_score_recomputation.json records original_evaluator_status=FAIL_HARDCODED_SCORE_AND_COVERAGE and hardcoded_locations including scripts/compare_one_project.py.",
+        "Search command found run_evaluator_sensitivity.py lines 89 and 91 documenting the original hardcoded/copy-through defects."
+      ]
+    },
+    {
+      "id": "v2_absence_of_magic_total_coverage_constants_in_compute_score",
+      "status": "PASS",
+      "evidence": [
+        "Command: extracted scripts/evaluator_scoring.py def compute_score through def _read_generated_json and regex-searched for word-boundary 42 and 38.",
+        "Result: contains_42=False; contains_38=False; contains_constant_total_phrase=False; line_count=78.",
+        "Function evidence: quality_score is sum(float(dimension_scores[d]) for d in DIMENSIONS); scorable_coverage is _coverage(record); validity FAIL sets quality_score=0."
+      ]
+    },
+    {
+      "id": "hard_gate_behavior",
+      "status": "PASS",
+      "evidence": [
+        "scripts/evaluator_scoring.py lines 57-59 collect hard_gate_failures and append MISSING_REQUIRED_PDF when required_outputs_present is false; lines 80-83 set validity=FAIL and quality_score=0.",
+        "reports/evaluator-sensitivity/counterfactual_results.json sha256 f5353a73af8699396c7a4dd74c03362992eb71590cf3d5492b89215a3c9e539f: missing_required_output passed with validity=FAIL, score=0, hard_gates=MISSING_REQUIRED_PDF.",
+        "Same report: unsupported_critical_value passed with validity=FAIL, score=0, hard_gates=INVENTED_CRITICAL_VALUE."
+      ]
+    },
+    {
+      "id": "monotonicity_counterfactual_results",
+      "status": "PASS",
+      "evidence": [
+        "reports/evaluator-sensitivity/counterfactual_results.json status=PASS with 10/10 cases passed.",
+        "Baseline score/coverage=42/38; unavailable_to_scorable increased to 46/42; correct_high_defect increased to 46/38; add_high_defect decreased to 38/38.",
+        "same_total_different_vector preserved score=42 while changing the dimension vector, proving the vector is not collapsed to a single hidden total."
+      ]
+    },
+    {
+      "id": "finding_deduplication",
+      "status": "PASS",
+      "evidence": [
+        "scripts/evaluator_scoring.py lines 27-36 deduplicate findings by dedupe_key, then finding_id, then finding text.",
+        "Command: PowerShell checked all 12 grading_result_v2 files; all_deduped_counts_three=True; each had deduped_finding_count=3, high_findings=3, critical_findings=0.",
+        "Counterfactual duplicate_finding passed with high_findings remaining 3."
+      ]
+    },
+    {
+      "id": "project_differentiation",
+      "status": "PASS",
+      "evidence": [
+        "reports/evaluator-sensitivity/project_differentiation.json sha256 90675d75b7fefad8b66fdf8ae3209cc8351a9ea7b6f5bbc9f6a9dd130d5f194b status=PASS.",
+        "Checks true: correct_project_ids, distinct_source_evidence_by_project, distinct_reference_manifest_by_project, project_specific_generated_hashes, finding_ids_project_specific, dedupe_keys_intentionally_shared.",
+        "12 runs cover six project IDs: 1110101, 1110104, 1110204, 1110205, 1110405, 1110410; identical_generated_pdf_pairs is empty.",
+        "Caveat: recomputed quality scores and dimension vectors remain numerically identical across calibration runs, but project-specific inputs/artifacts are distinguished."
+      ]
+    },
+    {
+      "id": "low_coverage_handling",
+      "status": "PASS",
+      "evidence": [
+        "scripts/evaluator_scoring.py lines 39-45 returns 0.0 coverage and INSUFFICIENT_COVERAGE when total_elements<=0 or scorable_elements<=0; lines 84-86 default confidence to LOW for LOW_EVIDENCE or INSUFFICIENT_COVERAGE.",
+        "Counterfactual remove_all_scorable passed with coverage=0 and evidence_strength=INSUFFICIENT_COVERAGE.",
+        "All calibration rescored runs are explicitly LOW_EVIDENCE with coverage=38, not mislabeled as high-confidence coverage."
+      ]
+    },
+    {
+      "id": "registration_handling",
+      "status": "PASS",
+      "evidence": [
+        "reports/evaluator-sensitivity/calibration_score_recomputation.json checks.registration_failure_not_undocumented_fixed_total=True.",
+        "Counterfactual registration_unsuitable passed with score=42, coverage=38, shared_geometry_cross_pdf_consistency=8, and no hard gates; this preserves the explicit dimension score rather than using an undocumented total override.",
+        "scripts/run_evaluator_sensitivity.py case registration_unsuitable mutates the cross-PDF item_id to registration_unsuitable_metadata_only and expects the dimension-level behavior."
+      ]
+    },
+    {
+      "id": "unchanged_drawing_generation_workflow",
+      "status": "PASS",
+      "evidence": [
+        "Scoped git status over allowed paths lists only scripts/compare_one_project.py, scripts/run_tests.py, and new evaluator sensitivity artifacts; no renderer, generator, instructions, Knowledge, schema, source-bundle, codex_proxy, job_spec, or drawing_model workflow files are listed.",
+        "Scoped git diff name-status lists only M scripts/compare_one_project.py and M scripts/run_tests.py.",
+        "reports/evaluator-sensitivity/independent_sensitivity_audit.json captured the same status lines and reports drawing_workflow_unchanged=PASS.",
+        "docs/01_CURRENT_STATE.md and docs/SESSION_CHECKPOINT.md still state no drawing-workflow optimization has been authorized."
+      ]
+    },
+    {
+      "id": "test_results",
+      "status": "PASS",
+      "evidence": [
+        "reports/evaluator-sensitivity/test_results.json sha256 4db893b7877799705cc2d1f653e7ff304063c5d64b0efb9e5a6b5602da54a5f5 records command C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/run_tests.py with returncode=0 and empty stderr_tail.",
+        "stdout_tail includes test_evaluator_sensitivity_monotonicity and lists 11 passing tests.",
+        "I did not rerun scripts/run_tests.py during this audit because allowed writes were restricted to the two audit report paths and the test suite writes tmp artifacts."
+      ]
+    },
+    {
+      "id": "preservation_of_prior_frozen_evidence",
+      "status": "PASS",
+      "evidence": [
+        "Scoped git status/diff over allowed paths shows no modifications to reports/calibration-006/independent_audit.json, optimization/calibration-006/machine_summary.json, evals/calibration-006/run_plan.json, calibration_set_manifest.json, or frozen_workflow_manifest.json.",
+        "Current hashes: reports/calibration-006/independent_audit.json f57a428653a355befcefc7f0b54881e2031b1926bbf0ac990d6e5ecce2a43412; optimization/calibration-006/machine_summary.json 384586bea06908300f8211bfa3f5e3622746d3f14a1b1169c54291eaa37b8dff.",
+        "reports/calibration-006/independent_audit.json still reports SIX_PROJECT_CALIBRATION_AUDIT_PASS and workflow_hashes_unchanged=PASS; optimization/calibration-006/machine_summary.json still reports SIX_PROJECT_CALIBRATION_PASS with mean_score=42 and mean_coverage=38."
+      ]
+    }
+  ],
+  "changed_or_created_files": [
+    "reports/evaluator-sensitivity/subagent_independent_audit.json",
+    "reports/evaluator-sensitivity/subagent_independent_audit.md"
+  ]
+}
