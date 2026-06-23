@@ -1,0 +1,16 @@
+{
+  "task_id": "CAL006-D-RUN-1110205-CAL006-B",
+  "command": [
+    "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "scripts/run_one_project_calibration.py",
+    "--project-id",
+    "1110205",
+    "--run-id",
+    "RUN-1110205-CAL006-B"
+  ],
+  "started_at": "2026-06-23T02:30:45Z",
+  "duration_seconds": 7.68,
+  "returncode": 0,
+  "stdout_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-D-RUN-1110205-CAL006-B.stdout.log",
+  "stderr_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-D-RUN-1110205-CAL006-B.stderr.log"
+}

@@ -1,0 +1,58 @@
+{
+  "run_id": "RUN-1110204-CAL006-B",
+  "project_id": "1110204",
+  "git_head": "a956df3e29c4c731c5769446742829c16250bcc8",
+  "codex_process_metadata": {
+    "command": [
+      "C:\\Users\\alex1\\AppData\\Local\\OpenAI\\Codex\\bin\\8e55c2dd143b6354\\codex.exe",
+      "exec",
+      "--ephemeral",
+      "--cd",
+      "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper",
+      "--sandbox",
+      "read-only",
+      "--disable",
+      "plugins",
+      "--disable",
+      "apps",
+      "--disable",
+      "browser_use",
+      "--disable",
+      "image_generation",
+      "--json",
+      "--output-schema",
+      "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\schemas\\codex_proxy_child_output.schema.json",
+      "--output-last-message",
+      "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\runs\\RUN-1110204-CAL006-B\\logs\\codex_generator_process\\last_message.json",
+      "Synthetic contract wrapper for one local calibration process. Do not read files. Return JSON with role mock_case_generator, status PASS, project_id 1110204, outputs [\"job_spec\",\"drawing_model\",\"production_pdf\",\"sheetmetal_pdf\",\"punch_pdf\"], actual_model unknown, notes calibration_process_started."
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "duration_seconds": 7.79,
+    "stdout_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\runs\\RUN-1110204-CAL006-B\\logs\\codex_generator_process\\stdout.jsonl",
+    "stderr_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\runs\\RUN-1110204-CAL006-B\\logs\\codex_generator_process\\stderr.log",
+    "role": "mock_case_generator",
+    "requested_model": "default",
+    "actual_model": "unknown",
+    "actual_model_recording_status": "RECORDED_FROM_CHILD_OUTPUT",
+    "last_message_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\runs\\RUN-1110204-CAL006-B\\logs\\codex_generator_process\\last_message.json",
+    "parsed_output": {
+      "role": "mock_case_generator",
+      "status": "PASS",
+      "project_id": "1110204",
+      "outputs": [
+        "job_spec",
+        "drawing_model",
+        "production_pdf",
+        "sheetmetal_pdf",
+        "punch_pdf"
+      ],
+      "actual_model": "unknown",
+      "notes": "calibration_process_started"
+    },
+    "validation_errors": []
+  },
+  "started_at": "2026-06-23T02:30:37Z",
+  "fresh_ephemeral_codex_session": true,
+  "manual_repair": false
+}

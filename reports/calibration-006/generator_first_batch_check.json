@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "run_id": "RUN-1110104-CAL006-A",
+      "project_id": "1110104",
+      "status": "PASS",
+      "returncode": 0
+    },
+    {
+      "run_id": "RUN-1110101-CAL006-B",
+      "project_id": "1110101",
+      "status": "PASS",
+      "returncode": 0
+    },
+    {
+      "run_id": "RUN-1110101-CAL006-A",
+      "project_id": "1110101",
+      "status": "PASS",
+      "returncode": 0
+    }
+  ],
+  "resource_exhaustion": false,
+  "timeout_pattern": false,
+  "onedrive_stall": false,
+  "partial_artifact_package": false,
+  "process_isolation_failure": false,
+  "source_path_exposure": false,
+  "concurrency_after_check": 3
+}
