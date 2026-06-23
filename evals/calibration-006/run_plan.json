@@ -1,0 +1,151 @@
+{
+  "calibration_id": "calibration-006",
+  "created_at": "2026-06-23T10:28:01+08:00",
+  "random_seed": "CAL006-20260623",
+  "generator_concurrency_initial_max": 3,
+  "generator_concurrency_after_first_batch_max": 3,
+  "runs": [
+    {
+      "run_id": "RUN-1110101-CAL006-A",
+      "project_id": "1110101",
+      "repeat": "A"
+    },
+    {
+      "run_id": "RUN-1110101-CAL006-B",
+      "project_id": "1110101",
+      "repeat": "B"
+    },
+    {
+      "run_id": "RUN-1110104-CAL006-A",
+      "project_id": "1110104",
+      "repeat": "A"
+    },
+    {
+      "run_id": "RUN-1110104-CAL006-B",
+      "project_id": "1110104",
+      "repeat": "B"
+    },
+    {
+      "run_id": "RUN-1110204-CAL006-A",
+      "project_id": "1110204",
+      "repeat": "A"
+    },
+    {
+      "run_id": "RUN-1110204-CAL006-B",
+      "project_id": "1110204",
+      "repeat": "B"
+    },
+    {
+      "run_id": "RUN-1110205-CAL006-A",
+      "project_id": "1110205",
+      "repeat": "A"
+    },
+    {
+      "run_id": "RUN-1110205-CAL006-B",
+      "project_id": "1110205",
+      "repeat": "B"
+    },
+    {
+      "run_id": "RUN-1110405-CAL006-A",
+      "project_id": "1110405",
+      "repeat": "A"
+    },
+    {
+      "run_id": "RUN-1110405-CAL006-B",
+      "project_id": "1110405",
+      "repeat": "B"
+    },
+    {
+      "run_id": "RUN-1110410-CAL006-A",
+      "project_id": "1110410",
+      "repeat": "A"
+    },
+    {
+      "run_id": "RUN-1110410-CAL006-B",
+      "project_id": "1110410",
+      "repeat": "B"
+    }
+  ],
+  "primary_reviews": [
+    {
+      "run_id": "RUN-1110101-CAL006-A",
+      "project_id": "1110101"
+    },
+    {
+      "run_id": "RUN-1110101-CAL006-B",
+      "project_id": "1110101"
+    },
+    {
+      "run_id": "RUN-1110104-CAL006-A",
+      "project_id": "1110104"
+    },
+    {
+      "run_id": "RUN-1110104-CAL006-B",
+      "project_id": "1110104"
+    },
+    {
+      "run_id": "RUN-1110204-CAL006-A",
+      "project_id": "1110204"
+    },
+    {
+      "run_id": "RUN-1110204-CAL006-B",
+      "project_id": "1110204"
+    },
+    {
+      "run_id": "RUN-1110205-CAL006-A",
+      "project_id": "1110205"
+    },
+    {
+      "run_id": "RUN-1110205-CAL006-B",
+      "project_id": "1110205"
+    },
+    {
+      "run_id": "RUN-1110405-CAL006-A",
+      "project_id": "1110405"
+    },
+    {
+      "run_id": "RUN-1110405-CAL006-B",
+      "project_id": "1110405"
+    },
+    {
+      "run_id": "RUN-1110410-CAL006-A",
+      "project_id": "1110410"
+    },
+    {
+      "run_id": "RUN-1110410-CAL006-B",
+      "project_id": "1110410"
+    }
+  ],
+  "secondary_reviews": [
+    {
+      "project_id": "1110101",
+      "selected_run_id": "RUN-1110101-CAL006-A",
+      "selection_rule": "sha256(seed:project_id) mod 2"
+    },
+    {
+      "project_id": "1110104",
+      "selected_run_id": "RUN-1110104-CAL006-A",
+      "selection_rule": "sha256(seed:project_id) mod 2"
+    },
+    {
+      "project_id": "1110204",
+      "selected_run_id": "RUN-1110204-CAL006-A",
+      "selection_rule": "sha256(seed:project_id) mod 2"
+    },
+    {
+      "project_id": "1110205",
+      "selected_run_id": "RUN-1110205-CAL006-A",
+      "selection_rule": "sha256(seed:project_id) mod 2"
+    },
+    {
+      "project_id": "1110405",
+      "selected_run_id": "RUN-1110405-CAL006-A",
+      "selection_rule": "sha256(seed:project_id) mod 2"
+    },
+    {
+      "project_id": "1110410",
+      "selected_run_id": "RUN-1110410-CAL006-A",
+      "selection_rule": "sha256(seed:project_id) mod 2"
+    }
+  ]
+}

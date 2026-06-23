@@ -1,13 +1,32 @@
 {
+  "allowlist_id": "generator-allowlist-calibration-006-1110104",
   "project_id": "1110104",
-  "created_at": "2026-06-22T20:10:00+08:00",
-  "git_head": "55bb647cbd9fae562a6ab40b542bf94d69d6e464",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "FROZEN",
+  "allowed_items": [
+    {
+      "decision_id": "SGD-628D223B34A365",
+      "file_id": "SRC-ALL-PROJECTS-FILE-4377C2CB6116",
+      "sheet_id": "",
+      "file_sha256": "FFB938D6473065EACA1E5D7E1E1ABE16866BAE88E5A57A47EEF18A99112465DE",
+      "worksheet_fingerprint": "31DE29085B628C7C191106E8FEAC74F7281C230CA3FBC977040E1AE7D99E6635"
+    },
+    {
+      "decision_id": "SGD-29710C0EE48604",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9ECE0255FAC2",
+      "sheet_id": "",
+      "file_sha256": "A11D21C62C571D5FC6EC56B69C3AE5ABFD088F54F5877A3ABFF4C10EBD0C0C13",
+      "worksheet_fingerprint": "5019008FF406DC39F2867611B1C6DD6231025AEF90ED88ABCF0F94CA51231162"
+    }
+  ],
+  "approval_manifest_hash": "4CBFF5FE88671AF3C61B1855B970997A5F22654AB94517164CE946E8B2BFA845",
+  "created_at": "2026-06-23T10:27:59+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
   "bundle_dir": "evals\\cases\\development\\1110104",
   "bundle_manifest_hash": "DF4068D4D10C4DF8FD084B4B4960E6604D45EAB307995BFC213B49BA723CEFC2",
-  "approval_manifest_hash": "4CBFF5FE88671AF3C61B1855B970997A5F22654AB94517164CE946E8B2BFA845",
   "verification_results_hash": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16",
-  "source_quorum_adjudication_hash": "AFE04A853AF7B19DA0564075DF9759B8B110AA06550A2862E7DE9F853BA1690D",
-  "status": "FROZEN",
+  "visible_file_manifest_hash": "01169C6A9A933522374E88FD586A81287434F49366B2EFA9B06544B5C796FF61",
+  "bundle_hashes_hash": "AACE176478D81946A429BB96DC72C8EAC3281037CA758C2686C7047C79385185",
   "allowed_paths": [
     "sanitized_inputs\\SGD-628D223B34A365_估價單.csv",
     "sanitized_inputs\\SGD-29710C0EE48604_估價單.csv"

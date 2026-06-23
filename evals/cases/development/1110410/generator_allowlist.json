@@ -1,0 +1,49 @@
+{
+  "allowlist_id": "generator-allowlist-calibration-006-1110410",
+  "project_id": "1110410",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "FROZEN",
+  "allowed_items": [
+    {
+      "decision_id": "SGD-F3A5C9E7B2674E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "sheet_id": "",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_fingerprint": "EACD28A726F59056114ED8FFCA09DE3FB4FF55D246869101666815292F21450F"
+    },
+    {
+      "decision_id": "SGD-E25373215632FB",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "sheet_id": "",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_fingerprint": "DD692A2C465B9BDACE117F4F78CE313EC69A2A26DDFCA7D2C06BF98DD3202B9E"
+    },
+    {
+      "decision_id": "SGD-89E1E5092FF4EC",
+      "file_id": "SRC-ALL-PROJECTS-FILE-98B23212FC59",
+      "sheet_id": "",
+      "file_sha256": "B181DF645BA478C1446A7ADD9E3542E3FCCC49D877F4753073EE78611919DF04",
+      "worksheet_fingerprint": "8D961332042D9E97EA964E12ED2127C2926B9B28CD9B03854121FE029B144A58"
+    }
+  ],
+  "approval_manifest_hash": "E33569F069D6C0309E0ADEBCFCC240F8B858B56CE0F70622C41868B2016A34D2",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110410",
+  "bundle_manifest_hash": "02A160018835FD76806AB1B6137EAA5B339021E6E4049A4A1F314451A03CDDE8",
+  "verification_results_hash": "A714645AFEBA50596013C453F14E5E5FF93F5C82688810C3ECFD3F162534BA20",
+  "visible_file_manifest_hash": "91CB6D870B9F57F297BDBADC2080C352DB22AB6DF0E6091D7748C9B5D42BA4F4",
+  "bundle_hashes_hash": "788A10971932EBABC451F76BA53EA5AB1E8535288901E4F72B9E61E01AA8A907",
+  "allowed_paths": [
+    "sanitized_inputs\\SGD-F3A5C9E7B2674E_標單總表.csv",
+    "sanitized_inputs\\SGD-E25373215632FB_標單詳細表.csv",
+    "sanitized_inputs\\SGD-89E1E5092FF4EC_標單單價分析表.csv"
+  ],
+  "forbidden_paths": [
+    "source root original workbooks",
+    "completed target references",
+    "reviewer findings",
+    "reference thumbnails",
+    "expected answers"
+  ]
+}

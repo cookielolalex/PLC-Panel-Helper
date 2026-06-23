@@ -1,0 +1,57 @@
+{
+  "allowlist_id": "generator-allowlist-calibration-006-1110205",
+  "project_id": "1110205",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "FROZEN",
+  "allowed_items": [
+    {
+      "decision_id": "SGD-FD5565DC7BCF22",
+      "file_id": "SRC-ALL-PROJECTS-FILE-32344781657C",
+      "sheet_id": "",
+      "file_sha256": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+      "worksheet_fingerprint": "7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA"
+    },
+    {
+      "decision_id": "SGD-9E7AE8F36A74FD",
+      "file_id": "SRC-ALL-PROJECTS-FILE-32344781657C",
+      "sheet_id": "",
+      "file_sha256": "C48DE9CC4A431ADFA84FCB749FE4DD4A3E04640ACE0464A40A376A60583D043A",
+      "worksheet_fingerprint": "CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02"
+    },
+    {
+      "decision_id": "SGD-B5CBB9DE92A78B",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963",
+      "sheet_id": "",
+      "file_sha256": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+      "worksheet_fingerprint": "7D950BE265457695BA1EE14949BF31DA6AE30A504F829437E56D4234247150AA"
+    },
+    {
+      "decision_id": "SGD-289C4E13989C26",
+      "file_id": "SRC-ALL-PROJECTS-FILE-E507D1D25963",
+      "sheet_id": "",
+      "file_sha256": "D8068CC6DE87ADCB212A9D90BFFC718024633736C369A788A834DBF5F187A7B2",
+      "worksheet_fingerprint": "CE981650507F57243FC65134AA08A5477415D216FD39B0946A932478ECA28D02"
+    }
+  ],
+  "approval_manifest_hash": "988254F2AE79EC0B1FC35E7354675B52827998F6E69F9A3C54C8BF11576FE7D8",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110205",
+  "bundle_manifest_hash": "77DB6B84667FADC3A81ADBDFCFDF8E1704997DF22CC581ED016780A6943CDF1F",
+  "verification_results_hash": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34",
+  "visible_file_manifest_hash": "ED723B3920F5332E2EB985A92FC75F23F49390F53A5A2033661DC9683309F13D",
+  "bundle_hashes_hash": "28F738084D8DBE8D3D930B443CDD10F982C8B3BBF042BC48B46BB5FDCF1B0893",
+  "allowed_paths": [
+    "sanitized_inputs\\SGD-FD5565DC7BCF22_標單總表.csv",
+    "sanitized_inputs\\SGD-9E7AE8F36A74FD_標單單價分析表.csv",
+    "sanitized_inputs\\SGD-B5CBB9DE92A78B_標單總表.csv",
+    "sanitized_inputs\\SGD-289C4E13989C26_標單單價分析表.csv"
+  ],
+  "forbidden_paths": [
+    "source root original workbooks",
+    "completed target references",
+    "reviewer findings",
+    "reference thumbnails",
+    "expected answers"
+  ]
+}

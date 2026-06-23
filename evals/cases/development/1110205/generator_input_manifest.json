@@ -1,0 +1,54 @@
+{
+  "manifest_id": "generator-input-calibration-006-1110205",
+  "project_id": "1110205",
+  "run_id": "calibration-006",
+  "allowed_files": [
+    "SGD-FD5565DC7BCF22",
+    "SGD-9E7AE8F36A74FD",
+    "SGD-B5CBB9DE92A78B",
+    "SGD-289C4E13989C26"
+  ],
+  "allowed_sheets": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "excluded": [],
+  "contamination_scan": {
+    "status": "PASS",
+    "reference_exposure_to_generator": false
+  },
+  "symlink_junction_scan": {
+    "status": "PASS"
+  },
+  "environment_variable_allowlist": [],
+  "generator_eligibility": "ALLOWED_EVAL",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110205",
+  "bundle_manifest_hash": "77DB6B84667FADC3A81ADBDFCFDF8E1704997DF22CC581ED016780A6943CDF1F",
+  "approval_manifest_hash": "988254F2AE79EC0B1FC35E7354675B52827998F6E69F9A3C54C8BF11576FE7D8",
+  "verification_results_hash": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34",
+  "visible_file_manifest_hash": "ED723B3920F5332E2EB985A92FC75F23F49390F53A5A2033661DC9683309F13D",
+  "bundle_hashes_hash": "28F738084D8DBE8D3D930B443CDD10F982C8B3BBF042BC48B46BB5FDCF1B0893",
+  "visible_files": [
+    {
+      "path": "sanitized_inputs\\SGD-FD5565DC7BCF22_標單總表.csv",
+      "sha256": "A7D6D29A369A9C2F0D5CB7FDDD936C978FBB1F15E5DDE42C855F746F1039BA10"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-9E7AE8F36A74FD_標單單價分析表.csv",
+      "sha256": "2D777D1ED7E488F8430487D664CBD031C9B2CC204D718D3C0DA09BDD41A52955"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-B5CBB9DE92A78B_標單總表.csv",
+      "sha256": "A7D6D29A369A9C2F0D5CB7FDDD936C978FBB1F15E5DDE42C855F746F1039BA10"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-289C4E13989C26_標單單價分析表.csv",
+      "sha256": "2D777D1ED7E488F8430487D664CBD031C9B2CC204D718D3C0DA09BDD41A52955"
+    }
+  ],
+  "source_policy": "positive ALLOWED_EVAL sanitized artifacts only"
+}

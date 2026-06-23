@@ -1,0 +1,40 @@
+{
+  "project_id": "1110405",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110405",
+  "bundle_manifest_hash": "1026CBF59DE86B745FE3D841D890BC542FBA4442640D2E67A5924EE021DABCE5",
+  "approval_manifest_hash": "9B21CEBF30A19A61C01F0C2CD2C69EFBC18E7F3432650D57CCCFA60DEFBDE6BE",
+  "verification_results_hash": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34",
+  "visible_file_manifest_hash": "126ECF288731442EAAA50C3EFB4161365713437D7B9C0774595AEACA420D7540",
+  "bundle_hashes_hash": "2394835295F261FBDDE826A6F33D551D12B2559D9CFCA848CA086B71F74C1230",
+  "status": "REVIEWER_ONLY_AFTER_GENERATION_FREEZE",
+  "content_opened": false,
+  "selection_rule": "last file-index row per output type without content inspection",
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-63E29B24AD5F",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\生管課用圖\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(生管課用圖).pdf",
+      "sha256": "E3AD35B083AD64C290D596B48A077466B48F134621CBCB24F6E3F445C4182504",
+      "role": "completed_production_drawing_reference",
+      "drawing_output_type": "production",
+      "content_opened_for_selection": false
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-69B8C07CD1B3",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\鈑金施工圖\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(鈑金施工圖).pdf",
+      "sha256": "95CF285F594BEAE93D5092B73BEED643A7467B3AC2E7AA8209A998CC10F8600E",
+      "role": "completed_sheetmetal_drawing_reference",
+      "drawing_output_type": "sheetmetal",
+      "content_opened_for_selection": false
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-3B49DC17A48A",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程\\沖孔施工圖\\1110405國倫水電-古坑所梅山站支援竹崎所機電工程(沖孔施工圖).pdf",
+      "sha256": "6F985D2B874F096BEAE8AB9C52786B84675AF6C846847065DE1F38D0E9B345E5",
+      "role": "completed_punch_drawing_reference",
+      "drawing_output_type": "punch",
+      "content_opened_for_selection": false
+    }
+  ]
+}

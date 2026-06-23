@@ -1,0 +1,41 @@
+{
+  "allowlist_id": "generator-allowlist-calibration-006-1110204",
+  "project_id": "1110204",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "FROZEN",
+  "allowed_items": [
+    {
+      "decision_id": "SGD-5F108DF896D683",
+      "file_id": "SRC-ALL-PROJECTS-FILE-742A1E5F7FEE",
+      "sheet_id": "",
+      "file_sha256": "A34733138D9F846F17B381FA31EECF9AD37697252C4F684F26BAB743C62D487A",
+      "worksheet_fingerprint": "E35E4089C1A054A0697ADFE8F789B25C24532EAF66934E0BD23D7919CF075F7A"
+    },
+    {
+      "decision_id": "SGD-1F9E956311AE35",
+      "file_id": "SRC-ALL-PROJECTS-FILE-742A1E5F7FEE",
+      "sheet_id": "",
+      "file_sha256": "A34733138D9F846F17B381FA31EECF9AD37697252C4F684F26BAB743C62D487A",
+      "worksheet_fingerprint": "BFD62E07A86628D5D043985E5F82541824B73CBC0DA193CF58A769298DA1F186"
+    }
+  ],
+  "approval_manifest_hash": "3F62442C8E3BC5A13819560E4B3DB00FFDA270C7EC358E36D85B0B16A612DAF2",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110204",
+  "bundle_manifest_hash": "8F9F8486E9E23BA5DB3B1A0F8BA83A3C735BFF01669067F283E6C1E90DCBB672",
+  "verification_results_hash": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16",
+  "visible_file_manifest_hash": "99C1E83C44D83DDD8CED30365A50251820063B23EA22DDC97921930B26F4F7B6",
+  "bundle_hashes_hash": "982D1560DFB4CE4549B79C589B498CB58D2A58AD1295000B8914B9E5B8C5EF01",
+  "allowed_paths": [
+    "sanitized_inputs\\SGD-5F108DF896D683_標單總表.csv",
+    "sanitized_inputs\\SGD-1F9E956311AE35_標單單價分析表.csv"
+  ],
+  "forbidden_paths": [
+    "source root original workbooks",
+    "completed target references",
+    "reviewer findings",
+    "reference thumbnails",
+    "expected answers"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "project_id": "1110410",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110410",
+  "bundle_manifest_hash": "02A160018835FD76806AB1B6137EAA5B339021E6E4049A4A1F314451A03CDDE8",
+  "approval_manifest_hash": "E33569F069D6C0309E0ADEBCFCC240F8B858B56CE0F70622C41868B2016A34D2",
+  "verification_results_hash": "A714645AFEBA50596013C453F14E5E5FF93F5C82688810C3ECFD3F162534BA20",
+  "visible_file_manifest_hash": "91CB6D870B9F57F297BDBADC2080C352DB22AB6DF0E6091D7748C9B5D42BA4F4",
+  "bundle_hashes_hash": "788A10971932EBABC451F76BA53EA5AB1E8535288901E4F72B9E61E01AA8A907",
+  "status": "REVIEWER_ONLY_AFTER_GENERATION_FREEZE",
+  "content_opened": false,
+  "selection_rule": "last file-index row per output type without content inspection",
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-0A0BAA12D703",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\生管課用圖\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程-生管課用圖.pdf",
+      "sha256": "6779474CCE3DC578CE087A0237153E2275D0639661C83022E465D71ECDCCEA1A",
+      "role": "completed_production_drawing_reference",
+      "drawing_output_type": "production",
+      "content_opened_for_selection": false
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-55662875E123",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\鈑金施工圖\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(鈑金施工圖).pdf",
+      "sha256": "D27E59E5EE6251514099F0B30C2D0A0B00FF6B47F1C61CE8F69BA4DCD852F93F",
+      "role": "completed_sheetmetal_drawing_reference",
+      "drawing_output_type": "sheetmetal",
+      "content_opened_for_selection": false
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-9800A25AFC8E",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程\\沖孔施工圖\\1110410國倫水電-雲林廠轄下廠站原水井流量計改善工程(沖孔施工圖).pdf",
+      "sha256": "0CE66FEC93F2A6D3A0E94F6CF69522A7048596639B0FB37F4646F10DBAD799E0",
+      "role": "completed_punch_drawing_reference",
+      "drawing_output_type": "punch",
+      "content_opened_for_selection": false
+    }
+  ]
+}

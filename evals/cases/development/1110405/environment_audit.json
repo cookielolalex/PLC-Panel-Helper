@@ -1,0 +1,16 @@
+{
+  "project_id": "1110405",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110405",
+  "bundle_manifest_hash": "1026CBF59DE86B745FE3D841D890BC542FBA4442640D2E67A5924EE021DABCE5",
+  "approval_manifest_hash": "9B21CEBF30A19A61C01F0C2CD2C69EFBC18E7F3432650D57CCCFA60DEFBDE6BE",
+  "verification_results_hash": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34",
+  "visible_file_manifest_hash": "126ECF288731442EAAA50C3EFB4161365713437D7B9C0774595AEACA420D7540",
+  "bundle_hashes_hash": "2394835295F261FBDDE826A6F33D551D12B2559D9CFCA848CA086B71F74C1230",
+  "status": "PASS",
+  "git_status_porcelain": " M evals/cases/development/1110104/contamination_check.json\n M evals/cases/development/1110104/eligibility.json\n M evals/cases/development/1110104/environment_audit.json\n M evals/cases/development/1110104/generator_allowlist.json\n M evals/cases/development/1110104/generator_input_manifest.json\n M evals/cases/development/1110104/reference_manifest.json\n?? evals/cases/development/1110101/contamination_check.json\n?? evals/cases/development/1110101/eligibility.json\n?? evals/cases/development/1110101/environment_audit.json\n?? evals/cases/development/1110101/generator_allowlist.json\n?? evals/cases/development/1110101/generator_input_manifest.json\n?? evals/cases/development/1110101/reference_manifest.json\n?? evals/cases/development/1110204/contamination_check.json\n?? evals/cases/development/1110204/eligibility.json\n?? evals/cases/development/1110204/environment_audit.json\n?? evals/cases/development/1110204/generator_allowlist.json\n?? evals/cases/development/1110204/generator_input_manifest.json\n?? evals/cases/development/1110204/reference_manifest.json\n?? evals/cases/development/1110205/contamination_check.json\n?? evals/cases/development/1110205/eligibility.json\n?? evals/cases/development/1110205/environment_audit.json\n?? evals/cases/development/1110205/generator_allowlist.json\n?? evals/cases/development/1110205/generator_input_manifest.json\n?? evals/cases/development/1110205/reference_manifest.json\n?? evals/cases/development/1110405/eligibility.json\n?? evals/cases/development/1110405/generator_allowlist.json\n?? evals/cases/development/1110405/generator_input_manifest.json\n?? evals/cases/development/1110405/reference_manifest.json\n",
+  "codex_proxy_status": "CODEX_PROXY_READY_FOR_ONE_PROJECT_CALIBRATION",
+  "privacy_approval_status": "NOT_APPROVED_FOR_PROJECT_DATA_EXTERNAL_TRANSMISSION",
+  "sandbox_policy": "codex_proxy uses read-only child sandbox"
+}

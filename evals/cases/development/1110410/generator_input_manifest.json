@@ -1,0 +1,48 @@
+{
+  "manifest_id": "generator-input-calibration-006-1110410",
+  "project_id": "1110410",
+  "run_id": "calibration-006",
+  "allowed_files": [
+    "SGD-F3A5C9E7B2674E",
+    "SGD-E25373215632FB",
+    "SGD-89E1E5092FF4EC"
+  ],
+  "allowed_sheets": [
+    "",
+    "",
+    ""
+  ],
+  "excluded": [],
+  "contamination_scan": {
+    "status": "PASS",
+    "reference_exposure_to_generator": false
+  },
+  "symlink_junction_scan": {
+    "status": "PASS"
+  },
+  "environment_variable_allowlist": [],
+  "generator_eligibility": "ALLOWED_EVAL",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110410",
+  "bundle_manifest_hash": "02A160018835FD76806AB1B6137EAA5B339021E6E4049A4A1F314451A03CDDE8",
+  "approval_manifest_hash": "E33569F069D6C0309E0ADEBCFCC240F8B858B56CE0F70622C41868B2016A34D2",
+  "verification_results_hash": "A714645AFEBA50596013C453F14E5E5FF93F5C82688810C3ECFD3F162534BA20",
+  "visible_file_manifest_hash": "91CB6D870B9F57F297BDBADC2080C352DB22AB6DF0E6091D7748C9B5D42BA4F4",
+  "bundle_hashes_hash": "788A10971932EBABC451F76BA53EA5AB1E8535288901E4F72B9E61E01AA8A907",
+  "visible_files": [
+    {
+      "path": "sanitized_inputs\\SGD-F3A5C9E7B2674E_標單總表.csv",
+      "sha256": "3CD0572E08B4C5B66425546C208EBEE67444A5A11DA5766F8E6E844344DB53FF"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-E25373215632FB_標單詳細表.csv",
+      "sha256": "3A485A4BB44513A90F2FFE2FFE284D2B06E993C483F9042A9AC2306A43B53286"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-89E1E5092FF4EC_標單單價分析表.csv",
+      "sha256": "46905E72ED001982C8190D8227D6E3F7CEE54C956CFE8F3F37C758E34716FCF4"
+    }
+  ],
+  "source_policy": "positive ALLOWED_EVAL sanitized artifacts only"
+}

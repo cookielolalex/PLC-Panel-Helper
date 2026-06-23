@@ -1,0 +1,40 @@
+{
+  "project_id": "1110204",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110204",
+  "bundle_manifest_hash": "8F9F8486E9E23BA5DB3B1A0F8BA83A3C735BFF01669067F283E6C1E90DCBB672",
+  "approval_manifest_hash": "3F62442C8E3BC5A13819560E4B3DB00FFDA270C7EC358E36D85B0B16A612DAF2",
+  "verification_results_hash": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16",
+  "visible_file_manifest_hash": "99C1E83C44D83DDD8CED30365A50251820063B23EA22DDC97921930B26F4F7B6",
+  "bundle_hashes_hash": "982D1560DFB4CE4549B79C589B498CB58D2A58AD1295000B8914B9E5B8C5EF01",
+  "status": "REVIEWER_ONLY_AFTER_GENERATION_FREEZE",
+  "content_opened": false,
+  "selection_rule": "last file-index row per output type without content inspection",
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-34D7E26D26C1",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\生管課用圖\\1110204宇博實業-義竹所六區支受援水汰換工程(生管課用圖).pdf",
+      "sha256": "90FF3C0E1A1705C3085C06D230B06ECF5D31B8D4F3B785BEEE30C776E27E5C71",
+      "role": "completed_production_drawing_reference",
+      "drawing_output_type": "production",
+      "content_opened_for_selection": false
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-E7C607741CFE",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\鈑金施工圖\\1110204宇博實業-義竹所六區支受援水汰換工程(鈑金施工圖).pdf",
+      "sha256": "B32B3160FE9C721ED9A097A2456C5A26C6E0CB1570669E0E7D487B6C31418A55",
+      "role": "completed_sheetmetal_drawing_reference",
+      "drawing_output_type": "sheetmetal",
+      "content_opened_for_selection": false
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-B0C05DF7C0AC",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110204宇博義竹所六區受支援水量計\\沖孔施工圖\\1110204宇博實業-義竹所六區支受援水汰換工程(沖孔施工圖).pdf",
+      "sha256": "8CF2B623EBB9D389B44F5125739125618CABACAEB448CD21DF9FF161CD7E004B",
+      "role": "completed_punch_drawing_reference",
+      "drawing_output_type": "punch",
+      "content_opened_for_selection": false
+    }
+  ]
+}

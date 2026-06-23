@@ -1,0 +1,40 @@
+{
+  "project_id": "1110205",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110205",
+  "bundle_manifest_hash": "77DB6B84667FADC3A81ADBDFCFDF8E1704997DF22CC581ED016780A6943CDF1F",
+  "approval_manifest_hash": "988254F2AE79EC0B1FC35E7354675B52827998F6E69F9A3C54C8BF11576FE7D8",
+  "verification_results_hash": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34",
+  "visible_file_manifest_hash": "ED723B3920F5332E2EB985A92FC75F23F49390F53A5A2033661DC9683309F13D",
+  "bundle_hashes_hash": "28F738084D8DBE8D3D930B443CDD10F982C8B3BBF042BC48B46BB5FDCF1B0893",
+  "status": "REVIEWER_ONLY_AFTER_GENERATION_FREEZE",
+  "content_opened": false,
+  "selection_rule": "last file-index row per output type without content inspection",
+  "references": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-0A33EBAEC376",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\生管課用圖\\1110205新陳科技-嘉義縣中埔鄉頂埔村(生管課用圖).pdf",
+      "sha256": "6EE2007168586349D50D57A220509755A189B47EBB639729B4485535693AF307",
+      "role": "completed_production_drawing_reference",
+      "drawing_output_type": "production",
+      "content_opened_for_selection": false
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-85794537F301",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\鈑金施工圖\\1110205新陳科技-嘉義縣中埔鄉頂埔村(鈑金施工圖).pdf",
+      "sha256": "4D02CBA053229C5835F6CF77032B0863183AAF6127995DF7420835BD94B8858D",
+      "role": "completed_sheetmetal_drawing_reference",
+      "drawing_output_type": "sheetmetal",
+      "content_opened_for_selection": false
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-3AB3DD15BA07",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110205昕辰嘉義縣中埔鄉頂寮村橫坑供水\\沖孔施工圖\\1110205新陳科技-嘉義縣中埔鄉頂埔村(沖孔施工圖).pdf",
+      "sha256": "706D84122196CF6C7FEA3F8D5BA3B745D2CE4145B2580D4A53E334DFEACC7C45",
+      "role": "completed_punch_drawing_reference",
+      "drawing_output_type": "punch",
+      "content_opened_for_selection": false
+    }
+  ]
+}

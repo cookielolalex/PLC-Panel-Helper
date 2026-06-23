@@ -1,0 +1,19 @@
+{
+  "project_id": "1110205",
+  "created_at": "2026-06-23T10:28:00+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110205",
+  "bundle_manifest_hash": "77DB6B84667FADC3A81ADBDFCFDF8E1704997DF22CC581ED016780A6943CDF1F",
+  "approval_manifest_hash": "988254F2AE79EC0B1FC35E7354675B52827998F6E69F9A3C54C8BF11576FE7D8",
+  "verification_results_hash": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34",
+  "visible_file_manifest_hash": "ED723B3920F5332E2EB985A92FC75F23F49390F53A5A2033661DC9683309F13D",
+  "bundle_hashes_hash": "28F738084D8DBE8D3D930B443CDD10F982C8B3BBF042BC48B46BB5FDCF1B0893",
+  "status": "PASS",
+  "checks": [
+    "bundle verification PASS",
+    "source-bundle audit PASS",
+    "no workbook binaries under bundle",
+    "no completed references under bundle"
+  ],
+  "reference_exposure_to_generator": false
+}

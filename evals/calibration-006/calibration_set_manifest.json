@@ -1,0 +1,94 @@
+{
+  "calibration_id": "calibration-006",
+  "created_at": "2026-06-23T10:28:01+08:00",
+  "status": "FROZEN",
+  "anchor_project": "1110104",
+  "projects": [
+    {
+      "project_id": "1110101",
+      "family_id": "飛達鳥嘴潭下游送水管E",
+      "bundle_hashes": {
+        "bundle_manifest_hash": "094620F16074DB72589944E99080025A623BBCC14B632982DBC24B3D82929DEA",
+        "approval_manifest_hash": "BD37CF07402B41C5BAC1F559A9277FE82D02A81978EA813C23F7B952A39B5545",
+        "verification_results_hash": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699",
+        "visible_file_manifest_hash": "8BEBEF3D02FA74A7A072736808E8CCC0E026503BC47960316752D71F8279E23C",
+        "bundle_hashes_hash": "3A5A43901EDA2715C277B2C244B5FD651E6CD9BC04B2F8EF5C46C645C0C96BFA"
+      },
+      "reference_manifest_hash": "9A0ABF5ED89AD4B979D1D1BAAB6580B6C87558673C56B2DECB98AF3B194DD505",
+      "selection_rationale": "Legacy .xls backfill selected after 1110102 failed bundle verification; multi-workbook visible-sheet coverage.",
+      "artifact_count": 6
+    },
+    {
+      "project_id": "1110104",
+      "family_id": "飛達機電",
+      "bundle_hashes": {
+        "bundle_manifest_hash": "DF4068D4D10C4DF8FD084B4B4960E6604D45EAB307995BFC213B49BA723CEFC2",
+        "approval_manifest_hash": "4CBFF5FE88671AF3C61B1855B970997A5F22654AB94517164CE946E8B2BFA845",
+        "verification_results_hash": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16",
+        "visible_file_manifest_hash": "01169C6A9A933522374E88FD586A81287434F49366B2EFA9B06544B5C796FF61",
+        "bundle_hashes_hash": "AACE176478D81946A429BB96DC72C8EAC3281037CA758C2686C7047C79385185"
+      },
+      "reference_manifest_hash": "D75BDD7B1BED277C478B05CD0E887C5B1D7D8A0109C3DEDDD0466972AC56983F",
+      "selection_rationale": "Anchor project from one-project calibration and ordinary lower-complexity case.",
+      "artifact_count": 2
+    },
+    {
+      "project_id": "1110204",
+      "family_id": "宇博義竹",
+      "bundle_hashes": {
+        "bundle_manifest_hash": "8F9F8486E9E23BA5DB3B1A0F8BA83A3C735BFF01669067F283E6C1E90DCBB672",
+        "approval_manifest_hash": "3F62442C8E3BC5A13819560E4B3DB00FFDA270C7EC358E36D85B0B16A612DAF2",
+        "verification_results_hash": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16",
+        "visible_file_manifest_hash": "99C1E83C44D83DDD8CED30365A50251820063B23EA22DDC97921930B26F4F7B6",
+        "bundle_hashes_hash": "982D1560DFB4CE4549B79C589B498CB58D2A58AD1295000B8914B9E5B8C5EF01"
+      },
+      "reference_manifest_hash": "169A414A317C574B6B7AA3BDA69C19E74C87ECC6846F1F6F9A51B065BD380916",
+      "selection_rationale": "Stale/source-classification-risk case with one denied row excluded.",
+      "artifact_count": 2
+    },
+    {
+      "project_id": "1110205",
+      "family_id": "昕辰嘉義",
+      "bundle_hashes": {
+        "bundle_manifest_hash": "77DB6B84667FADC3A81ADBDFCFDF8E1704997DF22CC581ED016780A6943CDF1F",
+        "approval_manifest_hash": "988254F2AE79EC0B1FC35E7354675B52827998F6E69F9A3C54C8BF11576FE7D8",
+        "verification_results_hash": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34",
+        "visible_file_manifest_hash": "ED723B3920F5332E2EB985A92FC75F23F49390F53A5A2033661DC9683309F13D",
+        "bundle_hashes_hash": "28F738084D8DBE8D3D930B443CDD10F982C8B3BBF042BC48B46BB5FDCF1B0893"
+      },
+      "reference_manifest_hash": "F42304DC3A9EAD3BE211A69F6D0D1AE206284E9DB1FE4DBE0196DFC51B6DB5E6",
+      "selection_rationale": "Higher artifact-count case with low source coverage risk.",
+      "artifact_count": 4
+    },
+    {
+      "project_id": "1110405",
+      "family_id": "國倫水電",
+      "bundle_hashes": {
+        "bundle_manifest_hash": "1026CBF59DE86B745FE3D841D890BC542FBA4442640D2E67A5924EE021DABCE5",
+        "approval_manifest_hash": "9B21CEBF30A19A61C01F0C2CD2C69EFBC18E7F3432650D57CCCFA60DEFBDE6BE",
+        "verification_results_hash": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34",
+        "visible_file_manifest_hash": "126ECF288731442EAAA50C3EFB4161365713437D7B9C0774595AEACA420D7540",
+        "bundle_hashes_hash": "2394835295F261FBDDE826A6F33D551D12B2559D9CFCA848CA086B71F74C1230"
+      },
+      "reference_manifest_hash": "ED7F31EB004598C74C1C8142931B0DF49F2907545986543E930AA294395FF316",
+      "selection_rationale": "Higher-complexity multi-artifact case.",
+      "artifact_count": 4
+    },
+    {
+      "project_id": "1110410",
+      "family_id": "國倫水電",
+      "bundle_hashes": {
+        "bundle_manifest_hash": "02A160018835FD76806AB1B6137EAA5B339021E6E4049A4A1F314451A03CDDE8",
+        "approval_manifest_hash": "E33569F069D6C0309E0ADEBCFCC240F8B858B56CE0F70622C41868B2016A34D2",
+        "verification_results_hash": "A714645AFEBA50596013C453F14E5E5FF93F5C82688810C3ECFD3F162534BA20",
+        "visible_file_manifest_hash": "91CB6D870B9F57F297BDBADC2080C352DB22AB6DF0E6091D7748C9B5D42BA4F4",
+        "bundle_hashes_hash": "788A10971932EBABC451F76BA53EA5AB1E8535288901E4F72B9E61E01AA8A907"
+      },
+      "reference_manifest_hash": "97DA3F6F0EDA5CA2B7907D39A1DA09AFB523596842296E0104D8C4650FF91583",
+      "selection_rationale": "Current parser backfill case from a duplicate family retained for source-coverage contrast.",
+      "artifact_count": 3
+    }
+  ],
+  "completed_reference_content_inspected_for_selection": false,
+  "replacement_policy": "only source mutation, leakage, invalid audit, inaccessible required file, or irrecoverable harness failure"
+}

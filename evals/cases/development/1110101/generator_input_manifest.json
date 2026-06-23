@@ -1,0 +1,66 @@
+{
+  "manifest_id": "generator-input-calibration-006-1110101",
+  "project_id": "1110101",
+  "run_id": "calibration-006",
+  "allowed_files": [
+    "SGD-419C4426214114",
+    "SGD-96F5B42AF2AC0D",
+    "SGD-4D05D836BBA6D4",
+    "SGD-909B67C6D196A6",
+    "SGD-11740DEB2744E6",
+    "SGD-43F93E34D49CE2"
+  ],
+  "allowed_sheets": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "excluded": [],
+  "contamination_scan": {
+    "status": "PASS",
+    "reference_exposure_to_generator": false
+  },
+  "symlink_junction_scan": {
+    "status": "PASS"
+  },
+  "environment_variable_allowlist": [],
+  "generator_eligibility": "ALLOWED_EVAL",
+  "created_at": "2026-06-23T10:27:59+08:00",
+  "git_head": "549d48612ddf7e007375aec6cb9713f219c24b10",
+  "bundle_dir": "evals\\cases\\development\\1110101",
+  "bundle_manifest_hash": "094620F16074DB72589944E99080025A623BBCC14B632982DBC24B3D82929DEA",
+  "approval_manifest_hash": "BD37CF07402B41C5BAC1F559A9277FE82D02A81978EA813C23F7B952A39B5545",
+  "verification_results_hash": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699",
+  "visible_file_manifest_hash": "8BEBEF3D02FA74A7A072736808E8CCC0E026503BC47960316752D71F8279E23C",
+  "bundle_hashes_hash": "3A5A43901EDA2715C277B2C244B5FD651E6CD9BC04B2F8EF5C46C645C0C96BFA",
+  "visible_files": [
+    {
+      "path": "sanitized_inputs\\SGD-419C4426214114_Sheet2.csv",
+      "sha256": "404F03B5818E9F30AF64EEE67D5A4F9F33EC430C4F90B7C8951D34C5762AEB2F"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-96F5B42AF2AC0D_Sheet3.csv",
+      "sha256": "E97D3F368F95336A4E15FE67B8F1D3726DBADD40757EB7C2D9A8BCC21847765A"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-4D05D836BBA6D4_Sheet1.csv",
+      "sha256": "4D398D2087C4969BB6095BF5F8C656131DE425F17D991B2A583724CC54AFC857"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-909B67C6D196A6_Sheet1.csv",
+      "sha256": "33608BD4DE7D0141116A71205CB8F53E1A73E67E28847E09576015179449D1C2"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-11740DEB2744E6_Sheet2.csv",
+      "sha256": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-43F93E34D49CE2_Sheet3.csv",
+      "sha256": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+    }
+  ],
+  "source_policy": "positive ALLOWED_EVAL sanitized artifacts only"
+}
