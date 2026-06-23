@@ -1,0 +1,45 @@
+{
+  "task_id": "B024-RDCAL-V3-POS-1110101",
+  "project_id": "1110101",
+  "purpose": "blinded v3 known-positive replay input",
+  "label_blinding": {
+    "contains_expected_output_labels": false,
+    "contains_inventory_roles": false,
+    "contains_relative_paths": false,
+    "contains_file_names": false,
+    "contains_absolute_private_paths": false
+  },
+  "visible_files": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-0C139A26F2A5",
+      "sha256": "1F10A8A88AB4571C54A89ED10DAB30EEFE1A9CEE71F94CCF7FD8234190B8F302",
+      "extension": ".pdf",
+      "size_bytes": "241187"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5C3AF14EB985",
+      "sha256": "6288AB656E1FC1A45E91B3EE50879FE304791BB8655C9D28BA7ACB0600BF80D7",
+      "extension": ".pdf",
+      "size_bytes": "5659753"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7ABB80368FBD",
+      "sha256": "972AAFD5E2D72636871E799899B53B91EE5EE0230DA73B2A6BDF936B37F4120A",
+      "extension": ".pdf",
+      "size_bytes": "5664116"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9B4B1E2D72CD",
+      "sha256": "6BA4BE4A58471F9062FA1A748407B17E8CC97544D0BF3C7341096D73903E3468",
+      "extension": ".pdf",
+      "size_bytes": "1469314"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9BAC035FA277",
+      "sha256": "F653AB4388A9A48890FB04D7163322C95408C0DD2FFCBBF2B7BF45EB0F450EED",
+      "extension": ".pdf",
+      "size_bytes": "9633406"
+    }
+  ],
+  "runtime_manifest_note": "The detector received a temporary path-bearing manifest under tmp/; it was deleted after the replay."
+}

@@ -114,3 +114,12 @@
 - Stopped with `REFERENCE_REVIEW_UNIVERSE_EXHAUSTED -
   INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`; source screening and baseline
   generation remain blocked at `13 / 24` verified `ALLOWED_EVAL` projects.
+- Accepted amendment `D-0019`, requiring detector recall calibration against
+  known-positive controls before reference-universe exhaustion may be declared.
+- Added sealed known-positive controls and blinded v3 replay evidence for the
+  13 accepted `ALLOWED_EVAL` projects. V3 detected all three target outputs in
+  `0 / 13` controls; per-type recall was `PRODUCTION_DRAWING 0/13`,
+  `SHEETMETAL_DRAWING 8/13`, and `PUNCH_DRAWING 0/13`.
+- Stopped with `DETECTOR_V3_RECALL_FAIL`. The previous v3 exhaustion result is
+  preserved but provisional; no negative controls, detector v4, source
+  screening, cohort freeze, or baseline generation was started.

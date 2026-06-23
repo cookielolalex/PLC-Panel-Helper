@@ -1,0 +1,27 @@
+{
+  "schema_version": "reference_detection_v3_schema_v1",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "task_id": "B024-RDCAL-V3-POS-1110203",
+  "project_id": "1110203",
+  "status": "NO_REFERENCE_SET",
+  "target_types_present": [],
+  "effective_pages": [],
+  "duplicate_groups": [],
+  "unresolved_issues": [
+    "ELECTRICAL_DRAWINGS_PRESENT_AND_EXCLUDED_FROM_TARGET_SET",
+    "UNCLASSIFIED_PAGES_REMAIN"
+  ],
+  "generator_exposure": {
+    "generator_receives_reference_file_ids": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "generator_receives_reference_content": false
+  },
+  "minimization": {
+    "raw_text_persisted": false,
+    "rendered_images_persisted": false,
+    "title_crops_persisted": false,
+    "absolute_private_paths_persisted": false,
+    "drawing_details_persisted": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "task_id": "B024-RDCAL-V3-POS-1110203",
+  "project_id": "1110203",
+  "purpose": "blinded v3 known-positive replay input",
+  "label_blinding": {
+    "contains_expected_output_labels": false,
+    "contains_inventory_roles": false,
+    "contains_relative_paths": false,
+    "contains_file_names": false,
+    "contains_absolute_private_paths": false
+  },
+  "visible_files": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1B15E74A42C0",
+      "sha256": "A54443E346A0BB83193FDA3A1135FF92F3B08E7A67E87B072440AB9EBEDA3116",
+      "extension": ".pdf",
+      "size_bytes": "135093"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-289081B4EF79",
+      "sha256": "6544D31195EA932F31C474AD71642939A3A9DB9A53EC5D7B9C40DF794F433B5A",
+      "extension": ".pdf",
+      "size_bytes": "1361843"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-325FA7DEEFDE",
+      "sha256": "5D1A93D2E48E9ABCCA5B5DA42DCC6A14B0865E26A3C0FE0E32F3363D3FD20E98",
+      "extension": ".pdf",
+      "size_bytes": "449191"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-715F3939AFD2",
+      "sha256": "FBFD178A9609F4D9DC46C7670EE1625083D7E823C1086651F128F271839AF003",
+      "extension": ".pdf",
+      "size_bytes": "4214330"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-92808C4555B6",
+      "sha256": "004D76D44073A9DBF18FDB628284D47094B103D97A88F6B47C842DC53CD8A6C5",
+      "extension": ".pdf",
+      "size_bytes": "1367856"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C892B432BDA1",
+      "sha256": "B9AB0671A2DEE89F7FF08B01D71BD79B5420995A35A5917DBB39F871C20FDED6",
+      "extension": ".pdf",
+      "size_bytes": "120807"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-D43089475D4C",
+      "sha256": "324494EDF493C15E983EB0F1A2603BAF9D99603AFB1C2E5E0E3F1BDED480CE11",
+      "extension": ".pdf",
+      "size_bytes": "1454700"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E15CDCAFC779",
+      "sha256": "8DEDFCF9833F5E3D70652EEB279C807B5D95B01A279CBB82BCB046097BEA7121",
+      "extension": ".pdf",
+      "size_bytes": "95539"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-EA42EB49E6D5",
+      "sha256": "2B18CF0AEAC22E5C95310F9B98912B09410D83F0EA2A3F1CE5B041AB6DE3AFDD",
+      "extension": ".pdf",
+      "size_bytes": "2277718"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-EC05BA0FF478",
+      "sha256": "BBB18BEF4A0A35B5190D2C70E44F4D85EDF27A8B752907291C066E50F2E655D7",
+      "extension": ".pdf",
+      "size_bytes": "90855"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F1B07B751383",
+      "sha256": "FFB092112539B5039BD4CE78D3AF3C95452AFD1DFDDDC58251553D0FBE12F9E7",
+      "extension": ".pdf",
+      "size_bytes": "124463"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-FB5655526356",
+      "sha256": "C21182C3AE39A9299B41BDD041C38CBD61BE318758F98A44F90EAE05B39559AC",
+      "extension": ".pdf",
+      "size_bytes": "475444"
+    }
+  ],
+  "runtime_manifest_note": "The detector received a temporary path-bearing manifest under tmp/; it was deleted after the replay."
+}

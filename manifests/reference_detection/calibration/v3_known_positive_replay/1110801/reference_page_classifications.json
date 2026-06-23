@@ -1,0 +1,803 @@
+{
+  "page_classifications": [
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-3D753445FA55",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 595.2,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-A1CEE04EF6C518",
+        "VIS-7C6952AF5C7B7B4E"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-43EF5CD8970C",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 595.2,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.97,
+      "evidence_ids": [
+        "RPE-0605304F4C697C",
+        "VIS-D01A644DC0145814"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4BA004AB257F",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 595.3,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-0AD4F3F689DE0C",
+        "VIS-9B92021C01536CEF"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4E1B1392D7E7",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 588.96,
+      "page_height_pt": 835.92,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-7659689B83EACD",
+        "VIS-6FCCD60018981819"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5839AF2A2635",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 595.32001,
+      "page_height_pt": 841.92004,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-82DE9F076699B8",
+        "VIS-D01A644DC0145814"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-59386E946A81",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 595.2,
+      "page_height_pt": 841.68,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-7096CED6DEAC5F",
+        "VIS-E1482247AAEDD718"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5DB07693F805",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 595.2,
+      "page_height_pt": 841.68,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-77DFE4D6DDD0CA",
+        "VIS-E1482247AAEDD718"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-79C3973E87D8",
+      "page_number": 1,
+      "page_count": 8,
+      "page_width_pt": 595.3,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "SOURCE_DOCUMENT",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.82,
+      "evidence_ids": [
+        "RPE-40A592AA567AB1",
+        "VIS-9B92021C01536CEF"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-79C3973E87D8",
+      "page_number": 2,
+      "page_count": 8,
+      "page_width_pt": 595.3,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "SOURCE_DOCUMENT",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.82,
+      "evidence_ids": [
+        "RPE-7DDFE038F15275",
+        "VIS-9B92021C01536CEF"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-79C3973E87D8",
+      "page_number": 3,
+      "page_count": 8,
+      "page_width_pt": 595.3,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "SOURCE_DOCUMENT",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.82,
+      "evidence_ids": [
+        "RPE-147EE25450F4B0",
+        "VIS-9B92021C01536CEF"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-79C3973E87D8",
+      "page_number": 4,
+      "page_count": 8,
+      "page_width_pt": 595.3,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "SOURCE_DOCUMENT",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.82,
+      "evidence_ids": [
+        "RPE-B89DF61C003F99",
+        "VIS-9B92021C01536CEF"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-79C3973E87D8",
+      "page_number": 5,
+      "page_count": 8,
+      "page_width_pt": 595.3,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "SOURCE_DOCUMENT",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.82,
+      "evidence_ids": [
+        "RPE-25F0E80272A6F2",
+        "VIS-9B92021C01536CEF"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-79C3973E87D8",
+      "page_number": 6,
+      "page_count": 8,
+      "page_width_pt": 595.3,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "SOURCE_DOCUMENT",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.82,
+      "evidence_ids": [
+        "RPE-15292CCECC0A05",
+        "VIS-9B92021C01536CEF"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-79C3973E87D8",
+      "page_number": 7,
+      "page_count": 8,
+      "page_width_pt": 595.3,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "SOURCE_DOCUMENT",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.82,
+      "evidence_ids": [
+        "RPE-1FBADE8614DF2F",
+        "VIS-9B92021C01536CEF"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-79C3973E87D8",
+      "page_number": 8,
+      "page_count": 8,
+      "page_width_pt": 595.3,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "SOURCE_DOCUMENT",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.82,
+      "evidence_ids": [
+        "RPE-8E1D136C71D333",
+        "VIS-9B92021C01536CEF"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-7E5CF038C404",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 595.32001,
+      "page_height_pt": 841.92004,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-27AF6C5AC9FCA8",
+        "VIS-78CA7C14F8889259"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-847061047547",
+      "page_number": 1,
+      "page_count": 2,
+      "page_width_pt": 841.8,
+      "page_height_pt": 595.3,
+      "orientation": "LANDSCAPE",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-8F280A3351D5A7",
+        "VIS-DB44A02B340CCEDE"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-847061047547",
+      "page_number": 2,
+      "page_count": 2,
+      "page_width_pt": 841.8,
+      "page_height_pt": 595.3,
+      "orientation": "LANDSCAPE",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-36B37D56DCC18B",
+        "VIS-DB44A02B340CCEDE"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9141C30CE238",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 595.32001,
+      "page_height_pt": 841.92004,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-CCEBB00E67E43A",
+        "VIS-EC285DC3FC08A378"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-941C5143917E",
+      "page_number": 1,
+      "page_count": 2,
+      "page_width_pt": 595.2,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.97,
+      "evidence_ids": [
+        "RPE-C5CFD111DA8142",
+        "VIS-D01A644DC0145814"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-941C5143917E",
+      "page_number": 2,
+      "page_count": 2,
+      "page_width_pt": 595.2,
+      "page_height_pt": 841.8,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-2C2D15718DFC35",
+        "VIS-7C6952AF5C7B7B4E"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature",
+        "embedded_page_text_role_terms"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-BD399E08D7D0",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 595.32001,
+      "page_height_pt": 841.92004,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-5FAEF1C4C60793",
+        "VIS-E1482247AAEDD718"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v3_schema_v1",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C77227009128",
+      "page_number": 1,
+      "page_count": 1,
+      "page_width_pt": 595.32001,
+      "page_height_pt": 841.92004,
+      "orientation": "PORTRAIT",
+      "page_classification": "UNCLASSIFIED",
+      "project_identity_status": "NOT_FOUND",
+      "revision_identity": null,
+      "classification_method": "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT",
+      "confidence": 0.2,
+      "evidence_ids": [
+        "RPE-8A7A06D2A517EB",
+        "VIS-EC285DC3FC08A378"
+      ],
+      "signals_used": [
+        "page_dimensions",
+        "temporary_page_render",
+        "temporary_title_crop",
+        "neutral_visual_signature"
+      ],
+      "minimization": {
+        "raw_text_persisted": false,
+        "rendered_image_persisted": false,
+        "title_crop_persisted": false,
+        "absolute_private_path_persisted": false,
+        "drawing_detail_persisted": false
+      }
+    }
+  ]
+}

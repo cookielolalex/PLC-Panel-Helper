@@ -228,3 +228,35 @@ Evidence: `docs/specs/REFERENCE_VAULT_BOUNDARY_SPEC.md`,
 `reports/baseline-024/reference-detection-v3/unresolved_reference_sets.json`,
 `manifests/reference_detection/v3/`, and
 `reports/baseline-024/reference-detection-v3/independent_audit.json`.
+
+## baseline-024-cycle-000 reference detector calibration
+
+Status: `DETECTOR_V3_RECALL_FAIL`.
+
+Purpose: calibrate the frozen detector v3 recall against the 13 accepted
+known-positive `ALLOWED_EVAL` projects before accepting any reference-universe
+exhaustion conclusion.
+
+Known-positive controls: `1110101, 1110103, 1110104, 1110203, 1110204,
+1110205, 1110405, 1110410, 1110704, 1110801, 1120207, 1120305, 1120308`.
+
+Blinding: classifier runtime manifests omitted expected labels, inventory
+roles, filenames, and relative paths. The sealed control manifest was used by
+the coordinator only after all replay outputs were frozen.
+
+Detector: `target_output_detection_v3_page_content_isolated`.
+
+Result: `0 / 13` known-positive projects detected all-three. Per-type recall:
+`PRODUCTION_DRAWING 0 / 13`, `SHEETMETAL_DRAWING 8 / 13`, `PUNCH_DRAWING 0 /
+13`. False-negative output-type count: `31`. Project-identity mismatch count:
+`0`.
+
+Evidence: `manifests/reference_detection/calibration/known_positive_controls.sealed.json`,
+`manifests/reference_detection/calibration/v3_known_positive_replay/`,
+`reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.json`,
+`reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.md`,
+and `orchestration/trajectories/reference_detection/calibration/`.
+
+Generation status: not authorized. Negative controls, detector v4, expanded
+screening, and final independent calibration audit were not run because the
+positive recall gate failed.

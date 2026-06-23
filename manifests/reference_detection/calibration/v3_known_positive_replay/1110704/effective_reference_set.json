@@ -1,0 +1,46 @@
+{
+  "schema_version": "reference_detection_v3_schema_v1",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "task_id": "B024-RDCAL-V3-POS-1110704",
+  "project_id": "1110704",
+  "status": "PARTIAL_REFERENCE_SET",
+  "target_types_present": [
+    "SHEETMETAL_DRAWING"
+  ],
+  "effective_pages": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-C540423599D5",
+      "file_sha256": "059534E51FC47FDCD5F6997CA1CE03085E0F9DAD343094E59316D8B09AD8E6E2",
+      "page_range": "1",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "panel_or_sheet_identity": null,
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "classification_method": "PAGE_TEXT",
+      "confidence": 0.97,
+      "evidence_ids": [
+        "RPE-BB23C8E3899590",
+        "VIS-D01A644DC0145814"
+      ]
+    }
+  ],
+  "duplicate_groups": [],
+  "unresolved_issues": [
+    "UNCLASSIFIED_PAGES_REMAIN"
+  ],
+  "generator_exposure": {
+    "generator_receives_reference_file_ids": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "generator_receives_reference_content": false
+  },
+  "minimization": {
+    "raw_text_persisted": false,
+    "rendered_images_persisted": false,
+    "title_crops_persisted": false,
+    "absolute_private_paths_persisted": false,
+    "drawing_details_persisted": false
+  }
+}

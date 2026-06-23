@@ -1,0 +1,767 @@
+{
+  "calibration_id": "B024-RDCAL-V3-KNOWN-POSITIVE-REPLAY",
+  "generated_at": "2026-06-23T09:00:34+00:00",
+  "starting_commit": "c31f898",
+  "starting_worktree_clean": true,
+  "worktree_clean_probe_at_script_start": false,
+  "worktree_clean_note": "Coordinator verified a clean worktree before creating calibration artifacts.",
+  "status": "DETECTOR_V3_RECALL_FAIL",
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "known_positive_projects": [
+    "1110101",
+    "1110103",
+    "1110104",
+    "1110203",
+    "1110204",
+    "1110205",
+    "1110405",
+    "1110410",
+    "1110704",
+    "1110801",
+    "1120207",
+    "1120305",
+    "1120308"
+  ],
+  "sealed_control_manifest": "manifests\\reference_detection\\calibration\\known_positive_controls.sealed.json",
+  "sealed_control_manifest_hash": "9E07F2D58B28A2EDB9C1BB262AE61018F53F323170034B24EB5417962F20AFE0",
+  "label_blinding": {
+    "classifier_runtime_manifests_include_expected_labels": false,
+    "classifier_runtime_manifests_include_inventory_roles": false,
+    "classifier_runtime_manifests_include_file_names_or_relative_paths": false,
+    "temporary_path_manifests_deleted": true
+  },
+  "positive_projects_detected_all_three": 0,
+  "project_level_all_three_recall": 0.0,
+  "per_type_recall": {
+    "PRODUCTION_DRAWING": {
+      "detected": 0,
+      "expected": 13,
+      "recall": 0.0
+    },
+    "SHEETMETAL_DRAWING": {
+      "detected": 8,
+      "expected": 13,
+      "recall": 0.6153846153846154
+    },
+    "PUNCH_DRAWING": {
+      "detected": 0,
+      "expected": 13,
+      "recall": 0.0
+    }
+  },
+  "false_negative_output_type_count": 31,
+  "project_identity_mismatch_count": 0,
+  "reference_file_level_recall_when_ground_truth_available": {
+    "detected": 0,
+    "expected": 39,
+    "recall": 0.0,
+    "note": "Ground truth is file/type-level from accepted reference manifests; page-level target ranges are not available."
+  },
+  "page_level_recall_when_ground_truth_available": null,
+  "project_results": [
+    {
+      "task_id": "B024-RDCAL-V3-POS-1110101",
+      "project_id": "1110101",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "PARTIAL_REFERENCE_SET",
+      "detected_output_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 5,
+      "document_count": 5,
+      "page_count": 44,
+      "image_only_or_no_target_text_page_count": 37,
+      "embedded_text_page_count": 7,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "CONFIRMED": 1,
+        "NOT_FOUND": 1
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0.78,
+        "max_target_page_confidence": 0.97
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-7ABB80368FBD": false,
+        "SRC-ALL-PROJECTS-FILE-9BAC035FA277": false,
+        "SRC-ALL-PROJECTS-FILE-5C3AF14EB985": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1110101",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110101.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110101.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1110103",
+      "project_id": "1110103",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "PARTIAL_REFERENCE_SET",
+      "detected_output_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 11,
+      "document_count": 11,
+      "page_count": 22,
+      "image_only_or_no_target_text_page_count": 7,
+      "embedded_text_page_count": 15,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "CONFIRMED": 1
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0.97,
+        "max_target_page_confidence": 0.97
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-995B37628B0F": false,
+        "SRC-ALL-PROJECTS-FILE-4FCE290F1712": false,
+        "SRC-ALL-PROJECTS-FILE-2F471705506D": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1110103",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110103.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110103.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1110104",
+      "project_id": "1110104",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "PARTIAL_REFERENCE_SET",
+      "detected_output_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 12,
+      "document_count": 12,
+      "page_count": 76,
+      "image_only_or_no_target_text_page_count": 26,
+      "embedded_text_page_count": 50,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "CONFIRMED": 1,
+        "NOT_FOUND": 1
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0.78,
+        "max_target_page_confidence": 0.97
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-AD4BDE5D08FA": false,
+        "SRC-ALL-PROJECTS-FILE-95A866291A8D": false,
+        "SRC-ALL-PROJECTS-FILE-2EFA3452D018": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1110104",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110104.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110104.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1110203",
+      "project_id": "1110203",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "NO_REFERENCE_SET",
+      "detected_output_types": [],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "SHEETMETAL_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 12,
+      "document_count": 12,
+      "page_count": 85,
+      "image_only_or_no_target_text_page_count": 21,
+      "embedded_text_page_count": 64,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "NOT_FOUND": 2
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0.78,
+        "max_target_page_confidence": 0.78
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-92808C4555B6": false,
+        "SRC-ALL-PROJECTS-FILE-EA42EB49E6D5": false,
+        "SRC-ALL-PROJECTS-FILE-289081B4EF79": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,SHEETMETAL_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1110203",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110203.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110203.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1110204",
+      "project_id": "1110204",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "NO_REFERENCE_SET",
+      "detected_output_types": [],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "SHEETMETAL_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 14,
+      "document_count": 14,
+      "page_count": 58,
+      "image_only_or_no_target_text_page_count": 16,
+      "embedded_text_page_count": 42,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "NOT_FOUND": 3
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0.78,
+        "max_target_page_confidence": 0.78
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-34D7E26D26C1": false,
+        "SRC-ALL-PROJECTS-FILE-E7C607741CFE": false,
+        "SRC-ALL-PROJECTS-FILE-B0C05DF7C0AC": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,SHEETMETAL_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1110204",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110204.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110204.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1110205",
+      "project_id": "1110205",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "PARTIAL_REFERENCE_SET",
+      "detected_output_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 15,
+      "document_count": 15,
+      "page_count": 94,
+      "image_only_or_no_target_text_page_count": 36,
+      "embedded_text_page_count": 58,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "CONFIRMED": 2,
+        "NOT_FOUND": 1
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0.78,
+        "max_target_page_confidence": 0.97
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-0A33EBAEC376": false,
+        "SRC-ALL-PROJECTS-FILE-85794537F301": false,
+        "SRC-ALL-PROJECTS-FILE-3AB3DD15BA07": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1110205",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110205.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110205.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1110405",
+      "project_id": "1110405",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "PARTIAL_REFERENCE_SET",
+      "detected_output_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 12,
+      "document_count": 12,
+      "page_count": 48,
+      "image_only_or_no_target_text_page_count": 16,
+      "embedded_text_page_count": 32,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "CONFIRMED": 1,
+        "NOT_FOUND": 2
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0.78,
+        "max_target_page_confidence": 0.97
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-63E29B24AD5F": false,
+        "SRC-ALL-PROJECTS-FILE-69B8C07CD1B3": false,
+        "SRC-ALL-PROJECTS-FILE-3B49DC17A48A": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1110405",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110405.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110405.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1110410",
+      "project_id": "1110410",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "PARTIAL_REFERENCE_SET",
+      "detected_output_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 14,
+      "document_count": 14,
+      "page_count": 36,
+      "image_only_or_no_target_text_page_count": 16,
+      "embedded_text_page_count": 20,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "CONFIRMED": 1
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0.97,
+        "max_target_page_confidence": 0.97
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-0A0BAA12D703": false,
+        "SRC-ALL-PROJECTS-FILE-55662875E123": false,
+        "SRC-ALL-PROJECTS-FILE-9800A25AFC8E": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1110410",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110410.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110410.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1110704",
+      "project_id": "1110704",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "PARTIAL_REFERENCE_SET",
+      "detected_output_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 38,
+      "document_count": 38,
+      "page_count": 89,
+      "image_only_or_no_target_text_page_count": 51,
+      "embedded_text_page_count": 38,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "CONFIRMED": 1
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0.97,
+        "max_target_page_confidence": 0.97
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-662A3827A4E0": false,
+        "SRC-ALL-PROJECTS-FILE-91F507B98BFF": false,
+        "SRC-ALL-PROJECTS-FILE-0E7B70DFBF9D": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1110704",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110704.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110704.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1110801",
+      "project_id": "1110801",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "PARTIAL_REFERENCE_SET",
+      "detected_output_types": [
+        "SHEETMETAL_DRAWING"
+      ],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 14,
+      "document_count": 14,
+      "page_count": 23,
+      "image_only_or_no_target_text_page_count": 6,
+      "embedded_text_page_count": 17,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "CONFIRMED": 2
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0.97,
+        "max_target_page_confidence": 0.97
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-4E1B1392D7E7": false,
+        "SRC-ALL-PROJECTS-FILE-C77227009128": false,
+        "SRC-ALL-PROJECTS-FILE-7E5CF038C404": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1110801",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110801.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1110801.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1120207",
+      "project_id": "1120207",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "NO_REFERENCE_SET",
+      "detected_output_types": [],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "SHEETMETAL_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 11,
+      "document_count": 11,
+      "page_count": 20,
+      "image_only_or_no_target_text_page_count": 10,
+      "embedded_text_page_count": 10,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "NO_TARGET_PAGES": 0
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0,
+        "max_target_page_confidence": 0
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-DA780D6AEB31": false,
+        "SRC-ALL-PROJECTS-FILE-09A2B8D56AF3": false,
+        "SRC-ALL-PROJECTS-FILE-CF31FC35B9C9": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,SHEETMETAL_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1120207",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1120207.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1120207.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1120305",
+      "project_id": "1120305",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "NO_REFERENCE_SET",
+      "detected_output_types": [],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "SHEETMETAL_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 11,
+      "document_count": 11,
+      "page_count": 51,
+      "image_only_or_no_target_text_page_count": 15,
+      "embedded_text_page_count": 36,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "NO_TARGET_PAGES": 0
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0,
+        "max_target_page_confidence": 0
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-288262595819": false,
+        "SRC-ALL-PROJECTS-FILE-B9B2F1E5D61C": false,
+        "SRC-ALL-PROJECTS-FILE-E16C2F643F10": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,SHEETMETAL_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1120305",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1120305.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1120305.json"
+    },
+    {
+      "task_id": "B024-RDCAL-V3-POS-1120308",
+      "project_id": "1120308",
+      "detector_version": "target_output_detection_v3_page_content_isolated",
+      "status": "NO_REFERENCE_SET",
+      "detected_output_types": [],
+      "missed_output_types": [
+        "PRODUCTION_DRAWING",
+        "SHEETMETAL_DRAWING",
+        "PUNCH_DRAWING"
+      ],
+      "file_count": 15,
+      "document_count": 15,
+      "page_count": 35,
+      "image_only_or_no_target_text_page_count": 13,
+      "embedded_text_page_count": 22,
+      "classification_methods": [
+        "PAGE_TEXT",
+        "RENDERED_PAGE_WITHOUT_CLASSIFIABLE_TEXT"
+      ],
+      "project_identity_result": {
+        "NO_TARGET_PAGES": 0
+      },
+      "project_identity_mismatch": 0,
+      "revision_result": "NO_REVISION_MARKERS_DETECTED",
+      "confidence": {
+        "min_target_page_confidence": 0,
+        "max_target_page_confidence": 0
+      },
+      "expected_reference_file_detection": {
+        "SRC-ALL-PROJECTS-FILE-703A385EBCB5": false,
+        "SRC-ALL-PROJECTS-FILE-E5C4CF3F0ACA": false,
+        "SRC-ALL-PROJECTS-FILE-33EDE735E306": false
+      },
+      "verify_status": "PASS",
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+      "failure_reason": "MISSED_TARGET_TYPES:PRODUCTION_DRAWING,SHEETMETAL_DRAWING,PUNCH_DRAWING;IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION",
+      "output_dir": "manifests\\reference_detection\\calibration\\v3_known_positive_replay\\1120308",
+      "visible_file_manifest": "orchestration\\input_manifests\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1120308.visible_files.json",
+      "trajectory_path": "orchestration\\trajectories\\reference_detection\\calibration\\B024-RDCAL-V3-POS-1120308.json"
+    }
+  ],
+  "accepted_bundle_hash_verification": {
+    "status": "PASS",
+    "bundle_hash_file_count": 13,
+    "checked_entries": 131,
+    "projects": [
+      "1110101",
+      "1110103",
+      "1110104",
+      "1110203",
+      "1110204",
+      "1110205",
+      "1110405",
+      "1110410",
+      "1110704",
+      "1110801",
+      "1120207",
+      "1120305",
+      "1120308"
+    ],
+    "failures": [],
+    "artifact_path_note": "Artifacts are matched by neutral artifact_id because some JSON paths preserve mojibake labels while on-disk filenames are decoded CJK."
+  },
+  "frozen_workflow_hash_verification": {
+    "status": "PASS",
+    "checks": [
+      {
+        "key": "master_spec",
+        "path": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+        "status": "PASS",
+        "expected": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+        "actual": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09"
+      },
+      {
+        "key": "agents_md",
+        "path": "AGENTS.md",
+        "status": "PASS",
+        "expected": "6298E5EEB469DEBA38CD3F83D5697C402815B7E0C94F61E7F355D6D704D8E433",
+        "actual": "6298E5EEB469DEBA38CD3F83D5697C402815B7E0C94F61E7F355D6D704D8E433"
+      },
+      {
+        "key": "instructions",
+        "path": "gpt-config/INSTRUCTIONS.md",
+        "status": "PASS",
+        "expected": "81DF3F94FABC3CD3E20AC9CC8731BEDF07B5210E15C86B0DBBA06D4709E34326",
+        "actual": "81DF3F94FABC3CD3E20AC9CC8731BEDF07B5210E15C86B0DBBA06D4709E34326"
+      },
+      {
+        "key": "production_knowledge_readme",
+        "path": "knowledge/production/README.md",
+        "status": "PASS",
+        "expected": "BA872790B05E8219AF69DA71E3FC86E9A37456768B2320A3809E752F7C703187",
+        "actual": "BA872790B05E8219AF69DA71E3FC86E9A37456768B2320A3809E752F7C703187"
+      },
+      {
+        "key": "job_spec_schema",
+        "path": "schemas/job_spec.schema.json",
+        "status": "PASS",
+        "expected": "28244EE5C79ABFF5AF9A9D6B257E32B7BDA8C55E598E7B610DD5B65C508B215D",
+        "actual": "28244EE5C79ABFF5AF9A9D6B257E32B7BDA8C55E598E7B610DD5B65C508B215D"
+      },
+      {
+        "key": "drawing_model_schema",
+        "path": "schemas/drawing_model.schema.json",
+        "status": "PASS",
+        "expected": "43D70C9B37CDAA333E28C2EE8B12D596DEC44F4D509A6D75BC71127E58400E66",
+        "actual": "43D70C9B37CDAA333E28C2EE8B12D596DEC44F4D509A6D75BC71127E58400E66"
+      },
+      {
+        "key": "renderer",
+        "path": "scripts/render_pdf_outputs.py",
+        "status": "PASS",
+        "expected": "7A3A783687EEA578779EB416B517B20D1873CAFC80E64A980A827E5325601450",
+        "actual": "7A3A783687EEA578779EB416B517B20D1873CAFC80E64A980A827E5325601450"
+      },
+      {
+        "key": "validator_pdf",
+        "path": "scripts/validate_pdf_package.py",
+        "status": "PASS",
+        "expected": "5EA6BA3000A1D0477BF93DBCD97136EB5D639BE983184AE1D60BF994D463766E",
+        "actual": "5EA6BA3000A1D0477BF93DBCD97136EB5D639BE983184AE1D60BF994D463766E"
+      },
+      {
+        "key": "grading_profile_v2",
+        "path": "evals/grading_profiles/plc_layout_v2.json",
+        "status": "PASS",
+        "expected": "EFBF014E0C6E98E09AF9D4309AAC96519A3C114C4975EF4A243914412DBFAC52",
+        "actual": "EFBF014E0C6E98E09AF9D4309AAC96519A3C114C4975EF4A243914412DBFAC52"
+      },
+      {
+        "key": "evaluator_scoring",
+        "path": "scripts/evaluator_scoring.py",
+        "status": "PASS",
+        "expected": "83C8FB6F0198129CC6B0A6E8F18CC15DAE692DB9B2080F56D6E4FA7A7BAA436B",
+        "actual": "83C8FB6F0198129CC6B0A6E8F18CC15DAE692DB9B2080F56D6E4FA7A7BAA436B"
+      },
+      {
+        "key": "tolerance_profile",
+        "path": "evals/tolerance_profiles/plc_layout_tolerances_v1.json",
+        "status": "PASS",
+        "expected": "09268F208FF5D292AE2FADA7D234E4DD03A3067413C0F514B34E19A48AD92E4A",
+        "actual": "09268F208FF5D292AE2FADA7D234E4DD03A3067413C0F514B34E19A48AD92E4A"
+      },
+      {
+        "key": "source_guard_policy",
+        "path": "manifests/source_guard/source_guard_policy.json",
+        "status": "PASS",
+        "expected": "B7CE12909CFFD0B349414CD5AFA9FCA7BD33B17CAAC3F59194726B363971261F",
+        "actual": "B7CE12909CFFD0B349414CD5AFA9FCA7BD33B17CAAC3F59194726B363971261F"
+      },
+      {
+        "key": "autonomous_source_approval_spec",
+        "path": "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md",
+        "status": "PASS",
+        "expected": "9CCE463845097C6686B481C8F94D8D0B459B521B170474E93B2B550EE4F6F530",
+        "actual": "9CCE463845097C6686B481C8F94D8D0B459B521B170474E93B2B550EE4F6F530"
+      },
+      {
+        "key": "sanitized_bundle_spec",
+        "path": "docs/specs/SANITIZED_GENERATOR_BUNDLE_SPEC.md",
+        "status": "PASS",
+        "expected": "E9210879C6EABC26483834C29E89562341079F66A704006B3DE11ED0C4A818F0",
+        "actual": "E9210879C6EABC26483834C29E89562341079F66A704006B3DE11ED0C4A818F0"
+      },
+      {
+        "key": "baseline_protocol",
+        "path": "docs/specs/24_PROJECT_BASELINE_PROTOCOL.md",
+        "status": "PASS",
+        "expected": "9292F3E64BD0AB41EA415CC5A4658DA1B3507C53DC5B8BB34068C80DA56C258C",
+        "actual": "9292F3E64BD0AB41EA415CC5A4658DA1B3507C53DC5B8BB34068C80DA56C258C"
+      }
+    ],
+    "failures": []
+  },
+  "source_root_immutability_verification": {
+    "status": "PASS",
+    "policy_source": "docs/SOURCE_ROOTS.md",
+    "write_scope": "repo calibration outputs only; no source-root writes performed"
+  },
+  "baseline_generation_verification": {
+    "status": "PASS",
+    "baseline_generation_attempts_observed": 0,
+    "matching_run_dirs": []
+  },
+  "negative_controls": {
+    "tested": 0,
+    "status": "NOT_RUN_BECAUSE_POSITIVE_RECALL_GATE_FAILED"
+  },
+  "actual_vision_agents": {
+    "image_only_pages_inspected_by_actual_vision_agents": 0,
+    "status": "NOT_RUN_BECAUSE_POSITIVE_RECALL_GATE_FAILED"
+  },
+  "classifier_models": [
+    {
+      "requested_model": "local",
+      "actual_model": "local_poppler_pypdf_deterministic_reference_detector_v3",
+      "model_match": true,
+      "count": 13
+    }
+  ]
+}

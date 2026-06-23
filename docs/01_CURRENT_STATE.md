@@ -1,18 +1,19 @@
 # Current State
 
-Current phase: cycle-000 reference detection v3 exhausted before source screening.
+Current phase: cycle-000 reference detector v3 known-positive calibration failed before source screening.
 
 Accepted release: none.
 
 Current candidate: `baseline-024-cycle-000` reference-complete project discovery.
 
-Current status: `REFERENCE_REVIEW_UNIVERSE_EXHAUSTED - INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`.
+Current status: `DETECTOR_V3_RECALL_FAIL`.
 
 Accepted amendments: `D-0017` expands baseline-024 candidate discovery beyond
 the prior twenty-project metadata-only pool to the full approved development
 inventory under `SRC-ALL-PROJECTS`; `D-0018` accepts
 `target_output_detection_v3_page_content_isolated` as content-aware,
-page-level, reference-vault-only classification. These amendments do not weaken
+page-level, reference-vault-only classification; `D-0019` requires known-positive
+recall calibration before reference-universe exhaustion may be declared. These amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -41,6 +42,17 @@ Generator and source status: no expanded-candidate source-review quorum,
 sanitized-bundle construction, final cohort freeze, baseline generation, review,
 drawing-workflow optimization, or production approval occurred. Baseline
 generation attempts remain `0`.
+
+Reference detector calibration result after `D-0019`: a sealed known-positive
+control manifest was created for the 13 verified `ALLOWED_EVAL` projects, then
+detector v3 was replayed with blinded candidate manifests that omitted expected
+labels, inventory roles, filenames, and relative paths. V3 detected all three
+target outputs in `0 / 13` known-positive projects. Per-type recall was
+`PRODUCTION_DRAWING 0/13`, `SHEETMETAL_DRAWING 8/13`, and `PUNCH_DRAWING 0/13`;
+false-negative output-type count was `31`; project-identity mismatch count was
+`0`. The failed gate status is `DETECTOR_V3_RECALL_FAIL`. Negative controls,
+detector v4, expanded screening, and final audit were not run after the positive
+recall gate failed.
 
 Portfolio result: mean score `42`, median `42`, minimum `42`, mean scorable
 coverage `38`; validity rate `100%`; critical findings `0`; high findings `36`
@@ -80,8 +92,9 @@ Recommendations remain PROPOSED. No drawing-generation behavior, accepted
 Instructions, production Knowledge, extraction logic, renderer behavior,
 validation behavior, grading weights, or tolerance profiles were optimized.
 
-Exact next action: do not start source screening or baseline generation from
-the v3 results. Resume only if the user authorizes a new policy amendment,
-additional evidence acquisition, or a different baseline strategy; otherwise
-the automated status remains `REFERENCE_REVIEW_UNIVERSE_EXHAUSTED -
-INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`.
+Exact next action: do not start source screening, cohort freeze, or baseline
+generation from the v3 exhaustion result. Treat that exhaustion conclusion as
+provisional. If work resumes, add regression coverage from the missed
+known-positive controls and determine whether actual vision-capable
+classification is available before creating detector v4. Preserve v3 and
+calibration evidence separately.

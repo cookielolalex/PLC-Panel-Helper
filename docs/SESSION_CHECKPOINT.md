@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: cycle-000 reference detection v3 exhausted before source screening.
+Current phase: cycle-000 reference detector v3 known-positive calibration failed before source screening.
 
 Accepted release: none.
 
@@ -12,12 +12,15 @@ Evaluator version for future cycle-000 work: `plc_layout_evaluator_v2_sensitivit
 
 Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
 
-Current status: `REFERENCE_REVIEW_UNIVERSE_EXHAUSTED - INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`.
+Current status: `DETECTOR_V3_RECALL_FAIL`.
 
 Latest evidence: `reports/baseline-024/reference-detection-v3/screening_yield.md`,
 `reports/baseline-024/reference-detection-v3/independent_audit.json`,
 `reports/baseline-024/reference-detection-v3/batch_results/`,
 `manifests/reference_detection/v3/`,
+`reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.json`,
+`manifests/reference_detection/calibration/known_positive_controls.sealed.json`,
+`manifests/reference_detection/calibration/v3_known_positive_replay/`,
 `docs/specs/REFERENCE_VAULT_BOUNDARY_SPEC.md`,
 `docs/specs/REFERENCE_PRESENCE_DETECTION_V3.md`,
 `reports/baseline-024/reference-detection-v3/v2_zero_promotion_diagnosis.json`,
@@ -83,13 +86,34 @@ minimization checks; all 22 batch summaries report
 removed. No page renders, title-block crops, raw extracted text, private source
 paths, or completed drawing content are committed in v3 outputs.
 
+Amendment `D-0019` on 2026-06-23: the user accepted that reference detector
+recall must be calibrated against known positives before reference-universe
+exhaustion may be declared.
+
+Known-positive calibration result: the 13 accepted `ALLOWED_EVAL` projects were
+sealed as controls and detector v3 was replayed with blinded candidate
+manifests that omitted expected labels, inventory roles, filenames, and
+relative paths. V3 detected all three target outputs in `0 / 13` projects.
+Per-type recall was `PRODUCTION_DRAWING 0/13`, `SHEETMETAL_DRAWING 8/13`, and
+`PUNCH_DRAWING 0/13`; false-negative output-type count was `31`;
+project-identity mismatch count was `0`. The stop status is
+`DETECTOR_V3_RECALL_FAIL`.
+
+Calibration verification: accepted bundle hash verification `PASS`; frozen
+workflow hash verification `PASS`; source-root immutability verification
+`PASS`; baseline generation attempts observed `0`. The classifier requested
+model was `local`; actual model was
+`local_poppler_pypdf_deterministic_reference_detector_v3`.
+
 No drawing workflow optimization occurred. No expanded-candidate source
 screening, sanitized bundle construction, final cohort freeze, baseline
 generation, review, or production approval occurred. Baseline generation
 attempts remain `0`.
 
 Exact next action: do not start source-review quorum, sanitized-bundle
-construction, baseline generation, review, or optimization from these v3
-results. Resume only if the user authorizes a new policy amendment, additional
-evidence acquisition, or a different baseline strategy; otherwise retain
-`REFERENCE_REVIEW_UNIVERSE_EXHAUSTED - INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`.
+construction, cohort freeze, baseline generation, review, or optimization from
+the v3 exhaustion result. Treat v3 exhaustion as provisional after the failed
+known-positive recall gate. If work resumes, add regression coverage from the
+missed known-positive controls and determine whether actual vision-capable
+classification is available before creating detector v4. Preserve v3 and
+calibration evidence separately.

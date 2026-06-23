@@ -1,8 +1,11 @@
 You are a fresh root coordinator continuing this repository.
 
-Read the canonical checkpoint files, `reports/calibration-006/independent_audit.json`, `reports/evaluator-sensitivity/subagent_independent_audit.json`, and `reports/baseline-024/reference-detection-v3/independent_audit.json`.
+Read the canonical checkpoint files, `reports/calibration-006/independent_audit.json`,
+`reports/evaluator-sensitivity/subagent_independent_audit.json`,
+`reports/baseline-024/reference-detection-v3/independent_audit.json`, and
+`reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.json`.
 
-Current status: `REFERENCE_REVIEW_UNIVERSE_EXHAUSTED - INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`.
+Current status: `DETECTOR_V3_RECALL_FAIL`.
 
 Starting point for verification:
 
@@ -11,7 +14,9 @@ Starting point for verification:
 - Accepted bundle hashes and frozen workflow hashes must still pass.
 - `SRC-ALL-PROJECTS` remains read-only by policy.
 - No baseline-024 generation run may exist.
-- No completed reference, page render, title-block crop, raw extracted text, private source path, or reference-derived engineering content may be visible to generators or production Knowledge.
+- No completed reference, page render, title-block crop, raw extracted text,
+  private source path, or reference-derived engineering content may be visible
+  to generators or production Knowledge.
 
 Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
 
@@ -35,13 +40,21 @@ Current verified `ALLOWED_EVAL` projects remain:
 
 Total: `13 / 24`. No reserve projects are accepted.
 
-Amendment `D-0017` expanded baseline-024 candidate discovery to the full approved development inventory under `SRC-ALL-PROJECTS`.
+Amendment `D-0017` expanded baseline-024 candidate discovery to the full
+approved development inventory under `SRC-ALL-PROJECTS`.
 
-Amendment `D-0018` accepted `target_output_detection_v3_page_content_isolated`, a content-aware, page-level, reference-vault-only detector. Completed-reference content remains forbidden to source reviewers, generator agents, production Knowledge, portfolio optimizers, and drawing-workflow implementation agents.
+Amendment `D-0018` accepted `target_output_detection_v3_page_content_isolated`,
+a content-aware, page-level, reference-vault-only detector. Completed-reference
+content remains forbidden to source reviewers, generator agents, production
+Knowledge, portfolio optimizers, and drawing-workflow implementation agents.
 
-Reference detection v3 outcome:
+Amendment `D-0019` requires reference detector recall calibration against known
+positives before reference-universe exhaustion may be declared.
 
-- all 103 reference-review-required families processed with at least one v3 page-level representative;
+Reference detection v3 outcome remains preserved but provisional:
+
+- all 103 reference-review-required families processed with at least one v3
+  page-level representative;
 - 24 additional ranked non-representative projects also processed;
 - 129 projects, 1849 PDFs, and 9031 pages classified;
 - 1644 image-only-or-no-target-text PDFs and 205 embedded-text PDFs handled;
@@ -55,17 +68,32 @@ Reference detection v3 outcome:
 - source screening did not start;
 - baseline generation attempts remain `0`.
 
+Known-positive calibration outcome:
+
+- sealed controls: `manifests/reference_detection/calibration/known_positive_controls.sealed.json`;
+- replay outputs: `manifests/reference_detection/calibration/v3_known_positive_replay/`;
+- summary: `reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.json`;
+- tested known positives: 13;
+- detected all-three: `0 / 13`;
+- per-type recall: `PRODUCTION_DRAWING 0 / 13`, `SHEETMETAL_DRAWING 8 / 13`,
+  `PUNCH_DRAWING 0 / 13`;
+- false-negative output-type count: `31`;
+- project-identity mismatch count: `0`;
+- classifier requested model: `local`;
+- classifier actual model: `local_poppler_pypdf_deterministic_reference_detector_v3`;
+- negative controls, detector v4, expanded screening, and final independent
+  calibration audit were not run because the positive recall gate failed.
+
 Exact next action:
 
-Do not start source-review quorum, sanitized bundle construction, cohort freeze, baseline generation, review, or optimization from the v3 partial results.
+Do not start source-review quorum, sanitized-bundle construction, cohort freeze,
+baseline generation, review, or optimization from the v3 exhaustion result.
+Treat v3 exhaustion as provisional after the failed known-positive recall gate.
 
-Resume only if the user authorizes one of these:
-
-- a new policy amendment changing the reference-complete requirement;
-- additional evidence acquisition beyond the family-level v3 universe;
-- a different baseline strategy that does not weaken generator isolation;
-- an explicit return to detector implementation or audit repair if the checkpoint audit fails.
-
-If none of those is authorized, preserve the stop status:
-
-`REFERENCE_REVIEW_UNIVERSE_EXHAUSTED - INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`.
+If work resumes, add regression coverage from the missed known-positive
+controls and determine whether actual vision-capable classification is
+available before creating detector v4. Preserve v3 and calibration evidence
+separately. If actual vision classifiers are unavailable, stop with
+`VISION_CLASSIFIER_UNAVAILABLE`; otherwise create detector v4 only after the
+regression tests exist and rerun positive and negative controls before any
+expanded project screening.
