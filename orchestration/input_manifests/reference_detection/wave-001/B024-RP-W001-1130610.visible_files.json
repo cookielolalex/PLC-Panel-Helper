@@ -1,0 +1,57 @@
+{
+  "run_id": "REFPRES-W001-1130610",
+  "project_id": "1130610",
+  "source_root_id": "SRC-ALL-PROJECTS",
+  "visible_files": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CB6F3179EF2C",
+      "sha256": "8E58FDE6326DD0EA03428F2F347E4E00A6C63F6A5D994A310A275F461F846F90",
+      "extension": ".pdf",
+      "size_bytes": "523226",
+      "source_root_relative_path": "113年度工作\\1130610林東憲永華路住宅工程\\20240502電箱確認.pdf",
+      "role_hint": "supporting_document_non_generator"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A845C37A604C",
+      "sha256": "1738C8632D709342A7C45D16439A48D236D864152D50798F1C3D409C70FCB27F",
+      "extension": ".pdf",
+      "size_bytes": "88622",
+      "source_root_relative_path": "113年度工作\\1130610林東憲永華路住宅工程\\生管課用圖、鈑金施工圖、沖孔施工圖\\鈑金施工圖\\M30610A1-鈑金施工圖.pdf",
+      "role_hint": "completed_sheetmetal_drawing_reference"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-61D9F8FCED55",
+      "sha256": "0F838C2BBAC26AD1EFA71E53FBD6035846D3A800D024384F64254FBC5FD4E000",
+      "extension": ".pdf",
+      "size_bytes": "60868",
+      "source_root_relative_path": "113年度工作\\1130610林東憲永華路住宅工程\\生管課用圖、鈑金施工圖、沖孔施工圖\\鈑金施工圖\\M30610A2-鈑金施工圖.pdf",
+      "role_hint": "completed_sheetmetal_drawing_reference"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-27A9EE5E214C",
+      "sha256": "3188F5DE23672733B223FBDF82148DC987BAE00E271FA3BD957ABC95DE45ED67",
+      "extension": ".pdf",
+      "size_bytes": "80041",
+      "source_root_relative_path": "113年度工作\\1130610林東憲永華路住宅工程\\生管課用圖、鈑金施工圖、沖孔施工圖\\鈑金施工圖\\M30610A3-鈑金施工圖.pdf",
+      "role_hint": "completed_sheetmetal_drawing_reference"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-F18562241911",
+      "sha256": "22B739C566C5BEA3AA2CC7CA16C61A85450BB5A414BF0908301205D1FB00719C",
+      "extension": ".pdf",
+      "size_bytes": "65390",
+      "source_root_relative_path": "113年度工作\\1130610林東憲永華路住宅工程\\生管課用圖、鈑金施工圖、沖孔施工圖\\鈑金施工圖\\M30610A4-鈑金施工圖.pdf",
+      "role_hint": "completed_sheetmetal_drawing_reference"
+    }
+  ],
+  "forbidden_output_fields": [
+    "dimensions",
+    "component names",
+    "quantities",
+    "layout descriptions",
+    "raw drawing text",
+    "images",
+    "thumbnails",
+    "title-block details not needed for role classification"
+  ]
+}
