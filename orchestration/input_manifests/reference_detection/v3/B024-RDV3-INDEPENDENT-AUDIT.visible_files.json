@@ -1,0 +1,17 @@
+{
+  "task_id": "B024-RDV3-INDEPENDENT-AUDIT",
+  "phase": "cycle-000-reference-detection-v3",
+  "agent_type": "independent_auditor",
+  "visible_files": [
+    "docs/01_CURRENT_STATE.md",
+    "docs/04_DECISION_LEDGER.md",
+    "docs/06_EVAL_LEDGER.md",
+    "docs/SESSION_CHECKPOINT.md",
+    "reports/baseline-024/reference-detection-v3/screening_yield.md",
+    "reports/baseline-024/reference-detection-v3/batch_results/",
+    "manifests/reference_detection/v3/",
+    "orchestration/TASK_REGISTRY.csv"
+  ],
+  "private_reference_vault_inputs": "NONE",
+  "audit_scope": "detector v3 outputs, minimization, temp cleanup, source/generator blindness, baseline no-generation state"
+}

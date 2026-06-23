@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: cycle-000 Phase C expanded source discovery blocked before source screening.
+Current phase: cycle-000 reference detection v3 exhausted before source screening.
 
 Accepted release: none.
 
@@ -12,25 +12,33 @@ Evaluator version for future cycle-000 work: `plc_layout_evaluator_v2_sensitivit
 
 Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
 
-Latest evidence: `manifests/baseline-024/source_approvals/phase_c_status.json`, `reports/baseline-024/source_backfill_summary.md`, `reports/baseline-024/source_bundle_audit.json`, `reports/baseline-024/insufficient_eligible_projects_for_24_baseline.json`, `reports/baseline-024/source_bundle_audit_batch_001_independent.json`, `reports/baseline-024/source_bundle_audit_batch_002_independent.json`, `reports/baseline-024/source_bundle_audit_batch_003_independent.json`, `reports/baseline-024/source_bundle_audit_batch_004_independent.json`, `docs/specs/24_PROJECT_BASELINE_PROTOCOL.md`, `evals/baseline-024/cohort_manifest.json`, `evals/baseline-024/cohort_selection_report.md`, `evals/baseline-024/frozen_workflow_manifest.json`, `evals/baseline-024/source_readiness.json`, `evals/baseline-024/run_plan.json`, `reports/evaluator-sensitivity/subagent_independent_audit.json`, `reports/evaluator-sensitivity/calibration_score_recomputation.json`, `reports/evaluator-sensitivity/counterfactual_results.json`, `reports/evaluator-sensitivity/project_differentiation.json`, `reports/evaluator-sensitivity/test_results.json`, `reports/calibration-006/independent_audit.json`, and `optimization/calibration-006/machine_summary.json`.
+Current status: `REFERENCE_REVIEW_UNIVERSE_EXHAUSTED - INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`.
 
-Phase A result: original `42/38` was identified as an evaluator-mechanics defect in the v1 comparison scorer. The v2 evaluator keeps the twelve-run calibration scores at `42/38` through explicit scoring records, not constants.
+Latest evidence: `reports/baseline-024/reference-detection-v3/screening_yield.md`,
+`reports/baseline-024/reference-detection-v3/independent_audit.json`,
+`reports/baseline-024/reference-detection-v3/batch_results/`,
+`manifests/reference_detection/v3/`,
+`docs/specs/REFERENCE_VAULT_BOUNDARY_SPEC.md`,
+`docs/specs/REFERENCE_PRESENCE_DETECTION_V3.md`,
+`reports/baseline-024/reference-detection-v3/v2_zero_promotion_diagnosis.json`,
+`reports/baseline-024/expanded-screening/inventory_reconciliation_report.md`,
+`reports/baseline-024/expanded-screening/target_detection_v2_report.md`,
+`evals/baseline-024/expanded_candidate_selection_report.md`,
+`manifests/baseline-024/source_approvals/phase_c_status.json`,
+`reports/baseline-024/insufficient_eligible_projects_for_24_baseline.json`,
+and the prior source-bundle independent audits under `reports/baseline-024/`.
 
-Phase B result: the 24-project protocol is frozen, the six calibration projects are retained as fresh-run anchors, 18 additional project slots remain pending Phase C source backfill, and generation is not authorized until the final 24-project `ALLOWED_EVAL` cohort is verified and frozen.
+Phase A result: original `42/38` was identified as an evaluator-mechanics
+defect in the v1 comparison scorer. The v2 evaluator keeps the twelve-run
+calibration scores at `42/38` through explicit scoring records, not constants.
 
-Phase C batch-001 result: `1110801` and `1120207` are accepted evaluation-only additions after independent audit. `1120101`, `1120204`, and `1120301` were rejected by sanitized bundle verification; `1120201` remained quarantined/no-bundle.
+Phase B result: the 24-project protocol is frozen, the six calibration projects
+are retained as fresh-run anchors, and generation is not authorized until a
+final 24-project `ALLOWED_EVAL` cohort is verified and frozen.
 
-Phase C batch-002 result: `1110103`, `1110203`, and `1120308` are accepted evaluation-only additions after independent audit. `1110404` and `1120202` were rejected by sanitized bundle verification; `1120309` remained quarantined/no-bundle. Current baseline-024 `ALLOWED_EVAL` count is `11`; thirteen additional projects remain required.
-
-Phase C batch-003 result: `1110704` and `1120305` are accepted evaluation-only additions after independent audit. `1110701` was rejected by sanitized bundle verification; `1110402`, `1110706`, and `1120102` remained no-bundle/quarantined. Current baseline-024 `ALLOWED_EVAL` count is `13`; eleven additional projects remain required.
-
-Phase C batch-004 result: no accepted evaluation-only additions. `1110501` was rejected by sanitized bundle verification; `1110504` remained quarantined/no-bundle. Independent audit returned `BATCH004_SOURCE_BACKFILL_AUDIT_PASS`.
-
-Phase C final result before amendment: all 20 frozen metadata-only candidates
-were processed. Only 7 produced verified accepted sanitized bundles, leaving
-`13 / 24` verified `ALLOWED_EVAL` projects. Stop status was
-`INSUFFICIENT_ELIGIBLE_PROJECTS_FOR_24_BASELINE`; no baseline generation was
-authorized.
+Phase C source-backfill result before expanded discovery: the frozen
+metadata-only candidate pool was exhausted. Only seven projects were added to
+the six anchors, leaving `13 / 24` verified `ALLOWED_EVAL` projects.
 
 Amendment `D-0017` on 2026-06-23: the user accepted expanding baseline-024
 candidate discovery to the full approved development inventory under
@@ -38,36 +46,50 @@ candidate discovery to the full approved development inventory under
 does not weaken source immutability, source-root restrictions, positive source
 allowlisting, evaluation-only approval quorum, reference isolation, cohort
 isolation, held-out protection, parser requirements, sanitized-bundle
-verification, independent auditing, frozen workflow requirements, grading rules,
-or no-invention requirements.
+verification, independent auditing, frozen workflow requirements, grading
+rules, or no-invention requirements.
 
-No drawing workflow optimization occurred.
+Expanded screening after `D-0017`: 404 project IDs and 404 physical project
+folders were reconciled. Metadata target detection v2 found 0 immediate
+`READY_FOR_SOURCE_SCREENING` projects and 269
+`REFERENCE_PRESENCE_REVIEW_REQUIRED` projects. Three isolated v2
+reference-presence waves reviewed 18 top-ranked partial projects; all remained
+partial.
 
-Exact next action: do not start baseline generation. Reconcile the full
-`SRC-ALL-PROJECTS` project universe, implement completed-target detection v2 as
-metadata-first reference-set classification, build the expanded candidate
-registry, then run strict six-project source-screening waves until eleven more
-projects reach `ALLOWED_EVAL`, up to three reserves are found, or the full
-development-eligible universe is truly exhausted.
+Amendment `D-0018` on 2026-06-23: the user accepted Reference Presence
+Detection V3 as content-aware, page-level, reference-vault-only
+classification. Completed-reference content may be inspected only inside
+isolated reference-vault processes and remains forbidden to source reviewers,
+generator agents, production Knowledge, portfolio optimizers, and
+drawing-workflow implementation agents.
 
-Expanded screening progress after `D-0017`:
+V2 diagnosis: zero promotions were caused by metadata-only and restricted
+document-level review mechanics, lack of page rendering/visual evidence,
+one-file-one-type assumptions, incomplete combined/revision handling, and
+policy confusion between generator-forbidden location and reviewer-reference
+eligibility. The diagnosis did not prove the references were genuinely missing.
 
-- Commit `065be52` reconciled 404 project IDs and 404 physical project folders.
-- Commit `49d5ba6` added metadata target detection v2. It preserved reference
-  isolation and did not inspect completed-reference contents.
-- Commit `f9c58d0` built `expanded_candidate_registry_v2`; it found 0
-  `READY_FOR_SOURCE_SCREENING` projects and 269
-  `REFERENCE_PRESENCE_REVIEW_REQUIRED` projects.
-- Commits `ed71617` and `d6c2333` ran three isolated reference-presence waves
-  covering 18 top-ranked partial-reference projects. All remained
-  `PARTIAL_REFERENCE_SET` with only sheet-metal target evidence; 0 projects were
-  promoted to all-three reference availability.
+V3 result: all 103 reference-review-required families have a v3 page-level
+representative, plus 24 additional ranked non-representative projects. The pass
+processed 129 projects, 1849 PDFs, and 9031 pages; classified 1644
+image-only-or-no-target-text PDFs and 205 embedded-text PDFs; rejected 3252
+electrical/false-positive alias pages; identified 0 combined packages, 0
+revision supersession packages, 0 newly verified all-three projects, 129
+partial projects, and 0 ambiguous projects.
 
-Current blocker: `PRE_SOURCE_SCREENING_BLOCKED_BY_REFERENCE_PRESENCE`.
-Source screening has not started. Baseline generation attempts remain `0`.
+Audit state: all 129 v3 project outputs validate against schemas and
+minimization checks; all 22 batch summaries report
+`REFERENCE_PRESENCE_BATCH_AUDIT_PASS`. Temporary render directories were
+removed. No page renders, title-block crops, raw extracted text, private source
+paths, or completed drawing content are committed in v3 outputs.
 
-Next action after this checkpoint: do not start source-review quorum or
-generation. Resume at the reference-presence layer only: continue isolated
-reference review with a more capable auditable classifier, or propose and review
-a deterministic detector improvement with regression coverage. Do not weaken the
-all-three completed-target requirement.
+No drawing workflow optimization occurred. No expanded-candidate source
+screening, sanitized bundle construction, final cohort freeze, baseline
+generation, review, or production approval occurred. Baseline generation
+attempts remain `0`.
+
+Exact next action: do not start source-review quorum, sanitized-bundle
+construction, baseline generation, review, or optimization from these v3
+results. Resume only if the user authorizes a new policy amendment, additional
+evidence acquisition, or a different baseline strategy; otherwise retain
+`REFERENCE_REVIEW_UNIVERSE_EXHAUSTED - INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`.

@@ -90,3 +90,27 @@
   projects. All remained sheet-metal-only `PARTIAL_REFERENCE_SET`; no project
   was promoted to all-three reference availability, and no source screening or
   generation was started.
+- Accepted amendment `D-0018`, allowing completed-reference page content to be
+  inspected only inside isolated reference-vault processes for v3 page-level
+  presence classification, identity confirmation, revision resolution, and
+  effective reference-set construction.
+- Diagnosed the v2 zero-promotion result as a detector/review-contract
+  limitation rather than proof that all references were genuinely missing.
+- Added the reference-vault boundary spec, reference presence detector v3 spec,
+  v3 schemas, renderer/evidence helper, detector, effective-set builder,
+  verifier, fixtures, and regression coverage for generator isolation,
+  target-under-forbidden-folder evidence, electrical false positives,
+  combined packages, duplicates, near duplicates, mismatched project identity,
+  missing third target type, title-block crops, and temporary render deletion.
+- Tightened generator bundle exclusion redaction so completed-reference-like
+  excluded IDs are not exposed to generator-facing manifests.
+- Processed all 103 reference-review-required families under v3, plus 24
+  additional ranked non-representative projects: 129 projects, 1849 PDFs, and
+  9031 pages. No all-three reference-complete project was found.
+- Refreshed v3 screening yield, alias, combined-package, revision, unresolved,
+  task-registry, trajectory, and minimization-audit evidence under
+  `reports/baseline-024/reference-detection-v3/`,
+  `manifests/reference_detection/v3/`, and `orchestration/`.
+- Stopped with `REFERENCE_REVIEW_UNIVERSE_EXHAUSTED -
+  INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`; source screening and baseline
+  generation remain blocked at `13 / 24` verified `ALLOWED_EVAL` projects.

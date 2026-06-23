@@ -184,3 +184,47 @@ Evidence: `reports/baseline-024/expanded-screening/inventory_reconciliation_repo
 `evals/baseline-024/expanded_candidate_selection_report.md`,
 `reports/baseline-024/expanded-screening/screening_yield_summary.md`, and
 `reports/baseline-024/expanded-screening/dominant_blockers.json`.
+
+## baseline-024-cycle-000 reference detection v3
+
+Status: `REFERENCE_REVIEW_UNIVERSE_EXHAUSTED - INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS`.
+
+Purpose: replace the metadata/transient-text-only reference-presence review
+with content-aware, page-level, reference-vault-only completed-target
+classification while preserving generator and source-review isolation.
+
+Detector: `target_output_detection_v3_page_content_isolated`.
+
+V2 diagnosis: zero promotions were caused by metadata-only and restricted
+document-level review mechanics, lack of page rendering/visual evidence,
+one-file-one-type assumptions, incomplete combined/revision handling, and
+policy confusion between generator-forbidden location and reviewer-reference
+eligibility. The diagnosis did not prove references were genuinely missing.
+
+V3 screening: 129 projects processed across all 103 reference-review-required
+families plus an additional ranked non-representative pass; 1849 PDFs and 9031
+pages classified; 1644 image-only-or-no-target-text PDFs and 205 embedded-text
+PDFs handled; 3252 electrical/false-positive alias pages rejected; 0 combined
+packages and 0 revision supersession packages resolved.
+
+Result: 0 newly verified all-three projects, 129 partial projects, 0 ambiguous
+projects. Source screening, sanitized-bundle construction, final cohort freeze,
+and baseline generation did not start. Current baseline-024 `ALLOWED_EVAL`
+count remains `13 / 24`.
+
+Audit: all 129 project outputs validate against the v3 schemas and
+minimization verifier; all 22 batch summaries report
+`REFERENCE_PRESENCE_BATCH_AUDIT_PASS`. Because no new reference-complete
+projects reached source screening, the source-pool portion of the independent
+audit is not applicable and no cohort freeze is permitted.
+
+Evidence: `docs/specs/REFERENCE_VAULT_BOUNDARY_SPEC.md`,
+`docs/specs/REFERENCE_PRESENCE_DETECTION_V3.md`,
+`reports/baseline-024/reference-detection-v3/v2_zero_promotion_diagnosis.json`,
+`reports/baseline-024/reference-detection-v3/screening_yield.md`,
+`reports/baseline-024/reference-detection-v3/batch_results/`,
+`reports/baseline-024/reference-detection-v3/combined_package_registry.json`,
+`reports/baseline-024/reference-detection-v3/revision_resolution_registry.json`,
+`reports/baseline-024/reference-detection-v3/unresolved_reference_sets.json`,
+`manifests/reference_detection/v3/`, and
+`reports/baseline-024/reference-detection-v3/independent_audit.json`.

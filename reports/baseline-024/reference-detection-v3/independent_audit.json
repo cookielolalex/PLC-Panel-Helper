@@ -1,0 +1,155 @@
+{
+  "audit_id": "B024-RDV3-INDEPENDENT-AUDIT",
+  "generated_at": "2026-06-23T16:37:38+08:00",
+  "starting_commit": "74a32d5d356965f9f1904ac741ab0d44d617ded8",
+  "audited_head": "74a32d5d356965f9f1904ac741ab0d44d617ded8",
+  "audited_head_short": "74a32d5",
+  "audit_result": "REFERENCE_DETECTION_V3_AND_SOURCE_POOL_AUDIT_INCONCLUSIVE",
+  "detector_subresult": "REFERENCE_DETECTION_V3_AUDIT_PASS",
+  "source_pool_subresult": "NOT_APPLICABLE_NO_REFERENCE_PROMOTIONS",
+  "cohort_freeze_permitted": false,
+  "detector_version": "target_output_detection_v3_page_content_isolated",
+  "final_status": "REFERENCE_REVIEW_UNIVERSE_EXHAUSTED - INSUFFICIENT_REFERENCE_COMPLETE_PROJECTS",
+  "summary": {
+    "projects_processed": 129,
+    "families_covered": "103 / 103",
+    "additional_non_representative_projects_processed": 24,
+    "remaining_reference_review_required_projects_not_individually_rendered": 140,
+    "status_counts": {
+      "PARTIAL_REFERENCE_SET": 129
+    },
+    "target_patterns": {
+      "SHEETMETAL_DRAWING": 124,
+      "PUNCH_DRAWING|SHEETMETAL_DRAWING": 3,
+      "PRODUCTION_DRAWING|SHEETMETAL_DRAWING": 1,
+      "PRODUCTION_DRAWING": 1
+    },
+    "pdfs_processed": 1849,
+    "pages_classified": 9031,
+    "image_only_or_no_target_text_pdfs": 1644,
+    "embedded_text_pdfs": 205,
+    "combined_packages_identified": 0,
+    "revision_notice_pages": 0,
+    "revision_supersession_projects": 0,
+    "newly_verified_all_three_projects": [],
+    "partial_projects": 129,
+    "ambiguous_projects": 0,
+    "electrical_or_false_positive_pages_rejected": 3252,
+    "false_positive_aliases_rejected": 3252,
+    "source_projects_screened_after_v3": 0,
+    "source_quorum_approvals_after_v3": 0,
+    "bundle_verification_failures_after_v3": 0,
+    "new_allowed_eval_projects": [],
+    "total_allowed_eval_count": 13,
+    "reserve_project_ids": [],
+    "final_twenty_four_project_set": []
+  },
+  "checks": [
+    {
+      "name": "git_head_verified",
+      "status": "PASS",
+      "detail": "audit run on commit 74a32d5; final checkpoint commit may be a documented descendant"
+    },
+    {
+      "name": "full_test_suite",
+      "status": "PASS",
+      "detail": "scripts/run_tests.py completed with final JSON status PASS after v3 and checkpoint edits"
+    },
+    {
+      "name": "accepted_bundle_hashes",
+      "status": "PASS",
+      "detail": "13 accepted bundle hash files checked in expanded-universe checkpoint"
+    },
+    {
+      "name": "frozen_workflow_hashes",
+      "status": "PASS",
+      "detail": "frozen workflow hashes remain unchanged in expanded-universe checkpoint"
+    },
+    {
+      "name": "source_root_immutability",
+      "status": "PASS",
+      "detail": "no writes were made to source roots; v3 wrote only under repo manifests/reports/orchestration and tmp render directories"
+    },
+    {
+      "name": "detector_v2_evidence_preserved",
+      "status": "PASS",
+      "detail": "v2 expanded-screening and isolated wave evidence was read for diagnosis and not rewritten"
+    },
+    {
+      "name": "detector_v3_versioning",
+      "status": "PASS",
+      "detail": "target_output_detection_v3_page_content_isolated"
+    },
+    {
+      "name": "temporary_renders_removed",
+      "status": "PASS",
+      "detail": "tmp/reference_detection_v3 recursive file count: 0"
+    },
+    {
+      "name": "v3_schema_and_minimization_verification",
+      "status": "PASS",
+      "detail": "129 project output directories verified with scripts/verify_reference_detection_output.py"
+    },
+    {
+      "name": "no_rendered_media_persisted",
+      "status": "PASS",
+      "detail": "rendered media files under v3 manifests/reports: 0"
+    },
+    {
+      "name": "no_private_paths_or_raw_text_in_v3_outputs",
+      "status": "PASS",
+      "detail": "exact leak-pattern hits: 0"
+    },
+    {
+      "name": "source_review_reference_blindness",
+      "status": "PASS",
+      "detail": "no source-review quorum was started for v3 candidates; no source reviewer received completed-reference content"
+    },
+    {
+      "name": "generator_reference_blindness",
+      "status": "PASS",
+      "detail": "no generator run was started; generator bundle regression verifies completed-reference-like excluded IDs are redacted"
+    },
+    {
+      "name": "accepted_reference_sets_page_level_evidence",
+      "status": "NOT_APPLICABLE",
+      "detail": "no new project reached all-three reference-complete status"
+    },
+    {
+      "name": "accepted_source_bundles_independent_audit",
+      "status": "NOT_APPLICABLE",
+      "detail": "no new v3 project reached source screening or bundle construction"
+    },
+    {
+      "name": "twenty_four_project_development_eligibility",
+      "status": "NOT_APPLICABLE",
+      "detail": "accepted pool remains 13 of 24"
+    },
+    {
+      "name": "protected_cohorts_unexposed",
+      "status": "PASS",
+      "detail": "no baseline generation, held-out review, or optimizer pass occurred"
+    },
+    {
+      "name": "baseline_generation_absent",
+      "status": "PASS",
+      "detail": "baseline-024 generation_attempts remains 0"
+    }
+  ],
+  "leak_hits": [],
+  "evidence": {
+    "v2_diagnosis_json": "reports/baseline-024/reference-detection-v3/v2_zero_promotion_diagnosis.json",
+    "screening_yield": "reports/baseline-024/reference-detection-v3/screening_yield.md",
+    "batch_results": "reports/baseline-024/reference-detection-v3/batch_results/",
+    "combined_package_registry": "reports/baseline-024/reference-detection-v3/combined_package_registry.json",
+    "revision_registry": "reports/baseline-024/reference-detection-v3/revision_resolution_registry.json",
+    "unresolved_reference_sets": "reports/baseline-024/reference-detection-v3/unresolved_reference_sets.json",
+    "v3_manifests": "manifests/reference_detection/v3/",
+    "task_registry": "orchestration/TASK_REGISTRY.csv"
+  },
+  "caveats": [
+    "The stop condition is family-level reference-review universe exhaustion: all 103 families have v3 representatives, but 140 same-family projects were not individually rendered after family coverage and a 24-project ranked extra pass produced no promotions.",
+    "PyMuPDF was unavailable in the local runtime, so the renderer used the Poppler pdftoppm fallback with the same temporary-render deletion contract.",
+    "No source-pool sufficiency conclusion can be reached because v3 produced zero new reference-complete projects."
+  ]
+}
