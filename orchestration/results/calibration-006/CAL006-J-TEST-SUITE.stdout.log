@@ -1,0 +1,33 @@
+rendered 3 PDFs
+synthetic harness wrote C:\Users\alex1\OneDrive\Documents\PLC Panels Generation Helper\tmp\phase0_test_harness
+FAIL
+FAIL
+FAIL
+PASS test_json_schemas_parse
+PASS test_declared_json_artifacts_validate
+PASS test_utf8_fixture_labels
+PASS test_forbidden_classification
+PASS test_grading_weights
+$ C:\Users\alex1\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe scripts/eval_harness.py --work-dir C:\Users\alex1\OneDrive\Documents\PLC Panels Generation Helper\tmp\phase0_test_harness
+PASS test_synthetic_render_grade
+$ C:\Users\alex1\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe scripts/build_generator_bundle.py --source-manifest C:\Users\alex1\OneDrive\Documents\PLC Panels Generation Helper\tmp\bundle_test\source_manifest.json --sheet-adjudication C:\Users\alex1\OneDrive\Documents\PLC Panels Generation Helper\tmp\bundle_test\sheet_adjudication.json --bundle-dir C:\Users\alex1\OneDrive\Documents\PLC Panels Generation Helper\tmp\bundle_test\bundle --output-manifest C:\Users\alex1\OneDrive\Documents\PLC Panels Generation Helper\tmp\bundle_test\generator_input_manifest.json --run-id BUNDLE-TEST --project-id 1150101
+$ C:\Users\alex1\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe scripts/scan_generator_contamination.py --bundle-dir C:\Users\alex1\OneDrive\Documents\PLC Panels Generation Helper\tmp\bundle_test\bundle --manifest C:\Users\alex1\OneDrive\Documents\PLC Panels Generation Helper\tmp\bundle_test\generator_input_manifest.json --output C:\Users\alex1\OneDrive\Documents\PLC Panels Generation Helper\tmp\bundle_test\contamination.json
+PASS test_positive_bundle_and_contamination_scan
+PASS test_source_guard_fail_closed_decisions
+PASS test_source_approval_and_bundle_fail_closed
+PASS test_bundle_verifier_rejects_leaks_and_traversal
+{
+  "status": "PASS",
+  "tests": [
+    "test_json_schemas_parse",
+    "test_declared_json_artifacts_validate",
+    "test_utf8_fixture_labels",
+    "test_forbidden_classification",
+    "test_grading_weights",
+    "test_synthetic_render_grade",
+    "test_positive_bundle_and_contamination_scan",
+    "test_source_guard_fail_closed_decisions",
+    "test_source_approval_and_bundle_fail_closed",
+    "test_bundle_verifier_rejects_leaks_and_traversal"
+  ]
+}

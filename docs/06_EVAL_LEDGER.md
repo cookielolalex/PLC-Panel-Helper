@@ -33,3 +33,15 @@ Evidence: `evals/runs/RUN-1110104-AUTO-EVAL-002/generation_complete.json`,
 `evals/runs/RUN-1110104-AUTO-EVAL-002/review/grading_result.json`,
 `evals/runs/RUN-1110104-AUTO-EVAL-002/review/project_reviewer_result.json`,
 and `evals/runs/RUN-1110104-AUTO-EVAL-002/audit/one_project_audit.json`.
+
+## calibration-006
+
+Status: `SIX_PROJECT_CALIBRATION_PASS - READY_FOR_24_PROJECT_BASELINE`.
+
+Projects: `1110101, 1110104, 1110204, 1110205, 1110405, 1110410`.
+
+Generation attempts: `12`; valid generation runs: `12`; primary reviews: `12`; secondary reviews: `6`.
+
+Portfolio mean score: `42`; mean coverage: `38`; critical findings: `0`; high findings: `36`.
+
+Evidence: `reports/calibration-006/calibration_summary.md`, `optimization/calibration-006/machine_summary.json`, and `reports/calibration-006/independent_audit.json`.

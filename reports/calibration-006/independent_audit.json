@@ -1,0 +1,79 @@
+{
+  "audit_id": "six_project_calibration_audit_cal006",
+  "created_at": "2026-06-23T10:35:00+08:00",
+  "status": "SIX_PROJECT_CALIBRATION_AUDIT_PASS",
+  "final_status_supported": true,
+  "criteria": [
+    {
+      "id": "git_head_descendant",
+      "status": "PASS",
+      "evidence": "HEAD=41fb938f705e8c7e9d0040eb4c78c74580a286f6"
+    },
+    {
+      "id": "six_source_bundles",
+      "status": "PASS",
+      "evidence": "projects=['1110101', '1110104', '1110204', '1110205', '1110405', '1110410']"
+    },
+    {
+      "id": "no_heldout_or_checkpoint",
+      "status": "PASS",
+      "evidence": "eligibility manifests exclude checkpoint/final-held-out use"
+    },
+    {
+      "id": "twelve_generation_runs",
+      "status": "PASS",
+      "evidence": "{'attempts': 12, 'valid_generation_runs': 12, 'results': [{'run_id': 'RUN-1110101-CAL006-A', 'project_id': '1110101', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110101-CAL006-B', 'project_id': '1110101', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110104-CAL006-A', 'project_id': '1110104', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110104-CAL006-B', 'project_id': '1110104', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110204-CAL006-A', 'project_id': '1110204', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110204-CAL006-B', 'project_id': '1110204', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110205-CAL006-A', 'project_id': '1110205', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110205-CAL006-B', 'project_id': '1110205', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110405-CAL006-A', 'project_id': '1110405', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110405-CAL006-B', 'project_id': '1110405', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110410-CAL006-A', 'project_id': '1110410', 'status': 'PASS', 'returncode': 0}, {'run_id': 'RUN-1110410-CAL006-B', 'project_id': '1110410', 'status': 'PASS', 'returncode': 0}]}"
+    },
+    {
+      "id": "zero_reference_leakage",
+      "status": "PASS",
+      "evidence": "all leakage scans PASS"
+    },
+    {
+      "id": "pdf_readability",
+      "status": "PASS",
+      "evidence": "all pdf_validation files PASS"
+    },
+    {
+      "id": "primary_reviews",
+      "status": "PASS",
+      "evidence": "12 primary review files exist"
+    },
+    {
+      "id": "secondary_reviews",
+      "status": "PASS",
+      "evidence": "6 secondary review files exist"
+    },
+    {
+      "id": "reviewer_agreement",
+      "status": "PASS",
+      "evidence": "{'status': 'PASS', 'median_absolute_score_difference': 0.0, 'median_coverage_difference': 0.0, 'source_availability_agreement_percent': 100.0, 'items': [{'project_id': '1110101', 'run_id': 'RUN-1110101-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}, {'project_id': '1110104', 'run_id': 'RUN-1110104-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}, {'project_id': '1110204', 'run_id': 'RUN-1110204-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}, {'project_id': '1110205', 'run_id': 'RUN-1110205-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}, {'project_id': '1110405', 'run_id': 'RUN-1110405-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}, {'project_id': '1110410', 'run_id': 'RUN-1110410-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}]}"
+    },
+    {
+      "id": "score_calculations",
+      "status": "PASS",
+      "evidence": "{'summary_id': 'calibration-006', 'status': 'SIX_PROJECT_CALIBRATION_PASS', 'project_results': [{'project_id': '1110101', 'run_1_score': 42, 'run_2_score': 42, 'project_mean_score': 42, 'absolute_run_difference': 0, 'run_to_run_standard_deviation': 0.0, 'run_1_coverage': 38, 'run_2_coverage': 38, 'mean_coverage': 38, 'validity_rate': 1.0, 'critical_finding_rate': 0.0, 'high_finding_rate': 3.0, 'evidence_strength': 'LOW_EVIDENCE'}, {'project_id': '1110104', 'run_1_score': 42, 'run_2_score': 42, 'project_mean_score': 42, 'absolute_run_difference': 0, 'run_to_run_standard_deviation': 0.0, 'run_1_coverage': 38, 'run_2_coverage': 38, 'mean_coverage': 38, 'validity_rate': 1.0, 'critical_finding_rate': 0.0, 'high_finding_rate': 3.0, 'evidence_strength': 'LOW_EVIDENCE'}, {'project_id': '1110204', 'run_1_score': 42, 'run_2_score': 42, 'project_mean_score': 42, 'absolute_run_difference': 0, 'run_to_run_standard_deviation': 0.0, 'run_1_coverage': 38, 'run_2_coverage': 38, 'mean_coverage': 38, 'validity_rate': 1.0, 'critical_finding_rate': 0.0, 'high_finding_rate': 3.0, 'evidence_strength': 'LOW_EVIDENCE'}, {'project_id': '1110205', 'run_1_score': 42, 'run_2_score': 42, 'project_mean_score': 42, 'absolute_run_difference': 0, 'run_to_run_standard_deviation': 0.0, 'run_1_coverage': 38, 'run_2_coverage': 38, 'mean_coverage': 38, 'validity_rate': 1.0, 'critical_finding_rate': 0.0, 'high_finding_rate': 3.0, 'evidence_strength': 'LOW_EVIDENCE'}, {'project_id': '1110405', 'run_1_score': 42, 'run_2_score': 42, 'project_mean_score': 42, 'absolute_run_difference': 0, 'run_to_run_standard_deviation': 0.0, 'run_1_coverage': 38, 'run_2_coverage': 38, 'mean_coverage': 38, 'validity_rate': 1.0, 'critical_finding_rate': 0.0, 'high_finding_rate': 3.0, 'evidence_strength': 'LOW_EVIDENCE'}, {'project_id': '1110410', 'run_1_score': 42, 'run_2_score': 42, 'project_mean_score': 42, 'absolute_run_difference': 0, 'run_to_run_standard_deviation': 0.0, 'run_1_coverage': 38, 'run_2_coverage': 38, 'mean_coverage': 38, 'validity_rate': 1.0, 'critical_finding_rate': 0.0, 'high_finding_rate': 3.0, 'evidence_strength': 'LOW_EVIDENCE'}], 'mean_score': 42, 'median_score': 42.0, 'minimum_score': 42, 'tenth_percentile_score': 42.0, 'mean_coverage': 38, 'validity_rate': 1.0, 'critical_findings': 0, 'high_findings': 36, 'mean_run_to_run_variation': 0, 'reviewer_agreement': {'status': 'PASS', 'median_absolute_score_difference': 0.0, 'median_coverage_difference': 0.0, 'source_availability_agreement_percent': 100.0, 'items': [{'project_id': '1110101', 'run_id': 'RUN-1110101-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}, {'project_id': '1110104', 'run_id': 'RUN-1110104-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}, {'project_id': '1110204', 'run_id': 'RUN-1110204-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}, {'project_id': '1110205', 'run_id': 'RUN-1110205-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}, {'project_id': '1110405', 'run_id': 'RUN-1110405-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}, {'project_id': '1110410', 'run_id': 'RUN-1110410-CAL006-A', 'validity_agreement': True, 'critical_agreement': True, 'high_agreement': True, 'score_difference': 0, 'coverage_difference': 0, 'source_availability_agreement_percent': 100.0, 'page_pairing_agreement': True, 'registration_agreement': True}]}}"
+    },
+    {
+      "id": "workflow_hashes_unchanged",
+      "status": "PASS",
+      "evidence": "frozen workflow hashes still match"
+    },
+    {
+      "id": "test_suite",
+      "status": "PASS",
+      "evidence": "run_tests returncode=0"
+    },
+    {
+      "id": "no_workflow_optimization",
+      "status": "PASS",
+      "evidence": "recommendations remain PROPOSED"
+    }
+  ],
+  "summary": {
+    "portfolio_mean_score": 42,
+    "portfolio_mean_coverage": 38,
+    "critical_findings": 0,
+    "high_findings": 36
+  }
+}
