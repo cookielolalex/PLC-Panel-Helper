@@ -1,0 +1,64 @@
+{
+  "run_id": "REFPRES-W001-1140606",
+  "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+  "created_at": "2026-06-23T05:31:12+00:00",
+  "project_id": "1140606",
+  "verification_result": "PARTIAL_REFERENCE_SET",
+  "detected_output_types": [
+    "SHEET_METAL"
+  ],
+  "inspected_file_count": 3,
+  "copy_failures": [],
+  "classifications": [
+    {
+      "project_id": "1140606",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-5C7668B821DF",
+      "sha256": "802D645053F5DD5C38ADF15D847C171A1B1E8102AD94B2BF8E330DA644CDA8F2",
+      "output_type": "SHEET_METAL",
+      "page_count": 1,
+      "page_ranges": [],
+      "detected_project_identity": "1140606",
+      "detected_drawing_identity": "SHEET_METAL_DRAWING",
+      "revision_label": "UNKNOWN_OR_NOT_METADATA_DETECTED",
+      "supersession_relationship": "NOT_DETERMINED_METADATA_ONLY",
+      "classification_confidence": 0.95,
+      "ambiguity_reason": "",
+      "verification_result": "PASS"
+    },
+    {
+      "project_id": "1140606",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CA493D92CDEE",
+      "sha256": "92544A7F1FA227FD28C043340C77345A365249D80FF86E58971E9DA3CA5455E3",
+      "output_type": "SHEET_METAL",
+      "page_count": 1,
+      "page_ranges": [],
+      "detected_project_identity": "1140606",
+      "detected_drawing_identity": "SHEET_METAL_DRAWING",
+      "revision_label": "UNKNOWN_OR_NOT_METADATA_DETECTED",
+      "supersession_relationship": "NOT_DETERMINED_METADATA_ONLY",
+      "classification_confidence": 0.95,
+      "ambiguity_reason": "",
+      "verification_result": "PASS"
+    },
+    {
+      "project_id": "1140606",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A6B8D4625EC0",
+      "sha256": "D6D770C85F83895491D4B911970BEE64F92D01D7B208D5E630FE87B09B0A79F3",
+      "output_type": "SHEET_METAL",
+      "page_count": 1,
+      "page_ranges": [],
+      "detected_project_identity": "1140606",
+      "detected_drawing_identity": "SHEET_METAL_DRAWING",
+      "revision_label": "UNKNOWN_OR_NOT_METADATA_DETECTED",
+      "supersession_relationship": "NOT_DETERMINED_METADATA_ONLY",
+      "classification_confidence": 0.95,
+      "ambiguity_reason": "",
+      "verification_result": "PASS"
+    }
+  ],
+  "reference_content_persisted": false,
+  "raw_text_persisted": false,
+  "images_or_thumbnails_persisted": false,
+  "vault_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\tmp\\reference-vault\\wave-003\\1140606",
+  "visible_file_manifest": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\input_manifests\\reference_detection\\wave-003\\B024-RP-W003-1140606.visible_files.json"
+}

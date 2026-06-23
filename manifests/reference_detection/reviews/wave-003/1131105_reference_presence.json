@@ -1,0 +1,79 @@
+{
+  "run_id": "REFPRES-W001-1131105",
+  "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+  "created_at": "2026-06-23T05:31:11+00:00",
+  "project_id": "1131105",
+  "verification_result": "PARTIAL_REFERENCE_SET",
+  "detected_output_types": [
+    "SHEET_METAL"
+  ],
+  "inspected_file_count": 6,
+  "copy_failures": [],
+  "classifications": [
+    {
+      "project_id": "1131105",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-EAC38DC48CAB",
+      "sha256": "B549DA130DAD1AFE92C2936C0EE086429830CBB1E563AADDFE1B8E0422D6F0AF",
+      "output_type": "SHEET_METAL",
+      "page_count": 3,
+      "page_ranges": [],
+      "detected_project_identity": "1131105",
+      "detected_drawing_identity": "SHEET_METAL_DRAWING",
+      "revision_label": "UNKNOWN_OR_NOT_METADATA_DETECTED",
+      "supersession_relationship": "NOT_DETERMINED_METADATA_ONLY",
+      "classification_confidence": 0.95,
+      "ambiguity_reason": "",
+      "verification_result": "PASS"
+    },
+    {
+      "project_id": "1131105",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-34152A29AE15",
+      "sha256": "CBAB81C670D00DA03147DCBE13D6FFB6F9961FB0EC703AF7D9AE4A757EDB201D",
+      "output_type": "SHEET_METAL",
+      "page_count": 1,
+      "page_ranges": [],
+      "detected_project_identity": "1131105",
+      "detected_drawing_identity": "SHEET_METAL_DRAWING",
+      "revision_label": "UNKNOWN_OR_NOT_METADATA_DETECTED",
+      "supersession_relationship": "NOT_DETERMINED_METADATA_ONLY",
+      "classification_confidence": 0.95,
+      "ambiguity_reason": "",
+      "verification_result": "PASS"
+    },
+    {
+      "project_id": "1131105",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E174F843328A",
+      "sha256": "43F4D370AB26344C62363572D21F07E3F00BEB071E5017BCCCF12044A23C7EA6",
+      "output_type": "SHEET_METAL",
+      "page_count": 1,
+      "page_ranges": [],
+      "detected_project_identity": "1131105",
+      "detected_drawing_identity": "SHEET_METAL_DRAWING",
+      "revision_label": "UNKNOWN_OR_NOT_METADATA_DETECTED",
+      "supersession_relationship": "NOT_DETERMINED_METADATA_ONLY",
+      "classification_confidence": 0.95,
+      "ambiguity_reason": "",
+      "verification_result": "PASS"
+    },
+    {
+      "project_id": "1131105",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-A62B942604C0",
+      "sha256": "DC3E0DD0449EC6B0EBF71FD49B3642EA380653E3C0EDF8AE0102CEF99C74D807",
+      "output_type": "SHEET_METAL",
+      "page_count": 1,
+      "page_ranges": [],
+      "detected_project_identity": "1131105",
+      "detected_drawing_identity": "SHEET_METAL_DRAWING",
+      "revision_label": "UNKNOWN_OR_NOT_METADATA_DETECTED",
+      "supersession_relationship": "NOT_DETERMINED_METADATA_ONLY",
+      "classification_confidence": 0.95,
+      "ambiguity_reason": "",
+      "verification_result": "PASS"
+    }
+  ],
+  "reference_content_persisted": false,
+  "raw_text_persisted": false,
+  "images_or_thumbnails_persisted": false,
+  "vault_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\tmp\\reference-vault\\wave-003\\1131105",
+  "visible_file_manifest": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\input_manifests\\reference_detection\\wave-003\\B024-RP-W003-1131105.visible_files.json"
+}

@@ -1,0 +1,34 @@
+{
+  "run_id": "REFPRES-W001-1130104",
+  "classifier_version": "reference_presence_classifier_v1_isolated_pdf_text_minimal",
+  "created_at": "2026-06-23T05:31:14+00:00",
+  "project_id": "1130104",
+  "verification_result": "PARTIAL_REFERENCE_SET",
+  "detected_output_types": [
+    "SHEET_METAL"
+  ],
+  "inspected_file_count": 1,
+  "copy_failures": [],
+  "classifications": [
+    {
+      "project_id": "1130104",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-1926BF5F6647",
+      "sha256": "4EFF2C1DE8C8AACDB76BFF6D89CED7D774E3C0B00996AB0FCA8214062CDD15AE",
+      "output_type": "SHEET_METAL",
+      "page_count": 3,
+      "page_ranges": [],
+      "detected_project_identity": "1130104",
+      "detected_drawing_identity": "SHEET_METAL_DRAWING",
+      "revision_label": "UNKNOWN_OR_NOT_METADATA_DETECTED",
+      "supersession_relationship": "NOT_DETERMINED_METADATA_ONLY",
+      "classification_confidence": 0.95,
+      "ambiguity_reason": "",
+      "verification_result": "PASS"
+    }
+  ],
+  "reference_content_persisted": false,
+  "raw_text_persisted": false,
+  "images_or_thumbnails_persisted": false,
+  "vault_workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\tmp\\reference-vault\\wave-002\\1130104",
+  "visible_file_manifest": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\input_manifests\\reference_detection\\wave-002\\B024-RP-W002-1130104.visible_files.json"
+}

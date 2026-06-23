@@ -1,0 +1,28 @@
+{
+  "status": "BLOCKER_ANALYSIS_AFTER_THREE_LOW_YIELD_REFERENCE_WAVES",
+  "source_screening_started": false,
+  "reason_source_screening_not_started": "expanded candidate registry has zero READY_FOR_SOURCE_SCREENING projects",
+  "ready_for_source_screening_count": 0,
+  "reference_presence_review_required_count": 269,
+  "reference_presence_waves_completed": 3,
+  "reference_presence_projects_screened": 18,
+  "reference_presence_promoted_all_three": 0,
+  "dominant_blockers": [
+    {
+      "blocker_id": "NO_NEW_VERIFIED_ALL_THREE_REFERENCE_SETS",
+      "count": 269,
+      "evidence": "metadata v2 found zero new ready candidates; first 18 isolated reference-presence reviews remained PARTIAL_REFERENCE_SET",
+      "recommended_layer": "reference_detection_policy_and_source_inventory",
+      "action": "Do not weaken all-three requirement. Continue reference-presence review only if improved isolated classifier can distinguish target production/punch drawings without using forbidden production-control or electrical PDFs."
+    },
+    {
+      "blocker_id": "PARTIAL_SETS_ARE_SHEET_METAL_ONLY_IN_TOP_RANKS",
+      "count": 18,
+      "evidence": "waves 001-003 detected only SHEET_METAL output type for all reviewed projects",
+      "recommended_layer": "inventory_reconciliation",
+      "action": "Treat as source availability blocker unless later metadata or isolated classification finds separate production and punch target PDFs."
+    }
+  ],
+  "forbidden_boundary_preserved": true,
+  "generation_authorized": false
+}

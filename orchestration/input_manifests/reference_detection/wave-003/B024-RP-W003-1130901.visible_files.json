@@ -1,0 +1,57 @@
+{
+  "run_id": "REFPRES-W001-1130901",
+  "project_id": "1130901",
+  "source_root_id": "SRC-ALL-PROJECTS",
+  "visible_files": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-6FBD58B79BC2",
+      "sha256": "4E5D8E4326DBA188BE2CE37721BA746A99B270E332C63FD9E13F9FEFFF8767BF",
+      "extension": ".pdf",
+      "size_bytes": "92741",
+      "source_root_relative_path": "113年度工作\\1130901西富-聯電P6零星工程\\1130901\\物料需求表-1130901西富-聯電P6零星工程(113.09.13).pdf",
+      "role_hint": "supporting_document_non_generator"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-85364516D9E7",
+      "sha256": "509000E754B3A0AB1481EFB78E710D521D2FE27D7EB4F517845CEC34824D2991",
+      "extension": ".pdf",
+      "size_bytes": "550154",
+      "source_root_relative_path": "113年度工作\\1130901西富-聯電P6零星工程\\20240909-P6零星工程回簽.pdf",
+      "role_hint": "supporting_document_non_generator"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4454CAF4F80D",
+      "sha256": "FF6A4441D911E71267EA35940814D347034F8F0247CA6B91051796114954DE0D",
+      "extension": ".pdf",
+      "size_bytes": "702570",
+      "source_root_relative_path": "113年度工作\\1130901西富-聯電P6零星工程\\生管課用圖、鈑金施工圖、沖孔施工圖\\1130901西富-聯電P6零星工程(沖孔施工).pdf",
+      "role_hint": "completed_sheetmetal_drawing_reference"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B36BE69ACFDF",
+      "sha256": "F6CDDF70DB025983F704F842484D1ECC79F3D2288225484A416E9E9419CB7F98",
+      "extension": ".pdf",
+      "size_bytes": "695882",
+      "source_root_relative_path": "113年度工作\\1130901西富-聯電P6零星工程\\生管課用圖、鈑金施工圖、沖孔施工圖\\1130901西富-聯電P6零星工程(生管用圖).pdf",
+      "role_hint": "completed_sheetmetal_drawing_reference"
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-4345ADC649F2",
+      "sha256": "70CB40032ABA53F3C7C6E6DD254235738148091F9DBA16028C5469187FAC258A",
+      "extension": ".pdf",
+      "size_bytes": "1121195",
+      "source_root_relative_path": "113年度工作\\1130901西富-聯電P6零星工程\\生管課用圖、鈑金施工圖、沖孔施工圖\\鈑金施工\\M30901A1.pdf",
+      "role_hint": "completed_sheetmetal_drawing_reference"
+    }
+  ],
+  "forbidden_output_fields": [
+    "dimensions",
+    "component names",
+    "quantities",
+    "layout descriptions",
+    "raw drawing text",
+    "images",
+    "thumbnails",
+    "title-block details not needed for role classification"
+  ]
+}

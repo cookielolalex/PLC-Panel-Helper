@@ -1,0 +1,14 @@
+{
+  "run_id": "REFPRES-W001-1130505",
+  "project_id": "1130505",
+  "started_at": "2026-06-23T05:31:13+00:00",
+  "completed_at": "2026-06-23T05:31:13+00:00",
+  "actions": [
+    "loaded metadata-only PDF candidate rows",
+    "copied candidate PDFs into ignored reference-vault workspace",
+    "verified vault copy hashes",
+    "extracted transient page text for role labels only",
+    "wrote schema-constrained classification result without raw text or images"
+  ],
+  "output": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\manifests\\reference_detection\\reviews\\wave-003\\1130505_reference_presence.json"
+}

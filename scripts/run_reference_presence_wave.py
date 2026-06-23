@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import json
+import argparse
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -47,17 +48,26 @@ def append_task_registry(rows: list[dict[str, str]]) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Run a six-project reference presence wave.")
+    parser.add_argument("--wave-number", type=int, default=1)
+    parser.add_argument("--count", type=int, default=6)
+    args = parser.parse_args()
+    wave_number = args.wave_number
+    wave_id = f"wave-{wave_number:03d}"
+    task_prefix = f"B024-RP-W{wave_number:03d}"
+
     ranking = read_json(RANKING)
-    projects = ranking["reference_presence_review_required"][:6]
+    start = (wave_number - 1) * args.count
+    projects = ranking["reference_presence_review_required"][start : start + args.count]
     created_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     registry_rows = []
     for project_id in projects:
-        task_id = f"B024-RP-W001-{project_id}"
-        task_path = ROOT / "orchestration" / "tasks" / "reference_detection" / "wave-001" / f"{task_id}.md"
-        visible_manifest = ROOT / "orchestration" / "input_manifests" / "reference_detection" / "wave-001" / f"{task_id}.visible_files.json"
-        output = ROOT / "manifests" / "reference_detection" / "reviews" / "wave-001" / f"{project_id}_reference_presence.json"
-        trajectory = ROOT / "orchestration" / "trajectories" / "reference_detection" / "wave-001" / f"{task_id}.json"
-        vault = ROOT / "tmp" / "reference-vault" / "wave-001" / project_id
+        task_id = f"{task_prefix}-{project_id}"
+        task_path = ROOT / "orchestration" / "tasks" / "reference_detection" / wave_id / f"{task_id}.md"
+        visible_manifest = ROOT / "orchestration" / "input_manifests" / "reference_detection" / wave_id / f"{task_id}.visible_files.json"
+        output = ROOT / "manifests" / "reference_detection" / "reviews" / wave_id / f"{project_id}_reference_presence.json"
+        trajectory = ROOT / "orchestration" / "trajectories" / "reference_detection" / wave_id / f"{task_id}.json"
+        vault = ROOT / "tmp" / "reference-vault" / wave_id / project_id
 
         task = f"""# Reference Presence Classifier {project_id}
 
@@ -120,25 +130,26 @@ Required output: `{output.as_posix()}`
         )
     append_task_registry(registry_rows)
     summary = {
-        "wave_id": "reference-presence-wave-001",
+        "wave_id": f"reference-presence-{wave_id}",
         "project_ids": projects,
-        "task_ids": [f"B024-RP-W001-{pid}" for pid in projects],
+        "task_ids": [f"{task_prefix}-{pid}" for pid in projects],
         "created_at": created_at,
     }
-    out = ROOT / "manifests" / "reference_detection" / "reviews" / "wave-001" / "wave_summary.json"
+    out = ROOT / "manifests" / "reference_detection" / "reviews" / wave_id / "wave_summary.json"
     out.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     result_rows = []
     for project_id in projects:
-        path = ROOT / "manifests" / "reference_detection" / "reviews" / "wave-001" / f"{project_id}_reference_presence.json"
+        path = ROOT / "manifests" / "reference_detection" / "reviews" / wave_id / f"{project_id}_reference_presence.json"
         data = json.loads(path.read_text(encoding="utf-8"))
         result_rows.append(data)
+    promoted = sum(1 for row in result_rows if row["verification_result"] in {"VERIFIED_ALL_THREE", "PROBABLE_ALL_THREE"})
     report_lines = [
-        "# Reference Presence Wave 001 Summary",
+        f"# Reference Presence Wave {wave_number:03d} Summary",
         "",
-        "- status: `REFERENCE_PRESENCE_WAVE_001_COMPLETE`",
+        f"- status: `REFERENCE_PRESENCE_WAVE_{wave_number:03d}_COMPLETE`",
         "- completed-reference raw text persisted: `false`",
         "- images or thumbnails persisted: `false`",
-        "- promoted to all-three reference availability: `0`",
+        f"- promoted to all-three reference availability: `{promoted}`",
         "",
         "| project_id | verification_result | detected_output_types | inspected_file_count | classification_count |",
         "|---|---|---|---:|---:|",
@@ -154,7 +165,7 @@ Required output: `{output.as_posix()}`
             "No project from this wave may proceed to source screening on the basis of this reference-presence result.",
         ]
     )
-    report_path = ROOT / "reports" / "baseline-024" / "expanded-screening" / "reference_presence_wave_001_summary.md"
+    report_path = ROOT / "reports" / "baseline-024" / "expanded-screening" / f"reference_presence_wave_{wave_number:03d}_summary.md"
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
