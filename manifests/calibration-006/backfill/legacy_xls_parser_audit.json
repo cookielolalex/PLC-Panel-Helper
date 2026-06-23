@@ -1,0 +1,78 @@
+{
+  "project_id": "1110101",
+  "created_at": "2026-06-23T02:26:49Z",
+  "parser": "excel_com_legacy_xls_v1",
+  "source_decisions": "manifests\\calibration-006\\backfill\\source_decisions_1110101_legacy_xls.csv",
+  "parse_reports": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5EA283A2BFCE",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達鳥嘴潭下游送水管E-2生產能力分析表.xls",
+      "file_sha256": "B7CE46826C08C12A84F8AE1308859F177A985D424E9558C12EF5B0FB1B0E6C27",
+      "parser_output": "manifests\\calibration-006\\backfill\\legacy_xls_parse\\1110101\\SRC-ALL-PROJECTS-FILE-5EA283A2BFCE",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達機電鳥嘴潭送水管E-2訂單成本分析.xls",
+      "file_sha256": "7B922D8C54B6CFE1B8B807DDB67F4688EF721F3D1E5D84A97A8791515D193075",
+      "parser_output": "manifests\\calibration-006\\backfill\\legacy_xls_parse\\1110101\\SRC-ALL-PROJECTS-FILE-7D1ACA253B10",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-9AA8E8A5BF2D",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達鳥嘴潭下游送水管E-2生產合約審查表.xls",
+      "file_sha256": "CF908B7F395A04255133367E85553C12E8267EEC55B9FA01CA5778142EABA98E",
+      "parser_output": "manifests\\calibration-006\\backfill\\legacy_xls_parse\\1110101\\SRC-ALL-PROJECTS-FILE-9AA8E8A5BF2D",
+      "sheet_count": 3
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\工作記錄單飛達鳥嘴潭下游送水管E-2xls.xls",
+      "file_sha256": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5",
+      "parser_output": "manifests\\calibration-006\\backfill\\legacy_xls_parse\\1110101\\SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E",
+      "sheet_count": 6
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\鳥嘴潭人工湖下游送水管E-2合約.xls",
+      "file_sha256": "A6F8B2BD6B679920144AA61BD560FEE3F2C84763B3E57BDE2A801371879100F2",
+      "parser_output": "manifests\\calibration-006\\backfill\\legacy_xls_parse\\1110101\\SRC-ALL-PROJECTS-FILE-DE24411C260D",
+      "sheet_count": 3
+    }
+  ],
+  "stability_checks": [
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-5EA283A2BFCE",
+      "first_metadata_hash": "B5A3399218579E40DEC6B2ACF28310DB2B78BCD7E399F6888C88C013CB83DBF0",
+      "second_metadata_hash": "B5A3399218579E40DEC6B2ACF28310DB2B78BCD7E399F6888C88C013CB83DBF0",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10",
+      "first_metadata_hash": "861028365F60DB0793A1D20FF08B0628C1CD1F611CD885DB5547D7BFB1E45CBE",
+      "second_metadata_hash": "861028365F60DB0793A1D20FF08B0628C1CD1F611CD885DB5547D7BFB1E45CBE",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-9AA8E8A5BF2D",
+      "first_metadata_hash": "747CA8686671EBEB31599C1B447493A150DF1543FB2A164E504C691C0887C75C",
+      "second_metadata_hash": "747CA8686671EBEB31599C1B447493A150DF1543FB2A164E504C691C0887C75C",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E",
+      "first_metadata_hash": "434561A13150F13701A9582F9836E7713F3815C3CD4096CBB460A1B9D55C69AB",
+      "second_metadata_hash": "434561A13150F13701A9582F9836E7713F3815C3CD4096CBB460A1B9D55C69AB",
+      "status": "PASS"
+    },
+    {
+      "file_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D",
+      "first_metadata_hash": "DE3230812E0D2B57108C6B1D63B5CE8C9A4A66398889F249C0B5FE2E34091795",
+      "second_metadata_hash": "DE3230812E0D2B57108C6B1D63B5CE8C9A4A66398889F249C0B5FE2E34091795",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "reviewable_count": 6,
+  "excluded_count": 12
+}

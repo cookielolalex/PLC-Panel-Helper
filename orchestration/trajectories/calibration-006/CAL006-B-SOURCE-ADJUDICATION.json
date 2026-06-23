@@ -1,0 +1,17 @@
+{
+  "task_id": "CAL006-B-SOURCE-ADJUDICATION",
+  "command": [
+    "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "scripts/autonomous_eval_source_approval.py",
+    "adjudicate",
+    "--prefilter-root",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\manifests\\calibration-006\\backfill\\project_manifests",
+    "--review-root",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\manifests\\calibration-006\\backfill\\reviews"
+  ],
+  "started_at": "2026-06-23T02:26:50Z",
+  "duration_seconds": 0.17,
+  "returncode": 0,
+  "stdout_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-B-SOURCE-ADJUDICATION.stdout.log",
+  "stderr_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-B-SOURCE-ADJUDICATION.stderr.log"
+}

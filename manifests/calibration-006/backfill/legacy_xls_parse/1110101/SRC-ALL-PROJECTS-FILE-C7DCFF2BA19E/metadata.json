@@ -1,0 +1,780 @@
+﻿{
+    "workbook_file_name":  "工作記錄單飛達鳥嘴潭下游送水管E-2xls.xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+                  {
+                      "name":  "\u00270413\u0027!Print_Area",
+                      "refers_to":  "=\u00270413\u0027!$A$1:$AI$46"
+                  },
+                  {
+                      "name":  "\u00270415\u0027!Print_Area",
+                      "refers_to":  "=\u00270415\u0027!$A$1:$AI$44"
+                  },
+                  {
+                      "name":  "\u002705\u0027!Print_Area",
+                      "refers_to":  "=\u002705\u0027!$A$1:$AI$44"
+                  },
+                  {
+                      "name":  "\u002705 (2)\u0027!Print_Area",
+                      "refers_to":  "=\u002705 (2)\u0027!$A$1:$AI$44"
+                  },
+                  {
+                      "name":  "\u00270505\u0027!Print_Area",
+                      "refers_to":  "=\u00270505\u0027!$A$1:$AI$44"
+                  },
+                  {
+                      "name":  "空白!Print_Area",
+                      "refers_to":  "=空白!$A$1:$AI$44"
+                  }
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "0413",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  50,
+                       "used_columns":  35,
+                       "non_empty_rows":  35,
+                       "formula_count":  16,
+                       "formulas":  [
+                                        {
+                                            "row":  6,
+                                            "column":  30,
+                                            "address":  "AD6",
+                                            "formula":  "=2500*0.4",
+                                            "text":  "1000"
+                                        },
+                                        {
+                                            "row":  6,
+                                            "column":  33,
+                                            "address":  "AG6",
+                                            "formula":  "=AD6*AA6",
+                                            "text":  "   9,000 "
+                                        },
+                                        {
+                                            "row":  7,
+                                            "column":  33,
+                                            "address":  "AG7",
+                                            "formula":  "=AD7*AA7",
+                                            "text":  "   2,600 "
+                                        },
+                                        {
+                                            "row":  8,
+                                            "column":  33,
+                                            "address":  "AG8",
+                                            "formula":  "=AD8*AA8",
+                                            "text":  "   1,600 "
+                                        },
+                                        {
+                                            "row":  9,
+                                            "column":  33,
+                                            "address":  "AG9",
+                                            "formula":  "=AD9*AA9",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  2,
+                                            "address":  "B10",
+                                            "formula":  "=AG20",
+                                            "text":  "   13,200 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  6,
+                                            "address":  "F10",
+                                            "formula":  "=ROUND(B10*0.05,0)",
+                                            "text":  "  660 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  10,
+                                            "address":  "J10",
+                                            "formula":  "=B10+F10",
+                                            "text":  "   13,860 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  33,
+                                            "address":  "AG10",
+                                            "formula":  "=AD10*AA10",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  14,
+                                            "column":  33,
+                                            "address":  "AG14",
+                                            "formula":  "=AD14*AA14",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  15,
+                                            "column":  33,
+                                            "address":  "AG15",
+                                            "formula":  "=AD15*AA15",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  33,
+                                            "address":  "AG16",
+                                            "formula":  "=AD16*AA16",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  33,
+                                            "address":  "AG17",
+                                            "formula":  "=AD17*AA17",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  33,
+                                            "address":  "AG18",
+                                            "formula":  "=AD18*AA18",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  19,
+                                            "column":  33,
+                                            "address":  "AG19",
+                                            "formula":  "=AD19*AA19",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  20,
+                                            "column":  33,
+                                            "address":  "AG20",
+                                            "formula":  "=SUM(AG6:AI19)",
+                                            "text":  "  13,200 "
+                                        }
+                                    ],
+                       "csv_file_name":  "001_0413.csv"
+                   },
+                   {
+                       "index":  2,
+                       "name":  "0415",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  48,
+                       "used_columns":  35,
+                       "non_empty_rows":  35,
+                       "formula_count":  16,
+                       "formulas":  [
+                                        {
+                                            "row":  6,
+                                            "column":  33,
+                                            "address":  "AG6",
+                                            "formula":  "=AD6*AA6",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  7,
+                                            "column":  33,
+                                            "address":  "AG7",
+                                            "formula":  "=AD7*AA7",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  8,
+                                            "column":  33,
+                                            "address":  "AG8",
+                                            "formula":  "=AD8*AA8",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  9,
+                                            "column":  33,
+                                            "address":  "AG9",
+                                            "formula":  "=AD9*AA9",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  6,
+                                            "address":  "F10",
+                                            "formula":  "=ROUND(B10*0.05,0)",
+                                            "text":  " 123,810 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  10,
+                                            "address":  "J10",
+                                            "formula":  "=B10+F10",
+                                            "text":  " 2,600,000 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  33,
+                                            "address":  "AG10",
+                                            "formula":  "=AD10*AA10",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  11,
+                                            "column":  33,
+                                            "address":  "AG11",
+                                            "formula":  "=AD11*AA11",
+                                            "text":  "    - "
+                                        },
+                                        {
+                                            "row":  12,
+                                            "column":  33,
+                                            "address":  "AG12",
+                                            "formula":  "=AD12*AA12",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  13,
+                                            "column":  33,
+                                            "address":  "AG13",
+                                            "formula":  "=AD13*AA13",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  14,
+                                            "column":  33,
+                                            "address":  "AG14",
+                                            "formula":  "=AD14*AA14",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  15,
+                                            "column":  33,
+                                            "address":  "AG15",
+                                            "formula":  "=AD15*AA15",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  33,
+                                            "address":  "AG16",
+                                            "formula":  "=AD16*AA16",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  33,
+                                            "address":  "AG17",
+                                            "formula":  "=AD17*AA17",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  2,
+                                            "address":  "B18",
+                                            "formula":  "=B6",
+                                            "text":  "得生製藥永康廠"
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  33,
+                                            "address":  "AG18",
+                                            "formula":  "=SUM(AG6:AI17)",
+                                            "text":  "          - "
+                                        }
+                                    ],
+                       "csv_file_name":  "002_0415.csv"
+                   },
+                   {
+                       "index":  3,
+                       "name":  "空白",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  48,
+                       "used_columns":  35,
+                       "non_empty_rows":  35,
+                       "formula_count":  16,
+                       "formulas":  [
+                                        {
+                                            "row":  6,
+                                            "column":  33,
+                                            "address":  "AG6",
+                                            "formula":  "=AD6*AA6",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  7,
+                                            "column":  33,
+                                            "address":  "AG7",
+                                            "formula":  "=AD7*AA7",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  8,
+                                            "column":  33,
+                                            "address":  "AG8",
+                                            "formula":  "=AD8*AA8",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  9,
+                                            "column":  33,
+                                            "address":  "AG9",
+                                            "formula":  "=AD9*AA9",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  6,
+                                            "address":  "F10",
+                                            "formula":  "=ROUND(B10*0.05,0)",
+                                            "text":  " - "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  10,
+                                            "address":  "J10",
+                                            "formula":  "=B10+F10",
+                                            "text":  " - "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  33,
+                                            "address":  "AG10",
+                                            "formula":  "=AD10*AA10",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  11,
+                                            "column":  33,
+                                            "address":  "AG11",
+                                            "formula":  "=AD11*AA11",
+                                            "text":  "    - "
+                                        },
+                                        {
+                                            "row":  12,
+                                            "column":  33,
+                                            "address":  "AG12",
+                                            "formula":  "=AD12*AA12",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  13,
+                                            "column":  33,
+                                            "address":  "AG13",
+                                            "formula":  "=AD13*AA13",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  14,
+                                            "column":  33,
+                                            "address":  "AG14",
+                                            "formula":  "=AD14*AA14",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  15,
+                                            "column":  33,
+                                            "address":  "AG15",
+                                            "formula":  "=AD15*AA15",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  33,
+                                            "address":  "AG16",
+                                            "formula":  "=AD16*AA16",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  33,
+                                            "address":  "AG17",
+                                            "formula":  "=AD17*AA17",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  2,
+                                            "address":  "B18",
+                                            "formula":  "=B6",
+                                            "text":  "0"
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  33,
+                                            "address":  "AG18",
+                                            "formula":  "=SUM(AG6:AI17)",
+                                            "text":  "          - "
+                                        }
+                                    ],
+                       "csv_file_name":  "003_空白.csv"
+                   },
+                   {
+                       "index":  4,
+                       "name":  "05",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  48,
+                       "used_columns":  35,
+                       "non_empty_rows":  35,
+                       "formula_count":  16,
+                       "formulas":  [
+                                        {
+                                            "row":  6,
+                                            "column":  33,
+                                            "address":  "AG6",
+                                            "formula":  "=AD6*AA6",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  7,
+                                            "column":  33,
+                                            "address":  "AG7",
+                                            "formula":  "=AD7*AA7",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  8,
+                                            "column":  33,
+                                            "address":  "AG8",
+                                            "formula":  "=AD8*AA8",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  9,
+                                            "column":  33,
+                                            "address":  "AG9",
+                                            "formula":  "=AD9*AA9",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  6,
+                                            "address":  "F10",
+                                            "formula":  "=ROUND(B10*0.05,0)",
+                                            "text":  " 2,619 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  10,
+                                            "address":  "J10",
+                                            "formula":  "=B10+F10",
+                                            "text":  " 55,000 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  33,
+                                            "address":  "AG10",
+                                            "formula":  "=AD10*AA10",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  11,
+                                            "column":  33,
+                                            "address":  "AG11",
+                                            "formula":  "=AD11*AA11",
+                                            "text":  "    - "
+                                        },
+                                        {
+                                            "row":  12,
+                                            "column":  33,
+                                            "address":  "AG12",
+                                            "formula":  "=AD12*AA12",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  13,
+                                            "column":  33,
+                                            "address":  "AG13",
+                                            "formula":  "=AD13*AA13",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  14,
+                                            "column":  33,
+                                            "address":  "AG14",
+                                            "formula":  "=AD14*AA14",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  15,
+                                            "column":  33,
+                                            "address":  "AG15",
+                                            "formula":  "=AD15*AA15",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  33,
+                                            "address":  "AG16",
+                                            "formula":  "=AD16*AA16",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  33,
+                                            "address":  "AG17",
+                                            "formula":  "=AD17*AA17",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  2,
+                                            "address":  "B18",
+                                            "formula":  "=B6",
+                                            "text":  "梅山公園"
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  33,
+                                            "address":  "AG18",
+                                            "formula":  "=SUM(AG6:AI17)",
+                                            "text":  "          - "
+                                        }
+                                    ],
+                       "csv_file_name":  "004_05.csv"
+                   },
+                   {
+                       "index":  5,
+                       "name":  "05 (2)",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  48,
+                       "used_columns":  35,
+                       "non_empty_rows":  35,
+                       "formula_count":  16,
+                       "formulas":  [
+                                        {
+                                            "row":  6,
+                                            "column":  33,
+                                            "address":  "AG6",
+                                            "formula":  "=AD6*AA6",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  7,
+                                            "column":  33,
+                                            "address":  "AG7",
+                                            "formula":  "=AD7*AA7",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  8,
+                                            "column":  33,
+                                            "address":  "AG8",
+                                            "formula":  "=AD8*AA8",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  9,
+                                            "column":  33,
+                                            "address":  "AG9",
+                                            "formula":  "=AD9*AA9",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  6,
+                                            "address":  "F10",
+                                            "formula":  "=ROUND(B10*0.05,0)",
+                                            "text":  " 3,714 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  10,
+                                            "address":  "J10",
+                                            "formula":  "=B10+F10",
+                                            "text":  " 78,000 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  33,
+                                            "address":  "AG10",
+                                            "formula":  "=AD10*AA10",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  11,
+                                            "column":  33,
+                                            "address":  "AG11",
+                                            "formula":  "=AD11*AA11",
+                                            "text":  "    - "
+                                        },
+                                        {
+                                            "row":  12,
+                                            "column":  33,
+                                            "address":  "AG12",
+                                            "formula":  "=AD12*AA12",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  13,
+                                            "column":  33,
+                                            "address":  "AG13",
+                                            "formula":  "=AD13*AA13",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  14,
+                                            "column":  33,
+                                            "address":  "AG14",
+                                            "formula":  "=AD14*AA14",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  15,
+                                            "column":  33,
+                                            "address":  "AG15",
+                                            "formula":  "=AD15*AA15",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  33,
+                                            "address":  "AG16",
+                                            "formula":  "=AD16*AA16",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  33,
+                                            "address":  "AG17",
+                                            "formula":  "=AD17*AA17",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  2,
+                                            "address":  "B18",
+                                            "formula":  "=B6",
+                                            "text":  "奇美電子股份有限公司"
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  33,
+                                            "address":  "AG18",
+                                            "formula":  "=SUM(AG6:AI17)",
+                                            "text":  "          - "
+                                        }
+                                    ],
+                       "csv_file_name":  "005_05 (2).csv"
+                   },
+                   {
+                       "index":  6,
+                       "name":  "0505",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  48,
+                       "used_columns":  35,
+                       "non_empty_rows":  29,
+                       "formula_count":  15,
+                       "formulas":  [
+                                        {
+                                            "row":  6,
+                                            "column":  33,
+                                            "address":  "AG6",
+                                            "formula":  "=AD6*AA6",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  7,
+                                            "column":  33,
+                                            "address":  "AG7",
+                                            "formula":  "=AD7*AA7",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  8,
+                                            "column":  33,
+                                            "address":  "AG8",
+                                            "formula":  "=AD8*AA8",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  9,
+                                            "column":  33,
+                                            "address":  "AG9",
+                                            "formula":  "=AD9*AA9",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  6,
+                                            "address":  "F10",
+                                            "formula":  "=ROUND(B10*0.05,0)",
+                                            "text":  " 58,400 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  10,
+                                            "address":  "J10",
+                                            "formula":  "=B10+F10",
+                                            "text":  " 1,226,400 "
+                                        },
+                                        {
+                                            "row":  10,
+                                            "column":  33,
+                                            "address":  "AG10",
+                                            "formula":  "=AD10*AA10",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  11,
+                                            "column":  33,
+                                            "address":  "AG11",
+                                            "formula":  "=AD11*AA11",
+                                            "text":  "    - "
+                                        },
+                                        {
+                                            "row":  12,
+                                            "column":  33,
+                                            "address":  "AG12",
+                                            "formula":  "=AD12*AA12",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  13,
+                                            "column":  33,
+                                            "address":  "AG13",
+                                            "formula":  "=AD13*AA13",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  14,
+                                            "column":  33,
+                                            "address":  "AG14",
+                                            "formula":  "=AD14*AA14",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  15,
+                                            "column":  33,
+                                            "address":  "AG15",
+                                            "formula":  "=AD15*AA15",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  16,
+                                            "column":  33,
+                                            "address":  "AG16",
+                                            "formula":  "=AD16*AA16",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  17,
+                                            "column":  33,
+                                            "address":  "AG17",
+                                            "formula":  "=AD17*AA17",
+                                            "text":  "          - "
+                                        },
+                                        {
+                                            "row":  18,
+                                            "column":  33,
+                                            "address":  "AG18",
+                                            "formula":  "=SUM(AG6:AI17)",
+                                            "text":  "          - "
+                                        }
+                                    ],
+                       "csv_file_name":  "006_0505.csv"
+                   }
+               ]
+}

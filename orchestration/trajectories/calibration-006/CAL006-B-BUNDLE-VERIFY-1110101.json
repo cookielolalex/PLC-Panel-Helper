@@ -1,0 +1,16 @@
+{
+  "task_id": "CAL006-B-BUNDLE-VERIFY-1110101",
+  "command": [
+    "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "scripts/verify_generator_bundle.py",
+    "--bundle-dir",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\cases\\development\\1110101",
+    "--output",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\evals\\cases\\development\\1110101\\verification_results.json"
+  ],
+  "started_at": "2026-06-23T02:26:50Z",
+  "duration_seconds": 0.24,
+  "returncode": 0,
+  "stdout_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-B-BUNDLE-VERIFY-1110101.stdout.log",
+  "stderr_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-B-BUNDLE-VERIFY-1110101.stderr.log"
+}

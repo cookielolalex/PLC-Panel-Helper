@@ -1,0 +1,64 @@
+{
+  "approval_manifest_id": "approval-eval-bundle-1110101",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "status": "PASS",
+  "approval_mode": "AUTONOMOUS_EVALUATION_ONLY",
+  "decisions": [
+    {
+      "decision_id": "SGD-419C4426214114",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "7B922D8C54B6CFE1B8B807DDB67F4688EF721F3D1E5D84A97A8791515D193075",
+      "worksheet_fingerprint": "28E271B6FDCC69803E8A0570D1BAFA567707B17D76D24EC9C36FA59AA698DC1E",
+      "notes": "Autonomous evaluation-only quorum using deterministic legacy .xls parser; not production approval."
+    },
+    {
+      "decision_id": "SGD-96F5B42AF2AC0D",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "7B922D8C54B6CFE1B8B807DDB67F4688EF721F3D1E5D84A97A8791515D193075",
+      "worksheet_fingerprint": "A3D531EC187F9EC71A69CF9EDD21BF1A102173997230A800123EE36AB0ABCD4F",
+      "notes": "Autonomous evaluation-only quorum using deterministic legacy .xls parser; not production approval."
+    },
+    {
+      "decision_id": "SGD-4D05D836BBA6D4",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "7B922D8C54B6CFE1B8B807DDB67F4688EF721F3D1E5D84A97A8791515D193075",
+      "worksheet_fingerprint": "B8A23A73CCB24A5DAFDC37CBD2323897CCBB08DFC775CA0640A44CA76BF77467",
+      "notes": "Autonomous evaluation-only quorum using deterministic legacy .xls parser; not production approval."
+    },
+    {
+      "decision_id": "SGD-909B67C6D196A6",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "A6F8B2BD6B679920144AA61BD560FEE3F2C84763B3E57BDE2A801371879100F2",
+      "worksheet_fingerprint": "C2FF4FDFB449B452E127ECDD8E0416C36EDDB6E7168C0BAD2EF9CD2C8285291C",
+      "notes": "Autonomous evaluation-only quorum using deterministic legacy .xls parser; not production approval."
+    },
+    {
+      "decision_id": "SGD-11740DEB2744E6",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "A6F8B2BD6B679920144AA61BD560FEE3F2C84763B3E57BDE2A801371879100F2",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "notes": "Autonomous evaluation-only quorum using deterministic legacy .xls parser; not production approval."
+    },
+    {
+      "decision_id": "SGD-43F93E34D49CE2",
+      "human_decision": "NOT_APPLICABLE_EVAL",
+      "agent_decision": "AGENT_QUORUM_APPROVED_EVAL",
+      "reviewer": "source_adjudicator",
+      "file_sha256": "A6F8B2BD6B679920144AA61BD560FEE3F2C84763B3E57BDE2A801371879100F2",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "notes": "Autonomous evaluation-only quorum using deterministic legacy .xls parser; not production approval."
+    }
+  ],
+  "approved_count": 6,
+  "approval_manifest_hash": "2CA2BD4EC6EC661F6AC6330D2DBFF6C8819E1BA4EE920D7CB26C0E6BE492DA04"
+}

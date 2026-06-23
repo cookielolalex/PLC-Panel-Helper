@@ -1,0 +1,776 @@
+{
+  "project_id": "1110101",
+  "policy_version": "source_guard_policy_v2_autonomous_eval",
+  "reviewable_items": [
+    {
+      "decision_id": "SGD-419C4426214114",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10-XLS-SHEET-001",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達機電鳥嘴潭送水管E-2訂單成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "7B922D8C54B6CFE1B8B807DDB67F4688EF721F3D1E5D84A97A8791515D193075",
+      "worksheet_name": "Sheet2",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "28E271B6FDCC69803E8A0570D1BAFA567707B17D76D24EC9C36FA59AA698DC1E",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "7B922D8C54B6CFE1B8B807DDB67F4688EF721F3D1E5D84A97A8791515D193075"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "28E271B6FDCC69803E8A0570D1BAFA567707B17D76D24EC9C36FA59AA698DC1E"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-96F5B42AF2AC0D",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10-XLS-SHEET-002",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達機電鳥嘴潭送水管E-2訂單成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "7B922D8C54B6CFE1B8B807DDB67F4688EF721F3D1E5D84A97A8791515D193075",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "A3D531EC187F9EC71A69CF9EDD21BF1A102173997230A800123EE36AB0ABCD4F",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "7B922D8C54B6CFE1B8B807DDB67F4688EF721F3D1E5D84A97A8791515D193075"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "A3D531EC187F9EC71A69CF9EDD21BF1A102173997230A800123EE36AB0ABCD4F"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-4D05D836BBA6D4",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10-XLS-SHEET-003",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達機電鳥嘴潭送水管E-2訂單成本分析.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "7B922D8C54B6CFE1B8B807DDB67F4688EF721F3D1E5D84A97A8791515D193075",
+      "worksheet_name": "Sheet1",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "B8A23A73CCB24A5DAFDC37CBD2323897CCBB08DFC775CA0640A44CA76BF77467",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "7B922D8C54B6CFE1B8B807DDB67F4688EF721F3D1E5D84A97A8791515D193075"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "B8A23A73CCB24A5DAFDC37CBD2323897CCBB08DFC775CA0640A44CA76BF77467"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-909B67C6D196A6",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D-XLS-SHEET-001",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\鳥嘴潭人工湖下游送水管E-2合約.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "A6F8B2BD6B679920144AA61BD560FEE3F2C84763B3E57BDE2A801371879100F2",
+      "worksheet_name": "Sheet1",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "C2FF4FDFB449B452E127ECDD8E0416C36EDDB6E7168C0BAD2EF9CD2C8285291C",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A6F8B2BD6B679920144AA61BD560FEE3F2C84763B3E57BDE2A801371879100F2"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "C2FF4FDFB449B452E127ECDD8E0416C36EDDB6E7168C0BAD2EF9CD2C8285291C"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-11740DEB2744E6",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D-XLS-SHEET-002",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\鳥嘴潭人工湖下游送水管E-2合約.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "A6F8B2BD6B679920144AA61BD560FEE3F2C84763B3E57BDE2A801371879100F2",
+      "worksheet_name": "Sheet2",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A6F8B2BD6B679920144AA61BD560FEE3F2C84763B3E57BDE2A801371879100F2"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91"
+        }
+      ],
+      "reviewable": true
+    },
+    {
+      "decision_id": "SGD-43F93E34D49CE2",
+      "file_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D-XLS-SHEET-003",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\鳥嘴潭人工湖下游送水管E-2合約.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "A6F8B2BD6B679920144AA61BD560FEE3F2C84763B3E57BDE2A801371879100F2",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933",
+      "proposed_decision": "CANDIDATE",
+      "prefilter_state": "SUBMIT_TO_REVIEW",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "A6F8B2BD6B679920144AA61BD560FEE3F2C84763B3E57BDE2A801371879100F2"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933"
+        }
+      ],
+      "reviewable": true
+    }
+  ],
+  "excluded_items": [
+    {
+      "decision_id": "SGD-8C92221EFCE20F",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5EA283A2BFCE",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5EA283A2BFCE-XLS-SHEET-001",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達鳥嘴潭下游送水管E-2生產能力分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B7CE46826C08C12A84F8AE1308859F177A985D424E9558C12EF5B0FB1B0E6C27",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "5AF30D861B03C57EE8D806531980C59A35AB818656F2E210C62FA0703157FA6A",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B7CE46826C08C12A84F8AE1308859F177A985D424E9558C12EF5B0FB1B0E6C27"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "5AF30D861B03C57EE8D806531980C59A35AB818656F2E210C62FA0703157FA6A"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-28E166CB6C6B85",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5EA283A2BFCE",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5EA283A2BFCE-XLS-SHEET-002",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達鳥嘴潭下游送水管E-2生產能力分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B7CE46826C08C12A84F8AE1308859F177A985D424E9558C12EF5B0FB1B0E6C27",
+      "worksheet_name": "會議審查",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "382FAB5C97CFD0A81F52B8375726CF32CECB0C495FBA1CA8E1EA1274F4AE248B",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B7CE46826C08C12A84F8AE1308859F177A985D424E9558C12EF5B0FB1B0E6C27"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "382FAB5C97CFD0A81F52B8375726CF32CECB0C495FBA1CA8E1EA1274F4AE248B"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-1D8B19ED66CC1A",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5EA283A2BFCE",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-5EA283A2BFCE-XLS-SHEET-003",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達鳥嘴潭下游送水管E-2生產能力分析表.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "B7CE46826C08C12A84F8AE1308859F177A985D424E9558C12EF5B0FB1B0E6C27",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "B7CE46826C08C12A84F8AE1308859F177A985D424E9558C12EF5B0FB1B0E6C27"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-8727198F7E1C7C",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9AA8E8A5BF2D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9AA8E8A5BF2D-XLS-SHEET-001",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達鳥嘴潭下游送水管E-2生產合約審查表.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "CF908B7F395A04255133367E85553C12E8267EEC55B9FA01CA5778142EABA98E",
+      "worksheet_name": "分析表",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "5AF30D861B03C57EE8D806531980C59A35AB818656F2E210C62FA0703157FA6A",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "CF908B7F395A04255133367E85553C12E8267EEC55B9FA01CA5778142EABA98E"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "5AF30D861B03C57EE8D806531980C59A35AB818656F2E210C62FA0703157FA6A"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-248CBB8104BE7D",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9AA8E8A5BF2D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9AA8E8A5BF2D-XLS-SHEET-002",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達鳥嘴潭下游送水管E-2生產合約審查表.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "CF908B7F395A04255133367E85553C12E8267EEC55B9FA01CA5778142EABA98E",
+      "worksheet_name": "會議審查",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "D6A429FE56EA3653C479BF74B83573C0C363FB4744F30264DEE842EFE0829D70",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "CF908B7F395A04255133367E85553C12E8267EEC55B9FA01CA5778142EABA98E"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "D6A429FE56EA3653C479BF74B83573C0C363FB4744F30264DEE842EFE0829D70"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-D4BB340680DA1A",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9AA8E8A5BF2D",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-9AA8E8A5BF2D-XLS-SHEET-003",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\飛達鳥嘴潭下游送水管E-2生產合約審查表.xls",
+      "detected_document_role": "allowed_contract_workbook",
+      "file_sha256": "CF908B7F395A04255133367E85553C12E8267EEC55B9FA01CA5778142EABA98E",
+      "worksheet_name": "Sheet3",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "CF908B7F395A04255133367E85553C12E8267EEC55B9FA01CA5778142EABA98E"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "2431A7B5E34F6CDDF636CB6420EDAF96BB8F1E51757547FA6AD1B769DF2C82B2"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-7F60D05B70EA8B",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E-XLS-SHEET-001",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\工作記錄單飛達鳥嘴潭下游送水管E-2xls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5",
+      "worksheet_name": "0413",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "44B250AE62DD3B0BC927C3C0EBF31D46567F1342287E2EFDFBA771BAAA7F9D65",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "44B250AE62DD3B0BC927C3C0EBF31D46567F1342287E2EFDFBA771BAAA7F9D65"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-A50E53174907B1",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E-XLS-SHEET-002",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\工作記錄單飛達鳥嘴潭下游送水管E-2xls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5",
+      "worksheet_name": "0415",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "80F99AC9C6518B1C241192861715CA6A227CACBF8E8B08CB512EBB3C660380EC",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "80F99AC9C6518B1C241192861715CA6A227CACBF8E8B08CB512EBB3C660380EC"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-53E40E12B18BB4",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E-XLS-SHEET-003",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\工作記錄單飛達鳥嘴潭下游送水管E-2xls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5",
+      "worksheet_name": "空白",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "B5AD89DF08DECDCE5F994AD3DA7C3BBEA1E45E17C3F9FE8E167667935B3A6262",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "B5AD89DF08DECDCE5F994AD3DA7C3BBEA1E45E17C3F9FE8E167667935B3A6262"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-64C00B85A1FB7E",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E-XLS-SHEET-004",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\工作記錄單飛達鳥嘴潭下游送水管E-2xls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5",
+      "worksheet_name": "05",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "C486E895C071C0C972EC1931CBA0899016DCFC94173F74D32DAB9D6E9DFCD142",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "C486E895C071C0C972EC1931CBA0899016DCFC94173F74D32DAB9D6E9DFCD142"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-D5EAE353954966",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E-XLS-SHEET-005",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\工作記錄單飛達鳥嘴潭下游送水管E-2xls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5",
+      "worksheet_name": "05 (2)",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "AB9BB32E176B865C84DBA725CE82266BEFF1495F0C2BAF3232E972E6C74BD8B2",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "AB9BB32E176B865C84DBA725CE82266BEFF1495F0C2BAF3232E972E6C74BD8B2"
+        }
+      ],
+      "reviewable": false
+    },
+    {
+      "decision_id": "SGD-DB74A11757A0C5",
+      "file_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E",
+      "sheet_id": "SRC-ALL-PROJECTS-FILE-C7DCFF2BA19E-XLS-SHEET-006",
+      "project_id": "1110101",
+      "relative_path": "111年度工作\\111年度工作\\111年度訂單(已完成)\\1110101飛達鳥嘴潭下游送水管E-2\\工作記錄單飛達鳥嘴潭下游送水管E-2xls.xls",
+      "detected_document_role": "spreadsheet_other",
+      "file_sha256": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5",
+      "worksheet_name": "0505",
+      "worksheet_visibility": "visible",
+      "worksheet_fingerprint": "D121826A49AA2BC347E3D9E20FDAA0FCC447E6B24FFB1E44D614B62618B1C9E9",
+      "proposed_decision": "QUARANTINED",
+      "prefilter_state": "QUARANTINED",
+      "reason_codes": [
+        "CURRENT_PROJECT_ID_MATCH_REVIEWABLE",
+        "LEGACY_XLS_PARSED_BY_EXCEL_COM_READ_ONLY",
+        "MACROS_DISABLED",
+        "NAMED_RANGE_PRESENT"
+      ],
+      "checks": [
+        {
+          "check": "source_root",
+          "status": "PASS",
+          "evidence": "SRC-ALL-PROJECTS"
+        },
+        {
+          "check": "file_sha256",
+          "status": "PASS",
+          "evidence": "E45F0A02BDFDDEB92953F356A433FF6D4AD4C84BA722778ADCFE0845D50F1CF5"
+        },
+        {
+          "check": "legacy_xls_parser_stability",
+          "status": "PASS",
+          "evidence": "excel_com_legacy_xls_v1"
+        },
+        {
+          "check": "worksheet_fingerprint",
+          "status": "PASS",
+          "evidence": "D121826A49AA2BC347E3D9E20FDAA0FCC447E6B24FFB1E44D614B62618B1C9E9"
+        }
+      ],
+      "reviewable": false
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+﻿{
+    "workbook_file_name":  "飛達機電鳥嘴潭送水管E-2訂單成本分析.xls",
+    "excel_version":  "16.0",
+    "opened_read_only":  true,
+    "macros_disabled":  true,
+    "links":  [
+
+              ],
+    "names":  [
+
+              ],
+    "sheets":  [
+                   {
+                       "index":  1,
+                       "name":  "Sheet2",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  31,
+                       "used_columns":  8,
+                       "non_empty_rows":  22,
+                       "formula_count":  1,
+                       "formulas":  [
+                                        {
+                                            "row":  14,
+                                            "column":  4,
+                                            "address":  "D14",
+                                            "formula":  "=E7+E9+E11+E10",
+                                            "text":  "                         849,100 "
+                                        }
+                                    ],
+                       "csv_file_name":  "001_Sheet2.csv"
+                   },
+                   {
+                       "index":  2,
+                       "name":  "Sheet3",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  31,
+                       "used_columns":  8,
+                       "non_empty_rows":  28,
+                       "formula_count":  7,
+                       "formulas":  [
+                                        {
+                                            "row":  24,
+                                            "column":  3,
+                                            "address":  "C24",
+                                            "formula":  "=SUM(C5:C23)",
+                                            "text":  "529,000"
+                                        },
+                                        {
+                                            "row":  24,
+                                            "column":  4,
+                                            "address":  "D24",
+                                            "formula":  "=SUM(D5:D23)",
+                                            "text":  "192,000"
+                                        },
+                                        {
+                                            "row":  24,
+                                            "column":  5,
+                                            "address":  "E24",
+                                            "formula":  "=SUM(E5:E23)",
+                                            "text":  "65,000"
+                                        },
+                                        {
+                                            "row":  24,
+                                            "column":  6,
+                                            "address":  "F24",
+                                            "formula":  "=SUM(F5:F23)",
+                                            "text":  "0"
+                                        },
+                                        {
+                                            "row":  24,
+                                            "column":  7,
+                                            "address":  "G24",
+                                            "formula":  "=SUM(G5:G23)",
+                                            "text":  "9,100"
+                                        },
+                                        {
+                                            "row":  24,
+                                            "column":  8,
+                                            "address":  "H24",
+                                            "formula":  "=SUM(H5:H23)",
+                                            "text":  "0"
+                                        },
+                                        {
+                                            "row":  25,
+                                            "column":  7,
+                                            "address":  "G25",
+                                            "formula":  "=C24+D24+E24+F24+G24+H24",
+                                            "text":  "795,100"
+                                        }
+                                    ],
+                       "csv_file_name":  "002_Sheet3.csv"
+                   },
+                   {
+                       "index":  3,
+                       "name":  "Sheet1",
+                       "visible_code":  -1,
+                       "visible":  true,
+                       "used_rows":  31,
+                       "used_columns":  8,
+                       "non_empty_rows":  0,
+                       "formula_count":  0,
+                       "formulas":  [
+
+                                    ],
+                       "csv_file_name":  "003_Sheet1.csv"
+                   }
+               ]
+}

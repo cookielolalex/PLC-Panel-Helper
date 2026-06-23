@@ -30,7 +30,7 @@ TRAJ_DIR = ROOT / "orchestration" / "trajectories" / CAL_ID
 SEED = "CAL006-20260623"
 ANCHOR_RUN = "RUN-1110104-AUTO-EVAL-002"
 ORIGINAL_ALLOWED = ["1110104", "1110204", "1110205", "1110405", "1110410"]
-BACKFILL_PROJECT = "1110102"
+BACKFILL_PROJECT = "1110101"
 OUTPUT_TYPES = ["production", "sheetmetal", "punch"]
 DIMENSIONS = [
     "source_selection_provenance_conflict",
@@ -464,7 +464,7 @@ def phase_b() -> None:
             "created_at": now(),
             "existing_allowed_eval_projects": allowed,
             "selected_project_id": BACKFILL_PROJECT,
-            "selection_rationale": "Reference-complete, no deterministic deny/quarantine rows, unique family relative to current set, and only blocked by legacy .xls parser support.",
+            "selection_rationale": "Reference-complete candidate selected after 1110102 failed bundle verification for forbidden sentinel content; legacy .xls content is parsed through the deterministic read-only parser and source quorum.",
             "candidates": candidates,
         },
     )
@@ -478,7 +478,10 @@ def phase_b() -> None:
         task_brief(
             task_id,
             f"Backfill source review {role}",
-            [str((backfill / "project_manifests").relative_to(ROOT)), str((backfill / "source_decisions_1110102_legacy_xls.csv").relative_to(ROOT))],
+            [
+                str((backfill / "project_manifests").relative_to(ROOT)),
+                str((backfill / f"source_decisions_{BACKFILL_PROJECT}_legacy_xls.csv").relative_to(ROOT)),
+            ],
             ["completed references", "reviewer results from other roles", "generator outputs"],
             output,
         )
@@ -554,7 +557,7 @@ def phase_b() -> None:
             "status": "PASS",
             "audits": [
                 str((ROOT / "reports" / "source_review_batches" / "batch-001" / "eval_source_bundle_audit.json").relative_to(ROOT)),
-                str((backfill / "eval_source_bundle_audit_1110102.json").relative_to(ROOT)),
+                str((backfill / f"eval_source_bundle_audit_{BACKFILL_PROJECT}.json").relative_to(ROOT)),
             ],
         },
     )
@@ -568,7 +571,10 @@ def build_backfill_bundle() -> None:
         shutil.rmtree(case_dir)
     (case_dir / "sanitized_inputs").mkdir(parents=True, exist_ok=True)
     (case_dir / "previews").mkdir(parents=True, exist_ok=True)
-    decisions = {row["decision_id"]: row for row in csv_rows(backfill / "source_decisions_1110102_legacy_xls.csv")}
+    full_decisions_path = backfill / f"source_decisions_{project_id}_legacy_xls.full.json"
+    if not full_decisions_path.exists():
+        raise SystemExit(f"missing parser full decision record: {full_decisions_path}")
+    decisions = {row["decision_id"]: row for row in read_json(full_decisions_path)}
     adjudication = read_json(backfill / "project_manifests" / project_id / "adjudication.json")
     approved = [item for item in adjudication["items"] if item["final_state"] == "AGENT_QUORUM_APPROVED_EVAL"]
     artifacts = []
@@ -667,7 +673,7 @@ def build_backfill_bundle() -> None:
             "--output",
             str(case_dir / "verification_results.json"),
         ],
-        "CAL006-B-BUNDLE-VERIFY-1110102",
+        f"CAL006-B-BUNDLE-VERIFY-{project_id}",
     )
     write_json(
         case_dir / "bundle_hashes.json",
@@ -685,7 +691,7 @@ def build_backfill_bundle() -> None:
         if path.is_file() and path.suffix.lower() in {".xls", ".xlsx", ".xlsm", ".xlsb", ".pdf"}:
             audit_errors.append(f"forbidden extension in bundle: {path}")
     audit = {
-        "audit_id": "eval_source_bundle_audit_1110102",
+        "audit_id": f"eval_source_bundle_audit_{project_id}",
         "policy_version": "source_guard_policy_v2_autonomous_eval",
         "status": "EVAL_SOURCE_BUNDLE_AUDIT_PASS" if not audit_errors else "EVAL_SOURCE_BUNDLE_AUDIT_FAIL",
         "project_id": project_id,
@@ -694,7 +700,7 @@ def build_backfill_bundle() -> None:
         "errors": audit_errors,
         "created_at": now(),
     }
-    write_json(backfill / "eval_source_bundle_audit_1110102.json", audit)
+    write_json(backfill / f"eval_source_bundle_audit_{project_id}.json", audit)
     if audit_errors:
         raise SystemExit("backfill bundle audit failed")
 
@@ -710,7 +716,7 @@ def phase_c() -> None:
     ensure_dirs()
     projects = [BACKFILL_PROJECT, "1110104", "1110204", "1110205", "1110405", "1110410"]
     rationales = {
-        BACKFILL_PROJECT: "Legacy .xls backfill; unique family and multi-workbook complexity.",
+        BACKFILL_PROJECT: "Legacy .xls backfill selected after 1110102 failed bundle verification; multi-workbook visible-sheet coverage.",
         "1110104": "Anchor project from one-project calibration and ordinary lower-complexity case.",
         "1110204": "Stale/source-classification-risk case with one denied row excluded.",
         "1110205": "Higher artifact-count case with low source coverage risk.",

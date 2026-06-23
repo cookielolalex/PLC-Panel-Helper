@@ -1,0 +1,19 @@
+{
+  "task_id": "CAL006-B-SOURCE_ROLE_CLASSIFIER",
+  "command": [
+    "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "scripts/autonomous_eval_source_approval.py",
+    "review",
+    "--role",
+    "source_role_classifier",
+    "--prefilter-root",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\manifests\\calibration-006\\backfill\\project_manifests",
+    "--output",
+    "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\manifests\\calibration-006\\backfill\\reviews\\source_role_classifier_review.json"
+  ],
+  "started_at": "2026-06-23T02:26:49Z",
+  "duration_seconds": 0.21,
+  "returncode": 0,
+  "stdout_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-B-SOURCE_ROLE_CLASSIFIER.stdout.log",
+  "stderr_path": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper\\orchestration\\results\\calibration-006\\CAL006-B-SOURCE_ROLE_CLASSIFIER.stderr.log"
+}

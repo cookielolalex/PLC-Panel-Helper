@@ -362,8 +362,9 @@ def build_decisions(project_id: str, decisions_path: Path, file_index: Path, out
                 }
             )
 
-    decisions_csv = output_root / "source_decisions_1110102_legacy_xls.csv"
+    decisions_csv = output_root / f"source_decisions_{project_id}_legacy_xls.csv"
     csv_write(decisions_csv, [flatten_decision(row) for row in decisions], DECISION_FIELDS)
+    write_json(output_root / f"source_decisions_{project_id}_legacy_xls.full.json", decisions)
 
     project_root = output_root / "project_manifests" / project_id
     project_root.mkdir(parents=True, exist_ok=True)
@@ -437,7 +438,7 @@ def build_decisions(project_id: str, decisions_path: Path, file_index: Path, out
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build deterministic legacy .xls source decisions for calibration backfill.")
-    parser.add_argument("--project-id", default="1110102")
+    parser.add_argument("--project-id", default="1110101")
     parser.add_argument("--decisions", type=Path, default=Path("manifests/source_guard/source_decisions.csv"))
     parser.add_argument("--file-index", type=Path, default=Path("manifests/all_projects_file_role_index.csv"))
     parser.add_argument("--output-root", type=Path, default=Path("manifests/calibration-006/backfill"))
