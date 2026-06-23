@@ -6,6 +6,21 @@ from pathlib import Path
 from harness_lib import copy_allowed_file, detect_forbidden_text, read_json, write_json
 
 
+REFERENCE_LIKE_ROLES = {
+    "forbidden_electrical_drawing",
+    "forbidden_production_control_file",
+    "completed_production_drawing_reference",
+    "completed_sheetmetal_drawing_reference",
+    "completed_punch_drawing_reference",
+}
+
+
+def excluded_identifier(file_row: dict) -> str:
+    if file_row.get("primary_role") in REFERENCE_LIKE_ROLES or file_row.get("generator_eligibility") == "FORBIDDEN":
+        return "REDACTED_FORBIDDEN_REFERENCE_OR_SOURCE"
+    return file_row.get("file_id")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build a positive generator bundle from approved manifest rows.")
     parser.add_argument("--source-manifest", type=Path, required=True)
@@ -29,7 +44,7 @@ def main() -> None:
             if original_path and Path(original_path).exists():
                 copied.append(copy_allowed_file(Path(original_path), args.bundle_dir / "evidence"))
         else:
-            excluded.append({"id": file_row.get("file_id"), "reason": "not_positive_allowed_or_forbidden_label"})
+            excluded.append({"id": excluded_identifier(file_row), "reason": "not_positive_allowed_or_forbidden_label"})
 
     allowed_sheets = [
         row["sheet_id"]
@@ -58,4 +73,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

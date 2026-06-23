@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -374,6 +375,134 @@ def test_bundle_verifier_rejects_leaks_and_traversal() -> None:
     assert_true(result.returncode != 0, "bundle verifier must reject source path and target-output leaks")
 
 
+def create_reference_v3_pdf(path: Path, page_texts: list[str]) -> None:
+    from reportlab.lib.pagesizes import letter
+    from reportlab.pdfgen import canvas
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    c = canvas.Canvas(str(path), pagesize=letter)
+    width, height = letter
+    for index, text in enumerate(page_texts, start=1):
+        c.setFont("Helvetica", 14)
+        c.drawString(72, height - 72, text)
+        c.setFont("Helvetica", 8)
+        c.drawString(width - 240, 48, f"TITLE BLOCK {index}")
+        c.showPage()
+    c.save()
+
+
+def reference_v3_manifest(path: Path, project_id: str, files: list[dict[str, str]]) -> None:
+    rows = []
+    for item in files:
+        pdf = Path(item["path"])
+        rows.append({
+            "project_id": project_id,
+            "neutral_reference_file_id": item["file_id"],
+            "path": str(pdf),
+            "sha256": __import__("hashlib").sha256(pdf.read_bytes()).hexdigest().upper(),
+            "role_hint": item.get("role_hint", "supporting_document_non_generator"),
+            "metadata_text": item.get("metadata_text", pdf.name),
+        })
+    write_json(path, {"project_id": project_id, "files": rows})
+
+
+def test_reference_detection_v3_boundary_and_page_level_sets() -> None:
+    project_id = "1999001"
+    work = ROOT / "tmp" / "reference_detection_v3_tests" / "boundary"
+    if work.exists():
+        shutil.rmtree(work)
+    fixture = read_json(ROOT / "evals" / "fixtures" / "reference_detection_v3" / "fixture_manifest.json")
+    cases = {case["case_id"]: case for case in fixture["cases"]}
+
+    production = work / "forbidden_production_control" / "synthetic_production.pdf"
+    electrical = work / "electrical" / "synthetic_electrical.pdf"
+    combined = work / "combined" / "synthetic_combined.pdf"
+    create_reference_v3_pdf(production, cases["target_under_production_control"]["pages"])
+    create_reference_v3_pdf(electrical, cases["ordinary_electrical_under_electrical"]["pages"])
+    create_reference_v3_pdf(combined, cases["combined_all_three"]["pages"])
+
+    candidate_manifest = work / "candidate_manifest.json"
+    reference_v3_manifest(candidate_manifest, project_id, [
+        {"file_id": "REF-PROD-FORBIDDEN-FOLDER", "path": str(production), "role_hint": "forbidden_production_control_file", "metadata_text": "production-control-folder"},
+        {"file_id": "REF-ELECTRICAL", "path": str(electrical), "role_hint": "forbidden_electrical_drawing", "metadata_text": "electrical-folder"},
+        {"file_id": "REF-COMBINED-CJK-合併", "path": str(combined), "role_hint": "supporting_document_non_generator", "metadata_text": "合併 package"},
+    ])
+    output_dir = work / "out"
+    run([PY, "scripts/detect_reference_presence_v3.py", "--project-id", project_id, "--candidate-manifest", str(candidate_manifest), "--output-dir", str(output_dir), "--task-id", "TEST-REFDET-V3-BOUNDARY"])
+    run([PY, "scripts/verify_reference_detection_output.py", "--output-dir", str(output_dir)])
+
+    effective = read_json(output_dir / "effective_reference_set.json")
+    pages = read_json(output_dir / "reference_page_classifications.json")["page_classifications"]
+    audit = read_json(output_dir / "reference_detection_audit.json")
+    assert_true(effective["status"] == "VERIFIED_ALL_THREE_COMBINED_PACKAGE", "combined package with all three page types must verify")
+    assert_true(audit["temporary_workspace_removed"], "temporary reference renders must be deleted")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-PROD-FORBIDDEN-FOLDER" and row["page_classification"] == "PRODUCTION_DRAWING" for row in pages), "target under production-control folder must qualify as reviewer evidence by content")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-ELECTRICAL" and row["page_classification"] == "ELECTRICAL_DRAWING" for row in pages), "ordinary electrical drawing must stay non-target")
+
+    source_manifest = work / "source_manifest.json"
+    sheet_adjudication = work / "sheet_adjudication.json"
+    generator_manifest = work / "generator_input_manifest.json"
+    write_json(source_manifest, {
+        "manifest_id": "ref-v3-boundary-source",
+        "files": [
+            {
+                "file_id": "REF-PROD-FORBIDDEN-FOLDER",
+                "relative_path": "forbidden_production_control/synthetic_production.pdf",
+                "file_name": "synthetic_production.pdf",
+                "primary_role": "forbidden_production_control_file",
+                "generator_eligibility": "FORBIDDEN",
+                "absolute_path": str(production),
+            }
+        ],
+        "worksheets": [],
+    })
+    write_json(sheet_adjudication, {"adjudication_id": "ref-v3-boundary-sheets", "worksheets": []})
+    run([PY, "scripts/build_generator_bundle.py", "--source-manifest", str(source_manifest), "--sheet-adjudication", str(sheet_adjudication), "--bundle-dir", str(work / "generator_bundle"), "--output-manifest", str(generator_manifest), "--run-id", "REF-V3-BOUNDARY", "--project-id", project_id])
+    generator = read_json(generator_manifest)
+    assert_true(generator["allowed_files"] == [], "reviewer-reference PDF must not enter generator bundle")
+    assert_true("REF-PROD-FORBIDDEN-FOLDER" not in json.dumps(generator, ensure_ascii=False), "generator manifest must not expose reference file IDs")
+
+
+def test_reference_detection_v3_duplicates_identity_and_missing_types() -> None:
+    project_id = "1999001"
+    work = ROOT / "tmp" / "reference_detection_v3_tests" / "duplicates"
+    if work.exists():
+        shutil.rmtree(work)
+    fixture = read_json(ROOT / "evals" / "fixtures" / "reference_detection_v3" / "fixture_manifest.json")
+    cases = {case["case_id"]: case for case in fixture["cases"]}
+
+    production = work / "production.pdf"
+    duplicate = work / "duplicate_named_punch.pdf"
+    sheetmetal = work / "sheetmetal.pdf"
+    wrong_project = work / "wrong_project_punch.pdf"
+    near_duplicate = work / "production_near_duplicate.pdf"
+    create_reference_v3_pdf(production, cases["missing_third_with_duplicate"]["pages"])
+    shutil.copy2(production, duplicate)
+    create_reference_v3_pdf(sheetmetal, cases["sheetmetal_only"]["pages"])
+    create_reference_v3_pdf(wrong_project, cases["mismatched_project_identity"]["pages"])
+    create_reference_v3_pdf(near_duplicate, ["PROJECT 1999001 PRODUCTION_DRAWING NEAR DUPLICATE"])
+
+    candidate_manifest = work / "candidate_manifest.json"
+    reference_v3_manifest(candidate_manifest, project_id, [
+        {"file_id": "REF-PROD", "path": str(production), "metadata_text": "production"},
+        {"file_id": "REF-DUP-PUNCH-NAME", "path": str(duplicate), "metadata_text": "punch filename but exact duplicate"},
+        {"file_id": "REF-SHEETMETAL", "path": str(sheetmetal), "metadata_text": "sheetmetal"},
+        {"file_id": "REF-WRONG-PROJECT", "path": str(wrong_project), "metadata_text": "punch wrong project"},
+        {"file_id": "REF-NEAR-DUP-PROD", "path": str(near_duplicate), "metadata_text": "production near duplicate"},
+    ])
+    output_dir = work / "out"
+    run([PY, "scripts/detect_reference_presence_v3.py", "--project-id", project_id, "--candidate-manifest", str(candidate_manifest), "--output-dir", str(output_dir), "--task-id", "TEST-REFDET-V3-DUP"])
+    run([PY, "scripts/verify_reference_detection_output.py", "--output-dir", str(output_dir)])
+    effective = read_json(output_dir / "effective_reference_set.json")
+    docs = read_json(output_dir / "reference_document_classifications.json")["document_classifications"]
+    pages = read_json(output_dir / "reference_page_classifications.json")["page_classifications"]
+    assert_true(effective["status"] == "PARTIAL_REFERENCE_SET", "duplicate or wrong-project punch must not create false all-three set")
+    assert_true(set(effective["target_types_present"]) == {"PRODUCTION_DRAWING", "SHEETMETAL_DRAWING"}, "only confirmed production and sheetmetal should count")
+    assert_true(any(doc["neutral_reference_file_id"] == "REF-DUP-PUNCH-NAME" and doc["duplicate_of"] == "REF-PROD" for doc in docs), "exact duplicate must be recorded")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-WRONG-PROJECT" and row["project_identity_status"] == "CONFLICT" for row in pages), "mismatched project identity must be marked conflict")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-NEAR-DUP-PROD" and row["page_classification"] == "PRODUCTION_DRAWING" for row in pages), "near duplicate should remain same target type, not a missing third output")
+
+
 def main() -> None:
     tests = [
         test_json_schemas_parse,
@@ -387,6 +516,8 @@ def main() -> None:
         test_source_guard_fail_closed_decisions,
         test_source_approval_and_bundle_fail_closed,
         test_bundle_verifier_rejects_leaks_and_traversal,
+        test_reference_detection_v3_boundary_and_page_level_sets,
+        test_reference_detection_v3_duplicates_identity_and_missing_types,
     ]
     failures = []
     for test in tests:
