@@ -4,7 +4,7 @@
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "anchor_commit": "ab955b854e31d37666445f5a62ee6556f85f1352",
   "creation_decision_id": "D-0026",
-  "last_updated_decision_id": "D-0029",
+  "last_updated_decision_id": "D-0030",
   "hash_algorithm": "SHA-256",
   "verification_algorithm": "sha256-file-v1;current-tracked-files;git-lineage-ancestor-check",
   "supersedes_historical_manifest": false,
@@ -90,6 +90,11 @@
       "path": "schemas/source_fact.schema.json",
       "sha256": "5568E0255C2EB62438630D2A3CD27576176C5C3E0F1E6682E94DCDC0B48DB9E3",
       "role": "source fact schema"
+    },
+    {
+      "path": "schemas/source_fact_model.schema.json",
+      "sha256": "317467D7A9433496752655B0E85A1B6070AF2B077BA62B7C7092D12AEDCE2897",
+      "role": "source fact model extraction schema"
     },
     {
       "path": "schemas/source_manifest.schema.json",
@@ -243,7 +248,7 @@
     },
     {
       "path": "scripts/sheetmetal_v1.py",
-      "sha256": "28BEBE451D9CEA356C46C51E17E4E334AF54185C909DCBCE098DABA23800E94C",
+      "sha256": "B0166568F41207168DE425DBF6D87CBF74BA33135E171A9EDD7E28074218E8AF",
       "role": "deterministic sheetmetal-v1 model implementation"
     },
     {
@@ -253,7 +258,7 @@
     },
     {
       "path": "scripts/run_tests.py",
-      "sha256": "AE9FE9F6F04D9D3442528843D5F2CDF3673CF0BDCDDDF03D9740A75DE709B636",
+      "sha256": "51770C50239409E3467A07204FD15A63B0BC56EF1E5EACC91B585F9F097CE6D3",
       "role": "regression test runner"
     },
     {

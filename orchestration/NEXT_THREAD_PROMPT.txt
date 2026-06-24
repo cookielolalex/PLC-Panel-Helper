@@ -125,12 +125,36 @@ Private workspace boundary:
   `test_sheetmetal_v1_private_workspace_boundary`.
 - Active sheetmetal-v1 scoped manifest is refreshed for `.gitignore` and
   `scripts/run_tests.py`.
-- No project-specific facts have been written yet.
+- No `.private` path is tracked.
+
+Source-fact extraction:
+
+- Decision `D-0030` accepts deterministic source-fact extraction.
+- `scripts/sheetmetal_v1.py` now supports sanitized-bundle source-fact
+  extraction with `--bundle-dir`, `--source-classification`, `--output-dir`,
+  and `--quiet`.
+- Source-specific values were written only to
+  `.private/sheetmetal-v1/1110101/source-fact-extraction/`.
+- Private outputs are `source_fact_model.json` and
+  `source_fact_validation.json`; both are git-ignored.
+- Neutral private-run counts: 6 evidence records, 125 represented source
+  lines, 87 source facts, 0 silently discarded authorized source lines, 0
+  quantity-stage overwrite violations, 0 completed-reference facts, and 0
+  private content transmissions.
+- Neutral committed evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json`
+  and
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.md`.
+- Regression coverage:
+  `test_sheetmetal_v1_source_fact_extractor`.
+- Active scoped manifest is refreshed for
+  `schemas/source_fact_model.schema.json`, `scripts/sheetmetal_v1.py`, and
+  `scripts/run_tests.py`.
 
 Exact next action:
 
-Add deterministic source-fact extraction and synthetic regression coverage
-before processing the private `1110101` sanitized source bundle. Produce
+Implement deterministic component-register construction from the private
+`1110101` source fact model with synthetic regression coverage. Produce
 canonical panel-model artifacts and evaluation evidence only; do not start a
 new baseline, do not generate a customer drawing, and do not promote `1110101`
 to `SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.

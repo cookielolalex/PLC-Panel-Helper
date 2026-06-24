@@ -1,7 +1,7 @@
 # Current State
 
-Current phase: one-project component register and graph calibration private
-workspace boundary complete; deterministic source-fact extraction pending.
+Current phase: deterministic source-fact extraction complete for one-project
+component graph calibration; component-register implementation pending.
 
 Accepted release: none.
 
@@ -34,7 +34,11 @@ scope-bound and commit-anchored, separating legacy baseline-024 verification
 from active sheetmetal-v1 verification; `D-0027` accepts deterministic
 metadata-only selection of `1110101`, freezes its evaluator-only reference
 package, source-role/chronology classification, clean sanitized input bundle,
-and independent audit for one-project sheetmetal calibration. These amendments
+and independent audit for one-project sheetmetal calibration; `D-0028` freezes
+the one-project component graph calibration protocol; `D-0029` accepts the
+ignored private workspace boundary; and `D-0030` accepts deterministic
+source-fact extraction into the private workspace with neutral committed
+summary evidence. These amendments
 do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
@@ -268,6 +272,21 @@ project-specific facts are written. The private workspace
 the project-private probe path, no `.private` path is tracked, and
 `test_sheetmetal_v1_private_workspace_boundary` covers this boundary.
 
-Exact next action: add deterministic source-fact extraction and synthetic
-regression coverage before processing the private `1110101` sanitized source
-bundle.
+Source-fact extraction after `D-0030`: `scripts/sheetmetal_v1.py` now supports
+source-only sanitized bundle extraction into an ignored output directory and
+writes `source_fact_model.json` plus `source_fact_validation.json`. The
+extractor normalizes the approved generic current-project role and chronology
+tokens, treats `NO_SIGNAL_IN_APPROVED_METADATA` as non-reference content, and
+keeps completed-reference-marked evidence out of source facts. Synthetic
+coverage is in `test_sheetmetal_v1_source_fact_extractor`; the active
+sheetmetal-v1 scoped manifest includes `schemas/source_fact_model.schema.json`.
+The private `1110101` run produced 6 evidence records, 125 represented source
+lines, 87 source facts, 0 silently discarded authorized source lines, 0
+completed-reference facts, 0 quantity-stage overwrite violations, and 0
+private content transmissions. Private model files remain ignored and are
+recorded only by neutral hashes in
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json`.
+
+Exact next action: implement deterministic component-register construction
+from the private `1110101` source fact model with synthetic regression coverage
+before producing panel-assignment or graph artifacts.

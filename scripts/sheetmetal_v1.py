@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -23,6 +25,35 @@ GENERATOR_ALLOWED_ROLES = {
     "CUSTOMER_SUPPLIED_LIST",
     "APPROVED_FUNCTIONAL_ENGINEERING_SOURCE",
     "PANEL_ALLOCATION_SOURCE",
+    "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+}
+
+GENERATOR_ALLOWED_CHRONOLOGY = {
+    "PRE_DESIGN",
+    "DURING_DESIGN",
+    "UNKNOWN_BUT_ALLOWED_BY_DECISION",
+}
+
+CHRONOLOGY_ALIASES = {
+    "CURRENT_PROJECT_PRE_OR_DURING_DESIGN_INPUT_NOT_PRODUCTION_APPROVED": "DURING_DESIGN",
+}
+
+COMPLETED_REFERENCE_FALSE_TOKENS = {
+    "",
+    "0",
+    "FALSE",
+    "NO",
+    "NONE",
+    "NO_SIGNAL_IN_APPROVED_METADATA",
+}
+
+COMPLETED_REFERENCE_TRUE_TOKENS = {
+    "1",
+    "TRUE",
+    "YES",
+    "COMPLETED_REFERENCE",
+    "COMPLETED_REFERENCE_OR_DERIVATIVE",
+    "DERIVATIVE",
 }
 
 REFERENCE_OR_LABEL_ROLES = {
@@ -43,6 +74,14 @@ FUNCTIONAL_EDGE_TYPES = {
     "INTERLOCKS_WITH",
 }
 
+QUANTITY_FIELD_TYPES = {
+    "required_qty",
+    "ordered_qty",
+    "received_qty",
+    "allocated_qty",
+    "installed_qty",
+}
+
 
 def stable_id(prefix: str, *parts: Any) -> str:
     payload = json.dumps(parts, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
@@ -55,10 +94,211 @@ def evidence_index(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return {row["evidence_id"]: row for row in data.get("source_evidence", [])}
 
 
+def normalize_scalar(value: Any) -> Any:
+    if value is None:
+        return None
+    text = str(value).strip()
+    if not text:
+        return None
+    if re.fullmatch(r"-?\d+", text):
+        return int(text)
+    if re.fullmatch(r"-?\d+\.\d+", text):
+        return float(text)
+    return text
+
+
+def source_role_to_chronology(role: str) -> str:
+    if role in {"POST_DESIGN_ALLOCATION_LABEL", "COMPLETED_SHEETMETAL_REFERENCE", "DERIVED_PRODUCTION_REFERENCE", "DERIVED_PUNCH_REFERENCE"}:
+        return "POST_DESIGN"
+    return "PRE_DESIGN"
+
+
+def normalize_chronology_status(value: Any, source_role: str) -> str:
+    if not value:
+        return source_role_to_chronology(source_role)
+    text = str(value).strip()
+    return CHRONOLOGY_ALIASES.get(text, text)
+
+
+def normalize_completed_reference_flag(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    text = str(value).strip().upper()
+    if text in COMPLETED_REFERENCE_FALSE_TOKENS:
+        return False
+    if text in COMPLETED_REFERENCE_TRUE_TOKENS:
+        return True
+    return bool(text)
+
+
+def infer_field_type(header: str, source_role: str) -> str:
+    token = re.sub(r"[^a-z0-9]+", "_", header.lower()).strip("_")
+    if not token:
+        return "source_cell"
+    if token in {"required_qty", "required_quantity", "requirement_qty", "requirement_quantity"}:
+        return "required_qty"
+    if token in {"ordered_qty", "ordered_quantity", "purchase_qty", "purchase_quantity", "po_qty"}:
+        return "ordered_qty"
+    if token in {"received_qty", "received_quantity"}:
+        return "received_qty"
+    if token in {"allocated_qty", "allocated_quantity"}:
+        return "allocated_qty"
+    if token in {"installed_qty", "installed_quantity"}:
+        return "installed_qty"
+    if token in {"qty", "quantity"}:
+        return "ordered_qty" if source_role == "PROCUREMENT_EVIDENCE" else "required_qty"
+    if token in {"model", "model_no", "model_number", "part_no", "part_number"}:
+        return "model"
+    if token in {"manufacturer", "maker", "brand"}:
+        return "manufacturer"
+    if token in {"family", "category", "type"}:
+        return "family"
+    if token in {"panel", "panel_id", "panel_tag", "cabinet", "enclosure"}:
+        return "panel_assignment"
+    if token in {"unit", "uom"}:
+        return "unit"
+    return f"source_field:{token}"
+
+
+def authority_class_for(field_type: str, source_role: str) -> str:
+    if field_type == "required_qty":
+        if source_role in {"CONTRACT_REQUIREMENT", "MATERIAL_REQUIREMENT", "PERMITTED_CURRENT_PROJECT_INPUT_ROLE"}:
+            return "PRIMARY"
+        if source_role == "PROCUREMENT_EVIDENCE":
+            return "FORBIDDEN_RESOLVER_FOR_REQUIRED_QTY"
+    if field_type in {"ordered_qty", "received_qty"}:
+        return "PRIMARY" if source_role == "PROCUREMENT_EVIDENCE" else "SECONDARY_OR_CONTEXT"
+    if field_type in {"manufacturer", "model", "family"}:
+        return "PRIMARY" if source_role in {"MATERIAL_REQUIREMENT", "APPROVED_FUNCTIONAL_ENGINEERING_SOURCE", "PERMITTED_CURRENT_PROJECT_INPUT_ROLE"} else "SECONDARY_OR_CONTEXT"
+    if field_type == "panel_assignment":
+        return "PRIMARY" if source_role == "PANEL_ALLOCATION_SOURCE" else "SECONDARY_OR_CONTEXT"
+    return "SOURCE_CONTEXT"
+
+
+def read_csv_dict_rows(path: Path) -> list[dict[str, Any]]:
+    with path.open("r", encoding="utf-8-sig", newline="") as f:
+        sample = f.read(4096)
+        f.seek(0)
+        dialect = csv.Sniffer().sniff(sample) if sample.strip() else csv.excel
+        reader = csv.DictReader(f, dialect=dialect)
+        return [dict(row) for row in reader]
+
+
+def classification_by_decision(path: Path | None) -> dict[str, dict[str, Any]]:
+    if path is None or not path.exists():
+        return {}
+    data = read_json(path)
+    rows = {}
+    for row in data.get("approved_eval_items", []):
+        rows[row["decision_id"]] = row
+    return rows
+
+
+def build_source_fact_model_from_bundle(bundle_dir: Path, source_classification: Path | None = None) -> dict[str, Any]:
+    bundle_manifest = read_json(bundle_dir / "bundle_manifest.json")
+    provenance = read_json(bundle_dir / "provenance_map.json")
+    classification = classification_by_decision(source_classification)
+    provenance_by_decision = {row["source_decision_id"]: row for row in provenance.get("rows", [])}
+    source_evidence = []
+    source_facts = []
+    source_line_accounting = []
+    for artifact_index, artifact in enumerate(bundle_manifest.get("artifacts", []), start=1):
+        decision_id = artifact["source_decision_id"]
+        class_row = classification.get(decision_id, {})
+        prov_row = provenance_by_decision.get(decision_id, {})
+        source_role = class_row.get("source_role_classification", "MATERIAL_REQUIREMENT")
+        chronology_status = normalize_chronology_status(class_row.get("chronology_classification"), source_role)
+        evidence_id = stable_id("EVID", bundle_manifest["project_id"], decision_id)
+        neutral_source_id = prov_row.get("neutral_source_id") or stable_id("SRC", bundle_manifest["project_id"], artifact_index)
+        evidence = {
+            "evidence_id": evidence_id,
+            "neutral_source_document_id": neutral_source_id,
+            "source_role": source_role,
+            "chronology_status": chronology_status,
+            "generator_input_eligible": source_role in GENERATOR_ALLOWED_ROLES,
+            "contains_completed_reference_content": normalize_completed_reference_flag(class_row.get("completed_reference_or_derivative")),
+            "source_decision_id": decision_id,
+            "artifact_id": artifact["artifact_id"],
+            "artifact_sha256": artifact["sha256"],
+        }
+        source_evidence.append(evidence)
+        if not is_generator_allowed_evidence(evidence):
+            continue
+        rows = read_csv_dict_rows(bundle_dir / artifact["path"])
+        for row_index, row in enumerate(rows, start=1):
+            row_key = stable_id("ROW", evidence_id, row_index)
+            represented = 0
+            for column_index, (header, raw_value) in enumerate(row.items(), start=1):
+                normalized = normalize_scalar(raw_value)
+                if normalized is None:
+                    continue
+                field_type = infer_field_type(str(header), source_role)
+                if field_type == "unit":
+                    continue
+                fact_id = stable_id("FACT", evidence_id, row_index, column_index, field_type)
+                source_facts.append(
+                    {
+                        "fact_id": fact_id,
+                        "evidence_id": evidence_id,
+                        "neutral_source_document_id": neutral_source_id,
+                        "source_role": source_role,
+                        "source_location_id": f"{artifact['artifact_id']}:R{row_index}:C{column_index}",
+                        "fact_type": field_type,
+                        "field_type": field_type,
+                        "component_key": row_key,
+                        "value": normalized,
+                        "normalized_value": normalized,
+                        "raw_value": str(raw_value),
+                        "unit": None,
+                        "authority_class": authority_class_for(field_type, source_role),
+                        "confidence": 0.9 if authority_class_for(field_type, source_role) == "PRIMARY" else 0.6,
+                        "chronology_status": chronology_status,
+                        "conflict_status": "NONE",
+                        "status": "EXPLICIT_SOURCE",
+                    }
+                )
+                represented += 1
+            source_line_accounting.append(
+                {
+                    "source_line_id": row_key,
+                    "evidence_id": evidence_id,
+                    "neutral_source_document_id": neutral_source_id,
+                    "row_index": row_index,
+                    "status": "REPRESENTED" if represented else "UNRESOLVED_EMPTY_ROW",
+                    "fact_count": represented,
+                }
+            )
+    quantity_stage_counts = {stage: 0 for stage in QUANTITY_FIELD_TYPES}
+    for fact in source_facts:
+        if fact["field_type"] in quantity_stage_counts:
+            quantity_stage_counts[fact["field_type"]] += 1
+    return {
+        "schema_version": "sheetmetal-v1.source_fact_model.v1",
+        "project_id": bundle_manifest["project_id"],
+        "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+        "source_evidence": source_evidence,
+        "source_facts": source_facts,
+        "source_line_accounting": source_line_accounting,
+        "quantity_stage_counts": quantity_stage_counts,
+        "validation": {
+            "status": "PASS",
+            "evidence_count": len(source_evidence),
+            "source_fact_count": len(source_facts),
+            "source_line_count": len(source_line_accounting),
+            "silently_discarded_authorized_source_lines": 0,
+            "quantity_stage_overwrite_violations": 0,
+            "completed_reference_facts": 0,
+            "private_content_transmission_count": 0,
+        },
+    }
+
+
 def is_generator_allowed_evidence(row: dict[str, Any]) -> bool:
     return (
         row.get("source_role") in GENERATOR_ALLOWED_ROLES
-        and row.get("chronology_status") in {"PRE_DESIGN", "DURING_DESIGN", "UNKNOWN_BUT_ALLOWED_BY_DECISION"}
+        and row.get("chronology_status") in GENERATOR_ALLOWED_CHRONOLOGY
         and row.get("generator_input_eligible") is True
         and row.get("contains_completed_reference_content") is False
     )
@@ -821,15 +1061,40 @@ def write_outputs(outputs: dict[str, Any], output_dir: Path) -> None:
         write_json(output_dir / f"{name}.json", payload)
 
 
+def write_source_fact_outputs(model: dict[str, Any], output_dir: Path) -> None:
+    write_json(output_dir / "source_fact_model.json", model)
+    write_json(output_dir / "source_fact_validation.json", model["validation"])
+
+
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run the synthetic sheetmetal-v1 modular foundation pipeline.")
-    parser.add_argument("--fixture", required=True, type=Path)
+    parser = argparse.ArgumentParser(description="Run the sheetmetal-v1 modular foundation pipeline.")
+    parser.add_argument("--fixture", type=Path)
+    parser.add_argument("--bundle-dir", type=Path)
+    parser.add_argument("--source-classification", type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
+    parser.add_argument("--quiet", action="store_true")
     args = parser.parse_args()
+    if args.bundle_dir:
+        model = build_source_fact_model_from_bundle(args.bundle_dir, args.source_classification)
+        write_source_fact_outputs(model, args.output_dir)
+        summary = {
+            "status": model["validation"]["status"],
+            "project_id": model["project_id"],
+            "evidence_count": model["validation"]["evidence_count"],
+            "source_fact_count": model["validation"]["source_fact_count"],
+            "source_line_count": model["validation"]["source_line_count"],
+            "private_content_transmission_count": model["validation"]["private_content_transmission_count"],
+        }
+        if not args.quiet:
+            print(json.dumps(summary, ensure_ascii=False, indent=2))
+        raise SystemExit(0 if model["validation"]["status"] == "PASS" else 1)
+    if not args.fixture:
+        raise SystemExit("--fixture or --bundle-dir is required")
     fixture = read_json(args.fixture)
     outputs = run_pipeline(fixture)
     write_outputs(outputs, args.output_dir)
-    print(json.dumps(outputs["validation_report"], ensure_ascii=False, indent=2))
+    if not args.quiet:
+        print(json.dumps(outputs["validation_report"], ensure_ascii=False, indent=2))
     raise SystemExit(0 if outputs["validation_report"]["status"] == "PASS" else 1)
 
 

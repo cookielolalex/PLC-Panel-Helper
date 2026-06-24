@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: one-project component register and graph calibration private
-workspace boundary complete; deterministic source-fact extraction pending.
+Current phase: deterministic source-fact extraction complete for one-project
+component graph calibration; component-register implementation pending.
 
 Accepted release: none.
 
@@ -148,11 +148,37 @@ Private workspace boundary:
 - Active scoped manifest refreshed for `.gitignore` and `scripts/run_tests.py`.
 - Evidence:
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/private_workspace_boundary.json`.
-- Project-specific facts written: no.
+- Project-specific facts written: yes, but only inside the ignored private
+  source-fact extraction directory after `D-0030`.
+
+Source-fact extraction:
+
+- Decision: `D-0030`.
+- Extractor: `scripts/sheetmetal_v1.py --bundle-dir ... --source-classification ... --output-dir ... --quiet`.
+- Private output directory:
+  `.private/sheetmetal-v1/1110101/source-fact-extraction/`.
+- Private outputs: `source_fact_model.json` and
+  `source_fact_validation.json`.
+- Private output hashes:
+  `source_fact_model.json`
+  `23A1F4731794A3F6574B709567859351323AFB53F6F77849937F1E77809E5738`;
+  `source_fact_validation.json`
+  `8B9DD11E67CCBFD8E9DED710D917A9D736B963FCC331FBC51382AF2AB0849B16`.
+- Git ignore verification: `PASS`; no `.private` path is tracked.
+- Schema validation: `PASS`.
+- Neutral counts: 6 evidence records, 125 represented source lines, 87 source
+  facts, 0 silently discarded authorized source lines, 0 quantity-stage
+  overwrite violations, 0 completed-reference facts, and 0 private content
+  transmissions.
+- Regression test: `test_sheetmetal_v1_source_fact_extractor`.
+- Active scoped manifest refreshed for `schemas/source_fact_model.schema.json`,
+  `scripts/sheetmetal_v1.py`, and `scripts/run_tests.py`.
+- Evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json`.
 
 Exact next action:
 
-Add deterministic source-fact extraction and synthetic regression coverage
-before processing the private `1110101` sanitized source bundle. Do not
-generate a customer drawing and do not promote `1110101` to
-`SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.
+Implement deterministic component-register construction from the private
+`1110101` source fact model with synthetic regression coverage. Do not generate
+a customer drawing and do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL`
+until calibration and adjudication pass.

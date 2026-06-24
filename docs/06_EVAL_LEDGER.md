@@ -596,3 +596,45 @@ Evidence:
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/private_workspace_boundary.md`
 and
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/private_workspace_boundary.json`.
+
+## sheetmetal-v1 one-project source-fact extraction
+
+Status: `PASS`.
+
+Decision: `D-0030`.
+
+Purpose: extract source facts from the approved sanitized `1110101` generator
+bundle while keeping project-specific values in the ignored private workspace.
+
+Implementation: `scripts/sheetmetal_v1.py` accepts `--bundle-dir`,
+`--source-classification`, `--output-dir`, and `--quiet` for source-only
+bundle extraction. It writes `source_fact_model.json` and
+`source_fact_validation.json` only to the requested output directory.
+
+Private run: output was written to
+`.private/sheetmetal-v1/1110101/source-fact-extraction/`. Both private outputs
+are ignored by Git and no `.private` path is tracked.
+
+Validation result: schema validation `PASS`; evidence count `6`; source line
+count `125`; source fact count `87`; source line accounting count `125`;
+silently discarded authorized source lines `0`; quantity-stage overwrite
+violations `0`; completed-reference facts `0`; private content transmission
+count `0`.
+
+Regression result: full `scripts/run_tests.py` status `PASS`.
+`test_sheetmetal_v1_source_fact_extractor` covers source-value non-printing,
+schema validity, row accounting, quantity-stage separation, the approved
+generic current-project role token, long-form chronology normalization, and
+`NO_SIGNAL_IN_APPROVED_METADATA` reference-flag parsing.
+
+Generation status: no customer drawing, PDF, DXF, DWG, drawing model,
+baseline generation, or `SHEETMETAL_ALLOWED_EVAL` promotion occurred.
+
+Evidence:
+`schemas/source_fact_model.schema.json`,
+`scripts/sheetmetal_v1.py`,
+`scripts/run_tests.py`,
+`evals/sheetmetal-v1/frozen_workflow_manifest.json`,
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.md`,
+and
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json`.

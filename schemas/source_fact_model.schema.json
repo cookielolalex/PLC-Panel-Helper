@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Source Fact Model",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "source_mode",
+    "source_evidence",
+    "source_facts",
+    "source_line_accounting",
+    "quantity_stage_counts",
+    "validation"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project_id": {"type": "string"},
+    "source_mode": {"const": "SOURCE_MODE_A_INVENTORY_ONLY"},
+    "source_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "neutral_source_document_id",
+          "source_role",
+          "chronology_status",
+          "generator_input_eligible",
+          "contains_completed_reference_content"
+        ],
+        "properties": {
+          "evidence_id": {"type": "string"},
+          "neutral_source_document_id": {"type": "string"},
+          "source_role": {"type": "string"},
+          "chronology_status": {"type": "string"},
+          "generator_input_eligible": {"type": "boolean"},
+          "contains_completed_reference_content": {"type": "boolean"}
+        }
+      }
+    },
+    "source_facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "fact_id",
+          "evidence_id",
+          "neutral_source_document_id",
+          "source_role",
+          "source_location_id",
+          "field_type",
+          "normalized_value",
+          "authority_class",
+          "confidence",
+          "chronology_status",
+          "conflict_status",
+          "status"
+        ],
+        "properties": {
+          "fact_id": {"type": "string"},
+          "evidence_id": {"type": "string"},
+          "neutral_source_document_id": {"type": "string"},
+          "source_role": {"type": "string"},
+          "source_location_id": {"type": "string"},
+          "field_type": {"type": "string"},
+          "component_key": {"type": "string"},
+          "normalized_value": {},
+          "unit": {"type": ["string", "null"]},
+          "authority_class": {"type": "string"},
+          "confidence": {"type": "number"},
+          "chronology_status": {"type": "string"},
+          "conflict_status": {"type": "string"},
+          "status": {"type": "string"}
+        }
+      }
+    },
+    "source_line_accounting": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_line_id", "evidence_id", "row_index", "status", "fact_count"],
+        "properties": {
+          "source_line_id": {"type": "string"},
+          "evidence_id": {"type": "string"},
+          "neutral_source_document_id": {"type": "string"},
+          "row_index": {"type": "integer"},
+          "status": {"type": "string"},
+          "fact_count": {"type": "integer"}
+        }
+      }
+    },
+    "quantity_stage_counts": {"type": "object"},
+    "validation": {
+      "type": "object",
+      "required": [
+        "status",
+        "evidence_count",
+        "source_fact_count",
+        "source_line_count",
+        "silently_discarded_authorized_source_lines",
+        "quantity_stage_overwrite_violations",
+        "completed_reference_facts",
+        "private_content_transmission_count"
+      ],
+      "properties": {
+        "status": {"type": "string"},
+        "evidence_count": {"type": "integer"},
+        "source_fact_count": {"type": "integer"},
+        "source_line_count": {"type": "integer"},
+        "silently_discarded_authorized_source_lines": {"type": "integer"},
+        "quantity_stage_overwrite_violations": {"type": "integer"},
+        "completed_reference_facts": {"type": "integer"},
+        "private_content_transmission_count": {"type": "integer"}
+      }
+    }
+  }
+}

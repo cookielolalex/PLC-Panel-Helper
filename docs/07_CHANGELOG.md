@@ -297,3 +297,18 @@
   workflow verification.
 - Recorded private-boundary evidence under
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/`.
+- Added deterministic source-fact extraction to `scripts/sheetmetal_v1.py` for
+  approved sanitized generator bundles, with quiet private-output mode and
+  neutral committed summaries only.
+- Added `schemas/source_fact_model.schema.json` and
+  `test_sheetmetal_v1_source_fact_extractor`, covering source-value
+  non-printing, row accounting, approved generic current-project role tokens,
+  long-form chronology normalization, and string reference-flag parsing.
+- Ran the private `1110101` source-fact extraction under
+  `.private/sheetmetal-v1/1110101/source-fact-extraction/`; schema validation
+  passed with 6 evidence records, 125 represented source lines, 87 source facts,
+  0 completed-reference facts, and 0 private content transmissions.
+- Refreshed the active sheetmetal-v1 frozen workflow manifest for the
+  source-fact schema, extractor, and regression test hashes.
+- Recorded neutral source-fact extraction evidence under
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/`.

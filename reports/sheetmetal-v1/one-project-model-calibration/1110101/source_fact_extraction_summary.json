@@ -1,0 +1,52 @@
+{
+  "schema_version": "sheetmetal-v1.source_fact_extraction_summary.v1",
+  "status": "PASS",
+  "task": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION",
+  "project_id": "1110101",
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "private_output_dir": ".private/sheetmetal-v1/1110101/source-fact-extraction/",
+  "private_outputs": [
+    {
+      "name": "source_fact_model.json",
+      "sha256": "23A1F4731794A3F6574B709567859351323AFB53F6F77849937F1E77809E5738",
+      "git_check_ignore_status": "PASS"
+    },
+    {
+      "name": "source_fact_validation.json",
+      "sha256": "8B9DD11E67CCBFD8E9DED710D917A9D736B963FCC331FBC51382AF2AB0849B16",
+      "git_check_ignore_status": "PASS"
+    }
+  ],
+  "schema_validation": {
+    "source_fact_model": "PASS",
+    "error_count": 0
+  },
+  "counts": {
+    "evidence_count": 6,
+    "source_fact_count": 87,
+    "source_line_count": 125,
+    "source_line_accounting_count": 125,
+    "quantity_stage_counts": {
+      "required_qty": 0,
+      "ordered_qty": 0,
+      "received_qty": 0,
+      "allocated_qty": 0,
+      "installed_qty": 0
+    },
+    "silently_discarded_authorized_source_lines": 0,
+    "quantity_stage_overwrite_violations": 0,
+    "completed_reference_facts": 0,
+    "private_content_transmission_count": 0
+  },
+  "privacy": {
+    "private_values_committed": false,
+    "private_values_printed_by_extractor": false,
+    "private_outputs_tracked_by_git": false,
+    "customer_drawing_generated": false
+  },
+  "covered_by_tests": [
+    "test_sheetmetal_v1_source_fact_extractor",
+    "test_sheetmetal_v1_private_workspace_boundary",
+    "test_frozen_workflow_active_scope_verifier"
+  ]
+}

@@ -883,6 +883,111 @@ def test_sheetmetal_v1_private_workspace_boundary() -> None:
     assert_true(not tracked.stdout.strip(), "no private workspace artifact may be tracked")
 
 
+def test_sheetmetal_v1_source_fact_extractor() -> None:
+    work = ROOT / "tmp" / "sheetmetal_v1_source_fact_extractor_test"
+    if work.exists():
+        shutil.rmtree(work)
+    bundle = work / "bundle"
+    inputs = bundle / "sanitized_inputs"
+    out = work / "out"
+    inputs.mkdir(parents=True)
+    secret_model = "MODEL-SECRET-123"
+    secret_customer = "CUSTOMER-SECRET"
+    import csv
+
+    material_csv = inputs / "material.csv"
+    with material_csv.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["item", "model", "required_qty", "customer_note"])
+        writer.writeheader()
+        writer.writerow({"item": "M1", "model": secret_model, "required_qty": "2", "customer_note": secret_customer})
+    procurement_csv = inputs / "procurement.csv"
+    with procurement_csv.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["item", "model", "qty"])
+        writer.writeheader()
+        writer.writerow({"item": "M1", "model": secret_model, "qty": "5"})
+    generic_csv = inputs / "generic_current_input.csv"
+    with generic_csv.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["item", "model", "qty"])
+        writer.writeheader()
+        writer.writerow({"item": "M2", "model": "GENERIC-CURRENT-INPUT", "qty": "1"})
+
+    material_sha = __import__("hashlib").sha256(material_csv.read_bytes()).hexdigest().upper()
+    procurement_sha = __import__("hashlib").sha256(procurement_csv.read_bytes()).hexdigest().upper()
+    generic_sha = __import__("hashlib").sha256(generic_csv.read_bytes()).hexdigest().upper()
+    write_json(bundle / "bundle_manifest.json", {
+        "bundle_id": "SYNTH-SOURCE-FACT-BUNDLE",
+        "project_id": "SYNTH-SMV1-SOURCE",
+        "selection_id": "SYNTH-SELECTION",
+        "status": "BUILT",
+        "artifacts": [
+            {"artifact_id": "ART-MAT", "path": "sanitized_inputs/material.csv", "sha256": material_sha, "source_decision_id": "DEC-MAT"},
+            {"artifact_id": "ART-PO", "path": "sanitized_inputs/procurement.csv", "sha256": procurement_sha, "source_decision_id": "DEC-PO"},
+            {"artifact_id": "ART-GEN", "path": "sanitized_inputs/generic_current_input.csv", "sha256": generic_sha, "source_decision_id": "DEC-GEN"},
+        ],
+    })
+    write_json(bundle / "provenance_map.json", {
+        "bundle_id": "SYNTH-SOURCE-FACT-BUNDLE",
+        "selection_id": "SYNTH-SELECTION",
+        "rows": [
+            {"neutral_source_id": "SRC-MAT", "sanitized_artifact": "sanitized_inputs/material.csv", "source_decision_id": "DEC-MAT", "source_file_id": "FILE-MAT", "source_sheet_id": "SHEET-MAT"},
+            {"neutral_source_id": "SRC-PO", "sanitized_artifact": "sanitized_inputs/procurement.csv", "source_decision_id": "DEC-PO", "source_file_id": "FILE-PO", "source_sheet_id": "SHEET-PO"},
+            {"neutral_source_id": "SRC-GEN", "sanitized_artifact": "sanitized_inputs/generic_current_input.csv", "source_decision_id": "DEC-GEN", "source_file_id": "FILE-GEN", "source_sheet_id": "SHEET-GEN"},
+        ],
+    })
+    classification = work / "classification.json"
+    write_json(classification, {
+        "status": "SOURCE_ROLE_CHRONOLOGY_CLASSIFICATION_PASS",
+        "approved_eval_items": [
+            {
+                "decision_id": "DEC-MAT",
+                "source_role_classification": "MATERIAL_REQUIREMENT",
+                "chronology_classification": "PRE_DESIGN",
+                "completed_reference_or_derivative": False,
+            },
+            {
+                "decision_id": "DEC-PO",
+                "source_role_classification": "PROCUREMENT_EVIDENCE",
+                "chronology_classification": "PRE_DESIGN",
+                "completed_reference_or_derivative": False,
+            },
+            {
+                "decision_id": "DEC-GEN",
+                "source_role_classification": "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+                "chronology_classification": "CURRENT_PROJECT_PRE_OR_DURING_DESIGN_INPUT_NOT_PRODUCTION_APPROVED",
+                "completed_reference_or_derivative": "NO_SIGNAL_IN_APPROVED_METADATA",
+            },
+        ],
+    })
+    result = subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--bundle-dir",
+            str(bundle),
+            "--source-classification",
+            str(classification),
+            "--output-dir",
+            str(out),
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    assert_true(secret_model not in result.stdout and secret_customer not in result.stdout, "source values must not be printed to stdout")
+    assert_true(secret_model not in result.stderr and secret_customer not in result.stderr, "source values must not be printed to stderr")
+    errors = validate_file(out / "source_fact_model.json", ROOT / "schemas/source_fact_model.schema.json")
+    assert_true(not errors, f"source fact model schema errors: {errors}")
+    model = read_json(out / "source_fact_model.json")
+    assert_true(model["validation"]["status"] == "PASS", "source fact extraction must pass")
+    assert_true(model["validation"]["source_line_count"] == 3, "every source row must be accounted for")
+    assert_true(model["validation"]["silently_discarded_authorized_source_lines"] == 0, "authorized source lines must not disappear")
+    assert_true(model["quantity_stage_counts"]["required_qty"] == 2, "material and generic current quantities should be required quantities")
+    assert_true(model["quantity_stage_counts"]["ordered_qty"] == 1, "procurement quantity should be ordered quantity")
+    assert_true(all(row["status"] == "REPRESENTED" for row in model["source_line_accounting"]), "all synthetic source rows should be represented")
+    assert_true(model["validation"]["private_content_transmission_count"] == 0, "private transmission count must stay zero")
+
+
 def test_frozen_workflow_legacy_scope_verifier() -> None:
     import verify_frozen_workflow as verifier
 
@@ -1010,6 +1115,7 @@ def main() -> None:
         test_qualification_recovery_controller_state,
         test_sheetmetal_v1_modular_foundation,
         test_sheetmetal_v1_private_workspace_boundary,
+        test_sheetmetal_v1_source_fact_extractor,
         test_frozen_workflow_legacy_scope_verifier,
         test_frozen_workflow_fail_closed_regressions,
         test_frozen_workflow_active_scope_verifier,
