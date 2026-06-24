@@ -9,7 +9,9 @@ Read the canonical checkpoint files first:
 - `docs/SESSION_CHECKPOINT.md`
 - `docs/specs/MASTER_AUTOPILOT_PROTOCOL.md`
 - `docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md`
-- `docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md`
+- `docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md`
+- `docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md`
+- `docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md`
 - `docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md`
 - `manifests/sheetmetal-v1/requalification_queue.json`
 - `orchestration/master/MASTER_STATE.json`
@@ -19,7 +21,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED_SOURCE_RULE_PROPOSAL_PENDING`
+`SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING`
 
 Active goal:
 
@@ -30,54 +32,47 @@ Current qualification state:
 - `SHEETMETAL_ALLOWED_EVAL` approved count remains `1`.
 - `1110101` is the first accepted sheetmetal-v1 calibration project for the
   modular component-register and graph stage.
-- The topology/sizing/placement implementation and T1 targeted recovery have
-  both been independently audited.
-- T1 is accepted as safe unresolved, not engineering capability success.
-- This is not production approval and does not authorize real customer drawing
-  generation.
+- T1 targeted recovery and the source/rule proposal review have both passed
+  independent review.
+- This is not engineering capability success, production approval, or drawing
+  generation authorization.
 - `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
 
-T1 audit evidence:
+Recent evidence:
 
-- Integration summary:
+- T1 integration:
   `reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json`
-- Independent recovery audit:
+- T1 independent audit:
   `reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json`
-- Coordinator audit addendum:
+- T1 coordinator addendum:
   `reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json`
-- Child result:
-  `orchestration/master/child-results/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.json`
+- Source/rule proposal:
+  `reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json`
+- Source/rule proposal review:
+  `reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json`
+- Proposal review child result:
+  `orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.json`
 
-T1 result summary:
+Result summary:
 
-- Exact audit status:
+- T1 exact audit status:
   `PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS`.
-- Full tests `PASS` after coordinator addendum.
-- Legacy baseline-024 scoped freeze `PASS`.
-- Active sheetmetal-v1 scoped freeze `PASS`.
-- Topology/sizing/placement scoped freeze `PASS`.
+- Proposal review exact status:
+  `PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW`.
 - Panel assignment coverage remains source-limited at `0/53`.
 - Component geometry coverage remains source-limited at `0/53`.
 - Topology remains source-limited at `0/1`.
 - Sizing remains zero-denominator at `0/0`; no recall is reported.
 - Placement coverage remains source-limited at `0/53`.
-- Unsupported assignments `0`.
-- Unsupported geometry promotions `0`.
-- Unsupported critical dimensions `0`.
-- Unsupported placements `0`.
-- Accepted hard-constraint violations `0`.
-- Completed-reference leakage events `0`.
-- Post-design leakage events `0`.
-- Private-content external transmissions `0`.
-- Generated customer drawings/PDF/DXF/DWG `0`.
+- No customer drawing, PDF, DXF, or DWG has been generated.
+- No production approval has been declared.
 
 Exact next action:
 
-`RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH`
+`PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET`
 
-Create a bounded proposal packet for source/rule authority that could resolve
-the T1 blockers. The packet may propose candidate authority sources, rule
-families, review criteria, regression tests, rollback paths, and independent
-review tasks. It must not implement rules, alter source manifests, open
-forbidden source roots or `.private` artifacts, use completed references, or
-generate customer drawings before approval.
+Prepare an explicit source/rule authority decision packet from the reviewed
+proposal. The packet must identify which lanes can be accepted, rejected, or
+require human fabrication-domain decision. It must not implement behavior,
+alter source manifests, open forbidden source roots or `.private`, use
+completed references, or generate customer drawings.

@@ -987,3 +987,35 @@ Evidence:
 `reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json`,
 `reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json`,
 and `orchestration/master/child-results/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.json`.
+
+## sheetmetal-v1 source/rule approval proposal review
+
+Status: `SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING`.
+
+Decision: `D-0041`.
+
+Purpose: review a proposal-first authority branch for T1 blockers before any
+implementation or rule/source approval can occur.
+
+Proposal lanes:
+
+- `LANE_A_PANEL_ALLOCATION_SOURCE`;
+- `LANE_B_COMPONENT_GEOMETRY_AUTHORITY`;
+- `LANE_C_TOPOLOGY_SIZING_PLACEMENT_RULES`.
+
+Independent review result:
+`PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW`.
+
+The review verified the proposal was proposal-only, bound to T1 evidence
+hashes, preserved forbidden-use boundaries, defined valid authority paths,
+rejected no-invention shortcuts, required regression tests before fixes, and
+bounded diff scope and rollback.
+
+Generation status: no implementation was applied, no customer drawing, PDF,
+DXF, or DWG was generated, and no production approval was declared.
+
+Evidence:
+`reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json`,
+and
+`orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.json`.

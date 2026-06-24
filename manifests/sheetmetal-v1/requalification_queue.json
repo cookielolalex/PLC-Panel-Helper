@@ -1,13 +1,13 @@
 {
   "schema_version": "sheetmetal-v1",
   "qualification_class": "SHEETMETAL_ALLOWED_EVAL",
-  "status": "T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED_SOURCE_RULE_PROPOSAL_PENDING",
+  "status": "SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING",
   "approved_count": 1,
   "candidates": [
     {
       "project_id": "1110101",
       "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
-      "sheetmetal_status": "T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED_SOURCE_RULE_PROPOSAL_PENDING",
+      "sheetmetal_status": "SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING",
       "selection_rank": 1,
       "selection_artifact": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
       "accepted_as_first_sheetmetal_v1_calibration_project": true,
@@ -16,7 +16,9 @@
       "topology_audit_artifact": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/independent_audit.json",
       "t1_integration_artifact": "reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json",
       "t1_audit_artifact": "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json",
-      "next_action": "RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH"
+      "source_rule_proposal_artifact": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json",
+      "source_rule_proposal_review_artifact": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json",
+      "next_action": "PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET"
     },
     {
       "project_id": "1110103",
@@ -80,9 +82,9 @@
     }
   ],
   "additional_corpus_search_status": "NOT_STARTED_IN_MIGRATION_TASK",
-  "baseline_status": "T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED_SOURCE_RULE_PROPOSAL_PENDING",
+  "baseline_status": "SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING",
   "selected_project_id": "1110101",
-  "selection_status": "T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED_SOURCE_RULE_PROPOSAL_PENDING",
+  "selection_status": "SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING",
   "selection_artifact": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
   "selected_candidate_bundle": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle",
   "selected_candidate_audit": "reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md",
@@ -91,5 +93,7 @@
   "topology_audit_artifact": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/independent_audit.json",
   "t1_integration_artifact": "reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json",
   "t1_audit_artifact": "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json",
-  "next_action": "RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH"
+  "source_rule_proposal_artifact": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json",
+  "source_rule_proposal_review_artifact": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json",
+  "next_action": "PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET"
 }

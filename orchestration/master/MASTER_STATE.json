@@ -2,13 +2,11 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "9d7a79fe14a0c9b7f3e485ba6c720fa665d7b007",
-  "current_canonical_status": "SOURCE_RULE_PROPOSAL_REVIEW_IN_PROGRESS",
-  "current_stage": "SOURCE_RULE_PROPOSAL_REVIEW",
-  "next_action": "RUN_INDEPENDENT_SOURCE_RULE_PROPOSAL_REVIEW",
-  "active_thread_ids": [
-    "SUBAGENT:019ef8e5-46ea-7e21-bb3f-8c61c5d1e31c"
-  ],
+  "current_head": "84c762835c3b3221e6d10b6a6ce4631185ba61ef",
+  "current_canonical_status": "SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING",
+  "current_stage": "SOURCE_RULE_AUTHORITY_DECISION_PACKET",
+  "next_action": "PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET",
+  "active_thread_ids": [],
   "task_ids": [
     "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
     "SMV1-T1-PANEL-ASSIGNMENT-RECOVERY",
@@ -17,7 +15,8 @@
     "SMV1-T1-INTEGRATION",
     "SMV1-T1-INDEPENDENT-RECOVERY-AUDIT",
     "SMV1-SOURCE-RULE-APPROVAL-PROPOSAL",
-    "SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW"
+    "SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW",
+    "SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET"
   ],
   "worktree_paths": [
     "pendingWorktreeId:local:75736337-550b-4e6b-aded-25b6cbbbccea",
@@ -40,14 +39,15 @@
     "t1_audit_evidence_commit": "cea602a46f978a74a746cf97e09784c43953c0cd",
     "canonical_t1_state_commit": "c25586a839eb9ed16f666e044e1c01b0021a1966",
     "source_rule_proposal_commit": "de01dd57b0c4a7db98114a5a9913b25de6069f06",
-    "source_rule_proposal_review_brief_commit": "9d7a79fe14a0c9b7f3e485ba6c720fa665d7b007"
+    "source_rule_proposal_review_brief_commit": "9d7a79fe14a0c9b7f3e485ba6c720fa665d7b007",
+    "source_rule_proposal_review_commit": "84c762835c3b3221e6d10b6a6ce4631185ba61ef"
   },
   "expected_outputs": [
-    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json",
-    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.md",
-    "orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.json"
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.md",
+    "orchestration/master/child-results/SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET.json"
   ],
-  "last_heartbeat": "2026-06-24T17:10:43.5300845+08:00",
+  "last_heartbeat": "2026-06-24T17:17:10.8373714+08:00",
   "retries": {},
   "blockers": [],
   "audit_state": {
@@ -59,7 +59,7 @@
     "T1_integration": "SAFE_UNRESOLVED_T1_NO_COMPLIANT_CODE_OR_RULE_RECOVERY_PATHS_AUDIT_REQUIRED",
     "T1_independent_recovery_audit": "PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS",
     "source_rule_proposal": "PROPOSAL_CREATED_NOT_APPLIED_SOURCE_RULE_APPROVAL_BRANCH",
-    "source_rule_proposal_review": "IN_PROGRESS"
+    "source_rule_proposal_review": "PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW"
   },
   "merge_state": {
     "pending_child_commits": [],
@@ -68,9 +68,10 @@
       "c02656fbd179bf2e9a7aac7a882b505d443ac82b",
       "bc02f7d6a2b84f06ef7d1e7d3b060ba36081a5d9",
       "cea602a46f978a74a746cf97e09784c43953c0cd",
-      "de01dd57b0c4a7db98114a5a9913b25de6069f06"
+      "de01dd57b0c4a7db98114a5a9913b25de6069f06",
+      "84c762835c3b3221e6d10b6a6ce4631185ba61ef"
     ],
-    "last_merge_result": "SOURCE_RULE_PROPOSAL_CREATED_REVIEW_DISPATCHED"
+    "last_merge_result": "SOURCE_RULE_PROPOSAL_REVIEW_ACCEPTED"
   },
   "pending_worktrees": [
     {
@@ -106,7 +107,7 @@
     "post_design_leakage": 0
   },
   "readiness_gate_state": {
-    "status": "SOURCE_RULE_PROPOSAL_REVIEW_IN_PROGRESS",
+    "status": "SOURCE_RULE_AUTHORITY_DECISION_PACKET_PENDING",
     "highest_allowed_success_status": "READY_FOR_PRIVATE_PREVIEW",
     "forbidden_status": "PRODUCTION_APPROVED",
     "customer_pdf_dxf_dwg_generation_count": 0

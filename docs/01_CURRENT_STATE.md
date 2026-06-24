@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: T1 targeted coverage recovery accepted as safe unresolved;
-proposal-first source/rule approval branch pending.
+Current phase: source/rule proposal reviewed and ready for authority decision
+packet.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED_SOURCE_RULE_PROPOSAL_PENDING`.
+Current status: `SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -52,7 +52,9 @@ topology/sizing/placement audit as safety/integrity pass but engineering
 coverage inconclusive at low coverage, requiring targeted T1 recovery; and
 `D-0040` accepts T1 targeted recovery and the independent recovery audit as
 safe unresolved with no compliant code/rule recovery path, requiring a
-proposal-first source/rule approval branch. These
+proposal-first source/rule approval branch; and `D-0041` accepts the
+independent review of that proposal as ready for an authority decision packet.
+These
 amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
@@ -407,5 +409,15 @@ runtime; all passed. Coverage remains assignment `0/53`, component geometry
 `0/53`, topology `0/1`, sizing `0/0`, and placement `0/53`. This is not
 capability success and does not authorize drawing generation.
 
+Source/rule proposal review after `D-0041`: the proposal packet defines three
+authority lanes, panel allocation source, component geometry authority, and
+topology/sizing/placement rules. The independent review passed all proposal
+readiness checks: proposal-only behavior, bound T1 hashes, forbidden-use
+boundaries, valid authority paths, rejected shortcuts, test-before-fix
+coverage, bounded diff scope, and rollback. No implementation code, rule,
+schema, source manifest, frozen release, frozen grader, source root, private
+artifact, completed reference, customer drawing, PDF, DXF, or DWG was changed
+or generated.
+
 Exact next action: run
-`RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH`.
+`PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET`.

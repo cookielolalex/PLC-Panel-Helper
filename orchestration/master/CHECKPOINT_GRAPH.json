@@ -37,10 +37,18 @@
     {
       "id": "SOURCE_RULE_PROPOSAL_REVIEW",
       "name": "INDEPENDENT_SOURCE_RULE_PROPOSAL_REVIEW",
-      "status": "IN_PROGRESS",
+      "status": "PASS",
       "on_pass": "SOURCE_RULE_AUTHORITY_DECISION_PACKET",
       "on_fail": "PROPOSAL_REVISION_OR_TERMINAL_REVIEW",
       "on_inconclusive": "PROPOSAL_REVISION"
+    },
+    {
+      "id": "SOURCE_RULE_AUTHORITY_DECISION_PACKET",
+      "name": "SOURCE_RULE_AUTHORITY_DECISION_PACKET",
+      "status": "PENDING",
+      "on_accept_lane": "IMPLEMENT_ACCEPTED_AUTHORITY_LANE",
+      "on_reject_all": "TERMINAL_REVIEW",
+      "on_human_required": "FABRICATION_DOMAIN_DECISION_REQUIRED"
     },
     {
       "id": "T2",

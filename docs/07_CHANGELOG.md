@@ -431,3 +431,11 @@
   component geometry `0/53`, topology `0/1`, sizing `0/0`, and placement
   `0/53`.
 - Set next action to `RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH`.
+- Added the source/rule approval proposal packet with three reviewable lanes:
+  panel allocation source, component geometry authority, and
+  topology/sizing/placement rules.
+- Independently reviewed the proposal packet. The review passed all readiness
+  criteria and confirmed it is proposal-only, hash-bound to accepted T1
+  evidence, preserves no-invention and forbidden-use boundaries, requires
+  tests before fixes, and has bounded diff scope and rollback.
+- Set next action to `PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET`.

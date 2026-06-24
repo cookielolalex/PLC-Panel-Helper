@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: T1 targeted coverage recovery accepted as safe unresolved;
-proposal-first source/rule approval branch pending.
+Current phase: source/rule proposal reviewed and ready for authority decision
+packet.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED_SOURCE_RULE_PROPOSAL_PENDING`.
+Current status: `SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING`.
 
 Current candidate: `1110101`.
 
@@ -395,6 +395,26 @@ T1 targeted coverage recovery:
 
 Exact next action:
 
-Run `RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH`. This branch may propose
-source or rule authority for human/independent review, but must not implement
-or apply unsupported fabrication assumptions before approval.
+Source/rule approval proposal and review:
+
+- Proposal commit: `de01dd5`.
+- Proposal review commit: `84c7628`.
+- Proposal status:
+  `PROPOSAL_CREATED_NOT_APPLIED_SOURCE_RULE_APPROVAL_BRANCH`.
+- Independent review status:
+  `PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW`.
+- Lanes: panel allocation source, component geometry authority, and
+  topology/sizing/placement rules.
+- The review verified the proposal is proposal-only, bound to T1 evidence
+  hashes, preserves forbidden-use boundaries, defines valid authority paths,
+  rejects no-invention shortcuts, requires tests before fixes, and bounds diff
+  scope and rollback.
+- No implementation code, rule, schema, source manifest, frozen release,
+  frozen grader, source root, `.private` artifact, completed reference,
+  customer drawing, PDF, DXF, or DWG was changed or generated.
+
+Exact next action:
+
+Run `PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET`. The packet must still not
+apply implementation or fabricate source/rule authority; it should prepare the
+explicit decision surface for source/rule approval or terminal-candidate review.
