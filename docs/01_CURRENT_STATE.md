@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: signed source/rule authority decision submission processor ready;
-signed human authority decision still required.
+Current phase: blocked at signed source/rule authority decision gate; signed
+human authority decision required.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`.
+Current status: `BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -487,6 +487,15 @@ choice, signer, and date errors while packet/template hash checks pass. Full
 tests and legacy, active sheetmetal-v1, and topology-stage scoped freezes pass.
 No authority lane was selected and no implementation, customer drawing, or
 production approval was authorized.
+
+Strict blocked audit after `D-0046`: the master coordinator records
+`BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION` in
+`orchestration/master/blocked-audits/SMV1-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-BLOCKED.json`.
+The same signed-authority blocker has repeated across the decision packet,
+template, validator, intake, draft, and submission processor checkpoints. All
+safe autonomous gate-preparation work is exhausted; selecting A/B/C or D would
+be a human/source-rule authority decision. No authority lane was selected and
+no implementation, customer drawing, or production approval was authorized.
 
 Exact next action: wait for
 `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.

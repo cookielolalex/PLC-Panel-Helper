@@ -53,7 +53,7 @@
     {
       "id": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
       "name": "SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
-      "status": "PENDING_SUBMISSION_PROCESSOR_READY",
+      "status": "BLOCKED_SIGNED_DECISION_REQUIRED",
       "on_authorize_lane": "IMPLEMENT_ACCEPTED_AUTHORITY_LANE",
       "on_reject_all": "TERMINAL_REVIEW"
     },

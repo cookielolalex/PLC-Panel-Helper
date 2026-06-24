@@ -2,8 +2,8 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "25031fb4a93df94c9e48be3e5f2c37d774cd0f19",
-  "current_canonical_status": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED",
+  "current_head": "d2e4afd12373ba07b10ca8017e50a3d0618e86d5",
+  "current_canonical_status": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
   "current_stage": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
   "next_action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
   "active_thread_ids": [],
@@ -52,14 +52,25 @@
     "signed_authority_decision_validator_commit": "d18b1a6e175d1cd296ba46870b952fedc8251ea2",
     "signed_authority_decision_intake_commit": "f03e970bdfe7135dc291607cf2676177c0ae3f87",
     "signed_authority_decision_draft_commit": "7b85d5a9ebc16b91834fc2a7d3f85e560359f918",
-    "signed_authority_decision_submission_processor_commit": "25031fb4a93df94c9e48be3e5f2c37d774cd0f19"
+    "signed_authority_decision_submission_processor_commit": "25031fb4a93df94c9e48be3e5f2c37d774cd0f19",
+    "signed_authority_decision_blocked_audit_commit": "d2e4afd12373ba07b10ca8017e50a3d0618e86d5"
   },
   "expected_outputs": [
     "signed human authority decision selecting one or more authority choices, or rejecting all lanes"
   ],
-  "last_heartbeat": "2026-06-24T18:07:39.8495750+08:00",
+  "last_heartbeat": "2026-06-24T18:12:23.1653462+08:00",
   "retries": {},
-  "blockers": [],
+  "blockers": [
+    {
+      "classification": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION_REQUIRED",
+      "status": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+      "blocked_audit": "orchestration/master/blocked-audits/SMV1-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-BLOCKED.json",
+      "strict_blocked_audit_threshold_met": true,
+      "autonomous_progress_exhausted": true,
+      "required_external_input": "signed authority decision selecting A/B/C or D",
+      "resume_action": "process signed decision with scripts/process_signed_authority_decision.py"
+    }
+  ],
   "audit_state": {
     "T0": "INCONCLUSIVE_LOW_COVERAGE",
     "safety_and_implementation_integrity": "PASS",
@@ -75,7 +86,8 @@
     "signed_authority_decision_validator": "SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED",
     "signed_authority_decision_intake": "SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED",
     "signed_authority_decision_draft": "UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED",
-    "signed_authority_decision_submission_processor": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED"
+    "signed_authority_decision_submission_processor": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED",
+    "signed_authority_decision_blocked_audit": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION"
   },
   "merge_state": {
     "pending_child_commits": [],
@@ -91,9 +103,10 @@
       "d18b1a6e175d1cd296ba46870b952fedc8251ea2",
       "f03e970bdfe7135dc291607cf2676177c0ae3f87",
       "7b85d5a9ebc16b91834fc2a7d3f85e560359f918",
-      "25031fb4a93df94c9e48be3e5f2c37d774cd0f19"
+      "25031fb4a93df94c9e48be3e5f2c37d774cd0f19",
+      "d2e4afd12373ba07b10ca8017e50a3d0618e86d5"
     ],
-    "last_merge_result": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED"
+    "last_merge_result": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION"
   },
   "pending_worktrees": [
     {
@@ -115,7 +128,7 @@
   "latest_verified_test_result": {
     "command": "python scripts/run_tests.py",
     "status": "PASS",
-    "verified_at": "2026-06-24T18:07:39.8495750+08:00"
+    "verified_at": "2026-06-24T18:12:23.1653462+08:00"
   },
   "scoped_workflow_freeze_results": {
     "legacy_baseline_024": "PASS",

@@ -463,3 +463,7 @@
   validation, intake, and summary artifacts together. The current unsigned
   draft was processed as expected-fail evidence, preserving the signed-human
   authority wait state and all no-implementation/no-drawing gates.
+- Recorded a strict blocked audit for the signed human/source-rule authority
+  decision gate. All safe autonomous gate-preparation work is complete; the
+  remaining queued task requires an external signed decision selecting `A`,
+  `B`, `C`, or `D`.

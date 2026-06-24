@@ -5,7 +5,7 @@ Status: initialized.
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
 Current canonical status:
-`SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`.
+`BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
 
 Verified checkpoint:
 
@@ -22,6 +22,22 @@ Verified checkpoint:
 
 Next action:
 `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+
+Strict blocked audit:
+
+- Blocked audit commit: `d2e4afd`.
+- Blocked audit:
+  `orchestration/master/blocked-audits/SMV1-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-BLOCKED.json`.
+- Status:
+  `BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+- The same signed-authority requirement repeated across the packet, template,
+  validator, intake, draft, and submission processor checkpoints.
+- The remaining queued task is `role=human_decision`; selecting `A`, `B`, `C`,
+  or `D` cannot be done autonomously by the coordinator.
+- No authority lane was selected.
+- No implementation, source manifest, rule, source-root, private,
+  completed-reference, customer drawing, PDF, DXF, or DWG artifact was changed
+  or generated.
 
 The next step requires a signed human/source-rule authority decision. Any
 valid signed decision must pass the validator and then the neutral intake

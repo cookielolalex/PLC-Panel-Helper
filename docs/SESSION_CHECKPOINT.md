@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: signed source/rule authority decision submission processor
-ready; signed human authority decision still required.
+Current phase: blocked at signed source/rule authority decision gate; signed
+human authority decision required.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`.
+Current status: `BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
 
 Current candidate: `1110101`.
 
@@ -531,6 +531,24 @@ Signed authority decision submission processor:
   decision.
 - Full tests: `PASS`.
 - Legacy, active sheetmetal-v1, and topology-stage scoped freezes: `PASS`.
+- No authority lane was selected.
+- No implementation code, rule, source manifest, source root, `.private`
+  artifact, completed reference, customer drawing, PDF, DXF, or DWG was
+  changed or generated.
+
+Strict blocked audit:
+
+- Blocked audit:
+  `orchestration/master/blocked-audits/SMV1-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-BLOCKED.json`.
+- Status:
+  `BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+- Reason: the queued task is `role=human_decision` and requires selecting
+  authority choices `A`, `B`, `C`, or `D`. The coordinator has already prepared
+  the packet, template, validator, intake router, unsigned draft, and
+  submission processor.
+- Resume condition: provide a signed authority decision, then process it with
+  `scripts/process_signed_authority_decision.py` and follow the resulting
+  intake `next_action`.
 - No authority lane was selected.
 - No implementation code, rule, source manifest, source root, `.private`
   artifact, completed reference, customer drawing, PDF, DXF, or DWG was

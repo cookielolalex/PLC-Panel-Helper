@@ -19,7 +19,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`
+`BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`
 
 Active goal:
 
@@ -40,6 +40,9 @@ Current qualification state:
 - A signed-authority decision submission processor is prepared. It writes
   validation, intake, and summary artifacts together, and the current unsigned
   draft submission fails closed as expected.
+- The coordinator has recorded a strict blocked audit because all safe
+  autonomous gate-preparation work is exhausted and the remaining queued task
+  is a signed human/source-rule authority decision.
 - No source/rule lane is accepted autonomously.
 - This is not engineering capability success, production approval, or drawing
   generation authorization.
@@ -84,6 +87,10 @@ Signed authority decision submission processor:
 - `reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/submission_summary.json`
 - `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission_processor_summary.json`
 - `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-SUBMISSION-PROCESSOR.json`
+
+Blocked audit:
+
+- `orchestration/master/blocked-audits/SMV1-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-BLOCKED.json`
 
 Authority choices:
 

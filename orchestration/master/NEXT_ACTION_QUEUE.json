@@ -5,9 +5,9 @@
       "task_id": "SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION",
       "stage_id": "SOURCE_RULE_APPROVAL_BRANCH",
       "role": "human_decision",
-      "status": "PENDING",
+      "status": "BLOCKED_EXTERNAL_INPUT_REQUIRED",
       "agent_id": "USER_OR_SIGNED_AUTHORITY",
-      "starting_commit": "25031fb4a93df94c9e48be3e5f2c37d774cd0f19",
+      "starting_commit": "d2e4afd12373ba07b10ca8017e50a3d0618e86d5",
       "action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
       "expected_result_path": "repository decision ledger entry or signed user instruction selecting authority choices; unsigned draft available at reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft.json; template available at reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.md; processor available at scripts/process_signed_authority_decision.py; validator available at scripts/validate_signed_authority_decision.py; intake router available at scripts/prepare_signed_authority_intake.py",
       "hard_requirements": [
