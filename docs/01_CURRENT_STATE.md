@@ -1,12 +1,12 @@
 # Current State
 
-Current phase: sheetmetal-first modular foundation migration.
+Current phase: one-project sheetmetal requalification Phase 0 complete.
 
 Accepted release: none.
 
-Current candidate: `sheetmetal-v1-modular-foundation`.
+Current candidate: `deterministic-one-project-candidate-selection`.
 
-Current status: `SHEETMETAL_MODULAR_FOUNDATION_READY_FOR_ONE_PROJECT_CALIBRATION`.
+Current status: `ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -28,7 +28,9 @@ method-specific blockers without relaxing the `ALLOWED_EVAL` standard; `D-0024`
 accepts the detector v4.1 sealed gate and authorizes minimized corpus-wide
 individual screening; `D-0025` accepts
 `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1` as the active V1 goal and creates
-new `sheetmetal-v1` namespaces. These amendments do not weaken
+new `sheetmetal-v1` namespaces; `D-0026` accepts frozen workflow manifests as
+scope-bound and commit-anchored, separating legacy baseline-024 verification
+from active sheetmetal-v1 verification. These amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -221,8 +223,18 @@ addendum resolves the auditor-local Git/Python tool limitations and the
 migration-report status wording drift. No private source root or completed
 drawing was inspected by the audit.
 
-Exact next action: run one-project sheetmetal calibration using only a newly
-requalified `SHEETMETAL_ALLOWED_EVAL` sanitized bundle. Do not begin the new
-baseline, do not generate a real customer sheet-metal drawing during
-qualification setup, and do not use completed references or post-design labels
-as generator input.
+Scoped freeze result after `D-0026`: legacy baseline-024 verification passes
+against historical anchor commit `fac44321491633181f1fa53a062084d072b0b582`
+through `evals/baseline-024/frozen_workflow_attestation.json`; the active
+sheetmetal-v1 workflow freeze passes through
+`evals/sheetmetal-v1/frozen_workflow_manifest.json`; and
+`reports/sheetmetal-v1/revised_phase0_verification.json` records
+`ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`. Current `AGENTS.md` is
+not compared to the legacy baseline-024 expected hash.
+
+Exact next action: continue directly into
+`DETERMINISTIC_ONE_PROJECT_CANDIDATE_SELECTION`. Select exactly one candidate
+using metadata-only ranking, freeze the selection before opening
+completed-reference content, process private files only with local
+deterministic procedures, build and verify a new sheetmetal-v1 sanitized
+bundle, run the independent audit, and do not generate a customer drawing.

@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: sheetmetal-first modular foundation migration.
+Current phase: one-project sheetmetal requalification Phase 0 complete.
 
 Accepted release: none.
 
@@ -8,7 +8,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `SHEETMETAL_MODULAR_FOUNDATION_READY_FOR_ONE_PROJECT_CALIBRATION`.
+Current status: `ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`.
 
 Legacy workflow status: the detector-v4.1 three-output qualification track is
 preserved as historical evidence. Its last legacy status remains
@@ -30,6 +30,17 @@ Verification at migration:
 - Baseline generation attempts remain `0`.
 - No real customer drawing was generated.
 
+Revised Phase-0 verification:
+
+- Legacy scoped freeze: `LEGACY_BASELINE_024_FROZEN_WORKFLOW_PROVENANCE_PASS`.
+- Legacy anchor: `fac44321491633181f1fa53a062084d072b0b582`.
+- Active scoped freeze: `SHEETMETAL_V1_ACTIVE_WORKFLOW_FREEZE_PASS`.
+- Active anchor: `ab955b854e31d37666445f5a62ee6556f85f1352`.
+- Revised Phase-0 gate:
+  `ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`.
+- Evidence:
+  `reports/sheetmetal-v1/revised_phase0_verification.json`.
+
 Implemented modules:
 
 - source evidence role/chronology filter;
@@ -46,6 +57,7 @@ Implemented modules:
 
 New specs:
 
+- `docs/specs/FROZEN_WORKFLOW_SCOPE_AND_LINEAGE_POLICY.md`
 - `docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md`
 - `docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md`
 - `docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md`
@@ -80,11 +92,9 @@ artifacts.
 
 Exact next action:
 
-Run one-project sheetmetal calibration setup. Select or requalify exactly one
-candidate as `SHEETMETAL_ALLOWED_EVAL` using the new qualification policy,
-source-role chronology review, source guard, source-review quorum, sanitized
-bundle verification, and reference isolation. Do not begin the new baseline.
-Do not generate a real customer sheet-metal drawing until the one-project
-calibration gate explicitly authorizes it. Do not expose completed references,
-post-design labels, private filenames, raw workbook contents, OCR text, or
-customer drawing content to generator-facing artifacts.
+Continue directly into `DETERMINISTIC_ONE_PROJECT_CANDIDATE_SELECTION`. Select
+exactly one candidate using metadata-only ranking, freeze that selection before
+opening completed-reference content, process private files only through local
+deterministic procedures, qualify the effective reference package, classify
+source role and chronology, build and verify a sheetmetal-v1 sanitized bundle,
+run the independent audit, and do not generate a customer drawing.

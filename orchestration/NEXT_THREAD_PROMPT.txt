@@ -17,7 +17,7 @@ Read the canonical checkpoint files, especially:
 
 Current status:
 
-`SHEETMETAL_MODULAR_FOUNDATION_READY_FOR_ONE_PROJECT_CALIBRATION`
+`ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`
 
 Active goal:
 
@@ -31,17 +31,28 @@ qualification objective unless the user explicitly asks for legacy work.
 
 Starting verification:
 
-- Expected starting HEAD for the migration was `a4311e7`; the verified
-  migration starting HEAD was `a193abc3e702d1750d40585180d8839fefd920c2`.
+- Expected request HEAD was `b55ed7625cfaad4eccffda9c4bc0d1c1cd109c4d`;
+  current work is a documented descendant.
 - A pre-existing untracked file, `scripts/run_reference_detection_v4_corpus_screening.py`,
   was left untouched.
-- Full repository tests must pass before new implementation.
+- Full repository tests passed in revised Phase 0.
 - Independent sheetmetal-v1 audit is recorded as `PASS_WITH_RESIDUAL_RISKS`;
   coordinator addendum resolves auditor-local Git/Python limitations and the
   migration-report status wording drift.
 - `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
 - Source roots remain read-only by policy.
 - Baseline generation attempts must remain `0`.
+
+Scoped freeze state:
+
+- `D-0026` accepts frozen workflow manifests as scope-bound and commit-anchored.
+- Legacy baseline-024 provenance passes at historical anchor
+  `fac44321491633181f1fa53a062084d072b0b582`.
+- Active sheetmetal-v1 workflow freeze passes at current descendant of active
+  anchor `ab955b854e31d37666445f5a62ee6556f85f1352`.
+- Evidence is in `evals/baseline-024/frozen_workflow_attestation.json`,
+  `evals/sheetmetal-v1/frozen_workflow_manifest.json`, and
+  `reports/sheetmetal-v1/revised_phase0_verification.json`.
 
 Implemented sheetmetal-v1 foundation:
 
@@ -65,9 +76,10 @@ Qualification state:
 
 Exact next action:
 
-Run one-project sheetmetal calibration setup. Requalify exactly one candidate
-under `SHEETMETAL_ALLOWED_EVAL` using the new policy and only local,
-deterministic processes for private files. Keep completed references and
-post-design labels isolated from generator input. Do not start the new baseline
-and do not generate a real customer sheet-metal drawing until the one-project
-calibration gate authorizes it.
+Continue directly into `DETERMINISTIC_ONE_PROJECT_CANDIDATE_SELECTION`. Select
+exactly one candidate using metadata-only ranking, freeze selection before
+opening completed-reference content, process private files only with local
+deterministic procedures, qualify the effective reference package, classify
+source role and chronology, build and verify a sheetmetal-v1 sanitized bundle,
+run the independent audit, do not start a new baseline, and do not generate a
+customer drawing.

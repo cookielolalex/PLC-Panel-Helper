@@ -1,0 +1,154 @@
+{
+  "schema_version": "sheetmetal-v1-revised-phase0-v1",
+  "status": "ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS",
+  "checked_at": "2026-06-24T05:35:34+00:00",
+  "expected_request_head": "b55ed7625cfaad4eccffda9c4bc0d1c1cd109c4d",
+  "actual_head": "75e1fbb20d8ec2dc38e18ec97fffe17b41a9d21b",
+  "head_policy": "documented_descendant",
+  "scoped_freeze_results": {
+    "legacy": {
+      "status": "PASS",
+      "successful_status": "LEGACY_BASELINE_024_FROZEN_WORKFLOW_PROVENANCE_PASS",
+      "manifest_sha256": "D4C319005B2ABD4253B9FC9C2859E3C859B1C76E41952184DF1B867A3705C329",
+      "resolved_historical_anchor_commit": "fac44321491633181f1fa53a062084d072b0b582",
+      "verified_file_count": 15,
+      "temporary_worktree_cleanup": {
+        "worktree_path": "tmp\\frozen_workflow_verification\\legacy-baseline-024",
+        "worktree_removed": true,
+        "git_worktree_prune_status": "PASS",
+        "verification_root_removed": true,
+        "remaining_path_exists": false
+      }
+    },
+    "active": {
+      "status": "PASS",
+      "successful_status": "SHEETMETAL_V1_ACTIVE_WORKFLOW_FREEZE_PASS",
+      "manifest_sha256": "C92FD6A026A3EC67C679DEDFC3C18E0C203CCB41FCE5F23E33C3E94050D954AC",
+      "anchor_commit": "ab955b854e31d37666445f5a62ee6556f85f1352",
+      "current_head": "75e1fbb20d8ec2dc38e18ec97fffe17b41a9d21b",
+      "verified_file_count": 47
+    }
+  },
+  "worktree_status_before_report_write": {
+    "status_stdout": [
+      "?? scripts/run_reference_detection_v4_corpus_screening.py"
+    ],
+    "tracked_clean": true,
+    "tracked_entries": [],
+    "untracked_paths": [
+      "scripts/run_reference_detection_v4_corpus_screening.py"
+    ],
+    "only_permitted_untracked_file": true
+  },
+  "tests": {
+    "status": "PASS",
+    "command": "python scripts/run_tests.py",
+    "test_count": 23
+  },
+  "accepted_legacy_bundle_hashes": {
+    "status": "PASS",
+    "bundle_hash_file_count": 13,
+    "project_ids": [
+      "1110101",
+      "1110103",
+      "1110104",
+      "1110203",
+      "1110204",
+      "1110205",
+      "1110405",
+      "1110410",
+      "1110704",
+      "1110801",
+      "1120207",
+      "1120305",
+      "1120308"
+    ],
+    "checked_file_count": 131,
+    "failure_count": 0,
+    "failures": []
+  },
+  "privacy": {
+    "approval_status": "NOT_APPROVED",
+    "privacy_file_sha256": "EC70B7AB47DDBB23EC029E7E5BF0F744C96DAB641DA2056FB4CD4B1619F3489E"
+  },
+  "no_generation_check": {
+    "status": "PASS",
+    "forbidden_generated_artifact_hits": []
+  },
+  "leakage_check": {
+    "status": "PASS",
+    "scanned_generator_facing_namespaces": [
+      "manifests/sheetmetal-v1",
+      "orchestration/sheetmetal-v1",
+      "evals/sheetmetal-v1"
+    ],
+    "forbidden_token_hits": [],
+    "excluded_synthetic_fixture_hits": [],
+    "non_generator_audit_prose_mentions": [
+      {
+        "path": "reports/sheetmetal-v1/independent_audit.md",
+        "token": "REF-COMPLETE-001",
+        "classification": "synthetic audit prose, not generator input"
+      },
+      {
+        "path": "reports/sheetmetal-v1/independent_audit.md",
+        "token": "completed-reference-secret",
+        "classification": "synthetic audit prose, not generator input"
+      },
+      {
+        "path": "reports/sheetmetal-v1/independent_audit.md",
+        "token": "post-design-secret",
+        "classification": "synthetic audit prose, not generator input"
+      }
+    ]
+  },
+  "phase0_gate_checks": [
+    {
+      "id": "legacy_scope",
+      "status": "PASS",
+      "successful_status": "LEGACY_BASELINE_024_FROZEN_WORKFLOW_PROVENANCE_PASS"
+    },
+    {
+      "id": "active_scope",
+      "status": "PASS",
+      "successful_status": "SHEETMETAL_V1_ACTIVE_WORKFLOW_FREEZE_PASS"
+    },
+    {
+      "id": "head_lineage",
+      "status": "PASS",
+      "expected_request_head": "b55ed7625cfaad4eccffda9c4bc0d1c1cd109c4d",
+      "actual_head": "75e1fbb20d8ec2dc38e18ec97fffe17b41a9d21b"
+    },
+    {
+      "id": "tracked_worktree_clean",
+      "status": "PASS"
+    },
+    {
+      "id": "permitted_untracked_only",
+      "status": "PASS"
+    },
+    {
+      "id": "full_tests",
+      "status": "PASS",
+      "command": "python scripts/run_tests.py",
+      "runner": "bundled python executable"
+    },
+    {
+      "id": "accepted_legacy_bundle_hashes",
+      "status": "PASS"
+    },
+    {
+      "id": "privacy_not_approved",
+      "status": "PASS",
+      "approval_status": "NOT_APPROVED"
+    },
+    {
+      "id": "no_real_sheetmetal_v1_generation",
+      "status": "PASS"
+    },
+    {
+      "id": "no_completed_reference_leakage",
+      "status": "PASS"
+    }
+  ]
+}

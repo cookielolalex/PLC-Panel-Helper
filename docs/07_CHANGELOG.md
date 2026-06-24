@@ -236,3 +236,18 @@
 - Recorded independent sheetmetal-v1 audit
   `PASS_WITH_RESIDUAL_RISKS` and coordinator addendum resolving auditor-local
   Git/Python limitations plus the migration-report status wording drift.
+- Accepted decision `D-0026`, making frozen workflow manifests scope-bound and
+  commit-anchored instead of global current-tree checks.
+- Added `docs/specs/FROZEN_WORKFLOW_SCOPE_AND_LINEAGE_POLICY.md` and
+  `scripts/verify_frozen_workflow.py` with regression coverage for legacy and
+  active scoped freeze verification.
+- Resolved legacy baseline-024 historical anchor
+  `fac44321491633181f1fa53a062084d072b0b582` and recorded
+  `evals/baseline-024/frozen_workflow_attestation.json` without rewriting the
+  old manifest.
+- Created `evals/sheetmetal-v1/frozen_workflow_manifest.json`, anchored at
+  `ab955b854e31d37666445f5a62ee6556f85f1352`, covering 47 stable active
+  workflow files and superseding no historical manifest.
+- Recorded revised Phase-0 evidence:
+  `ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`. The next action is
+  `DETERMINISTIC_ONE_PROJECT_CANDIDATE_SELECTION`.

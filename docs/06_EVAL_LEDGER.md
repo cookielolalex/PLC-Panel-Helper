@@ -464,3 +464,35 @@ Evidence: `evals/fixtures/sheetmetal-v1/complete_pipeline_fixture.json`,
 `schemas/accessory_rule.schema.json`,
 `schemas/drawing_provenance_map.schema.json`, and
 `reports/sheetmetal-v1/phase0_checkpoint_verification.json`.
+
+## sheetmetal-v1 scoped frozen workflow Phase 0
+
+Status: `ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`.
+
+Decision: `D-0026`.
+
+Purpose: replace invalid current-tree comparison against the legacy
+baseline-024 manifest with two scoped freeze checks.
+
+Legacy scope result: `LEGACY_BASELINE_024_FROZEN_WORKFLOW_PROVENANCE_PASS`.
+The historical anchor is `fac44321491633181f1fa53a062084d072b0b582`; all 15
+legacy frozen hashes reproduce in a detached temporary worktree, including the
+legacy `AGENTS.md` hash, and cleanup passed.
+
+Active scope result: `SHEETMETAL_V1_ACTIVE_WORKFLOW_FREEZE_PASS`. The active
+manifest anchors sheetmetal-v1 workflow semantics at
+`ab955b854e31d37666445f5a62ee6556f85f1352` and verifies 47 stable active
+workflow files at current descendant HEAD `75e1fbb20d8ec2dc38e18ec97fffe17b41a9d21b`.
+
+Revised Phase-0 gate: legacy scope pass, active scope pass, current HEAD as a
+documented descendant of request HEAD `b55ed7625cfaad4eccffda9c4bc0d1c1cd109c4d`,
+tracked worktree clean before report write, only the known untracked legacy
+script present, full `scripts/run_tests.py` pass, accepted legacy bundle hashes
+pass for 13 bundle hash files, privacy `NOT_APPROVED`, no real sheetmetal-v1
+generation artifacts, and no generator-facing completed-reference leakage.
+
+Evidence: `docs/specs/FROZEN_WORKFLOW_SCOPE_AND_LINEAGE_POLICY.md`,
+`scripts/verify_frozen_workflow.py`,
+`evals/baseline-024/frozen_workflow_attestation.json`,
+`evals/sheetmetal-v1/frozen_workflow_manifest.json`, and
+`reports/sheetmetal-v1/revised_phase0_verification.json`.
