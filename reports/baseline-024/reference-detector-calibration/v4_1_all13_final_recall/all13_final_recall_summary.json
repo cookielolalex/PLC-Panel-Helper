@@ -1,0 +1,42 @@
+{
+  "schema_version": "reference_detector_v4_1_all13_final_recall_v1",
+  "generated_at": "2026-06-24T03:35:20+00:00",
+  "detector_version": "target_output_detection_v4_1_local_layout_prior_recovery",
+  "task_id": "B024-RDCAL-V4-1-ALL13-FINAL-RECALL",
+  "privacy_mode": "PRIVATE_INPUT_OCR_DISABLED",
+  "status": "PASS",
+  "known_positive_count": 13,
+  "project_level_all_three_recall": {
+    "detected": 13,
+    "expected": 13,
+    "recall": 1.0
+  },
+  "per_type_recall": {
+    "PRODUCTION_DRAWING": {
+      "detected": 13,
+      "expected": 13,
+      "recall": 1.0
+    },
+    "PUNCH_DRAWING": {
+      "detected": 13,
+      "expected": 13,
+      "recall": 1.0
+    },
+    "SHEETMETAL_DRAWING": {
+      "detected": 13,
+      "expected": 13,
+      "recall": 1.0
+    }
+  },
+  "private_ocr_page_count": 0,
+  "private_content_external_transmission_count": 0,
+  "temporary_render_cleanup_result": "PASS",
+  "raw_content_persistence_result": "PASS",
+  "generator_isolation_result": "PASS",
+  "source_review_blindness_result": "PASS",
+  "known_positive_project_ids_persisted": false,
+  "known_positive_file_ids_persisted": false,
+  "detailed_detector_outputs_persisted": false,
+  "temporary_detail_outputs_deleted": true,
+  "aggregate_failure_classes": {}
+}

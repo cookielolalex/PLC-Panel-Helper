@@ -1,0 +1,45 @@
+{
+  "schema_version": "reference_detector_v4_1_sealed_holdout_audit_v1",
+  "generated_at": "2026-06-24T03:33:19+00:00",
+  "detector_version": "target_output_detection_v4_1_local_layout_prior_recovery",
+  "task_id": "B024-RDCAL-V4-1-SEALED-HOLDOUT",
+  "privacy_mode": "PRIVATE_INPUT_OCR_DISABLED",
+  "status": "PASS",
+  "holdout_project_count": 5,
+  "project_level_all_three_recall": {
+    "detected": 5,
+    "expected": 5,
+    "recall": 1.0
+  },
+  "per_type_recall": {
+    "PRODUCTION_DRAWING": {
+      "detected": 5,
+      "expected": 5,
+      "recall": 1.0
+    },
+    "PUNCH_DRAWING": {
+      "detected": 5,
+      "expected": 5,
+      "recall": 1.0
+    },
+    "SHEETMETAL_DRAWING": {
+      "detected": 5,
+      "expected": 5,
+      "recall": 1.0
+    }
+  },
+  "private_ocr_page_count": 0,
+  "private_content_external_transmission_count": 0,
+  "temporary_render_cleanup_result": "PASS",
+  "raw_content_persistence_result": "PASS",
+  "generator_isolation_result": "PASS",
+  "source_review_blindness_result": "PASS",
+  "holdout_identity_persisted": false,
+  "holdout_project_ids_persisted": false,
+  "holdout_file_ids_persisted": false,
+  "detailed_detector_outputs_persisted": false,
+  "temporary_detail_outputs_deleted": true,
+  "holdout_manifest_hash": "B1C250E5D4A9AD48B9BBB7409B57774373FEDEC0591587EDDB3A0E27A4571E16",
+  "aggregate_failure_classes": {},
+  "corpus_screening_authorized": true
+}
