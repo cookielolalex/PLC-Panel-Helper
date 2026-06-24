@@ -319,8 +319,8 @@ def discover_local_capabilities(skip: bool = False) -> dict[str, Any]:
         }
     deps = bundled_dependency_root()
     search_dirs = [
-        deps / "bin",
         deps / "native" / "poppler" / "Library" / "bin",
+        deps / "bin",
         deps / "native" / "git" / "cmd",
     ]
     binaries = [
