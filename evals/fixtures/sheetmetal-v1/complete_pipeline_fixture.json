@@ -1,0 +1,329 @@
+{
+  "fixture_id": "SMV1-SYNTH-COMPLETE-001",
+  "project_id": "SYNTH-SMV1-001",
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "forbidden_generator_tokens": [
+    "REF-COMPLETE-001",
+    "completed-reference-secret",
+    "post-design-secret"
+  ],
+  "source_evidence": [
+    {
+      "evidence_id": "EVID-REQ-001",
+      "source_role": "CONTRACT_REQUIREMENT",
+      "chronology_status": "PRE_DESIGN",
+      "generator_input_eligible": true,
+      "contains_completed_reference_content": false,
+      "source_label": "synthetic requirement sheet"
+    },
+    {
+      "evidence_id": "EVID-MAT-001",
+      "source_role": "MATERIAL_REQUIREMENT",
+      "chronology_status": "PRE_DESIGN",
+      "generator_input_eligible": true,
+      "contains_completed_reference_content": false,
+      "source_label": "synthetic material list"
+    },
+    {
+      "evidence_id": "EVID-PO-001",
+      "source_role": "PROCUREMENT_EVIDENCE",
+      "chronology_status": "DURING_DESIGN",
+      "generator_input_eligible": true,
+      "contains_completed_reference_content": false,
+      "source_label": "synthetic purchase order"
+    },
+    {
+      "evidence_id": "EVID-PANEL-001",
+      "source_role": "PANEL_ALLOCATION_SOURCE",
+      "chronology_status": "PRE_DESIGN",
+      "generator_input_eligible": true,
+      "contains_completed_reference_content": false,
+      "source_label": "synthetic allocation requirement"
+    },
+    {
+      "evidence_id": "EVID-POST-001",
+      "source_role": "POST_DESIGN_ALLOCATION_LABEL",
+      "chronology_status": "POST_DESIGN",
+      "generator_input_eligible": false,
+      "contains_completed_reference_content": false,
+      "source_label": "post-design-secret"
+    },
+    {
+      "evidence_id": "REF-COMPLETE-001",
+      "source_role": "COMPLETED_SHEETMETAL_REFERENCE",
+      "chronology_status": "AFTER_COMPLETION",
+      "generator_input_eligible": false,
+      "contains_completed_reference_content": true,
+      "source_label": "completed-reference-secret"
+    }
+  ],
+  "source_facts": [
+    {
+      "fact_id": "FACT-FAN-FAMILY",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "family",
+      "component_key": "fan_main",
+      "value": "FAN",
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FAN-MODEL",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "model",
+      "component_key": "fan_main",
+      "value": "UF-6017",
+      "raw_value": "UF6017",
+      "status": "NORMALIZED_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FAN-MFR",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "manufacturer",
+      "component_key": "fan_main",
+      "value": "ACME",
+      "raw_value": "Acme Fan Co.",
+      "status": "NORMALIZED_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FAN-GEOM",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "component_geometry",
+      "component_key": "fan_main",
+      "value": {
+        "width_mm": 120,
+        "height_mm": 120,
+        "depth_mm": 40
+      },
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FAN-SURFACE",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "permitted_surfaces",
+      "component_key": "fan_main",
+      "value": [
+        "DOOR"
+      ],
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FAN-REQ-QTY",
+      "evidence_id": "EVID-REQ-001",
+      "fact_type": "required_qty",
+      "component_key": "fan_main",
+      "value": 1,
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FAN-ORDERED-QTY",
+      "evidence_id": "EVID-PO-001",
+      "fact_type": "ordered_qty",
+      "component_key": "fan_main",
+      "value": 2,
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FAN-ASSIGNMENT",
+      "evidence_id": "EVID-PANEL-001",
+      "fact_type": "panel_assignment",
+      "component_key": "fan_main",
+      "value": "PANEL-A",
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FILTER-FAMILY",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "family",
+      "component_key": "fan_filter_explicit",
+      "value": "ACCESSORY",
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FILTER-MODEL",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "model",
+      "component_key": "fan_filter_explicit",
+      "value": "FILTER-GRILLE-120",
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FILTER-PARENT",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "explicit_accessory_for",
+      "component_key": "fan_filter_explicit",
+      "value": "fan_main",
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-FILTER-REQ-QTY",
+      "evidence_id": "EVID-REQ-001",
+      "fact_type": "required_qty",
+      "component_key": "fan_filter_explicit",
+      "value": 1,
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-BREAKER-FAMILY",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "family",
+      "component_key": "breaker_conflict",
+      "value": "BREAKER",
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-BREAKER-MODEL-A",
+      "evidence_id": "EVID-REQ-001",
+      "fact_type": "model",
+      "component_key": "breaker_conflict",
+      "value": "BRK-A",
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-BREAKER-MODEL-B",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "model",
+      "component_key": "breaker_conflict",
+      "value": "BRK-B",
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-BREAKER-GEOM",
+      "evidence_id": "EVID-MAT-001",
+      "fact_type": "component_geometry",
+      "component_key": "breaker_conflict",
+      "value": {
+        "width_mm": 100,
+        "height_mm": 160,
+        "depth_mm": 90
+      },
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-BREAKER-REQ-QTY",
+      "evidence_id": "EVID-REQ-001",
+      "fact_type": "required_qty",
+      "component_key": "breaker_conflict",
+      "value": 1,
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-BREAKER-ASSIGNMENT",
+      "evidence_id": "EVID-PANEL-001",
+      "fact_type": "panel_assignment",
+      "component_key": "breaker_conflict",
+      "value": "PANEL-A",
+      "status": "EXPLICIT_SOURCE"
+    },
+    {
+      "fact_id": "FACT-POST-LABEL-ASSIGNMENT",
+      "evidence_id": "EVID-POST-001",
+      "fact_type": "panel_assignment",
+      "component_key": "fan_main",
+      "value": "PANEL-POST",
+      "status": "POST_DESIGN_ALLOCATION_LABEL"
+    },
+    {
+      "fact_id": "FACT-RAW-DIMS",
+      "evidence_id": "EVID-REQ-001",
+      "fact_type": "raw_panel_dimension_string",
+      "value": "2300W*800H*800D",
+      "status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "fact_id": "FACT-REF-CONTENT",
+      "evidence_id": "REF-COMPLETE-001",
+      "fact_type": "panel_assignment",
+      "component_key": "fan_main",
+      "value": "PANEL-REF",
+      "status": "COMPLETED_REFERENCE_ONLY"
+    }
+  ],
+  "panel_definitions": [
+    {
+      "panel_id": "PANEL-A",
+      "width_mm": 800,
+      "height_mm": 2300,
+      "depth_mm": 800,
+      "evidence_ids": [
+        "EVID-REQ-001"
+      ],
+      "status": "EXPLICIT_SOURCE",
+      "mounting_surfaces": [
+        {
+          "surface_id": "DOOR-A",
+          "surface_type": "DOOR"
+        },
+        {
+          "surface_id": "BACKPLATE-A",
+          "surface_type": "BACKPLATE"
+        }
+      ],
+      "doors": [
+        {
+          "door_id": "DOOR-A",
+          "hinge": "LEFT"
+        }
+      ],
+      "compartments": [
+        {
+          "compartment_id": "MAIN",
+          "width_mm": 800,
+          "height_mm": 2300
+        }
+      ]
+    }
+  ],
+  "accessory_rules": [
+    {
+      "rule_id": "RULE-FAN-FILTER-001",
+      "version": "1.0.0",
+      "applicable_component_family": "FAN",
+      "condition": "door-mounted ventilation fan",
+      "generated_requirement": {
+        "family": "ACCESSORY",
+        "model": "FILTER-GRILLE-120",
+        "required_qty": 1
+      },
+      "generated_cutout": {
+        "shape": "RECTANGLE",
+        "width_mm": 120,
+        "height_mm": 120
+      },
+      "evidence_basis": "synthetic verified component-library rule",
+      "confidence": 0.9,
+      "priority": 20,
+      "conflict_behavior": "explicit_source_wins"
+    }
+  ],
+  "placement_requests": [
+    {
+      "component_key": "fan_main",
+      "panel_id": "PANEL-A",
+      "mounting_surface_id": "DOOR-A",
+      "x_mm": 80,
+      "y_mm": 120,
+      "width_mm": 120,
+      "height_mm": 120,
+      "choice_id": "CHOICE-PLACEMENT-FAN-001"
+    },
+    {
+      "component_key": "breaker_conflict",
+      "panel_id": "PANEL-A",
+      "mounting_surface_id": "BACKPLATE-A",
+      "x_mm": 760,
+      "y_mm": 100,
+      "width_mm": 100,
+      "height_mm": 160,
+      "choice_id": "CHOICE-PLACEMENT-BREAKER-BAD",
+      "soft_objective_override_attempted": true
+    }
+  ],
+  "datum_references": [
+    {
+      "datum_id": "DATUM-PANEL-A-TOP-LEFT",
+      "panel_id": "PANEL-A",
+      "origin": "TOP_LEFT",
+      "status": "DESIGN_CHOICE"
+    }
+  ]
+}
