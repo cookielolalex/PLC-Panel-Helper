@@ -1,0 +1,67 @@
+{
+  "audit_id": "SMV1-1110101-INDEPENDENT-COMPONENT-GRAPH-AUDIT",
+  "audited_commit": "abc5a86306aa3a68d54d0e516e849c2e95e6a1f5",
+  "byte_only_mismatches": [
+    {
+      "artifact_name": "source_fact_model.json",
+      "authorized_difference_class": "json_serialization_only",
+      "byte_match": false,
+      "canonical_json_sha256": "36CC054C65DF022F15D6F829174B6E8A018B643CC27A092B30F15CD191DF76D6",
+      "canonical_match": true,
+      "engineering_semantic_fields_changed": false,
+      "excluded_fields": [],
+      "original_sha256": "23A1F4731794A3F6574B709567859351323AFB53F6F77849937F1E77809E5738",
+      "rerun_sha256": "6BED64203E6A692987C49E6FBB8B6655490AA21627C60771FF5E9D1EE0799436",
+      "structural_diff_count": 0,
+      "structural_diff_status": "PASS_PARSED_JSON_EQUAL"
+    },
+    {
+      "artifact_name": "component_register_validation.json",
+      "authorized_difference_class": "json_serialization_only",
+      "byte_match": false,
+      "canonical_json_sha256": "53F74976134041E3868AFA9E36CF86DAFEBF0BE4567688A232ED77DE0B48E8DD",
+      "canonical_match": true,
+      "engineering_semantic_fields_changed": false,
+      "excluded_fields": [],
+      "original_sha256": "AD1917C52019D2BDE516B414333D2761CA9C0E31DEAC537940486EE39C0D6B69",
+      "rerun_sha256": "E8C19F6DF4B03539E42D32B520B7057812619610188CC4B83054740A0EB070E9",
+      "structural_diff_count": 0,
+      "structural_diff_status": "PASS_PARSED_JSON_EQUAL"
+    }
+  ],
+  "candidate_id": "1110101",
+  "canonicalizer": {
+    "engineering_significant_fields_removed": false,
+    "excluded_fields": [],
+    "implementation_in_active_workflow_freeze": true,
+    "implementation_path": "scripts/sheetmetal_v1.py",
+    "implementation_sha256": "0EC46258AA23C916E18190069B73FDBC45E7C38144159E907A8DB07D98A64AB2",
+    "policy": "json-sort-keys-compact-separators",
+    "policy_preexisted_adjudication": true,
+    "preexisting_policy_evidence": [
+      {
+        "commit": "aec0875",
+        "path": "docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md"
+      },
+      {
+        "commit": "2ead289",
+        "path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json"
+      }
+    ],
+    "reason": "Canonicalization parses full JSON and serializes with sorted keys and compact separators; no field exclusion list was applied."
+  },
+  "created_at": "2026-06-24T17:10:00+08:00",
+  "final_adjudication": "PASS",
+  "recorded_result": {
+    "artifact_count": 9,
+    "byte_identical_matches": 7,
+    "byte_only_mismatch_count": 2,
+    "canonical_matches": 9
+  },
+  "schema_version": "sheetmetal-v1.determinism_adjudication.v1",
+  "status": "PASS",
+  "third_rerun": {
+    "reason": "The two byte-only mismatches were parsed-JSON equal with identical canonical hashes and no excluded fields, so the frozen protocol did not require a third rerun.",
+    "required_by_protocol": false
+  }
+}

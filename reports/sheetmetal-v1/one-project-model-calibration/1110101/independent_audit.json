@@ -1,0 +1,215 @@
+{
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "audit_id": "SMV1-1110101-INDEPENDENT-COMPONENT-GRAPH-AUDIT",
+  "audited_commit": "abc5a86306aa3a68d54d0e516e849c2e95e6a1f5",
+  "audited_commit_short": "abc5a86",
+  "calibration_status": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS",
+  "candidate_id": "1110101",
+  "created_at": "2026-06-24T17:10:00+08:00",
+  "determinism_adjudication_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/determinism_adjudication.json",
+  "evaluator_metrics": {
+    "denominator_zero_recall_reported": false,
+    "every_metric_has_numerator_denominator_scorable_coverage_confidence": true,
+    "generator_artifacts_modified_after_freeze": false,
+    "low_coverage_modules": [
+      {
+        "denominator": 53,
+        "later_module": "RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION",
+        "module": "panel_assignment_resolution",
+        "numerator": 0,
+        "qualification_effect": "NOT_BLOCKING_UNDER_FROZEN_PROTOCOL",
+        "status": "SAFE_UNRESOLVED_SOURCE_UNAVAILABLE"
+      },
+      {
+        "denominator": 0,
+        "later_module": "MODEL_SPECIFIC_LIBRARY_RULE_EXPANSION",
+        "module": "accessory_rule_scorability",
+        "numerator": 0,
+        "qualification_effect": "NOT_BLOCKING_DENOMINATOR_ZERO_NOT_REPORTED_AS_RECALL",
+        "status": "NOT_SCORABLE_NO_APPROVED_ACCESSORY_RULES"
+      }
+    ],
+    "reference_content_opened_for_metric_values": false
+  },
+  "evidence_hashes": {
+    "accessory_cutout_summary": {
+      "path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json",
+      "sha256": "D7FEA1B61CBA23102C49975C56E2ACD628C2C48F00C2CDCABADC7E037F690B8B"
+    },
+    "accessory_rules": {
+      "path": "rules/sheetmetal-v1/accessory_rules.synthetic.json",
+      "sha256": "9D7737D3C345BFFE429092B1F8936B8963BA7D7414BD13D78283999FCB6AD7F9"
+    },
+    "active_workflow_manifest": {
+      "path": "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+      "sha256": "D45B722FE76E25390A5C0943F8DCFBFB7615D129DF68B9275BE5E279F28B480F"
+    },
+    "bundle_hashes": {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/bundle_hashes.json",
+      "sha256": "1B65A8EDEAE43BB763821D329145FA78D11BDD664AD640BC4BEA8D9B6A24D029"
+    },
+    "bundle_manifest": {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/bundle_manifest.json",
+      "sha256": "B0C11E1AACAFEC39B2A87C345AFACA2BE8E698210B7BF129C67358C17AD3FBFF"
+    },
+    "bundle_provenance_map": {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/provenance_map.json",
+      "sha256": "C617EF27CF0739F7EC1B183CA475D7ECB8606FA78E92075CBA68C87261948D4A"
+    },
+    "bundle_verification": {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/verification_results.json",
+      "sha256": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699"
+    },
+    "calibration_protocol": {
+      "path": "manifests/sheetmetal-v1/one-project-model-calibration/1110101/calibration_protocol.json",
+      "sha256": "E4B5C03BFF852B02F1FB6E4B1AF83CFE117A2E66EBCFF71961921137D209A53C"
+    },
+    "candidate_selection": {
+      "path": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
+      "sha256": "5EBD8164F0B02576644EA53B61018896DEAC7BF58C017E174F5F15A0303419E5"
+    },
+    "component_register_summary": {
+      "path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.json",
+      "sha256": "7189CF56EBEEF5CD1AA3B3B64C4A59720AF4867B3E7CBD7C7ED6365DF76F4A09"
+    },
+    "effective_reference_package": {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/effective_sheetmetal_reference_package.json",
+      "sha256": "8DCE3211CB566B307FAEF12A38FDF428BC6DB1DE0E7D18B8C1A9327910BCC18F"
+    },
+    "evaluator_metrics_summary": {
+      "path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.json",
+      "sha256": "AF6C1B71DC6D240199C2F9F908FD92F18AD77889B70839E7FE6542841FB4AE2B"
+    },
+    "generator_freeze_summary": {
+      "path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json",
+      "sha256": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05"
+    },
+    "legacy_workflow_attestation": {
+      "path": "evals/baseline-024/frozen_workflow_attestation.json",
+      "sha256": "955D050219724D7F8D6177211D9EEBC898A346C25150BD7A167B61D7BCD4463D"
+    },
+    "master_spec": {
+      "path": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+      "sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09"
+    },
+    "panel_graph_summary": {
+      "path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json",
+      "sha256": "13A7BC1EB1A2FC36DA376A27845643E48C0B236402C362EA13E9B1E62B2E3F62"
+    },
+    "privacy_approval": {
+      "path": "docs/PRIVACY_APPROVAL.md",
+      "sha256": "EC70B7AB47DDBB23EC029E7E5BF0F744C96DAB641DA2056FB4CD4B1619F3489E"
+    },
+    "private_workspace_boundary": {
+      "path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/private_workspace_boundary.json",
+      "sha256": "0CD9478AF65181B6966F963A9ED9D22FE681B3F5774A5D43D1B3CD6F1E127FAE"
+    },
+    "requalification_queue": {
+      "path": "manifests/sheetmetal-v1/requalification_queue.json",
+      "sha256": "E090CBDB5972D19238F744008E9827C674A5C0BFBEBA69DE55C626CA0DA6CEBE"
+    },
+    "run_tests_script": {
+      "path": "scripts/run_tests.py",
+      "sha256": "1024705D799F7C9E6A25AAEE4FC22A84B1E07C3ED0BFE65D994CD84A031CB994"
+    },
+    "sheetmetal_v1_script": {
+      "path": "scripts/sheetmetal_v1.py",
+      "sha256": "0EC46258AA23C916E18190069B73FDBC45E7C38144159E907A8DB07D98A64AB2"
+    },
+    "source_authority_rules": {
+      "path": "rules/source_authority_profile.json",
+      "sha256": "0382862DC9530B27A830826EC2477AA4C450B480CE40C415322982C459E02A69"
+    },
+    "source_fact_summary": {
+      "path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json",
+      "sha256": "AE205A461354C891F103ED09B9ECDE4E343EAA21298B12BAA3C665E3C37C9FAA"
+    },
+    "source_role_chronology": {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/source_role_chronology_classification.json",
+      "sha256": "9AA79023082793C3419E926486B46F5166E1102A0616E91E323D89692D7D1EB1"
+    },
+    "visible_file_manifest": {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/visible_file_manifest.json",
+      "sha256": "0BD13CDB875FEC92534AFF7C6CFACF3D001E2A4FFF517ABA2035F254F6908E79"
+    }
+  },
+  "final_adjudication": {
+    "meaning": "1110101 is accepted as a one-project calibration case for the modular component-register and graph stage only.",
+    "next_action": "RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION",
+    "not_production_ready": true,
+    "result": "PASS",
+    "sheetmetal_allowed_eval_increment": {
+      "from": 0,
+      "to": 1
+    },
+    "status_to_set": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS"
+  },
+  "final_result": "PASS",
+  "git_checkpoint": {
+    "actual_head": "abc5a86306aa3a68d54d0e516e849c2e95e6a1f5",
+    "expected_head_short": "abc5a86",
+    "head_matches_expected": true,
+    "permitted_untracked_only": true,
+    "permitted_untracked_path_touched": false,
+    "tracked_worktree_clean_before_audit_outputs": true
+  },
+  "hard_gate_adjudication_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/hard_gate_adjudication.json",
+  "hard_gate_summary": {
+    "fail_count": 0,
+    "inconclusive_count": 0,
+    "pass_count": 21
+  },
+  "input_manifest_path": "manifests/sheetmetal-v1/one-project-model-calibration/1110101/audit_input_manifest.json",
+  "lane_separation": {
+    "completed_references_absent_from_generator_inputs": true,
+    "evaluator_files_visible_only_as_metadata_after_generator_freeze": true,
+    "evaluator_findings_written_back_to_generator_outputs": false,
+    "generator_inputs_approved_sanitized_only": true,
+    "post_design_labels_absent_from_generator_inputs": true,
+    "private_content_external_transmission_count": 0,
+    "reference_derived_generator_fact_detected": false
+  },
+  "next_action": "RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION",
+  "phase_results": {
+    "accessory_and_cutout_audit": "PASS",
+    "audit_input_freeze": "PASS",
+    "checkpoint_verification": "PASS",
+    "determinism_adjudication": "PASS",
+    "evaluator_metric_adjudication": "PASS",
+    "final_adjudication": "PASS",
+    "generator_evaluator_lane_separation": "PASS",
+    "hard_gate_table": "PASS",
+    "independence_and_visibility_boundary": "PASS",
+    "panel_assignment_and_graph_audit": "PASS",
+    "provenance_and_privacy_audit": "PASS",
+    "source_fact_and_component_register_audit": "PASS"
+  },
+  "privacy_status": "NOT_APPROVED",
+  "provenance_privacy": {
+    "completed_reference_leakage_events": 0,
+    "generated_customer_drawings": 0,
+    "post_design_leakage_events": 0,
+    "private_absolute_paths_tracked": false,
+    "private_content_external_transmissions": 0,
+    "project_specific_private_model_tracked": false,
+    "temporary_render_leftovers": 0,
+    "tracked_private_artifacts": 0
+  },
+  "schema_version": "sheetmetal-v1.independent_component_graph_audit.v1",
+  "summary_counts": {
+    "accessory_requirement_count": 0,
+    "component_instance_count": 53,
+    "component_type_count": 53,
+    "cutout_count": 0,
+    "deterministic_byte_identical_matches": "7/9",
+    "deterministic_canonical_matches": "9/9",
+    "graph_edge_count": 107,
+    "graph_node_count": 56,
+    "source_fact_count": 87,
+    "source_line_accounting_count": 125,
+    "source_line_count": 125,
+    "unresolved_component_count": 53
+  },
+  "task": "INDEPENDENT_ONE_PROJECT_COMPONENT_GRAPH_AUDIT_AND_ADJUDICATION",
+  "temporary_status": "ONE_PROJECT_COMPONENT_GRAPH_INDEPENDENT_AUDIT_IN_PROGRESS"
+}

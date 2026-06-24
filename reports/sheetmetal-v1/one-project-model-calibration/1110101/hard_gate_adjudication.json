@@ -1,0 +1,166 @@
+{
+  "audit_id": "SMV1-1110101-INDEPENDENT-COMPONENT-GRAPH-AUDIT",
+  "audited_commit": "abc5a86306aa3a68d54d0e516e849c2e95e6a1f5",
+  "candidate_id": "1110101",
+  "created_at": "2026-06-24T17:10:00+08:00",
+  "hard_gates": [
+    {
+      "evidence_hash": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json",
+      "gate_id": "schemas_pass",
+      "neutral_explanation": "Schema validations in all stage summaries passed with zero schema errors.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "1024705D799F7C9E6A25AAEE4FC22A84B1E07C3ED0BFE65D994CD84A031CB994",
+      "evidence_path": "scripts/run_tests.py",
+      "gate_id": "full_tests_pass",
+      "neutral_explanation": "Independent rerun of scripts/run_tests.py exited 0 with final PASS.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "D45B722FE76E25390A5C0943F8DCFBFB7615D129DF68B9275BE5E279F28B480F",
+      "evidence_path": "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+      "gate_id": "active_freeze_pass",
+      "neutral_explanation": "Independent active sheetmetal-v1 scoped freeze verifier exited 0 with PASS.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "955D050219724D7F8D6177211D9EEBC898A346C25150BD7A167B61D7BCD4463D",
+      "evidence_path": "evals/baseline-024/frozen_workflow_attestation.json",
+      "gate_id": "legacy_freeze_pass",
+      "neutral_explanation": "Independent legacy baseline-024 scoped freeze verifier exited 0 with PASS.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699",
+      "evidence_path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/verification_results.json",
+      "gate_id": "sanitized_bundle_verification_pass",
+      "neutral_explanation": "Selected sanitized generator bundle verifier exited 0 and committed verification status is PASS.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "5EBD8164F0B02576644EA53B61018896DEAC7BF58C017E174F5F15A0303419E5",
+      "evidence_path": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
+      "gate_id": "candidate_remained_1110101",
+      "neutral_explanation": "Candidate selection remains locked to neutral candidate ID 1110101.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json",
+      "gate_id": "generator_reference_separation",
+      "neutral_explanation": "Generator hard gate records completed-reference leakage into generator artifacts as 0.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json",
+      "gate_id": "post_design_label_separation",
+      "neutral_explanation": "Generator hard gate records post-design leakage into generator artifacts as 0.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json",
+      "gate_id": "private_transmission_count_zero",
+      "neutral_explanation": "Private-content transmission count is 0 across frozen stage summaries.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json",
+      "gate_id": "unsupported_critical_facts_zero",
+      "neutral_explanation": "Unsupported critical generated facts count is 0.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "AE205A461354C891F103ED09B9ECDE4E343EAA21298B12BAA3C665E3C37C9FAA",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json",
+      "gate_id": "silently_discarded_source_lines_zero",
+      "neutral_explanation": "Authorized source line accounting is complete; silently discarded authorized source lines count is 0.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "AE205A461354C891F103ED09B9ECDE4E343EAA21298B12BAA3C665E3C37C9FAA",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json",
+      "gate_id": "quantity_overwrite_violations_zero",
+      "neutral_explanation": "Quantity-stage overwrite violations count is 0; quantity stages remain separated.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "13A7BC1EB1A2FC36DA376A27845643E48C0B236402C362EA13E9B1E62B2E3F62",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json",
+      "gate_id": "graph_referential_failures_zero",
+      "neutral_explanation": "Panel graph validation reports 0 dangling edges and PASS schema validation.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json",
+      "gate_id": "forbidden_functional_edges_zero",
+      "neutral_explanation": "Forbidden functional edges in inventory-only mode count is 0; the single function edge is retained as UNVERIFIED.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "13A7BC1EB1A2FC36DA376A27845643E48C0B236402C362EA13E9B1E62B2E3F62",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json",
+      "gate_id": "unsupported_panel_assignments_zero",
+      "neutral_explanation": "Panel assignment produced 0 rejected or unsupported assignments and left unsupported components unresolved.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "D7FEA1B61CBA23102C49975C56E2ACD628C2C48F00C2CDCABADC7E037F690B8B",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json",
+      "gate_id": "duplicate_inferred_accessories_zero",
+      "neutral_explanation": "Duplicate inferred accessory count is 0.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "D7FEA1B61CBA23102C49975C56E2ACD628C2C48F00C2CDCABADC7E037F690B8B",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json",
+      "gate_id": "unsupported_cutout_geometry_zero",
+      "neutral_explanation": "No cutout geometry was emitted; unsupported final cutout dimensions count is 0 by absence.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "C87D12F4F6FCA43C58B024ED8E3C21F18128C663B42BF98FFF8054D44694C406",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/determinism_adjudication.json",
+      "gate_id": "deterministic_canonical_rerun_pass",
+      "neutral_explanation": "All 9 artifacts matched canonically; the two byte-only mismatches are parsed-JSON equal with no excluded fields.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "0CD9478AF65181B6966F963A9ED9D22FE681B3F5774A5D43D1B3CD6F1E127FAE",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/private_workspace_boundary.json",
+      "gate_id": "private_git_leakage_zero",
+      "neutral_explanation": "git check-ignore passed and tracked private path count is 0.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "955D050219724D7F8D6177211D9EEBC898A346C25150BD7A167B61D7BCD4463D",
+      "evidence_path": "evals/baseline-024/frozen_workflow_attestation.json",
+      "gate_id": "temporary_cleanup_pass",
+      "neutral_explanation": "Temporary verifier worktree cleanup passed; independent audit temporary scan files were removed.",
+      "status": "PASS"
+    },
+    {
+      "evidence_hash": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05",
+      "evidence_path": "reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json",
+      "gate_id": "customer_drawing_generation_count_zero",
+      "neutral_explanation": "Real customer drawings generated count is 0 and sheetmetal-v1 PDF/DXF/DWG count is 0.",
+      "status": "PASS"
+    }
+  ],
+  "qualification_critical_inconclusive_count": 0,
+  "required_counts": {
+    "completed_reference_leakage_events": 0,
+    "generated_customer_drawings": 0,
+    "post_design_leakage_events": 0,
+    "private_content_external_transmissions": 0,
+    "temporary_render_leftovers": 0,
+    "tracked_private_artifacts": 0
+  },
+  "schema_version": "sheetmetal-v1.hard_gate_adjudication.v1",
+  "status": "PASS"
+}

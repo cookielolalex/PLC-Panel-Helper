@@ -1,0 +1,119 @@
+{
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "audited_commit": "abc5a86306aa3a68d54d0e516e849c2e95e6a1f5",
+  "audited_commit_short": "abc5a86",
+  "candidate_id": "1110101",
+  "contains_project_facts_component_values_quantities_filenames_or_private_paths": false,
+  "created_at": "2026-06-24T17:10:00+08:00",
+  "evaluator_reference_chronology_confirmation": {
+    "adjudication": "PASS_METADATA_ONLY_REFERENCE_PACKAGE_NO_METRIC_VALUE_CONTENT_OPENED",
+    "generator_artifacts_modified_after_freeze": false,
+    "generator_freeze_summary_hash_seen_by_evaluator": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05",
+    "generator_outputs_frozen_before_evaluator_metrics": true,
+    "generator_receives_reference_content": false,
+    "generator_receives_reference_hashes": false,
+    "reference_content_opened_for_metric_values": false
+  },
+  "input_hashes": {
+    "accessory_cutout_validation_hash": "CF7DF2955F414690F03253401B158E7A85AD8922659433039F70D85F7B2E52A9",
+    "accessory_reconciliation_hash": "905873D62249831598177FC12DBE7225C28299202945CC4D764126995A6BAFB1",
+    "calibration_protocol_hash": "E4B5C03BFF852B02F1FB6E4B1AF83CFE117A2E66EBCFF71961921137D209A53C",
+    "component_register_hash": "D0C354C964D3D9D614E5BCE300F877DE3E43F6E7C770CA9461C7A5DF9481E247",
+    "component_register_validation_hash": "AD1917C52019D2BDE516B414333D2761CA9C0E31DEAC537940486EE39C0D6B69",
+    "evaluator_metrics_summary_hash": "AF6C1B71DC6D240199C2F9F908FD92F18AD77889B70839E7FE6542841FB4AE2B",
+    "generator_freeze_summary_hash": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05",
+    "graph_hash": "B3A68E597703AA8C8B6C29998F8D28A811912A071BCA34C7018F4BDB38479CB1",
+    "legacy_workflow_attestation_hash": "955D050219724D7F8D6177211D9EEBC898A346C25150BD7A167B61D7BCD4463D",
+    "panel_assignment_hash": "1531D1DFA7BD6AB329AD6964C38367C9C0094AD8B32AE2802176712F3D957FD8",
+    "panel_graph_validation_hash": "02209B427FFDD9C1947F7A22CD77D43E714C9930A72177DF68A9C289F1C1D9E8",
+    "provenance_map_hash": "C617EF27CF0739F7EC1B183CA475D7ECB8606FA78E92075CBA68C87261948D4A",
+    "sanitized_bundle_hashes_hash": "1B65A8EDEAE43BB763821D329145FA78D11BDD664AD640BC4BEA8D9B6A24D029",
+    "sanitized_bundle_manifest_hash": "B0C11E1AACAFEC39B2A87C345AFACA2BE8E698210B7BF129C67358C17AD3FBFF",
+    "sanitized_bundle_verification_hash": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699",
+    "source_fact_output_hash": "23A1F4731794A3F6574B709567859351323AFB53F6F77849937F1E77809E5738",
+    "source_fact_validation_hash": "8B9DD11E67CCBFD8E9DED710D917A9D736B963FCC331FBC51382AF2AB0849B16",
+    "validation_report_hashes": {
+      "accessory_cutout_validation": "CF7DF2955F414690F03253401B158E7A85AD8922659433039F70D85F7B2E52A9",
+      "component_register_validation": "AD1917C52019D2BDE516B414333D2761CA9C0E31DEAC537940486EE39C0D6B69",
+      "panel_graph_validation": "02209B427FFDD9C1947F7A22CD77D43E714C9930A72177DF68A9C289F1C1D9E8",
+      "source_fact_validation": "8B9DD11E67CCBFD8E9DED710D917A9D736B963FCC331FBC51382AF2AB0849B16"
+    },
+    "workflow_hash": "D45B722FE76E25390A5C0943F8DCFBFB7615D129DF68B9275BE5E279F28B480F",
+    "worksheet_fingerprint_count": 6,
+    "worksheet_fingerprint_set_sha256": "1CF3E0C3B3D89FC7C44B218AA6061E2240D87EBCC7B91C7EEDDA58BEFC54778F",
+    "worksheet_fingerprints": [
+      {
+        "file_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10",
+        "worksheet_fingerprint": "28E271B6FDCC69803E8A0570D1BAFA567707B17D76D24EC9C36FA59AA698DC1E"
+      },
+      {
+        "file_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10",
+        "worksheet_fingerprint": "A3D531EC187F9EC71A69CF9EDD21BF1A102173997230A800123EE36AB0ABCD4F"
+      },
+      {
+        "file_id": "SRC-ALL-PROJECTS-FILE-7D1ACA253B10",
+        "worksheet_fingerprint": "B8A23A73CCB24A5DAFDC37CBD2323897CCBB08DFC775CA0640A44CA76BF77467"
+      },
+      {
+        "file_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D",
+        "worksheet_fingerprint": "C2FF4FDFB449B452E127ECDD8E0416C36EDDB6E7168C0BAD2EF9CD2C8285291C"
+      },
+      {
+        "file_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D",
+        "worksheet_fingerprint": "2327F3E6ECEE912E215AF094F55DE408AB2C6FEEB3ABDC7FD50B51592DA9CE91"
+      },
+      {
+        "file_id": "SRC-ALL-PROJECTS-FILE-DE24411C260D",
+        "worksheet_fingerprint": "54A7F3467D202254816CDDA76C992CF40888AD969355429892E7625654B0F933"
+      }
+    ]
+  },
+  "manifest_id": "SMV1-1110101-INDEPENDENT-AUDIT-INPUTS",
+  "rule_library_versions": {
+    "source_authority_profile_sha256": "0382862DC9530B27A830826EC2477AA4C450B480CE40C415322982C459E02A69",
+    "synthetic_accessory_rules_sha256": "9D7737D3C345BFFE429092B1F8936B8963BA7D7414BD13D78283999FCB6AD7F9"
+  },
+  "schema_version": "sheetmetal-v1.audit_input_manifest.v1",
+  "schema_versions": {
+    "accessory_cutout_summary": "sheetmetal-v1.accessory_cutout_summary.v1",
+    "calibration_protocol": "sheetmetal-v1.one_project_component_graph_calibration_protocol.v1",
+    "component_register_summary": "sheetmetal-v1.component_register_summary.v1",
+    "evaluator_metrics_summary": "sheetmetal-v1.evaluator_metrics_summary.v1",
+    "generator_freeze_summary": "sheetmetal-v1.generator_freeze_summary.v1",
+    "panel_graph_summary": "sheetmetal-v1.panel_graph_summary.v1",
+    "schemas/accessory_rule.schema.json": "9505E54CCDC68170C3AAC9CA34D1974B8CAF41F81357E9B415964B8D5C76E7F1",
+    "schemas/component_geometry.schema.json": "89083FECFE383CDC31BFC5DC9F9C77AB486211AF8381F3F8AFF980785255943B",
+    "schemas/component_instance.schema.json": "579680E0DEB7AC62250D0F6527E68860918F8F8D32D8C14918F4BC05482A3A00",
+    "schemas/component_register.schema.json": "47B0FD25EC7CBB3D425B5E85607EBBA69D73A2C460FB273B85673DE96B794E90",
+    "schemas/component_type.schema.json": "0060CC947686DBA3072A6DBF527A07858F3668D1992D9651F3CD6518395CA2F5",
+    "schemas/drawing_provenance_map.schema.json": "E081DFC9DBF539FA7F8869C1CC9D2C6E9BD747F3271D2C27824AD0A925E0D5A3",
+    "schemas/generator_allowlist.schema.json": "EA6BE8C2C1903D2FBE444758819B4F1CCA0FFCF5BA884438CAC90238E117A7A8",
+    "schemas/generator_input_manifest.schema.json": "A6DE65391D66BCB9369FA17F7A15C455B5017E31DD6B811D8B63272A6614B18B",
+    "schemas/panel_assignment.schema.json": "F6797948493BEC059333262C9F5F44AFB9D7C86E9836D3954E188CC55C2E5D51",
+    "schemas/panel_constraint_model.schema.json": "749392CBB5F8E1E5EF13E15E80363EEBE51A34EEC7F89608230663D132F6FEB3",
+    "schemas/panel_definition.schema.json": "1BC014A81C09CC5DDDFD5910CF9DF733853FE637E63DF60BD123D152EA5D5084",
+    "schemas/panel_graph.schema.json": "08E2C5E9DD42E02A8D7399DD40ECA38AC3D5B8D964016C459DAD9C915FCB074D",
+    "schemas/sanitized_source_manifest.schema.json": "A3898E6580EB5AC44E26BC577AB7B388BDC6883A6ABD581AECD2E7B424C0E646",
+    "schemas/sheetmetal_drawing_model.schema.json": "233E3D77E352DE4AD18A306C226471747CB39D0C79FDF99DD269179D088031DF",
+    "schemas/source_approval.schema.json": "8567933CF66ADFB0031ED8D2EC8FA93EF227712FB41F7A8257C8498A808F179E",
+    "schemas/source_authority_profile.schema.json": "C9A150200624ED3646BEA8D238ED7981ABA7B378BA1C2EF4B5B3CD69C182380D",
+    "schemas/source_evidence.schema.json": "9585B866E421058553BEC0E10DFC018165CEFFF3BEE1AFE576D9558F3504F42F",
+    "schemas/source_fact.schema.json": "5568E0255C2EB62438630D2A3CD27576176C5C3E0F1E6682E94DCDC0B48DB9E3",
+    "schemas/source_fact_model.schema.json": "317467D7A9433496752655B0E85A1B6070AF2B077BA62B7C7092D12AEDCE2897",
+    "schemas/source_guard_decision.schema.json": "D26DDEADE91C30B1DB79A7F0DE1AB90DAD0E6AA389A81CA7E7BE8296E8622D9B",
+    "schemas/source_manifest.schema.json": "400E86770BBA98DF0571E0D5BC7C547648D238F9EBF401ED82A6285C3348CCDA",
+    "schemas/source_quorum_adjudication.schema.json": "678DA3E1CC57B0F23D26068962F753813560B438ECC9C03937694F71B3457D06",
+    "schemas/source_quorum_review.schema.json": "BB8A3AAD6EA3D3F735DC6A5CA7470D59D9CFDB1D0139BAE3FD828CB90FE02CEC",
+    "schemas/source_review_batch.schema.json": "470FF5AD516E3DFF31B581E8F220C616BF5872C808943D1979D36A127256C49E",
+    "schemas/workbook_sheet_adjudication.schema.json": "1E4CB9581EDE3D26B15F2C5EE89984FAF24FCC0251FB86904E914118013BE6E8",
+    "source_fact_summary": "sheetmetal-v1.source_fact_extraction_summary.v1"
+  },
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "status": "FROZEN_FOR_INDEPENDENT_AUDIT",
+  "workflow": {
+    "active_manifest_hash": "D45B722FE76E25390A5C0943F8DCFBFB7615D129DF68B9275BE5E279F28B480F",
+    "active_manifest_last_updated_decision_id": "D-0033",
+    "active_manifest_path": "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+    "active_manifest_scope": "SHEETMETAL_V1_ACTIVE"
+  }
+}
