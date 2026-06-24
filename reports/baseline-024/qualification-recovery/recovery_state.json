@@ -1,9 +1,9 @@
 {
   "schema_version": "qualification_recovery_state_v1",
-  "generated_at": "2026-06-24T02:04:35+00:00",
+  "generated_at": "2026-06-24T02:34:56+00:00",
   "baseline_id": "baseline-024-cycle-000",
   "decision_id": "D-0021",
-  "status": "RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE",
+  "status": "DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS",
   "privacy": {
     "approval_status": "NOT_APPROVED",
     "private_reference_pages_sent_to_external_or_inherited_models": 0,
@@ -12,7 +12,7 @@
     "private_reference_classifier_rule": "GPT-5 synthetic vision success is not a local private-reference classifier."
   },
   "checkpoint_verification": {
-    "git_head": "6d43a24f8c1d4150c2f81e0f3791ffd9df6b3983",
+    "git_head": "2abd734797c284af4f9ebf6ad9b0a146685ee753",
     "worktree_clean": true,
     "git_status_short": "",
     "accepted_bundle_hashes": {
@@ -52,10 +52,10 @@
       "baseline_run_directories": []
     },
     "task_registry": {
-      "row_count": 268,
+      "row_count": 273,
       "status_counts": {
         "NEEDS_PARENT_REVIEW": 20,
-        "ACCEPTED": 247,
+        "ACCEPTED": 252,
         "NOT_VERIFIED": 1
       },
       "baseline_generation_like_rows": 0
@@ -145,11 +145,27 @@
       "requested_classifier": "inherited_parent_model_with_local_image_input",
       "actual_classifier": "GPT-5_SYNTHETIC_ONLY_NOT_LOCAL_PRIVATE_REFERENCE_CLASSIFIER",
       "repeat_policy": "DO_NOT_SEND_PRIVATE_REFERENCE_PAGES_WHILE_PRIVACY_NOT_APPROVED"
+    },
+    {
+      "strategy_id": "windows_media_ocr_local_synthetic_execution_proof",
+      "status": "PASS",
+      "strategy_signature": "99BFB8A7E2074EE7CD92B9D4603F07F229A039A752814AD6AC9C9AFDDE4D8320",
+      "evidence_hashes": [
+        {
+          "path": "reports\\baseline-024\\reference-detector-calibration\\windows_media_ocr_local_probe.json",
+          "sha256": "D7479F234CEB7306FF8A38D8CD00D7F08E8C1A356A310CCF3BFC0CFDE339D62B"
+        }
+      ],
+      "requested_classifier": "windows_media_ocr_local_signal_bridge",
+      "actual_classifier": "Windows.Media.Ocr.OcrEngine",
+      "repeat_policy": "DO_NOT_PERSIST_OR_PRINT_OCR_TEXT"
     }
   ],
   "detector_calibration": {
     "current_detector_version": "target_output_detection_v3_page_content_isolated",
     "current_detector_performance_status": "DETECTOR_V3_RECALL_FAIL",
+    "candidate_detector_version": "target_output_detection_v4_local_multisignal_recovery",
+    "candidate_detector_status": "CREATED_AWAITING_CALIBRATION_PARTITION",
     "regression_gate_behavior_status": "PASS_BLOCKS_KNOWN_FAILING_DETECTOR",
     "detector_performance_status": "FAIL",
     "known_positive_all_three_recall": "0/13",
@@ -172,7 +188,11 @@
     },
     "false_negative_output_type_count": 31,
     "negative_controls_executed": 0,
-    "detector_v4_created": false,
+    "detector_v4_created": true,
+    "v4_calibration_protocol_frozen": true,
+    "v4_negative_control_count": 24,
+    "windows_media_ocr_synthetic_status": "PASS",
+    "windows_media_ocr_private_page_status": "SKIPPED_NETWORK_DISABLE_BOUNDARY_NOT_ENFORCED",
     "corpus_wide_screening_authorized": false
   },
   "candidate_queues": {
@@ -845,7 +865,7 @@
   },
   "local_capabilities": {
     "status": "LOCAL_CAPABILITY_DISCOVERY_COMPLETE",
-    "generated_at": "2026-06-24T02:04:34+00:00",
+    "generated_at": "2026-06-24T02:34:55+00:00",
     "probe_scope": "versions and availability only; no private project data opened",
     "python": {
       "executable": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
@@ -999,14 +1019,14 @@
     }
   },
   "next_selected_action": {
-    "action_id": "CREATE_DETECTOR_V4_LOCAL_MULTISIGNAL_RECOVERY_PROTOTYPE",
+    "action_id": "RUN_DETECTOR_V4_CALIBRATION_PARTITION",
     "phase": "PHASE_B",
     "status": "SELECTED",
-    "reason": "Vision classifier unavailability is a recoverable branch blocker; local Poppler/pypdf/Pillow or OCR/CV capabilities must drive the next detector prototype without privacy-boundary changes."
+    "reason": "Detector v4 and its frozen calibration protocol exist; run only the implementation-facing calibration partition before sealed holdout or corpus screening."
   },
   "progress_since_previous_iteration": {
     "previous_status": "VISION_CLASSIFIER_UNAVAILABLE",
-    "current_status": "RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE",
+    "current_status": "DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS",
     "allowed_eval_count_changed": false,
     "current_allowed_eval_count": 13,
     "deficit": 11,

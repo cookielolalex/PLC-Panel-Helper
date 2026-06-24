@@ -1,6 +1,6 @@
 # Qualification Recovery State
 
-- status: `RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE`
+- status: `DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`
 - decision: `D-0021`
 - current allowed eval: `13 / 24`
 - deficit: `11`
@@ -8,7 +8,7 @@
 - accepted bundle hashes: `PASS`
 - frozen workflow hashes: `PASS`
 - baseline generation attempts observed: `0`
-- next action: `CREATE_DETECTOR_V4_LOCAL_MULTISIGNAL_RECOVERY_PROTOTYPE`
+- next action: `RUN_DETECTOR_V4_CALIBRATION_PARTITION`
 
 ## Detector Status
 

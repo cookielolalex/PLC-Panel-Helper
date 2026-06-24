@@ -1,7 +1,7 @@
 {
   "queue_id": "qualification_recovery_queue_v1",
   "schema_version": "qualification_recovery_queue_v1",
-  "generated_at": "2026-06-24T02:04:35+00:00",
+  "generated_at": "2026-06-24T02:34:56+00:00",
   "baseline_id": "baseline-024-cycle-000",
   "decision_id": "D-0021",
   "current_allowed_eval_count": 13,
@@ -699,12 +699,17 @@
       "strategy_id": "gpt5_synthetic_vision_probe_private_reference_gate",
       "status": "VISION_CLASSIFIER_UNAVAILABLE",
       "strategy_signature": "707BEB98CEB4AA936126FEF762D5DCC2D7E083E131A4C1D3692C7C5741481F65"
+    },
+    {
+      "strategy_id": "windows_media_ocr_local_synthetic_execution_proof",
+      "status": "PASS",
+      "strategy_signature": "99BFB8A7E2074EE7CD92B9D4603F07F229A039A752814AD6AC9C9AFDDE4D8320"
     }
   ],
   "next_selected_action": {
-    "action_id": "CREATE_DETECTOR_V4_LOCAL_MULTISIGNAL_RECOVERY_PROTOTYPE",
+    "action_id": "RUN_DETECTOR_V4_CALIBRATION_PARTITION",
     "phase": "PHASE_B",
     "status": "SELECTED",
-    "reason": "Vision classifier unavailability is a recoverable branch blocker; local Poppler/pypdf/Pillow or OCR/CV capabilities must drive the next detector prototype without privacy-boundary changes."
+    "reason": "Detector v4 and its frozen calibration protocol exist; run only the implementation-facing calibration partition before sealed holdout or corpus screening."
   }
 }
