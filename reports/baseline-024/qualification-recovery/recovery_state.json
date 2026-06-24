@@ -1,9 +1,9 @@
 {
   "schema_version": "qualification_recovery_state_v1",
-  "generated_at": "2026-06-24T03:15:47+00:00",
+  "generated_at": "2026-06-24T03:45:57+00:00",
   "baseline_id": "baseline-024-cycle-000",
   "decision_id": "D-0021",
-  "status": "DETECTOR_V4_1_CALIBRATION_PASSED_HOLDOUT_PENDING",
+  "status": "DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING",
   "privacy": {
     "approval_status": "NOT_APPROVED",
     "private_reference_pages_sent_to_external_or_inherited_models": 0,
@@ -12,7 +12,7 @@
     "private_reference_classifier_rule": "GPT-5 synthetic vision success is not a local private-reference classifier."
   },
   "checkpoint_verification": {
-    "git_head": "9c28e5dfeaee8af993291aa0ed2614bbca4bab08",
+    "git_head": "286e8d47b5e980cfd82f51b99ce56e683bfd5fbd",
     "worktree_clean": true,
     "git_status_short": "",
     "accepted_bundle_hashes": {
@@ -52,10 +52,10 @@
       "baseline_run_directories": []
     },
     "task_registry": {
-      "row_count": 273,
+      "row_count": 274,
       "status_counts": {
         "NEEDS_PARENT_REVIEW": 20,
-        "ACCEPTED": 252,
+        "ACCEPTED": 253,
         "NOT_VERIFIED": 1
       },
       "baseline_generation_like_rows": 0
@@ -96,9 +96,9 @@
   "active_blockers": [
     {
       "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION",
-      "status": "ACTIVE",
+      "status": "RECOVERED_FOR_CORPUS_SCREENING",
       "recoverable": true,
-      "detail": "Detector v3 known-positive all-three recall is 0/13 with 31 false-negative output types."
+      "detail": "Detector v4.1 passed calibration positives, negatives, sealed holdout, and all-13 recall; detector v3 failure remains preserved as superseded evidence."
     },
     {
       "blocker_class": "PRIVACY_PERMISSION_REQUIRED",
@@ -108,9 +108,9 @@
     },
     {
       "blocker_class": "RECOVERABLE_OCR_LIMITATION",
-      "status": "PENDING_LOCAL_CAPABILITY_USE",
+      "status": "MITIGATED_BY_LOCAL_LAYOUT_PRIOR_PRIVATE_OCR_DISABLED",
       "recoverable": true,
-      "detail": "Image-only or no-target-text pages require local OCR/CV/layout recovery before corpus screening."
+      "detail": "Private OCR remains disabled; local layout-prior recovery is accepted for corpus screening after sealed-gate pass."
     }
   ],
   "attempted_strategies": [
@@ -177,7 +177,7 @@
     {
       "strategy_id": "target_output_detection_v4_1_local_layout_prior_recovery_calibration_and_negatives",
       "status": "CALIBRATION_PASS_NEGATIVE_PASS",
-      "strategy_signature": "E64BB5D174D817CDC5AC7107F8893D0DAD56345321E13F4C9F9AA9334494F545",
+      "strategy_signature": "4258CA04E436079EE02B25458352CD91AE296C6668B819F5DF8A5ED36261B569",
       "evidence_hashes": [
         {
           "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_calibration_partition\\calibration_partition_summary.json",
@@ -185,7 +185,7 @@
         },
         {
           "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_negative_controls\\negative_control_audit_summary.json",
-          "sha256": "3DF9A4480722ED97944DCBDA88820704650076A8468C10AA31BF0FDD48C62338"
+          "sha256": "E8A19D7DFF6DDF04163C4AE45F69B874D8230BBE26405FD8DE4BEC2424CB0A4C"
         },
         {
           "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_candidate_freeze_manifest.json",
@@ -199,35 +199,73 @@
       "requested_classifier": "local_poppler_pypdf_pillow_numpy_private_ocr_disabled",
       "actual_classifier": "target_output_detection_v4_1_local_layout_prior_recovery",
       "repeat_policy": "DO_NOT_MODIFY_BEFORE_SEALED_HOLDOUT_WITHOUT_NEW_VERSION"
+    },
+    {
+      "strategy_id": "target_output_detection_v4_1_local_layout_prior_recovery_sealed_gate",
+      "status": "SEALED_HOLDOUT_PASS_ALL13_PASS",
+      "strategy_signature": "C7FF0846357D05059D357CB6B48E36CCBBB213D6D114BDA7CB581BF1923C961C",
+      "evidence_hashes": [
+        {
+          "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_sealed_holdout\\sealed_holdout_audit_summary.json",
+          "sha256": "6D1DCB0F3EE39AA892A9CB82A22A14099AEFBEB97FEED986B5049443FD38C4FA"
+        },
+        {
+          "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_all13_final_recall\\all13_final_recall_summary.json",
+          "sha256": "16A436024F7988C5E1B749D0DA81F3E66D367CA246370EA397D4AC99FA4FA625"
+        },
+        {
+          "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_negative_controls\\negative_control_audit_summary.json",
+          "sha256": "E8A19D7DFF6DDF04163C4AE45F69B874D8230BBE26405FD8DE4BEC2424CB0A4C"
+        },
+        {
+          "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_sealed_holdout_independent_audit.md",
+          "sha256": "5B5782B703776DF7B9E6480F79087042E67F72EFD48045D8DC89366F28E82A4A"
+        }
+      ],
+      "requested_classifier": "local_poppler_pypdf_pillow_numpy_private_ocr_disabled",
+      "actual_classifier": "target_output_detection_v4_1_local_layout_prior_recovery",
+      "repeat_policy": "PROCEED_TO_CORPUS_SCREENING_WITH_AGGREGATE_OUTPUTS_ONLY"
     }
   ],
   "detector_calibration": {
     "current_detector_version": "target_output_detection_v3_page_content_isolated",
     "current_detector_performance_status": "DETECTOR_V3_RECALL_FAIL",
     "candidate_detector_version": "target_output_detection_v4_1_local_layout_prior_recovery",
-    "candidate_detector_status": "CALIBRATION_AND_NEGATIVE_CONTROLS_PASS_AWAITING_SEALED_HOLDOUT",
+    "candidate_detector_status": "SEALED_HOLDOUT_AND_ALL13_PASS_CORPUS_SCREENING_PENDING",
     "regression_gate_behavior_status": "PASS_BLOCKS_KNOWN_FAILING_DETECTOR",
     "detector_performance_status": "PASS",
-    "known_positive_all_three_recall": "CALIBRATION_PARTITION_8/8_ALL_13_PENDING_HOLDOUT_GATE",
+    "known_positive_all_three_recall": "ALL13_FINAL_RECALL_13/13_AFTER_SEALED_HOLDOUT_PASS",
     "calibration_partition_all_three_recall": {
       "detected": 8,
       "expected": 8,
       "recall": 1.0
     },
+    "sealed_holdout_status": "PASS",
+    "sealed_holdout_all_three_recall": {
+      "detected": 5,
+      "expected": 5,
+      "recall": 1.0
+    },
+    "all13_final_recall_status": "PASS",
+    "all13_final_recall": {
+      "detected": 13,
+      "expected": 13,
+      "recall": 1.0
+    },
     "per_type_recall": {
       "PRODUCTION_DRAWING": {
-        "detected": 8,
-        "expected": 8,
+        "detected": 13,
+        "expected": 13,
         "recall": 1.0
       },
       "PUNCH_DRAWING": {
-        "detected": 8,
-        "expected": 8,
+        "detected": 13,
+        "expected": 13,
         "recall": 1.0
       },
       "SHEETMETAL_DRAWING": {
-        "detected": 8,
-        "expected": 8,
+        "detected": 13,
+        "expected": 13,
         "recall": 1.0
       }
     },
@@ -239,10 +277,12 @@
     "v4_negative_control_count": 24,
     "candidate_freeze_manifest": "reports\\baseline-024\\reference-detector-calibration\\v4_1_candidate_freeze_manifest.json",
     "independent_implementation_audit": "reports\\baseline-024\\reference-detector-calibration\\v4_1_independent_implementation_audit.md",
+    "independent_sealed_gate_audit": "reports\\baseline-024\\reference-detector-calibration\\v4_1_sealed_holdout_independent_audit.md",
     "windows_media_ocr_synthetic_status": "PASS",
     "windows_media_ocr_private_page_status": "SKIPPED_NETWORK_DISABLE_BOUNDARY_NOT_ENFORCED",
-    "corpus_wide_screening_authorized": false,
-    "sealed_holdout_authorized": true
+    "corpus_wide_screening_authorized": true,
+    "sealed_holdout_authorized": false,
+    "sealed_holdout_completed": true
   },
   "candidate_queues": {
     "privacy_minimized": true,
@@ -914,7 +954,7 @@
   },
   "local_capabilities": {
     "status": "LOCAL_CAPABILITY_DISCOVERY_COMPLETE",
-    "generated_at": "2026-06-24T03:15:47+00:00",
+    "generated_at": "2026-06-24T03:45:57+00:00",
     "probe_scope": "versions and availability only; no private project data opened",
     "python": {
       "executable": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
@@ -1068,14 +1108,14 @@
     }
   },
   "next_selected_action": {
-    "action_id": "RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT",
+    "action_id": "RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING",
     "phase": "PHASE_B",
     "status": "SELECTED",
-    "reason": "Detector v4.1 passed calibration positives and real negative controls with private OCR disabled; run sealed holdout with the frozen committed candidate before corpus screening."
+    "reason": "Detector v4.1 passed calibration positives, real negative controls, sealed holdout, all-13 final recall, and independent sealed-gate audit with private OCR disabled; proceed to minimized corpus-wide individual screening."
   },
   "progress_since_previous_iteration": {
     "previous_status": "VISION_CLASSIFIER_UNAVAILABLE",
-    "current_status": "DETECTOR_V4_1_CALIBRATION_PASSED_HOLDOUT_PENDING",
+    "current_status": "DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING",
     "allowed_eval_count_changed": false,
     "current_allowed_eval_count": 13,
     "deficit": 11,

@@ -386,8 +386,43 @@ false target pages, private OCR page count `0`, external transmission count
 `PASS`, and source-review blindness `PASS`. Independent implementation audit
 passed.
 
-Generation status: not authorized. Sealed holdout, all-13 final recall,
-expanded corpus screening, source qualification, cohort freeze, and baseline
-generation have not run. The next action is
-`RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT`; holdout identities, results, and
-failure examples remain auditor-only and unavailable to tuning.
+Generation status at this checkpoint: not authorized. This section is
+superseded by the sealed-gate entry below; source qualification, cohort freeze,
+baseline generation, review, optimization, and production approval remain
+blocked.
+
+## baseline-024-cycle-000 detector v4.1 sealed gate
+
+Status: `DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING`.
+
+Purpose: complete the frozen v4.1 detector gate without exposing sealed
+holdout identities, private page content, OCR text, rendered pages, crops, or
+detailed detector outputs to implementation or generator-facing workspaces.
+
+Sealed holdout result: `PASS`. All-three recall was `5 / 5`; per-type recall
+was `5 / 5` for `PRODUCTION_DRAWING`, `SHEETMETAL_DRAWING`, and
+`PUNCH_DRAWING`; private OCR page count was `0`; external transmission count
+was `0`; holdout identities and detailed detector outputs were not persisted.
+
+All-13 final recall result: `PASS`. Known-positive all-three recall was
+`13 / 13`; per-type recall was `13 / 13`; private OCR page count was `0`;
+detailed detector outputs were not persisted.
+
+Negative controls: refreshed v4.1 real negative controls remained `PASS` with
+`24 / 24` supported controls, zero false target pages, zero false all-three
+promotions, zero electrical/source false target pages, and private OCR page
+count `0`.
+
+Independent audit: sealed-gate audit passed scoped persistence, temp-root
+absence, cleanup, aggregate-evidence, and hash checks.
+
+Evidence: `reports/baseline-024/reference-detector-calibration/v4_1_sealed_holdout/`,
+`reports/baseline-024/reference-detector-calibration/v4_1_all13_final_recall/`,
+`reports/baseline-024/reference-detector-calibration/v4_1_sealed_holdout_independent_audit.md`,
+`reports/baseline-024/qualification-recovery/recovery_state.json`, and
+`orchestration/QUALIFICATION_RECOVERY_QUEUE.json`.
+
+Generation status: not authorized. The next action is
+`RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING` with minimized detector output only.
+Source-review quorum, sanitized-bundle construction, cohort freeze, baseline
+generation, review, optimization, and production approval remain blocked.

@@ -1,7 +1,7 @@
 {
   "queue_id": "qualification_recovery_queue_v1",
   "schema_version": "qualification_recovery_queue_v1",
-  "generated_at": "2026-06-24T03:15:47+00:00",
+  "generated_at": "2026-06-24T03:45:57+00:00",
   "baseline_id": "baseline-024-cycle-000",
   "decision_id": "D-0021",
   "current_allowed_eval_count": 13,
@@ -672,9 +672,9 @@
   "active_blockers": [
     {
       "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION",
-      "status": "ACTIVE",
+      "status": "RECOVERED_FOR_CORPUS_SCREENING",
       "recoverable": true,
-      "detail": "Detector v3 known-positive all-three recall is 0/13 with 31 false-negative output types."
+      "detail": "Detector v4.1 passed calibration positives, negatives, sealed holdout, and all-13 recall; detector v3 failure remains preserved as superseded evidence."
     },
     {
       "blocker_class": "PRIVACY_PERMISSION_REQUIRED",
@@ -684,9 +684,9 @@
     },
     {
       "blocker_class": "RECOVERABLE_OCR_LIMITATION",
-      "status": "PENDING_LOCAL_CAPABILITY_USE",
+      "status": "MITIGATED_BY_LOCAL_LAYOUT_PRIOR_PRIVATE_OCR_DISABLED",
       "recoverable": true,
-      "detail": "Image-only or no-target-text pages require local OCR/CV/layout recovery before corpus screening."
+      "detail": "Private OCR remains disabled; local layout-prior recovery is accepted for corpus screening after sealed-gate pass."
     }
   ],
   "attempted_strategy_signatures": [
@@ -713,13 +713,18 @@
     {
       "strategy_id": "target_output_detection_v4_1_local_layout_prior_recovery_calibration_and_negatives",
       "status": "CALIBRATION_PASS_NEGATIVE_PASS",
-      "strategy_signature": "E64BB5D174D817CDC5AC7107F8893D0DAD56345321E13F4C9F9AA9334494F545"
+      "strategy_signature": "4258CA04E436079EE02B25458352CD91AE296C6668B819F5DF8A5ED36261B569"
+    },
+    {
+      "strategy_id": "target_output_detection_v4_1_local_layout_prior_recovery_sealed_gate",
+      "status": "SEALED_HOLDOUT_PASS_ALL13_PASS",
+      "strategy_signature": "C7FF0846357D05059D357CB6B48E36CCBBB213D6D114BDA7CB581BF1923C961C"
     }
   ],
   "next_selected_action": {
-    "action_id": "RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT",
+    "action_id": "RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING",
     "phase": "PHASE_B",
     "status": "SELECTED",
-    "reason": "Detector v4.1 passed calibration positives and real negative controls with private OCR disabled; run sealed holdout with the frozen committed candidate before corpus screening."
+    "reason": "Detector v4.1 passed calibration positives, real negative controls, sealed holdout, all-13 final recall, and independent sealed-gate audit with private OCR disabled; proceed to minimized corpus-wide individual screening."
   }
 }

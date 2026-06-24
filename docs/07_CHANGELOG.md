@@ -197,3 +197,18 @@
 - Recorded v4.1 freeze manifest and independent implementation audit. Recovery
   status is `DETECTOR_V4_1_CALIBRATION_PASSED_HOLDOUT_PENDING`; next selected
   action is `RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT`.
+- Ran v4.1 sealed holdout with minimized aggregate output only. The gate passed
+  with all-three recall `5 / 5`, each target type `5 / 5`, private OCR page
+  count `0`, external transmission count `0`, no persisted holdout identities,
+  and no detailed detector outputs.
+- Ran v4.1 all-13 final known-positive recall with minimized aggregate output
+  only. The gate passed with all-three recall `13 / 13`, each target type
+  `13 / 13`, private OCR page count `0`, and no detailed detector outputs.
+- Refreshed v4.1 real negative controls; they remained `PASS` with `24 / 24`
+  supported controls, zero false target pages, zero false all-three promotions,
+  and private OCR page count `0`.
+- Recorded independent sealed-gate audit, including scoped persistence,
+  temp-root absence, cleanup, aggregate-evidence, and hash checks.
+- Updated the recovery controller and schema. Current status is
+  `DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING`; the next selected
+  action is `RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING`.

@@ -12,7 +12,7 @@ Read the canonical checkpoint files, especially:
 
 Current status:
 
-`DETECTOR_V4_1_CALIBRATION_PASSED_HOLDOUT_PENDING`
+`DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING`
 
 Starting point for verification:
 
@@ -80,13 +80,21 @@ Detector v4/v4.1 state:
 - v4.1 passed 24 minimized real negative controls with zero false target pages,
   zero false all-three promotions, and private OCR page count `0`.
 - v4.1 freeze manifest and independent implementation audit are recorded.
+- v4.1 sealed holdout passed with all-three recall `5 / 5`, each target type
+  `5 / 5`, private OCR page count `0`, external transmission count `0`, no
+  persisted holdout identities, and no detailed detector outputs.
+- v4.1 all-13 final recall passed with all-three recall `13 / 13`, each target
+  type `13 / 13`, private OCR page count `0`, and no detailed detector outputs.
+- independent sealed-gate audit passed scoped persistence, temp-root absence,
+  cleanup, aggregate-evidence, and hash checks.
 - full repository tests pass.
 
 Exact next action:
 
-Run `RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT` with the frozen committed v4.1
-candidate. Do not start source-review quorum, sanitized-bundle construction,
-cohort freeze, baseline generation, review, optimization, or expanded corpus
-screening until the sealed holdout and the next required gates pass. Holdout
-identities, holdout results, and holdout failure examples must remain
-auditor-only and unavailable to implementation tuning.
+Run `RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING` with minimized detector output
+only. Do not start source-review quorum, sanitized-bundle construction, cohort
+freeze, baseline generation, review, optimization, or production approval until
+corpus screening identifies reference-complete candidates and the later
+source/bundle gates pass. Do not expose private OCR text, page renders, crops,
+filenames, source paths, completed drawing content, holdout identities, or
+failure examples to generator-facing or tuning workspaces.

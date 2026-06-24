@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: cycle-000 autonomous qualification recovery, detector v4 local
-calibration in progress.
+Current phase: cycle-000 autonomous qualification recovery, detector v4.1
+sealed gate passed, corpus screening pending.
 
 Accepted release: none.
 
@@ -13,7 +13,7 @@ Evaluator version for future cycle-000 work: `plc_layout_evaluator_v2_sensitivit
 
 Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
 
-Current status: `DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`.
+Current status: `DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING`.
 
 Latest evidence: `reports/baseline-024/reference-detection-v3/screening_yield.md`,
 `reports/baseline-024/reference-detection-v3/independent_audit.json`,
@@ -185,15 +185,21 @@ page count `0`, external transmission count `0`, cleanup `PASS`, raw-content
 persistence `PASS`, generator isolation `PASS`, and source-review blindness
 `PASS`. Independent implementation audit passed.
 
+V4.1 sealed gate: the sealed holdout passed with all-three recall `5 / 5`,
+per-type recall `5 / 5`, private OCR page count `0`, external transmission
+count `0`, no persisted holdout identities, and no detailed detector outputs.
+The final all-13 known-positive recall passed `13 / 13` with private OCR page
+count `0`. Refreshed real negative controls remained `PASS`. Independent
+sealed-gate audit passed scoped persistence, cleanup, aggregate evidence, and
+temp-root absence checks.
+
 No drawing workflow optimization occurred. No expanded-candidate source
 screening, sanitized bundle construction, final cohort freeze, baseline
 generation, review, or production approval occurred. Baseline generation
 attempts remain `0`.
 
-Exact next action: do not start source-review quorum, sanitized-bundle
-construction, cohort freeze, baseline generation, review, optimization,
-expanded corpus screening, or source qualification. Run
-`RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT` with the frozen committed v4.1
-candidate. Holdout identities, holdout results, private OCR text, rendered
-pages, crops, filenames, paths, hashes, and failure examples must remain
-auditor-only and unavailable to implementation tuning.
+Exact next action: run `RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING` with
+minimized aggregate/project-level detector outputs only. Do not start
+source-review quorum, sanitized-bundle construction, cohort freeze, baseline
+generation, review, optimization, or production approval until corpus screening
+identifies reference-complete candidates and the later source/bundle gates pass.

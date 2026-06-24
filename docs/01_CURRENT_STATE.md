@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: cycle-000 autonomous qualification recovery, detector v4 local
-calibration in progress.
+Current phase: cycle-000 autonomous qualification recovery, detector v4.1
+sealed gate passed, corpus screening pending.
 
 Accepted release: none.
 
 Current candidate: `baseline-024-cycle-000` reference-complete project discovery.
 
-Current status: `DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`.
+Current status: `DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING`.
 
 Accepted amendments: `D-0017` expands baseline-024 candidate discovery beyond
 the prior twenty-project metadata-only pool to the full approved development
@@ -18,8 +18,9 @@ recall calibration before reference-universe exhaustion may be declared; `D-0020
 records that GPT-5 vision children are not available for private reference-page
 classification while privacy approval remains `NOT_APPROVED`; `D-0021`
 authorizes constraint-preserving autonomous qualification recovery from
-method-specific blockers without relaxing the `ALLOWED_EVAL` standard. These
-amendments do not weaken
+method-specific blockers without relaxing the `ALLOWED_EVAL` standard; `D-0024`
+accepts the detector v4.1 sealed gate and authorizes minimized corpus-wide
+individual screening. These amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -101,9 +102,9 @@ embedded text, local Poppler rendering, Pillow/NumPy layout buckets, optional
 Windows.Media.Ocr role signals, Unicode normalization, weak metadata priors
 that cannot independently promote target status, exact duplicate grouping,
 page-level effective-set construction, and fail-closed `AMBIGUOUS` or
-`UNCLASSIFIED` outcomes. Corpus-wide screening remains unauthorized until
-calibration partition, sealed holdout, all-13 recall, negative controls, and
-independent audit pass.
+`UNCLASSIFIED` outcomes. Corpus-wide screening is now authorized only through
+the minimized v4.1 detector-screening workflow after calibration partition,
+sealed holdout, all-13 recall, negative controls, and independent audit passed.
 
 Regression coverage after `D-0021`: `scripts/run_tests.py` includes
 `test_reference_detector_v3_known_positive_recall_gate`, covering all 13 missed
@@ -173,8 +174,16 @@ transmission count `0`, cleanup `PASS`, raw-content persistence `PASS`,
 generator isolation `PASS`, and source-review blindness `PASS`. Independent
 implementation audit passed.
 
-Exact next action: do not start source screening, cohort freeze, baseline
-generation, review, optimization, corpus-wide screening, or source-quorum work.
-The next compliant action is `RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT` with the
-frozen committed v4.1 candidate. Sealed holdout identities, holdout results, and
-holdout failure examples must remain auditor-only and unavailable to tuning.
+Detector v4.1 sealed-gate update: sealed holdout passed with all-three recall
+`5 / 5`, per-type recall `5 / 5`, private OCR page count `0`, external
+transmission count `0`, no persisted holdout identities, and no detailed
+detector outputs. The final all-13 known-positive recall passed `13 / 13` with
+private OCR page count `0`. Refreshed real negative controls remained `PASS`.
+Independent sealed-gate audit passed scoped persistence, cleanup, aggregate
+evidence, and temp-root absence checks.
+
+Exact next action: run `RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING` with
+minimized aggregate/project-level detector outputs only. Do not start
+source-review quorum, sanitized-bundle construction, cohort freeze, baseline
+generation, review, optimization, or production approval until corpus screening
+identifies reference-complete candidates and the later source/bundle gates pass.
