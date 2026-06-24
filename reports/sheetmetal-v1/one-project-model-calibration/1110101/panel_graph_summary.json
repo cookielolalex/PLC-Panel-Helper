@@ -1,0 +1,61 @@
+{
+  "schema_version": "sheetmetal-v1.panel_graph_summary.v1",
+  "status": "PASS",
+  "task": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION",
+  "project_id": "1110101",
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "private_inputs": [
+    ".private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json",
+    ".private/sheetmetal-v1/1110101/component-register/component_register.json"
+  ],
+  "private_output_dir": ".private/sheetmetal-v1/1110101/panel-graph/",
+  "private_outputs": [
+    {
+      "name": "panel_assignment.json",
+      "sha256": "1531D1DFA7BD6AB329AD6964C38367C9C0094AD8B32AE2802176712F3D957FD8",
+      "git_check_ignore_status": "PASS"
+    },
+    {
+      "name": "panel_graph.json",
+      "sha256": "B3A68E597703AA8C8B6C29998F8D28A811912A071BCA34C7018F4BDB38479CB1",
+      "git_check_ignore_status": "PASS"
+    },
+    {
+      "name": "panel_graph_validation.json",
+      "sha256": "02209B427FFDD9C1947F7A22CD77D43E714C9930A72177DF68A9C289F1C1D9E8",
+      "git_check_ignore_status": "PASS"
+    }
+  ],
+  "schema_validation": {
+    "panel_assignment": "PASS",
+    "panel_graph": "PASS",
+    "panel_assignment_schema_error_count": 0,
+    "panel_graph_schema_error_count": 0
+  },
+  "counts": {
+    "assignment_count": 0,
+    "unresolved_component_count": 53,
+    "rejected_assignment_count": 0,
+    "node_count": 56,
+    "edge_count": 107,
+    "edge_type_counts": {
+      "CONNECTS_TO": 1,
+      "INSTANCE_OF": 53,
+      "REQUIRED_BY": 53
+    },
+    "dangling_edge_count": 0,
+    "inventory_only_unverified_function_edges": 1,
+    "private_content_transmission_count": 0
+  },
+  "privacy": {
+    "private_values_committed": false,
+    "private_values_printed_by_builder": false,
+    "private_outputs_tracked_by_git": false,
+    "customer_drawing_generated": false
+  },
+  "covered_by_tests": [
+    "test_sheetmetal_v1_panel_assignment_graph_from_private_models",
+    "test_sheetmetal_v1_private_workspace_boundary",
+    "test_frozen_workflow_active_scope_verifier"
+  ]
+}

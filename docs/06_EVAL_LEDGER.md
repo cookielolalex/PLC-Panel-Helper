@@ -680,3 +680,45 @@ Evidence:
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.md`,
 and
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.json`.
+
+## sheetmetal-v1 one-project panel graph
+
+Status: `PASS`.
+
+Decision: `D-0032`.
+
+Purpose: construct private panel-assignment and typed graph artifacts from the
+private `1110101` source-fact model and component register without committing
+project-specific values.
+
+Implementation: `scripts/sheetmetal_v1.py` accepts `--source-fact-model` plus
+`--component-register` for panel-assignment and inventory-only graph
+construction. It writes `panel_assignment.json`, `panel_graph.json`, and
+`panel_graph_validation.json` only to the requested private output directory.
+
+Private run: inputs were the private source-fact model and private component
+register; output was written to `.private/sheetmetal-v1/1110101/panel-graph/`.
+All private outputs are ignored by Git and no `.private` path is tracked.
+
+Validation result: panel assignment schema `PASS`; panel graph schema `PASS`;
+assignment count `0`; unresolved component count `53`; rejected assignment
+count `0`; graph node count `56`; graph edge count `107`; dangling edge count
+`0`; edge counts `CONNECTS_TO=1`, `INSTANCE_OF=53`, `REQUIRED_BY=53`;
+private content transmission count `0`.
+
+Regression result: full `scripts/run_tests.py` status `PASS`.
+`test_sheetmetal_v1_panel_assignment_graph_from_private_models` covers explicit
+panel assignment acceptance, unresolved component preservation, graph
+referential integrity, inventory-only unverified functional edges, and
+source-value non-printing.
+
+Generation status: no customer drawing, PDF, DXF, DWG, drawing model,
+baseline generation, or `SHEETMETAL_ALLOWED_EVAL` promotion occurred.
+
+Evidence:
+`scripts/sheetmetal_v1.py`,
+`scripts/run_tests.py`,
+`evals/sheetmetal-v1/frozen_workflow_manifest.json`,
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.md`,
+and
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json`.

@@ -327,3 +327,16 @@
   unregistered allowed component keys, and 0 private content transmissions.
 - Recorded neutral component-register evidence under
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/`.
+- Added private panel-assignment and inventory-only graph construction to
+  `scripts/sheetmetal_v1.py` using `--source-fact-model` plus
+  `--component-register`.
+- Added `test_sheetmetal_v1_panel_assignment_graph_from_private_models`,
+  covering explicit panel assignment acceptance, unresolved component handling,
+  graph referential integrity, inventory-only unverified functional edges, and
+  source-value non-printing.
+- Ran the private `1110101` panel graph build under
+  `.private/sheetmetal-v1/1110101/panel-graph/`; schema validation passed with
+  0 explicit panel assignments, 53 unresolved components, 56 graph nodes, 107
+  graph edges, 0 dangling edges, and 0 private content transmissions.
+- Recorded neutral panel graph evidence under
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/`.

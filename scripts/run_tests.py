@@ -1069,6 +1069,101 @@ def test_sheetmetal_v1_component_register_from_source_facts() -> None:
     assert_true(validation["private_content_transmission_count"] == 0, "private transmission count must stay zero")
 
 
+def test_sheetmetal_v1_panel_assignment_graph_from_private_models() -> None:
+    work = ROOT / "tmp" / "sheetmetal_v1_panel_assignment_graph_test"
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+    register_out = work / "register"
+    graph_out = work / "graph"
+    secret_model = "GRAPH-SECRET-MODEL"
+    source_model = {
+        "schema_version": "sheetmetal-v1.source_fact_model.v1",
+        "project_id": "SYNTH-SMV1-GRAPH",
+        "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+        "source_evidence": [
+            {
+                "evidence_id": "EVID-GRAPH",
+                "neutral_source_document_id": "SRC-GRAPH",
+                "source_role": "PANEL_ALLOCATION_SOURCE",
+                "chronology_status": "PRE_DESIGN",
+                "generator_input_eligible": True,
+                "contains_completed_reference_content": False,
+            }
+        ],
+        "source_facts": [
+            {"fact_id": "GF1", "evidence_id": "EVID-GRAPH", "neutral_source_document_id": "SRC-GRAPH", "source_role": "PANEL_ALLOCATION_SOURCE", "source_location_id": "ART:R1:C1", "field_type": "model", "component_key": "ROW-1", "normalized_value": secret_model, "raw_value": secret_model, "authority_class": "SECONDARY_OR_CONTEXT", "confidence": 0.6, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+            {"fact_id": "GF2", "evidence_id": "EVID-GRAPH", "neutral_source_document_id": "SRC-GRAPH", "source_role": "PANEL_ALLOCATION_SOURCE", "source_location_id": "ART:R1:C2", "field_type": "family", "component_key": "ROW-1", "normalized_value": "GRAPH_FAMILY", "raw_value": "GRAPH_FAMILY", "authority_class": "SOURCE_CONTEXT", "confidence": 0.6, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+            {"fact_id": "GF3", "evidence_id": "EVID-GRAPH", "neutral_source_document_id": "SRC-GRAPH", "source_role": "PANEL_ALLOCATION_SOURCE", "source_location_id": "ART:R1:C3", "field_type": "panel_assignment", "component_key": "ROW-1", "normalized_value": "PANEL-A", "raw_value": "PANEL-A", "authority_class": "PRIMARY", "confidence": 0.9, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+            {"fact_id": "GF4", "evidence_id": "EVID-GRAPH", "neutral_source_document_id": "SRC-GRAPH", "source_role": "PANEL_ALLOCATION_SOURCE", "source_location_id": "ART:R2:C1", "field_type": "model", "component_key": "ROW-2", "normalized_value": "GRAPH-SECOND-MODEL", "raw_value": "GRAPH-SECOND-MODEL", "authority_class": "SECONDARY_OR_CONTEXT", "confidence": 0.6, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+        ],
+        "source_line_accounting": [
+            {"source_line_id": "ROW-1", "evidence_id": "EVID-GRAPH", "neutral_source_document_id": "SRC-GRAPH", "row_index": 1, "status": "REPRESENTED", "fact_count": 3},
+            {"source_line_id": "ROW-2", "evidence_id": "EVID-GRAPH", "neutral_source_document_id": "SRC-GRAPH", "row_index": 2, "status": "REPRESENTED", "fact_count": 1},
+        ],
+        "quantity_stage_counts": {"required_qty": 0, "ordered_qty": 0, "received_qty": 0, "allocated_qty": 0, "installed_qty": 0},
+        "validation": {
+            "status": "PASS",
+            "evidence_count": 1,
+            "source_fact_count": 4,
+            "source_line_count": 2,
+            "silently_discarded_authorized_source_lines": 0,
+            "quantity_stage_overwrite_violations": 0,
+            "completed_reference_facts": 0,
+            "private_content_transmission_count": 0,
+        },
+    }
+    source_model_path = work / "source_fact_model.json"
+    write_json(source_model_path, source_model)
+    subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--source-fact-model",
+            str(source_model_path),
+            "--output-dir",
+            str(register_out),
+            "--quiet",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    result = subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--source-fact-model",
+            str(source_model_path),
+            "--component-register",
+            str(register_out / "component_register.json"),
+            "--output-dir",
+            str(graph_out),
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    assert_true(secret_model not in result.stdout, "panel graph summary must not print source values")
+    assert_true(secret_model not in result.stderr, "panel graph errors must not print source values")
+    errors = validate_file(graph_out / "panel_assignment.json", ROOT / "schemas/panel_assignment.schema.json")
+    assert_true(not errors, f"panel assignment schema errors: {errors}")
+    errors = validate_file(graph_out / "panel_graph.json", ROOT / "schemas/panel_graph.schema.json")
+    assert_true(not errors, f"panel graph schema errors: {errors}")
+    validation = read_json(graph_out / "panel_graph_validation.json")
+    assert_true(validation["status"] == "PASS", "panel graph validation must pass")
+    assert_true(validation["assignment_count"] == 1, "one explicit panel assignment should be accepted")
+    assert_true(validation["unresolved_component_count"] == 1, "one component should remain unresolved")
+    assert_true(validation["dangling_edge_count"] == 0, "graph edges must resolve to known nodes")
+    assert_true(validation["edge_type_counts"]["ASSIGNED_TO_PANEL"] == 1, "panel assignment edge should be present")
+    assert_true(validation["edge_type_counts"]["INSTANCE_OF"] == 2, "instance/type edges should be present")
+    assert_true(validation["edge_type_counts"]["REQUIRED_BY"] == 2, "required-by edges should be present")
+    assert_true(validation["inventory_only_unverified_function_edges"] == 1, "functional graph should remain unverified in inventory-only mode")
+    assert_true(validation["private_content_transmission_count"] == 0, "private transmission count must stay zero")
+
+
 def test_frozen_workflow_legacy_scope_verifier() -> None:
     import verify_frozen_workflow as verifier
 
@@ -1198,6 +1293,7 @@ def main() -> None:
         test_sheetmetal_v1_private_workspace_boundary,
         test_sheetmetal_v1_source_fact_extractor,
         test_sheetmetal_v1_component_register_from_source_facts,
+        test_sheetmetal_v1_panel_assignment_graph_from_private_models,
         test_frozen_workflow_legacy_scope_verifier,
         test_frozen_workflow_fail_closed_regressions,
         test_frozen_workflow_active_scope_verifier,

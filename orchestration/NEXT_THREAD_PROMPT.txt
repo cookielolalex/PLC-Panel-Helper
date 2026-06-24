@@ -176,11 +176,38 @@ Component-register construction:
 - Active scoped manifest is refreshed for `scripts/sheetmetal_v1.py` and
   `scripts/run_tests.py`.
 
+Panel-assignment and graph construction:
+
+- Decision `D-0032` accepts deterministic private panel-assignment and typed
+  graph construction.
+- `scripts/sheetmetal_v1.py` now supports `--source-fact-model` plus
+  `--component-register` for private panel-assignment and inventory-only graph
+  construction.
+- Private inputs:
+  `.private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json`
+  and `.private/sheetmetal-v1/1110101/component-register/component_register.json`.
+- Private output directory:
+  `.private/sheetmetal-v1/1110101/panel-graph/`.
+- Private outputs are `panel_assignment.json`, `panel_graph.json`, and
+  `panel_graph_validation.json`; all are git-ignored.
+- Neutral private-run counts: 0 explicit panel assignments, 53 unresolved
+  components, 0 rejected assignments, 56 graph nodes, 107 graph edges, 0
+  dangling edges, 1 inventory-only unverified function edge, and 0 private
+  content transmissions.
+- Neutral committed evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json`
+  and
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.md`.
+- Regression coverage:
+  `test_sheetmetal_v1_panel_assignment_graph_from_private_models`.
+- Active scoped manifest is refreshed for `scripts/sheetmetal_v1.py` and
+  `scripts/run_tests.py`.
+
 Exact next action:
 
-Implement deterministic panel-assignment and typed graph construction from the
-private `1110101` component register/source fact model with synthetic
-regression coverage. Produce canonical panel-model artifacts and evaluation
-evidence only; do not start a new baseline, do not generate a customer drawing,
-and do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and
+Implement deterministic accessory and cutout reconciliation against the private
+`1110101` component register and panel graph with synthetic regression
+coverage. Produce canonical panel-model artifacts and evaluation evidence only;
+do not start a new baseline, do not generate a customer drawing, and do not
+promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and
 adjudication pass.

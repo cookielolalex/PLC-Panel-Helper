@@ -1,8 +1,8 @@
 # SESSION CHECKPOINT
 
-Current phase: deterministic component-register construction complete for
-one-project component graph calibration; panel-assignment and graph
-implementation pending.
+Current phase: deterministic panel-assignment and graph construction complete
+for one-project component graph calibration; accessory/cutout reconciliation
+pending.
 
 Accepted release: none.
 
@@ -204,9 +204,38 @@ Component-register construction:
 - Evidence:
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.json`.
 
+Panel-assignment and graph construction:
+
+- Decision: `D-0032`.
+- Builder: `scripts/sheetmetal_v1.py --source-fact-model ... --component-register ... --output-dir ... --quiet`.
+- Private inputs:
+  `.private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json`
+  and `.private/sheetmetal-v1/1110101/component-register/component_register.json`.
+- Private output directory:
+  `.private/sheetmetal-v1/1110101/panel-graph/`.
+- Private outputs: `panel_assignment.json`, `panel_graph.json`, and
+  `panel_graph_validation.json`.
+- Private output hashes:
+  `panel_assignment.json`
+  `1531D1DFA7BD6AB329AD6964C38367C9C0094AD8B32AE2802176712F3D957FD8`;
+  `panel_graph.json`
+  `B3A68E597703AA8C8B6C29998F8D28A811912A071BCA34C7018F4BDB38479CB1`;
+  `panel_graph_validation.json`
+  `02209B427FFDD9C1947F7A22CD77D43E714C9930A72177DF68A9C289F1C1D9E8`.
+- Git ignore verification: `PASS`; no `.private` path is tracked.
+- Schema validation: `PASS` for panel assignment and panel graph.
+- Neutral counts: 0 explicit panel assignments, 53 unresolved components, 0
+  rejected assignments, 56 graph nodes, 107 graph edges, 0 dangling edges, 1
+  inventory-only unverified function edge, and 0 private content transmissions.
+- Regression test: `test_sheetmetal_v1_panel_assignment_graph_from_private_models`.
+- Active scoped manifest refreshed for `scripts/sheetmetal_v1.py` and
+  `scripts/run_tests.py`.
+- Evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json`.
+
 Exact next action:
 
-Implement deterministic panel-assignment and typed graph construction from the
-private `1110101` component register/source fact model with synthetic
-regression coverage. Do not generate a customer drawing and do not promote
-`1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.
+Implement deterministic accessory and cutout reconciliation against the private
+`1110101` component register and panel graph with synthetic regression
+coverage. Do not generate a customer drawing and do not promote `1110101` to
+`SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.

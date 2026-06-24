@@ -1117,11 +1117,113 @@ def write_component_register_outputs(source_model: dict[str, Any], output_dir: P
     return validation
 
 
+def build_inventory_panel_graph(data: dict[str, Any], register: dict[str, Any], assignment: dict[str, Any]) -> dict[str, Any]:
+    nodes = [{"node_id": f"PROJECT:{data['project_id']}", "node_type": "PROJECT", "status": "EXPLICIT_SOURCE"}]
+    edges = []
+    for ctype in register.get("component_types", []):
+        nodes.append({"node_id": f"CTYPE:{ctype['component_type_id']}", "node_type": "COMPONENT_TYPE", "status": ctype["status"]})
+    for inst in register.get("component_instances", []):
+        inst_node = f"CINST:{inst['component_instance_id']}"
+        type_node = f"CTYPE:{inst['component_type_id']}"
+        nodes.append({"node_id": inst_node, "node_type": "COMPONENT_INSTANCE", "status": inst["status"]})
+        edges.append(
+            {
+                "edge_id": stable_id("EDGE", inst_node, type_node, "INSTANCE_OF"),
+                "edge_type": "INSTANCE_OF",
+                "from_node_id": inst_node,
+                "to_node_id": type_node,
+                "status": inst["status"],
+                "support": {"evidence_ids": inst.get("evidence_ids", [])},
+            }
+        )
+        edges.append(
+            {
+                "edge_id": stable_id("EDGE", inst_node, "REQUIRED_BY"),
+                "edge_type": "REQUIRED_BY",
+                "from_node_id": inst_node,
+                "to_node_id": f"PROJECT:{data['project_id']}",
+                "status": inst["status"],
+                "support": {"evidence_ids": inst.get("evidence_ids", [])},
+            }
+        )
+    for row in assignment.get("assignments", []):
+        panel_node = f"PANEL:{row['panel_id']}"
+        nodes.append({"node_id": panel_node, "node_type": "PANEL", "status": row["assignment_status"]})
+        edges.append(
+            {
+                "edge_id": stable_id("EDGE", row["component_instance_id"], row["panel_id"]),
+                "edge_type": "ASSIGNED_TO_PANEL",
+                "from_node_id": f"CINST:{row['component_instance_id']}",
+                "to_node_id": panel_node,
+                "status": row["assignment_status"],
+                "support": {"evidence_ids": row["assignment_evidence_ids"]},
+            }
+        )
+    if data.get("source_mode") == "SOURCE_MODE_A_INVENTORY_ONLY":
+        nodes.append({"node_id": "FUNCTION:UNVERIFIED", "node_type": "FUNCTION", "status": "UNVERIFIED"})
+        first = next((row for row in register.get("component_instances", []) if row["status"] != "CONFLICT"), None)
+        if first:
+            edges.append(
+                {
+                    "edge_id": stable_id("EDGE", first["component_instance_id"], "UNVERIFIED_FUNCTION"),
+                    "edge_type": "CONNECTS_TO",
+                    "from_node_id": f"CINST:{first['component_instance_id']}",
+                    "to_node_id": "FUNCTION:UNVERIFIED",
+                    "status": "UNVERIFIED",
+                    "support": {"reason": "NO_APPROVED_FUNCTIONAL_SOURCE"},
+                }
+            )
+    return {
+        "schema_version": "sheetmetal-v1",
+        "project_id": data["project_id"],
+        "source_mode": data.get("source_mode", "SOURCE_MODE_A_INVENTORY_ONLY"),
+        "nodes": dedupe_nodes(nodes),
+        "edges": edges,
+    }
+
+
+def validate_panel_assignment_and_graph(assignment: dict[str, Any], graph: dict[str, Any]) -> dict[str, Any]:
+    node_ids = {node["node_id"] for node in graph.get("nodes", [])}
+    dangling_edges = [
+        edge["edge_id"]
+        for edge in graph.get("edges", [])
+        if edge.get("from_node_id") not in node_ids or edge.get("to_node_id") not in node_ids
+    ]
+    edge_type_counts = dict(sorted({edge["edge_type"]: 0 for edge in graph.get("edges", [])}.items()))
+    for edge in graph.get("edges", []):
+        edge_type_counts[edge["edge_type"]] = edge_type_counts.get(edge["edge_type"], 0) + 1
+    status = "PASS" if not dangling_edges else "FAIL"
+    return {
+        "status": status,
+        "project_id": graph.get("project_id"),
+        "assignment_count": len(assignment.get("assignments", [])),
+        "unresolved_component_count": len(assignment.get("unresolved_components", [])),
+        "rejected_assignment_count": len(assignment.get("rejected_assignments", [])),
+        "node_count": len(graph.get("nodes", [])),
+        "edge_count": len(graph.get("edges", [])),
+        "edge_type_counts": edge_type_counts,
+        "dangling_edge_count": len(dangling_edges),
+        "inventory_only_unverified_function_edges": edge_type_counts.get("CONNECTS_TO", 0),
+        "private_content_transmission_count": 0,
+    }
+
+
+def write_panel_assignment_graph_outputs(source_model: dict[str, Any], register: dict[str, Any], output_dir: Path) -> dict[str, Any]:
+    assignment = build_panel_assignment(source_model, register)
+    graph = build_inventory_panel_graph(source_model, register, assignment)
+    validation = validate_panel_assignment_and_graph(assignment, graph)
+    write_json(output_dir / "panel_assignment.json", assignment)
+    write_json(output_dir / "panel_graph.json", graph)
+    write_json(output_dir / "panel_graph_validation.json", validation)
+    return validation
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run the sheetmetal-v1 modular foundation pipeline.")
     parser.add_argument("--fixture", type=Path)
     parser.add_argument("--bundle-dir", type=Path)
     parser.add_argument("--source-fact-model", type=Path)
+    parser.add_argument("--component-register", type=Path)
     parser.add_argument("--source-classification", type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--quiet", action="store_true")
@@ -1140,6 +1242,22 @@ def main() -> None:
         if not args.quiet:
             print(json.dumps(summary, ensure_ascii=False, indent=2))
         raise SystemExit(0 if model["validation"]["status"] == "PASS" else 1)
+    if args.source_fact_model and args.component_register:
+        source_model = read_json(args.source_fact_model)
+        register = read_json(args.component_register)
+        validation = write_panel_assignment_graph_outputs(source_model, register, args.output_dir)
+        summary = {
+            "status": validation["status"],
+            "project_id": validation["project_id"],
+            "assignment_count": validation["assignment_count"],
+            "unresolved_component_count": validation["unresolved_component_count"],
+            "node_count": validation["node_count"],
+            "edge_count": validation["edge_count"],
+            "private_content_transmission_count": validation["private_content_transmission_count"],
+        }
+        if not args.quiet:
+            print(json.dumps(summary, ensure_ascii=False, indent=2))
+        raise SystemExit(0 if validation["status"] == "PASS" else 1)
     if args.source_fact_model:
         source_model = read_json(args.source_fact_model)
         validation = write_component_register_outputs(source_model, args.output_dir)

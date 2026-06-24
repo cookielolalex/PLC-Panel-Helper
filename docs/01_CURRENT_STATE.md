@@ -1,8 +1,8 @@
 # Current State
 
-Current phase: deterministic component-register construction complete for
-one-project component graph calibration; panel-assignment and graph
-implementation pending.
+Current phase: deterministic panel-assignment and graph construction complete
+for one-project component graph calibration; accessory/cutout reconciliation
+pending.
 
 Accepted release: none.
 
@@ -40,7 +40,8 @@ the one-project component graph calibration protocol; `D-0029` accepts the
 ignored private workspace boundary; and `D-0030` accepts deterministic
 source-fact extraction into the private workspace with neutral committed
 summary evidence; `D-0031` accepts deterministic private component-register
-construction from that source-fact model. These amendments
+construction from that source-fact model; `D-0032` accepts deterministic
+private panel-assignment and typed graph construction. These amendments
 do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
@@ -299,6 +300,16 @@ components, and 0 private content transmissions. Private register files remain
 ignored and are recorded only by neutral hashes in
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.json`.
 
-Exact next action: implement deterministic panel-assignment and typed graph
-construction from the private `1110101` component register/source fact model
-with synthetic regression coverage before accessory/cutout reconciliation.
+Panel-assignment and graph construction after `D-0032`: `scripts/sheetmetal_v1.py`
+now supports private panel-assignment and inventory-only typed graph output
+from a private source-fact model plus private component register. The private
+`1110101` run produced 0 explicit panel assignments, 53 unresolved components,
+0 rejected assignments, 56 graph nodes, 107 graph edges, 0 dangling edges, 1
+inventory-only unverified function edge, and 0 private content transmissions.
+No panel assignment was inferred from unavailable facts. Private panel graph
+files remain ignored and are recorded only by neutral hashes in
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json`.
+
+Exact next action: implement deterministic accessory and cutout reconciliation
+against the private `1110101` component register and panel graph with synthetic
+regression coverage before final deterministic freeze evidence.
