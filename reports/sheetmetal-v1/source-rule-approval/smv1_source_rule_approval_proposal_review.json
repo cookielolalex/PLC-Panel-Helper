@@ -1,0 +1,268 @@
+{
+  "schema_version": "sheetmetal-v1.source_rule_approval_proposal_review.v1",
+  "task_id": "SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW",
+  "agent_role": "independent_auditor",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "created_at": "2026-06-24T17:13:48.1557227+08:00",
+  "network_mode": "local_only_no_public_web",
+  "privacy_approval": "NOT_APPROVED",
+  "overall_verdict": "PASS",
+  "final_status": "PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW",
+  "recommended_next_action": "PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET",
+  "observed_starting_commit": "9d7a79fe14a0c9b7f3e485ba6c720fa665d7b007",
+  "task_brief_starting_commit": "de01dd57b0c4a7db98114a5a9913b25de6069f06",
+  "visible_manifest_starting_commit": "de01dd57b0c4a7db98114a5a9913b25de6069f06",
+  "starting_commit_adjudication": "PASS_NON_BLOCKING_CONTEXT_DIFFERENCE: task brief and visible manifest cite proposal packet commit de01dd57, while the user prompt and actual HEAD cite 9d7a79f after the review brief/manifest commit. Git show confirms de01dd57 added only proposal packet files and 9d7a79f added only the review brief and visible manifest.",
+  "inputs_read": [
+    "AGENTS.md",
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+    "docs/specs/MASTER_AUTOPILOT_PROTOCOL.md",
+    "docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md",
+    "docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md",
+    "docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md",
+    "docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md",
+    "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md",
+    "docs/specs/SANITIZED_GENERATOR_BUNDLE_SPEC.md",
+    "docs/01_CURRENT_STATE.md",
+    "docs/04_DECISION_LEDGER.md",
+    "docs/SESSION_CHECKPOINT.md",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.md",
+    "orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL.json",
+    "orchestration/tasks/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.md",
+    "orchestration/input_manifests/sheetmetal-v1/source-rule-approval/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.visible_files.json"
+  ],
+  "input_hashes": {
+    "AGENTS.md": "4CA078C3F02217CED8491C53A11641152B38A364F157E36523408016074EB227",
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+    "docs/specs/MASTER_AUTOPILOT_PROTOCOL.md": "79D82FF11FA7019766F2E647538D52F7FD086A6E7E85357EE229D0D8E36CB2D1",
+    "docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md": "72920B19759334A49323B5BE63A2B6E59B6E073D08406D0D70B5534EF67B0FBC",
+    "docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md": "67F25DEA549626A2ECF72DB657D66276FDDC44F6CC698ECD5728E86E25863543",
+    "docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md": "05EFAB1DE2FE03F845991E2E3010CD2856F4523DAA25AF55441B9DEE6485B622",
+    "docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md": "9FA9E4A7E640B7D7481C34A4A5D992C822B7EE0EA46918307CB69A489D278454",
+    "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md": "9CCE463845097C6686B481C8F94D8D0B459B521B170474E93B2B550EE4F6F530",
+    "docs/specs/SANITIZED_GENERATOR_BUNDLE_SPEC.md": "E9210879C6EABC26483834C29E89562341079F66A704006B3DE11ED0C4A818F0",
+    "docs/01_CURRENT_STATE.md": "53B13A3BF7175EFBAC346B129B4A325AF7EC088A21462F0D5A623E8977293BB7",
+    "docs/04_DECISION_LEDGER.md": "5DD0EAAA3C10827D1FC9EFADDDBF66CB293364168A03A763A43AC62379FEB820",
+    "docs/SESSION_CHECKPOINT.md": "04D774DBE08654ACD0AB977A40904E751F4980EA01489A4E0E70D10125906CF1",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json": "9B8A9D6EB8F98F79E69B82A3F3A6F91EC20F1FF24CB3C0E4AF34821B858137EF",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json": "FA5E9697047683BDB8850A66C014F40E42C83A3D02EF9ED8728AD5ADC6AE0221",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json": "DE9B58645669E6002ACCFC9DA18410B76F6FB198ED40C1B6F129B77407CBC956",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json": "959D5DC73938B056D43600BD5EF73DEE5CC36D045D73B0EAA563D8E1702BE740",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.md": "CE1F4D1C18D1A77A202C731E4D2CD25ADD83B7FDC6598F54D99CE6C09E8E97C2",
+    "orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL.json": "EA7072052BA1F5BFD6669D06272490E4E6C29AAB3FF6969E97958F3D72B227E3",
+    "orchestration/tasks/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.md": "76E7D9BE6C6A95C0454D91DD97878606BEF3CF27BA8DC183BABA81DA49E7C00E",
+    "orchestration/input_manifests/sheetmetal-v1/source-rule-approval/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.visible_files.json": "A368C9891DE64921895F03C7D4D332F153D09138D0216E85B4A040C25996BD1D"
+  },
+  "json_parse_validation": {
+    "command": "PowerShell ConvertFrom-Json over proposal, child result, T1 integration, T1 independent audit, T1 coordinator addendum, and visible manifest",
+    "status": "PASS"
+  },
+  "git_evidence": {
+    "git_binary": "C:/Program Files/Git/cmd/git.exe",
+    "current_head_command": "git rev-parse HEAD",
+    "current_head": "9d7a79fe14a0c9b7f3e485ba6c720fa665d7b007",
+    "status_before_writes_command": "git status --short --untracked-files=all",
+    "status_before_writes": [
+      "?? scripts/run_reference_detection_v4_corpus_screening.py"
+    ],
+    "tracked_diff_before_writes_command": "git diff --name-status HEAD",
+    "tracked_diff_before_writes": [],
+    "proposal_commit_command": "git show --name-status --oneline --no-renames de01dd57b0c4a7db98114a5a9913b25de6069f06",
+    "proposal_commit_changed_paths": [
+      "A orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL.json",
+      "A reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json",
+      "A reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.md"
+    ],
+    "review_brief_commit_command": "git show --name-status --oneline --no-renames 9d7a79fe14a0c9b7f3e485ba6c720fa665d7b007",
+    "review_brief_commit_changed_paths": [
+      "A orchestration/input_manifests/sheetmetal-v1/source-rule-approval/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.visible_files.json",
+      "A orchestration/tasks/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.md"
+    ],
+    "diff_c25586a_to_head_command": "git diff --name-status c25586a839eb9ed16f666e044e1c01b0021a1966..9d7a79fe14a0c9b7f3e485ba6c720fa665d7b007",
+    "diff_c25586a_to_head_changed_paths": [
+      "A orchestration/input_manifests/sheetmetal-v1/source-rule-approval/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.visible_files.json",
+      "A orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL.json",
+      "A orchestration/tasks/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.md",
+      "A reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json",
+      "A reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.md"
+    ],
+    "untracked_forbidden_script_adjudication": "OBSERVED_NOT_OPENED_NOT_EXECUTED_NOT_STAGED_NOT_MODIFIED; SESSION_CHECKPOINT records this path as pre-existing untracked workspace condition."
+  },
+  "proposal_bound_evidence_hash_check": [
+    {
+      "path": "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json",
+      "expected_sha256": "FA5E9697047683BDB8850A66C014F40E42C83A3D02EF9ED8728AD5ADC6AE0221",
+      "actual_sha256": "FA5E9697047683BDB8850A66C014F40E42C83A3D02EF9ED8728AD5ADC6AE0221",
+      "verdict": "PASS"
+    },
+    {
+      "path": "reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json",
+      "expected_sha256": "DE9B58645669E6002ACCFC9DA18410B76F6FB198ED40C1B6F129B77407CBC956",
+      "actual_sha256": "DE9B58645669E6002ACCFC9DA18410B76F6FB198ED40C1B6F129B77407CBC956",
+      "verdict": "PASS"
+    },
+    {
+      "path": "reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json",
+      "expected_sha256": "9B8A9D6EB8F98F79E69B82A3F3A6F91EC20F1FF24CB3C0E4AF34821B858137EF",
+      "actual_sha256": "9B8A9D6EB8F98F79E69B82A3F3A6F91EC20F1FF24CB3C0E4AF34821B858137EF",
+      "verdict": "PASS"
+    },
+    {
+      "path": "docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md",
+      "expected_sha256": "72920B19759334A49323B5BE63A2B6E59B6E073D08406D0D70B5534EF67B0FBC",
+      "actual_sha256": "72920B19759334A49323B5BE63A2B6E59B6E073D08406D0D70B5534EF67B0FBC",
+      "verdict": "PASS"
+    },
+    {
+      "path": "docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md",
+      "expected_sha256": "67F25DEA549626A2ECF72DB657D66276FDDC44F6CC698ECD5728E86E25863543",
+      "actual_sha256": "67F25DEA549626A2ECF72DB657D66276FDDC44F6CC698ECD5728E86E25863543",
+      "verdict": "PASS"
+    },
+    {
+      "path": "docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md",
+      "expected_sha256": "05EFAB1DE2FE03F845991E2E3010CD2856F4523DAA25AF55441B9DEE6485B622",
+      "actual_sha256": "05EFAB1DE2FE03F845991E2E3010CD2856F4523DAA25AF55441B9DEE6485B622",
+      "verdict": "PASS"
+    },
+    {
+      "path": "docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md",
+      "expected_sha256": "9FA9E4A7E640B7D7481C34A4A5D992C822B7EE0EA46918307CB69A489D278454",
+      "actual_sha256": "9FA9E4A7E640B7D7481C34A4A5D992C822B7EE0EA46918307CB69A489D278454",
+      "verdict": "PASS"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "C1_PROPOSAL_ONLY_NO_IMPLEMENTATION",
+      "verdict": "PASS",
+      "evidence": [
+        "Proposal JSON status is PROPOSED_ONLY_NOT_APPLIED and implementation_authorized_by_this_proposal is false.",
+        "Proposal child result reports implementation_code_files_changed=0, rule_files_changed=0, schema_files_changed=0, source_manifests_changed=0, and frozen_releases_or_graders_mutated=false.",
+        "Git proposal commit de01dd57 adds only the three proposal packet files.",
+        "Git diff c25586a..9d7a79f adds only proposal packet and review brief/manifest files; tracked diff before review writes was empty."
+      ],
+      "blockers": []
+    },
+    {
+      "id": "C2_BOUND_TO_ACCEPTED_T1_EVIDENCE_HASHES",
+      "verdict": "PASS",
+      "evidence": [
+        "All seven proposal bound_evidence hashes match local SHA-256 values.",
+        "docs/04_DECISION_LEDGER.md D-0040 accepts T1 targeted recovery and independent recovery audit as SAFE_UNRESOLVED and requires proposal-first source/rule approval.",
+        "reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json reports coordinator full tests PASS and scoped freezes PASS for the accepted T1 audit."
+      ],
+      "blockers": []
+    },
+    {
+      "id": "C3_FORBIDDEN_USE_NOT_AUTHORIZED",
+      "verdict": "PASS",
+      "evidence": [
+        "Proposal JSON records source_roots_opened=false, private_artifacts_opened=false, completed_references_opened=false, post_design_files_opened=false, public_web_used=false, customer_pdf_dxf_dwg_generated=false, production_approval_declared=false.",
+        "Proposal Markdown states no source roots, private artifacts, completed references, post-design files, customer PDFs/DXFs/DWGs, or public web sources were opened for the proposal.",
+        "Proposal forbidden_diff_scope explicitly excludes source_roots, .private, completed_references, frozen_releases, frozen_graders, legacy_historical_evidence, and scripts/run_reference_detection_v4_corpus_screening.py.",
+        "MASTER_AUTOPILOT_PROTOCOL and AGENTS.md prohibit external private transmission, source-root mutation, completed-reference generator input, customer drawing generation, and production approval."
+      ],
+      "blockers": []
+    },
+    {
+      "id": "C4_VALID_AUTHORITY_PATH_EACH_LANE",
+      "verdict": "PASS",
+      "lane_verdicts": [
+        {
+          "lane_id": "LANE_A_PANEL_ALLOCATION_SOURCE",
+          "verdict": "PASS",
+          "evidence": "Matches SOURCE_FACT_AUTHORITY_MATRIX panel assignment authority: PANEL_ALLOCATION_SOURCE with pre-design chronology or approved deterministic assignment rule; SOURCE_ROLE_AND_CHRONOLOGY_POLICY permits PANEL_ALLOCATION_SOURCE as generator-eligible and forbids post-design/completed/unknown roles; AUTONOMOUS_EVAL_SOURCE_APPROVAL supplies deterministic validation, four-reviewer quorum, adjudication, sanitized bundle verification, and independent audit sequence."
+        },
+        {
+          "lane_id": "LANE_B_COMPONENT_GEOMETRY_AUTHORITY",
+          "verdict": "PASS",
+          "evidence": "Matches SOURCE_FACT_AUTHORITY_MATRIX footprint and mounting geometry authority: verified component library or model-specific approved rule; ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION recognizes VERIFIED_MODEL_GEOMETRY, APPROVED_GENERIC_CONSERVATIVE_ENVELOPE, GEOMETRY_MISSING, GEOMETRY_CONFLICT, and NOT_APPLICABLE states."
+        },
+        {
+          "lane_id": "LANE_C_TOPOLOGY_SIZING_PLACEMENT_RULES",
+          "verdict": "PASS",
+          "evidence": "Matches ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION requirements for approved topology, sizing, mounting, clearance, thermal, ventilation, spare-space, fill-denominator, hard-constraint, provenance, and safe-unresolved states; proposal requires explicit human or accepted company default authority and versioned rule review."
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "id": "C5_REJECTED_SHORTCUTS_PRESERVE_NO_INVENTION",
+      "verdict": "PASS",
+      "evidence": [
+        "Lane A rejects completed sheetmetal drawing, post-design allocation label, filename/worksheet-label inference, component cooccurrence, and procurement quantity.",
+        "Lane B rejects completed drawing geometry, symbol-name geometry guessing, private model public lookup, and synthetic fixture only as real coverage.",
+        "Lane C rejects historical cabinet size copy, completed-reference coordinate copy, private intuition, and soft objectives over hard constraints.",
+        "Proposal requires unresolved facts to remain UNVERIFIED, TBD, CONFLICT, or HUMAN_REVIEW_REQUIRED rather than guessed."
+      ],
+      "blockers": []
+    },
+    {
+      "id": "C6_TEST_BEFORE_FIX_COVERS_T1_HARD_GATES",
+      "verdict": "PASS",
+      "evidence": [
+        "Panel assignment gates are covered by proposed tests for valid PANEL_ALLOCATION_SOURCE assignment path, post-design allocation label rejection, and completed-reference assignment signal rejection.",
+        "Component geometry and critical-dimension gates are covered by proposed tests for verified library geometry resolution, generic conservative envelope provenance, and geometry conflict/missing preservation.",
+        "Topology, sizing, placement, and hard-constraint gates are covered by proposed tests for standard cabinet candidate selection without exact customer copying, clearance/containment/overlap/mounting-surface validation, and zero-denominator handling.",
+        "Leakage and output-generation gates are covered by proposed tests for no customer PDF/DXF/DWG generation and no private transmission/tracked private artifacts.",
+        "Production approval and public-web prohibitions remain explicit hard boundaries in the task brief, proposal booleans, master protocol, and AGENTS.md; the authority decision packet should preserve them as non-negotiable gates for any accepted implementation."
+      ],
+      "blockers": []
+    },
+    {
+      "id": "C7_DIFF_SCOPE_AND_ROLLBACK_BOUNDED",
+      "verdict": "PASS",
+      "evidence": [
+        "Proposal intended_diff_scope_if_accepted is limited to docs/specs, rules/sheetmetal-v1, schemas only if required, scripts/sheetmetal_v1.py, scripts/run_tests.py, active frozen workflow manifest, neutral reports, and sheetmetal-v1 manifests.",
+        "Proposal forbidden_diff_scope excludes source roots, .private, completed references, frozen releases, frozen graders, legacy historical evidence, and scripts/run_reference_detection_v4_corpus_screening.py.",
+        "Rollback is defined as reverting accepted implementation commits and proposal-derived neutral reports, regenerating active frozen manifests from the previous accepted commit, and keeping private artifacts ignored and unstaged."
+      ],
+      "blockers": []
+    },
+    {
+      "id": "C8_FINAL_STATUS_AND_NEXT_ACTION",
+      "verdict": "PASS",
+      "evidence": [
+        "No required-check blocker remains.",
+        "Evidence supports final status PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW.",
+        "Evidence supports next action PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET."
+      ],
+      "blockers": []
+    }
+  ],
+  "test_and_workflow_verification": {
+    "proposal_json_parse": "PASS",
+    "child_result_json_parse": "PASS",
+    "full_test_runner": "NOT_RUN_PROPOSAL_ONLY_NO_IMPLEMENTATION_CHANGE",
+    "fresh_scoped_freeze": "NOT_RUN_PROPOSAL_ONLY_NO_IMPLEMENTATION_CHANGE",
+    "accepted_t1_coordinator_verification": {
+      "full_tests": "PASS",
+      "legacy_baseline_024": "PASS",
+      "sheetmetal_v1_active": "PASS",
+      "sheetmetal_v1_topology_sizing_placement": "PASS"
+    }
+  },
+  "privacy_and_forbidden_action_self_check": {
+    "public_web_used_by_reviewer": false,
+    "source_roots_opened_by_reviewer": false,
+    "private_artifacts_opened_by_reviewer": false,
+    "completed_references_opened_by_reviewer": false,
+    "post_design_files_opened_by_reviewer": false,
+    "customer_pdf_dxf_dwg_opened_or_generated_by_reviewer": false,
+    "scripts_run_reference_detection_v4_corpus_screening_opened_executed_staged_or_modified": false,
+    "children_spawned": false,
+    "production_approval_declared": false
+  },
+  "evidence_limitations": [
+    "Standalone trajectory files were not included in the visible-file manifest; review used visible child-result runtime fields, T1 audit trajectory entries, hashes, and Git evidence.",
+    "Fresh full-suite and freeze commands were not rerun because this is a proposal-only review with no implementation change; accepted T1 coordinator addendum reports bundled-runtime full tests and scoped freezes PASS.",
+    "The repository has one pre-existing untracked forbidden script path visible in git status; it was not opened, executed, staged, or modified during this review."
+  ],
+  "blockers": [],
+  "recommended_next_action": "PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET"
+}

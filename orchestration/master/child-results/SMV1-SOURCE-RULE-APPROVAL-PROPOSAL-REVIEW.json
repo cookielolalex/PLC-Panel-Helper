@@ -1,0 +1,110 @@
+{
+  "task_id": "SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW",
+  "starting_commit": "9d7a79fe14a0c9b7f3e485ba6c720fa665d7b007",
+  "ending_commit": "9d7a79fe14a0c9b7f3e485ba6c720fa665d7b007",
+  "tracked_worktree_status": {
+    "allowed_paths_written": [
+      "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json",
+      "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.md",
+      "orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.json"
+    ],
+    "implementation_code_files_changed": 0,
+    "rule_files_changed": 0,
+    "schema_files_changed": 0,
+    "source_manifests_changed": 0,
+    "frozen_releases_or_graders_mutated": false,
+    "forbidden_artifacts_opened": false,
+    "git_status_before_child_result": [
+      "?? reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json",
+      "?? reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.md",
+      "?? scripts/run_reference_detection_v4_corpus_screening.py"
+    ],
+    "untracked_forbidden_script_adjudication": "OBSERVED_PRE_EXISTING_NOT_OPENED_NOT_EXECUTED_NOT_STAGED_NOT_MODIFIED"
+  },
+  "test_result": {
+    "proposal_review_json_parse": "PASS",
+    "proposal_json_parse": "PASS",
+    "proposal_child_result_json_parse": "PASS",
+    "t1_visible_json_parse": "PASS",
+    "full_test_runner": "NOT_RUN_PROPOSAL_ONLY_NO_IMPLEMENTATION_CHANGE"
+  },
+  "workflow_freeze_results": {
+    "fresh_freeze_commands": "NOT_RUN_PROPOSAL_ONLY_NO_IMPLEMENTATION_CHANGE",
+    "accepted_t1_coordinator_verification": {
+      "full_tests": "PASS",
+      "legacy_baseline_024": "PASS",
+      "sheetmetal_v1_active": "PASS",
+      "sheetmetal_v1_topology_sizing_placement": "PASS"
+    }
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.md",
+    "orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.json"
+  ],
+  "schemas_validated": {
+    "formal_schema": "NO_TASK_SPECIFIC_SCHEMA_PROVIDED",
+    "json_parse": "PASS"
+  },
+  "hard_gates": {
+    "overall": "PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW",
+    "implementation_applied": false,
+    "source_roots_opened": false,
+    "private_artifacts_opened": false,
+    "completed_references_opened": false,
+    "post_design_files_opened": false,
+    "public_web_used": false,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false,
+    "children_spawned": false,
+    "forbidden_script_opened_executed_staged_or_modified": false
+  },
+  "coverage": {
+    "proposal_review_criteria": "8_OF_8_PASS",
+    "panel_assignment": "UNCHANGED_0_OF_53",
+    "component_geometry": "UNCHANGED_0_OF_53",
+    "topology": "UNCHANGED_0_OF_1",
+    "sizing": "UNCHANGED_0_OF_0",
+    "placement": "UNCHANGED_0_OF_53",
+    "capability_success_claimed": false
+  },
+  "privacy_leakage_counts": {
+    "private_content_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "committed_private_values": 0,
+    "public_web_uses": 0,
+    "customer_pdf_dxf_dwg_outputs": 0
+  },
+  "exact_final_status": "PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW",
+  "exact_recommended_next_action": "PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET",
+  "blocker_taxonomy": {
+    "classification": "NO_BLOCKERS_PROPOSAL_READY_FOR_AUTHORITY_DECISION_PACKET",
+    "required_check_verdicts": {
+      "proposal_only_no_implementation": "PASS",
+      "bound_to_accepted_t1_evidence_hashes": "PASS",
+      "forbidden_use_not_authorized": "PASS",
+      "valid_authority_path_each_lane": "PASS",
+      "rejected_shortcuts_preserve_no_invention": "PASS",
+      "test_before_fix_covers_t1_hard_gates": "PASS",
+      "diff_scope_and_rollback_bounded": "PASS",
+      "final_status_and_next_action": "PASS"
+    },
+    "non_blocking_notes": [
+      "Task brief and visible manifest cite proposal commit de01dd57, while actual/user starting HEAD is 9d7a79f; Git confirms the delta is only the review brief and visible manifest.",
+      "Standalone trajectory files were not in the visible manifest; review used visible child-result runtime fields, T1 audit trajectory entries, hashes, and Git evidence.",
+      "Fresh full-suite and freeze commands were not rerun because this was proposal-only with no implementation change."
+    ]
+  },
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "2026-06-24T17:09:48.6183105+08:00",
+    "completed_at": "2026-06-24T17:15:47.5439518+08:00"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json": "D729355456551101A5DC1CC7E8EC86A3D3ED06A0B78FA494B6963F391BD6AB70",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.md": "A5874E27E47C3CA7620B3533EC3E3A52E1ED7A22B45903241D4E72F00C89950F",
+    "orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}
