@@ -1,0 +1,59 @@
+{
+  "schema_version": "sheetmetal-v1.signed_authority_decision_template.v1",
+  "task_id": "SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-TEMPLATE",
+  "created_at": "2026-06-24T17:24:39.2122113+08:00",
+  "starting_commit": "872d5b22687e8e0c15a6c2520cc390c57802996e",
+  "status": "TEMPLATE_ONLY_NO_AUTHORITY_SELECTED",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "bound_decision_packet": {
+    "json_path": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json",
+    "json_sha256": "A22FC1CA7C6D299E21EFCFBE495F1BFAA6F14D74049085133CB02C00ED152AA1",
+    "markdown_path": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.md",
+    "markdown_sha256": "644A3E3275ABD323A59E552D0F05CAF9E2A0CEED8533525DC473F4B0787C8681",
+    "child_result_path": "orchestration/master/child-results/SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET.json",
+    "child_result_sha256": "4A1B94449ECAAFADC59D04BC1A76CF56499652FB43D72A71CE0300BF1735984D"
+  },
+  "valid_choices": [
+    {
+      "choice_id": "A",
+      "label": "AUTHORIZE_PANEL_ALLOCATION_SOURCE_REVIEW",
+      "selected": null
+    },
+    {
+      "choice_id": "B",
+      "label": "AUTHORIZE_COMPONENT_GEOMETRY_AUTHORITY",
+      "selected": null
+    },
+    {
+      "choice_id": "C",
+      "label": "AUTHORIZE_TOPOLOGY_SIZING_PLACEMENT_RULE_AUTHORITY",
+      "selected": null
+    },
+    {
+      "choice_id": "D",
+      "label": "REJECT_ALL_AUTHORITY_LANES",
+      "selected": null,
+      "mutually_exclusive_with": [
+        "A",
+        "B",
+        "C"
+      ]
+    }
+  ],
+  "authority_selected": false,
+  "implementation_authorized": false,
+  "customer_pdf_dxf_dwg_generation_authorized": false,
+  "production_approval_declared": false,
+  "non_negotiable_constraints": [
+    "no_production_approval",
+    "no_customer_pdf_dxf_dwg_generation_before_authorized_renderer_gate",
+    "no_completed_reference_inference",
+    "no_post_design_label_generator_authority",
+    "no_private_model_identifier_public_lookup",
+    "no_source_root_mutation",
+    "no_private_artifact_staging",
+    "tests_before_any_fix",
+    "independent_audit_before_model_promotion"
+  ],
+  "next_action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION"
+}
