@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reference Page Classification V4",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "detector_version",
+    "task_id",
+    "project_id",
+    "neutral_reference_file_id",
+    "page_number",
+    "page_count",
+    "orientation",
+    "aspect_ratio_bucket",
+    "raster_status",
+    "page_classification",
+    "project_identity_status",
+    "revision_identity",
+    "effective_status",
+    "duplicate_group_id",
+    "ambiguity_code",
+    "classification_method",
+    "confidence",
+    "evidence_channel_codes",
+    "minimization"
+  ],
+  "properties": {
+    "schema_version": {"const": "reference_detection_v4_schema_v1"},
+    "detector_version": {"const": "target_output_detection_v4_local_multisignal_recovery"},
+    "task_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "neutral_reference_file_id": {"type": "string"},
+    "page_number": {"type": "integer", "minimum": 1},
+    "page_count": {"type": "integer", "minimum": 1},
+    "orientation": {"enum": ["PORTRAIT", "LANDSCAPE", "SQUARE_OR_UNKNOWN"]},
+    "aspect_ratio_bucket": {"type": "string"},
+    "raster_status": {"enum": ["EMBEDDED_TEXT", "IMAGE_OR_NO_TARGET_TEXT", "OCR_SIGNAL_AVAILABLE", "OCR_UNAVAILABLE"]},
+    "page_classification": {
+      "enum": [
+        "PRODUCTION_DRAWING",
+        "SHEETMETAL_DRAWING",
+        "PUNCH_DRAWING",
+        "ELECTRICAL_DRAWING",
+        "SOURCE_DOCUMENT",
+        "COVER_OR_INDEX",
+        "REVISION_NOTICE",
+        "OTHER_DRAWING",
+        "UNCLASSIFIED",
+        "AMBIGUOUS"
+      ]
+    },
+    "project_identity_status": {"enum": ["CONFIRMED", "CONFLICT", "NOT_FOUND", "NOT_REQUIRED_FOR_NON_TARGET"]},
+    "revision_identity": {"type": ["string", "null"]},
+    "effective_status": {"type": "string"},
+    "duplicate_group_id": {"type": ["string", "null"]},
+    "ambiguity_code": {"type": ["string", "null"]},
+    "classification_method": {"type": "string"},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "evidence_channel_codes": {"type": "array", "items": {"type": "string"}},
+    "minimization": {
+      "type": "object",
+      "required": [
+        "raw_text_persisted",
+        "raw_ocr_text_persisted",
+        "rendered_image_persisted",
+        "title_crop_persisted",
+        "absolute_private_path_persisted",
+        "drawing_detail_persisted"
+      ],
+      "properties": {
+        "raw_text_persisted": {"const": false},
+        "raw_ocr_text_persisted": {"const": false},
+        "rendered_image_persisted": {"const": false},
+        "title_crop_persisted": {"const": false},
+        "absolute_private_path_persisted": {"const": false},
+        "drawing_detail_persisted": {"const": false}
+      }
+    }
+  }
+}

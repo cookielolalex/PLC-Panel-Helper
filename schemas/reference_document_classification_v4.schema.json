@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reference Document Classification V4",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "detector_version",
+    "task_id",
+    "project_id",
+    "neutral_reference_file_id",
+    "page_count",
+    "metadata_status",
+    "render_status",
+    "detected_page_types",
+    "page_classification_ids",
+    "duplicate_group_id",
+    "duplicate_of",
+    "document_status",
+    "minimization"
+  ],
+  "properties": {
+    "schema_version": {"const": "reference_detection_v4_schema_v1"},
+    "detector_version": {"const": "target_output_detection_v4_local_multisignal_recovery"},
+    "task_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "neutral_reference_file_id": {"type": "string"},
+    "page_count": {"type": "integer", "minimum": 0},
+    "metadata_status": {"type": "string"},
+    "render_status": {"type": "string"},
+    "detected_page_types": {"type": "array", "items": {"type": "string"}},
+    "page_classification_ids": {"type": "array", "items": {"type": "string"}},
+    "duplicate_group_id": {"type": ["string", "null"]},
+    "duplicate_of": {"type": ["string", "null"]},
+    "document_status": {
+      "enum": [
+        "TARGET_EVIDENCE",
+        "NON_TARGET_REFERENCE",
+        "DUPLICATE_REFERENCE",
+        "AMBIGUOUS_REFERENCE",
+        "INACCESSIBLE"
+      ]
+    },
+    "minimization": {"type": "object"}
+  }
+}

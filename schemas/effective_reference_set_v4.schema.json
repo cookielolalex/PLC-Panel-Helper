@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Effective Reference Set V4",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "detector_version",
+    "task_id",
+    "project_id",
+    "status",
+    "target_types_present",
+    "effective_pages",
+    "duplicate_groups",
+    "unresolved_issues",
+    "generator_exposure",
+    "minimization"
+  ],
+  "properties": {
+    "schema_version": {"const": "reference_detection_v4_schema_v1"},
+    "detector_version": {"const": "target_output_detection_v4_local_multisignal_recovery"},
+    "task_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "status": {
+      "enum": [
+        "VERIFIED_ALL_THREE_BY_CONTENT",
+        "VERIFIED_ALL_THREE_COMBINED_PACKAGE",
+        "VERIFIED_ALL_THREE_WITH_PAGE_SUPERSESSION",
+        "PARTIAL_REFERENCE_SET",
+        "AMBIGUOUS_REFERENCE_SET",
+        "NO_REFERENCE_SET",
+        "INACCESSIBLE_REFERENCE_SET"
+      ]
+    },
+    "target_types_present": {"type": "array", "items": {"type": "string"}},
+    "effective_pages": {"type": "array", "items": {"type": "object"}},
+    "duplicate_groups": {"type": "array", "items": {"type": "object"}},
+    "unresolved_issues": {"type": "array", "items": {"type": "string"}},
+    "generator_exposure": {
+      "type": "object",
+      "required": [
+        "generator_receives_reference_file_ids",
+        "generator_receives_reference_hashes",
+        "generator_receives_reference_paths",
+        "generator_receives_reference_content"
+      ],
+      "properties": {
+        "generator_receives_reference_file_ids": {"const": false},
+        "generator_receives_reference_hashes": {"const": false},
+        "generator_receives_reference_paths": {"const": false},
+        "generator_receives_reference_content": {"const": false}
+      }
+    },
+    "minimization": {"type": "object"}
+  }
+}
