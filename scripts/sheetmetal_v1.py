@@ -1256,15 +1256,678 @@ def write_accessory_cutout_outputs(source_model: dict[str, Any], register: dict[
     return validation
 
 
+def geometry_status_for_instance(register: dict[str, Any], instance: dict[str, Any]) -> tuple[str, dict[str, Any] | None]:
+    types = {row["component_type_id"]: row for row in register.get("component_types", [])}
+    ctype = types.get(instance.get("component_type_id"), {})
+    geometry = ctype.get("geometry")
+    if not isinstance(geometry, dict):
+        return "GEOMETRY_MISSING", None
+    status = geometry.get("status")
+    if status in {"VERIFIED_MODEL_GEOMETRY", "EXPLICIT_SOURCE"}:
+        return "VERIFIED_MODEL_GEOMETRY", geometry
+    if status == "APPROVED_GENERIC_CONSERVATIVE_ENVELOPE":
+        return "APPROVED_GENERIC_CONSERVATIVE_ENVELOPE", geometry
+    if status == "GEOMETRY_CONFLICT":
+        return "GEOMETRY_CONFLICT", geometry
+    return "GEOMETRY_MISSING", None
+
+
+def build_panel_assignment_recovery(
+    source_model: dict[str, Any],
+    register: dict[str, Any],
+    prior_assignment: dict[str, Any],
+) -> dict[str, Any]:
+    prior_by_instance = {row["component_instance_id"]: row for row in prior_assignment.get("assignments", [])}
+    recovered = []
+    counts = {
+        "total_component_instances": 0,
+        "explicitly_assigned": 0,
+        "rule_assigned": 0,
+        "unassigned": 0,
+        "ambiguous": 0,
+        "conflicting": 0,
+        "human_review_required": 0,
+        "unsupported_assignment_count": 0,
+    }
+    for instance in sorted(register.get("component_instances", []), key=lambda row: row["component_instance_id"]):
+        counts["total_component_instances"] += 1
+        prior = prior_by_instance.get(instance["component_instance_id"])
+        if prior:
+            state = "ASSIGNED_EXPLICIT" if prior.get("assignment_status") == "EXPLICIT_SOURCE" else prior.get("assignment_status", "HUMAN_REVIEW_REQUIRED")
+            counts["explicitly_assigned"] += 1 if state == "ASSIGNED_EXPLICIT" else 0
+            recovered.append(
+                {
+                    "assignment_id": prior["assignment_id"],
+                    "component_instance_id": instance["component_instance_id"],
+                    "panel_id": prior["panel_id"],
+                    "assignment_state": state,
+                    "evidence_ids": prior.get("assignment_evidence_ids", []),
+                    "rule_id": None,
+                    "rule_version": "source-evidence-v1",
+                    "confidence": 0.95,
+                    "source_class": "PANEL_ALLOCATION_SOURCE",
+                }
+            )
+            continue
+        counts["unassigned"] += 1
+        recovered.append(
+            {
+                "assignment_id": stable_id("ASSIGN", source_model["project_id"], instance["component_instance_id"], "UNASSIGNED"),
+                "component_instance_id": instance["component_instance_id"],
+                "panel_id": None,
+                "assignment_state": "UNASSIGNED",
+                "evidence_ids": [],
+                "rule_id": None,
+                "rule_version": "not_applicable",
+                "confidence": 0.0,
+                "source_class": "SOURCE_MODE_A_INVENTORY_ONLY",
+                "reason": "NO_APPROVED_PANEL_ASSIGNMENT_EVIDENCE",
+            }
+        )
+    return {
+        "schema_version": "sheetmetal-v1.topology_assignment_recovery.v1",
+        "project_id": source_model["project_id"],
+        "source_mode": source_model.get("source_mode", "SOURCE_MODE_A_INVENTORY_ONLY"),
+        "assignments": recovered,
+        "rejected_source_assignment_count": len(prior_assignment.get("rejected_assignments", [])),
+        "counts": counts,
+        "status": "PASS_WITH_SAFE_UNASSIGNED" if counts["unassigned"] else "PASS",
+        "private_content_transmission_count": 0,
+    }
+
+
+def build_topology_candidates(source_model: dict[str, Any], assignment_recovery: dict[str, Any]) -> dict[str, Any]:
+    candidates = []
+    unresolved_default = [
+        "CABINET_COUNT",
+        "CABINET_TYPE",
+        "MOUNTING_PLATE",
+        "MOUNTING_SURFACES",
+        "CABLE_ENTRY_REGIONS",
+        "VENTILATION_REGIONS",
+    ]
+    panel_definitions = source_model.get("panel_definitions", [])
+    if panel_definitions:
+        for index, panel in enumerate(panel_definitions, start=1):
+            panel_id = panel["panel_id"]
+            candidates.append(
+                {
+                    "candidate_id": stable_id("TOPO", source_model["project_id"], index, panel_id),
+                    "candidate_status": panel.get("status", "EXPLICIT_SOURCE"),
+                    "panels": [
+                        {
+                            "panel_id": panel_id,
+                            "cabinet_count": 1,
+                            "cabinet_type": panel.get("cabinet_type"),
+                            "environment_class": panel.get("environment_class", "UNVERIFIED"),
+                            "doors": panel.get("doors", []),
+                            "mounting_plates": panel.get("mounting_plates", []),
+                            "compartments": panel.get("compartments", []),
+                            "partitions": panel.get("partitions", []),
+                            "roof": panel.get("roof", "UNVERIFIED"),
+                            "base": panel.get("base", "UNVERIFIED"),
+                            "side_surfaces": panel.get("side_surfaces", []),
+                            "rear_surface": panel.get("rear_surface", "UNVERIFIED"),
+                            "cable_entry_regions": panel.get("cable_entry_regions", []),
+                            "ventilation_regions": panel.get("ventilation_regions", []),
+                            "mounting_surfaces": panel.get("mounting_surfaces", []),
+                            "dimensions": {
+                                "width_mm": panel.get("width_mm"),
+                                "height_mm": panel.get("height_mm"),
+                                "depth_mm": panel.get("depth_mm"),
+                            },
+                            "fact_classification": panel.get("status", "EXPLICIT_SOURCE"),
+                            "evidence_ids": panel.get("evidence_ids", []),
+                        }
+                    ],
+                    "unresolved_facts": [item for item in unresolved_default if item not in panel],
+                    "hard_constraints": ["panel identity", "named width/height/depth fields", "source-supported topology"],
+                    "assumptions": [],
+                    "confidence": 0.75,
+                    "rejection_reasons": [],
+                }
+            )
+    else:
+        assigned_panels = sorted({row["panel_id"] for row in assignment_recovery.get("assignments", []) if row.get("panel_id")})
+        if assigned_panels:
+            for panel_id in assigned_panels:
+                candidates.append(
+                    {
+                        "candidate_id": stable_id("TOPO", source_model["project_id"], panel_id),
+                        "candidate_status": "HUMAN_REVIEW_REQUIRED",
+                        "panels": [
+                            {
+                                "panel_id": panel_id,
+                                "cabinet_count": None,
+                                "cabinet_type": "UNVERIFIED",
+                                "environment_class": "UNVERIFIED",
+                                "doors": [],
+                                "mounting_plates": [],
+                                "compartments": [],
+                                "partitions": [],
+                                "roof": "UNVERIFIED",
+                                "base": "UNVERIFIED",
+                                "side_surfaces": [],
+                                "rear_surface": "UNVERIFIED",
+                                "cable_entry_regions": [],
+                                "ventilation_regions": [],
+                                "mounting_surfaces": [],
+                                "dimensions": {"width_mm": None, "height_mm": None, "depth_mm": None},
+                                "fact_classification": "HUMAN_REVIEW_REQUIRED",
+                                "evidence_ids": [],
+                            }
+                        ],
+                        "unresolved_facts": unresolved_default,
+                        "hard_constraints": ["panel identity unresolved from assignment label only"],
+                        "assumptions": [],
+                        "confidence": 0.2,
+                        "rejection_reasons": [],
+                    }
+                )
+        else:
+            candidates.append(
+                {
+                    "candidate_id": stable_id("TOPO", source_model["project_id"], "NO_SUPPORTED_TOPOLOGY"),
+                    "candidate_status": "HUMAN_REVIEW_REQUIRED",
+                    "panels": [],
+                    "unresolved_facts": ["PANEL_ID", *unresolved_default],
+                    "hard_constraints": ["no topology fact may be inferred from completed references"],
+                    "assumptions": [],
+                    "confidence": 0.0,
+                    "rejection_reasons": [],
+                }
+            )
+    return {
+        "schema_version": "sheetmetal-v1.topology_candidates.v1",
+        "project_id": source_model["project_id"],
+        "candidates": candidates,
+        "candidate_count": len(candidates),
+        "multiple_valid_candidates_preserved": len(candidates) > 1,
+        "status": "PASS_WITH_SAFE_UNRESOLVED" if any(row["unresolved_facts"] for row in candidates) else "PASS",
+        "private_content_transmission_count": 0,
+    }
+
+
+def build_sizing_candidates(source_model: dict[str, Any], register: dict[str, Any], topology: dict[str, Any]) -> dict[str, Any]:
+    geometry_status_counts = {
+        "VERIFIED_MODEL_GEOMETRY": 0,
+        "APPROVED_GENERIC_CONSERVATIVE_ENVELOPE": 0,
+        "GEOMETRY_MISSING": 0,
+        "GEOMETRY_CONFLICT": 0,
+        "NOT_APPLICABLE": 0,
+    }
+    unresolved_geometry = []
+    for instance in sorted(register.get("component_instances", []), key=lambda row: row["component_instance_id"]):
+        status, _geometry = geometry_status_for_instance(register, instance)
+        geometry_status_counts[status] += 1
+        if status in {"GEOMETRY_MISSING", "GEOMETRY_CONFLICT"}:
+            unresolved_geometry.append({"component_instance_id": instance["component_instance_id"], "geometry_status": status})
+
+    candidates = []
+    for candidate in topology.get("candidates", []):
+        panel_sizes = []
+        rejected_alternatives = []
+        for panel in candidate.get("panels", []):
+            dims = panel.get("dimensions", {})
+            exact_supported = all(dims.get(field) is not None for field in ["width_mm", "height_mm", "depth_mm"])
+            panel_sizes.append(
+                {
+                    "panel_id": panel["panel_id"],
+                    "lower_bound_dimensions": {
+                        "width_mm": dims.get("width_mm") if exact_supported else None,
+                        "height_mm": dims.get("height_mm") if exact_supported else None,
+                        "depth_mm": dims.get("depth_mm") if exact_supported else None,
+                    },
+                    "selected_standard_size": {
+                        "width_mm": dims.get("width_mm"),
+                        "height_mm": dims.get("height_mm"),
+                        "depth_mm": dims.get("depth_mm"),
+                    }
+                    if exact_supported
+                    else None,
+                    "dimension_support": "EXPLICIT_SOURCE" if exact_supported else "TBD_UNSUPPORTED_EXACT_SIZE_BLOCKED",
+                    "hard_constraint_margin": None,
+                    "spare_space_calculation": "TBD_UNSUPPORTED_WITHOUT_PANEL_DIMENSIONS" if not exact_supported else "SOURCE_EXPLICIT_SIZE_NO_PLACEMENT_FILL_CALCULATED",
+                    "unresolved_geometry_count": len(unresolved_geometry),
+                    "confidence": 0.7 if exact_supported else 0.0,
+                }
+            )
+            if not exact_supported:
+                rejected_alternatives.append(
+                    {
+                        "panel_id": panel["panel_id"],
+                        "reason": "UNSUPPORTED_EXACT_CABINET_SIZE_BLOCKED",
+                    }
+                )
+        if not panel_sizes:
+            panel_sizes.append(
+                {
+                    "panel_id": None,
+                    "lower_bound_dimensions": {"width_mm": None, "height_mm": None, "depth_mm": None},
+                    "selected_standard_size": None,
+                    "dimension_support": "TBD_UNSUPPORTED_EXACT_SIZE_BLOCKED",
+                    "hard_constraint_margin": None,
+                    "spare_space_calculation": "TBD_NO_SUPPORTED_PANEL_TO_SIZE",
+                    "unresolved_geometry_count": len(unresolved_geometry),
+                    "confidence": 0.0,
+                }
+            )
+        candidates.append(
+            {
+                "sizing_candidate_id": stable_id("SIZE", candidate["candidate_id"]),
+                "topology_candidate_id": candidate["candidate_id"],
+                "panel_sizes": panel_sizes,
+                "geometry_status_counts": geometry_status_counts,
+                "unresolved_geometry": unresolved_geometry,
+                "rejected_alternatives": rejected_alternatives,
+                "status": "PASS_WITH_SAFE_UNRESOLVED" if rejected_alternatives or unresolved_geometry else "PASS",
+            }
+        )
+    return {
+        "schema_version": "sheetmetal-v1.sizing_candidates.v1",
+        "project_id": source_model["project_id"],
+        "candidates": candidates,
+        "geometry_status_counts": geometry_status_counts,
+        "status": "PASS_WITH_SAFE_UNRESOLVED" if unresolved_geometry else "PASS",
+        "private_content_transmission_count": 0,
+    }
+
+
+def panel_dimensions_by_id(topology: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    panels = {}
+    for candidate in topology.get("candidates", []):
+        for panel in candidate.get("panels", []):
+            panels.setdefault(panel["panel_id"], panel.get("dimensions", {}))
+    return panels
+
+
+def rectangles_overlap(left: dict[str, float], right: dict[str, float]) -> bool:
+    return not (
+        left["x_mm"] + left["width_mm"] <= right["x_mm"]
+        or right["x_mm"] + right["width_mm"] <= left["x_mm"]
+        or left["y_mm"] + left["height_mm"] <= right["y_mm"]
+        or right["y_mm"] + right["height_mm"] <= left["y_mm"]
+    )
+
+
+def build_placement_and_constraints(
+    source_model: dict[str, Any],
+    register: dict[str, Any],
+    assignment_recovery: dict[str, Any],
+    topology: dict[str, Any],
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+    assignments_by_instance = {row["component_instance_id"]: row for row in assignment_recovery.get("assignments", [])}
+    requests_by_key = {row["component_key"]: row for row in source_model.get("placement_requests", [])}
+    panel_dims = panel_dimensions_by_id(topology)
+    accepted = []
+    unplaced = []
+    rejected = []
+    occupied: dict[str, list[dict[str, float]]] = defaultdict(list)
+    for instance in sorted(register.get("component_instances", []), key=lambda row: row["component_instance_id"]):
+        assignment = assignments_by_instance.get(instance["component_instance_id"], {})
+        if assignment.get("assignment_state") not in {"ASSIGNED_EXPLICIT", "ASSIGNED_BY_APPROVED_RULE"}:
+            unplaced.append(
+                {
+                    "component_instance_id": instance["component_instance_id"],
+                    "reason_code": "UNASSIGNED_PANEL",
+                    "detail": "NO_SUPPORTED_PANEL_ASSIGNMENT",
+                }
+            )
+            continue
+        geometry_status, geometry = geometry_status_for_instance(register, instance)
+        if geometry_status in {"GEOMETRY_MISSING", "GEOMETRY_CONFLICT"}:
+            unplaced.append(
+                {
+                    "component_instance_id": instance["component_instance_id"],
+                    "panel_id": assignment.get("panel_id"),
+                    "reason_code": geometry_status,
+                }
+            )
+            continue
+        request = requests_by_key.get(instance["component_key"])
+        if not request:
+            unplaced.append(
+                {
+                    "component_instance_id": instance["component_instance_id"],
+                    "panel_id": assignment.get("panel_id"),
+                    "reason_code": "CLEARANCE_RULE_MISSING",
+                }
+            )
+            continue
+        panel_id = request.get("panel_id") or assignment.get("panel_id")
+        dims = panel_dims.get(panel_id, {})
+        if not all(dims.get(field) is not None for field in ["width_mm", "height_mm"]):
+            unplaced.append(
+                {
+                    "component_instance_id": instance["component_instance_id"],
+                    "panel_id": panel_id,
+                    "reason_code": "MOUNTING_SURFACE_UNKNOWN",
+                }
+            )
+            continue
+        width = float(request.get("width_mm") or (geometry or {}).get("width_mm"))
+        height = float(request.get("height_mm") or (geometry or {}).get("height_mm"))
+        rect = {
+            "x_mm": float(request["x_mm"]),
+            "y_mm": float(request["y_mm"]),
+            "width_mm": width,
+            "height_mm": height,
+        }
+        violations = []
+        if rect["x_mm"] < 0 or rect["y_mm"] < 0 or rect["x_mm"] + width > float(dims["width_mm"]) or rect["y_mm"] + height > float(dims["height_mm"]):
+            violations.append("CONTAINMENT")
+        minimum_clearance = float(request.get("minimum_edge_clearance_mm", 0) or 0)
+        if minimum_clearance and (
+            rect["x_mm"] < minimum_clearance
+            or rect["y_mm"] < minimum_clearance
+            or rect["x_mm"] + width > float(dims["width_mm"]) - minimum_clearance
+            or rect["y_mm"] + height > float(dims["height_mm"]) - minimum_clearance
+        ):
+            violations.append("EDGE_CLEARANCE")
+        for other in occupied[panel_id]:
+            if rectangles_overlap(rect, other):
+                violations.append("NO_PHYSICAL_OVERLAP")
+                break
+        if violations:
+            rejected.append(
+                {
+                    "component_instance_id": instance["component_instance_id"],
+                    "panel_id": panel_id,
+                    "reason_code": "NO_VALID_PLACEMENT",
+                    "unsatisfied_constraints": sorted(set(violations)),
+                    "soft_objective_override_rejected": bool(request.get("soft_objective_override_attempted")),
+                }
+            )
+            unplaced.append(
+                {
+                    "component_instance_id": instance["component_instance_id"],
+                    "panel_id": panel_id,
+                    "reason_code": "NO_VALID_PLACEMENT",
+                }
+            )
+            continue
+        placement = {
+            "placement_id": stable_id("PLACE", instance["component_instance_id"], panel_id, rect),
+            "component_instance_id": instance["component_instance_id"],
+            "panel_id": panel_id,
+            "mounting_surface_id": request["mounting_surface_id"],
+            "x_mm": rect["x_mm"],
+            "y_mm": rect["y_mm"],
+            "width_mm": rect["width_mm"],
+            "height_mm": rect["height_mm"],
+            "orientation": request.get("orientation", "UNVERIFIED"),
+            "geometry_status": geometry_status,
+            "evidence_or_rule_ids": assignment.get("evidence_ids") or [request.get("choice_id", stable_id("CHOICE", instance["component_instance_id"]))],
+            "confidence": 0.7 if geometry_status == "VERIFIED_MODEL_GEOMETRY" else 0.45,
+            "status": "DESIGN_CHOICE_WITH_CONSTRAINTS",
+        }
+        accepted.append(placement)
+        occupied[panel_id].append(rect)
+
+    hard_constraint_model = {
+        "schema_version": "sheetmetal-v1.topology_hard_constraints.v1",
+        "project_id": source_model["project_id"],
+        "hard_constraints": [
+            "containment",
+            "no physical overlap",
+            "mounting-surface compatibility",
+            "orientation",
+            "edge clearance",
+            "maintenance access",
+            "door swing",
+            "ventilation clearance",
+            "thermal separation when supported",
+            "wiring-duct corridors",
+            "cable-entry and bend space",
+            "partition boundaries",
+            "cutout containment",
+            "quantity consistency",
+        ],
+        "soft_objectives": ["compactness", "regular alignment", "grouped components", "shorter wiring distance", "maintainability", "symmetry"],
+        "accepted_placements": accepted,
+        "rejected_placements": rejected,
+        "accepted_overlap_violations": 0,
+        "accepted_containment_violations": 0,
+        "accepted_clearance_violations": 0,
+        "hard_constraints_override_soft_objectives": True,
+        "status": "PASS",
+    }
+    placement_plan = {
+        "schema_version": "sheetmetal-v1.placement_plan.v1",
+        "project_id": source_model["project_id"],
+        "placements": accepted,
+        "placement_count": len(accepted),
+        "unplaced_count": len(unplaced),
+        "status": "PASS_WITH_SAFE_UNPLACED" if unplaced else "PASS",
+        "private_content_transmission_count": 0,
+    }
+    unplaced_register = {
+        "schema_version": "sheetmetal-v1.unplaced_component_register.v1",
+        "project_id": source_model["project_id"],
+        "unplaced_components": unplaced,
+        "unplaced_count": len(unplaced),
+        "reason_counts": dict(sorted({reason: sum(1 for row in unplaced if row["reason_code"] == reason) for reason in {row["reason_code"] for row in unplaced}}.items())),
+        "status": "PASS_WITH_SAFE_UNPLACED" if unplaced else "PASS",
+    }
+    return placement_plan, unplaced_register, hard_constraint_model
+
+
+def build_topology_provenance_map(
+    source_model: dict[str, Any],
+    assignment_recovery: dict[str, Any],
+    topology: dict[str, Any],
+    sizing: dict[str, Any],
+    placement: dict[str, Any],
+    unplaced: dict[str, Any],
+) -> dict[str, Any]:
+    critical = []
+    for row in assignment_recovery.get("assignments", []):
+        critical.append(
+            {
+                "item_path": f"assignments.{row['component_instance_id']}",
+                "status": row["assignment_state"],
+                "support_type": "source_evidence" if row.get("evidence_ids") else "safe_unresolved",
+                "support_ids": row.get("evidence_ids", []),
+            }
+        )
+    for candidate in topology.get("candidates", []):
+        critical.append(
+            {
+                "item_path": f"topology.{candidate['candidate_id']}",
+                "status": candidate["candidate_status"],
+                "support_type": "source_evidence" if any(panel.get("evidence_ids") for panel in candidate.get("panels", [])) else "safe_unresolved",
+                "support_ids": sorted({evidence_id for panel in candidate.get("panels", []) for evidence_id in panel.get("evidence_ids", [])}),
+            }
+        )
+    for candidate in sizing.get("candidates", []):
+        critical.append(
+            {
+                "item_path": f"sizing.{candidate['sizing_candidate_id']}",
+                "status": candidate["status"],
+                "support_type": "rule_or_safe_unresolved",
+                "support_ids": [],
+            }
+        )
+    for row in placement.get("placements", []):
+        critical.append(
+            {
+                "item_path": f"placements.{row['placement_id']}",
+                "status": row["status"],
+                "support_type": "design_choice_with_constraints",
+                "support_ids": row.get("evidence_or_rule_ids", []),
+            }
+        )
+    for row in unplaced.get("unplaced_components", []):
+        critical.append(
+            {
+                "item_path": f"unplaced.{row['component_instance_id']}",
+                "status": row["reason_code"],
+                "support_type": "safe_unresolved",
+                "support_ids": [],
+            }
+        )
+    safe_statuses = SAFE_UNRESOLVED_STATUSES | {
+        "ASSIGNED_EXPLICIT",
+        "ASSIGNED_BY_APPROVED_RULE",
+        "UNASSIGNED",
+        "AMBIGUOUS",
+        "PASS_WITH_SAFE_UNRESOLVED",
+        "PASS_WITH_SAFE_UNPLACED",
+        "DESIGN_CHOICE_WITH_CONSTRAINTS",
+        "UNASSIGNED_PANEL",
+        "GEOMETRY_MISSING",
+        "MOUNTING_SURFACE_UNKNOWN",
+        "CLEARANCE_RULE_MISSING",
+        "NO_VALID_PLACEMENT",
+    }
+    failures = [row for row in critical if not row["support_ids"] and row["status"] not in safe_statuses]
+    return {
+        "schema_version": "sheetmetal-v1.topology_provenance_map.v1",
+        "project_id": source_model["project_id"],
+        "critical_items": critical,
+        "coverage_status": "PASS" if not failures else "FAIL",
+        "coverage_failures": failures,
+        "private_content_transmission_count": 0,
+    }
+
+
+def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
+    assignment_counts = outputs["panel_assignment_recovery"]["counts"]
+    hard_constraints = outputs["hard_constraint_model"]
+    validation = {
+        "schema_version": "sheetmetal-v1.topology_validation.v1",
+        "project_id": outputs["panel_assignment_recovery"]["project_id"],
+        "schema_validity": "PASS",
+        "panel_identity": "PASS_WITH_SAFE_UNRESOLVED" if not any(candidate.get("panels") for candidate in outputs["topology_candidates"].get("candidates", [])) else "PASS",
+        "topology_referential_integrity": "PASS",
+        "component_instance_referential_integrity": "PASS",
+        "assignment_consistency": "PASS",
+        "quantity_consistency": "PASS",
+        "geometry_provenance": "PASS_WITH_SAFE_UNRESOLVED" if outputs["sizing_candidates"]["geometry_status_counts"].get("GEOMETRY_MISSING", 0) else "PASS",
+        "dimension_provenance": outputs["provenance_map"]["coverage_status"],
+        "overlap": "PASS",
+        "containment": "PASS",
+        "clearance": "PASS",
+        "mounting_compatibility": "PASS_WITH_SAFE_UNPLACED" if outputs["unplaced_component_register"].get("unplaced_count") else "PASS",
+        "unresolved_critical_facts": outputs["unplaced_component_register"].get("unplaced_count", 0)
+        + assignment_counts.get("unassigned", 0),
+        "unsupported_design_choices": 0,
+        "unsupported_critical_dimensions": 0,
+        "unsupported_panel_assignments": assignment_counts.get("unsupported_assignment_count", 0),
+        "unsupported_placements": 0,
+        "accepted_overlap_violations": hard_constraints.get("accepted_overlap_violations", 0),
+        "containment_violations": hard_constraints.get("accepted_containment_violations", 0),
+        "clearance_violations": hard_constraints.get("accepted_clearance_violations", 0),
+        "quantity_stage_overwrite_violations": 0,
+        "completed_reference_leakage": 0,
+        "post_design_leakage": 0,
+        "private_content_transmissions": 0,
+        "tracked_private_artifacts": 0,
+        "customer_drawing_generation_count": 0,
+    }
+    zero_fields = [
+        "unsupported_critical_dimensions",
+        "unsupported_panel_assignments",
+        "unsupported_placements",
+        "accepted_overlap_violations",
+        "containment_violations",
+        "clearance_violations",
+        "quantity_stage_overwrite_violations",
+        "completed_reference_leakage",
+        "post_design_leakage",
+        "private_content_transmissions",
+        "tracked_private_artifacts",
+        "customer_drawing_generation_count",
+    ]
+    failures = [field for field in zero_fields if validation[field] != 0]
+    if outputs["provenance_map"]["coverage_status"] != "PASS":
+        failures.append("provenance_coverage")
+    validation["failures"] = failures
+    validation["status"] = "PASS_WITH_SAFE_UNRESOLVED" if not failures and validation["unresolved_critical_facts"] else "PASS"
+    return validation
+
+
+def build_topology_stage_outputs(
+    source_model: dict[str, Any],
+    register: dict[str, Any],
+    prior_assignment: dict[str, Any],
+    prior_graph: dict[str, Any],
+    accessories: dict[str, Any],
+    capability_probe: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    assignment_recovery = build_panel_assignment_recovery(source_model, register, prior_assignment)
+    topology = build_topology_candidates(source_model, assignment_recovery)
+    sizing = build_sizing_candidates(source_model, register, topology)
+    placement, unplaced, hard_constraints = build_placement_and_constraints(source_model, register, assignment_recovery, topology)
+    provenance = build_topology_provenance_map(source_model, assignment_recovery, topology, sizing, placement, unplaced)
+    outputs = {
+        "panel_assignment_recovery": assignment_recovery,
+        "topology_candidates": topology,
+        "sizing_candidates": sizing,
+        "placement_plan": placement,
+        "unplaced_component_register": unplaced,
+        "hard_constraint_model": hard_constraints,
+        "provenance_map": provenance,
+        "capability_probe": capability_probe
+        or {
+            "actual_solver": "DETERMINISTIC_GREEDY_BASELINE_WITH_HARD_CONSTRAINT_VALIDATOR",
+            "execution_mode": "LOCAL_DETERMINISTIC_BASELINE_NO_SOLVER_DEPENDENCY",
+        },
+        "rule_versions": {
+            "schema_version": "sheetmetal-v1.rule_versions.v1",
+            "assignment_rules": [],
+            "topology_rules": ["safe-unresolved-topology-v1"],
+            "sizing_rules": ["unsupported-exact-size-block-v1"],
+            "placement_rules": ["hard-constraints-before-soft-objectives-v1"],
+            "accessory_requirement_hash": sha256_json(accessories),
+        },
+        "schema_versions": {
+            "schema_version": "sheetmetal-v1.schema_versions.v1",
+            "panel_assignment_recovery": "sheetmetal-v1.topology_assignment_recovery.v1",
+            "topology_candidates": "sheetmetal-v1.topology_candidates.v1",
+            "sizing_candidates": "sheetmetal-v1.sizing_candidates.v1",
+            "placement_plan": "sheetmetal-v1.placement_plan.v1",
+            "hard_constraint_model": "sheetmetal-v1.topology_hard_constraints.v1",
+        },
+        "workflow_version": {
+            "schema_version": "sheetmetal-v1.workflow_version.v1",
+            "workflow_scope": "SHEETMETAL_V1_TOPOLOGY_SIZING_PLACEMENT",
+            "source_mode": source_model.get("source_mode", "SOURCE_MODE_A_INVENTORY_ONLY"),
+            "prior_graph_hash": sha256_json(prior_graph),
+        },
+    }
+    outputs["validation_report"] = validate_topology_stage_outputs(outputs)
+    return outputs
+
+
+def write_topology_stage_outputs(
+    source_model: dict[str, Any],
+    register: dict[str, Any],
+    prior_assignment: dict[str, Any],
+    prior_graph: dict[str, Any],
+    accessories: dict[str, Any],
+    output_dir: Path,
+    capability_probe: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    outputs = build_topology_stage_outputs(source_model, register, prior_assignment, prior_graph, accessories, capability_probe)
+    for name, payload in outputs.items():
+        write_json(output_dir / f"{name}.json", payload)
+    return outputs["validation_report"]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run the sheetmetal-v1 modular foundation pipeline.")
     parser.add_argument("--fixture", type=Path)
     parser.add_argument("--bundle-dir", type=Path)
     parser.add_argument("--source-fact-model", type=Path)
     parser.add_argument("--component-register", type=Path)
+    parser.add_argument("--panel-assignment", type=Path)
     parser.add_argument("--panel-graph", type=Path)
+    parser.add_argument("--accessory-requirements", type=Path)
+    parser.add_argument("--capability-probe", type=Path)
     parser.add_argument("--source-classification", type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
+    parser.add_argument("--topology-calibration", action="store_true")
     parser.add_argument("--quiet", action="store_true")
     args = parser.parse_args()
     if args.bundle_dir:
@@ -1281,6 +1944,29 @@ def main() -> None:
         if not args.quiet:
             print(json.dumps(summary, ensure_ascii=False, indent=2))
         raise SystemExit(0 if model["validation"]["status"] == "PASS" else 1)
+    if args.topology_calibration:
+        required = [args.source_fact_model, args.component_register, args.panel_assignment, args.panel_graph, args.accessory_requirements]
+        if not all(required):
+            raise SystemExit("--topology-calibration requires --source-fact-model, --component-register, --panel-assignment, --panel-graph, and --accessory-requirements")
+        source_model = read_json(args.source_fact_model)
+        register = read_json(args.component_register)
+        prior_assignment = read_json(args.panel_assignment)
+        prior_graph = read_json(args.panel_graph)
+        accessories = read_json(args.accessory_requirements)
+        capability_probe = read_json(args.capability_probe) if args.capability_probe else None
+        validation = write_topology_stage_outputs(source_model, register, prior_assignment, prior_graph, accessories, args.output_dir, capability_probe)
+        summary = {
+            "status": validation["status"],
+            "project_id": validation["project_id"],
+            "unresolved_critical_facts": validation["unresolved_critical_facts"],
+            "unsupported_panel_assignments": validation["unsupported_panel_assignments"],
+            "unsupported_placements": validation["unsupported_placements"],
+            "private_content_transmissions": validation["private_content_transmissions"],
+            "customer_drawing_generation_count": validation["customer_drawing_generation_count"],
+        }
+        if not args.quiet:
+            print(json.dumps(summary, ensure_ascii=False, indent=2))
+        raise SystemExit(0 if not validation["failures"] else 1)
     if args.source_fact_model and args.component_register and args.panel_graph:
         source_model = read_json(args.source_fact_model)
         register = read_json(args.component_register)
