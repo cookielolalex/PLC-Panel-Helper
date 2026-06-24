@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: signed source/rule authority decision template prepared; signed
+Current phase: signed source/rule authority decision validator ready; signed
 human authority decision still required.
 
 Accepted release: none.
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED`.
+Current status: `SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED`.
 
 Current candidate: `1110101`.
 
@@ -448,6 +448,27 @@ Signed authority decision template:
 - No implementation code, rule, schema, source manifest, frozen release,
   frozen grader, source root, `.private` artifact, completed reference,
   customer drawing, PDF, DXF, or DWG was changed or generated.
+
+Exact next action:
+
+Signed authority decision validator:
+
+- Decision: `D-0043`.
+- Validator commit: `d18b1a6`.
+- Validator status:
+  `SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED`.
+- Schema:
+  `schemas/signed_authority_decision.schema.json`.
+- Validator:
+  `scripts/validate_signed_authority_decision.py`.
+- Summary:
+  `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_validator_summary.json`.
+- Full tests: `PASS`.
+- Legacy, active sheetmetal-v1, and topology-stage scoped freezes: `PASS`.
+- No authority lane was selected.
+- No implementation code, rule, source manifest, source root, `.private`
+  artifact, completed reference, customer drawing, PDF, DXF, or DWG was
+  changed or generated.
 
 Exact next action:
 

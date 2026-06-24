@@ -448,3 +448,6 @@
   packet hashes. No authority lane was selected, no implementation was applied,
   and the next action is still to obtain a signed human/source-rule authority
   decision.
+- Added fail-closed validation for future signed authority decisions, including
+  schema, validator, regression coverage, refreshed active/topology scoped
+  freeze manifests, neutral summary evidence, and child-result evidence.

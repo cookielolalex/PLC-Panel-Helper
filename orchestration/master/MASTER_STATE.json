@@ -2,8 +2,8 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "98e582fb23655951414ab88505064d3349f1cd9a",
-  "current_canonical_status": "SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED",
+  "current_head": "d18b1a6e175d1cd296ba46870b952fedc8251ea2",
+  "current_canonical_status": "SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED",
   "current_stage": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
   "next_action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
   "active_thread_ids": [],
@@ -18,6 +18,7 @@
     "SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW",
     "SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET",
     "SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-TEMPLATE",
+    "SMV1-SIGNED-AUTHORITY-DECISION-VALIDATOR",
     "SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION"
   ],
   "worktree_paths": [
@@ -44,12 +45,13 @@
     "source_rule_proposal_review_brief_commit": "9d7a79fe14a0c9b7f3e485ba6c720fa665d7b007",
     "source_rule_proposal_review_commit": "84c762835c3b3221e6d10b6a6ce4631185ba61ef",
     "source_rule_authority_decision_packet_commit": "db0efba99c3bbc8a98e1fee736ffbfab602b1ac5",
-    "signed_authority_decision_template_commit": "98e582fb23655951414ab88505064d3349f1cd9a"
+    "signed_authority_decision_template_commit": "98e582fb23655951414ab88505064d3349f1cd9a",
+    "signed_authority_decision_validator_commit": "d18b1a6e175d1cd296ba46870b952fedc8251ea2"
   },
   "expected_outputs": [
     "signed human authority decision selecting one or more authority choices, or rejecting all lanes"
   ],
-  "last_heartbeat": "2026-06-24T17:27:34.8654354+08:00",
+  "last_heartbeat": "2026-06-24T17:37:41.0680620+08:00",
   "retries": {},
   "blockers": [],
   "audit_state": {
@@ -63,7 +65,8 @@
     "source_rule_proposal": "PROPOSAL_CREATED_NOT_APPLIED_SOURCE_RULE_APPROVAL_BRANCH",
     "source_rule_proposal_review": "PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW",
     "source_rule_authority_decision_packet": "DECISION_PACKET_PREPARED_HUMAN_AUTHORITY_REQUIRED",
-    "signed_authority_decision_template": "SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED"
+    "signed_authority_decision_template": "SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED",
+    "signed_authority_decision_validator": "SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED"
   },
   "merge_state": {
     "pending_child_commits": [],
@@ -75,9 +78,10 @@
       "de01dd57b0c4a7db98114a5a9913b25de6069f06",
       "84c762835c3b3221e6d10b6a6ce4631185ba61ef",
       "db0efba99c3bbc8a98e1fee736ffbfab602b1ac5",
-      "98e582fb23655951414ab88505064d3349f1cd9a"
+      "98e582fb23655951414ab88505064d3349f1cd9a",
+      "d18b1a6e175d1cd296ba46870b952fedc8251ea2"
     ],
-    "last_merge_result": "SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED"
+    "last_merge_result": "SIGNED_AUTHORITY_DECISION_VALIDATOR_READY"
   },
   "pending_worktrees": [
     {
@@ -99,7 +103,7 @@
   "latest_verified_test_result": {
     "command": "python scripts/run_tests.py",
     "status": "PASS",
-    "verified_at": "2026-06-24T16:34:25.3738259+08:00"
+    "verified_at": "2026-06-24T17:35:40.5422423+08:00"
   },
   "scoped_workflow_freeze_results": {
     "legacy_baseline_024": "PASS",

@@ -1069,3 +1069,36 @@ Evidence:
 `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.md`,
 and
 `orchestration/master/child-results/SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-TEMPLATE.json`.
+
+## sheetmetal-v1 signed authority decision validator
+
+Status: `SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED`.
+
+Decision: `D-0043`.
+
+Purpose: make the pending signed human/source-rule authority decision
+machine-checkable before any accepted-lane implementation work can start.
+
+Validator result:
+
+- Validates choices `A`, `B`, `C`, or mutually exclusive `D`.
+- Verifies the decision is bound to the authority packet and signed-decision
+  template by SHA-256.
+- Requires signer, date, signed statement, and all non-negotiable constraint
+  acknowledgements.
+- Rejects customer PDF/DXF/DWG generation and production approval flags.
+- Reports `implementation_can_start` as false; accepted lanes still require
+  regression tests before fixes.
+
+Verification: full `scripts/run_tests.py` passed, including legacy, active
+sheetmetal-v1, and topology-stage scoped frozen workflow checks.
+
+Generation status: no implementation lane was selected, no customer drawing,
+PDF, DXF, or DWG was generated, and no production approval was declared.
+
+Evidence:
+`schemas/signed_authority_decision.schema.json`,
+`scripts/validate_signed_authority_decision.py`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_validator_summary.json`,
+and
+`orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-VALIDATOR.json`.

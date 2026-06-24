@@ -19,7 +19,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED`
+`SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED`
 
 Active goal:
 
@@ -33,6 +33,7 @@ Current qualification state:
 - T1 targeted recovery, source/rule proposal, proposal review, and authority
   decision packet are complete.
 - A template-only signed authority decision form is prepared.
+- A fail-closed signed authority decision validator is prepared.
 - No source/rule lane is accepted autonomously.
 - This is not engineering capability success, production approval, or drawing
   generation authorization.
@@ -49,6 +50,13 @@ Signed authority decision template:
 - `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.md`
 - `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json`
 - `orchestration/master/child-results/SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-TEMPLATE.json`
+
+Signed authority decision validator:
+
+- `schemas/signed_authority_decision.schema.json`
+- `scripts/validate_signed_authority_decision.py`
+- `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_validator_summary.json`
+- `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-VALIDATOR.json`
 
 Authority choices:
 

@@ -127,3 +127,17 @@ Signed authority decision template:
   completed-reference, customer drawing, PDF, DXF, or DWG artifact was changed
   or generated.
 - Next action: `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+
+Signed authority decision validator:
+
+- Validator commit: `d18b1a6`.
+- Status: `SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED`.
+- The validator fails closed for invalid choice sets, reject-all conflicts,
+  missing signature fields, hash mismatches, missing constraint acknowledgements,
+  drawing-generation flags, and production-approval flags.
+- Full tests and legacy, active sheetmetal-v1, and topology-stage scoped
+  freezes passed.
+- No implementation, source manifest, rule, source-root, private,
+  completed-reference, customer drawing, PDF, DXF, or DWG artifact was changed
+  or generated.
+- Next action: `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.

@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: signed source/rule authority decision template prepared; signed
+Current phase: signed source/rule authority decision validator ready; signed
 human authority decision still required.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED`.
+Current status: `SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -57,7 +57,8 @@ review of that proposal as ready for an authority decision packet; and
 `D-0042` prepares the decision packet and records that no lane can be accepted
 autonomously without signed human/source-rule authority. A subsequent
 template-only checkpoint prepared the signed decision template without
-selecting any authority lane.
+selecting any authority lane. `D-0043` adds fail-closed validation for the
+future signed decision record, still without selecting any lane.
 These
 amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
@@ -440,6 +441,15 @@ prepared
 and its machine-readable JSON. No lane was selected, no implementation was
 applied, no customer drawing was generated, and no production approval was
 declared.
+
+Signed authority decision validator after `D-0043`: the validator
+`scripts/validate_signed_authority_decision.py` and schema
+`schemas/signed_authority_decision.schema.json` fail closed on invalid choice
+sets, reject-all conflicts, missing signature fields, packet/template hash
+mismatches, missing constraint acknowledgements, customer drawing generation
+flags, and production approval flags. Full tests and legacy, active
+sheetmetal-v1, and topology-stage scoped freezes pass. No authority lane was
+selected.
 
 Exact next action: wait for
 `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
