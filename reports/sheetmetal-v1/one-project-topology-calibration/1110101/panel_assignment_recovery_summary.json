@@ -1,0 +1,27 @@
+{
+  "schema_version": "sheetmetal-v1.topology.assignment_recovery_summary.v1",
+  "status": "PASS_WITH_SAFE_UNASSIGNED",
+  "project_id": "1110101",
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "private_artifact_hashes": {
+    "panel_assignment_recovery.json": "F27667FA8126108BA0FD6E947E718626449D5CC61166DAE93204D7C47F88848A",
+    "validation_report.json": "E770E528405795581B37ADC4E5B745128B85124DE9FA464710F948401BD95F54"
+  },
+  "counts": {
+    "total_component_instances": 53,
+    "explicitly_assigned": 0,
+    "rule_assigned": 0,
+    "unassigned": 53,
+    "ambiguous": 0,
+    "conflicting": 0,
+    "human_review_required": 0,
+    "unsupported_assignment_count": 0
+  },
+  "rejected_source_assignment_count": 0,
+  "unsupported_assignment_count": 0,
+  "validation_status": "PASS",
+  "completed_reference_leakage": 0,
+  "post_design_leakage": 0,
+  "private_content_transmission_count": 0,
+  "tracked_private_artifacts": 0
+}
