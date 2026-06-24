@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: cycle-000 reference detector calibration stopped at the vision
-privacy gate before detector v4.
+Current phase: cycle-000 autonomous qualification recovery, Phase A local
+capability discovery complete.
 
 Accepted release: none.
 
 Current candidate: `baseline-024-cycle-000` reference-complete project discovery.
 
-Current status: `VISION_CLASSIFIER_UNAVAILABLE`.
+Current status: `RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE`.
 
 Accepted amendments: `D-0017` expands baseline-024 candidate discovery beyond
 the prior twenty-project metadata-only pool to the full approved development
@@ -16,7 +16,10 @@ inventory under `SRC-ALL-PROJECTS`; `D-0018` accepts
 page-level, reference-vault-only classification; `D-0019` requires known-positive
 recall calibration before reference-universe exhaustion may be declared; `D-0020`
 records that GPT-5 vision children are not available for private reference-page
-classification while privacy approval remains `NOT_APPROVED`. These amendments do not weaken
+classification while privacy approval remains `NOT_APPROVED`; `D-0021`
+authorizes constraint-preserving autonomous qualification recovery from
+method-specific blockers without relaxing the `ALLOWED_EVAL` standard. These
+amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -66,10 +69,28 @@ Actual private reference pages inspected by vision agents remain `0`. Detector
 v4 was not created, negative controls were not run, and expanded screening did
 not resume. Stop status: `VISION_CLASSIFIER_UNAVAILABLE`.
 
-Regression coverage after `D-0019`: `scripts/run_tests.py` now includes
+Autonomous qualification recovery result after `D-0021`: the prior
+`VISION_CLASSIFIER_UNAVAILABLE` workflow stop is superseded as a terminal
+condition, but the privacy restriction remains unchanged. The deterministic
+controller reverified HEAD/worktree, accepted bundle hashes, frozen workflow
+hashes, privacy status, and absence of baseline generation; all passed. The
+controller records `13 / 24` verified `ALLOWED_EVAL` projects, a deficit of
+`11`, `129` prior v3 partial projects, `262` projects not individually screened
+by v3, `13` known-positive retry cases, and no accepted reserves. Phase A local
+capability discovery found bundled Poppler `pdfinfo 26.05.0` and `pdftoppm
+26.05.0`, Python `pypdf`, Pillow, NumPy, and Windows.Media.Ocr available
+locally; no local Tesseract, OCRmyPDF, PaddleOCR, EasyOCR, ONNX Runtime,
+OpenCV, PyMuPDF, ImageMagick, or `pdfimages` was available. No private project
+data was opened by the probe and no network endpoint probe was performed.
+
+Regression coverage after `D-0021`: `scripts/run_tests.py` includes
 `test_reference_detector_v3_known_positive_recall_gate`, covering all 13 missed
 known-positive projects and preventing the local deterministic v3 replay from
-being treated as actual vision classification. Full test runner status: `PASS`.
+being treated as actual vision classification. It also includes
+`test_qualification_recovery_controller_state`, which validates the recovery
+state schema, privacy invariants, the `13 / 24` count, the `11` project deficit,
+and separation between gate behavior and detector performance. Full test runner
+status: `PASS`.
 
 Portfolio result: mean score `42`, median `42`, minimum `42`, mean scorable
 coverage `38`; validity rate `100%`; critical findings `0`; high findings `36`
@@ -110,9 +131,9 @@ Instructions, production Knowledge, extraction logic, renderer behavior,
 validation behavior, grading weights, or tolerance profiles were optimized.
 
 Exact next action: do not start source screening, cohort freeze, baseline
-generation, negative controls, or detector v4 from the v3 exhaustion result.
-Treat that exhaustion conclusion as provisional. Work may resume only after an
-explicit approved path exists for private reference-page vision classification
-or a local-only vision classifier is available. Then preserve the existing v3
-evidence, create detector v4 under new run IDs, and rerun positive and negative
-controls before any expanded screening.
+generation, review, optimization, or source-quorum work from the v3 exhaustion
+result. Treat that exhaustion conclusion as provisional. The next compliant
+action is `CREATE_DETECTOR_V4_LOCAL_MULTISIGNAL_RECOVERY_PROTOTYPE` using only
+local deterministic/OCR/CV/layout signals and the existing sealed calibration
+discipline. Rerun known-positive controls and real negative controls before any
+expanded screening.

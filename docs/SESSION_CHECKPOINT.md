@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: cycle-000 reference detector calibration stopped at the vision
-privacy gate before detector v4.
+Current phase: cycle-000 autonomous qualification recovery, Phase A local
+capability discovery complete.
 
 Accepted release: none.
 
@@ -13,7 +13,7 @@ Evaluator version for future cycle-000 work: `plc_layout_evaluator_v2_sensitivit
 
 Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
 
-Current status: `VISION_CLASSIFIER_UNAVAILABLE`.
+Current status: `RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE`.
 
 Latest evidence: `reports/baseline-024/reference-detection-v3/screening_yield.md`,
 `reports/baseline-024/reference-detection-v3/independent_audit.json`,
@@ -23,6 +23,12 @@ Latest evidence: `reports/baseline-024/reference-detection-v3/screening_yield.md
 `manifests/reference_detection/calibration/known_positive_controls.sealed.json`,
 `manifests/reference_detection/calibration/v3_known_positive_replay/`,
 `reports/baseline-024/reference-detector-calibration/vision_classifier_availability_probe.json`,
+`docs/specs/AUTONOMOUS_QUALIFICATION_RECOVERY.md`,
+`reports/baseline-024/qualification-recovery/recovery_state.json`,
+`reports/baseline-024/qualification-recovery/recovery_state.md`,
+`reports/baseline-024/qualification-recovery/checkpoint_verification.json`,
+`reports/baseline-024/qualification-recovery/local_capability_probe.json`,
+`orchestration/QUALIFICATION_RECOVERY_QUEUE.json`,
 `docs/specs/REFERENCE_VAULT_BOUNDARY_SPEC.md`,
 `docs/specs/REFERENCE_PRESENCE_DETECTION_V3.md`,
 `reports/baseline-024/reference-detection-v3/v2_zero_promotion_diagnosis.json`,
@@ -115,10 +121,33 @@ trajectory, or reviewer finding was sent to that vision path. Actual private
 reference pages inspected by vision agents remain `0`. Detector v4 was not
 created. Stop status: `VISION_CLASSIFIER_UNAVAILABLE`.
 
+Amendment `D-0021` on 2026-06-24: the user accepted constraint-preserving
+autonomous qualification recovery. Method-specific failures such as
+`VISION_CLASSIFIER_UNAVAILABLE`, OCR absence, parser limits, and avoidable
+quarantines are branch blockers rather than terminal workflow stops, but the
+substantive `ALLOWED_EVAL` gates and privacy boundary remain unchanged.
+
+Recovery controller result: `scripts/run_qualification_recovery.py` produced a
+schema-valid recovery state and minimized queue. It reverified accepted bundle
+hashes `PASS`, frozen workflow hashes `PASS`, privacy `NOT_APPROVED`, and
+baseline generation attempts `0`. It records current verified `ALLOWED_EVAL`
+projects as `13 / 24`, deficit `11`, reserve target `3`, prior v3 partial
+projects `129`, projects not individually screened by v3 `262`, known-positive
+detector retry cases `13`, previous bundle rejections `7`, and previous
+quarantined/no-bundle projects `6`.
+
+Local capability discovery result: bundled Poppler `pdfinfo 26.05.0` and
+`pdftoppm 26.05.0` are available; Python `pypdf 6.10.0`, Pillow `12.2.0`,
+NumPy `2.3.5`, and Windows.Media.Ocr are available locally. `pdfimages`,
+Tesseract, OCRmyPDF, PaddleOCR, EasyOCR, ONNX Runtime, OpenCV, PyMuPDF, and
+ImageMagick were not available in the local probe. No private project data was
+opened and no network endpoint probe was performed.
+
 Regression coverage result: `scripts/run_tests.py` now includes
 `test_reference_detector_v3_known_positive_recall_gate`, covering all 13 missed
-known-positive projects from the v3 replay. Full repository test runner status:
-`PASS`.
+known-positive projects from the v3 replay, and
+`test_qualification_recovery_controller_state`, covering the recovery state
+schema and privacy/count invariants. Full repository test runner status: `PASS`.
 
 No drawing workflow optimization occurred. No expanded-candidate source
 screening, sanitized bundle construction, final cohort freeze, baseline
@@ -126,10 +155,9 @@ generation, review, or production approval occurred. Baseline generation
 attempts remain `0`.
 
 Exact next action: do not start source-review quorum, sanitized-bundle
-construction, cohort freeze, baseline generation, review, optimization,
-negative controls, or detector v4 from the v3 exhaustion result. Treat v3
-exhaustion as provisional after the failed known-positive recall gate. Work may
-resume only after an explicit approved path exists for private reference-page
-vision classification or a local-only vision classifier is available. Preserve
-v3 and calibration evidence separately, then create detector v4 under new run
-IDs and rerun positive and negative controls before any expanded screening.
+construction, cohort freeze, baseline generation, review, optimization, or
+expanded screening from the v3 exhaustion result. Build
+`target_output_detection_v4_local_multisignal_recovery` as a local-only
+prototype using the capability report, add regression coverage for the current
+known-positive false negatives and real negative controls, then rerun positive
+and negative calibration before any corpus-wide screening.

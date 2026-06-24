@@ -1,0 +1,50 @@
+{
+  "git_head": "6d43a24f8c1d4150c2f81e0f3791ffd9df6b3983",
+  "worktree_clean": true,
+  "git_status_short": "",
+  "accepted_bundle_hashes": {
+    "status": "PASS",
+    "bundle_hash_file_count": 13,
+    "project_ids": [
+      "1110101",
+      "1110103",
+      "1110104",
+      "1110203",
+      "1110204",
+      "1110205",
+      "1110405",
+      "1110410",
+      "1110704",
+      "1110801",
+      "1120207",
+      "1120305",
+      "1120308"
+    ],
+    "checked_file_count": 131,
+    "failure_count": 0,
+    "failures": []
+  },
+  "frozen_workflow_hashes": {
+    "status": "PASS",
+    "frozen_manifest": "evals\\baseline-024\\frozen_workflow_manifest.json",
+    "checked_file_count": 15,
+    "failure_count": 0,
+    "failures": []
+  },
+  "privacy_status": "NOT_APPROVED",
+  "baseline_generation_absence": {
+    "status": "PASS",
+    "baseline_generation_attempts_observed": 0,
+    "generation_complete_files": [],
+    "baseline_run_directories": []
+  },
+  "task_registry": {
+    "row_count": 268,
+    "status_counts": {
+      "NEEDS_PARENT_REVIEW": 20,
+      "ACCEPTED": 247,
+      "NOT_VERIFIED": 1
+    },
+    "baseline_generation_like_rows": 0
+  }
+}

@@ -1,0 +1,710 @@
+{
+  "queue_id": "qualification_recovery_queue_v1",
+  "schema_version": "qualification_recovery_queue_v1",
+  "generated_at": "2026-06-24T02:04:35+00:00",
+  "baseline_id": "baseline-024-cycle-000",
+  "decision_id": "D-0021",
+  "current_allowed_eval_count": 13,
+  "deficit_to_24": 11,
+  "reserve_target": 3,
+  "privacy_minimization": {
+    "stores_project_ids_only": true,
+    "stores_private_paths": false,
+    "stores_reference_content": false,
+    "stores_ocr_text": false,
+    "stores_rendered_pages_or_crops": false
+  },
+  "queues": {
+    "privacy_minimized": true,
+    "all_queues_store_project_ids_only": true,
+    "counts": {
+      "reconciled_project_count": 404,
+      "allowed_eval_already_verified": 13,
+      "prior_v3_project_decisions": 129,
+      "prior_v3_partial_projects": 129,
+      "prior_v3_ambiguous_projects": 0,
+      "not_individually_screened_by_v3": 262,
+      "known_positive_retry_cases": 13,
+      "previous_bundle_rejections": 7,
+      "previous_quarantined_or_no_bundle": 6
+    },
+    "retry_known_positive_detector_failures": [
+      {
+        "project_id": "1110101",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110103",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110104",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110203",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110204",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110205",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110405",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110410",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110704",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110801",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120207",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120305",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120308",
+        "status": "RETRY_AFTER_DETECTOR_RECOVERY",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      }
+    ],
+    "prior_v3_partial_projects": [
+      {
+        "project_id": "1110202",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110301",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110601",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110606",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120104",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120108",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120206",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120302",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120401",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120408",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120501",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120503",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120504",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120505",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120601",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120701",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120706",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120801",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120804",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120901",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120902",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120908",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120909",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120910",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1121002",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1121102",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1121107",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1121201",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1121203",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1121204",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1121205",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130101",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130102",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130104",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130105",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130108",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130109",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130110",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130201",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130206",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130207",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130304",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130308",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130309",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130311",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130402",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130403",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130404",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130405",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1130505",
+        "status": "WAITING_FOR_CALIBRATED_DETECTOR_REPROCESS",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      }
+    ],
+    "unscreened_individual_projects": [
+      {
+        "project_id": "1110102",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110105",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110206",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110309",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110402",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110403",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110404",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110406",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110411",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110501",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110504",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110505",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110701",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110706",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110707",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110708",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110807",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110808",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1110901",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120101",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120102",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120103",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120105",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120106",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120107",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120201",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120202",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120203",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120204",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120205",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120301",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120303",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120304",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120306",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120307",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120309",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120310",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120311",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120312",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120402",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120404",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120405",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120406",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120407",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120409",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120410",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120502",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120506",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120702",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      },
+      {
+        "project_id": "1120703",
+        "status": "WAITING_FOR_CALIBRATED_INDIVIDUAL_SCREENING",
+        "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION"
+      }
+    ],
+    "previous_source_quarantines": [
+      {
+        "project_id": "1110402",
+        "status": "RETRY_ONLY_IF_PROCEDURE_DEFECT_IS_REPAIRED",
+        "blocker_class": "RECOVERABLE_PROCEDURE_AMBIGUITY"
+      },
+      {
+        "project_id": "1110504",
+        "status": "RETRY_ONLY_IF_PROCEDURE_DEFECT_IS_REPAIRED",
+        "blocker_class": "RECOVERABLE_PROCEDURE_AMBIGUITY"
+      },
+      {
+        "project_id": "1110706",
+        "status": "RETRY_ONLY_IF_PROCEDURE_DEFECT_IS_REPAIRED",
+        "blocker_class": "RECOVERABLE_PROCEDURE_AMBIGUITY"
+      },
+      {
+        "project_id": "1120102",
+        "status": "RETRY_ONLY_IF_PROCEDURE_DEFECT_IS_REPAIRED",
+        "blocker_class": "RECOVERABLE_PROCEDURE_AMBIGUITY"
+      },
+      {
+        "project_id": "1120201",
+        "status": "RETRY_ONLY_IF_PROCEDURE_DEFECT_IS_REPAIRED",
+        "blocker_class": "RECOVERABLE_PROCEDURE_AMBIGUITY"
+      },
+      {
+        "project_id": "1120309",
+        "status": "RETRY_ONLY_IF_PROCEDURE_DEFECT_IS_REPAIRED",
+        "blocker_class": "RECOVERABLE_PROCEDURE_AMBIGUITY"
+      }
+    ],
+    "previous_bundle_rejections": [
+      {
+        "project_id": "1110404",
+        "status": "PRESERVED_REJECTION_RETRY_ONLY_WITH_DEFECT_EVIDENCE",
+        "blocker_class": "RECOVERABLE_SANITIZATION_LIMITATION"
+      },
+      {
+        "project_id": "1110501",
+        "status": "PRESERVED_REJECTION_RETRY_ONLY_WITH_DEFECT_EVIDENCE",
+        "blocker_class": "RECOVERABLE_SANITIZATION_LIMITATION"
+      },
+      {
+        "project_id": "1110701",
+        "status": "PRESERVED_REJECTION_RETRY_ONLY_WITH_DEFECT_EVIDENCE",
+        "blocker_class": "RECOVERABLE_SANITIZATION_LIMITATION"
+      },
+      {
+        "project_id": "1120101",
+        "status": "PRESERVED_REJECTION_RETRY_ONLY_WITH_DEFECT_EVIDENCE",
+        "blocker_class": "RECOVERABLE_SANITIZATION_LIMITATION"
+      },
+      {
+        "project_id": "1120202",
+        "status": "PRESERVED_REJECTION_RETRY_ONLY_WITH_DEFECT_EVIDENCE",
+        "blocker_class": "RECOVERABLE_SANITIZATION_LIMITATION"
+      },
+      {
+        "project_id": "1120204",
+        "status": "PRESERVED_REJECTION_RETRY_ONLY_WITH_DEFECT_EVIDENCE",
+        "blocker_class": "RECOVERABLE_SANITIZATION_LIMITATION"
+      },
+      {
+        "project_id": "1120301",
+        "status": "PRESERVED_REJECTION_RETRY_ONLY_WITH_DEFECT_EVIDENCE",
+        "blocker_class": "RECOVERABLE_SANITIZATION_LIMITATION"
+      }
+    ]
+  },
+  "active_blockers": [
+    {
+      "blocker_class": "RECOVERABLE_DETECTOR_LIMITATION",
+      "status": "ACTIVE",
+      "recoverable": true,
+      "detail": "Detector v3 known-positive all-three recall is 0/13 with 31 false-negative output types."
+    },
+    {
+      "blocker_class": "PRIVACY_PERMISSION_REQUIRED",
+      "status": "BRANCH_BLOCKER_FOR_INHERITED_OR_EXTERNAL_VISION_ONLY",
+      "recoverable": false,
+      "detail": "Privacy approval is NOT_APPROVED, so GPT-5 or external vision cannot inspect private references."
+    },
+    {
+      "blocker_class": "RECOVERABLE_OCR_LIMITATION",
+      "status": "PENDING_LOCAL_CAPABILITY_USE",
+      "recoverable": true,
+      "detail": "Image-only or no-target-text pages require local OCR/CV/layout recovery before corpus screening."
+    }
+  ],
+  "attempted_strategy_signatures": [
+    {
+      "strategy_id": "target_output_detection_v3_page_content_isolated_known_positive_replay",
+      "status": "DETECTOR_V3_RECALL_FAIL",
+      "strategy_signature": "30398C4FDDA22C1052566C8F30BB72F3BB5015928D6851BED40FC57C79F6AA5A"
+    },
+    {
+      "strategy_id": "gpt5_synthetic_vision_probe_private_reference_gate",
+      "status": "VISION_CLASSIFIER_UNAVAILABLE",
+      "strategy_signature": "707BEB98CEB4AA936126FEF762D5DCC2D7E083E131A4C1D3692C7C5741481F65"
+    }
+  ],
+  "next_selected_action": {
+    "action_id": "CREATE_DETECTOR_V4_LOCAL_MULTISIGNAL_RECOVERY_PROTOTYPE",
+    "phase": "PHASE_B",
+    "status": "SELECTED",
+    "reason": "Vision classifier unavailability is a recoverable branch blocker; local Poppler/pypdf/Pillow or OCR/CV capabilities must drive the next detector prototype without privacy-boundary changes."
+  }
+}

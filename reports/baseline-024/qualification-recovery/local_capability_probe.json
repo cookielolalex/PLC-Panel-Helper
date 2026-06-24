@@ -1,0 +1,155 @@
+{
+  "status": "LOCAL_CAPABILITY_DISCOVERY_COMPLETE",
+  "generated_at": "2026-06-24T02:04:34+00:00",
+  "probe_scope": "versions and availability only; no private project data opened",
+  "python": {
+    "executable": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "version": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "binaries": [
+    {
+      "name": "pdfinfo",
+      "status": "AVAILABLE",
+      "executable": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pdfinfo.EXE",
+      "requested_args": [
+        "-v"
+      ],
+      "returncode": 0,
+      "version_output": [
+        "pdfinfo version 26.05.0",
+        "Copyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org",
+        "Copyright 1996-2011, 2022 Glyph & Cog, LLC"
+      ]
+    },
+    {
+      "name": "pdftoppm",
+      "status": "AVAILABLE",
+      "executable": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pdftoppm.EXE",
+      "requested_args": [
+        "-v"
+      ],
+      "returncode": 0,
+      "version_output": [
+        "pdftoppm version 26.05.0",
+        "Copyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org",
+        "Copyright 1996-2011, 2022 Glyph & Cog, LLC"
+      ]
+    },
+    {
+      "name": "pdfimages",
+      "status": "UNAVAILABLE",
+      "requested_args": [
+        "-v"
+      ]
+    },
+    {
+      "name": "tesseract",
+      "status": "UNAVAILABLE",
+      "requested_args": [
+        "--version"
+      ]
+    },
+    {
+      "name": "ocrmypdf",
+      "status": "UNAVAILABLE",
+      "requested_args": [
+        "--version"
+      ]
+    },
+    {
+      "name": "magick",
+      "status": "UNAVAILABLE",
+      "requested_args": [
+        "-version"
+      ]
+    },
+    {
+      "name": "paddleocr",
+      "status": "UNAVAILABLE",
+      "requested_args": [
+        "--version"
+      ]
+    },
+    {
+      "name": "easyocr",
+      "status": "UNAVAILABLE",
+      "requested_args": [
+        "--version"
+      ]
+    }
+  ],
+  "python_modules": [
+    {
+      "module": "pypdf",
+      "status": "AVAILABLE",
+      "version": "6.10.0",
+      "origin": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\pypdf\\__init__.py"
+    },
+    {
+      "module": "PIL",
+      "status": "AVAILABLE",
+      "version": "12.2.0",
+      "origin": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PIL\\__init__.py"
+    },
+    {
+      "module": "cv2",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "module": "pytesseract",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "module": "onnxruntime",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "module": "paddleocr",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "module": "easyocr",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "module": "ocrmypdf",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "module": "fitz",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "module": "numpy",
+      "status": "AVAILABLE",
+      "version": "2.3.5",
+      "origin": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\numpy\\__init__.py"
+    }
+  ],
+  "windows_media_ocr": {
+    "name": "Windows.Media.Ocr",
+    "status": "AVAILABLE",
+    "execution_mode": "windows_local_runtime_probe_no_project_data",
+    "returncode": 0,
+    "stdout": "True",
+    "stderr": ""
+  },
+  "local_cjk_ocr_availability": {
+    "status": "UNAVAILABLE_IN_CURRENT_LOCAL_PROBE",
+    "detail": "No local CJK OCR engine was available from the probed binaries/modules."
+  },
+  "local_image_feature_or_layout_facilities": {
+    "status": "AVAILABLE",
+    "available_modules": [
+      "PIL",
+      "numpy"
+    ],
+    "detail": "These are local image-processing facilities only; no private reference image was sent to an inherited model."
+  },
+  "network_policy": {
+    "external_network_use_authorized": false,
+    "network_endpoint_probe_performed": false,
+    "effective_status": "NETWORK_ENDPOINTS_NOT_AUTHORIZED_BY_D0021_PRIVACY_BOUNDARY"
+  }
+}

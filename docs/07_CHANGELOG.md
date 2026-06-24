@@ -135,3 +135,29 @@
   or reviewer finding was sent to the GPT-5 vision path. Detector v4, negative
   controls, expanded screening, cohort freeze, and baseline generation remain
   blocked.
+
+## 2026-06-24
+
+- Accepted decision `D-0021`, constraint-preserving autonomous qualification
+  recovery, superseding `VISION_CLASSIFIER_UNAVAILABLE` as a workflow stop while
+  preserving privacy `NOT_APPROVED`, reference isolation, source quorum,
+  sanitized-bundle verification, grading, and no-generation gates.
+- Added `docs/specs/AUTONOMOUS_QUALIFICATION_RECOVERY.md`.
+- Added `schemas/qualification_recovery_state.schema.json` and
+  `scripts/run_qualification_recovery.py`.
+- Added `test_qualification_recovery_controller_state` to validate recovery
+  state schema, privacy invariants, `13 / 24` count, `11` project deficit, and
+  separation between detector gate behavior and detector performance.
+- Ran the recovery controller. Checkpoint verification passed: accepted bundle
+  hashes `PASS`, frozen workflow hashes `PASS`, privacy `NOT_APPROVED`, and
+  baseline generation attempts `0`.
+- Completed local capability discovery without opening private project data or
+  probing network endpoints. Available local capabilities: Poppler `pdfinfo
+  26.05.0`, Poppler `pdftoppm 26.05.0`, `pypdf 6.10.0`, Pillow `12.2.0`, NumPy
+  `2.3.5`, and Windows.Media.Ocr. Tesseract, OCRmyPDF, PaddleOCR, EasyOCR,
+  ONNX Runtime, OpenCV, PyMuPDF, ImageMagick, and `pdfimages` were unavailable
+  in the local probe.
+- Wrote minimized recovery state and queue under
+  `reports/baseline-024/qualification-recovery/` and
+  `orchestration/QUALIFICATION_RECOVERY_QUEUE.json`. The next selected action is
+  `CREATE_DETECTOR_V4_LOCAL_MULTISIGNAL_RECOVERY_PROTOTYPE`.

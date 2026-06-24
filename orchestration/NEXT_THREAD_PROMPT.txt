@@ -1,118 +1,72 @@
 You are a fresh root coordinator continuing this repository.
 
-Read the canonical checkpoint files, `reports/calibration-006/independent_audit.json`,
-`reports/evaluator-sensitivity/subagent_independent_audit.json`,
-`reports/baseline-024/reference-detection-v3/independent_audit.json`, and
-`reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.json`,
-and `reports/baseline-024/reference-detector-calibration/vision_classifier_availability_probe.json`.
+Read the canonical checkpoint files, especially:
 
-Current status: `VISION_CLASSIFIER_UNAVAILABLE`.
+- `docs/01_CURRENT_STATE.md`
+- `docs/04_DECISION_LEDGER.md`
+- `docs/06_EVAL_LEDGER.md`
+- `docs/SESSION_CHECKPOINT.md`
+- `docs/specs/AUTONOMOUS_QUALIFICATION_RECOVERY.md`
+- `reports/baseline-024/qualification-recovery/recovery_state.json`
+- `orchestration/QUALIFICATION_RECOVERY_QUEUE.json`
+
+Current status:
+
+`RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE`
 
 Starting point for verification:
 
 - Git HEAD must be the latest checkpoint commit or a documented descendant.
-- Full repository tests must pass before any new implementation.
+- Full repository tests must pass before new implementation.
 - Accepted bundle hashes and frozen workflow hashes must still pass.
+- `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
 - `SRC-ALL-PROJECTS` remains read-only by policy.
-- No baseline-024 generation run may exist.
+- Baseline generation attempts must remain `0`.
 - No completed reference, page render, title-block crop, raw extracted text,
   private source path, or reference-derived engineering content may be visible
-  to generators or production Knowledge.
+  to generators, source reviewers, production Knowledge, or optimization
+  workspaces.
 
-Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
+Current verified `ALLOWED_EVAL` projects remain `13 / 24`; deficit `11`; no
+reserves are accepted.
 
-Evaluator version for cycle-000: `plc_layout_evaluator_v2_sensitivity`.
+Important distinction:
 
-Current verified `ALLOWED_EVAL` projects remain:
+- `test_reference_detector_v3_known_positive_recall_gate` passes because it
+  correctly preserves and blocks a failing detector result.
+- Detector v3 performance itself failed: known-positive all-three recall `0 /
+  13`, `PRODUCTION_DRAWING 0 / 13`, `SHEETMETAL_DRAWING 8 / 13`,
+  `PUNCH_DRAWING 0 / 13`, false-negative output-type count `31`.
 
-- 1110101
-- 1110104
-- 1110204
-- 1110205
-- 1110405
-- 1110410
-- 1110801
-- 1120207
-- 1110103
-- 1110203
-- 1120308
-- 1110704
-- 1120305
+Decision `D-0021` authorizes constraint-preserving autonomous qualification
+recovery. It supersedes `VISION_CLASSIFIER_UNAVAILABLE` as a terminal workflow
+stop, but does not authorize GPT-5 or external/private-reference vision use.
+Privacy approval remains `NOT_APPROVED`.
 
-Total: `13 / 24`. No reserve projects are accepted.
+Local capability discovery result:
 
-Amendment `D-0017` expanded baseline-024 candidate discovery to the full
-approved development inventory under `SRC-ALL-PROJECTS`.
+- Poppler `pdfinfo 26.05.0`: available locally.
+- Poppler `pdftoppm 26.05.0`: available locally.
+- Python `pypdf 6.10.0`, Pillow `12.2.0`, NumPy `2.3.5`: available locally.
+- Windows.Media.Ocr: available through local Windows runtime probe.
+- `pdfimages`, Tesseract, OCRmyPDF, PaddleOCR, EasyOCR, ONNX Runtime, OpenCV,
+  PyMuPDF, and ImageMagick: unavailable in the local probe.
+- No private project data was opened and no network endpoint probe was
+  performed.
 
-Amendment `D-0018` accepted `target_output_detection_v3_page_content_isolated`,
-a content-aware, page-level, reference-vault-only detector. Completed-reference
-content remains forbidden to source reviewers, generator agents, production
-Knowledge, portfolio optimizers, and drawing-workflow implementation agents.
+Queue state:
 
-Amendment `D-0019` requires reference detector recall calibration against known
-positives before reference-universe exhaustion may be declared.
-
-Reference detection v3 outcome remains preserved but provisional:
-
-- all 103 reference-review-required families processed with at least one v3
-  page-level representative;
-- 24 additional ranked non-representative projects also processed;
-- 129 projects, 1849 PDFs, and 9031 pages classified;
-- 1644 image-only-or-no-target-text PDFs and 205 embedded-text PDFs handled;
-- 0 newly `VERIFIED_ALL_THREE` projects;
-- 129 `PARTIAL_REFERENCE_SET` projects;
-- 0 ambiguous projects;
-- 0 combined packages identified;
-- 0 revision supersession packages resolved;
-- 3252 electrical/false-positive alias pages rejected;
-- all 22 batch summaries returned `REFERENCE_PRESENCE_BATCH_AUDIT_PASS`;
-- source screening did not start;
-- baseline generation attempts remain `0`.
-
-Known-positive calibration outcome:
-
-- sealed controls: `manifests/reference_detection/calibration/known_positive_controls.sealed.json`;
-- replay outputs: `manifests/reference_detection/calibration/v3_known_positive_replay/`;
-- summary: `reports/baseline-024/reference-detector-calibration/known_positive_replay_summary.json`;
-- tested known positives: 13;
-- detected all-three: `0 / 13`;
-- per-type recall: `PRODUCTION_DRAWING 0 / 13`, `SHEETMETAL_DRAWING 8 / 13`,
-  `PUNCH_DRAWING 0 / 13`;
-- false-negative output-type count: `31`;
-- project-identity mismatch count: `0`;
-- classifier requested model: `local`;
-- classifier actual model: `local_poppler_pypdf_deterministic_reference_detector_v3`;
-- negative controls, detector v4, expanded screening, and final independent
-  calibration audit were not run because the positive recall gate failed.
-
-Vision classifier availability outcome:
-
-- a fresh child inspected a non-private synthetic local image correctly;
-- actual model reported by the child: `GPT-5`;
-- `docs/PRIVACY_APPROVAL.md` status is `NOT_APPROVED`;
-- private completed-reference pages/title-block crops sent to vision agents:
-  `0`;
-- image-only private reference pages inspected by actual vision agents: `0`;
-- detector v4 was not created;
-- stop status: `VISION_CLASSIFIER_UNAVAILABLE`.
-
-Regression coverage:
-
-- `scripts/run_tests.py` includes
-  `test_reference_detector_v3_known_positive_recall_gate`;
-- it covers all 13 missed known-positive replay projects;
-- full repository test runner status: `PASS`.
+- prior v3 partial projects: `129`
+- projects not individually screened by v3: `262`
+- known-positive detector retry cases: `13`
+- previous bundle rejections: `7`
+- previous quarantined/no-bundle projects: `6`
 
 Exact next action:
 
-Do not start source-review quorum, sanitized-bundle construction, cohort freeze,
-baseline generation, review, optimization, negative controls, or detector v4
-from the v3 exhaustion result.
-Treat v3 exhaustion as provisional after the failed known-positive recall gate.
-
-If work resumes, do not use GPT-5 child vision on private reference pages unless
-`docs/PRIVACY_APPROVAL.md` is explicitly changed to approve that processing, or
-a local-only vision classifier is available. Preserve v3 and calibration
-evidence separately. Create detector v4 only after a permitted private
-reference-page vision path exists, then rerun positive and negative controls
-before any expanded project screening.
+Build `target_output_detection_v4_local_multisignal_recovery` as a local-only
+prototype. Add regression coverage for current known-positive false negatives
+and supported real negative controls. Do not start source-review quorum,
+sanitized-bundle construction, cohort freeze, baseline generation, review,
+optimization, or expanded corpus screening until detector calibration passes
+positive and negative controls and an independent audit approves it.

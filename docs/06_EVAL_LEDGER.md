@@ -288,3 +288,51 @@ screening, final cohort freeze, and baseline generation did not run.
 Evidence: `reports/baseline-024/reference-detector-calibration/vision_classifier_availability_probe.json`,
 `reports/baseline-024/reference-detector-calibration/vision_classifier_availability_probe.md`,
 and `scripts/run_tests.py`.
+
+## baseline-024-cycle-000 autonomous qualification recovery
+
+Status: `RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE`.
+
+Decision: `D-0021`.
+
+Purpose: continue from method-specific blockers without weakening the
+substantive `ALLOWED_EVAL` qualification gates, privacy boundary, reference
+isolation, source-review quorum, sanitized-bundle verification, or no-generation
+rule.
+
+Checkpoint verification: HEAD `6d43a24f8c1d4150c2f81e0f3791ffd9df6b3983` was
+clean at controller start; accepted bundle hash verification `PASS` for 13
+bundle hash files; frozen workflow hash verification `PASS`; privacy remains
+`NOT_APPROVED`; baseline generation attempts observed `0`.
+
+Controller state: current verified `ALLOWED_EVAL` count remains `13 / 24`,
+deficit `11`, reserve target `3`, prior v3 partial projects `129`,
+not-individually-screened-by-v3 projects `262`, known-positive detector retry
+cases `13`, previous bundle rejections `7`, and previous quarantined/no-bundle
+projects `6`.
+
+Detector reporting: regression gate behavior is
+`PASS_BLOCKS_KNOWN_FAILING_DETECTOR`; detector performance remains `FAIL` with
+known-positive all-three recall `0 / 13` and negative controls executed `0`.
+
+Local capability discovery: Poppler `pdfinfo 26.05.0` and `pdftoppm 26.05.0`
+are available from the bundled native runtime. Python modules `pypdf 6.10.0`,
+Pillow `12.2.0`, and NumPy `2.3.5` are available. Windows.Media.Ocr is
+available through a local Windows runtime probe. `pdfimages`, Tesseract,
+OCRmyPDF, PaddleOCR, EasyOCR, ONNX Runtime, OpenCV, PyMuPDF, and ImageMagick
+were unavailable in the local probe. No private project data was opened and no
+network endpoint probe was performed.
+
+Generation status: not authorized. Source-review quorum, sanitized-bundle
+construction, final cohort freeze, baseline generation, review, and production
+approval remain blocked until detector recovery, positive and negative
+calibration, source qualification, bundle verification, and cohort audit pass.
+
+Evidence: `docs/specs/AUTONOMOUS_QUALIFICATION_RECOVERY.md`,
+`schemas/qualification_recovery_state.schema.json`,
+`scripts/run_qualification_recovery.py`,
+`orchestration/QUALIFICATION_RECOVERY_QUEUE.json`,
+`reports/baseline-024/qualification-recovery/recovery_state.json`,
+`reports/baseline-024/qualification-recovery/recovery_state.md`,
+`reports/baseline-024/qualification-recovery/checkpoint_verification.json`,
+and `reports/baseline-024/qualification-recovery/local_capability_probe.json`.
