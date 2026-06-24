@@ -1,0 +1,38 @@
+{
+  "manifest_id": "B024-RDCAL-V4-CALIBRATION-CONTROLS",
+  "schema_version": "reference_detector_v4_calibration_manifest_v1",
+  "created_at": "2026-06-24T00:00:00+00:00",
+  "detector_version": "target_output_detection_v4_local_multisignal_recovery",
+  "decision_id": "D-0021",
+  "split_rule": {
+    "salt": "reference-detector-v4-local-multisignal-recovery-20260624",
+    "hash_input_template": "<salt>:<project_id>",
+    "sort_order": "ascending_sha256",
+    "calibration_count": 8,
+    "holdout_count": 5
+  },
+  "label_visibility": "implementation_worker_calibration_ids_only",
+  "expected_labels_visible_to_implementation": false,
+  "calibration_project_ids": [
+    "1120305",
+    "1110405",
+    "1110205",
+    "1110204",
+    "1110103",
+    "1120308",
+    "1110101",
+    "1110801"
+  ],
+  "forbidden_to_implementation": [
+    "sealed_holdout_project_ids",
+    "expected_target_labels",
+    "reference_paths",
+    "reference_filenames",
+    "reference_hashes",
+    "raw_pdf_text",
+    "ocr_text",
+    "page_renders",
+    "title_crops",
+    "failure_examples_from_holdout"
+  ]
+}

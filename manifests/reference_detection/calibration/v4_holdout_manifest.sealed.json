@@ -1,0 +1,28 @@
+{
+  "manifest_id": "B024-RDCAL-V4-HOLDOUT-CONTROLS-SEALED",
+  "schema_version": "reference_detector_v4_holdout_manifest_v1",
+  "created_at": "2026-06-24T00:00:00+00:00",
+  "detector_version": "target_output_detection_v4_local_multisignal_recovery",
+  "decision_id": "D-0021",
+  "access_policy": "auditor_only_after_calibration_freeze",
+  "split_rule": {
+    "salt": "reference-detector-v4-local-multisignal-recovery-20260624",
+    "hash_input_template": "<salt>:<project_id>",
+    "sort_order": "ascending_sha256",
+    "calibration_count": 8,
+    "holdout_count": 5
+  },
+  "holdout_project_ids": [
+    "1110704",
+    "1110104",
+    "1120207",
+    "1110410",
+    "1110203"
+  ],
+  "holdout_use_restrictions": [
+    "do_not_tune_detector_against_holdout_identity",
+    "do_not_expose_holdout_failures_to_implementation_worker",
+    "do_not_modify_detector_after_holdout_without_new_version",
+    "do_not_persist_reference_content_or_ocr_text"
+  ]
+}
