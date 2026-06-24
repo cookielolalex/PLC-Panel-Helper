@@ -6,7 +6,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from harness_lib import classify_path, read_json, repo_root, validate, validate_file
+from harness_lib import classify_path, read_json, repo_root, sha256_json, validate, validate_file
 from harness_lib import write_json
 
 
@@ -1292,6 +1292,190 @@ def test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models() -> 
     assert_true(validation["private_content_transmission_count"] == 0, "private transmission count must stay zero")
 
 
+def test_sheetmetal_v1_topology_sizing_placement_calibration_private_models() -> None:
+    work = ROOT / "tmp" / "sheetmetal_v1_topology_calibration_test"
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+    register_out = work / "register"
+    graph_out = work / "graph"
+    accessory_out = work / "accessory"
+    topo_out = work / "topology"
+    topo_rerun = work / "topology_rerun"
+    secret_model = "TOPOLOGY-SECRET-MODEL"
+
+    def fact(fid: str, evid: str, component_key: str, field_type: str, value, role: str = "MATERIAL_REQUIREMENT") -> dict:
+        return {
+            "fact_id": fid,
+            "evidence_id": evid,
+            "neutral_source_document_id": f"SRC-{evid}",
+            "source_role": role,
+            "source_location_id": f"ART:{fid}",
+            "field_type": field_type,
+            "component_key": component_key,
+            "normalized_value": value,
+            "raw_value": value,
+            "authority_class": "PRIMARY" if field_type == "panel_assignment" and role == "PANEL_ALLOCATION_SOURCE" else "SOURCE_CONTEXT",
+            "confidence": 0.8,
+            "chronology_status": "PRE_DESIGN" if role != "POST_DESIGN_ALLOCATION_LABEL" else "POST_DESIGN",
+            "conflict_status": "NONE",
+            "status": "EXPLICIT_SOURCE",
+        }
+
+    source_model = {
+        "schema_version": "sheetmetal-v1.source_fact_model.v1",
+        "project_id": "SYNTH-SMV1-TOPO",
+        "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+        "source_evidence": [
+            {
+                "evidence_id": "EVID-MAT",
+                "neutral_source_document_id": "SRC-MAT",
+                "source_role": "MATERIAL_REQUIREMENT",
+                "chronology_status": "PRE_DESIGN",
+                "generator_input_eligible": True,
+                "contains_completed_reference_content": False,
+            },
+            {
+                "evidence_id": "EVID-PANEL",
+                "neutral_source_document_id": "SRC-PANEL",
+                "source_role": "PANEL_ALLOCATION_SOURCE",
+                "chronology_status": "PRE_DESIGN",
+                "generator_input_eligible": True,
+                "contains_completed_reference_content": False,
+            },
+            {
+                "evidence_id": "EVID-POST",
+                "neutral_source_document_id": "SRC-POST",
+                "source_role": "POST_DESIGN_ALLOCATION_LABEL",
+                "chronology_status": "POST_DESIGN",
+                "generator_input_eligible": False,
+                "contains_completed_reference_content": False,
+            },
+            {
+                "evidence_id": "EVID-REF",
+                "neutral_source_document_id": "SRC-REF",
+                "source_role": "COMPLETED_SHEETMETAL_REFERENCE",
+                "chronology_status": "AFTER_COMPLETION",
+                "generator_input_eligible": False,
+                "contains_completed_reference_content": True,
+            },
+        ],
+        "source_facts": [],
+        "source_line_accounting": [],
+        "panel_definitions": [
+            {"panel_id": "PANEL-A", "width_mm": 100, "height_mm": 100, "depth_mm": 30, "mounting_surfaces": [{"surface_id": "SURF-A"}], "evidence_ids": ["EVID-PANEL"], "status": "EXPLICIT_SOURCE"},
+            {"panel_id": "PANEL-B", "width_mm": 120, "height_mm": 100, "depth_mm": 30, "mounting_surfaces": [{"surface_id": "SURF-B"}], "evidence_ids": ["EVID-PANEL"], "status": "EXPLICIT_SOURCE"},
+            {"panel_id": "PANEL-C", "mounting_surfaces": [], "evidence_ids": [], "status": "HUMAN_REVIEW_REQUIRED"},
+        ],
+        "placement_requests": [
+            {"component_key": "ROW-OK", "panel_id": "PANEL-A", "mounting_surface_id": "SURF-A", "x_mm": 10, "y_mm": 10, "width_mm": 20, "height_mm": 10, "orientation": "NORMAL", "minimum_edge_clearance_mm": 5, "choice_id": "CHOICE-OK"},
+            {"component_key": "ROW-OVERLAP", "panel_id": "PANEL-A", "mounting_surface_id": "SURF-A", "x_mm": 15, "y_mm": 12, "width_mm": 20, "height_mm": 10, "orientation": "NORMAL", "soft_objective_override_attempted": True},
+            {"component_key": "ROW-CONTAIN", "panel_id": "PANEL-A", "mounting_surface_id": "SURF-A", "x_mm": 95, "y_mm": 95, "width_mm": 20, "height_mm": 10, "orientation": "NORMAL", "soft_objective_override_attempted": True},
+            {"component_key": "ROW-CLEAR", "panel_id": "PANEL-A", "mounting_surface_id": "SURF-A", "x_mm": 2, "y_mm": 2, "width_mm": 20, "height_mm": 10, "orientation": "NORMAL", "minimum_edge_clearance_mm": 5, "soft_objective_override_attempted": True},
+        ],
+        "accessory_rules": [],
+        "quantity_stage_counts": {"required_qty": 0, "ordered_qty": 0, "received_qty": 0, "allocated_qty": 0, "installed_qty": 0},
+        "validation": {"status": "PASS", "evidence_count": 4, "source_fact_count": 0, "source_line_count": 0, "silently_discarded_authorized_source_lines": 0, "quantity_stage_overwrite_violations": 0, "completed_reference_facts": 0, "private_content_transmission_count": 0},
+    }
+    rows = [
+        ("ROW-OK", secret_model, {"width_mm": 20, "height_mm": 10, "depth_mm": 5}, "PANEL-A"),
+        ("ROW-MISSING-GEOM", "MISSING-GEOM", None, "PANEL-A"),
+        ("ROW-UNASSIGNED", "UNASSIGNED", {"width_mm": 10, "height_mm": 10, "depth_mm": 5}, None),
+        ("ROW-OVERLAP", "OVERLAP", {"width_mm": 20, "height_mm": 10, "depth_mm": 5}, "PANEL-A"),
+        ("ROW-CONTAIN", "CONTAIN", {"width_mm": 20, "height_mm": 10, "depth_mm": 5}, "PANEL-A"),
+        ("ROW-CLEAR", "CLEAR", {"width_mm": 20, "height_mm": 10, "depth_mm": 5}, "PANEL-A"),
+        ("ROW-POST", "POST", {"width_mm": 10, "height_mm": 10, "depth_mm": 5}, None),
+    ]
+    for index, (component_key, model, geometry, panel_id) in enumerate(rows, start=1):
+        source_model["source_facts"].append(fact(f"TF{index}A", "EVID-MAT", component_key, "family", "TOPO_FAMILY"))
+        source_model["source_facts"].append(fact(f"TF{index}B", "EVID-MAT", component_key, "model", model))
+        if geometry:
+            source_model["source_facts"].append(fact(f"TF{index}C", "EVID-MAT", component_key, "component_geometry", geometry))
+        if panel_id:
+            source_model["source_facts"].append(fact(f"TF{index}D", "EVID-PANEL", component_key, "panel_assignment", panel_id, "PANEL_ALLOCATION_SOURCE"))
+        source_model["source_line_accounting"].append({"source_line_id": component_key, "evidence_id": "EVID-MAT", "neutral_source_document_id": "SRC-MAT", "row_index": index, "status": "REPRESENTED", "fact_count": 2})
+    source_model["source_facts"].append(fact("TFPOST", "EVID-POST", "ROW-POST", "panel_assignment", "PANEL-A", "POST_DESIGN_ALLOCATION_LABEL"))
+    source_model["source_facts"].append(fact("TFREF", "EVID-REF", "ROW-MISSING-GEOM", "component_geometry", {"width_mm": 99, "height_mm": 99, "depth_mm": 99}, "COMPLETED_SHEETMETAL_REFERENCE"))
+    source_model["validation"]["source_fact_count"] = len(source_model["source_facts"])
+    source_model["validation"]["source_line_count"] = len(source_model["source_line_accounting"])
+
+    source_model_path = work / "source_fact_model.json"
+    write_json(source_model_path, source_model)
+    subprocess.run([PY, "scripts/sheetmetal_v1.py", "--source-fact-model", str(source_model_path), "--output-dir", str(register_out), "--quiet"], cwd=ROOT, check=True)
+    register = read_json(register_out / "component_register.json")
+    instance_by_key = {row["component_key"]: row for row in register["component_instances"]}
+    generic_type_id = instance_by_key["ROW-CLEAR"]["component_type_id"]
+    for ctype in register["component_types"]:
+        if ctype["component_type_id"] == generic_type_id:
+            ctype["geometry"]["status"] = "APPROVED_GENERIC_CONSERVATIVE_ENVELOPE"
+    write_json(register_out / "component_register.json", register)
+    subprocess.run([PY, "scripts/sheetmetal_v1.py", "--source-fact-model", str(source_model_path), "--component-register", str(register_out / "component_register.json"), "--output-dir", str(graph_out), "--quiet"], cwd=ROOT, check=True)
+    subprocess.run([PY, "scripts/sheetmetal_v1.py", "--source-fact-model", str(source_model_path), "--component-register", str(register_out / "component_register.json"), "--panel-graph", str(graph_out / "panel_graph.json"), "--output-dir", str(accessory_out), "--quiet"], cwd=ROOT, check=True)
+
+    cmd = [
+        PY,
+        "scripts/sheetmetal_v1.py",
+        "--topology-calibration",
+        "--source-fact-model",
+        str(source_model_path),
+        "--component-register",
+        str(register_out / "component_register.json"),
+        "--panel-assignment",
+        str(graph_out / "panel_assignment.json"),
+        "--panel-graph",
+        str(graph_out / "panel_graph.json"),
+        "--accessory-requirements",
+        str(accessory_out / "accessory_requirements.json"),
+    ]
+    result = subprocess.run([*cmd, "--output-dir", str(topo_out)], cwd=ROOT, text=True, capture_output=True, check=True)
+    subprocess.run([*cmd, "--output-dir", str(topo_rerun), "--quiet"], cwd=ROOT, text=True, capture_output=True, check=True)
+    assert_true(secret_model not in result.stdout, "topology summary must not print source values")
+    assert_true(secret_model not in result.stderr, "topology errors must not print source values")
+
+    assignment = read_json(topo_out / "panel_assignment_recovery.json")
+    assert_true(assignment["counts"]["unsupported_assignment_count"] == 0, "unsupported assignments must remain zero")
+    assert_true(assignment["rejected_source_assignment_count"] == 1, "post-design assignment must be rejected before recovery")
+    assert_true(assignment["counts"]["unassigned"] >= 1, "unassigned components must stay explicit")
+    topology = read_json(topo_out / "topology_candidates.json")
+    assert_true(topology["candidate_count"] == 3, "multiple topology candidates must be preserved")
+    assert_true(topology["multiple_valid_candidates_preserved"], "valid candidates must not be silently collapsed")
+    sizing = read_json(topo_out / "sizing_candidates.json")
+    assert_true(sizing["geometry_status_counts"]["GEOMETRY_MISSING"] >= 1, "missing geometry must remain missing")
+    assert_true(sizing["geometry_status_counts"]["APPROVED_GENERIC_CONSERVATIVE_ENVELOPE"] >= 1, "generic geometry must not become verified")
+    assert_true(any(row["rejected_alternatives"] for row in sizing["candidates"]), "unsupported exact cabinet sizes must be blocked")
+    placement = read_json(topo_out / "placement_plan.json")
+    unplaced = read_json(topo_out / "unplaced_component_register.json")
+    constraints = read_json(topo_out / "hard_constraint_model.json")
+    validation = read_json(topo_out / "validation_report.json")
+    provenance = read_json(topo_out / "provenance_map.json")
+    assert_true(placement["placement_count"] == 1, "only hard-constraint-valid placement should be accepted")
+    assert_true(unplaced["reason_counts"]["UNASSIGNED_PANEL"] >= 1, "unassigned components must remain unplaced")
+    assert_true(unplaced["reason_counts"]["GEOMETRY_MISSING"] >= 1, "missing geometry must remain unplaced")
+    assert_true(unplaced["reason_counts"]["NO_VALID_PLACEMENT"] >= 1, "invalid placements must stay unplaced")
+    flattened = {item for row in constraints["rejected_placements"] for item in row["unsatisfied_constraints"]}
+    assert_true({"NO_PHYSICAL_OVERLAP", "CONTAINMENT", "EDGE_CLEARANCE"} <= flattened, "overlap, containment, and clearance must be detected")
+    assert_true(any(row["soft_objective_override_rejected"] for row in constraints["rejected_placements"]), "hard constraints must override soft objectives")
+    assert_true(validation["unsupported_critical_dimensions"] == 0, "unsupported critical dimensions must remain zero")
+    assert_true(validation["completed_reference_leakage"] == 0, "completed-reference leakage must remain zero")
+    assert_true(validation["post_design_leakage"] == 0, "post-design leakage must remain zero")
+    assert_true(validation["customer_drawing_generation_count"] == 0, "topology calibration must not generate drawings")
+    assert_true(provenance["coverage_status"] == "PASS", "provenance must cover critical facts or safe unresolved statuses")
+    for path in topo_out.iterdir():
+        assert_true(path.suffix.lower() not in {".pdf", ".dxf", ".dwg"}, "no drawing artifact may be generated")
+    assert_true(not (topo_out / "sheetmetal_drawing_model.json").exists(), "drawing model must not be generated in topology calibration mode")
+    for name in [
+        "panel_assignment_recovery",
+        "topology_candidates",
+        "sizing_candidates",
+        "placement_plan",
+        "unplaced_component_register",
+        "hard_constraint_model",
+        "validation_report",
+        "provenance_map",
+    ]:
+        assert_true(sha256_json(read_json(topo_out / f"{name}.json")) == sha256_json(read_json(topo_rerun / f"{name}.json")), f"{name} must be deterministic")
+
+
 def test_frozen_workflow_legacy_scope_verifier() -> None:
     import verify_frozen_workflow as verifier
 
@@ -1423,6 +1607,7 @@ def main() -> None:
         test_sheetmetal_v1_component_register_from_source_facts,
         test_sheetmetal_v1_panel_assignment_graph_from_private_models,
         test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models,
+        test_sheetmetal_v1_topology_sizing_placement_calibration_private_models,
         test_frozen_workflow_legacy_scope_verifier,
         test_frozen_workflow_fail_closed_regressions,
         test_frozen_workflow_active_scope_verifier,
