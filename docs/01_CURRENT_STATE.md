@@ -157,10 +157,24 @@ Recommendations remain PROPOSED. No drawing-generation behavior, accepted
 Instructions, production Knowledge, extraction logic, renderer behavior,
 validation behavior, grading weights, or tolerance profiles were optimized.
 
+Detector v4/v4.1 calibration update: frozen v4 was run on the 8-project
+calibration partition with private OCR disabled and failed detector performance
+with all-three recall `0 / 8`; private OCR page count remained `0`, cleanup and
+minimization passed, and the failed evidence is preserved. Version v4.1
+(`target_output_detection_v4_1_local_layout_prior_recovery`) added a
+layout-confirmed weak-role-prior fallback that still lets explicit page content
+override hints and keeps weak priors without layout unclassified. Full tests
+passed. V4.1 calibration-positive recall is `8 / 8`; per-type recall is
+`PRODUCTION_DRAWING 8 / 8`, `SHEETMETAL_DRAWING 8 / 8`, and
+`PUNCH_DRAWING 8 / 8`. The 24 minimized real negative controls passed with
+zero false target pages, zero false all-three promotions, zero electrical or
+source-document target acceptances, private OCR page count `0`, external
+transmission count `0`, cleanup `PASS`, raw-content persistence `PASS`,
+generator isolation `PASS`, and source-review blindness `PASS`. Independent
+implementation audit passed.
+
 Exact next action: do not start source screening, cohort freeze, baseline
-generation, review, optimization, corpus-wide screening, or source-quorum work
-from the v3 exhaustion result or from v4 creation alone. Treat v3 exhaustion as
-provisional and v4 implementation as uncalibrated. The next compliant action is
-`RUN_DETECTOR_V4_CALIBRATION_PARTITION` using only the implementation-facing
-calibration manifest. Sealed holdout identities, holdout results, and holdout
-failure examples must remain unavailable to tuning.
+generation, review, optimization, corpus-wide screening, or source-quorum work.
+The next compliant action is `RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT` with the
+frozen committed v4.1 candidate. Sealed holdout identities, holdout results, and
+holdout failure examples must remain auditor-only and unavailable to tuning.

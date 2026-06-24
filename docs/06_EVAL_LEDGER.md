@@ -370,5 +370,24 @@ electrical/source-document negatives, OCR failure, missing OCR language support,
 temporary-render deletion, raw OCR non-persistence, generator isolation, and
 source-review blindness.
 
-Generation status: not authorized. Calibration partition, sealed holdout,
-all-13 final recall, negative-control audit, and independent audit have not run.
+V4 calibration execution: frozen v4 ran on the 8-project calibration partition
+with private OCR disabled. Gate implementation passed, but detector performance
+failed with all-three recall `0 / 8` and private OCR page count `0`; cleanup,
+minimization, generator isolation, and source-review blindness passed. The
+failed evidence is preserved.
+
+V4.1 calibration execution: `target_output_detection_v4_1_local_layout_prior_recovery`
+passed the calibration partition with all-three recall `8 / 8` and per-type
+recall `8 / 8` for `PRODUCTION_DRAWING`, `SHEETMETAL_DRAWING`, and
+`PUNCH_DRAWING`. V4.1 passed all 24 minimized real negative controls with zero
+false target pages, zero false all-three promotions, zero electrical/source
+false target pages, private OCR page count `0`, external transmission count
+`0`, cleanup `PASS`, raw-content persistence `PASS`, generator isolation
+`PASS`, and source-review blindness `PASS`. Independent implementation audit
+passed.
+
+Generation status: not authorized. Sealed holdout, all-13 final recall,
+expanded corpus screening, source qualification, cohort freeze, and baseline
+generation have not run. The next action is
+`RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT`; holdout identities, results, and
+failure examples remain auditor-only and unavailable to tuning.

@@ -179,3 +179,21 @@
 - Updated the recovery controller. Current status is
   `DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`; the next selected action is
   `RUN_DETECTOR_V4_CALIBRATION_PARTITION`.
+- Ran frozen v4 on the 8-project calibration partition with private OCR
+  disabled. Gate implementation passed, but detector performance failed:
+  all-three recall `0 / 8`; private OCR page count `0`. Preserved failed
+  evidence under `reports/baseline-024/reference-detector-calibration/v4_calibration_partition/`.
+- Added v4.1 `target_output_detection_v4_1_local_layout_prior_recovery`, a
+  local layout-confirmed weak-role-prior fallback that preserves explicit
+  non-target override and no alias-only promotion.
+- Added regression coverage for private-OCR-disabled image-only layout-prior
+  recovery and weak-prior-without-layout fail-closed behavior.
+- Ran v4.1 calibration positives: all-three recall `8 / 8`; each target type
+  `8 / 8`; private OCR page count `0`; cleanup, minimization, generator
+  isolation, and source-review blindness `PASS`.
+- Ran v4.1 minimized real negative controls: `24 / 24` controls supported,
+  zero false target pages, zero false all-three promotions, zero electrical or
+  source-document target acceptances, private OCR page count `0`.
+- Recorded v4.1 freeze manifest and independent implementation audit. Recovery
+  status is `DETECTOR_V4_1_CALIBRATION_PASSED_HOLDOUT_PENDING`; next selected
+  action is `RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT`.

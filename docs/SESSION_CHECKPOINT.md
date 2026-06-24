@@ -167,6 +167,24 @@ known-positive projects from the v3 replay, and
 `test_qualification_recovery_controller_state`, covering the recovery state
 schema and privacy/count invariants. Full repository test runner status: `PASS`.
 
+V4 calibration execution: frozen v4 was run against the 8-project calibration
+partition with private OCR disabled. Gate implementation passed, but detector
+performance failed with all-three recall `0 / 8` and private OCR page count
+`0`; cleanup, minimization, generator isolation, and source-review blindness
+passed. Failed evidence is preserved under
+`reports/baseline-024/reference-detector-calibration/v4_calibration_partition/`.
+
+V4.1 repair and calibration: `target_output_detection_v4_1_local_layout_prior_recovery`
+adds a local layout-confirmed weak-role-prior fallback while preserving
+explicit non-target override and fail-closed weak priors without layout. Full
+repository tests pass. V4.1 calibration-positive all-three recall is `8 / 8`;
+per-type recall is `8 / 8` for all three target types. Real negative controls
+passed `24 / 24` with zero false target page classifications, zero false
+all-three promotions, zero electrical/source false target pages, private OCR
+page count `0`, external transmission count `0`, cleanup `PASS`, raw-content
+persistence `PASS`, generator isolation `PASS`, and source-review blindness
+`PASS`. Independent implementation audit passed.
+
 No drawing workflow optimization occurred. No expanded-candidate source
 screening, sanitized bundle construction, final cohort freeze, baseline
 generation, review, or production approval occurred. Baseline generation
@@ -174,9 +192,8 @@ attempts remain `0`.
 
 Exact next action: do not start source-review quorum, sanitized-bundle
 construction, cohort freeze, baseline generation, review, optimization,
-expanded corpus screening, or sealed holdout work. Run
-`RUN_DETECTOR_V4_CALIBRATION_PARTITION` using only
-`manifests/reference_detection/calibration/v4_calibration_manifest.json` and
-the local-only v4 detector. Do not expose sealed holdout identities, holdout
-results, private OCR text, rendered pages, crops, filenames, paths, hashes, or
-failure examples to implementation tuning.
+expanded corpus screening, or source qualification. Run
+`RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT` with the frozen committed v4.1
+candidate. Holdout identities, holdout results, private OCR text, rendered
+pages, crops, filenames, paths, hashes, and failure examples must remain
+auditor-only and unavailable to implementation tuning.

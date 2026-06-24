@@ -12,7 +12,7 @@ Read the canonical checkpoint files, especially:
 
 Current status:
 
-`DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`
+`DETECTOR_V4_1_CALIBRATION_PASSED_HOLDOUT_PENDING`
 
 Starting point for verification:
 
@@ -62,7 +62,7 @@ Queue state:
 - previous bundle rejections: `7`
 - previous quarantined/no-bundle projects: `6`
 
-Detector v4 state:
+Detector v4/v4.1 state:
 
 - v4 calibration protocol is frozen.
 - implementation-facing calibration IDs are in
@@ -72,14 +72,21 @@ Detector v4 state:
 - Windows.Media.Ocr synthetic proof passed locally; private-page OCR probe was
   skipped because no enforceable per-process network-disable boundary was
   available.
-- v4 detector, v4 schemas, verifier, and regression tests are implemented.
+- frozen v4 failed the calibration partition with all-three recall `0 / 8` and
+  private OCR page count `0`; failed evidence is preserved.
+- v4.1 `target_output_detection_v4_1_local_layout_prior_recovery` passed the
+  calibration partition with all-three recall `8 / 8` and each target type
+  `8 / 8`.
+- v4.1 passed 24 minimized real negative controls with zero false target pages,
+  zero false all-three promotions, and private OCR page count `0`.
+- v4.1 freeze manifest and independent implementation audit are recorded.
 - full repository tests pass.
 
 Exact next action:
 
-Run `RUN_DETECTOR_V4_CALIBRATION_PARTITION` using only the implementation-facing
-calibration manifest and local-only v4 detector. Do not start source-review
-quorum, sanitized-bundle construction, cohort freeze, baseline generation,
-review, optimization, sealed holdout, or expanded corpus screening until the
-calibration partition has frozen minimized evidence and the next gate permits
-it.
+Run `RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT` with the frozen committed v4.1
+candidate. Do not start source-review quorum, sanitized-bundle construction,
+cohort freeze, baseline generation, review, optimization, or expanded corpus
+screening until the sealed holdout and the next required gates pass. Holdout
+identities, holdout results, and holdout failure examples must remain
+auditor-only and unavailable to implementation tuning.

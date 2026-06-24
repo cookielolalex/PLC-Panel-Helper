@@ -1,6 +1,6 @@
 # Qualification Recovery State
 
-- status: `DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`
+- status: `DETECTOR_V4_1_CALIBRATION_PASSED_HOLDOUT_PENDING`
 - decision: `D-0021`
 - current allowed eval: `13 / 24`
 - deficit: `11`
@@ -8,14 +8,14 @@
 - accepted bundle hashes: `PASS`
 - frozen workflow hashes: `PASS`
 - baseline generation attempts observed: `0`
-- next action: `RUN_DETECTOR_V4_CALIBRATION_PARTITION`
+- next action: `RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT`
 
 ## Detector Status
 
 - regression gate behavior: `PASS_BLOCKS_KNOWN_FAILING_DETECTOR`
-- detector performance: `FAIL`
-- known-positive all-three recall: `0/13`
-- negative controls executed: `0`
+- detector performance: `PASS`
+- known-positive all-three recall: `CALIBRATION_PARTITION_8/8_ALL_13_PENDING_HOLDOUT_GATE`
+- negative controls executed: `24`
 
 ## Queue Counts
 

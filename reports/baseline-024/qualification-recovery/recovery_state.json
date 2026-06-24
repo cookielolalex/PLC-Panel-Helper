@@ -1,9 +1,9 @@
 {
   "schema_version": "qualification_recovery_state_v1",
-  "generated_at": "2026-06-24T02:34:56+00:00",
+  "generated_at": "2026-06-24T03:15:47+00:00",
   "baseline_id": "baseline-024-cycle-000",
   "decision_id": "D-0021",
-  "status": "DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS",
+  "status": "DETECTOR_V4_1_CALIBRATION_PASSED_HOLDOUT_PENDING",
   "privacy": {
     "approval_status": "NOT_APPROVED",
     "private_reference_pages_sent_to_external_or_inherited_models": 0,
@@ -12,7 +12,7 @@
     "private_reference_classifier_rule": "GPT-5 synthetic vision success is not a local private-reference classifier."
   },
   "checkpoint_verification": {
-    "git_head": "2abd734797c284af4f9ebf6ad9b0a146685ee753",
+    "git_head": "9c28e5dfeaee8af993291aa0ed2614bbca4bab08",
     "worktree_clean": true,
     "git_status_short": "",
     "accepted_bundle_hashes": {
@@ -159,41 +159,90 @@
       "requested_classifier": "windows_media_ocr_local_signal_bridge",
       "actual_classifier": "Windows.Media.Ocr.OcrEngine",
       "repeat_policy": "DO_NOT_PERSIST_OR_PRINT_OCR_TEXT"
+    },
+    {
+      "strategy_id": "target_output_detection_v4_local_multisignal_recovery_calibration_partition",
+      "status": "FAIL",
+      "strategy_signature": "B9CE199D3AA75B7821572158F14C59B2243C68BEB53F7C7863C811C9B96E3EAB",
+      "evidence_hashes": [
+        {
+          "path": "reports\\baseline-024\\reference-detector-calibration\\v4_calibration_partition\\calibration_partition_summary.json",
+          "sha256": "4C54EF6073EF72DF0D983BC18AEF56EBBBF2F0DC89232D1158FD9BB46B604E9E"
+        }
+      ],
+      "requested_classifier": "local_poppler_pypdf_pillow_numpy_private_ocr_disabled",
+      "actual_classifier": "target_output_detection_v4_local_multisignal_recovery",
+      "repeat_policy": "SUPERSEDED_BY_V4_1_LAYOUT_PRIOR_RECOVERY"
+    },
+    {
+      "strategy_id": "target_output_detection_v4_1_local_layout_prior_recovery_calibration_and_negatives",
+      "status": "CALIBRATION_PASS_NEGATIVE_PASS",
+      "strategy_signature": "E64BB5D174D817CDC5AC7107F8893D0DAD56345321E13F4C9F9AA9334494F545",
+      "evidence_hashes": [
+        {
+          "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_calibration_partition\\calibration_partition_summary.json",
+          "sha256": "FF0B4C95CCF506665D8EF5CCB9EBA015D8CA746D3804B8A3F4960BA8B4AC2282"
+        },
+        {
+          "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_negative_controls\\negative_control_audit_summary.json",
+          "sha256": "3DF9A4480722ED97944DCBDA88820704650076A8468C10AA31BF0FDD48C62338"
+        },
+        {
+          "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_candidate_freeze_manifest.json",
+          "sha256": "4F1FDE2DD0D875F667E8D99DF38927B47331351F7A787161C78984D6D5B5CE5C"
+        },
+        {
+          "path": "reports\\baseline-024\\reference-detector-calibration\\v4_1_independent_implementation_audit.md",
+          "sha256": "BA13D7B9709EF30A15CD13AAA5380D73CF4940EEE23D882AF883B7D77B442405"
+        }
+      ],
+      "requested_classifier": "local_poppler_pypdf_pillow_numpy_private_ocr_disabled",
+      "actual_classifier": "target_output_detection_v4_1_local_layout_prior_recovery",
+      "repeat_policy": "DO_NOT_MODIFY_BEFORE_SEALED_HOLDOUT_WITHOUT_NEW_VERSION"
     }
   ],
   "detector_calibration": {
     "current_detector_version": "target_output_detection_v3_page_content_isolated",
     "current_detector_performance_status": "DETECTOR_V3_RECALL_FAIL",
-    "candidate_detector_version": "target_output_detection_v4_local_multisignal_recovery",
-    "candidate_detector_status": "CREATED_AWAITING_CALIBRATION_PARTITION",
+    "candidate_detector_version": "target_output_detection_v4_1_local_layout_prior_recovery",
+    "candidate_detector_status": "CALIBRATION_AND_NEGATIVE_CONTROLS_PASS_AWAITING_SEALED_HOLDOUT",
     "regression_gate_behavior_status": "PASS_BLOCKS_KNOWN_FAILING_DETECTOR",
-    "detector_performance_status": "FAIL",
-    "known_positive_all_three_recall": "0/13",
+    "detector_performance_status": "PASS",
+    "known_positive_all_three_recall": "CALIBRATION_PARTITION_8/8_ALL_13_PENDING_HOLDOUT_GATE",
+    "calibration_partition_all_three_recall": {
+      "detected": 8,
+      "expected": 8,
+      "recall": 1.0
+    },
     "per_type_recall": {
       "PRODUCTION_DRAWING": {
-        "detected": 0,
-        "expected": 13,
-        "recall": 0.0
+        "detected": 8,
+        "expected": 8,
+        "recall": 1.0
+      },
+      "PUNCH_DRAWING": {
+        "detected": 8,
+        "expected": 8,
+        "recall": 1.0
       },
       "SHEETMETAL_DRAWING": {
         "detected": 8,
-        "expected": 13,
-        "recall": 0.6153846153846154
-      },
-      "PUNCH_DRAWING": {
-        "detected": 0,
-        "expected": 13,
-        "recall": 0.0
+        "expected": 8,
+        "recall": 1.0
       }
     },
     "false_negative_output_type_count": 31,
-    "negative_controls_executed": 0,
+    "negative_controls_executed": 24,
+    "negative_control_status": "PASS",
     "detector_v4_created": true,
     "v4_calibration_protocol_frozen": true,
     "v4_negative_control_count": 24,
+    "candidate_freeze_manifest": "reports\\baseline-024\\reference-detector-calibration\\v4_1_candidate_freeze_manifest.json",
+    "independent_implementation_audit": "reports\\baseline-024\\reference-detector-calibration\\v4_1_independent_implementation_audit.md",
     "windows_media_ocr_synthetic_status": "PASS",
     "windows_media_ocr_private_page_status": "SKIPPED_NETWORK_DISABLE_BOUNDARY_NOT_ENFORCED",
-    "corpus_wide_screening_authorized": false
+    "corpus_wide_screening_authorized": false,
+    "sealed_holdout_authorized": true
   },
   "candidate_queues": {
     "privacy_minimized": true,
@@ -865,7 +914,7 @@
   },
   "local_capabilities": {
     "status": "LOCAL_CAPABILITY_DISCOVERY_COMPLETE",
-    "generated_at": "2026-06-24T02:34:55+00:00",
+    "generated_at": "2026-06-24T03:15:47+00:00",
     "probe_scope": "versions and availability only; no private project data opened",
     "python": {
       "executable": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
@@ -1019,14 +1068,14 @@
     }
   },
   "next_selected_action": {
-    "action_id": "RUN_DETECTOR_V4_CALIBRATION_PARTITION",
+    "action_id": "RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT",
     "phase": "PHASE_B",
     "status": "SELECTED",
-    "reason": "Detector v4 and its frozen calibration protocol exist; run only the implementation-facing calibration partition before sealed holdout or corpus screening."
+    "reason": "Detector v4.1 passed calibration positives and real negative controls with private OCR disabled; run sealed holdout with the frozen committed candidate before corpus screening."
   },
   "progress_since_previous_iteration": {
     "previous_status": "VISION_CLASSIFIER_UNAVAILABLE",
-    "current_status": "DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS",
+    "current_status": "DETECTOR_V4_1_CALIBRATION_PASSED_HOLDOUT_PENDING",
     "allowed_eval_count_changed": false,
     "current_allowed_eval_count": 13,
     "deficit": 11,
