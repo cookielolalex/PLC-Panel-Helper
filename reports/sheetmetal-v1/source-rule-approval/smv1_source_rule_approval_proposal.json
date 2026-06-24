@@ -1,0 +1,145 @@
+{
+  "schema_version": "sheetmetal-v1.source_rule_approval_proposal.v1",
+  "task_id": "SMV1-SOURCE-RULE-APPROVAL-PROPOSAL",
+  "created_at": "2026-06-24T17:07:42.5707573+08:00",
+  "starting_commit": "c25586a839eb9ed16f666e044e1c01b0021a1966",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "status": "PROPOSED_ONLY_NOT_APPLIED",
+  "recommended_next_action": "RUN_INDEPENDENT_SOURCE_RULE_PROPOSAL_REVIEW",
+  "privacy_mode": "LOCAL_ONLY_PRIVACY_NOT_APPROVED",
+  "source_roots_opened": false,
+  "private_artifacts_opened": false,
+  "completed_references_opened": false,
+  "post_design_files_opened": false,
+  "public_web_used": false,
+  "customer_pdf_dxf_dwg_generated": false,
+  "production_approval_declared": false,
+  "bound_evidence": {
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json": "FA5E9697047683BDB8850A66C014F40E42C83A3D02EF9ED8728AD5ADC6AE0221",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json": "DE9B58645669E6002ACCFC9DA18410B76F6FB198ED40C1B6F129B77407CBC956",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json": "9B8A9D6EB8F98F79E69B82A3F3A6F91EC20F1FF24CB3C0E4AF34821B858137EF",
+    "docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md": "72920B19759334A49323B5BE63A2B6E59B6E073D08406D0D70B5534EF67B0FBC",
+    "docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md": "67F25DEA549626A2ECF72DB657D66276FDDC44F6CC698ECD5728E86E25863543",
+    "docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md": "05EFAB1DE2FE03F845991E2E3010CD2856F4523DAA25AF55441B9DEE6485B622",
+    "docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md": "9FA9E4A7E640B7D7481C34A4A5D992C822B7EE0EA46918307CB69A489D278454"
+  },
+  "t1_blockers": {
+    "panel_assignment": [
+      "NO_APPROVED_PANEL_ALLOCATION_SOURCE_IN_SELECTED_BUNDLE",
+      "NO_PANEL_ASSIGNMENT_FIELD_SIGNAL_IN_APPROVED_BUNDLE",
+      "NO_APPROVED_DETERMINISTIC_ASSIGNMENT_RULE_AVAILABLE",
+      "SOURCE_MODE_A_INVENTORY_ONLY_FUNCTIONAL_SOURCE_DISABLED"
+    ],
+    "component_geometry": [
+      "NO_APPROVED_COMPONENT_GEOMETRY_LIBRARY",
+      "NO_APPROVED_GENERIC_CONSERVATIVE_ENVELOPE_RULE",
+      "LOCAL_CATALOG_CANDIDATES_REQUIRE_HUMAN_REVIEW",
+      "LOCAL_CAD_CANDIDATES_NOT_APPROVED_FOR_GEOMETRY_EXTRACTION",
+      "PRIVATE_MODEL_IDENTIFIERS_NOT_PUBLIC_LOOKUP_ELIGIBLE"
+    ],
+    "topology_sizing_rule": [
+      "NO_APPROVED_STANDARD_CABINET_LIBRARY",
+      "NO_APPROVED_ENCLOSURE_CANDIDATE_SELECTION_RULE",
+      "NO_APPROVED_SURFACE_INFERENCE_RULE",
+      "NO_COMPONENT_CLASS_CLEARANCE_LIBRARY",
+      "NO_APPROVED_THERMAL_RULE",
+      "NO_SUPPORTED_PANEL_FILL_CALCULATION_DENOMINATOR"
+    ]
+  },
+  "authority_lanes": [
+    {
+      "lane_id": "LANE_A_PANEL_ALLOCATION_SOURCE",
+      "status": "PROPOSED_REVIEW_REQUIRED",
+      "authority_needed": "PANEL_ALLOCATION_SOURCE with PRE_DESIGN or explicitly accepted DURING_DESIGN chronology",
+      "approval_path": [
+        "deterministic_source_validation",
+        "four_independent_specialist_reviews",
+        "unanimous_agent_quorum",
+        "separate_adjudication",
+        "sanitized_bundle_verification",
+        "independent_audit"
+      ],
+      "rejected_shortcuts": [
+        "completed_sheetmetal_drawing",
+        "post_design_allocation_label",
+        "filename_or_worksheet_label_inference",
+        "component_cooccurrence",
+        "procurement_quantity"
+      ]
+    },
+    {
+      "lane_id": "LANE_B_COMPONENT_GEOMETRY_AUTHORITY",
+      "status": "PROPOSED_REVIEW_REQUIRED",
+      "authority_needed": "verified component geometry library or approved generic conservative envelope rule",
+      "approval_path": [
+        "library_or_rule_source_authority_review",
+        "leakage_review",
+        "deterministic_matching_review",
+        "synthetic_regression_before_fix",
+        "independent_audit"
+      ],
+      "rejected_shortcuts": [
+        "completed_drawing_geometry",
+        "symbol_name_geometry_guess",
+        "private_model_identifier_public_lookup",
+        "synthetic_fixture_only_real_coverage"
+      ]
+    },
+    {
+      "lane_id": "LANE_C_TOPOLOGY_SIZING_PLACEMENT_RULES",
+      "status": "PROPOSED_REVIEW_REQUIRED",
+      "authority_needed": "approved reusable topology, cabinet, mounting surface, clearance, thermal, ventilation, spare-space, and fill-denominator rules",
+      "approval_path": [
+        "domain_rule_authority_review",
+        "explicit_human_or_accepted_company_default_authority",
+        "versioned_rule_file_review",
+        "synthetic_regression_before_fix",
+        "independent_audit"
+      ],
+      "rejected_shortcuts": [
+        "historical_cabinet_size_copy",
+        "completed_reference_coordinate_copy",
+        "private_intuition",
+        "soft_objective_over_hard_constraint"
+      ]
+    }
+  ],
+  "test_before_fix_requirements": [
+    "valid_panel_allocation_source_assignment_path",
+    "post_design_allocation_label_rejection",
+    "completed_reference_assignment_signal_rejection",
+    "verified_library_geometry_resolution",
+    "generic_conservative_envelope_with_provenance",
+    "geometry_conflict_and_missing_geometry_preservation",
+    "standard_cabinet_candidate_without_exact_customer_copying",
+    "clearance_containment_overlap_mounting_surface_validation",
+    "topology_sizing_zero_denominator_handling",
+    "no_customer_pdf_dxf_dwg_generation",
+    "no_private_transmission_and_no_tracked_private_artifacts"
+  ],
+  "intended_diff_scope_if_accepted": [
+    "docs/specs/",
+    "rules/sheetmetal-v1/",
+    "schemas/",
+    "scripts/sheetmetal_v1.py",
+    "scripts/run_tests.py",
+    "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+    "reports/sheetmetal-v1/",
+    "manifests/sheetmetal-v1/"
+  ],
+  "forbidden_diff_scope": [
+    "source_roots",
+    ".private",
+    "completed_references",
+    "frozen_releases",
+    "frozen_graders",
+    "legacy_historical_evidence",
+    "scripts/run_reference_detection_v4_corpus_screening.py"
+  ],
+  "rollback": {
+    "method": "revert accepted implementation commits and proposal-derived neutral reports; regenerate active frozen manifests from previous accepted commit",
+    "private_artifacts": "remain ignored and must not be staged"
+  },
+  "independent_review_required": true,
+  "implementation_authorized_by_this_proposal": false
+}
