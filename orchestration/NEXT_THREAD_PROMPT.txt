@@ -8,11 +8,9 @@ Read the canonical checkpoint files first:
 - `docs/07_CHANGELOG.md`
 - `docs/SESSION_CHECKPOINT.md`
 - `docs/specs/MASTER_AUTOPILOT_PROTOCOL.md`
-- `docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md`
 - `docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md`
 - `docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md`
 - `docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md`
-- `docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md`
 - `manifests/sheetmetal-v1/requalification_queue.json`
 - `orchestration/master/MASTER_STATE.json`
 - `orchestration/master/THREAD_REGISTRY.csv`
@@ -21,7 +19,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING`
+`SOURCE_RULE_AUTHORITY_DECISION_PACKET_PREPARED_HUMAN_DECISION_REQUIRED`
 
 Active goal:
 
@@ -32,47 +30,30 @@ Current qualification state:
 - `SHEETMETAL_ALLOWED_EVAL` approved count remains `1`.
 - `1110101` is the first accepted sheetmetal-v1 calibration project for the
   modular component-register and graph stage.
-- T1 targeted recovery and the source/rule proposal review have both passed
-  independent review.
+- T1 targeted recovery, source/rule proposal, proposal review, and authority
+  decision packet are complete.
+- No source/rule lane is accepted autonomously.
 - This is not engineering capability success, production approval, or drawing
   generation authorization.
 - `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
 
-Recent evidence:
+Decision packet:
 
-- T1 integration:
-  `reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json`
-- T1 independent audit:
-  `reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json`
-- T1 coordinator addendum:
-  `reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json`
-- Source/rule proposal:
-  `reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json`
-- Source/rule proposal review:
-  `reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json`
-- Proposal review child result:
-  `orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.json`
+- `reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json`
+- `reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.md`
+- `orchestration/master/child-results/SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET.json`
 
-Result summary:
+Authority choices:
 
-- T1 exact audit status:
-  `PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS`.
-- Proposal review exact status:
-  `PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW`.
-- Panel assignment coverage remains source-limited at `0/53`.
-- Component geometry coverage remains source-limited at `0/53`.
-- Topology remains source-limited at `0/1`.
-- Sizing remains zero-denominator at `0/0`; no recall is reported.
-- Placement coverage remains source-limited at `0/53`.
-- No customer drawing, PDF, DXF, or DWG has been generated.
-- No production approval has been declared.
+1. `AUTHORIZE_PANEL_ALLOCATION_SOURCE_REVIEW`
+2. `AUTHORIZE_COMPONENT_GEOMETRY_AUTHORITY`
+3. `AUTHORIZE_TOPOLOGY_SIZING_PLACEMENT_RULE_AUTHORITY`
+4. `REJECT_ALL_AUTHORITY_LANES`
 
 Exact next action:
 
-`PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET`
+`REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`
 
-Prepare an explicit source/rule authority decision packet from the reviewed
-proposal. The packet must identify which lanes can be accepted, rejected, or
-require human fabrication-domain decision. It must not implement behavior,
-alter source manifests, open forbidden source roots or `.private`, use
-completed references, or generate customer drawings.
+Do not implement behavior, alter source manifests, open forbidden source roots
+or `.private`, use completed references, generate customer drawings, or declare
+production approval until a signed authority decision is recorded.

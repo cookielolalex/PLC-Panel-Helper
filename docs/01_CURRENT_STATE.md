@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: source/rule proposal reviewed and ready for authority decision
-packet.
+Current phase: source/rule authority decision packet prepared; signed human
+authority decision required.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING`.
+Current status: `SOURCE_RULE_AUTHORITY_DECISION_PACKET_PREPARED_HUMAN_DECISION_REQUIRED`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -52,8 +52,10 @@ topology/sizing/placement audit as safety/integrity pass but engineering
 coverage inconclusive at low coverage, requiring targeted T1 recovery; and
 `D-0040` accepts T1 targeted recovery and the independent recovery audit as
 safe unresolved with no compliant code/rule recovery path, requiring a
-proposal-first source/rule approval branch; and `D-0041` accepts the
-independent review of that proposal as ready for an authority decision packet.
+proposal-first source/rule approval branch; `D-0041` accepts the independent
+review of that proposal as ready for an authority decision packet; and
+`D-0042` prepares the decision packet and records that no lane can be accepted
+autonomously without signed human/source-rule authority.
 These
 amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
@@ -419,5 +421,16 @@ schema, source manifest, frozen release, frozen grader, source root, private
 artifact, completed reference, customer drawing, PDF, DXF, or DWG was changed
 or generated.
 
-Exact next action: run
-`PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET`.
+Source/rule authority decision packet after `D-0042`: the packet classifies
+all three reviewed lanes as not accepted autonomously. Panel allocation source
+review requires signed source authority; component geometry requires a verified
+geometry library or approved generic envelope rule; and topology/sizing/
+placement rules require explicit fabrication-domain authority. Rejecting all
+lanes leads to terminal-candidate review for `STRUCTURAL_SOURCE_INSUFFICIENCY`
+and `FABRICATION_DOMAIN_DECISION_REQUIRED`. No implementation code, rule,
+schema, source manifest, frozen release, frozen grader, source root, private
+artifact, completed reference, customer drawing, PDF, DXF, or DWG was changed
+or generated.
+
+Exact next action: request
+`REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.

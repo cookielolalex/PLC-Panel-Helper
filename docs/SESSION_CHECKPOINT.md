@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: source/rule proposal reviewed and ready for authority decision
-packet.
+Current phase: source/rule authority decision packet prepared; signed human
+authority decision required.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `SOURCE_RULE_PROPOSAL_REVIEW_PASS_AUTHORITY_DECISION_PENDING`.
+Current status: `SOURCE_RULE_AUTHORITY_DECISION_PACKET_PREPARED_HUMAN_DECISION_REQUIRED`.
 
 Current candidate: `1110101`.
 
@@ -415,6 +415,23 @@ Source/rule approval proposal and review:
 
 Exact next action:
 
-Run `PREPARE_SOURCE_RULE_AUTHORITY_DECISION_PACKET`. The packet must still not
-apply implementation or fabricate source/rule authority; it should prepare the
-explicit decision surface for source/rule approval or terminal-candidate review.
+Source/rule authority decision packet:
+
+- Decision: `D-0042`.
+- Packet commit: `db0efba`.
+- Packet status:
+  `DECISION_PACKET_PREPARED_HUMAN_AUTHORITY_REQUIRED`.
+- Lane A, panel allocation source:
+  `AUTHORITY_REQUIRED_NOT_ACCEPTED_AUTONOMOUSLY`.
+- Lane B, component geometry authority:
+  `AUTHORITY_REQUIRED_NOT_ACCEPTED_AUTONOMOUSLY`.
+- Lane C, topology/sizing/placement rules:
+  `FABRICATION_DOMAIN_DECISION_REQUIRED_NOT_ACCEPTED_AUTONOMOUSLY`.
+- No implementation code, rule, schema, source manifest, frozen release,
+  frozen grader, source root, `.private` artifact, completed reference,
+  customer drawing, PDF, DXF, or DWG was changed or generated.
+
+Exact next action:
+
+Request `REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION` selecting one or
+more authority choices, or rejecting all lanes for terminal-candidate review.

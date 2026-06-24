@@ -108,3 +108,12 @@ Source/rule proposal review result:
 - No implementation, source manifest, rule, schema, source-root, private,
   completed-reference, customer drawing, PDF, DXF, or DWG artifact was changed
   or generated.
+
+Source/rule authority decision packet:
+
+- Packet commit: `db0efba`.
+- Status: `DECISION_PACKET_PREPARED_HUMAN_AUTHORITY_REQUIRED`.
+- No lane is accepted autonomously.
+- Next action: `REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+- Authority choices are panel allocation source review, component geometry
+  authority, topology/sizing/placement rule authority, or reject all lanes.

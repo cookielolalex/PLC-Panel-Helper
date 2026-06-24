@@ -1019,3 +1019,34 @@ Evidence:
 `reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json`,
 and
 `orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.json`.
+
+## sheetmetal-v1 source/rule authority decision packet
+
+Status: `SOURCE_RULE_AUTHORITY_DECISION_PACKET_PREPARED_HUMAN_DECISION_REQUIRED`.
+
+Decision: `D-0042`.
+
+Purpose: create the explicit source/rule authority decision surface after the
+proposal review passed.
+
+Packet result:
+
+- `LANE_A_PANEL_ALLOCATION_SOURCE`:
+  `AUTHORITY_REQUIRED_NOT_ACCEPTED_AUTONOMOUSLY`.
+- `LANE_B_COMPONENT_GEOMETRY_AUTHORITY`:
+  `AUTHORITY_REQUIRED_NOT_ACCEPTED_AUTONOMOUSLY`.
+- `LANE_C_TOPOLOGY_SIZING_PLACEMENT_RULES`:
+  `FABRICATION_DOMAIN_DECISION_REQUIRED_NOT_ACCEPTED_AUTONOMOUSLY`.
+
+Human authority choices are to authorize panel allocation source review,
+authorize component geometry authority, authorize topology/sizing/placement
+rule authority, or reject all lanes. Rejecting all lanes moves to
+terminal-candidate review.
+
+Generation status: no implementation was applied, no customer drawing, PDF,
+DXF, or DWG was generated, and no production approval was declared.
+
+Evidence:
+`reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json`
+and
+`orchestration/master/child-results/SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET.json`.

@@ -45,10 +45,17 @@
     {
       "id": "SOURCE_RULE_AUTHORITY_DECISION_PACKET",
       "name": "SOURCE_RULE_AUTHORITY_DECISION_PACKET",
-      "status": "PENDING",
+      "status": "PREPARED",
       "on_accept_lane": "IMPLEMENT_ACCEPTED_AUTHORITY_LANE",
       "on_reject_all": "TERMINAL_REVIEW",
       "on_human_required": "FABRICATION_DOMAIN_DECISION_REQUIRED"
+    },
+    {
+      "id": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+      "name": "SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+      "status": "PENDING",
+      "on_authorize_lane": "IMPLEMENT_ACCEPTED_AUTHORITY_LANE",
+      "on_reject_all": "TERMINAL_REVIEW"
     },
     {
       "id": "T2",
