@@ -1,0 +1,306 @@
+{
+  "schema_version": "reference_detector_v4_negative_control_audit_v1",
+  "generated_at": "2026-06-24T03:05:09+00:00",
+  "detector_version": "target_output_detection_v4_1_local_layout_prior_recovery",
+  "task_id": "B024-RDCAL-V4-1-NEGATIVE-CONTROLS",
+  "privacy_mode": "PRIVATE_INPUT_OCR_DISABLED",
+  "status": "PASS",
+  "real_negative_control_count": 24,
+  "supported_real_negative_control_count": 24,
+  "false_target_page_classifications": 0,
+  "false_all_three_project_promotions": 0,
+  "electrical_pages_falsely_accepted_as_targets": 0,
+  "source_documents_falsely_accepted_as_targets": 0,
+  "private_ocr_page_count": 0,
+  "private_content_external_transmission_count": 0,
+  "temporary_render_cleanup_result": "PASS",
+  "raw_content_persistence_result": "PASS",
+  "generator_isolation_result": "PASS",
+  "source_review_blindness_result": "PASS",
+  "control_results": [
+    {
+      "control_id": "V4-NEG-001",
+      "project_id": "1120801",
+      "expected_role": "ELECTRICAL_DRAWING",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-002",
+      "project_id": "1120902",
+      "expected_role": "ELECTRICAL_DRAWING",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-003",
+      "project_id": "1121102",
+      "expected_role": "ELECTRICAL_DRAWING",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-004",
+      "project_id": "1130610",
+      "expected_role": "ELECTRICAL_DRAWING",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-005",
+      "project_id": "1141201",
+      "expected_role": "ELECTRICAL_DRAWING",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-006",
+      "project_id": "1110202",
+      "expected_role": "ELECTRICAL_DRAWING",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-007",
+      "project_id": "1120801",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-008",
+      "project_id": "1120902",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-009",
+      "project_id": "1121102",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-010",
+      "project_id": "1121107",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-011",
+      "project_id": "1130610",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-012",
+      "project_id": "1110202",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-013",
+      "project_id": "1140905",
+      "expected_role": "COVER_OR_INDEX",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-014",
+      "project_id": "1130309",
+      "expected_role": "COVER_OR_INDEX",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-015",
+      "project_id": "1120801",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-016",
+      "project_id": "1120801",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-017",
+      "project_id": "1120801",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-018",
+      "project_id": "1120801",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-019",
+      "project_id": "1120801",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-020",
+      "project_id": "1120801",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-021",
+      "project_id": "1120801",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-022",
+      "project_id": "1120801",
+      "expected_role": "SOURCE_DOCUMENT",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-023",
+      "project_id": "1120801",
+      "expected_role": "ELECTRICAL_DRAWING",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    },
+    {
+      "control_id": "V4-NEG-024",
+      "project_id": "1120801",
+      "expected_role": "ELECTRICAL_DRAWING",
+      "observed_role": "UNCLASSIFIED",
+      "confidence": 0.2,
+      "status": "PASS"
+    }
+  ],
+  "project_results": [
+    {
+      "project_id": "1110202",
+      "status": "PASS",
+      "effective_status": "NO_REFERENCE_SET",
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "private_ocr_page_count": 0
+    },
+    {
+      "project_id": "1120801",
+      "status": "PASS",
+      "effective_status": "NO_REFERENCE_SET",
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "private_ocr_page_count": 0
+    },
+    {
+      "project_id": "1120902",
+      "status": "PASS",
+      "effective_status": "NO_REFERENCE_SET",
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "private_ocr_page_count": 0
+    },
+    {
+      "project_id": "1121102",
+      "status": "PASS",
+      "effective_status": "NO_REFERENCE_SET",
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "private_ocr_page_count": 0
+    },
+    {
+      "project_id": "1121107",
+      "status": "PASS",
+      "effective_status": "NO_REFERENCE_SET",
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "private_ocr_page_count": 0
+    },
+    {
+      "project_id": "1130309",
+      "status": "PASS",
+      "effective_status": "NO_REFERENCE_SET",
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "private_ocr_page_count": 0
+    },
+    {
+      "project_id": "1130610",
+      "status": "PASS",
+      "effective_status": "NO_REFERENCE_SET",
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "private_ocr_page_count": 0
+    },
+    {
+      "project_id": "1140905",
+      "status": "PASS",
+      "effective_status": "NO_REFERENCE_SET",
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "private_ocr_page_count": 0
+    },
+    {
+      "project_id": "1141201",
+      "status": "PASS",
+      "effective_status": "NO_REFERENCE_SET",
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "private_ocr_page_count": 0
+    }
+  ]
+}

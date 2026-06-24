@@ -1,0 +1,45 @@
+{
+  "audit_id": "reference_detection_v4_audit_B024-RDCAL-V4-1-NEG-1110202",
+  "detector_version": "target_output_detection_v4_1_local_layout_prior_recovery",
+  "task_id": "B024-RDCAL-V4-1-NEG-1110202",
+  "project_id": "1110202",
+  "status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+  "checks": [
+    {
+      "name": "source_hashes_verified_for_accessed_files",
+      "status": "PASS",
+      "detail": "hash mismatches become inaccessible document records"
+    },
+    {
+      "name": "temporary_renders_removed",
+      "status": "PASS",
+      "detail": "tmp/reference_detection_v4 task directories removed"
+    },
+    {
+      "name": "raw_text_not_persisted",
+      "status": "PASS",
+      "detail": "embedded text is transient only"
+    },
+    {
+      "name": "raw_ocr_not_persisted",
+      "status": "PASS",
+      "detail": "OCR bridge returns role signals only"
+    },
+    {
+      "name": "generator_exposure_false",
+      "status": "PASS",
+      "detail": "effective set records no generator reference exposure"
+    },
+    {
+      "name": "source_review_blindness",
+      "status": "PASS",
+      "detail": "no source-review artifact is written by detector"
+    }
+  ],
+  "renderer": "POPPLER_PDFTOPPM",
+  "ocr_engine": "NO_OCR_SIGNAL_USED",
+  "temporary_workspace_removed": true,
+  "data_minimization_pass": true,
+  "generator_isolation_pass": true,
+  "source_review_blindness_pass": true
+}

@@ -1,0 +1,66 @@
+{
+  "document_classifications": [
+    {
+      "schema_version": "reference_detection_v4_schema_v1",
+      "detector_version": "target_output_detection_v4_1_local_layout_prior_recovery",
+      "task_id": "B024-RDCAL-V4-1-NEG-1130610",
+      "project_id": "1130610",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-CC2BE55F873E",
+      "page_count": 4,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_4_PAGES",
+      "detected_page_types": [
+        "UNCLASSIFIED"
+      ],
+      "page_classification_ids": [
+        "V4E-2008F8E2D1A22A",
+        "V4E-213593890857C7",
+        "V4E-CD64A9745EFE24",
+        "V4E-DDEAE7381249C0"
+      ],
+      "duplicate_group_id": "DUP-G0001",
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "raw_ocr_text_persisted": false,
+        "rendered_images_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    },
+    {
+      "schema_version": "reference_detection_v4_schema_v1",
+      "detector_version": "target_output_detection_v4_1_local_layout_prior_recovery",
+      "task_id": "B024-RDCAL-V4-1-NEG-1130610",
+      "project_id": "1130610",
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-9F9BFE7A13BF",
+      "page_count": 10,
+      "metadata_status": "PYPDF_METADATA_AND_TEXT_PASS",
+      "render_status": "RENDERED_10_PAGES",
+      "detected_page_types": [
+        "UNCLASSIFIED"
+      ],
+      "page_classification_ids": [
+        "V4E-6443766756EDFB",
+        "V4E-5F381E08F03C8F",
+        "V4E-4068A03932CDEC",
+        "V4E-BE6B9213D3C6E4",
+        "V4E-CB1F299D5C7893",
+        "V4E-5077D004E37703",
+        "V4E-C4090475825BF0",
+        "V4E-3D33EE150B6ABB",
+        "V4E-03F33180D1E074",
+        "V4E-537CB8A4DCE9A3"
+      ],
+      "duplicate_group_id": "DUP-G0002",
+      "duplicate_of": null,
+      "document_status": "NON_TARGET_REFERENCE",
+      "minimization": {
+        "raw_text_persisted": false,
+        "raw_ocr_text_persisted": false,
+        "rendered_images_persisted": false,
+        "absolute_private_paths_persisted": false
+      }
+    }
+  ]
+}

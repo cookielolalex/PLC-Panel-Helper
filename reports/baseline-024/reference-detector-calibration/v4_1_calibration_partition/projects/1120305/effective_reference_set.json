@@ -1,0 +1,92 @@
+{
+  "schema_version": "reference_detection_v4_schema_v1",
+  "detector_version": "target_output_detection_v4_1_local_layout_prior_recovery",
+  "task_id": "B024-RDCAL-V4-CAL-1120305",
+  "project_id": "1120305",
+  "status": "VERIFIED_ALL_THREE_BY_CONTENT",
+  "target_types_present": [
+    "PRODUCTION_DRAWING",
+    "PUNCH_DRAWING",
+    "SHEETMETAL_DRAWING"
+  ],
+  "effective_pages": [
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-288262595819",
+      "page_range": "1-2",
+      "target_type": "PRODUCTION_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "duplicate_group_id": "DUP-G0008",
+      "classification_method": "LAYOUT_CONFIRMED_WEAK_ROLE_PRIOR_NO_TEXT",
+      "confidence": 0.86,
+      "evidence_channel_codes": [
+        "LAYOUT_CONFIRMED_WEAK_ROLE_PRIOR",
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "WEAK_METADATA_PRIOR"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-E16C2F643F10",
+      "page_range": "1-2",
+      "target_type": "PUNCH_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "duplicate_group_id": "DUP-G0007",
+      "classification_method": "LAYOUT_CONFIRMED_WEAK_ROLE_PRIOR_NO_TEXT",
+      "confidence": 0.86,
+      "evidence_channel_codes": [
+        "LAYOUT_CONFIRMED_WEAK_ROLE_PRIOR",
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "WEAK_METADATA_PRIOR"
+      ]
+    },
+    {
+      "neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-B9B2F1E5D61C",
+      "page_range": "1-2",
+      "target_type": "SHEETMETAL_DRAWING",
+      "project_identity_status": "CONFIRMED",
+      "revision_identity": null,
+      "supersedes": null,
+      "current_effective_status": "CURRENT_EFFECTIVE",
+      "duplicate_group_id": "DUP-G0009",
+      "classification_method": "LAYOUT_CONFIRMED_WEAK_ROLE_PRIOR_NO_TEXT",
+      "confidence": 0.86,
+      "evidence_channel_codes": [
+        "LAYOUT_CONFIRMED_WEAK_ROLE_PRIOR",
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "WEAK_METADATA_PRIOR"
+      ]
+    }
+  ],
+  "duplicate_groups": [],
+  "unresolved_issues": [
+    "UNCLASSIFIED_PAGES_REMAIN"
+  ],
+  "generator_exposure": {
+    "generator_receives_reference_file_ids": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "generator_receives_reference_content": false
+  },
+  "minimization": {
+    "raw_text_persisted": false,
+    "raw_ocr_text_persisted": false,
+    "rendered_images_persisted": false,
+    "title_crops_persisted": false,
+    "absolute_private_paths_persisted": false,
+    "drawing_details_persisted": false
+  }
+}

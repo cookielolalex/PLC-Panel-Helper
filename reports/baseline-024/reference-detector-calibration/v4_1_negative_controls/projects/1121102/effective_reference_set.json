@@ -1,0 +1,27 @@
+{
+  "schema_version": "reference_detection_v4_schema_v1",
+  "detector_version": "target_output_detection_v4_1_local_layout_prior_recovery",
+  "task_id": "B024-RDCAL-V4-1-NEG-1121102",
+  "project_id": "1121102",
+  "status": "NO_REFERENCE_SET",
+  "target_types_present": [],
+  "effective_pages": [],
+  "duplicate_groups": [],
+  "unresolved_issues": [
+    "UNCLASSIFIED_PAGES_REMAIN"
+  ],
+  "generator_exposure": {
+    "generator_receives_reference_file_ids": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "generator_receives_reference_content": false
+  },
+  "minimization": {
+    "raw_text_persisted": false,
+    "raw_ocr_text_persisted": false,
+    "rendered_images_persisted": false,
+    "title_crops_persisted": false,
+    "absolute_private_paths_persisted": false,
+    "drawing_details_persisted": false
+  }
+}

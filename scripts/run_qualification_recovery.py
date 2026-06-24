@@ -36,6 +36,10 @@ V4_CALIBRATION_MANIFEST = ROOT / "manifests" / "reference_detection" / "calibrat
 V4_HOLDOUT_MANIFEST = ROOT / "manifests" / "reference_detection" / "calibration" / "v4_holdout_manifest.sealed.json"
 V4_NEGATIVE_CONTROLS = ROOT / "manifests" / "reference_detection" / "calibration" / "v4_negative_controls.json"
 V4_DETECTOR_SCRIPT = ROOT / "scripts" / "detect_reference_presence_v4.py"
+V4_1_CALIBRATION_SUMMARY = ROOT / "reports" / "baseline-024" / "reference-detector-calibration" / "v4_1_calibration_partition" / "calibration_partition_summary.json"
+V4_1_NEGATIVE_SUMMARY = ROOT / "reports" / "baseline-024" / "reference-detector-calibration" / "v4_1_negative_controls" / "negative_control_audit_summary.json"
+V4_1_FREEZE_MANIFEST = ROOT / "reports" / "baseline-024" / "reference-detector-calibration" / "v4_1_candidate_freeze_manifest.json"
+V4_1_AUDIT_REPORT = ROOT / "reports" / "baseline-024" / "reference-detector-calibration" / "v4_1_independent_implementation_audit.md"
 FROZEN_WORKFLOW = ROOT / "evals" / "baseline-024" / "frozen_workflow_manifest.json"
 PRIVACY_APPROVAL = ROOT / "docs" / "PRIVACY_APPROVAL.md"
 TASK_REGISTRY = ROOT / "orchestration" / "TASK_REGISTRY.csv"
@@ -543,6 +547,46 @@ def attempted_strategies(known_positive: dict[str, Any], vision_probe: dict[str,
                 "repeat_policy": "DO_NOT_PERSIST_OR_PRINT_OCR_TEXT",
             }
         )
+    v4_failed = ROOT / "reports" / "baseline-024" / "reference-detector-calibration" / "v4_calibration_partition" / "calibration_partition_summary.json"
+    if v4_failed.exists():
+        v4_sig, v4_hashes = strategy_signature(
+            "target_output_detection_v4_local_multisignal_recovery_calibration_partition",
+            [v4_failed],
+            {"status": read_json(v4_failed).get("detector_performance_status")},
+        )
+        strategies.append(
+            {
+                "strategy_id": "target_output_detection_v4_local_multisignal_recovery_calibration_partition",
+                "status": str(read_json(v4_failed).get("detector_performance_status")),
+                "strategy_signature": v4_sig,
+                "evidence_hashes": v4_hashes,
+                "requested_classifier": "local_poppler_pypdf_pillow_numpy_private_ocr_disabled",
+                "actual_classifier": "target_output_detection_v4_local_multisignal_recovery",
+                "repeat_policy": "SUPERSEDED_BY_V4_1_LAYOUT_PRIOR_RECOVERY",
+            }
+        )
+    if V4_1_CALIBRATION_SUMMARY.exists() and V4_1_NEGATIVE_SUMMARY.exists():
+        v41_cal = read_json(V4_1_CALIBRATION_SUMMARY)
+        v41_neg = read_json(V4_1_NEGATIVE_SUMMARY)
+        v41_sig, v41_hashes = strategy_signature(
+            "target_output_detection_v4_1_local_layout_prior_recovery_calibration_and_negatives",
+            [V4_1_CALIBRATION_SUMMARY, V4_1_NEGATIVE_SUMMARY, V4_1_FREEZE_MANIFEST, V4_1_AUDIT_REPORT],
+            {
+                "calibration": v41_cal.get("detector_performance_status"),
+                "negative_controls": v41_neg.get("status"),
+            },
+        )
+        strategies.append(
+            {
+                "strategy_id": "target_output_detection_v4_1_local_layout_prior_recovery_calibration_and_negatives",
+                "status": f"CALIBRATION_{v41_cal.get('detector_performance_status')}_NEGATIVE_{v41_neg.get('status')}",
+                "strategy_signature": v41_sig,
+                "evidence_hashes": v41_hashes,
+                "requested_classifier": "local_poppler_pypdf_pillow_numpy_private_ocr_disabled",
+                "actual_classifier": "target_output_detection_v4_1_local_layout_prior_recovery",
+                "repeat_policy": "DO_NOT_MODIFY_BEFORE_SEALED_HOLDOUT_WITHOUT_NEW_VERSION",
+            }
+        )
     return strategies
 
 
@@ -554,6 +598,16 @@ def select_next_action(capabilities: dict[str, Any]) -> dict[str, str]:
             "status": "SELECTED",
             "reason": "Capability discovery was skipped in test mode and must be run before detector recovery.",
         }
+    if V4_1_CALIBRATION_SUMMARY.exists() and V4_1_NEGATIVE_SUMMARY.exists() and V4_1_FREEZE_MANIFEST.exists():
+        cal = read_json(V4_1_CALIBRATION_SUMMARY)
+        neg = read_json(V4_1_NEGATIVE_SUMMARY)
+        if cal.get("detector_performance_status") == "PASS" and neg.get("status") == "PASS":
+            return {
+                "action_id": "RUN_DETECTOR_V4_1_SEALED_HOLDOUT_AUDIT",
+                "phase": "PHASE_B",
+                "status": "SELECTED",
+                "reason": "Detector v4.1 passed calibration positives and real negative controls with private OCR disabled; run sealed holdout with the frozen committed candidate before corpus screening.",
+            }
     if V4_DETECTOR_SCRIPT.exists() and V4_CALIBRATION_MANIFEST.exists():
         return {
             "action_id": "RUN_DETECTOR_V4_CALIBRATION_PARTITION",
@@ -613,7 +667,14 @@ def build_state(skip_capability_probe: bool = False) -> dict[str, Any]:
     ]
     next_action = select_next_action(capabilities)
     v4_created = V4_DETECTOR_SCRIPT.exists() and V4_CALIBRATION_MANIFEST.exists()
-    status = "DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS" if v4_created and not skip_capability_probe else "RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE"
+    v41_cal = read_json(V4_1_CALIBRATION_SUMMARY) if V4_1_CALIBRATION_SUMMARY.exists() else {}
+    v41_neg = read_json(V4_1_NEGATIVE_SUMMARY) if V4_1_NEGATIVE_SUMMARY.exists() else {}
+    v41_passed = (
+        not skip_capability_probe
+        and v41_cal.get("detector_performance_status") == "PASS"
+        and v41_neg.get("status") == "PASS"
+    )
+    status = "DETECTOR_V4_1_CALIBRATION_PASSED_HOLDOUT_PENDING" if v41_passed and not skip_capability_probe else "DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS" if v4_created and not skip_capability_probe else "RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE"
     if skip_capability_probe:
         status = "RECOVERY_CONTROLLER_READY"
     return {
@@ -647,20 +708,25 @@ def build_state(skip_capability_probe: bool = False) -> dict[str, Any]:
         "detector_calibration": {
             "current_detector_version": known_positive.get("detector_version"),
             "current_detector_performance_status": known_positive.get("status"),
-            "candidate_detector_version": "target_output_detection_v4_local_multisignal_recovery",
-            "candidate_detector_status": "CREATED_AWAITING_CALIBRATION_PARTITION" if v4_created else "NOT_CREATED",
+            "candidate_detector_version": v41_cal.get("detector_version") or "target_output_detection_v4_local_multisignal_recovery",
+            "candidate_detector_status": "CALIBRATION_AND_NEGATIVE_CONTROLS_PASS_AWAITING_SEALED_HOLDOUT" if v41_passed else "CREATED_AWAITING_CALIBRATION_PARTITION" if v4_created else "NOT_CREATED",
             "regression_gate_behavior_status": "PASS_BLOCKS_KNOWN_FAILING_DETECTOR",
-            "detector_performance_status": "FAIL",
-            "known_positive_all_three_recall": f"{known_positive.get('positive_projects_detected_all_three')}/{len(known_positive.get('known_positive_projects', []))}",
-            "per_type_recall": known_positive.get("per_type_recall"),
+            "detector_performance_status": "PASS" if v41_passed else "FAIL",
+            "known_positive_all_three_recall": "CALIBRATION_PARTITION_8/8_ALL_13_PENDING_HOLDOUT_GATE" if v41_passed else f"{known_positive.get('positive_projects_detected_all_three')}/{len(known_positive.get('known_positive_projects', []))}",
+            "calibration_partition_all_three_recall": v41_cal.get("project_level_all_three_recall"),
+            "per_type_recall": v41_cal.get("per_type_recall") or known_positive.get("per_type_recall"),
             "false_negative_output_type_count": known_positive.get("false_negative_output_type_count"),
-            "negative_controls_executed": 0,
+            "negative_controls_executed": v41_neg.get("supported_real_negative_control_count", 0),
+            "negative_control_status": v41_neg.get("status", "NOT_RUN"),
             "detector_v4_created": v4_created,
             "v4_calibration_protocol_frozen": V4_CALIBRATION_MANIFEST.exists() and V4_HOLDOUT_MANIFEST.exists(),
             "v4_negative_control_count": read_json(V4_NEGATIVE_CONTROLS).get("negative_control_count", 0) if V4_NEGATIVE_CONTROLS.exists() else 0,
+            "candidate_freeze_manifest": str(V4_1_FREEZE_MANIFEST.relative_to(ROOT)) if V4_1_FREEZE_MANIFEST.exists() else None,
+            "independent_implementation_audit": str(V4_1_AUDIT_REPORT.relative_to(ROOT)) if V4_1_AUDIT_REPORT.exists() else None,
             "windows_media_ocr_synthetic_status": ocr_probe.get("synthetic_execution", {}).get("status"),
             "windows_media_ocr_private_page_status": ocr_probe.get("private_page_execution", {}).get("status"),
             "corpus_wide_screening_authorized": False,
+            "sealed_holdout_authorized": bool(v41_passed),
         },
         "candidate_queues": queues,
         "source_qualification": {
