@@ -451,3 +451,7 @@
 - Added fail-closed validation for future signed authority decisions, including
   schema, validator, regression coverage, refreshed active/topology scoped
   freeze manifests, neutral summary evidence, and child-result evidence.
+- Added neutral intake routing for future validator-passing signed authority
+  decisions. Accepted lanes route to the required regression-test-before-fix
+  gate, reject-all routes to terminal-candidate review, invalid decisions fail
+  closed, and no authority lane or implementation is authorized.

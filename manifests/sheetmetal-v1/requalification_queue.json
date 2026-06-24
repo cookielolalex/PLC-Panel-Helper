@@ -1,13 +1,13 @@
 {
   "schema_version": "sheetmetal-v1",
   "qualification_class": "SHEETMETAL_ALLOWED_EVAL",
-  "status": "SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED",
+  "status": "SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED",
   "approved_count": 1,
   "candidates": [
     {
       "project_id": "1110101",
       "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
-      "sheetmetal_status": "SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED",
+      "sheetmetal_status": "SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED",
       "selection_rank": 1,
       "selection_artifact": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
       "accepted_as_first_sheetmetal_v1_calibration_project": true,
@@ -21,6 +21,7 @@
       "source_rule_authority_decision_packet": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json",
       "signed_authority_decision_template": "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json",
       "signed_authority_decision_validator": "scripts/validate_signed_authority_decision.py",
+      "signed_authority_decision_intake": "scripts/prepare_signed_authority_intake.py",
       "next_action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION"
     },
     {
@@ -85,9 +86,9 @@
     }
   ],
   "additional_corpus_search_status": "NOT_STARTED_IN_MIGRATION_TASK",
-  "baseline_status": "SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED",
+  "baseline_status": "SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED",
   "selected_project_id": "1110101",
-  "selection_status": "SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED",
+  "selection_status": "SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED",
   "selection_artifact": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
   "selected_candidate_bundle": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle",
   "selected_candidate_audit": "reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md",
@@ -101,5 +102,6 @@
   "source_rule_authority_decision_packet": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json",
   "signed_authority_decision_template": "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json",
   "signed_authority_decision_validator": "scripts/validate_signed_authority_decision.py",
+  "signed_authority_decision_intake": "scripts/prepare_signed_authority_intake.py",
   "next_action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION"
 }

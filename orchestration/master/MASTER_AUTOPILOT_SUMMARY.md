@@ -5,7 +5,7 @@ Status: initialized.
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
 Current canonical status:
-`ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING`.
+`SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED`.
 
 Verified checkpoint:
 
@@ -21,11 +21,11 @@ Verified checkpoint:
 - Sheetmetal-v1 customer PDF/DXF/DWG output candidates: `0`.
 
 Next action:
-`RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT`.
+`WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
 
-The next child must independently audit the frozen topology/sizing/placement
-implementation, report safety and engineering coverage separately, and emit a
-minimized child result without private engineering facts.
+The next step requires a signed human/source-rule authority decision. Any
+valid signed decision must pass the validator and then the neutral intake
+router before accepted-lane implementation work can begin.
 
 T0 audit dispatch:
 
@@ -135,6 +135,23 @@ Signed authority decision validator:
 - The validator fails closed for invalid choice sets, reject-all conflicts,
   missing signature fields, hash mismatches, missing constraint acknowledgements,
   drawing-generation flags, and production-approval flags.
+- Full tests and legacy, active sheetmetal-v1, and topology-stage scoped
+  freezes passed.
+- No implementation, source manifest, rule, source-root, private,
+  completed-reference, customer drawing, PDF, DXF, or DWG artifact was changed
+  or generated.
+- Next action: `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+
+Signed authority decision intake:
+
+- Intake commit: `f03e970`.
+- Status: `SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED`.
+- The router sends validator-passing accepted lanes to the required
+  regression-test-before-fix gate.
+- The router sends validator-passing reject-all decisions to terminal-candidate
+  review.
+- Invalid decisions fail closed and remain at
+  `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
 - Full tests and legacy, active sheetmetal-v1, and topology-stage scoped
   freezes passed.
 - No implementation, source manifest, rule, source-root, private,

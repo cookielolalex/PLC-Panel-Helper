@@ -1102,3 +1102,33 @@ Evidence:
 `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_validator_summary.json`,
 and
 `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-VALIDATOR.json`.
+
+## sheetmetal-v1 signed authority decision intake
+
+Status: `SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED`.
+
+Decision: `D-0044`.
+
+Purpose: route future signed source/rule authority decisions after validator
+success without selecting any authority lane or authorizing implementation.
+
+Intake result:
+
+- Accepted valid lanes route to
+  `ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`.
+- Valid reject-all decisions route to `ENTER_TERMINAL_CANDIDATE_REVIEW`.
+- Invalid signed decisions fail closed and remain at
+  `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+
+Verification: full `scripts/run_tests.py` passed, including the new
+`test_signed_authority_decision_intake_routing` regression and the legacy,
+active sheetmetal-v1, and topology-stage scoped frozen workflow checks.
+
+Generation status: no implementation lane was selected, no customer drawing,
+PDF, DXF, or DWG was generated, and no production approval was declared.
+
+Evidence:
+`scripts/prepare_signed_authority_intake.py`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_intake_summary.json`,
+and
+`orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-INTAKE.json`.

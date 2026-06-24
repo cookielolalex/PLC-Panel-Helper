@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: signed source/rule authority decision validator ready; signed
+Current phase: signed source/rule authority decision intake ready; signed
 human authority decision still required.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED`.
+Current status: `SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -58,7 +58,9 @@ review of that proposal as ready for an authority decision packet; and
 autonomously without signed human/source-rule authority. A subsequent
 template-only checkpoint prepared the signed decision template without
 selecting any authority lane. `D-0043` adds fail-closed validation for the
-future signed decision record, still without selecting any lane.
+future signed decision record, still without selecting any lane. `D-0044` adds
+neutral intake routing for future validator-passing signed decisions, still
+without selecting any lane or authorizing implementation.
 These
 amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
@@ -450,6 +452,16 @@ mismatches, missing constraint acknowledgements, customer drawing generation
 flags, and production approval flags. Full tests and legacy, active
 sheetmetal-v1, and topology-stage scoped freezes pass. No authority lane was
 selected.
+
+Signed authority decision intake after `D-0044`: the intake router
+`scripts/prepare_signed_authority_intake.py` consumes validator semantics for a
+future signed decision. Accepted lanes route to
+`ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`, reject-all routes to
+`ENTER_TERMINAL_CANDIDATE_REVIEW`, and invalid decisions remain at
+`WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`. Full tests and legacy,
+active sheetmetal-v1, and topology-stage scoped freezes pass. No authority lane
+was selected and no implementation, customer drawing, or production approval
+was authorized.
 
 Exact next action: wait for
 `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.

@@ -19,7 +19,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED`
+`SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED`
 
 Active goal:
 
@@ -34,6 +34,7 @@ Current qualification state:
   decision packet are complete.
 - A template-only signed authority decision form is prepared.
 - A fail-closed signed authority decision validator is prepared.
+- A neutral signed authority decision intake router is prepared.
 - No source/rule lane is accepted autonomously.
 - This is not engineering capability success, production approval, or drawing
   generation authorization.
@@ -58,6 +59,12 @@ Signed authority decision validator:
 - `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_validator_summary.json`
 - `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-VALIDATOR.json`
 
+Signed authority decision intake:
+
+- `scripts/prepare_signed_authority_intake.py`
+- `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_intake_summary.json`
+- `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-INTAKE.json`
+
 Authority choices:
 
 1. `AUTHORIZE_PANEL_ALLOCATION_SOURCE_REVIEW`
@@ -71,4 +78,5 @@ Exact next action:
 
 Do not implement behavior, alter source manifests, open forbidden source roots
 or `.private`, use completed references, generate customer drawings, or declare
-production approval until a signed authority decision is recorded.
+production approval until a signed authority decision is recorded, validated,
+and routed through the intake gate.
