@@ -287,3 +287,13 @@
   The protocol fixes generator/evaluator lane isolation, inventory-only mode,
   private-workspace requirements, deterministic freeze requirements, evaluator
   metric minimization, and hard gates before project-specific fact extraction.
+- Added the `.private/` ignore boundary and created local workspace
+  `.private/sheetmetal-v1/1110101/` before writing project-specific facts.
+- Added `test_sheetmetal_v1_private_workspace_boundary`, covering
+  `git check-ignore` for the project-private path and proving no `.private`
+  path is tracked.
+- Refreshed `evals/sheetmetal-v1/frozen_workflow_manifest.json` for the
+  `.gitignore` boundary and updated test-runner hash, preserving scoped active
+  workflow verification.
+- Recorded private-boundary evidence under
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/`.

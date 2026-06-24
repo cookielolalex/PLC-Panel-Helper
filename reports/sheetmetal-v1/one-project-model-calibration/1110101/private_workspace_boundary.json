@@ -1,0 +1,14 @@
+{
+  "schema_version": "sheetmetal-v1.private_workspace_boundary.v1",
+  "status": "PASS",
+  "task": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION",
+  "project_id": "1110101",
+  "private_workspace": ".private/sheetmetal-v1/1110101/",
+  "gitignore_pattern": ".private/",
+  "git_check_ignore_probe": ".private/sheetmetal-v1/1110101/private-output-probe.json",
+  "git_check_ignore_status": "PASS",
+  "tracked_private_paths_count": 0,
+  "project_specific_facts_written": false,
+  "private_content_transmission_count": 0,
+  "covered_by_test": "test_sheetmetal_v1_private_workspace_boundary"
+}

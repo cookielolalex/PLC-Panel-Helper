@@ -1,7 +1,7 @@
 # Current State
 
-Current phase: one-project component register and graph calibration protocol
-frozen; private-workspace boundary pending.
+Current phase: one-project component register and graph calibration private
+workspace boundary complete; deterministic source-fact extraction pending.
 
 Accepted release: none.
 
@@ -262,6 +262,12 @@ scoped freeze, selected bundle verifier, bundle hash cross-check, worksheet
 fingerprint presence check, privacy status, no drawing-output scan, and no
 baseline-generation scan passed before protocol freeze.
 
-Exact next action: create and verify the ignored private workspace for
-`1110101`, then add the private-boundary tests before writing project-specific
-component facts or graph artifacts.
+Private workspace boundary after `D-0029`: `.private/` is ignored before any
+project-specific facts are written. The private workspace
+`.private/sheetmetal-v1/1110101/` exists locally, `git check-ignore` passes for
+the project-private probe path, no `.private` path is tracked, and
+`test_sheetmetal_v1_private_workspace_boundary` covers this boundary.
+
+Exact next action: add deterministic source-fact extraction and synthetic
+regression coverage before processing the private `1110101` sanitized source
+bundle.

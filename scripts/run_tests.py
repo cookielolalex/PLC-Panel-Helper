@@ -861,6 +861,28 @@ def test_sheetmetal_v1_modular_foundation() -> None:
         assert_true(forbidden not in serialized_generator_artifacts, f"forbidden token leaked to generator artifact: {forbidden}")
 
 
+def test_sheetmetal_v1_private_workspace_boundary() -> None:
+    import verify_frozen_workflow as verifier
+
+    private_probe = ".private/sheetmetal-v1/1110101/private-output-probe.json"
+    ignored = subprocess.run(
+        [verifier.git_executable(), "check-ignore", private_probe],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    assert_true(ignored.returncode == 0, f"private workspace path must be ignored: {ignored.stderr or ignored.stdout}")
+
+    tracked = subprocess.run(
+        [verifier.git_executable(), "ls-files", "--", ".private"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    assert_true(not tracked.stdout.strip(), "no private workspace artifact may be tracked")
+
+
 def test_frozen_workflow_legacy_scope_verifier() -> None:
     import verify_frozen_workflow as verifier
 
@@ -987,6 +1009,7 @@ def main() -> None:
         test_reference_detection_v4_private_ocr_disabled_layout_prior,
         test_qualification_recovery_controller_state,
         test_sheetmetal_v1_modular_foundation,
+        test_sheetmetal_v1_private_workspace_boundary,
         test_frozen_workflow_legacy_scope_verifier,
         test_frozen_workflow_fail_closed_regressions,
         test_frozen_workflow_active_scope_verifier,

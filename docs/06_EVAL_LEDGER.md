@@ -569,3 +569,30 @@ approved count remains `0`.
 Evidence: `docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md`,
 `manifests/sheetmetal-v1/one-project-model-calibration/1110101/calibration_protocol.json`,
 and `reports/sheetmetal-v1/one-project-model-calibration/1110101/calibration_plan.md`.
+
+## sheetmetal-v1 one-project private workspace boundary
+
+Status: `PASS`.
+
+Decision: `D-0029`.
+
+Purpose: establish the ignored private workspace before writing
+project-specific source facts, component registers, graph contents, accessory
+reconciliation, panel assignments, or provenance mappings.
+
+Result: `.private/` is now ignored. The local workspace
+`.private/sheetmetal-v1/1110101/` was created. `git check-ignore` passes for
+`.private/sheetmetal-v1/1110101/private-output-probe.json`; `git ls-files --
+.private` returns no tracked paths; and
+`test_sheetmetal_v1_private_workspace_boundary` covers the boundary in the full
+test suite. The active sheetmetal-v1 scoped workflow manifest was refreshed to
+include `.gitignore` and the updated `scripts/run_tests.py` hash.
+
+Generation status: no project-specific facts were written. No customer drawing
+was generated. `SHEETMETAL_ALLOWED_EVAL` approved count remains `0`.
+
+Evidence:
+`evals/sheetmetal-v1/frozen_workflow_manifest.json`,
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/private_workspace_boundary.md`
+and
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/private_workspace_boundary.json`.

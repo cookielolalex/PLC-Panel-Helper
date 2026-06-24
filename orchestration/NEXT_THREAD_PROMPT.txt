@@ -114,11 +114,23 @@ One-project component graph calibration protocol:
   worksheet fingerprint presence, privacy `NOT_APPROVED`, no drawing output,
   and no sheetmetal-v1 baseline-generation directory.
 
+Private workspace boundary:
+
+- Decision `D-0029` accepts the ignored private workspace boundary.
+- `.private/` is ignored.
+- Local private workspace `.private/sheetmetal-v1/1110101/` exists.
+- `git check-ignore` passes for the project-private probe path.
+- `git ls-files -- .private` returns no tracked paths.
+- Regression test:
+  `test_sheetmetal_v1_private_workspace_boundary`.
+- Active sheetmetal-v1 scoped manifest is refreshed for `.gitignore` and
+  `scripts/run_tests.py`.
+- No project-specific facts have been written yet.
+
 Exact next action:
 
-Create and verify the ignored private workspace for `1110101`, then add the
-private-boundary tests before writing project-specific component facts or graph
-artifacts. Produce canonical panel-model artifacts and evaluation evidence
-only; do not start a new baseline, do not generate a customer drawing, and do
-not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and
-adjudication pass.
+Add deterministic source-fact extraction and synthetic regression coverage
+before processing the private `1110101` sanitized source bundle. Produce
+canonical panel-model artifacts and evaluation evidence only; do not start a
+new baseline, do not generate a customer drawing, and do not promote `1110101`
+to `SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.

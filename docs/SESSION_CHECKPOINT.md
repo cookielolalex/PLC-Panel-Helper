@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: one-project component register and graph calibration protocol
-frozen; private-workspace boundary pending.
+Current phase: one-project component register and graph calibration private
+workspace boundary complete; deterministic source-fact extraction pending.
 
 Accepted release: none.
 
@@ -137,9 +137,22 @@ One-project component graph calibration protocol:
   `PASS`, privacy `NOT_APPROVED`, real customer drawing count `0`, baseline
   generation attempts `0`.
 
+Private workspace boundary:
+
+- Decision: `D-0029`.
+- Private workspace: `.private/sheetmetal-v1/1110101/`.
+- Git ignore pattern: `.private/`.
+- Direct check: `git check-ignore` passes for the project-private probe path.
+- Tracked private paths: `0`.
+- Regression test: `test_sheetmetal_v1_private_workspace_boundary`.
+- Active scoped manifest refreshed for `.gitignore` and `scripts/run_tests.py`.
+- Evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/private_workspace_boundary.json`.
+- Project-specific facts written: no.
+
 Exact next action:
 
-Create and verify the ignored private workspace for `1110101`, then add the
-private-boundary tests before writing project-specific component facts or graph
-artifacts. Do not generate a customer drawing and do not promote `1110101` to
+Add deterministic source-fact extraction and synthetic regression coverage
+before processing the private `1110101` sanitized source bundle. Do not
+generate a customer drawing and do not promote `1110101` to
 `SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.

@@ -4,6 +4,7 @@
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "anchor_commit": "ab955b854e31d37666445f5a62ee6556f85f1352",
   "creation_decision_id": "D-0026",
+  "last_updated_decision_id": "D-0029",
   "hash_algorithm": "SHA-256",
   "verification_algorithm": "sha256-file-v1;current-tracked-files;git-lineage-ancestor-check",
   "supersedes_historical_manifest": false,
@@ -29,6 +30,11 @@
       "path": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
       "sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
       "role": "master workflow authority"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "F356FEC0EC366FFA24C6DA77E862D95EC794501EFBF01DC17A9FA13B027C5554",
+      "role": "private workspace and generated artifact exclusion boundary"
     },
     {
       "path": "docs/specs/FROZEN_WORKFLOW_SCOPE_AND_LINEAGE_POLICY.md",
@@ -247,7 +253,7 @@
     },
     {
       "path": "scripts/run_tests.py",
-      "sha256": "C2AFEA5950C26EE00C8F0F60C9777EA6B44EDB20BAF595E12E129340FECAB598",
+      "sha256": "AE9FE9F6F04D9D3442528843D5F2CDF3673CF0BDCDDDF03D9740A75DE709B636",
       "role": "regression test runner"
     },
     {
