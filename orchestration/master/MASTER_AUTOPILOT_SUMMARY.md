@@ -117,3 +117,13 @@ Source/rule authority decision packet:
 - Next action: `REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
 - Authority choices are panel allocation source review, component geometry
   authority, topology/sizing/placement rule authority, or reject all lanes.
+
+Signed authority decision template:
+
+- Template commit: `98e582f`.
+- Status: `SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED`.
+- The template is bound to the decision packet hashes and selects no lane.
+- No implementation, source manifest, rule, schema, source-root, private,
+  completed-reference, customer drawing, PDF, DXF, or DWG artifact was changed
+  or generated.
+- Next action: `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.

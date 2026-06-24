@@ -7,9 +7,9 @@
       "role": "human_decision",
       "status": "PENDING",
       "agent_id": "USER_OR_SIGNED_AUTHORITY",
-      "starting_commit": "db0efba99c3bbc8a98e1fee736ffbfab602b1ac5",
-      "action": "REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
-      "expected_result_path": "repository decision ledger entry or signed user instruction selecting authority choices",
+      "starting_commit": "98e582fb23655951414ab88505064d3349f1cd9a",
+      "action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+      "expected_result_path": "repository decision ledger entry or signed user instruction selecting authority choices; template available at reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.md",
       "hard_requirements": [
         "select_one_or_more_authority_choices_or_reject_all",
         "record_signed_decision_before_implementation",

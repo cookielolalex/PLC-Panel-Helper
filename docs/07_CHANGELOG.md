@@ -444,3 +444,7 @@
   and topology/sizing/placement rule authority all require signed human/source
   or fabrication-domain approval before implementation.
 - Set next action to `REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+- Added a template-only signed authority decision form bound to the decision
+  packet hashes. No authority lane was selected, no implementation was applied,
+  and the next action is still to obtain a signed human/source-rule authority
+  decision.

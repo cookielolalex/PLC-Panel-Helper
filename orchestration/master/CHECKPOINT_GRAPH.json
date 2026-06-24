@@ -1,7 +1,7 @@
 {
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
-  "current_node": "SOURCE_RULE_APPROVAL_BRANCH",
+  "current_node": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
   "nodes": [
     {
       "id": "T0",
@@ -29,7 +29,7 @@
     {
       "id": "SOURCE_RULE_APPROVAL_BRANCH",
       "name": "PROPOSAL_FIRST_SOURCE_RULE_APPROVAL",
-      "status": "PROPOSAL_REVIEW_IN_PROGRESS",
+      "status": "HUMAN_AUTHORITY_DECISION_PENDING",
       "on_accepted_proposal": "T2",
       "on_rejected_or_no_authority": "TERMINAL_REVIEW",
       "on_needs_human_decision": "FABRICATION_DOMAIN_DECISION_REQUIRED"
@@ -53,7 +53,7 @@
     {
       "id": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
       "name": "SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
-      "status": "PENDING",
+      "status": "PENDING_TEMPLATE_PREPARED",
       "on_authorize_lane": "IMPLEMENT_ACCEPTED_AUTHORITY_LANE",
       "on_reject_all": "TERMINAL_REVIEW"
     },

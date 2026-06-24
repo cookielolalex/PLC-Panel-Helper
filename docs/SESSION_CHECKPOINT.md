@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: source/rule authority decision packet prepared; signed human
-authority decision required.
+Current phase: signed source/rule authority decision template prepared; signed
+human authority decision still required.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `SOURCE_RULE_AUTHORITY_DECISION_PACKET_PREPARED_HUMAN_DECISION_REQUIRED`.
+Current status: `SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED`.
 
 Current candidate: `1110101`.
 
@@ -433,5 +433,23 @@ Source/rule authority decision packet:
 
 Exact next action:
 
-Request `REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION` selecting one or
+Signed authority decision template:
+
+- Template commit: `98e582f`.
+- Template status:
+  `SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED`.
+- Bound decision packet:
+  `reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json`.
+- Template:
+  `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.md`.
+- Machine-readable template:
+  `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json`.
+- No authority lane was selected.
+- No implementation code, rule, schema, source manifest, frozen release,
+  frozen grader, source root, `.private` artifact, completed reference,
+  customer drawing, PDF, DXF, or DWG was changed or generated.
+
+Exact next action:
+
+Wait for `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION` selecting one or
 more authority choices, or rejecting all lanes for terminal-candidate review.

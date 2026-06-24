@@ -19,7 +19,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`SOURCE_RULE_AUTHORITY_DECISION_PACKET_PREPARED_HUMAN_DECISION_REQUIRED`
+`SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED`
 
 Active goal:
 
@@ -32,6 +32,7 @@ Current qualification state:
   modular component-register and graph stage.
 - T1 targeted recovery, source/rule proposal, proposal review, and authority
   decision packet are complete.
+- A template-only signed authority decision form is prepared.
 - No source/rule lane is accepted autonomously.
 - This is not engineering capability success, production approval, or drawing
   generation authorization.
@@ -43,6 +44,12 @@ Decision packet:
 - `reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.md`
 - `orchestration/master/child-results/SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET.json`
 
+Signed authority decision template:
+
+- `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.md`
+- `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json`
+- `orchestration/master/child-results/SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-TEMPLATE.json`
+
 Authority choices:
 
 1. `AUTHORIZE_PANEL_ALLOCATION_SOURCE_REVIEW`
@@ -52,7 +59,7 @@ Authority choices:
 
 Exact next action:
 
-`REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`
+`WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`
 
 Do not implement behavior, alter source manifests, open forbidden source roots
 or `.private`, use completed references, generate customer drawings, or declare

@@ -1050,3 +1050,22 @@ Evidence:
 `reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json`
 and
 `orchestration/master/child-results/SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET.json`.
+
+## sheetmetal-v1 signed authority decision template
+
+Status: `SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED`.
+
+Purpose: provide a signed-decision form for the pending source/rule authority
+gate without selecting any lane or authorizing implementation.
+
+Template choices remain panel allocation source review, component geometry
+authority, topology/sizing/placement rule authority, or reject all lanes.
+
+Generation status: no implementation was applied, no customer drawing, PDF,
+DXF, or DWG was generated, and no production approval was declared.
+
+Evidence:
+`reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.md`,
+and
+`orchestration/master/child-results/SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-TEMPLATE.json`.

@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: source/rule authority decision packet prepared; signed human
-authority decision required.
+Current phase: signed source/rule authority decision template prepared; signed
+human authority decision still required.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `SOURCE_RULE_AUTHORITY_DECISION_PACKET_PREPARED_HUMAN_DECISION_REQUIRED`.
+Current status: `SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -55,7 +55,9 @@ safe unresolved with no compliant code/rule recovery path, requiring a
 proposal-first source/rule approval branch; `D-0041` accepts the independent
 review of that proposal as ready for an authority decision packet; and
 `D-0042` prepares the decision packet and records that no lane can be accepted
-autonomously without signed human/source-rule authority.
+autonomously without signed human/source-rule authority. A subsequent
+template-only checkpoint prepared the signed decision template without
+selecting any authority lane.
 These
 amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
@@ -432,5 +434,12 @@ schema, source manifest, frozen release, frozen grader, source root, private
 artifact, completed reference, customer drawing, PDF, DXF, or DWG was changed
 or generated.
 
-Exact next action: request
-`REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+Signed authority decision template after the packet: a template-only checkpoint
+prepared
+`reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.md`
+and its machine-readable JSON. No lane was selected, no implementation was
+applied, no customer drawing was generated, and no production approval was
+declared.
+
+Exact next action: wait for
+`WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
