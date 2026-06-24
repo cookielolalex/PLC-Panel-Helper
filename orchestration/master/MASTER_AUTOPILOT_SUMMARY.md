@@ -33,3 +33,8 @@ T0 audit dispatch:
   `local:75736337-550b-4e6b-aded-25b6cbbbccea`.
 - No concrete child thread id was visible at registration time.
 - Registry status is `WORKTREE_PENDING` until a thread id is available.
+
+Heartbeat:
+
+- Automation `smv1-master-autopilot-heartbeat` is active on a 15-minute
+  cadence for this coordinator thread.
