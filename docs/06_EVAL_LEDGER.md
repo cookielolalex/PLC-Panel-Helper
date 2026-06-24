@@ -426,3 +426,41 @@ Generation status: not authorized. The next action is
 `RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING` with minimized detector output only.
 Source-review quorum, sanitized-bundle construction, cohort freeze, baseline
 generation, review, optimization, and production approval remain blocked.
+
+## sheetmetal-v1 modular foundation
+
+Status: `SHEETMETAL_MODULAR_FOUNDATION_READY_FOR_ONE_PROJECT_CALIBRATION`.
+
+Decision: `D-0025`.
+
+Purpose: migrate V1 from the historical all-three-output qualification
+objective to a sheetmetal-first canonical panel-model foundation.
+
+Implemented foundation: source evidence filtering, component register,
+panel assignment, accessory and cutout rule reconciliation, panel topology,
+placement-constraint validation, typed relationship graph, canonical
+sheet-metal drawing model, and provenance map.
+
+Qualification state: `SHEETMETAL_ALLOWED_EVAL` approved count is `0`; 13
+legacy `ALLOWED_EVAL` projects are queued as requalification candidates and are
+not grandfathered.
+
+Synthetic regression result: full `scripts/run_tests.py` status `PASS`.
+`test_sheetmetal_v1_modular_foundation` covers quantity separation, conflicts,
+post-design label rejection, inventory-only graph behavior, accessory duplicate
+prevention, assignment/placement separation, named dimensions, hard placement
+constraints, provenance coverage, and reference-leakage exclusion.
+
+Independent audit: `reports/sheetmetal-v1/independent_audit.md` reports
+`PASS_WITH_RESIDUAL_RISKS`. The coordinator addendum resolves the auditor-local
+Git/Python tool limitations and the migration-report wording drift.
+
+Generation status: no real customer sheet-metal drawing and no new baseline
+generation occurred.
+
+Evidence: `evals/fixtures/sheetmetal-v1/complete_pipeline_fixture.json`,
+`scripts/sheetmetal_v1.py`, `schemas/*sheetmetal*`,
+`schemas/component_*.schema.json`, `schemas/panel_*.schema.json`,
+`schemas/accessory_rule.schema.json`,
+`schemas/drawing_provenance_map.schema.json`, and
+`reports/sheetmetal-v1/phase0_checkpoint_verification.json`.

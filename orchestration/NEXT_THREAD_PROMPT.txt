@@ -5,96 +5,69 @@ Read the canonical checkpoint files, especially:
 - `docs/01_CURRENT_STATE.md`
 - `docs/04_DECISION_LEDGER.md`
 - `docs/06_EVAL_LEDGER.md`
+- `docs/07_CHANGELOG.md`
 - `docs/SESSION_CHECKPOINT.md`
-- `docs/specs/AUTONOMOUS_QUALIFICATION_RECOVERY.md`
-- `reports/baseline-024/qualification-recovery/recovery_state.json`
-- `orchestration/QUALIFICATION_RECOVERY_QUEUE.json`
+- `docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md`
+- `docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md`
+- `docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md`
+- `docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md`
+- `reports/sheetmetal-v1/migration_report.md`
+- `manifests/sheetmetal-v1/requalification_queue.json`
+- `orchestration/TASK_REGISTRY.csv`
 
 Current status:
 
-`DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING`
+`SHEETMETAL_MODULAR_FOUNDATION_READY_FOR_ONE_PROJECT_CALIBRATION`
 
-Starting point for verification:
+Active goal:
 
-- Git HEAD must be the latest checkpoint commit or a documented descendant.
+`SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`
+
+Legacy status:
+
+The old detector-v4.1 three-output qualification track is preserved as
+historical evidence. Do not continue detector v4 under the old all-three-output
+qualification objective unless the user explicitly asks for legacy work.
+
+Starting verification:
+
+- Expected starting HEAD for the migration was `a4311e7`; the verified
+  migration starting HEAD was `a193abc3e702d1750d40585180d8839fefd920c2`.
+- A pre-existing untracked file, `scripts/run_reference_detection_v4_corpus_screening.py`,
+  was left untouched.
 - Full repository tests must pass before new implementation.
-- Accepted bundle hashes and frozen workflow hashes must still pass.
+- Independent sheetmetal-v1 audit is recorded as `PASS_WITH_RESIDUAL_RISKS`;
+  coordinator addendum resolves auditor-local Git/Python limitations and the
+  migration-report status wording drift.
 - `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
-- `SRC-ALL-PROJECTS` remains read-only by policy.
+- Source roots remain read-only by policy.
 - Baseline generation attempts must remain `0`.
-- No completed reference, page render, title-block crop, raw extracted text,
-  private source path, or reference-derived engineering content may be visible
-  to generators, source reviewers, production Knowledge, or optimization
-  workspaces.
 
-Current verified `ALLOWED_EVAL` projects remain `13 / 24`; deficit `11`; no
-reserves are accepted.
+Implemented sheetmetal-v1 foundation:
 
-Important distinction:
+- deterministic source evidence filtering by role and chronology;
+- canonical component register with separate component types and instances;
+- separated quantity fields;
+- panel assignment separate from placement;
+- typed JSON graph;
+- accessory and cutout rule reconciliation;
+- panel topology and named dimensions;
+- placement hard-constraint validation;
+- canonical sheet-metal drawing model;
+- drawing provenance map;
+- synthetic fixture and regression coverage.
 
-- `test_reference_detector_v3_known_positive_recall_gate` passes because it
-  correctly preserves and blocks a failing detector result.
-- Detector v3 performance itself failed: known-positive all-three recall `0 /
-  13`, `PRODUCTION_DRAWING 0 / 13`, `SHEETMETAL_DRAWING 8 / 13`,
-  `PUNCH_DRAWING 0 / 13`, false-negative output-type count `31`.
+Qualification state:
 
-Decision `D-0021` authorizes constraint-preserving autonomous qualification
-recovery. It supersedes `VISION_CLASSIFIER_UNAVAILABLE` as a terminal workflow
-stop, but does not authorize GPT-5 or external/private-reference vision use.
-Privacy approval remains `NOT_APPROVED`.
-
-Local capability discovery result:
-
-- Poppler `pdfinfo 26.05.0`: available locally.
-- Poppler `pdftoppm 26.05.0`: available locally.
-- Python `pypdf 6.10.0`, Pillow `12.2.0`, NumPy `2.3.5`: available locally.
-- Windows.Media.Ocr: available through local Windows runtime probe.
-- `pdfimages`, Tesseract, OCRmyPDF, PaddleOCR, EasyOCR, ONNX Runtime, OpenCV,
-  PyMuPDF, and ImageMagick: unavailable in the local probe.
-- No private project data was opened and no network endpoint probe was
-  performed.
-
-Queue state:
-
-- prior v3 partial projects: `129`
-- projects not individually screened by v3: `262`
-- known-positive detector retry cases: `13`
-- previous bundle rejections: `7`
-- previous quarantined/no-bundle projects: `6`
-
-Detector v4/v4.1 state:
-
-- v4 calibration protocol is frozen.
-- implementation-facing calibration IDs are in
-  `manifests/reference_detection/calibration/v4_calibration_manifest.json`.
-- sealed holdout IDs are in a separate auditor-only manifest and must not be
-  used for tuning.
-- Windows.Media.Ocr synthetic proof passed locally; private-page OCR probe was
-  skipped because no enforceable per-process network-disable boundary was
-  available.
-- frozen v4 failed the calibration partition with all-three recall `0 / 8` and
-  private OCR page count `0`; failed evidence is preserved.
-- v4.1 `target_output_detection_v4_1_local_layout_prior_recovery` passed the
-  calibration partition with all-three recall `8 / 8` and each target type
-  `8 / 8`.
-- v4.1 passed 24 minimized real negative controls with zero false target pages,
-  zero false all-three promotions, and private OCR page count `0`.
-- v4.1 freeze manifest and independent implementation audit are recorded.
-- v4.1 sealed holdout passed with all-three recall `5 / 5`, each target type
-  `5 / 5`, private OCR page count `0`, external transmission count `0`, no
-  persisted holdout identities, and no detailed detector outputs.
-- v4.1 all-13 final recall passed with all-three recall `13 / 13`, each target
-  type `13 / 13`, private OCR page count `0`, and no detailed detector outputs.
-- independent sealed-gate audit passed scoped persistence, temp-root absence,
-  cleanup, aggregate-evidence, and hash checks.
-- full repository tests pass.
+- `SHEETMETAL_ALLOWED_EVAL` approved count is `0`.
+- 13 legacy projects are queued for independent sheetmetal requalification.
+- No real customer drawing and no new baseline generation occurred.
 
 Exact next action:
 
-Run `RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING` with minimized detector output
-only. Do not start source-review quorum, sanitized-bundle construction, cohort
-freeze, baseline generation, review, optimization, or production approval until
-corpus screening identifies reference-complete candidates and the later
-source/bundle gates pass. Do not expose private OCR text, page renders, crops,
-filenames, source paths, completed drawing content, holdout identities, or
-failure examples to generator-facing or tuning workspaces.
+Run one-project sheetmetal calibration setup. Requalify exactly one candidate
+under `SHEETMETAL_ALLOWED_EVAL` using the new policy and only local,
+deterministic processes for private files. Keep completed references and
+post-design labels isolated from generator input. Do not start the new baseline
+and do not generate a real customer sheet-metal drawing until the one-project
+calibration gate authorizes it.

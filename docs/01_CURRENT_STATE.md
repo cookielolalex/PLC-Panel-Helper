@@ -1,13 +1,19 @@
 # Current State
 
-Current phase: cycle-000 autonomous qualification recovery, detector v4.1
-sealed gate passed, corpus screening pending.
+Current phase: sheetmetal-first modular foundation migration.
 
 Accepted release: none.
 
-Current candidate: `baseline-024-cycle-000` reference-complete project discovery.
+Current candidate: `sheetmetal-v1-modular-foundation`.
 
-Current status: `DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING`.
+Current status: `SHEETMETAL_MODULAR_FOUNDATION_READY_FOR_ONE_PROJECT_CALIBRATION`.
+
+Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
+
+Legacy workflow status: the old detector-v4.1 three-output qualification track
+is preserved as historical evidence. Its last status remains
+`DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING`, but it is no longer
+the active V1 objective.
 
 Accepted amendments: `D-0017` expands baseline-024 candidate discovery beyond
 the prior twenty-project metadata-only pool to the full approved development
@@ -20,7 +26,9 @@ classification while privacy approval remains `NOT_APPROVED`; `D-0021`
 authorizes constraint-preserving autonomous qualification recovery from
 method-specific blockers without relaxing the `ALLOWED_EVAL` standard; `D-0024`
 accepts the detector v4.1 sealed gate and authorizes minimized corpus-wide
-individual screening. These amendments do not weaken
+individual screening; `D-0025` accepts
+`SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1` as the active V1 goal and creates
+new `sheetmetal-v1` namespaces. These amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -182,8 +190,39 @@ private OCR page count `0`. Refreshed real negative controls remained `PASS`.
 Independent sealed-gate audit passed scoped persistence, cleanup, aggregate
 evidence, and temp-root absence checks.
 
-Exact next action: run `RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING` with
-minimized aggregate/project-level detector outputs only. Do not start
-source-review quorum, sanitized-bundle construction, cohort freeze, baseline
-generation, review, optimization, or production approval until corpus screening
-identifies reference-complete candidates and the later source/bundle gates pass.
+Sheetmetal-first migration result after `D-0025`: the root coordinator accepted
+`SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1` as the active V1 goal. The migration
+creates new `sheetmetal-v1` namespaces without overwriting `baseline-024`,
+classifies the prior 13 accepted projects as
+`LEGACY_THREE_OUTPUT_ALLOWED_EVAL`, creates a new empty
+`SHEETMETAL_ALLOWED_EVAL` queue with 13 pending requalification candidates,
+adds source-role, chronology, authority, architecture, and qualification specs,
+adds schemas for source evidence, facts, components, panel assignment, graph,
+accessory rules, constraints, the sheet-metal drawing model, and provenance,
+and implements the deterministic synthetic modular framework in
+`scripts/sheetmetal_v1.py`.
+
+Sheetmetal-v1 synthetic coverage: `test_sheetmetal_v1_modular_foundation`
+proves procurement quantity does not overwrite required quantity, explicit
+accessories prevent duplicate inferred accessories, conflicting models remain
+`CONFLICT`, post-design allocation labels are rejected, inventory-only mode does
+not invent supported functional edges, missing electrical relationships remain
+`UNVERIFIED`, one component may hold several graph relationships, panel
+assignment remains separate from placement, width/height/depth are individually
+named, hard placement constraints reject soft-objective overrides, critical
+drawing-model facts have provenance or safe unresolved status, and completed
+reference IDs/content do not enter generator artifacts.
+
+New qualification status: `SHEETMETAL_ALLOWED_EVAL` approved count is `0`.
+Projects awaiting sheetmetal requalification: `13`.
+
+Audit result: independent audit reports `PASS_WITH_RESIDUAL_RISKS`; coordinator
+addendum resolves the auditor-local Git/Python tool limitations and the
+migration-report status wording drift. No private source root or completed
+drawing was inspected by the audit.
+
+Exact next action: run one-project sheetmetal calibration using only a newly
+requalified `SHEETMETAL_ALLOWED_EVAL` sanitized bundle. Do not begin the new
+baseline, do not generate a real customer sheet-metal drawing during
+qualification setup, and do not use completed references or post-design labels
+as generator input.

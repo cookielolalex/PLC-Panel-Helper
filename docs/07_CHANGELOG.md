@@ -212,3 +212,27 @@
 - Updated the recovery controller and schema. Current status is
   `DETECTOR_V4_1_INDEPENDENT_GATE_PASSED_SCREENING_PENDING`; the next selected
   action is `RUN_DETECTOR_V4_1_CORPUS_WIDE_SCREENING`.
+- Accepted decision `D-0025`, migrating the active V1 goal to
+  `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1` while preserving the legacy
+  three-output detector workflow as historical evidence.
+- Added new `sheetmetal-v1` namespaces under `reports/`, `manifests/`,
+  `evals/`, and `orchestration/` without overwriting `baseline-024`.
+- Added sheetmetal-first architecture, source-role/chronology, authority
+  matrix, and qualification policy specs.
+- Added source evidence, source fact, component type/instance/register,
+  panel definition/assignment/graph, accessory rule, component geometry,
+  panel constraint, sheet-metal drawing model, and provenance schemas.
+- Added `scripts/sheetmetal_v1.py`, a deterministic JSON-first modular
+  foundation for synthetic source evidence, component register normalization,
+  graph building, accessory/cutout reconciliation, panel assignment,
+  topology/sizing, placement validation, drawing model creation, and provenance.
+- Added the synthetic complete-pipeline fixture and regression coverage proving
+  quantity separation, conflict preservation, post-design label rejection,
+  inventory-only graph safeguards, accessory duplicate prevention,
+  assignment/placement separation, named dimensions, hard placement
+  constraints, provenance coverage, and reference-leakage exclusion.
+- Full `scripts/run_tests.py` status remains `PASS`; no real customer drawing
+  or baseline generation occurred.
+- Recorded independent sheetmetal-v1 audit
+  `PASS_WITH_RESIDUAL_RISKS` and coordinator addendum resolving auditor-local
+  Git/Python limitations plus the migration-report status wording drift.
