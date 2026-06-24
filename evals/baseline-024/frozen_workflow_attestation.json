@@ -1,0 +1,123 @@
+{
+  "manifest_path": "evals/baseline-024/frozen_workflow_manifest.json",
+  "manifest_sha256": "D4C319005B2ABD4253B9FC9C2859E3C859B1C76E41952184DF1B867A3705C329",
+  "resolved_historical_anchor_commit": "fac44321491633181f1fa53a062084d072b0b582",
+  "verification_algorithm": "sha256-file-v1;git-worktree-detached;core.autocrlf=false",
+  "verified_file_count": 15,
+  "status": "PASS",
+  "hashes": [
+    {
+      "key": "master_spec",
+      "path": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+      "expected_sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+      "actual_sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+      "status": "PASS"
+    },
+    {
+      "key": "agents_md",
+      "path": "AGENTS.md",
+      "expected_sha256": "6298E5EEB469DEBA38CD3F83D5697C402815B7E0C94F61E7F355D6D704D8E433",
+      "actual_sha256": "6298E5EEB469DEBA38CD3F83D5697C402815B7E0C94F61E7F355D6D704D8E433",
+      "status": "PASS"
+    },
+    {
+      "key": "instructions",
+      "path": "gpt-config/INSTRUCTIONS.md",
+      "expected_sha256": "81DF3F94FABC3CD3E20AC9CC8731BEDF07B5210E15C86B0DBBA06D4709E34326",
+      "actual_sha256": "81DF3F94FABC3CD3E20AC9CC8731BEDF07B5210E15C86B0DBBA06D4709E34326",
+      "status": "PASS"
+    },
+    {
+      "key": "production_knowledge_readme",
+      "path": "knowledge/production/README.md",
+      "expected_sha256": "BA872790B05E8219AF69DA71E3FC86E9A37456768B2320A3809E752F7C703187",
+      "actual_sha256": "BA872790B05E8219AF69DA71E3FC86E9A37456768B2320A3809E752F7C703187",
+      "status": "PASS"
+    },
+    {
+      "key": "job_spec_schema",
+      "path": "schemas/job_spec.schema.json",
+      "expected_sha256": "28244EE5C79ABFF5AF9A9D6B257E32B7BDA8C55E598E7B610DD5B65C508B215D",
+      "actual_sha256": "28244EE5C79ABFF5AF9A9D6B257E32B7BDA8C55E598E7B610DD5B65C508B215D",
+      "status": "PASS"
+    },
+    {
+      "key": "drawing_model_schema",
+      "path": "schemas/drawing_model.schema.json",
+      "expected_sha256": "43D70C9B37CDAA333E28C2EE8B12D596DEC44F4D509A6D75BC71127E58400E66",
+      "actual_sha256": "43D70C9B37CDAA333E28C2EE8B12D596DEC44F4D509A6D75BC71127E58400E66",
+      "status": "PASS"
+    },
+    {
+      "key": "renderer",
+      "path": "scripts/render_pdf_outputs.py",
+      "expected_sha256": "7A3A783687EEA578779EB416B517B20D1873CAFC80E64A980A827E5325601450",
+      "actual_sha256": "7A3A783687EEA578779EB416B517B20D1873CAFC80E64A980A827E5325601450",
+      "status": "PASS"
+    },
+    {
+      "key": "validator_pdf",
+      "path": "scripts/validate_pdf_package.py",
+      "expected_sha256": "5EA6BA3000A1D0477BF93DBCD97136EB5D639BE983184AE1D60BF994D463766E",
+      "actual_sha256": "5EA6BA3000A1D0477BF93DBCD97136EB5D639BE983184AE1D60BF994D463766E",
+      "status": "PASS"
+    },
+    {
+      "key": "grading_profile_v2",
+      "path": "evals/grading_profiles/plc_layout_v2.json",
+      "expected_sha256": "EFBF014E0C6E98E09AF9D4309AAC96519A3C114C4975EF4A243914412DBFAC52",
+      "actual_sha256": "EFBF014E0C6E98E09AF9D4309AAC96519A3C114C4975EF4A243914412DBFAC52",
+      "status": "PASS"
+    },
+    {
+      "key": "evaluator_scoring",
+      "path": "scripts/evaluator_scoring.py",
+      "expected_sha256": "83C8FB6F0198129CC6B0A6E8F18CC15DAE692DB9B2080F56D6E4FA7A7BAA436B",
+      "actual_sha256": "83C8FB6F0198129CC6B0A6E8F18CC15DAE692DB9B2080F56D6E4FA7A7BAA436B",
+      "status": "PASS"
+    },
+    {
+      "key": "tolerance_profile",
+      "path": "evals/tolerance_profiles/plc_layout_tolerances_v1.json",
+      "expected_sha256": "09268F208FF5D292AE2FADA7D234E4DD03A3067413C0F514B34E19A48AD92E4A",
+      "actual_sha256": "09268F208FF5D292AE2FADA7D234E4DD03A3067413C0F514B34E19A48AD92E4A",
+      "status": "PASS"
+    },
+    {
+      "key": "source_guard_policy",
+      "path": "manifests/source_guard/source_guard_policy.json",
+      "expected_sha256": "B7CE12909CFFD0B349414CD5AFA9FCA7BD33B17CAAC3F59194726B363971261F",
+      "actual_sha256": "B7CE12909CFFD0B349414CD5AFA9FCA7BD33B17CAAC3F59194726B363971261F",
+      "status": "PASS"
+    },
+    {
+      "key": "autonomous_source_approval_spec",
+      "path": "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md",
+      "expected_sha256": "9CCE463845097C6686B481C8F94D8D0B459B521B170474E93B2B550EE4F6F530",
+      "actual_sha256": "9CCE463845097C6686B481C8F94D8D0B459B521B170474E93B2B550EE4F6F530",
+      "status": "PASS"
+    },
+    {
+      "key": "sanitized_bundle_spec",
+      "path": "docs/specs/SANITIZED_GENERATOR_BUNDLE_SPEC.md",
+      "expected_sha256": "E9210879C6EABC26483834C29E89562341079F66A704006B3DE11ED0C4A818F0",
+      "actual_sha256": "E9210879C6EABC26483834C29E89562341079F66A704006B3DE11ED0C4A818F0",
+      "status": "PASS"
+    },
+    {
+      "key": "baseline_protocol",
+      "path": "docs/specs/24_PROJECT_BASELINE_PROTOCOL.md",
+      "expected_sha256": "9292F3E64BD0AB41EA415CC5A4658DA1B3507C53DC5B8BB34068C80DA56C258C",
+      "actual_sha256": "9292F3E64BD0AB41EA415CC5A4658DA1B3507C53DC5B8BB34068C80DA56C258C",
+      "status": "PASS"
+    }
+  ],
+  "temporary_worktree_cleanup": {
+    "worktree_path": "tmp\\frozen_workflow_verification\\legacy-baseline-024",
+    "worktree_removed": true,
+    "git_worktree_prune_status": "PASS",
+    "verification_root_removed": true,
+    "remaining_path_exists": false
+  },
+  "verification_timestamp": "2026-06-24T05:30:24+00:00"
+}
