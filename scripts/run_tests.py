@@ -359,15 +359,10 @@ def test_source_approval_and_bundle_fail_closed() -> None:
     assert_true(tamper.returncode != 0, "tampered worksheet fingerprint must fail")
 
 
-def test_signed_authority_decision_validator_fail_closed() -> None:
-    work = ROOT / "tmp" / "signed_authority_decision_validator"
-    if work.exists():
-        shutil.rmtree(work)
-    work.mkdir(parents=True)
-
+def synthetic_signed_authority_decision(selected_choice_ids: list[str] | None = None) -> dict:
     packet_path = ROOT / "reports" / "sheetmetal-v1" / "source-rule-approval" / "smv1_source_rule_authority_decision_packet.json"
     template_path = ROOT / "reports" / "sheetmetal-v1" / "source-rule-approval" / "smv1_signed_authority_decision_template.json"
-    base_decision = {
+    return {
         "schema_version": "sheetmetal-v1.signed_authority_decision.v1",
         "decision_id": "TEST-SIGNED-AUTHORITY",
         "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
@@ -377,7 +372,7 @@ def test_signed_authority_decision_validator_fail_closed() -> None:
             "template_path": "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json",
             "template_sha256": sha256_file(template_path),
         },
-        "selected_choice_ids": ["A", "C"],
+        "selected_choice_ids": selected_choice_ids or ["A", "C"],
         "signed_by": "test authority",
         "signed_at": "2026-06-24",
         "signed_statement": "I authorize the following SMV1 source/rule authority choices: A, C.",
@@ -397,6 +392,15 @@ def test_signed_authority_decision_validator_fail_closed() -> None:
         "customer_pdf_dxf_dwg_generation_authorized": False,
         "production_approval_declared": False,
     }
+
+
+def test_signed_authority_decision_validator_fail_closed() -> None:
+    work = ROOT / "tmp" / "signed_authority_decision_validator"
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+
+    base_decision = synthetic_signed_authority_decision()
     valid_path = work / "valid_decision.json"
     valid_out = work / "valid_result.json"
     write_json(valid_path, base_decision)
@@ -432,6 +436,47 @@ def test_signed_authority_decision_validator_fail_closed() -> None:
     failed = subprocess.run([PY, "scripts/validate_signed_authority_decision.py", "--decision", str(hash_path), "--output", str(work / "hash_result.json")], cwd=ROOT, capture_output=True, text=True)
     assert_true(failed.returncode != 0, "bound decision packet hash mismatch must fail")
     assert_true("BOUND_DECISION_PACKET_HASH_MISMATCH" in failed.stdout + failed.stderr, "hash mismatch reason missing")
+
+
+def test_signed_authority_decision_intake_routing() -> None:
+    work = ROOT / "tmp" / "signed_authority_decision_intake"
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+
+    accepted_decision = synthetic_signed_authority_decision(["A", "B"])
+    accepted_path = work / "accepted_decision.json"
+    accepted_out = work / "accepted_intake.json"
+    write_json(accepted_path, accepted_decision)
+    passed = subprocess.run([PY, "scripts/prepare_signed_authority_intake.py", "--decision", str(accepted_path), "--output", str(accepted_out)], cwd=ROOT, capture_output=True, text=True)
+    assert_true(passed.returncode == 0, f"accepted-lane intake should pass: {passed.stdout} {passed.stderr}")
+    accepted_data = read_json(accepted_out)
+    assert_true(accepted_data["status"] == "PASS", "accepted-lane intake status must pass")
+    assert_true(accepted_data["selected_choice_ids"] == ["A", "B"], "accepted choices must be normalized")
+    assert_true(accepted_data["next_action"] == "ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX", "accepted lanes must route to test-before-fix gate")
+    assert_true(accepted_data["implementation_authorized"] is False, "intake must not authorize implementation directly")
+    assert_true(accepted_data["customer_pdf_dxf_dwg_generation_authorized"] is False, "intake must not authorize customer drawings")
+    assert_true(accepted_data["production_approval_declared"] is False, "intake must not declare production approval")
+
+    rejected_decision = synthetic_signed_authority_decision(["D"])
+    rejected_path = work / "reject_all_decision.json"
+    rejected_out = work / "reject_all_intake.json"
+    write_json(rejected_path, rejected_decision)
+    passed = subprocess.run([PY, "scripts/prepare_signed_authority_intake.py", "--decision", str(rejected_path), "--output", str(rejected_out)], cwd=ROOT, capture_output=True, text=True)
+    assert_true(passed.returncode == 0, f"reject-all intake should pass: {passed.stdout} {passed.stderr}")
+    rejected_data = read_json(rejected_out)
+    assert_true(rejected_data["reject_all_authority_lanes"] is True, "reject-all intake must preserve terminal branch")
+    assert_true(rejected_data["next_action"] == "ENTER_TERMINAL_CANDIDATE_REVIEW", "reject-all must route to terminal-candidate review")
+
+    invalid_decision = synthetic_signed_authority_decision(["A", "D"])
+    invalid_path = work / "invalid_decision.json"
+    invalid_out = work / "invalid_intake.json"
+    write_json(invalid_path, invalid_decision)
+    failed = subprocess.run([PY, "scripts/prepare_signed_authority_intake.py", "--decision", str(invalid_path), "--output", str(invalid_out)], cwd=ROOT, capture_output=True, text=True)
+    assert_true(failed.returncode != 0, "invalid signed decision intake must fail closed")
+    invalid_data = read_json(invalid_out)
+    assert_true(invalid_data["status"] == "FAIL", "invalid intake output must fail")
+    assert_true(invalid_data["next_action"] == "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION", "invalid intake must keep waiting for a valid signed decision")
 
 
 def test_bundle_verifier_rejects_leaks_and_traversal() -> None:
@@ -1694,6 +1739,7 @@ def main() -> None:
         test_source_guard_fail_closed_decisions,
         test_source_approval_and_bundle_fail_closed,
         test_signed_authority_decision_validator_fail_closed,
+        test_signed_authority_decision_intake_routing,
         test_bundle_verifier_rejects_leaks_and_traversal,
         test_reference_detection_v3_boundary_and_page_level_sets,
         test_reference_detection_v3_duplicates_identity_and_missing_types,
