@@ -1132,3 +1132,39 @@ Evidence:
 `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_intake_summary.json`,
 and
 `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-INTAKE.json`.
+
+## sheetmetal-v1 unsigned signed authority decision draft
+
+Status: `UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`.
+
+Decision: `D-0045`.
+
+Purpose: provide a fillable JSON draft for the pending signed source/rule
+authority decision while preserving fail-closed behavior until a valid signed
+decision exists.
+
+Draft result:
+
+- `selected_choice_ids` is empty.
+- `signed_by` is empty.
+- `signed_at` is the literal placeholder `YYYY-MM-DD`.
+- The draft is bound to the current source/rule authority decision packet and
+  signed-decision template hashes.
+- The validator intentionally returns `FAIL` with missing choice, signer, and
+  date errors while hash checks pass.
+
+Verification: full `scripts/run_tests.py` passed, including
+`test_signed_authority_decision_draft_scaffold_fail_closed` and the legacy,
+active sheetmetal-v1, and topology-stage scoped frozen workflow checks.
+
+Generation status: no authority lane was selected, no implementation was
+applied, no customer drawing, PDF, DXF, or DWG was generated, and no
+production approval was declared.
+
+Evidence:
+`scripts/prepare_signed_authority_decision_draft.py`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft.json`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft_validation.json`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_draft_summary.json`,
+and
+`orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-DRAFT.json`.

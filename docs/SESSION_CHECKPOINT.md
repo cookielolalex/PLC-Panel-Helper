@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: signed source/rule authority decision intake ready; signed
+Current phase: unsigned source/rule authority decision draft ready; signed
 human authority decision still required.
 
 Accepted release: none.
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED`.
+Current status: `UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`.
 
 Current candidate: `1110101`.
 
@@ -487,6 +487,26 @@ Signed authority decision intake:
 - Valid reject-all decisions route to `ENTER_TERMINAL_CANDIDATE_REVIEW`.
 - Invalid decisions fail closed and keep waiting for a valid signed authority
   decision.
+- Full tests: `PASS`.
+- Legacy, active sheetmetal-v1, and topology-stage scoped freezes: `PASS`.
+- No authority lane was selected.
+- No implementation code, rule, source manifest, source root, `.private`
+  artifact, completed reference, customer drawing, PDF, DXF, or DWG was
+  changed or generated.
+
+Unsigned signed authority decision draft:
+
+- Decision: `D-0045`.
+- Draft commit: `7b85d5a`.
+- Draft status:
+  `UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`.
+- Draft:
+  `reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft.json`.
+- Validation artifact:
+  `reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft_validation.json`.
+- The draft binds to the current authority packet and signed-decision template
+  hashes but intentionally has no selected choices, signer, or real date.
+- Validator result: `FAIL_EXPECTED`; hash checks pass.
 - Full tests: `PASS`.
 - Legacy, active sheetmetal-v1, and topology-stage scoped freezes: `PASS`.
 - No authority lane was selected.

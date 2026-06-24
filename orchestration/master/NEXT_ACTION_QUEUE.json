@@ -7,10 +7,11 @@
       "role": "human_decision",
       "status": "PENDING",
       "agent_id": "USER_OR_SIGNED_AUTHORITY",
-      "starting_commit": "f03e970bdfe7135dc291607cf2676177c0ae3f87",
+      "starting_commit": "7b85d5a9ebc16b91834fc2a7d3f85e560359f918",
       "action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
-      "expected_result_path": "repository decision ledger entry or signed user instruction selecting authority choices; template available at reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.md; validator available at scripts/validate_signed_authority_decision.py; intake router available at scripts/prepare_signed_authority_intake.py",
+      "expected_result_path": "repository decision ledger entry or signed user instruction selecting authority choices; unsigned draft available at reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft.json; template available at reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.md; validator available at scripts/validate_signed_authority_decision.py; intake router available at scripts/prepare_signed_authority_intake.py",
       "hard_requirements": [
+        "fill_and_sign_unsigned_draft_or_record_equivalent_signed_decision",
         "select_one_or_more_authority_choices_or_reject_all",
         "validate_signed_decision_with_scripts_validate_signed_authority_decision_py",
         "prepare_intake_result_with_scripts_prepare_signed_authority_intake_py_before_implementation",

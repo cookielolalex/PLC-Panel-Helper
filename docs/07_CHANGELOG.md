@@ -455,3 +455,7 @@
   decisions. Accepted lanes route to the required regression-test-before-fix
   gate, reject-all routes to terminal-candidate review, invalid decisions fail
   closed, and no authority lane or implementation is authorized.
+- Added an unsigned signed-authority decision JSON draft scaffold bound to the
+  current packet/template hashes, plus fail-closed regression coverage and
+  neutral draft evidence. The draft intentionally remains invalid until a
+  signed human/source-rule authority decision is filled, validated, and routed.

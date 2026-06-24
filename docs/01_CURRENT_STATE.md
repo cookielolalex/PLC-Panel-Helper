@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: signed source/rule authority decision intake ready; signed
+Current phase: unsigned source/rule authority decision draft ready; signed
 human authority decision still required.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED`.
+Current status: `UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -60,7 +60,9 @@ template-only checkpoint prepared the signed decision template without
 selecting any authority lane. `D-0043` adds fail-closed validation for the
 future signed decision record, still without selecting any lane. `D-0044` adds
 neutral intake routing for future validator-passing signed decisions, still
-without selecting any lane or authorizing implementation.
+without selecting any lane or authorizing implementation. `D-0045` adds an
+unsigned JSON draft scaffold bound to the current packet/template hashes; it
+intentionally fails closed until filled, signed, validated, and routed.
 These
 amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
@@ -459,6 +461,15 @@ future signed decision. Accepted lanes route to
 `ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`, reject-all routes to
 `ENTER_TERMINAL_CANDIDATE_REVIEW`, and invalid decisions remain at
 `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`. Full tests and legacy,
+active sheetmetal-v1, and topology-stage scoped freezes pass. No authority lane
+was selected and no implementation, customer drawing, or production approval
+was authorized.
+
+Signed authority decision draft after `D-0045`: the unsigned draft scaffold
+`reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft.json`
+is bound to the current authority packet and signed-decision template hashes.
+Its validation artifact is intentionally `FAIL` with missing choice, signer,
+and date errors while packet/template hash checks pass. Full tests and legacy,
 active sheetmetal-v1, and topology-stage scoped freezes pass. No authority lane
 was selected and no implementation, customer drawing, or production approval
 was authorized.

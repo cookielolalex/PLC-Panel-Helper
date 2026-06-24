@@ -19,7 +19,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED`
+`UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`
 
 Active goal:
 
@@ -35,6 +35,8 @@ Current qualification state:
 - A template-only signed authority decision form is prepared.
 - A fail-closed signed authority decision validator is prepared.
 - A neutral signed authority decision intake router is prepared.
+- An unsigned signed-authority decision JSON draft is prepared and
+  intentionally fails validation until filled and signed.
 - No source/rule lane is accepted autonomously.
 - This is not engineering capability success, production approval, or drawing
   generation authorization.
@@ -64,6 +66,14 @@ Signed authority decision intake:
 - `scripts/prepare_signed_authority_intake.py`
 - `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_intake_summary.json`
 - `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-INTAKE.json`
+
+Signed authority decision draft:
+
+- `scripts/prepare_signed_authority_decision_draft.py`
+- `reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft.json`
+- `reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft_validation.json`
+- `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_draft_summary.json`
+- `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-DRAFT.json`
 
 Authority choices:
 

@@ -5,7 +5,7 @@ Status: initialized.
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
 Current canonical status:
-`SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED`.
+`UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`.
 
 Verified checkpoint:
 
@@ -154,6 +154,23 @@ Signed authority decision intake:
   `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
 - Full tests and legacy, active sheetmetal-v1, and topology-stage scoped
   freezes passed.
+- No implementation, source manifest, rule, source-root, private,
+  completed-reference, customer drawing, PDF, DXF, or DWG artifact was changed
+  or generated.
+- Next action: `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+
+Signed authority decision draft:
+
+- Draft scaffold commit: `7b85d5a`.
+- Status: `UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`.
+- The unsigned JSON draft is bound to the current packet/template hashes and
+  intentionally fails validation until a human/source-rule authority decision
+  is filled and signed.
+- Validation result: `FAIL_EXPECTED`; missing choice, signer, and date are the
+  expected blockers while hash checks pass.
+- Full tests and legacy, active sheetmetal-v1, and topology-stage scoped
+  freezes passed.
+- No authority lane was selected.
 - No implementation, source manifest, rule, source-root, private,
   completed-reference, customer drawing, PDF, DXF, or DWG artifact was changed
   or generated.
