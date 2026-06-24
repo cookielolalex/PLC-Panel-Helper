@@ -1,0 +1,37 @@
+{
+  "schema_version": "sheetmetal-v1",
+  "status": "PASS_WITH_PREEXISTING_UNTRACKED_FILE",
+  "checked_at": "2026-06-24T12:48:44.9020812+08:00",
+  "expected_head": "a4311e7",
+  "actual_head": "a193abc3e702d1750d40585180d8839fefd920c2",
+  "actual_head_policy": "documented_descendant_continue_without_reset",
+  "worktree_status": {
+    "clean": false,
+    "preexisting_untracked_paths": [
+      "scripts/run_reference_detection_v4_corpus_screening.py"
+    ],
+    "action": "left untouched; migration commits stage only sheetmetal-v1 paths"
+  },
+  "privacy": {
+    "approval_status": "NOT_APPROVED",
+    "privacy_file_sha256": "EC70B7AB47DDBB23EC029E7E5BF0F744C96DAB641DA2056FB4CD4B1619F3489E"
+  },
+  "legacy_evidence_hashes": {
+    "evals/baseline-024/frozen_workflow_manifest.json": "D4C319005B2ABD4253B9FC9C2859E3C859B1C76E41952184DF1B867A3705C329",
+    "evals/baseline-024/cohort_manifest.json": "7862AFDAAFA3F688F55151B3B3058BC1FF1D07AE2FC0E22686E85742377F9F1B",
+    "evals/baseline-024/source_readiness.json": "9451BC82325FAB063B0DAC5E20730515CB16AD957AAABA80AE77A58ECC16E854",
+    "manifests/baseline-024/source_approvals/phase_c_status.json": "B359032C5BEBE4B1FE1F4293C830014ECB8092E1DB69A88A20503D0FB38377C9",
+    "reports/baseline-024/source_bundle_audit.json": "34AC2F5A8D768AF6E2BC9A401B195140D4C825F33D083640D3049C06297F7719",
+    "reports/baseline-024/insufficient_eligible_projects_for_24_baseline.json": "8A356A294E211E629C0ED8FC357E5EE76174B1DED2442BE9E9FEE3788EF0A52A"
+  },
+  "baseline_generation_attempts": 0,
+  "tests": {
+    "command": "python scripts/run_tests.py",
+    "runner": "bundled python executable",
+    "pre_migration_status": "PASS",
+    "post_foundation_status": "PASS"
+  },
+  "old_evidence_rewritten": false,
+  "real_customer_drawing_generated": false,
+  "baseline_generation_started": false
+}

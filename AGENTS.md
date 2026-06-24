@@ -4,7 +4,21 @@ This repository is governed by `CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt`.
 Use that master specification, accepted repository artifacts, approved source
 manifests, and signed human decisions as authority.
 
-## Product Boundary
+## Active Product Boundary
+
+The active V1 goal is `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
+
+The canonical panel model is the central product. V1 foundations generate and
+validate the model needed for the sheet-metal drawing path first. The old
+three-output workflow is preserved as immutable historical evidence and must
+not be continued as the active qualification objective unless the user
+explicitly requests legacy work.
+
+Future production-control and punch renderers must consume the same frozen
+canonical panel model. They must not independently re-extract components, infer
+dimensions, assign panels, or recalculate geometry.
+
+## Legacy Product Boundary
 
 The product goal is a private Custom GPT package and local evaluation harness
 that generate and grade:
@@ -48,4 +62,3 @@ independent review, and let the coordinator apply only accepted changes.
 
 Do not alter frozen releases, frozen graders, prior run evidence, or immutable
 source roots.
-
