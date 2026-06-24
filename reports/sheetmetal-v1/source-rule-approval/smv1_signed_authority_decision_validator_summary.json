@@ -1,0 +1,61 @@
+{
+  "schema_version": "sheetmetal-v1.signed_authority_decision_validator_summary.v1",
+  "task_id": "SMV1-SIGNED-AUTHORITY-DECISION-VALIDATOR",
+  "created_at": "2026-06-24T17:35:40.5422423+08:00",
+  "starting_commit": "9062d344a98650e8769c9c0edbb5a5e29a4777c3",
+  "status": "SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "purpose": "fail-closed validation for future signed human/source-rule authority decision records",
+  "authority_selected": false,
+  "implementation_authorized": false,
+  "customer_pdf_dxf_dwg_generation_authorized": false,
+  "production_approval_declared": false,
+  "artifacts_created": [
+    "schemas/signed_authority_decision.schema.json",
+    "scripts/validate_signed_authority_decision.py"
+  ],
+  "artifacts_updated": [
+    "scripts/run_tests.py",
+    "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+    "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json"
+  ],
+  "validation_coverage": {
+    "schema_parse": "PASS",
+    "valid_decision_fixture": "PASS",
+    "reject_all_mutual_exclusion": "PASS",
+    "drawing_generation_flag_rejection": "PASS",
+    "production_approval_flag_rejection": "PASS",
+    "bound_packet_hash_mismatch_rejection": "PASS",
+    "implementation_can_start_from_signature_only": false
+  },
+  "verification": {
+    "python_compile": "PASS",
+    "full_test_runner": "PASS",
+    "legacy_scoped_freeze": "PASS",
+    "active_sheetmetal_v1_scoped_freeze": "PASS",
+    "topology_stage_scoped_freeze": "PASS"
+  },
+  "hard_gates": {
+    "source_roots_opened": false,
+    "private_artifacts_opened": false,
+    "completed_references_opened": false,
+    "post_design_files_opened": false,
+    "public_web_used": false,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false
+  },
+  "privacy_leakage_counts": {
+    "private_content_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "committed_private_values": 0
+  },
+  "output_hashes": {
+    "scripts/run_tests.py": "A04E7DC2B09280C604EA45C46E96739061676C10643B0BC51EF9F798C4C9C8C9",
+    "scripts/validate_signed_authority_decision.py": "C2B831FECE5C0B3B63553E434D5C768D5EC6B9C76DF29160474F6E61C81B3163",
+    "schemas/signed_authority_decision.schema.json": "045CF018A1748E41D625EEBD497CA31699D4656CAF3C51D01969FB714B9BFB45",
+    "evals/sheetmetal-v1/frozen_workflow_manifest.json": "3714DA19A988B9981E06421F9CC93295C47D673EE41B29757243CBEC5DE86677",
+    "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json": "8B6A524A18D7C7DE63FE5BA8A58705BE6A1931A0A88AFBCE39AFC412FC06BC2C"
+  },
+  "next_action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION"
+}

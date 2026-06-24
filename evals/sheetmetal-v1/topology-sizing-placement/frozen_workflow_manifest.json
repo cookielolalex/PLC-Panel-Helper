@@ -126,8 +126,8 @@
     },
     {
       "path": "scripts/run_tests.py",
-      "sha256": "D3751A30606CC94B2EBD77CCD787221B8CA2AF86781DDD34374ABD2C19132483",
-      "role": "topology sizing placement regression tests"
+      "sha256": "A04E7DC2B09280C604EA45C46E96739061676C10643B0BC51EF9F798C4C9C8C9",
+      "role": "regression test runner including topology sizing placement tests"
     },
     {
       "path": "scripts/verify_frozen_workflow.py",

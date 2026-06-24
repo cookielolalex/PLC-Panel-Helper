@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SMV1 Signed Source/Rule Authority Decision",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "decision_id",
+    "active_goal",
+    "bound_decision_packet",
+    "selected_choice_ids",
+    "signed_by",
+    "signed_at",
+    "signed_statement",
+    "non_negotiable_constraints_acknowledged",
+    "implementation_requires_regression_tests",
+    "independent_audit_before_model_promotion",
+    "customer_pdf_dxf_dwg_generation_authorized",
+    "production_approval_declared"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "sheetmetal-v1.signed_authority_decision.v1"
+    },
+    "decision_id": {
+      "type": "string"
+    },
+    "active_goal": {
+      "const": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1"
+    },
+    "bound_decision_packet": {
+      "type": "object",
+      "required": [
+        "json_path",
+        "json_sha256",
+        "template_path",
+        "template_sha256"
+      ],
+      "properties": {
+        "json_path": {
+          "type": "string"
+        },
+        "json_sha256": {
+          "type": "string"
+        },
+        "template_path": {
+          "type": "string"
+        },
+        "template_sha256": {
+          "type": "string"
+        }
+      }
+    },
+    "selected_choice_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": ["A", "B", "C", "D"]
+      }
+    },
+    "signed_by": {
+      "type": "string"
+    },
+    "signed_at": {
+      "type": "string"
+    },
+    "signed_statement": {
+      "type": "string"
+    },
+    "non_negotiable_constraints_acknowledged": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "implementation_requires_regression_tests": {
+      "type": "boolean"
+    },
+    "independent_audit_before_model_promotion": {
+      "type": "boolean"
+    },
+    "customer_pdf_dxf_dwg_generation_authorized": {
+      "type": "boolean"
+    },
+    "production_approval_declared": {
+      "type": "boolean"
+    }
+  }
+}

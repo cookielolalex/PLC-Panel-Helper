@@ -6,7 +6,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from harness_lib import classify_path, read_json, repo_root, sha256_json, validate, validate_file
+from harness_lib import classify_path, read_json, repo_root, sha256_file, sha256_json, validate, validate_file
 from harness_lib import write_json
 
 
@@ -357,6 +357,81 @@ def test_source_approval_and_bundle_fail_closed() -> None:
         writer.writerow({"decision_id": decision["decision_id"], "project_id": "1159999", "file_id": "FILE-APPROVE", "sheet_id": "SHEET-APPROVE", "file_sha256": file_sha, "worksheet_fingerprint": "bad", "human_decision": "HUMAN_APPROVED", "reviewer": "tester", "notes": ""})
     tamper = subprocess.run([PY, "scripts/validate_source_approval.py", "--decisions", str(decisions_csv), "--human-decisions", str(approve_csv), "--output", str(fixture_root / "approval_tamper.json")], cwd=ROOT)
     assert_true(tamper.returncode != 0, "tampered worksheet fingerprint must fail")
+
+
+def test_signed_authority_decision_validator_fail_closed() -> None:
+    work = ROOT / "tmp" / "signed_authority_decision_validator"
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+
+    packet_path = ROOT / "reports" / "sheetmetal-v1" / "source-rule-approval" / "smv1_source_rule_authority_decision_packet.json"
+    template_path = ROOT / "reports" / "sheetmetal-v1" / "source-rule-approval" / "smv1_signed_authority_decision_template.json"
+    base_decision = {
+        "schema_version": "sheetmetal-v1.signed_authority_decision.v1",
+        "decision_id": "TEST-SIGNED-AUTHORITY",
+        "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+        "bound_decision_packet": {
+            "json_path": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json",
+            "json_sha256": sha256_file(packet_path),
+            "template_path": "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json",
+            "template_sha256": sha256_file(template_path),
+        },
+        "selected_choice_ids": ["A", "C"],
+        "signed_by": "test authority",
+        "signed_at": "2026-06-24",
+        "signed_statement": "I authorize the following SMV1 source/rule authority choices: A, C.",
+        "non_negotiable_constraints_acknowledged": [
+            "no_production_approval",
+            "no_customer_pdf_dxf_dwg_generation_before_authorized_renderer_gate",
+            "no_completed_reference_inference",
+            "no_post_design_label_generator_authority",
+            "no_private_model_identifier_public_lookup",
+            "no_source_root_mutation",
+            "no_private_artifact_staging",
+            "tests_before_any_fix",
+            "independent_audit_before_model_promotion",
+        ],
+        "implementation_requires_regression_tests": True,
+        "independent_audit_before_model_promotion": True,
+        "customer_pdf_dxf_dwg_generation_authorized": False,
+        "production_approval_declared": False,
+    }
+    valid_path = work / "valid_decision.json"
+    valid_out = work / "valid_result.json"
+    write_json(valid_path, base_decision)
+    passed = subprocess.run([PY, "scripts/validate_signed_authority_decision.py", "--decision", str(valid_path), "--output", str(valid_out)], cwd=ROOT, capture_output=True, text=True)
+    assert_true(passed.returncode == 0, f"valid signed authority decision should pass: {passed.stdout} {passed.stderr}")
+    passed_data = read_json(valid_out)
+    assert_true(passed_data["status"] == "PASS", "valid signed authority decision output must pass")
+    assert_true(passed_data["selected_choice_ids"] == ["A", "C"], "accepted choice IDs must be preserved")
+    assert_true(passed_data["implementation_can_start"] is False, "signed authority alone must not start implementation")
+
+    reject_all_conflict = json.loads(json.dumps(base_decision))
+    reject_all_conflict["selected_choice_ids"] = ["A", "D"]
+    reject_all_path = work / "reject_all_conflict.json"
+    write_json(reject_all_path, reject_all_conflict)
+    failed = subprocess.run([PY, "scripts/validate_signed_authority_decision.py", "--decision", str(reject_all_path), "--output", str(work / "reject_all_result.json")], cwd=ROOT, capture_output=True, text=True)
+    assert_true(failed.returncode != 0, "reject-all must be mutually exclusive")
+    assert_true("REJECT_ALL_MUTUALLY_EXCLUSIVE" in failed.stdout + failed.stderr, "reject-all conflict reason missing")
+
+    unsafe_flags = json.loads(json.dumps(base_decision))
+    unsafe_flags["customer_pdf_dxf_dwg_generation_authorized"] = True
+    unsafe_flags["production_approval_declared"] = True
+    unsafe_path = work / "unsafe_flags.json"
+    write_json(unsafe_path, unsafe_flags)
+    failed = subprocess.run([PY, "scripts/validate_signed_authority_decision.py", "--decision", str(unsafe_path), "--output", str(work / "unsafe_result.json")], cwd=ROOT, capture_output=True, text=True)
+    assert_true(failed.returncode != 0, "drawing generation and production approval flags must fail")
+    assert_true("CUSTOMER_DRAWING_GENERATION_NOT_ALLOWED_AT_DECISION_GATE" in failed.stdout + failed.stderr, "drawing-generation guard reason missing")
+    assert_true("PRODUCTION_APPROVAL_FORBIDDEN" in failed.stdout + failed.stderr, "production-approval guard reason missing")
+
+    hash_mismatch = json.loads(json.dumps(base_decision))
+    hash_mismatch["bound_decision_packet"]["json_sha256"] = "0" * 64
+    hash_path = work / "hash_mismatch.json"
+    write_json(hash_path, hash_mismatch)
+    failed = subprocess.run([PY, "scripts/validate_signed_authority_decision.py", "--decision", str(hash_path), "--output", str(work / "hash_result.json")], cwd=ROOT, capture_output=True, text=True)
+    assert_true(failed.returncode != 0, "bound decision packet hash mismatch must fail")
+    assert_true("BOUND_DECISION_PACKET_HASH_MISMATCH" in failed.stdout + failed.stderr, "hash mismatch reason missing")
 
 
 def test_bundle_verifier_rejects_leaks_and_traversal() -> None:
@@ -1618,6 +1693,7 @@ def main() -> None:
         test_positive_bundle_and_contamination_scan,
         test_source_guard_fail_closed_decisions,
         test_source_approval_and_bundle_fail_closed,
+        test_signed_authority_decision_validator_fail_closed,
         test_bundle_verifier_rejects_leaks_and_traversal,
         test_reference_detection_v3_boundary_and_page_level_sets,
         test_reference_detection_v3_duplicates_identity_and_missing_types,
