@@ -1,0 +1,59 @@
+{
+  "schema_version": "master-autopilot-v1",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "current_node": "T0",
+  "nodes": [
+    {
+      "id": "T0",
+      "name": "INDEPENDENT_TOPOLOGY_SIZING_PLACEMENT_AUDIT",
+      "status": "QUEUED",
+      "on_pass": "T3",
+      "on_inconclusive_low_coverage": "T1",
+      "on_fail_recoverable": "RECOVERY_BRANCH",
+      "on_fail_irreducible": "TERMINAL_REVIEW"
+    },
+    {
+      "id": "T1",
+      "name": "TARGETED_COVERAGE_RECOVERY",
+      "status": "PENDING"
+    },
+    {
+      "id": "T2",
+      "name": "TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION",
+      "status": "PENDING"
+    },
+    {
+      "id": "T3",
+      "name": "CANONICAL_DRAWING_MODEL",
+      "status": "PENDING"
+    },
+    {
+      "id": "T4",
+      "name": "RENDERER_FOUNDATION",
+      "status": "PENDING"
+    },
+    {
+      "id": "T5",
+      "name": "ONE_PROJECT_BLIND_PRIVATE_PREVIEW",
+      "status": "PENDING"
+    },
+    {
+      "id": "T6",
+      "name": "MULTI_PROJECT_EXPANSION",
+      "status": "PENDING"
+    },
+    {
+      "id": "T7",
+      "name": "PRIVATE_PREVIEW_READINESS_AUDIT",
+      "status": "PENDING"
+    }
+  ],
+  "terminal_states": [
+    "READY_FOR_PRIVATE_PREVIEW",
+    "PRIVACY_PERMISSION_REQUIRED",
+    "FABRICATION_DOMAIN_DECISION_REQUIRED",
+    "STRUCTURAL_SOURCE_INSUFFICIENCY",
+    "ENVIRONMENT_CAPABILITY_UNAVAILABLE_AFTER_EXHAUSTIVE_LOCAL_RECOVERY"
+  ],
+  "forbidden_terminal_state": "PRODUCTION_APPROVED"
+}

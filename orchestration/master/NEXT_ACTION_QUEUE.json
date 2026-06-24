@@ -1,0 +1,21 @@
+{
+  "schema_version": "master-autopilot-v1",
+  "queue": [
+    {
+      "task_id": "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
+      "stage_id": "T0",
+      "role": "independent_auditor",
+      "status": "QUEUED_NOT_SPAWNED",
+      "starting_commit": "b7089d4d59faa285cc85880355035d71e41a58ed",
+      "action": "RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT",
+      "expected_result_path": "orchestration/master/child-results/SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT.json",
+      "hard_requirements": [
+        "do_not_modify_implementation",
+        "do_not_generate_customer_pdf_dxf_dwg",
+        "separate_safety_integrity_from_engineering_coverage",
+        "return_pass_fail_or_inconclusive",
+        "commit_only_neutral_audit_evidence"
+      ]
+    }
+  ]
+}

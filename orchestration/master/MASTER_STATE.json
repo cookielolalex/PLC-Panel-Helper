@@ -1,0 +1,72 @@
+{
+  "schema_version": "master-autopilot-v1",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
+  "current_head": "b7089d4d59faa285cc85880355035d71e41a58ed",
+  "current_canonical_status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING",
+  "current_stage": "T0_INDEPENDENT_AUDIT",
+  "next_action": "RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT",
+  "active_thread_ids": [],
+  "task_ids": [
+    "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT"
+  ],
+  "worktree_paths": [],
+  "starting_commits": {
+    "user_expected_head": "c526a6f",
+    "verified_checkpoint_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
+    "master_protocol_commit": "b7089d4d59faa285cc85880355035d71e41a58ed"
+  },
+  "expected_outputs": [
+    "orchestration/master/child-results/SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT.json"
+  ],
+  "last_heartbeat": "2026-06-24T16:19:53.7650386+08:00",
+  "retries": {},
+  "blockers": [],
+  "audit_state": {
+    "T0": "QUEUED_NOT_SPAWNED",
+    "safety_and_implementation_integrity": "PENDING",
+    "engineering_capability_and_coverage": "PENDING"
+  },
+  "merge_state": {
+    "pending_child_commits": [],
+    "accepted_child_commits": [],
+    "last_merge_result": "NONE"
+  },
+  "latest_verified_test_result": {
+    "command": "python scripts/run_tests.py",
+    "status": "PASS",
+    "verified_at": "2026-06-24T16:19:53.7650386+08:00"
+  },
+  "scoped_workflow_freeze_results": {
+    "legacy_baseline_024": "PASS",
+    "sheetmetal_v1_active": "PASS",
+    "sheetmetal_v1_topology_sizing_placement": "PASS"
+  },
+  "privacy_state": {
+    "privacy_approval": "NOT_APPROVED",
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0
+  },
+  "readiness_gate_state": {
+    "status": "NOT_READY",
+    "highest_allowed_success_status": "READY_FOR_PRIVATE_PREVIEW",
+    "forbidden_status": "PRODUCTION_APPROVED",
+    "customer_pdf_dxf_dwg_generation_count": 0
+  },
+  "workflow_freeze_results": {
+    "deterministic_topology_stage_rerun": "12/12 byte-identical and canonical",
+    "assignment_coverage": "0/53",
+    "geometry_coverage": "0/53",
+    "placement_coverage": "0/53",
+    "unsupported_assignments": 0,
+    "unsupported_placements": 0,
+    "accepted_hard_constraint_violations": 0
+  },
+  "untracked_file_policy": {
+    "permitted_pre_existing_untracked": [
+      "scripts/run_reference_detection_v4_corpus_screening.py"
+    ],
+    "never_stage_or_execute": true
+  }
+}
