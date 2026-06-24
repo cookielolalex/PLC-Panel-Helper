@@ -1,0 +1,63 @@
+{
+  "schema_version": "coordinator-audit-addendum-v1",
+  "task_id": "SMV1-T1-INDEPENDENT-RECOVERY-AUDIT",
+  "created_at": "2026-06-24T17:03:45.4973888+08:00",
+  "coordinator_head": "5c5467efff08f9b786fcae01f7aeb4a707b0c363",
+  "auditor_observed_head": "a6cf5d98baea9e577939bb5e529f34070c3f24fb",
+  "audit_target_integration_commit": "bc02f7d6a2b84f06ef7d1e7d3b060ba36081a5d9",
+  "independent_audit_status": "PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS",
+  "independent_recommended_next_action": "RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH",
+  "coordinator_adjudication": "ACCEPT_AUDIT_WITH_RUNTIME_LIMITATION_RESOLVED_BY_COORDINATOR",
+  "head_delta_explanation": "The auditor ran from the committed audit brief at a6cf5d9 while the coordinator recorded dispatch metadata in 5c5467e. The dispatch metadata commit changed only orchestration registry and master state files, not implementation code, rules, schemas, frozen releases, graders, T1 worker outputs, or T1 integration evidence.",
+  "json_parse_validation": {
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json": "PASS",
+    "orchestration/master/child-results/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.json": "PASS"
+  },
+  "coordinator_test_verification": {
+    "command": "python scripts/run_tests.py",
+    "python_runtime": "C:/Users/alex1/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "status": "PASS",
+    "verified_at": "2026-06-24T17:02:00+08:00",
+    "note": "The final run_tests.py JSON reported status PASS. Earlier standalone FAIL lines are expected fixture probes inside reference-detector tests and are not the suite authority."
+  },
+  "coordinator_scoped_freeze_verification": {
+    "legacy-baseline-024": {
+      "command": "python scripts/verify_frozen_workflow.py --scope legacy-baseline-024",
+      "status": "PASS"
+    },
+    "sheetmetal-v1-active": {
+      "command": "python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+      "status": "PASS"
+    },
+    "sheetmetal-v1-topology-sizing-placement": {
+      "command": "python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+      "status": "PASS"
+    }
+  },
+  "hard_gate_adjudication": {
+    "unsupported_panel_assignments": 0,
+    "unsupported_geometry_promotions": 0,
+    "unsupported_critical_dimensions": 0,
+    "unsupported_placements": 0,
+    "accepted_hard_constraint_violations": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_values": 0,
+    "customer_pdf_dxf_dwg_generation": 0,
+    "production_approval_declared": false
+  },
+  "coverage_adjudication": {
+    "panel_assignment": "0/53",
+    "component_geometry": "0/53",
+    "topology": "0/1",
+    "sizing": "0/0",
+    "placement": "0/53",
+    "capability_success": false
+  },
+  "final_coordinator_status": "T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED",
+  "final_coordinator_next_action": "RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH",
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}

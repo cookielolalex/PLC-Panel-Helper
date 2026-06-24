@@ -1,0 +1,217 @@
+{
+  "task_id": "SMV1-T1-INDEPENDENT-RECOVERY-AUDIT",
+  "starting_commit": "a6cf5d98baea9e577939bb5e529f34070c3f24fb",
+  "ending_commit": "a6cf5d98baea9e577939bb5e529f34070c3f24fb",
+  "audit_target_integration_commit": "bc02f7d6a2b84f06ef7d1e7d3b060ba36081a5d9",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "tracked_worktree_status": {
+    "git_binary": "C:/Program Files/Git/cmd/git.exe",
+    "current_head": "a6cf5d98baea9e577939bb5e529f34070c3f24fb",
+    "status_before_audit_writes": [
+      "?? scripts/run_reference_detection_v4_corpus_screening.py"
+    ],
+    "tracked_diff_t1_range_45ab4b4_to_bc02f7d": "PASS_RESULT_FILES_ONLY",
+    "tracked_diff_t1_changed_file_count": 12,
+    "implementation_code_files_changed_by_t1": 0,
+    "rule_files_changed_by_t1": 0,
+    "schema_files_changed_by_t1": 0,
+    "frozen_release_or_grader_files_changed_by_t1": 0,
+    "allowed_audit_paths_written": [
+      "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json",
+      "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.md",
+      "orchestration/master/child-results/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.json"
+    ],
+    "pre_existing_untracked_forbidden_screening_script_left_unmodified": true
+  },
+  "test_result": {
+    "json_parse_checks": "PASS",
+    "json_parse_command": "PowerShell ConvertFrom-Json over visible T1 child-result JSON and report JSON files",
+    "audit_json_parse": "PASS",
+    "child_result_json_parse": "PASS_EXPECTED_POST_WRITE",
+    "scripts_run_tests": "NOT_VERIFIED_NO_USABLE_PYTHON_RUNTIME",
+    "python_availability_evidence": [
+      "python --version returned Microsoft Store alias message",
+      "py --version command not found",
+      "no python.exe found in common local program paths or .codex search"
+    ]
+  },
+  "workflow_freeze_results": {
+    "fresh_verify_frozen_workflow_py": "NOT_VERIFIED_NO_USABLE_PYTHON_RUNTIME",
+    "manual_active_sheetmetal_v1_manifest_hash_check": {
+      "status": "PASS",
+      "verified_file_count": 50,
+      "manifest": "evals/sheetmetal-v1/frozen_workflow_manifest.json"
+    },
+    "legacy_baseline_024": {
+      "status": "NOT_VERIFIED_SCRIPT_UNAVAILABLE",
+      "note": "Naive current-worktree comparison reports known AGENTS.md mismatch; D-0026 records scope-bound legacy/current active separation."
+    },
+    "target_integration_commit_ancestor_check": "PASS",
+    "active_manifest_anchor_ancestor_check": "PASS"
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.md",
+    "orchestration/master/child-results/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.json"
+  ],
+  "schemas_validated": {
+    "method": "PowerShell ConvertFrom-Json parse validation",
+    "t1_worker_child_results": "PASS",
+    "t1_integration_child_result": "PASS",
+    "t1_worker_reports": "PASS",
+    "audit_report_json": "PASS",
+    "formal_schema": "NO_TASK_SPECIFIC_SCHEMA_PROVIDED"
+  },
+  "hard_gates": {
+    "overall": "PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS",
+    "unsupported_panel_assignments": "PASS_ZERO",
+    "unsupported_geometry_promotions": "PASS_ZERO",
+    "unsupported_critical_dimensions": "PASS_ZERO",
+    "unsupported_placements": "PASS_ZERO",
+    "accepted_hard_constraint_violations": "PASS_ZERO",
+    "completed_reference_leakage": "PASS_ZERO",
+    "post_design_leakage": "PASS_ZERO",
+    "private_content_transmissions": "PASS_ZERO",
+    "committed_private_values": "PASS_ZERO",
+    "customer_pdf_dxf_dwg_generation": "PASS_ZERO",
+    "production_approval_declared": "PASS_FALSE",
+    "public_web_used": "PASS_FALSE",
+    "children_spawned": "PASS_FALSE",
+    "forbidden_artifacts_opened_by_audit": "PASS_FALSE"
+  },
+  "coverage": {
+    "panel_assignment": {
+      "before": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "after": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "verdict": "PASS_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+    },
+    "component_geometry": {
+      "before": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "after": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "verdict": "PASS_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+    },
+    "topology": {
+      "before": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "after": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "verdict": "PASS_SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+    },
+    "sizing": {
+      "before": {
+        "numerator": 0,
+        "denominator": 0
+      },
+      "after": {
+        "numerator": 0,
+        "denominator": 0
+      },
+      "verdict": "PASS_ZERO_SOURCE_SUPPORTED_DENOMINATOR_NOT_REPORTED_AS_RECALL"
+    },
+    "placement": {
+      "before": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "after": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "verdict": "PASS_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+    }
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_value_count": 0,
+    "source_root_paths_in_t1_reports": 0,
+    "drive_paths_in_t1_reports": 0,
+    "completed_reference_details_in_outputs": 0,
+    "dimensions_or_coordinates_in_outputs": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0
+  },
+  "exact_final_status": "PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS",
+  "exact_recommended_next_action": "RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH",
+  "blocker_taxonomy": {
+    "verdict": "PASS",
+    "classification": "SAFE_UNRESOLVED_SOURCE_RULE_AUTHORITY_GAP",
+    "panel_assignment": [
+      "NO_APPROVED_PANEL_ALLOCATION_SOURCE_IN_SELECTED_BUNDLE",
+      "NO_PANEL_ASSIGNMENT_FIELD_SIGNAL_IN_APPROVED_BUNDLE",
+      "NO_APPROVED_DETERMINISTIC_ASSIGNMENT_RULE_AVAILABLE",
+      "SOURCE_MODE_A_INVENTORY_ONLY_FUNCTIONAL_SOURCE_DISABLED",
+      "CODE_CHANGE_NOT_AUTHORIZED_WITHOUT_SOURCE_OR_RULE_SUPPORT"
+    ],
+    "component_geometry": [
+      "NO_APPROVED_COMPONENT_GEOMETRY_LIBRARY",
+      "NO_APPROVED_GENERIC_CONSERVATIVE_ENVELOPE_RULE",
+      "LOCAL_CATALOG_CANDIDATES_REQUIRE_HUMAN_REVIEW",
+      "LOCAL_CAD_CANDIDATES_NOT_APPROVED_FOR_GEOMETRY_EXTRACTION",
+      "PRIVATE_MODEL_IDENTIFIERS_NOT_PUBLIC_LOOKUP_ELIGIBLE",
+      "SYNTHETIC_FIXTURE_ONLY_NOT_REAL_COVERAGE",
+      "COMPONENT_GEOMETRY_MISSING"
+    ],
+    "topology_sizing_rule": [
+      "NO_APPROVED_STANDARD_CABINET_LIBRARY",
+      "NO_APPROVED_ENCLOSURE_CANDIDATE_SELECTION_RULE",
+      "NO_APPROVED_SURFACE_INFERENCE_RULE",
+      "NO_VERIFIED_MOUNTING_SURFACE_LIBRARY",
+      "NO_APPROVED_COMPARTMENT_RULE",
+      "NO_APPROVED_DOOR_TOPOLOGY_RULE",
+      "NO_APPROVED_MOUNTING_PLATE_RULE",
+      "NO_APPROVED_WIRING_ALLOWANCE_POLICY",
+      "NO_APPROVED_CABLE_BEND_ALLOWANCE_POLICY",
+      "NO_APPROVED_GLOBAL_ACCESS_CLEARANCE_RULE",
+      "NO_COMPONENT_CLASS_CLEARANCE_LIBRARY",
+      "NO_APPROVED_THERMAL_RULE",
+      "NO_APPROVED_VENTILATION_REGION_RULE",
+      "NO_APPROVED_SPARE_SPACE_POLICY",
+      "NO_SUPPORTED_PANEL_FILL_CALCULATION_DENOMINATOR",
+      "SOURCE_LIMITED_TOPOLOGY_SIZING_COVERAGE"
+    ]
+  },
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "2026-06-24T16:56:38.0452121+08:00",
+    "completed_at": "2026-06-24T17:00:15.3840777+08:00",
+    "duration": "not_measured"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json": "FA5E9697047683BDB8850A66C014F40E42C83A3D02EF9ED8728AD5ADC6AE0221",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.md": "C263C34AA8EDB908D6396FB7ABABDEF70E3500354DAF98DE2B5E395425299F93",
+    "orchestration/master/child-results/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  },
+  "trajectory": [
+    "read_task_brief_and_visible_file_manifest",
+    "read_governing_state_manifests_ledgers_and_thread_registry_within_visible_boundary",
+    "parse_t1_worker_and_integration_json",
+    "hash_t1_worker_and_integration_outputs",
+    "verify_git_head_status_log_ancestry_and_t1_diff_with_explicit_git_binary",
+    "check_python_runtime_and_record_unavailable",
+    "manual_active_sheetmetal_v1_frozen_manifest_hash_check",
+    "write_allowed_audit_outputs_only"
+  ],
+  "residual_risks": [
+    "Fresh scripts/run_tests.py was not run because no usable Python runtime is available.",
+    "Fresh scripts/verify_frozen_workflow.py was not run because no usable Python runtime is available.",
+    "T1 remains coverage-unresolved and must not be promoted to engineering capability or drawing generation readiness."
+  ]
+}

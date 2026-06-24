@@ -1,0 +1,371 @@
+{
+  "schema_version": "t1-independent-recovery-audit-v1",
+  "task_id": "SMV1-T1-INDEPENDENT-RECOVERY-AUDIT",
+  "agent_role": "independent_auditor",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "dispatch_commit_observed_starting_head": "a6cf5d98baea9e577939bb5e529f34070c3f24fb",
+  "audit_target_integration_commit": "bc02f7d6a2b84f06ef7d1e7d3b060ba36081a5d9",
+  "observed_head": "a6cf5d98baea9e577939bb5e529f34070c3f24fb",
+  "visible_file_manifest": "orchestration/input_manifests/sheetmetal-v1/t1-coverage-recovery/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.visible_files.json",
+  "task_brief": "orchestration/tasks/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.md",
+  "network_mode": "local_only_no_public_web",
+  "privacy_approval": "NOT_APPROVED",
+  "final_status": "PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS",
+  "recommended_next_action": "RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH",
+  "parsed_inputs": {
+    "child_results": [
+      {
+        "path": "orchestration/master/child-results/SMV1-T1-PANEL-ASSIGNMENT-RECOVERY.json",
+        "parse_status": "PASS",
+        "sha256": "0CBCE0B3193B69CE212A9E819D4D5B224775D654F4266D2A9AF2CA47B7B9EC6D",
+        "exact_final_status": "SAFE_UNRESOLVED_NO_COMPLIANT_PANEL_ASSIGNMENT_RECOVERY_PATH"
+      },
+      {
+        "path": "orchestration/master/child-results/SMV1-T1-COMPONENT-GEOMETRY-RECOVERY.json",
+        "parse_status": "PASS",
+        "sha256": "DA10B9BB1816948CD8967938AB9DD38D514D4AFE1E1CA1AE2BCED9521DE9C7A3",
+        "exact_final_status": "SAFE_UNRESOLVED_NO_COMPLIANT_COMPONENT_GEOMETRY_RECOVERY"
+      },
+      {
+        "path": "orchestration/master/child-results/SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY.json",
+        "parse_status": "PASS",
+        "sha256": "FF77573DB330204281F42EED32C7E9EF37A26B51657810B0D963B1A377ABD30D",
+        "exact_final_status": "SAFE_UNRESOLVED_NO_CODE_CHANGE"
+      },
+      {
+        "path": "orchestration/master/child-results/SMV1-T1-INTEGRATION.json",
+        "parse_status": "PASS",
+        "sha256": "350DB5C5DB2ABE8298CC7BDB7FAD64B7AA59FB1DDABC2ABFE1A194CB6FECC33E",
+        "exact_final_status": "SAFE_UNRESOLVED_T1_NO_COMPLIANT_CODE_OR_RULE_RECOVERY_PATHS_AUDIT_REQUIRED"
+      }
+    ],
+    "reports": [
+      {
+        "path": "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.json",
+        "parse_status": "PASS",
+        "sha256": "3CC279C01CBBD8485B9BC5A1735656D8945FE78DDCDFC8CE8368AE2F06980B53"
+      },
+      {
+        "path": "reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.json",
+        "parse_status": "PASS",
+        "sha256": "D24214F1363F66C3EDF33AA44BC6D6687285E1ABBCF09F1AE611B79D22A9F18C"
+      },
+      {
+        "path": "reports/sheetmetal-v1/t1-coverage-recovery/topology_sizing_rule_recovery_report.json",
+        "parse_status": "PASS",
+        "sha256": "8AAA854555A82AF38CB78E7EE3CD837A3F4E83C08BBC586421C1CEF41FE8A0E4"
+      },
+      {
+        "path": "reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json",
+        "parse_status": "PASS",
+        "sha256": "9B8A9D6EB8F98F79E69B82A3F3A6F91EC20F1FF24CB3C0E4AF34821B858137EF"
+      }
+    ]
+  },
+  "criteria": {
+    "parse_all_t1_child_results_and_integration": {
+      "verdict": "PASS",
+      "evidence": "PowerShell ConvertFrom-Json parsed the three T1 worker child-result JSON files, the T1 integration child-result JSON, and the four T1 report JSON files."
+    },
+    "worker_statuses_and_integration_conclusion_consistent": {
+      "verdict": "PASS",
+      "evidence": "All three workers report safe-unresolved/no compliant recovery path statuses; integration reports SAFE_UNRESOLVED_T1_NO_COMPLIANT_CODE_OR_RULE_RECOVERY_PATHS_AUDIT_REQUIRED and recommends this independent audit."
+    },
+    "no_implementation_code_rule_changes_by_t1": {
+      "verdict": "PASS",
+      "evidence": "git diff --name-status 45ab4b4..bc02f7d shows only 12 added files, all T1 recovery/integration reports or child-result JSON files. No implementation, rule, schema, ledger, canonical-state, frozen-release, or frozen-grader path appears in the range."
+    },
+    "coverage_source_limited_not_capability_success": {
+      "verdict": "PASS",
+      "evidence": "Integration coverage remains assignment 0/53, component geometry 0/53, topology 0/1, sizing 0/0, placement 0/53, with safe/source-limited interpretations and no capability-success claim."
+    },
+    "hard_gates_zero_or_false": {
+      "verdict": "PASS",
+      "evidence": "Integration hard gates are PASS_ZERO or PASS_FALSE for unsupported panel assignments, unsupported geometry promotions, unsupported critical dimensions, unsupported placements, accepted hard-constraint violations, completed-reference leakage, post-design leakage, private transmissions, committed private values, customer drawing generation, PDF/DXF/DWG generation, and production approval declaration."
+    },
+    "blocker_taxonomy_supports_safe_unresolved_source_rule_gap": {
+      "verdict": "PASS",
+      "evidence": "Blockers are missing approved panel allocation source/rule, missing approved geometry library/envelope rule, and missing approved topology/sizing policy or rule libraries. Integration classifies the result as NON_TERMINAL_SOURCE_RULE_AUTHORITY_GAP_PENDING_INDEPENDENT_AUDIT."
+    },
+    "privacy_and_forbidden_content_leakage": {
+      "verdict": "PASS",
+      "evidence": "T1 privacy counts are zero. Sentinel scan of T1 report files found no drive paths, private values, source-root paths, generated drawing claims, or production approval declaration; one generic boundary statement names forbidden categories without revealing paths or values."
+    },
+    "json_parse_checks": {
+      "verdict": "PASS",
+      "evidence": "PowerShell ConvertFrom-Json parse validation passed for all visible T1 JSON inputs and reports."
+    },
+    "fresh_run_tests_py": {
+      "verdict": "NOT_VERIFIED",
+      "evidence": "python --version returned the Microsoft Store alias message, py --version was unavailable, and no usable python.exe was found in common local paths or .codex."
+    },
+    "fresh_scoped_frozen_workflow_script": {
+      "verdict": "NOT_VERIFIED",
+      "evidence": "scripts/verify_frozen_workflow.py could not be executed because no usable Python runtime is available in this shell."
+    },
+    "manual_active_sheetmetal_v1_frozen_manifest_hash_check": {
+      "verdict": "PASS",
+      "evidence": "PowerShell SHA-256 check passed for all 50 files in evals/sheetmetal-v1/frozen_workflow_manifest.json; active anchor ab955b854e31d37666445f5a62ee6556f85f1352 and bc02f7d are ancestors of current HEAD."
+    },
+    "legacy_baseline_scoped_freeze_fresh_runtime": {
+      "verdict": "NOT_VERIFIED",
+      "evidence": "The Python verifier could not run. A naive current-worktree hash comparison reports the known AGENTS.md mismatch; D-0026 records that legacy and active manifests are scope-bound and current active files must not be compared to historical expected hashes."
+    }
+  },
+  "coverage_verdicts": {
+    "panel_assignment": {
+      "verdict": "PASS",
+      "before": "0/53",
+      "after": "0/53",
+      "delta": 0,
+      "interpretation": "SOURCE_LIMITED_SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+    },
+    "component_geometry": {
+      "verdict": "PASS",
+      "before": "0/53",
+      "after": "0/53",
+      "delta": 0,
+      "interpretation": "SOURCE_LIMITED_SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+    },
+    "topology": {
+      "verdict": "PASS",
+      "before": "0/1",
+      "after": "0/1",
+      "delta": 0,
+      "interpretation": "SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+    },
+    "sizing": {
+      "verdict": "PASS",
+      "before": "0/0",
+      "after": "0/0",
+      "delta": 0,
+      "interpretation": "ZERO_SOURCE_SUPPORTED_DENOMINATOR_RECALL_NOT_REPORTED"
+    },
+    "placement": {
+      "verdict": "PASS",
+      "before": "0/53",
+      "after": "0/53",
+      "delta": 0,
+      "interpretation": "UNCHANGED_BECAUSE_NO_ASSIGNMENT_GEOMETRY_OR_RULE_RECOVERY"
+    }
+  },
+  "hard_gate_verdicts": {
+    "unsupported_panel_assignments": {
+      "verdict": "PASS",
+      "count": 0
+    },
+    "unsupported_geometry_promotions": {
+      "verdict": "PASS",
+      "count": 0
+    },
+    "unsupported_critical_dimensions": {
+      "verdict": "PASS",
+      "count": 0
+    },
+    "unsupported_placements": {
+      "verdict": "PASS",
+      "count": 0
+    },
+    "accepted_hard_constraint_violations": {
+      "verdict": "PASS",
+      "count": 0
+    },
+    "completed_reference_leakage": {
+      "verdict": "PASS",
+      "count": 0
+    },
+    "post_design_leakage": {
+      "verdict": "PASS",
+      "count": 0
+    },
+    "private_content_transmissions": {
+      "verdict": "PASS",
+      "count": 0
+    },
+    "committed_private_values": {
+      "verdict": "PASS",
+      "count": 0
+    },
+    "customer_pdf_dxf_dwg_generation": {
+      "verdict": "PASS",
+      "count": 0
+    },
+    "production_approval_declared": {
+      "verdict": "PASS",
+      "value": false
+    }
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_value_count": 0,
+    "source_root_paths_in_t1_reports": 0,
+    "drive_paths_in_t1_reports": 0,
+    "completed_reference_details_in_outputs": 0,
+    "dimensions_or_coordinates_in_outputs": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0
+  },
+  "blocker_taxonomy": {
+    "verdict": "PASS",
+    "classification": "SAFE_UNRESOLVED_SOURCE_RULE_AUTHORITY_GAP",
+    "panel_assignment": [
+      "NO_APPROVED_PANEL_ALLOCATION_SOURCE_IN_SELECTED_BUNDLE",
+      "NO_PANEL_ASSIGNMENT_FIELD_SIGNAL_IN_APPROVED_BUNDLE",
+      "NO_APPROVED_DETERMINISTIC_ASSIGNMENT_RULE_AVAILABLE",
+      "SOURCE_MODE_A_INVENTORY_ONLY_FUNCTIONAL_SOURCE_DISABLED",
+      "CODE_CHANGE_NOT_AUTHORIZED_WITHOUT_SOURCE_OR_RULE_SUPPORT"
+    ],
+    "component_geometry": [
+      "NO_APPROVED_COMPONENT_GEOMETRY_LIBRARY",
+      "NO_APPROVED_GENERIC_CONSERVATIVE_ENVELOPE_RULE",
+      "LOCAL_CATALOG_CANDIDATES_REQUIRE_HUMAN_REVIEW",
+      "LOCAL_CAD_CANDIDATES_NOT_APPROVED_FOR_GEOMETRY_EXTRACTION",
+      "PRIVATE_MODEL_IDENTIFIERS_NOT_PUBLIC_LOOKUP_ELIGIBLE",
+      "SYNTHETIC_FIXTURE_ONLY_NOT_REAL_COVERAGE",
+      "COMPONENT_GEOMETRY_MISSING"
+    ],
+    "topology_sizing_rule": [
+      "NO_APPROVED_STANDARD_CABINET_LIBRARY",
+      "NO_APPROVED_ENCLOSURE_CANDIDATE_SELECTION_RULE",
+      "NO_APPROVED_SURFACE_INFERENCE_RULE",
+      "NO_VERIFIED_MOUNTING_SURFACE_LIBRARY",
+      "NO_APPROVED_COMPARTMENT_RULE",
+      "NO_APPROVED_DOOR_TOPOLOGY_RULE",
+      "NO_APPROVED_MOUNTING_PLATE_RULE",
+      "NO_APPROVED_WIRING_ALLOWANCE_POLICY",
+      "NO_APPROVED_CABLE_BEND_ALLOWANCE_POLICY",
+      "NO_APPROVED_GLOBAL_ACCESS_CLEARANCE_RULE",
+      "NO_COMPONENT_CLASS_CLEARANCE_LIBRARY",
+      "NO_APPROVED_THERMAL_RULE",
+      "NO_APPROVED_VENTILATION_REGION_RULE",
+      "NO_APPROVED_SPARE_SPACE_POLICY",
+      "NO_SUPPORTED_PANEL_FILL_CALCULATION_DENOMINATOR",
+      "SOURCE_LIMITED_TOPOLOGY_SIZING_COVERAGE"
+    ]
+  },
+  "git_evidence": {
+    "git_binary": "C:/Program Files/Git/cmd/git.exe",
+    "current_head_command": "git rev-parse HEAD",
+    "current_head": "a6cf5d98baea9e577939bb5e529f34070c3f24fb",
+    "status_short": [
+      "?? scripts/run_reference_detection_v4_corpus_screening.py"
+    ],
+    "log_head": [
+      "a6cf5d9 Add T1 recovery audit brief",
+      "bc02f7d Record T1 recovery integration summary",
+      "c02656f Record T1 recovery worker results",
+      "45ab4b4 Dispatch T1 recovery workers",
+      "e133aa1 Advance topology audit to T1 recovery"
+    ],
+    "diff_45ab4b4_to_bc02f7d": {
+      "verdict": "PASS_RESULT_FILES_ONLY",
+      "changed_file_count": 12,
+      "changed_paths": [
+        "orchestration/master/child-results/SMV1-T1-COMPONENT-GEOMETRY-RECOVERY.json",
+        "orchestration/master/child-results/SMV1-T1-INTEGRATION.json",
+        "orchestration/master/child-results/SMV1-T1-PANEL-ASSIGNMENT-RECOVERY.json",
+        "orchestration/master/child-results/SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY.json",
+        "reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.json",
+        "reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.md",
+        "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.json",
+        "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.md",
+        "reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json",
+        "reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.md",
+        "reports/sheetmetal-v1/t1-coverage-recovery/topology_sizing_rule_recovery_report.json",
+        "reports/sheetmetal-v1/t1-coverage-recovery/topology_sizing_rule_recovery_report.md"
+      ]
+    },
+    "bc02f7d_is_ancestor_of_head": "PASS",
+    "active_manifest_anchor_is_ancestor_of_head": "PASS"
+  },
+  "test_and_workflow_verification": {
+    "json_parse_checks": {
+      "status": "PASS",
+      "command": "PowerShell ConvertFrom-Json over visible T1 JSON inputs and reports"
+    },
+    "scripts_run_tests_py": {
+      "status": "NOT_VERIFIED",
+      "attempted_commands": [
+        "python --version",
+        "py --version"
+      ],
+      "reason": "No usable Python runtime was available in this shell."
+    },
+    "verify_frozen_workflow_py": {
+      "status": "NOT_VERIFIED",
+      "reason": "No usable Python runtime was available to execute the verifier script."
+    },
+    "manual_active_sheetmetal_v1_manifest_hash_check": {
+      "status": "PASS",
+      "command": "PowerShell Get-FileHash over evals/sheetmetal-v1/frozen_workflow_manifest.json file list",
+      "verified_file_count": 50
+    },
+    "manual_legacy_baseline_manifest_hash_check": {
+      "status": "NOT_VERIFIED_SCRIPT_UNAVAILABLE",
+      "note": "Naive current-worktree hash comparison finds known AGENTS.md mismatch; D-0026 records the legacy/current active scope separation."
+    }
+  },
+  "input_hashes": {
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+    "orchestration/tasks/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.md": "EE7FFCB8396222E7C165B8AA940D0397300FEEF37D1D74B73C3CF6F846E6B281",
+    "orchestration/input_manifests/sheetmetal-v1/t1-coverage-recovery/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.visible_files.json": "396993289B4CE965D81395C4D4080C02C41B74BC0133D115FFFD280BB09C425E",
+    "orchestration/master/MASTER_STATE.json": "58276852011E467FA3AC1DBBF57B684573178397F4B88A46D9A026D54C07FB9A",
+    "orchestration/master/NEXT_ACTION_QUEUE.json": "A5A4C2EFEC9480164B67DDE0CFD9C090C4FF6E2A59DD80B7E6921613008157F4",
+    "orchestration/master/RECOVERY_LEDGER.json": "2F84C92347EC44D04F014F67F86CCAA6C0BA6FAEEF60524C0AC7D58D361C473D",
+    "evals/sheetmetal-v1/frozen_workflow_manifest.json": "426872DB5603D26140A609E9D4CF59AAF1B42F04F8988608A026897ED0FF12FC",
+    "evals/baseline-024/frozen_workflow_manifest.json": "D4C319005B2ABD4253B9FC9C2859E3C859B1C76E41952184DF1B867A3705C329"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.md": "C263C34AA8EDB908D6396FB7ABABDEF70E3500354DAF98DE2B5E395425299F93",
+    "orchestration/master/child-results/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  },
+  "residual_risks": [
+    "Fresh scripts/run_tests.py could not be run because no usable Python runtime is available in this shell.",
+    "Fresh scripts/verify_frozen_workflow.py could not be run for the same Python-runtime reason.",
+    "T1 recovered no coverage; the result is safe unresolved only and must not be treated as engineering capability or drawing generation readiness."
+  ],
+  "trajectory": [
+    {
+      "step": 1,
+      "action": "Read task brief and visible-file manifest.",
+      "status": "PASS"
+    },
+    {
+      "step": 2,
+      "action": "Read governing master spec, active protocol/current state, master state, queue, recovery ledger, thread registry, frozen workflow manifests, and relevant ledger/checkpoint excerpts.",
+      "status": "PASS"
+    },
+    {
+      "step": 3,
+      "action": "Parsed T1 worker child-result JSON, T1 integration JSON, and T1 report JSON files.",
+      "status": "PASS"
+    },
+    {
+      "step": 4,
+      "action": "Hashed T1 result and report files and compared worker-reported report hashes to local hashes.",
+      "status": "PASS"
+    },
+    {
+      "step": 5,
+      "action": "Used local Git binary to inspect HEAD, status, log, ancestry, and commit-range diff.",
+      "status": "PASS"
+    },
+    {
+      "step": 6,
+      "action": "Checked Python availability for tests and scripted freeze verification.",
+      "status": "NOT_VERIFIED_RUNTIME_UNAVAILABLE"
+    },
+    {
+      "step": 7,
+      "action": "Performed manual active sheetmetal-v1 frozen manifest hash verification.",
+      "status": "PASS"
+    },
+    {
+      "step": 8,
+      "action": "Wrote only the three allowed audit output files.",
+      "status": "PASS"
+    }
+  ]
+}
