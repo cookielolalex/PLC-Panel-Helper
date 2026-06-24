@@ -1580,6 +1580,32 @@ def test_frozen_workflow_active_scope_verifier() -> None:
     assert_true(result["status"] == "FAIL" and any(failure.startswith("DYNAMIC_FILE_INCLUDED") for failure in result["failures"]), "dynamic state files must stay out of active workflow freeze")
 
 
+def test_frozen_workflow_topology_scope_verifier() -> None:
+    import verify_frozen_workflow as verifier
+
+    if verifier.TOPOLOGY_MANIFEST.exists():
+        result = verifier.verify_topology_scope()
+        assert_true(result["status"] == "PASS", f"topology stage manifest must pass: {result}")
+        manifest = read_json(verifier.TOPOLOGY_MANIFEST)
+    else:
+        manifest = {
+            "manifest_version": "frozen-workflow-v2",
+            "scope": verifier.TOPOLOGY_SCOPE,
+            "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+            "anchor_commit": verifier.current_head(),
+            "hash_algorithm": "SHA-256",
+            "supersedes_historical_manifest": False,
+            "files": [{"path": "scripts/sheetmetal_v1.py", "sha256": verifier.sha256_file(ROOT / "scripts" / "sheetmetal_v1.py")}],
+        }
+        result = verifier.verify_active_manifest_data(manifest, manifest_path=ROOT / "tmp" / "topology_manifest_fixture.json", expected_scope=verifier.TOPOLOGY_SCOPE)
+        assert_true(result["status"] == "PASS", f"topology manifest fixture should pass: {result}")
+
+    wrong_scope = json.loads(json.dumps(manifest))
+    wrong_scope["scope"] = "SHEETMETAL_V1_ACTIVE"
+    result = verifier.verify_active_manifest_data(wrong_scope, manifest_path=ROOT / "tmp" / "topology_manifest_wrong_scope.json", expected_scope=verifier.TOPOLOGY_SCOPE)
+    assert_true(result["status"] == "FAIL" and "SCOPE_MISMATCH" in result["failures"], "topology scope mismatch must fail")
+
+
 def main() -> None:
     tests = [
         test_json_schemas_parse,
@@ -1611,6 +1637,7 @@ def main() -> None:
         test_frozen_workflow_legacy_scope_verifier,
         test_frozen_workflow_fail_closed_regressions,
         test_frozen_workflow_active_scope_verifier,
+        test_frozen_workflow_topology_scope_verifier,
     ]
     failures = []
     for test in tests:

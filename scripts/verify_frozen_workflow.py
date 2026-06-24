@@ -16,11 +16,13 @@ ROOT = Path(__file__).resolve().parents[1]
 LEGACY_MANIFEST = ROOT / "evals" / "baseline-024" / "frozen_workflow_manifest.json"
 LEGACY_ATTESTATION = ROOT / "evals" / "baseline-024" / "frozen_workflow_attestation.json"
 ACTIVE_MANIFEST = ROOT / "evals" / "sheetmetal-v1" / "frozen_workflow_manifest.json"
+TOPOLOGY_MANIFEST = ROOT / "evals" / "sheetmetal-v1" / "topology-sizing-placement" / "frozen_workflow_manifest.json"
 
 TEMP_ROOT = ROOT / "tmp" / "frozen_workflow_verification"
 
 LEGACY_SCOPE = "LEGACY_BASELINE_024"
 ACTIVE_SCOPE = "SHEETMETAL_V1_ACTIVE"
+TOPOLOGY_SCOPE = "SHEETMETAL_V1_TOPOLOGY_SIZING_PLACEMENT"
 ACTIVE_GOAL = "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1"
 
 VERIFICATION_ALGORITHM = "sha256-file-v1;git-worktree-detached;core.autocrlf=false"
@@ -346,9 +348,14 @@ def verify_legacy_scope(
     }
 
 
-def verify_active_manifest_data(manifest: dict[str, Any], *, manifest_path: Path = ACTIVE_MANIFEST) -> dict[str, Any]:
+def verify_active_manifest_data(
+    manifest: dict[str, Any],
+    *,
+    manifest_path: Path = ACTIVE_MANIFEST,
+    expected_scope: str = ACTIVE_SCOPE,
+) -> dict[str, Any]:
     failures = []
-    if manifest.get("scope") != ACTIVE_SCOPE:
+    if manifest.get("scope") != expected_scope:
         failures.append("SCOPE_MISMATCH")
     if manifest.get("active_goal") != ACTIVE_GOAL:
         failures.append("ACTIVE_GOAL_MISMATCH")
@@ -393,7 +400,7 @@ def verify_active_manifest_data(manifest: dict[str, Any], *, manifest_path: Path
         failures.append("NO_FILES_IN_ACTIVE_MANIFEST")
 
     return {
-        "scope": ACTIVE_SCOPE,
+        "scope": expected_scope,
         "status": "PASS" if not failures else "FAIL",
         "manifest_path": str(manifest_path.relative_to(ROOT)).replace("\\", "/") if manifest_path.is_absolute() else str(manifest_path),
         "manifest_sha256": sha256_file(manifest_path) if manifest_path.exists() else "",
@@ -412,6 +419,13 @@ def verify_active_scope(*, manifest_path: Path = ACTIVE_MANIFEST) -> dict[str, A
     return verify_active_manifest_data(manifest, manifest_path=manifest_path)
 
 
+def verify_topology_scope(*, manifest_path: Path = TOPOLOGY_MANIFEST) -> dict[str, Any]:
+    if not manifest_path.exists():
+        return {"scope": TOPOLOGY_SCOPE, "status": "FAIL", "error": "TOPOLOGY_MANIFEST_MISSING"}
+    manifest = read_json(manifest_path)
+    return verify_active_manifest_data(manifest, manifest_path=manifest_path, expected_scope=TOPOLOGY_SCOPE)
+
+
 def resolve_unique_legacy_anchor(candidate_results: list[dict[str, Any]]) -> dict[str, Any]:
     passing = [row for row in candidate_results if row.get("status") == "PASS"]
     if len(passing) == 1:
@@ -423,7 +437,7 @@ def resolve_unique_legacy_anchor(candidate_results: list[dict[str, Any]]) -> dic
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Verify scoped frozen workflow manifests.")
-    parser.add_argument("--scope", required=True, choices=["legacy-baseline-024", "sheetmetal-v1-active"])
+    parser.add_argument("--scope", required=True, choices=["legacy-baseline-024", "sheetmetal-v1-active", "sheetmetal-v1-topology-sizing-placement"])
     parser.add_argument("--manifest", type=Path)
     parser.add_argument("--attestation", type=Path)
     parser.add_argument("--write-attestation", action="store_true")
@@ -436,11 +450,16 @@ def main() -> None:
             result = build_legacy_attestation(manifest_path=manifest_path, output_path=attestation_path)
         else:
             result = verify_legacy_scope(manifest_path=manifest_path, attestation_path=attestation_path)
-    else:
+    elif args.scope == "sheetmetal-v1-active":
         if args.write_attestation:
             result = {"scope": ACTIVE_SCOPE, "status": "FAIL", "error": "ACTIVE_SCOPE_DOES_NOT_WRITE_ATTESTATION"}
         else:
             result = verify_active_scope(manifest_path=args.manifest or ACTIVE_MANIFEST)
+    else:
+        if args.write_attestation:
+            result = {"scope": TOPOLOGY_SCOPE, "status": "FAIL", "error": "TOPOLOGY_SCOPE_DOES_NOT_WRITE_ATTESTATION"}
+        else:
+            result = verify_topology_scope(manifest_path=args.manifest or TOPOLOGY_MANIFEST)
 
     print(json.dumps(result, ensure_ascii=False, indent=2))
     raise SystemExit(0 if result.get("status") == "PASS" else 1)

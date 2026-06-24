@@ -1,0 +1,138 @@
+{
+  "manifest_version": "frozen-workflow-v2",
+  "scope": "SHEETMETAL_V1_TOPOLOGY_SIZING_PLACEMENT",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "anchor_commit": "f788afce07c736ee41438fd3e42e4c4a01bd9081",
+  "creation_decision_id": "D-0038",
+  "hash_algorithm": "SHA-256",
+  "verification_algorithm": "sha256-file-v1;current-tracked-files;git-lineage-ancestor-check",
+  "supersedes_historical_manifest": false,
+  "supersedes_no_historical_manifest_statement": "This stage manifest supersedes no historical manifest and does not alter evals/baseline-024/frozen_workflow_manifest.json or evals/sheetmetal-v1/frozen_workflow_manifest.json.",
+  "dynamic_files_excluded": [
+    "docs/01_CURRENT_STATE.md",
+    "docs/06_EVAL_LEDGER.md",
+    "docs/07_CHANGELOG.md",
+    "docs/SESSION_CHECKPOINT.md",
+    "orchestration/TASK_REGISTRY.csv",
+    "orchestration/NEXT_THREAD_PROMPT.txt",
+    "reports",
+    "private artifacts"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "4CA078C3F02217CED8491C53A11641152B38A364F157E36523408016074EB227",
+      "role": "active repository agent boundary for sheetmetal-v1"
+    },
+    {
+      "path": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+      "sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+      "role": "master workflow authority"
+    },
+    {
+      "path": "docs/specs/FROZEN_WORKFLOW_SCOPE_AND_LINEAGE_POLICY.md",
+      "sha256": "85282C3F78BAD4E9028834C46FA275E8CB325F44FB651606E383773565DE97B2",
+      "role": "scoped freeze policy"
+    },
+    {
+      "path": "docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md",
+      "sha256": "AD388EE5E39E576F2C8BC24D0CDB162B06438107748430D771DDFE20CFF07E79",
+      "role": "sheetmetal-first architecture"
+    },
+    {
+      "path": "docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md",
+      "sha256": "67F25DEA549626A2ECF72DB657D66276FDDC44F6CC698ECD5728E86E25863543",
+      "role": "source role and chronology policy"
+    },
+    {
+      "path": "docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md",
+      "sha256": "72920B19759334A49323B5BE63A2B6E59B6E073D08406D0D70B5534EF67B0FBC",
+      "role": "source fact authority matrix"
+    },
+    {
+      "path": "docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md",
+      "sha256": "05EFAB1DE2FE03F845991E2E3010CD2856F4523DAA25AF55441B9DEE6485B622",
+      "role": "sheetmetal qualification policy"
+    },
+    {
+      "path": "docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md",
+      "sha256": "85957D9E4284720345E6589CA33B7DB1A988A7F5E3723CE1AC1D2D812562CE8E",
+      "role": "accepted prior component graph calibration protocol"
+    },
+    {
+      "path": "docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md",
+      "sha256": "9FA9E4A7E640B7D7481C34A4A5D992C822B7EE0EA46918307CB69A489D278454",
+      "role": "topology sizing placement calibration protocol"
+    },
+    {
+      "path": "schemas/source_fact_model.schema.json",
+      "sha256": "317467D7A9433496752655B0E85A1B6070AF2B077BA62B7C7092D12AEDCE2897",
+      "role": "source fact model schema"
+    },
+    {
+      "path": "schemas/component_type.schema.json",
+      "sha256": "0060CC947686DBA3072A6DBF527A07858F3668D1992D9651F3CD6518395CA2F5",
+      "role": "component type schema"
+    },
+    {
+      "path": "schemas/component_instance.schema.json",
+      "sha256": "579680E0DEB7AC62250D0F6527E68860918F8F8D32D8C14918F4BC05482A3A00",
+      "role": "component instance schema"
+    },
+    {
+      "path": "schemas/component_register.schema.json",
+      "sha256": "47B0FD25EC7CBB3D425B5E85607EBBA69D73A2C460FB273B85673DE96B794E90",
+      "role": "component register schema"
+    },
+    {
+      "path": "schemas/component_geometry.schema.json",
+      "sha256": "89083FECFE383CDC31BFC5DC9F9C77AB486211AF8381F3F8AFF980785255943B",
+      "role": "component geometry schema"
+    },
+    {
+      "path": "schemas/panel_assignment.schema.json",
+      "sha256": "F6797948493BEC059333262C9F5F44AFB9D7C86E9836D3954E188CC55C2E5D51",
+      "role": "panel assignment schema"
+    },
+    {
+      "path": "schemas/panel_graph.schema.json",
+      "sha256": "08E2C5E9DD42E02A8D7399DD40ECA38AC3D5B8D964016C459DAD9C915FCB074D",
+      "role": "panel graph schema"
+    },
+    {
+      "path": "schemas/panel_constraint_model.schema.json",
+      "sha256": "749392CBB5F8E1E5EF13E15E80363EEBE51A34EEC7F89608230663D132F6FEB3",
+      "role": "placement constraint schema"
+    },
+    {
+      "path": "schemas/drawing_provenance_map.schema.json",
+      "sha256": "E081DFC9DBF539FA7F8869C1CC9D2C6E9BD747F3271D2C27824AD0A925E0D5A3",
+      "role": "provenance map schema"
+    },
+    {
+      "path": "rules/sheetmetal-v1/accessory_rules.synthetic.json",
+      "sha256": "9D7737D3C345BFFE429092B1F8936B8963BA7D7414BD13D78283999FCB6AD7F9",
+      "role": "synthetic accessory rule fixture"
+    },
+    {
+      "path": "manifests/sheetmetal-v1/one-project-topology-calibration/1110101/calibration_protocol.json",
+      "sha256": "EB0B67E7EA1A32CD61F8554EEEAE06ACF76D0E529742FF19B2C14EA186AE651E",
+      "role": "machine-readable topology calibration protocol"
+    },
+    {
+      "path": "scripts/sheetmetal_v1.py",
+      "sha256": "5B377C8812000E41E4CFA579D778AF571FB15F3ACD6D8CA0D1FE547145488E78",
+      "role": "deterministic topology sizing placement implementation"
+    },
+    {
+      "path": "scripts/run_tests.py",
+      "sha256": "D3751A30606CC94B2EBD77CCD787221B8CA2AF86781DDD34374ABD2C19132483",
+      "role": "topology sizing placement regression tests"
+    },
+    {
+      "path": "scripts/verify_frozen_workflow.py",
+      "sha256": "22CF4F7B70802CD4A2CCF6B9110B2B653C5A6579564BF98497B1D4774E0F9142",
+      "role": "stage scoped workflow verifier"
+    }
+  ]
+}

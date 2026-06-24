@@ -1,0 +1,25 @@
+{
+  "schema_version": "sheetmetal-v1.topology_stage_workflow_freeze_summary.v1",
+  "status": "PASS",
+  "project_id": "1110101",
+  "scope_results": {
+    "LEGACY_BASELINE_024": {
+      "status": "PASS",
+      "verified_file_count": 15,
+      "failures": []
+    },
+    "SHEETMETAL_V1_ACTIVE": {
+      "status": "PASS",
+      "verified_file_count": 50,
+      "failures": []
+    },
+    "SHEETMETAL_V1_TOPOLOGY_SIZING_PLACEMENT": {
+      "status": "PASS",
+      "verified_file_count": 23,
+      "failures": []
+    }
+  },
+  "legacy_manifest_preserved": true,
+  "active_manifest_refreshed": true,
+  "topology_stage_manifest": "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json"
+}
