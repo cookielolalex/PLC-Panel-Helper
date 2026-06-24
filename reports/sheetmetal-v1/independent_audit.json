@@ -1,0 +1,153 @@
+{
+  "schema_version": "sheetmetal-v1-independent-audit",
+  "audit_time": "2026-06-24T12:58:06.4599371+08:00",
+  "overall_status": "PASS_WITH_RESIDUAL_RISKS",
+  "scope": {
+    "private_source_roots_inspected": false,
+    "completed_drawings_inspected": false,
+    "legacy_baseline_evidence_modified": false,
+    "files_written": [
+      "reports/sheetmetal-v1/independent_audit.md",
+      "reports/sheetmetal-v1/independent_audit.json"
+    ]
+  },
+  "git_context": {
+    "git_executable_available": false,
+    "git_diff_status": "NOT_VERIFIED",
+    "head_ref": "refs/heads/main",
+    "head_sha": "a193abc3e702d1750d40585180d8839fefd920c2",
+    "evidence": [
+      "where.exe git returned no executable",
+      ".git/HEAD and .git/refs/heads/main were read directly",
+      ".git/logs/HEAD tail was read directly"
+    ]
+  },
+  "test_execution_context": {
+    "fresh_python_run_tests_status": "NOT_VERIFIED",
+    "reason": "No runnable Python was available in this shell; python.exe was the Windows Store alias. Full run_tests.py would also write tmp outputs, while this audit was constrained to two output files.",
+    "read_only_checks": [
+      "Node REPL parsed 13 sheetmetal/component/panel/provenance schemas",
+      "Node REPL validated fixture source_facts and panel_definitions",
+      "Node REPL validated existing synthetic output JSON against key schemas",
+      "PowerShell/rg searched new namespaces and forbidden tokens without writing files"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "legacy_evidence_preserved",
+      "status": "PASS",
+      "evidence": [
+        "manifests/sheetmetal-v1/namespace_manifest.json: overwrite_legacy_evidence=false",
+        "reports/sheetmetal-v1/phase0_checkpoint_verification.json: old_evidence_rewritten=false",
+        "reports/sheetmetal-v1/phase0_checkpoint_verification.json includes legacy_evidence_hashes",
+        "reports/baseline-024, manifests/baseline-024, evals/baseline-024, manifests/reference_detection directories exist"
+      ]
+    },
+    {
+      "id": "privacy_not_approved",
+      "status": "PASS",
+      "evidence": [
+        "docs/PRIVACY_APPROVAL.md: Status NOT_APPROVED",
+        "reports/sheetmetal-v1/phase0_checkpoint_verification.json: privacy.approval_status NOT_APPROVED",
+        "docs/PRIVACY_APPROVAL.md sha256 EC70B7AB47DDBB23EC029E7E5BF0F744C96DAB641DA2056FB4CD4B1619F3489E"
+      ]
+    },
+    {
+      "id": "baseline_generation_zero",
+      "status": "PASS",
+      "evidence": [
+        "reports/sheetmetal-v1/phase0_checkpoint_verification.json: baseline_generation_attempts=0",
+        "reports/sheetmetal-v1/phase0_checkpoint_verification.json: baseline_generation_started=false",
+        "docs/SESSION_CHECKPOINT.md: Baseline generation attempts remain 0"
+      ]
+    },
+    {
+      "id": "no_real_customer_drawing_generated",
+      "status": "PASS",
+      "evidence": [
+        "reports/sheetmetal-v1/phase0_checkpoint_verification.json: real_customer_drawing_generated=false",
+        "Restricted Get-ChildItem search found no .pdf, .dwg, .dxf, .xlsx, .xlsm, or .xls files under sheetmetal-v1 namespaces",
+        "docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md: no real customer sheet-metal drawing is generated"
+      ]
+    },
+    {
+      "id": "sheetmetal_v1_namespaces_exist",
+      "status": "PASS",
+      "evidence": [
+        "reports/sheetmetal-v1 exists",
+        "manifests/sheetmetal-v1 exists",
+        "evals/sheetmetal-v1 exists",
+        "orchestration/sheetmetal-v1 exists",
+        "manifests/sheetmetal-v1/namespace_manifest.json status ACTIVE_MIGRATION_NAMESPACE"
+      ]
+    },
+    {
+      "id": "legacy_13_not_grandfathered",
+      "status": "PASS",
+      "evidence": [
+        "manifests/sheetmetal-v1/legacy_three_output_allowed_eval.json: project_count=13",
+        "manifests/sheetmetal-v1/legacy_three_output_allowed_eval.json: not_counted_as=SHEETMETAL_ALLOWED_EVAL",
+        "manifests/sheetmetal-v1/requalification_queue.json: approved_count=0",
+        "manifests/sheetmetal-v1/requalification_queue.json: 13 candidates with sheetmetal_status PENDING_REQUALIFICATION"
+      ]
+    },
+    {
+      "id": "schemas_validate_parse",
+      "status": "PASS",
+      "evidence": [
+        "Node REPL parsed 13 schemas without JSON parse errors",
+        "Fixture validation passed for 21 source_facts against schemas/source_fact.schema.json",
+        "Fixture validation passed for 1 panel_definition against schemas/panel_definition.schema.json",
+        "Existing synthetic outputs validated against source_evidence, component_register, component_type, component_instance, component_geometry, panel_assignment, panel_graph, panel_constraint_model, sheetmetal_drawing_model, and drawing_provenance_map schemas",
+        "rules/sheetmetal-v1/accessory_rules.synthetic.json validated 1 rule against schemas/accessory_rule.schema.json"
+      ]
+    },
+    {
+      "id": "synthetic_pipeline_invariants",
+      "status": "PASS",
+      "evidence": [
+        "tmp/sheetmetal_v1_pipeline_test/validation_report.json: status PASS",
+        "fan_main required_qty=1 and ordered_qty=2",
+        "breaker_conflict status=CONFLICT with model conflict",
+        "duplicate_accessory_count=0 and generated_component_instances=0",
+        "post-design/reference assignments rejected with POST_DESIGN_OR_REFERENCE_ASSIGNMENT_REJECTED",
+        "assignment placement_resolved values are false",
+        "inventory-only functional edge status UNVERIFIED",
+        "fan has REQUIRED_BY, ASSIGNED_TO_PANEL, REQUIRES_ACCESSORY, REQUIRES_CUTOUT, and MOUNTED_ON edges",
+        "dimensions retain width_mm=800, height_mm=2300, depth_mm=800",
+        "hard CONTAINMENT failure has soft_objective_override_rejected=true",
+        "drawing_provenance_map coverage_status=PASS"
+      ]
+    },
+    {
+      "id": "generator_artifacts_exclude_reference_and_post_design_tokens",
+      "status": "PASS",
+      "evidence": [
+        "tmp/sheetmetal_v1_pipeline_test/validation_report.json leakage_scan.status=PASS",
+        "tmp/sheetmetal_v1_pipeline_test/validation_report.json leakage_scan.forbidden_hits=[]",
+        "rg found forbidden tokens only in evals/fixtures/sheetmetal-v1/complete_pipeline_fixture.json and scripts/run_tests.py assertions, not in generated synthetic artifacts",
+        "scripts/sheetmetal_v1.py filters facts with is_generator_allowed_evidence and scans serialized generator artifacts in leakage_scan"
+      ]
+    }
+  ],
+  "hashes": {
+    "AGENTS.md": "4CA078C3F02217CED8491C53A11641152B38A364F157E36523408016074EB227",
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+    "docs/01_CURRENT_STATE.md": "61893133619A321CB0D1E08D729951931D5C7F47ED59C1A9A4A74C6E4FC7AA81",
+    "docs/04_DECISION_LEDGER.md": "FCE0BBA05DBF8896105EB457BADF6F7DEFB31875FBA7E1936414B141A9349764",
+    "docs/06_EVAL_LEDGER.md": "28039C0AC05EC1D0D50DDECA5AD25318019708E5AED35AA24BAB50238A029126",
+    "docs/07_CHANGELOG.md": "7C42624F1DBFDF4213473F0F46C7EA3AEE15BCBCDDE782AA00BF52C357032565",
+    "docs/SESSION_CHECKPOINT.md": "D107DDA9F4358E3A6FB2E87DE2CB98734ED4BDFC6FEB553F6334F7EB83F50D28",
+    "docs/PRIVACY_APPROVAL.md": "EC70B7AB47DDBB23EC029E7E5BF0F744C96DAB641DA2056FB4CD4B1619F3489E",
+    "reports/sheetmetal-v1/phase0_checkpoint_verification.json": "3CD97117DFA343E93B7B4777563BA33F987A3EA8AE2EC33BAF0225467F7A115D",
+    "evals/fixtures/sheetmetal-v1/complete_pipeline_fixture.json": "96F50B3279EA537B2E183E1EF9065DEEB4DEBBCC3C74AFC1C21FACD521020017",
+    "scripts/sheetmetal_v1.py": "28BEBE451D9CEA356C46C51E17E4E334AF54185C909DCBCE098DABA23800E94C",
+    "scripts/run_tests.py": "0067F90069F5539BB127225E030CFCAF6F5E9F180650B88A8F82BAA335A2A420"
+  },
+  "residual_risks": [
+    "Git diff and worktree cleanliness are NOT_VERIFIED because no Git executable was available.",
+    "Fresh full run_tests.py execution is NOT_VERIFIED in this shell because no runnable Python was available and the full runner writes tmp outputs.",
+    "reports/sheetmetal-v1/migration_report.md status says SHEETMETAL_FIRST_GOAL_MIGRATION_IN_PROGRESS while current state, checkpoint, eval ledger, and D-0025 say SHEETMETAL_MODULAR_FOUNDATION_READY_FOR_ONE_PROJECT_CALIBRATION.",
+    "Existing tmp/sheetmetal_v1_pipeline_test outputs were read but not regenerated by this audit."
+  ]
+}
