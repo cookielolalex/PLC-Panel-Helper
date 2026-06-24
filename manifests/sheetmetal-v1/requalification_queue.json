@@ -1,18 +1,19 @@
 {
   "schema_version": "sheetmetal-v1",
   "qualification_class": "SHEETMETAL_ALLOWED_EVAL",
-  "status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS",
+  "status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING",
   "approved_count": 1,
   "candidates": [
     {
       "project_id": "1110101",
       "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
-      "sheetmetal_status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS",
+      "sheetmetal_status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING",
       "selection_rank": 1,
       "selection_artifact": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
       "accepted_as_first_sheetmetal_v1_calibration_project": true,
       "acceptance_artifact": "reports/sheetmetal-v1/one-project-model-calibration/1110101/independent_audit.json",
-      "next_action": "RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION"
+      "topology_calibration_artifact": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json",
+      "next_action": "RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT"
     },
     {
       "project_id": "1110103",
@@ -76,12 +77,13 @@
     }
   ],
   "additional_corpus_search_status": "NOT_STARTED_IN_MIGRATION_TASK",
-  "baseline_status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS",
+  "baseline_status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING",
   "selected_project_id": "1110101",
-  "selection_status": "TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS",
+  "selection_status": "TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING",
   "selection_artifact": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
   "selected_candidate_bundle": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle",
   "selected_candidate_audit": "reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md",
   "first_accepted_sheetmetal_v1_calibration_project": "1110101",
-  "next_action": "RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION"
+  "topology_calibration_artifact": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json",
+  "next_action": "RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT"
 }

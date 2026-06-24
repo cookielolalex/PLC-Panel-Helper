@@ -1,0 +1,62 @@
+{
+  "schema_version": "sheetmetal-v1.topology_implementation_checkpoint.v1",
+  "status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING",
+  "project_id": "1110101",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "next_action": "RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT",
+  "sheetmetal_allowed_eval_approved_count": 1,
+  "privacy_status": "NOT_APPROVED",
+  "customer_drawing_generation_count": 0,
+  "full_tests": "PASS",
+  "legacy_scoped_freeze": "PASS",
+  "active_scoped_freeze": "PASS",
+  "topology_scoped_freeze": "PASS",
+  "deterministic_freeze": {
+    "artifact_count": 12,
+    "byte_identical_count": 12,
+    "canonical_json_match_count": 12,
+    "excluded_fields": []
+  },
+  "coverage": {
+    "assignment": {
+      "numerator": 0,
+      "denominator": 53
+    },
+    "geometry": {
+      "verified_or_generic": 0,
+      "denominator": 53
+    },
+    "sizing": {
+      "supported_dimensions": 0,
+      "denominator": 0,
+      "note": "not reported as recall for zero source-supported denominator"
+    },
+    "placement": {
+      "numerator": 0,
+      "denominator": 53
+    }
+  },
+  "blocking_categories": [
+    "SOURCE_LIMITED_PANEL_ASSIGNMENT_UNAVAILABLE",
+    "PANEL_TOPOLOGY_UNSUPPORTED_FROM_GENERATOR_SOURCES",
+    "COMPONENT_GEOMETRY_MISSING",
+    "PLACEMENT_BLOCKED_BY_ASSIGNMENT_AND_GEOMETRY"
+  ],
+  "hard_gate_zero_counts": {
+    "unsupported_critical_dimensions": 0,
+    "unsupported_panel_assignments": 0,
+    "unsupported_placements": 0,
+    "accepted_overlap_violations": 0,
+    "containment_violations": 0,
+    "clearance_violations": 0,
+    "quantity_stage_overwrite_violations": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "tracked_private_artifacts": 0,
+    "customer_drawing_generation_count": 0
+  },
+  "final_independent_adjudication_performed": false,
+  "private_content_transmission_count": 0,
+  "tracked_private_artifacts": 0
+}

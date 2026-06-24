@@ -1,12 +1,12 @@
 # Current State
 
-Current phase: one-project topology, sizing, and placement calibration in progress.
+Current phase: one-project topology, sizing, and placement implementation frozen; independent audit pending.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS`.
+Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -42,7 +42,11 @@ construction from that source-fact model; `D-0032` accepts deterministic
 private panel-assignment and typed graph construction; `D-0033` accepts
 deterministic private accessory and cutout reconciliation; `D-0034` accepts
 deterministic generator freeze evidence; `D-0035` accepts evaluator-only
-component graph metrics. These amendments do not weaken
+component graph metrics; `D-0036` accepts the independent component-register
+and graph calibration audit; `D-0037` freezes the one-project topology,
+sizing, and placement calibration protocol; and `D-0038` freezes deterministic
+topology/sizing/placement implementation evidence and evaluator-only aggregate
+metrics pending independent audit. These amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -341,9 +345,34 @@ resolution is source-limited at `0/53`, and accessory-rule scorability is
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.json`.
 
 Exact next action: run
-`RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`. Do not generate a
-customer drawing during that calibration step unless a later approved protocol
+`RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT`. Do not generate a
+customer drawing during that audit step unless a later approved protocol
 explicitly authorizes it.
 
 
 Independent component graph audit after `D-0036`: the independent audit/adjudication for candidate `1110101` passes. Checkpoint verification confirmed HEAD `abc5a86`, clean tracked worktree with only the permitted legacy untracked script, full tests `PASS`, active and legacy scoped freezes `PASS`, selected bundle verification `PASS`, privacy `NOT_APPROVED`, no tracked private artifacts, no temporary render leftovers, and no generated customer drawing/PDF/DXF/DWG. Determinism adjudication identified the two byte-only mismatches as `source_fact_model.json` and `component_register_validation.json`; both were parsed-JSON equal and canonically hash-identical with no excluded fields. All hard gates passed. `SHEETMETAL_ALLOWED_EVAL` increments from `0` to `1`, preserving `1110101` as the first accepted sheetmetal-v1 calibration project for this stage. Current next action: `RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`. Evidence is recorded in `reports/sheetmetal-v1/one-project-model-calibration/1110101/independent_audit.json`, `hard_gate_adjudication.json`, `determinism_adjudication.json`, and `manifests/sheetmetal-v1/one-project-model-calibration/1110101/audit_input_manifest.json`.
+
+Topology, sizing, and placement implementation after `D-0038`: the protocol
+for `1110101` is frozen in
+`docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md` and
+`manifests/sheetmetal-v1/one-project-topology-calibration/1110101/calibration_protocol.json`.
+The local capability probe found no approved installed solver and selected the
+deterministic greedy baseline plus hard-constraint validator. The private
+generator run stayed in `SOURCE_MODE_A_INVENTORY_ONLY` and produced 0 explicit
+or rule-assigned panel assignments, 53 safe unassigned components, 1 safe
+unresolved topology candidate, 53 missing component geometries, 0 accepted
+placements, and 53 explicit unplaced components. Unsupported assignments,
+unsupported placements, accepted overlap/containment/clearance violations,
+reference leakage, post-design leakage, tracked private artifacts, private
+transmissions, and customer PDF/DXF/DWG generation all remain `0`. The
+deterministic rerun matched `12/12` artifacts byte-for-byte and by canonical
+JSON hash. Full tests, legacy scoped freeze, active scoped freeze, and the new
+`SHEETMETAL_V1_TOPOLOGY_SIZING_PLACEMENT` scoped freeze pass. Evaluator-only
+metrics are aggregate and source-limited: assignment coverage `0/53`,
+placement coverage `0/53`, and zero-denominator sizing/topology recalls are
+not reported. Final independent adjudication was not performed in this thread.
+Evidence is recorded under
+`reports/sheetmetal-v1/one-project-topology-calibration/1110101/`.
+
+Exact next action: run
+`RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT`.

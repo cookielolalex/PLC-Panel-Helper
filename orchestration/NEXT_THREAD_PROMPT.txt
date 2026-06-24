@@ -9,12 +9,13 @@ Read the canonical checkpoint files first:
 - `docs/SESSION_CHECKPOINT.md`
 - `docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md`
 - `docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md`
+- `docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md`
 - `manifests/sheetmetal-v1/requalification_queue.json`
 - `orchestration/TASK_REGISTRY.csv`
 
 Current status:
 
-`ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS`
+`ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING`
 
 Active goal:
 
@@ -22,40 +23,56 @@ Active goal:
 
 Current qualification state:
 
-- `SHEETMETAL_ALLOWED_EVAL` approved count is `1`.
+- `SHEETMETAL_ALLOWED_EVAL` approved count remains `1`.
 - `1110101` is the first accepted sheetmetal-v1 calibration project for the modular component-register and graph stage.
+- The topology/sizing/placement implementation is frozen for audit, not independently adjudicated.
 - This is not production approval and does not authorize real customer drawing generation.
 - `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
 
-Independent audit evidence:
+Topology/sizing/placement evidence:
 
-- Audit input manifest: `manifests/sheetmetal-v1/one-project-model-calibration/1110101/audit_input_manifest.json`
-- Independent audit: `reports/sheetmetal-v1/one-project-model-calibration/1110101/independent_audit.json`
-- Hard-gate table: `reports/sheetmetal-v1/one-project-model-calibration/1110101/hard_gate_adjudication.json`
-- Determinism adjudication: `reports/sheetmetal-v1/one-project-model-calibration/1110101/determinism_adjudication.json`
+- Protocol: `docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md`
+- Machine protocol: `manifests/sheetmetal-v1/one-project-topology-calibration/1110101/calibration_protocol.json`
+- Input manifest: `manifests/sheetmetal-v1/one-project-topology-calibration/1110101/calibration_input_manifest.json`
+- Assignment summary: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/panel_assignment_recovery_summary.json`
+- Topology/sizing summary: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/topology_sizing_summary.json`
+- Placement/validation summary: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/placement_validation_summary.json`
+- Generator freeze: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/generator_freeze_summary.json`
+- Evaluator metrics: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/evaluator_metrics_summary.json`
+- Implementation checkpoint: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json`
+- Stage manifest: `evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json`
 
-Audit result summary:
+Implementation result summary:
 
 - Full tests `PASS`.
-- Active sheetmetal-v1 scoped freeze `PASS`.
 - Legacy baseline-024 scoped freeze `PASS`.
-- Selected sanitized generator bundle verification `PASS`.
-- Deterministic canonical match `9/9`; byte-identical match `7/9`.
-- The two byte-only mismatches were structurally identical parsed JSON with no excluded fields.
-- Private-content external transmissions `0`.
+- Active sheetmetal-v1 scoped freeze `PASS`.
+- Topology/sizing/placement scoped freeze `PASS`.
+- Deterministic topology-stage canonical match `12/12`; byte-identical match `12/12`.
+- Panel assignment coverage is source-limited at `0/53`.
+- Component geometry coverage is source-limited at `0/53`.
+- Placement coverage is source-limited at `0/53`.
+- Unsupported assignments `0`.
+- Unsupported placements `0`.
+- Accepted overlap/containment/clearance violations `0`.
 - Completed-reference leakage events `0`.
 - Post-design leakage events `0`.
+- Private-content external transmissions `0`.
 - Tracked private artifacts `0`.
-- Temporary render leftovers `0`.
 - Generated customer drawings/PDF/DXF/DWG `0`.
 
-Known source-limited coverage:
+Known source-limited blocking categories:
 
-- Panel assignment resolution remains safely unresolved at `0/53` and is assigned to the next calibration module.
-- Accessory-rule scorability is `0/0`; do not report recall for that denominator-zero metric.
+- `SOURCE_LIMITED_PANEL_ASSIGNMENT_UNAVAILABLE`
+- `PANEL_TOPOLOGY_UNSUPPORTED_FROM_GENERATOR_SOURCES`
+- `COMPONENT_GEOMETRY_MISSING`
+- `PLACEMENT_BLOCKED_BY_ASSIGNMENT_AND_GEOMETRY`
 
 Exact next action:
 
-`RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`
+`RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT`
 
-Do not resume the legacy three-output detector workflow. Do not modify frozen generator artifacts for the passed component-register/graph audit. Do not generate a customer drawing, PDF, DXF, or DWG unless a later approved topology/sizing/placement protocol explicitly authorizes that output.
+Do not resume the legacy three-output detector workflow. Do not modify frozen
+generator artifacts for the passed component-register/graph stage or the frozen
+topology/sizing/placement implementation. Do not generate a customer drawing,
+PDF, DXF, or DWG during the audit.

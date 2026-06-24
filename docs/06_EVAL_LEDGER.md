@@ -834,6 +834,61 @@ Evidence:
 and
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.json`.
 
+## sheetmetal-v1 one-project topology sizing placement implementation freeze
+
+Status: `FROZEN_AUDIT_PENDING`.
+
+Decision: `D-0038`.
+
+Purpose: execute `RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`
+for candidate `1110101` without generating customer drawings or performing
+final independent adjudication in the implementation thread.
+
+Protocol: `D-0037` freezes the generator/evaluator lane split, private
+workspace, source-only panel-assignment recovery, topology/sizing separation,
+placement hard constraints, deterministic rerun, and minimized evaluator
+metrics.
+
+Capability result: no approved installed OR-Tools, SciPy optimize, PuLP, or
+Z3 solver was available. The selected execution is a deterministic greedy
+baseline plus complete hard-constraint validator. No dependency download
+occurred.
+
+Private generator result: 53 component instances were processed. Source-only
+assignment recovery produced 0 explicit assignments, 0 rule assignments, 53
+safe unassigned components, and 0 unsupported assignments. Topology remained
+safe unresolved with 1 neutral candidate. Geometry coverage was source-limited
+at 0 verified/generic envelopes out of 53 component instances. Placement
+produced 0 accepted placements and 53 explicit unplaced components.
+
+Determinism result: 12 topology-stage private artifacts were rerun from
+identical frozen inputs. All 12 were byte-identical and canonical-JSON
+identical. No fields were excluded.
+
+Validation result: unsupported critical dimensions `0`, unsupported panel
+assignments `0`, unsupported placements `0`, accepted overlap violations `0`,
+containment violations `0`, clearance violations `0`, quantity-stage
+overwrite violations `0`, completed-reference leakage `0`, post-design leakage
+`0`, private transmissions `0`, tracked private artifacts `0`, and customer
+PDF/DXF/DWG generation `0`.
+
+Evaluator metrics: assignment coverage `0/53`, placement coverage `0/53`, and
+deterministic rerun `12/12`. Topology and sizing recall are not reported for
+zero source-supported denominators. Safe unresolved values are not scored as
+wrong merely because completed historical drawings may contain unavailable
+design choices.
+
+Verification result: full `scripts/run_tests.py` status `PASS`; legacy scoped
+freeze `PASS`; active sheetmetal-v1 scoped freeze `PASS`; topology-stage
+scoped freeze `PASS`.
+
+Evidence:
+`reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json`,
+`reports/sheetmetal-v1/one-project-topology-calibration/1110101/generator_freeze_summary.json`,
+`reports/sheetmetal-v1/one-project-topology-calibration/1110101/evaluator_metrics_summary.json`,
+and
+`evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json`.
+
 
 ## sheetmetal-v1 one-project independent component graph audit
 

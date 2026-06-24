@@ -372,3 +372,33 @@
 - Adjudicated the generator freeze byte-only mismatches: `source_fact_model.json` and `component_register_validation.json` are structurally identical parsed JSON with matching canonical hashes and no excluded fields.
 - Accepted `1110101` as the first sheetmetal-v1 calibration project for the modular component-register and graph stage; `SHEETMETAL_ALLOWED_EVAL` approved count is now `1`.
 - Set next action to `RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION` while preserving privacy `NOT_APPROVED` and customer drawing generation count `0`.
+- Froze the topology/sizing/placement calibration protocol for `1110101`.
+- Added deterministic topology calibration mode to `scripts/sheetmetal_v1.py`,
+  keeping private project topology, sizing, placement, constraint, provenance,
+  rule-version, schema-version, and workflow-version artifacts under ignored
+  `.private/` paths.
+- Added regression coverage for missing geometry, unassigned components,
+  post-design allocation rejection, completed-reference geometry exclusion,
+  multiple topology candidates, unsupported exact cabinet-size blocking,
+  generic geometry separation, overlap detection, containment detection,
+  clearance detection, hard constraints overriding soft objectives,
+  deterministic IDs/order, provenance coverage, and no drawing generation.
+- Recorded local capability evidence: no approved installed OR-Tools, SciPy
+  optimize, PuLP, or Z3 solver was available, so the deterministic greedy
+  baseline plus hard-constraint validator was selected without downloading
+  dependencies.
+- Ran the private `1110101` topology/sizing/placement generator twice. All 12
+  private artifacts were byte-identical and canonical-JSON identical.
+- Recorded neutral summaries: assignment coverage `0/53`, geometry coverage
+  `0/53`, placement coverage `0/53`, unsupported assignments `0`,
+  unsupported placements `0`, accepted overlap/containment/clearance
+  violations `0`, reference leakage `0`, post-design leakage `0`, private
+  transmissions `0`, tracked private artifacts `0`, and customer drawing
+  generation `0`.
+- Added `SHEETMETAL_V1_TOPOLOGY_SIZING_PLACEMENT` scoped workflow manifest and
+  verifier support. Legacy, active sheetmetal-v1, and topology-stage freezes
+  all pass.
+- Set next action to
+  `RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT` while keeping
+  `SHEETMETAL_ALLOWED_EVAL` at `1`, privacy `NOT_APPROVED`, and customer
+  drawing generation count `0`.

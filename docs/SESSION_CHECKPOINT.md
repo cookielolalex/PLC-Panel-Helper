@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: one-project topology, sizing, and placement calibration in
-progress.
+Current phase: one-project topology, sizing, and placement implementation
+frozen; independent audit pending.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS`.
+Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING`.
 
 Current candidate: `1110101`.
 
@@ -315,4 +315,40 @@ Independent component-register and graph audit:
 
 Exact next action:
 
-Run `RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`. Do not generate a customer drawing, PDF, DXF, or DWG during that calibration step unless a later approved protocol explicitly authorizes it.
+Topology, sizing, and placement implementation:
+
+- Decision: `D-0038`.
+- Status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING`.
+- Protocol:
+  `docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md`.
+- Machine protocol:
+  `manifests/sheetmetal-v1/one-project-topology-calibration/1110101/calibration_protocol.json`.
+- Capability probe: no approved installed OR-Tools, SciPy optimize, PuLP, or
+  Z3 solver; deterministic greedy baseline plus hard-constraint validator is
+  selected. No dependency download occurred.
+- Private generator output: written only to the ignored private workspace and
+  recorded in committed evidence by neutral hashes and counts.
+- Neutral result: 53 component instances, 0 explicit assignments, 0
+  rule-assigned components, 53 safe unassigned components, 1 safe unresolved
+  topology candidate, 53 missing component geometries, 0 accepted placements,
+  and 53 explicit unplaced components.
+- Determinism: 12 of 12 topology-stage private artifacts are byte-identical
+  and canonical-JSON identical across two runs.
+- Hard gates: unsupported critical dimensions `0`, unsupported panel
+  assignments `0`, unsupported placements `0`, accepted
+  overlap/containment/clearance violations `0`, reference leakage `0`,
+  post-design leakage `0`, private transmissions `0`, tracked private
+  artifacts `0`, and customer PDF/DXF/DWG generation `0`.
+- Verification: full tests `PASS`, legacy scoped freeze `PASS`, active
+  sheetmetal-v1 scoped freeze `PASS`, and topology-stage scoped freeze `PASS`.
+- Evaluator metrics: assignment coverage `0/53`, placement coverage `0/53`,
+  deterministic rerun `12/12`, and zero-denominator recall not reported for
+  unsupported sizing/topology denominators.
+- Evidence:
+  `reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json`.
+
+Exact next action:
+
+Run `RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT`. Do not
+generate a customer drawing, PDF, DXF, or DWG during that audit step unless a
+later approved protocol explicitly authorizes it.
