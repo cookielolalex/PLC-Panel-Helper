@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FILE_INDEX = ROOT / "manifests" / "all_projects_file_role_index.csv"
 TMP_ROOT = ROOT / "tmp" / "reference_detection_v4"
 BRIDGE = ROOT / "scripts" / "windows_media_ocr_signal_bridge.ps1"
-DETECTOR_VERSION = "target_output_detection_v4_local_multisignal_recovery"
+DETECTOR_VERSION = "target_output_detection_v4_1_local_layout_prior_recovery"
 SCHEMA_VERSION = "reference_detection_v4_schema_v1"
 TARGET_TYPES = {"PRODUCTION_DRAWING", "SHEETMETAL_DRAWING", "PUNCH_DRAWING"}
 NON_TARGET_TYPES = {"ELECTRICAL_DRAWING", "SOURCE_DOCUMENT", "COVER_OR_INDEX", "REVISION_NOTICE", "OTHER_DRAWING"}
@@ -255,6 +255,18 @@ def image_features(path: Path) -> dict[str, Any]:
         }
 
 
+def layout_confirms_weak_target_prior(image: dict[str, Any], page_text: str) -> bool:
+    if page_text:
+        return False
+    if not image.get("title_block_region_presence"):
+        return False
+    return (
+        image.get("coarse_text_density") in {"MEDIUM", "HIGH"}
+        or image.get("horizontal_line_density") in {"MEDIUM", "HIGH"}
+        or image.get("vertical_line_density") in {"MEDIUM", "HIGH"}
+    )
+
+
 def run_ocr_signal(image_path: Path, project_id: str, language_tag: str, disable_ocr: bool, simulate_failure: bool) -> dict[str, Any]:
     if disable_ocr:
         return {"status": "DISABLED", "role_hits": [], "project_identity_status": "NOT_FOUND", "actual_classifier": "OCR_DISABLED"}
@@ -346,6 +358,12 @@ def classify_page(
         page_type = non_target_hits[0]
         method = "EXPLICIT_NON_TARGET_CONTENT"
         confidence = 0.9
+    elif role_hint in ROLE_TARGETS and layout_confirms_weak_target_prior(image, page_text):
+        page_type = ROLE_TARGETS[role_hint]
+        target = True
+        method = "LAYOUT_CONFIRMED_WEAK_ROLE_PRIOR_NO_TEXT"
+        confidence = 0.86
+        evidence_codes.append("LAYOUT_CONFIRMED_WEAK_ROLE_PRIOR")
     elif role_hint in ROLE_TARGETS:
         page_type = "UNCLASSIFIED"
         method = "WEAK_TARGET_PRIOR_WITHOUT_PAGE_CONTENT"

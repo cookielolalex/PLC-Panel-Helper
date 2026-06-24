@@ -418,6 +418,52 @@ def create_reference_v4_image_only_pdf(path: Path, page_texts: list[str]) -> Non
     shutil.rmtree(image_dir)
 
 
+def create_reference_v4_layout_prior_pdf(path: Path, page_texts: list[str]) -> None:
+    from PIL import Image, ImageDraw, ImageFont
+    from reportlab.lib.pagesizes import letter
+    from reportlab.pdfgen import canvas
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    c = canvas.Canvas(str(path), pagesize=letter)
+    width, height = letter
+    image_dir = path.parent / f"{path.stem}_images"
+    image_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        font = ImageFont.truetype("arial.ttf", 42)
+        small = ImageFont.truetype("arial.ttf", 26)
+    except Exception:
+        font = ImageFont.load_default()
+        small = ImageFont.load_default()
+    for index, text in enumerate(page_texts, start=1):
+        image = Image.new("RGB", (850, 1100), "white")
+        draw = ImageDraw.Draw(image)
+        for x in range(80, 760, 120):
+            draw.line((x, 120, x, 760), fill="black", width=3)
+        for y in range(120, 760, 90):
+            draw.line((80, y, 760, y), fill="black", width=3)
+        draw.rectangle((450, 790, 820, 1060), outline="black", width=4)
+        for y in range(840, 1040, 50):
+            draw.line((450, y, 820, y), fill="black", width=2)
+        draw.text((110, 60), "PROJECT 1999001", fill="black", font=font)
+        draw.text((480, 805), text, fill="black", font=small)
+        png = image_dir / f"page_{index}.png"
+        image.save(png)
+        c.drawImage(str(png), 0, 0, width=width, height=height)
+        c.showPage()
+    c.save()
+    shutil.rmtree(image_dir)
+
+
+def create_blank_reference_pdf(path: Path) -> None:
+    from reportlab.lib.pagesizes import letter
+    from reportlab.pdfgen import canvas
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    c = canvas.Canvas(str(path), pagesize=letter)
+    c.showPage()
+    c.save()
+
+
 def reference_v3_manifest(path: Path, project_id: str, files: list[dict[str, str]]) -> None:
     rows = []
     for item in files:
@@ -652,6 +698,39 @@ def test_reference_detection_v4_image_only_ocr_and_failure_modes() -> None:
     assert_true(any(row["neutral_reference_file_id"] == "REF-V4-IMAGE-PUNCH" and row["page_classification"] == "UNCLASSIFIED" for row in missing_lang_pages), "missing OCR language support must fail closed")
 
 
+def test_reference_detection_v4_private_ocr_disabled_layout_prior() -> None:
+    project_id = "1999001"
+    work = ROOT / "tmp" / "reference_detection_v4_tests" / "layout_prior"
+    if work.exists():
+        shutil.rmtree(work)
+    production = work / "image_production.pdf"
+    sheetmetal = work / "image_sheetmetal.pdf"
+    punch = work / "image_punch.pdf"
+    blank_prior = work / "blank_role_prior.pdf"
+    create_reference_v4_layout_prior_pdf(production, ["CONTROL PANEL"])
+    create_reference_v4_layout_prior_pdf(sheetmetal, ["SHEET LAYOUT"])
+    create_reference_v4_layout_prior_pdf(punch, ["HOLE LAYOUT"])
+    create_blank_reference_pdf(blank_prior)
+    candidate_manifest = work / "candidate_manifest.json"
+    reference_v3_manifest(candidate_manifest, project_id, [
+        {"file_id": "REF-V4-LAYOUT-PROD", "path": str(production), "role_hint": "completed_production_drawing_reference", "metadata_text": "1999001 production role prior"},
+        {"file_id": "REF-V4-LAYOUT-SHEET", "path": str(sheetmetal), "role_hint": "completed_sheetmetal_drawing_reference", "metadata_text": "1999001 sheetmetal role prior"},
+        {"file_id": "REF-V4-LAYOUT-PUNCH", "path": str(punch), "role_hint": "completed_punch_drawing_reference", "metadata_text": "1999001 punch role prior"},
+        {"file_id": "REF-V4-BLANK-PRIOR", "path": str(blank_prior), "role_hint": "completed_production_drawing_reference", "metadata_text": "1999001 blank role prior"},
+    ])
+    output_dir = work / "out"
+    run([PY, "scripts/detect_reference_presence_v4.py", "--project-id", project_id, "--candidate-manifest", str(candidate_manifest), "--output-dir", str(output_dir), "--task-id", "TEST-REFDET-V4-LAYOUT-PRIOR", "--disable-ocr"])
+    run([PY, "scripts/verify_reference_detection_v4_output.py", "--output-dir", str(output_dir)])
+    effective = read_json(output_dir / "effective_reference_set.json")
+    pages = read_json(output_dir / "reference_page_classifications.json")["page_classifications"]
+    assert_true(effective["status"] == "VERIFIED_ALL_THREE_BY_CONTENT", "layout-confirmed weak priors should recover OCR-disabled image-only target pages")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-V4-LAYOUT-PROD" and row["page_classification"] == "PRODUCTION_DRAWING" and row["classification_method"] == "LAYOUT_CONFIRMED_WEAK_ROLE_PRIOR_NO_TEXT" for row in pages), "production role prior must require layout confirmation")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-V4-LAYOUT-SHEET" and row["page_classification"] == "SHEETMETAL_DRAWING" for row in pages), "sheetmetal role prior must recover only with layout confirmation")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-V4-LAYOUT-PUNCH" and row["page_classification"] == "PUNCH_DRAWING" for row in pages), "punch role prior must recover only with layout confirmation")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-V4-BLANK-PRIOR" and row["page_classification"] == "UNCLASSIFIED" for row in pages), "weak role prior without layout evidence must stay unclassified")
+    assert_true(not any("WINDOWS_MEDIA_OCR" in row.get("evidence_channel_codes", []) for row in pages), "private OCR disabled fixture must not use OCR")
+
+
 def test_qualification_recovery_controller_state() -> None:
     work = ROOT / "tmp" / "qualification_recovery_controller_test"
     if work.exists():
@@ -705,6 +784,7 @@ def main() -> None:
         test_windows_media_ocr_probe_minimized,
         test_reference_detection_v4_multisignal_and_conflicts,
         test_reference_detection_v4_image_only_ocr_and_failure_modes,
+        test_reference_detection_v4_private_ocr_disabled_layout_prior,
         test_qualification_recovery_controller_state,
     ]
     failures = []

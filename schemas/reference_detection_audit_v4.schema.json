@@ -18,7 +18,12 @@
   ],
   "properties": {
     "audit_id": {"type": "string"},
-    "detector_version": {"const": "target_output_detection_v4_local_multisignal_recovery"},
+    "detector_version": {
+      "enum": [
+        "target_output_detection_v4_local_multisignal_recovery",
+        "target_output_detection_v4_1_local_layout_prior_recovery"
+      ]
+    },
     "task_id": {"type": "string"},
     "project_id": {"type": "string"},
     "status": {

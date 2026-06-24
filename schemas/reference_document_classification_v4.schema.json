@@ -20,7 +20,12 @@
   ],
   "properties": {
     "schema_version": {"const": "reference_detection_v4_schema_v1"},
-    "detector_version": {"const": "target_output_detection_v4_local_multisignal_recovery"},
+    "detector_version": {
+      "enum": [
+        "target_output_detection_v4_local_multisignal_recovery",
+        "target_output_detection_v4_1_local_layout_prior_recovery"
+      ]
+    },
     "task_id": {"type": "string"},
     "project_id": {"type": "string"},
     "neutral_reference_file_id": {"type": "string"},
