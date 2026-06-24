@@ -1,0 +1,113 @@
+{
+  "task_id": "SMV1-T1-COMPONENT-GEOMETRY-RECOVERY",
+  "starting_commit": "45ab4b43e14ccb5a2183a569cbe47cbe90197e8e",
+  "ending_commit": "45ab4b43e14ccb5a2183a569cbe47cbe90197e8e",
+  "tracked_worktree_status": {
+    "before_writes": "CLEAN_TRACKED_WITH_PREEXISTING_UNTRACKED_FORBIDDEN_SCREENING_SCRIPT",
+    "after_writes": "CLEAN_TRACKED_WITH_ALLOWED_UNTRACKED_RECOVERY_OUTPUTS_AND_PREEXISTING_UNTRACKED_FORBIDDEN_SCREENING_SCRIPT",
+    "tracked_diff_after_writes": "EMPTY",
+    "tracked_private_artifacts": 0
+  },
+  "test_result": {
+    "json_parse_created_recovery_report": "PASS",
+    "component_geometry_schema_parse": "PASS",
+    "full_test_runner": "NOT_RUN_NO_CODE_CHANGE_NO_IMPLEMENTATION",
+    "reason": "No compliant implementation path existed, so the worker emitted safe unresolved recovery artifacts only."
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": {
+      "committed_status": "PASS",
+      "fresh_command": "NOT_RUN_NO_WORKFLOW_SCOPE_MUTATION"
+    },
+    "sheetmetal_v1_active": {
+      "committed_status": "PASS",
+      "fresh_command": "NOT_RUN_NO_WORKFLOW_SCOPE_MUTATION"
+    },
+    "sheetmetal_v1_topology_sizing_placement": {
+      "committed_status": "PASS",
+      "fresh_command": "NOT_RUN_NO_WORKFLOW_SCOPE_MUTATION"
+    },
+    "no_frozen_release_or_grader_mutated": true
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.json",
+    "reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.md",
+    "orchestration/master/child-results/SMV1-T1-COMPONENT-GEOMETRY-RECOVERY.json"
+  ],
+  "schemas_validated": {
+    "method": "PowerShell ConvertFrom-Json parse validation",
+    "component_geometry_schema_json_parse": "PASS",
+    "created_recovery_report_json_parse": "PASS",
+    "child_result_json_parse": "PASS",
+    "schema_validator_execution": "NOT_RUN_NO_INSTANCE_SCHEMA_FOR_RECOVERY_REPORT"
+  },
+  "hard_gates": {
+    "overall": "PASS_SAFE_UNRESOLVED",
+    "no_customer_drawing_generation": "PASS_ZERO",
+    "no_pdf_dxf_dwg_generation": "PASS_ZERO",
+    "no_completed_reference_access": "PASS_ZERO",
+    "no_post_design_access": "PASS_ZERO",
+    "no_private_workspace_access": "PASS_ZERO",
+    "no_public_lookup": "PASS_ZERO",
+    "no_private_identifier_output": "PASS_ZERO",
+    "unsupported_critical_dimensions": "PASS_ZERO",
+    "unsupported_geometry_promotions": "PASS_ZERO",
+    "unsupported_placements": "PASS_ZERO",
+    "private_content_transmissions": "PASS_ZERO"
+  },
+  "coverage": {
+    "geometry": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "SOURCE_LIMITED_SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+    },
+    "verified_model_geometry": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "NO_APPROVED_VERIFIED_COMPONENT_GEOMETRY_LIBRARY"
+    },
+    "approved_generic_conservative_envelope": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "NO_APPROVED_GENERIC_CONSERVATIVE_ENVELOPE_RULE"
+    },
+    "recovery_delta": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "NO_CODE_CHANGE"
+    }
+  },
+  "privacy_leakage_counts": {
+    "private_project_identifiers_in_outputs": 0,
+    "component_model_identifiers_in_outputs": 0,
+    "component_value_strings_in_outputs": 0,
+    "source_root_paths_in_outputs": 0,
+    "dimensions_or_coordinates_in_outputs": 0,
+    "completed_reference_details_in_outputs": 0,
+    "private_content_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0
+  },
+  "exact_final_status": "SAFE_UNRESOLVED_NO_COMPLIANT_COMPONENT_GEOMETRY_RECOVERY",
+  "exact_recommended_next_action": "Coordinator should open a proposal-first source approval branch for manufacturer catalog/component-library eligibility or a versioned generic-envelope rule, with regression tests before implementation and independent review before applying any geometry recovery.",
+  "blocker_taxonomy": [
+    "NO_APPROVED_COMPONENT_GEOMETRY_LIBRARY",
+    "NO_APPROVED_GENERIC_CONSERVATIVE_ENVELOPE_RULE",
+    "LOCAL_CATALOG_CANDIDATES_REQUIRE_HUMAN_REVIEW",
+    "LOCAL_CAD_CANDIDATES_NOT_APPROVED_FOR_GEOMETRY_EXTRACTION",
+    "PRIVATE_MODEL_IDENTIFIERS_NOT_PUBLIC_LOOKUP_ELIGIBLE",
+    "SYNTHETIC_FIXTURE_ONLY_NOT_REAL_COVERAGE",
+    "COMPONENT_GEOMETRY_MISSING"
+  ],
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "not_recorded_by_harness",
+    "completed_at": "2026-06-24T16:43:10.3410393+08:00",
+    "duration": "not_measured"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.json": "D24214F1363F66C3EDF33AA44BC6D6687285E1ABBCF09F1AE611B79D22A9F18C",
+    "reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.md": "09FD3068A379A53214A9BB5DFA96754E087D06DBD8AF615E4E21C648223CF038"
+  }
+}

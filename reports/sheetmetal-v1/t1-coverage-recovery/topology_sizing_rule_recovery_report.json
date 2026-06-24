@@ -1,0 +1,218 @@
+{
+  "schema_version": "sheetmetal-v1.t1_topology_sizing_rule_recovery_report.v1",
+  "task_id": "SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "created_at": "2026-06-24T16:44:49.9957450+08:00",
+  "status": "SAFE_UNRESOLVED_NO_CODE_CHANGE",
+  "implementation_path_exists": false,
+  "implementation_decision": {
+    "decision": "NO_COMPLIANT_EVIDENCE_BACKED_RULE_IMPLEMENTATION_PATH",
+    "reason": "Accepted repository artifacts authorize topology and sizing rules only when explicit source evidence, verified component-library entries, approved sizing/topology/clearance/mounting/thermal rules, or design choices with supported constraints exist. The committed neutral topology audit artifacts show source-limited coverage and the local rule namespace does not contain approved standard cabinet, wiring allowance, access clearance, thermal, ventilation, mounting surface, compartment, door, mounting plate, or spare-space policy rules.",
+    "code_changes_made": false,
+    "new_rules_added": [],
+    "synthetic_regression_fixtures_added": [],
+    "customer_drawing_generated": false
+  },
+  "evidence_reviewed": {
+    "authority_files": [
+      "AGENTS.md",
+      "docs/specs/MASTER_AUTOPILOT_PROTOCOL.md",
+      "docs/SESSION_CHECKPOINT.md",
+      "orchestration/NEXT_THREAD_PROMPT.txt",
+      "docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md",
+      "docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md",
+      "docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md",
+      "schemas/panel_constraint_model.schema.json",
+      "schemas/sheetmetal_drawing_model.schema.json",
+      "scripts/sheetmetal_v1.py",
+      "scripts/run_tests.py"
+    ],
+    "neutral_topology_audit_artifacts": [
+      "topology implementation checkpoint",
+      "topology sizing summary",
+      "placement validation summary",
+      "panel assignment recovery summary",
+      "generator freeze summary",
+      "evaluator metrics summary",
+      "independent audit",
+      "hard gate adjudication",
+      "determinism adjudication",
+      "coordinator audit addendum",
+      "audit input manifest",
+      "T0 child result"
+    ],
+    "local_rule_and_fixture_review": [
+      "rules/source_authority_profile.json",
+      "rules/derivation_rules/bootstrap_dimension_rule.json",
+      "rules/sheetmetal-v1/accessory_rules.synthetic.json",
+      "schemas/panel_definition.schema.json",
+      "schemas/component_type.schema.json"
+    ],
+    "forbidden_artifacts_opened": false,
+    "public_web_used": false,
+    "children_spawned": false
+  },
+  "existing_safe_support": {
+    "explicit_panel_definition_passthrough": true,
+    "explicit_mounting_surface_passthrough": true,
+    "explicit_doors_compartments_and_mounting_plates_passthrough": true,
+    "unsupported_exact_cabinet_size_block": true,
+    "hard_constraints_named_before_soft_objectives": true,
+    "safe_unresolved_statuses_preserved": true
+  },
+  "requested_rule_family_coverage": [
+    {
+      "rule_family": "enclosure_candidates",
+      "current_safe_support": "explicit panel definitions only, or safe unresolved candidate when absent",
+      "recovery_status": "UNRESOLVED",
+      "blockers": [
+        "NO_APPROVED_STANDARD_CABINET_LIBRARY",
+        "NO_APPROVED_ENCLOSURE_CANDIDATE_SELECTION_RULE"
+      ]
+    },
+    {
+      "rule_family": "mounting_surfaces",
+      "current_safe_support": "explicit panel-definition surfaces only",
+      "recovery_status": "UNRESOLVED",
+      "blockers": [
+        "NO_APPROVED_SURFACE_INFERENCE_RULE",
+        "NO_VERIFIED_MOUNTING_SURFACE_LIBRARY"
+      ]
+    },
+    {
+      "rule_family": "compartments",
+      "current_safe_support": "explicit panel-definition compartments only",
+      "recovery_status": "UNRESOLVED",
+      "blockers": [
+        "NO_APPROVED_COMPARTMENT_RULE"
+      ]
+    },
+    {
+      "rule_family": "doors",
+      "current_safe_support": "explicit panel-definition doors only",
+      "recovery_status": "UNRESOLVED",
+      "blockers": [
+        "NO_APPROVED_DOOR_TOPOLOGY_RULE"
+      ]
+    },
+    {
+      "rule_family": "plates",
+      "current_safe_support": "explicit mounting plates only",
+      "recovery_status": "UNRESOLVED",
+      "blockers": [
+        "NO_APPROVED_MOUNTING_PLATE_RULE"
+      ]
+    },
+    {
+      "rule_family": "wiring_allowance",
+      "current_safe_support": "hard constraint named, no numeric or policy rule applied",
+      "recovery_status": "UNRESOLVED",
+      "blockers": [
+        "NO_APPROVED_WIRING_ALLOWANCE_POLICY",
+        "NO_APPROVED_CABLE_BEND_ALLOWANCE_POLICY"
+      ]
+    },
+    {
+      "rule_family": "access_clearance",
+      "current_safe_support": "explicit placement-request edge clearance only in synthetic tests",
+      "recovery_status": "UNRESOLVED",
+      "blockers": [
+        "NO_APPROVED_GLOBAL_ACCESS_CLEARANCE_RULE",
+        "NO_COMPONENT_CLASS_CLEARANCE_LIBRARY"
+      ]
+    },
+    {
+      "rule_family": "thermal_ventilation_requirements",
+      "current_safe_support": "hard constraints named; synthetic accessory fan/filter rule exists but is not a topology sizing policy",
+      "recovery_status": "UNRESOLVED",
+      "blockers": [
+        "NO_APPROVED_THERMAL_RULE",
+        "NO_APPROVED_VENTILATION_REGION_RULE"
+      ]
+    },
+    {
+      "rule_family": "spare_space_policy",
+      "current_safe_support": "TBD spare-space status when panel dimensions or fill calculation support is missing",
+      "recovery_status": "UNRESOLVED",
+      "blockers": [
+        "NO_APPROVED_SPARE_SPACE_POLICY",
+        "NO_SUPPORTED_PANEL_FILL_CALCULATION_DENOMINATOR"
+      ]
+    }
+  ],
+  "coverage": {
+    "baseline_from_neutral_t0": {
+      "assignment": {
+        "numerator": 0,
+        "denominator": 53,
+        "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+      },
+      "geometry": {
+        "numerator": 0,
+        "denominator": 53,
+        "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+      },
+      "topology": {
+        "numerator": 0,
+        "denominator": 1,
+        "interpretation": "SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+      },
+      "sizing": {
+        "numerator": 0,
+        "denominator": 0,
+        "interpretation": "ZERO_SOURCE_SUPPORTED_DENOMINATOR_RECALL_NOT_REPORTED"
+      },
+      "placement": {
+        "numerator": 0,
+        "denominator": 53,
+        "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+      }
+    },
+    "t1_topology_sizing_rule_recovery": {
+      "new_rule_family_count": 0,
+      "new_synthetic_fixture_count": 0,
+      "new_supported_customer_case_coverage": 0,
+      "coverage_status": "NO_CHANGE_SAFE_UNRESOLVED"
+    }
+  },
+  "hard_gates": {
+    "unsupported_critical_dimensions": 0,
+    "unsupported_panel_assignments": 0,
+    "unsupported_placements": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "tracked_private_artifacts": 0,
+    "customer_drawing_generation_count": 0,
+    "production_approval_declared": false
+  },
+  "verification": {
+    "full_tests": "PASS",
+    "full_tests_command": "bundled-python scripts/run_tests.py",
+    "legacy_baseline_024_scoped_freeze": "PASS",
+    "sheetmetal_v1_active_scoped_freeze": "PASS",
+    "sheetmetal_v1_topology_sizing_placement_scoped_freeze": "PASS",
+    "json_parse_validation": "PASS",
+    "note": "Full tests use existing synthetic harness artifacts under tmp; no customer drawing was generated by this recovery."
+  },
+  "blocker_taxonomy": [
+    "NO_APPROVED_STANDARD_CABINET_LIBRARY",
+    "NO_APPROVED_ENCLOSURE_CANDIDATE_SELECTION_RULE",
+    "NO_APPROVED_SURFACE_INFERENCE_RULE",
+    "NO_VERIFIED_MOUNTING_SURFACE_LIBRARY",
+    "NO_APPROVED_COMPARTMENT_RULE",
+    "NO_APPROVED_DOOR_TOPOLOGY_RULE",
+    "NO_APPROVED_MOUNTING_PLATE_RULE",
+    "NO_APPROVED_WIRING_ALLOWANCE_POLICY",
+    "NO_APPROVED_CABLE_BEND_ALLOWANCE_POLICY",
+    "NO_APPROVED_GLOBAL_ACCESS_CLEARANCE_RULE",
+    "NO_COMPONENT_CLASS_CLEARANCE_LIBRARY",
+    "NO_APPROVED_THERMAL_RULE",
+    "NO_APPROVED_VENTILATION_REGION_RULE",
+    "NO_APPROVED_SPARE_SPACE_POLICY",
+    "NO_SUPPORTED_PANEL_FILL_CALCULATION_DENOMINATOR",
+    "SOURCE_LIMITED_TOPOLOGY_SIZING_COVERAGE"
+  ],
+  "exact_final_status": "SAFE_UNRESOLVED_NO_CODE_CHANGE",
+  "exact_recommended_next_action": "COORDINATOR_REVIEW_BLOCKER_TAXONOMY_AND_AUTHORIZE_SOURCE_BACKED_RULE_LIBRARY_OR_KEEP_T1_UNRESOLVED"
+}

@@ -1,0 +1,129 @@
+{
+  "task_id": "SMV1-T1-PANEL-ASSIGNMENT-RECOVERY",
+  "starting_commit": "45ab4b43e14ccb5a2183a569cbe47cbe90197e8e",
+  "ending_commit": "45ab4b43e14ccb5a2183a569cbe47cbe90197e8e",
+  "tracked_worktree_status": {
+    "git_command": "NOT_AVAILABLE_IN_SHELL",
+    "head_resolved_from_git_ref": "45ab4b43e14ccb5a2183a569cbe47cbe90197e8e",
+    "tracked_diff_before_writes": "NOT_VERIFIED_GIT_COMMAND_UNAVAILABLE",
+    "tracked_diff_after_writes": "NOT_VERIFIED_GIT_COMMAND_UNAVAILABLE",
+    "allowed_paths_written": [
+      "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.json",
+      "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.md",
+      "orchestration/master/child-results/SMV1-T1-PANEL-ASSIGNMENT-RECOVERY.json"
+    ],
+    "code_files_changed": 0,
+    "tracked_private_artifacts": "NOT_VERIFIED_FRESH_GIT_COMMAND_UNAVAILABLE_COMMITTED_EVIDENCE_ZERO"
+  },
+  "test_result": {
+    "code_change_performed": false,
+    "synthetic_regression_added": false,
+    "scripts_run_tests": "NOT_RUN_NO_CODE_CHANGE_AND_PYTHON_UNAVAILABLE",
+    "python_command_status": "NOT_AVAILABLE_IN_SHELL",
+    "json_parse_validation": "PASS",
+    "committed_topology_implementation_tests": "PASS",
+    "committed_evidence_file": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json"
+  },
+  "workflow_freeze_results": {
+    "fresh_commands": "NOT_RUN_NO_CODE_CHANGE_AND_PYTHON_UNAVAILABLE",
+    "legacy_baseline_024": {
+      "committed_status": "PASS",
+      "verified_file_count": 15
+    },
+    "sheetmetal_v1_active": {
+      "committed_status": "PASS",
+      "verified_file_count": 50
+    },
+    "sheetmetal_v1_topology_sizing_placement": {
+      "committed_status": "PASS",
+      "verified_file_count": 23
+    },
+    "evidence_file": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/stage_workflow_freeze_summary.json"
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.json",
+    "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.md",
+    "orchestration/master/child-results/SMV1-T1-PANEL-ASSIGNMENT-RECOVERY.json"
+  ],
+  "schemas_validated": {
+    "method": "PowerShell ConvertFrom-Json parse validation",
+    "created_json_parse_status": "PASS",
+    "formal_schema": "NOT_AVAILABLE_FOR_T1_PANEL_ASSIGNMENT_RECOVERY_REPORT",
+    "schema_validator_execution": "NOT_VERIFIED_PYTHON_UNAVAILABLE"
+  },
+  "hard_gates": {
+    "overall": "SAFE_UNRESOLVED_NO_CODE_CHANGE",
+    "compliant_implementation_path_exists": false,
+    "no_completed_reference_usage": "PASS",
+    "no_post_design_label_usage": "PASS",
+    "no_functional_source_escalation": "PASS_SOURCE_MODE_A_INVENTORY_ONLY",
+    "approved_panel_allocation_source_available": "FAIL_ZERO_AVAILABLE",
+    "approved_assignment_rule_available": "FAIL_ZERO_AVAILABLE",
+    "unsupported_panel_assignments": "PASS_ZERO",
+    "completed_reference_leakage": "PASS_ZERO",
+    "post_design_leakage": "PASS_ZERO",
+    "private_content_transmissions": "PASS_ZERO",
+    "customer_pdf_dxf_dwg_generation": "PASS_ZERO",
+    "production_approval_declared": false
+  },
+  "coverage": {
+    "assignment": {
+      "before": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "after": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "explicitly_assigned": 0,
+      "rule_assigned": 0,
+      "unassigned": 53,
+      "unsupported_assignment_count": 0,
+      "interpretation": "SOURCE_LIMITED_SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+    },
+    "approved_bundle_signal_scan": {
+      "artifact_count": 6,
+      "approved_panel_allocation_source_count": 0,
+      "panel_assignment_columns_with_primary_panel_allocation_role": 0,
+      "panel_assignment_columns_with_non_primary_role": 0,
+      "completed_reference_items_in_generator_bundle": 0,
+      "post_design_allocation_labels_in_generator_bundle": 0
+    },
+    "assignment_rule_scan": {
+      "approved_assignment_rule_count": 0,
+      "topology_stage_assignment_rules_count": 0
+    }
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_value_count": 0,
+    "committed_reference_dimension_count": 0,
+    "committed_reference_coordinate_count": 0,
+    "committed_reference_layout_count": 0
+  },
+  "exact_final_status": "SAFE_UNRESOLVED_NO_COMPLIANT_PANEL_ASSIGNMENT_RECOVERY_PATH",
+  "exact_recommended_next_action": "REQUEST_APPROVED_PRE_DESIGN_PANEL_ALLOCATION_SOURCE_OR_ACCEPT_DETERMINISTIC_PANEL_ASSIGNMENT_RULE_BEFORE_ASSIGNMENT_RECOVERY_RETRY",
+  "blocker_taxonomy": [
+    "NO_APPROVED_PANEL_ALLOCATION_SOURCE_IN_SELECTED_BUNDLE",
+    "NO_PANEL_ASSIGNMENT_FIELD_SIGNAL_IN_APPROVED_BUNDLE",
+    "NO_APPROVED_DETERMINISTIC_ASSIGNMENT_RULE_AVAILABLE",
+    "SOURCE_MODE_A_INVENTORY_ONLY_FUNCTIONAL_SOURCE_DISABLED",
+    "CODE_CHANGE_NOT_AUTHORIZED_WITHOUT_SOURCE_OR_RULE_SUPPORT",
+    "LOCAL_PYTHON_NOT_AVAILABLE_FOR_FRESH_TEST_COMMAND",
+    "LOCAL_GIT_COMMAND_NOT_AVAILABLE_FOR_TRACKED_STATUS"
+  ],
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "not_recorded_by_harness",
+    "completed_at": "2026-06-24T16:44:36+08:00",
+    "duration": "not_measured"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.json": "3CC279C01CBBD8485B9BC5A1735656D8945FE78DDCDFC8CE8368AE2F06980B53",
+    "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.md": "95E7A93744E5D729C4113CD79E7805E8136C9B5302AE9EC97B0E4B6D30BB85AD"
+  }
+}

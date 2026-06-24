@@ -1,0 +1,99 @@
+{
+  "schema_version": "sheetmetal-v1.t1_component_geometry_recovery_report.v1",
+  "task_id": "SMV1-T1-COMPONENT-GEOMETRY-RECOVERY",
+  "created_at": "2026-06-24T16:43:10.3410393+08:00",
+  "scope": "component geometry coverage recovery only",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "privacy_mode": "LOCAL_ONLY_PRIVACY_NOT_APPROVED",
+  "implementation_assessment": {
+    "compliant_implementation_path_exists": false,
+    "code_change_performed": false,
+    "synthetic_regression_fixture_added": false,
+    "reason": "No approved verified component geometry library, approved model-specific geometry rule, or approved generic conservative envelope rule is committed for generator use. Existing synthetic coverage only proves the topology stage preserves an already-marked generic envelope and does not authorize new real-project geometry recovery.",
+    "unsupported_actions_rejected": [
+      "public lookup using private component identifiers",
+      "opening unapproved catalog, CAD, customer drawing, or completed-reference files",
+      "promoting human-review catalog candidates to verified geometry",
+      "inventing model-specific or family-generic dimensions"
+    ]
+  },
+  "source_review_summary": {
+    "verified_model_geometry_documents_found": 0,
+    "approved_generic_conservative_envelope_rules_found": 0,
+    "approved_component_geometry_libraries_found": 0,
+    "candidate_local_catalog_indexes_reviewed": 1,
+    "candidate_local_catalogs_approved_for_generator_geometry_use": 0,
+    "candidate_local_cad_indexes_reviewed": 1,
+    "candidate_local_cad_entries_approved_for_generator_geometry_use": 0,
+    "catalog_or_cad_payload_files_opened": 0,
+    "private_component_identifiers_used_for_lookup": 0
+  },
+  "coverage": {
+    "baseline_from_neutral_t0_audit": {
+      "verified_model_geometry": 0,
+      "approved_generic_conservative_envelope": 0,
+      "geometry_missing": 53,
+      "geometry_conflict": 0,
+      "not_applicable": 0,
+      "denominator": 53
+    },
+    "recovered_by_this_task": {
+      "verified_model_geometry": 0,
+      "approved_generic_conservative_envelope": 0,
+      "geometry_missing_delta": 0,
+      "denominator": 53
+    },
+    "final_geometry_coverage": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "SOURCE_LIMITED_SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+    }
+  },
+  "provenance_and_authority": {
+    "authority_basis": [
+      "source fact authority matrix: footprint and mounting geometry require verified component library or model-specific approved rule",
+      "topology sizing placement protocol: generic envelopes must be approved conservative envelopes",
+      "component graph protocol: generic family footprints may not be marked as verified model-specific footprints",
+      "neutral T0 audit summaries: prior geometry coverage remained zero with all missing geometry kept safe"
+    ],
+    "proposal_status": "NO_IMPLEMENTATION_PROPOSAL_CREATED",
+    "verified_fact_promotion_count": 0,
+    "proposed_fact_count": 0,
+    "safe_unresolved_status": "GEOMETRY_MISSING"
+  },
+  "hard_gates": {
+    "no_customer_drawing_generation": "PASS_ZERO",
+    "no_pdf_dxf_dwg_generation": "PASS_ZERO",
+    "no_completed_reference_access": "PASS_ZERO",
+    "no_post_design_access": "PASS_ZERO",
+    "no_private_workspace_access": "PASS_ZERO",
+    "no_public_lookup": "PASS_ZERO",
+    "no_private_identifier_output": "PASS_ZERO",
+    "unsupported_critical_dimensions": "PASS_ZERO",
+    "unsupported_geometry_promotions": "PASS_ZERO",
+    "unsupported_placements": "PASS_ZERO",
+    "private_content_transmissions": "PASS_ZERO"
+  },
+  "privacy_leakage_counts": {
+    "private_project_identifiers_in_outputs": 0,
+    "component_model_identifiers_in_outputs": 0,
+    "component_value_strings_in_outputs": 0,
+    "source_root_paths_in_outputs": 0,
+    "dimensions_or_coordinates_in_outputs": 0,
+    "completed_reference_details_in_outputs": 0,
+    "private_content_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0
+  },
+  "blocker_taxonomy": [
+    "NO_APPROVED_COMPONENT_GEOMETRY_LIBRARY",
+    "NO_APPROVED_GENERIC_CONSERVATIVE_ENVELOPE_RULE",
+    "LOCAL_CATALOG_CANDIDATES_REQUIRE_HUMAN_REVIEW",
+    "LOCAL_CAD_CANDIDATES_NOT_APPROVED_FOR_GEOMETRY_EXTRACTION",
+    "PRIVATE_MODEL_IDENTIFIERS_NOT_PUBLIC_LOOKUP_ELIGIBLE",
+    "SYNTHETIC_FIXTURE_ONLY_NOT_REAL_COVERAGE",
+    "COMPONENT_GEOMETRY_MISSING"
+  ],
+  "exact_final_status": "SAFE_UNRESOLVED_NO_COMPLIANT_COMPONENT_GEOMETRY_RECOVERY",
+  "exact_recommended_next_action": "Coordinator should open a proposal-first source approval branch for manufacturer catalog/component-library eligibility or a versioned generic-envelope rule, with regression tests before implementation and independent review before applying any geometry recovery."
+}

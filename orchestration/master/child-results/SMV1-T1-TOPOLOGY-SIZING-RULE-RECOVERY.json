@@ -1,0 +1,151 @@
+{
+  "task_id": "SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY",
+  "starting_commit": "45ab4b43e14ccb5a2183a569cbe47cbe90197e8e",
+  "ending_commit": "45ab4b43e14ccb5a2183a569cbe47cbe90197e8e",
+  "tracked_worktree_status": {
+    "before_report_writes": "CLEAN_TRACKED_WITH_UNTRACKED_T1_PEER_OUTPUTS_AND_PREEXISTING_FORBIDDEN_SCREENING_SCRIPT",
+    "after_report_writes": "CLEAN_TRACKED_WITH_ALLOWED_UNTRACKED_T1_OUTPUTS_AND_PREEXISTING_FORBIDDEN_SCREENING_SCRIPT",
+    "tracked_diff": "EMPTY",
+    "unrelated_untracked_items_observed": [
+      "orchestration/master/child-results/SMV1-T1-COMPONENT-GEOMETRY-RECOVERY.json",
+      "orchestration/master/child-results/SMV1-T1-PANEL-ASSIGNMENT-RECOVERY.json",
+      "reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.json",
+      "reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.md",
+      "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.json",
+      "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.md",
+      "scripts/run_reference_detection_v4_corpus_screening.py"
+    ],
+    "tracked_private_artifacts": 0
+  },
+  "test_result": {
+    "status": "PASS",
+    "command": "bundled-python scripts/run_tests.py",
+    "note": "Existing test harness generated synthetic tmp artifacts only; this recovery did not generate customer drawings."
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": {
+      "status": "PASS",
+      "command": "bundled-python scripts/verify_frozen_workflow.py --scope legacy-baseline-024"
+    },
+    "sheetmetal_v1_active": {
+      "status": "PASS",
+      "command": "bundled-python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active"
+    },
+    "sheetmetal_v1_topology_sizing_placement": {
+      "status": "PASS",
+      "command": "bundled-python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement"
+    }
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/t1-coverage-recovery/topology_sizing_rule_recovery_report.json",
+    "reports/sheetmetal-v1/t1-coverage-recovery/topology_sizing_rule_recovery_report.md",
+    "orchestration/master/child-results/SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY.json"
+  ],
+  "schemas_validated": {
+    "method": "PowerShell ConvertFrom-Json parse validation",
+    "topology_sizing_rule_recovery_report_json": "PASS",
+    "child_result_json": "PASS_EXPECTED_POST_WRITE",
+    "json_schema_file": "NO_TASK_SPECIFIC_SCHEMA_PROVIDED"
+  },
+  "hard_gates": {
+    "overall": "PASS_SAFE_UNRESOLVED_NO_CODE_CHANGE",
+    "public_web_used": "PASS_FALSE",
+    "children_spawned": "PASS_FALSE",
+    "forbidden_artifacts_opened": "PASS_FALSE",
+    "unsupported_critical_dimensions": "PASS_ZERO",
+    "unsupported_panel_assignments": "PASS_ZERO",
+    "unsupported_placements": "PASS_ZERO",
+    "completed_reference_leakage": "PASS_ZERO",
+    "post_design_leakage": "PASS_ZERO",
+    "private_content_transmissions": "PASS_ZERO",
+    "tracked_private_artifacts": "PASS_ZERO",
+    "customer_drawing_generation_count": "PASS_ZERO",
+    "production_approval_declared": "PASS_FALSE"
+  },
+  "coverage": {
+    "baseline_from_neutral_t0": {
+      "assignment": {
+        "numerator": 0,
+        "denominator": 53,
+        "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+      },
+      "geometry": {
+        "numerator": 0,
+        "denominator": 53,
+        "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+      },
+      "topology": {
+        "numerator": 0,
+        "denominator": 1,
+        "interpretation": "SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+      },
+      "sizing": {
+        "numerator": 0,
+        "denominator": 0,
+        "interpretation": "ZERO_SOURCE_SUPPORTED_DENOMINATOR_RECALL_NOT_REPORTED"
+      },
+      "placement": {
+        "numerator": 0,
+        "denominator": 53,
+        "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+      }
+    },
+    "t1_topology_sizing_rule_recovery": {
+      "new_rule_family_count": 0,
+      "new_synthetic_fixture_count": 0,
+      "new_supported_customer_case_coverage": 0,
+      "coverage_status": "NO_CHANGE_SAFE_UNRESOLVED"
+    },
+    "requested_rule_families": {
+      "enclosure_candidates": "UNRESOLVED_NO_APPROVED_RULE_LIBRARY",
+      "mounting_surfaces": "UNRESOLVED_NO_APPROVED_RULE_LIBRARY",
+      "compartments": "UNRESOLVED_NO_APPROVED_RULE",
+      "doors": "UNRESOLVED_NO_APPROVED_RULE",
+      "plates": "UNRESOLVED_NO_APPROVED_RULE",
+      "wiring_allowance": "UNRESOLVED_NO_APPROVED_POLICY",
+      "access_clearance": "UNRESOLVED_NO_APPROVED_POLICY",
+      "thermal_ventilation_requirements": "UNRESOLVED_NO_APPROVED_POLICY",
+      "spare_space_policy": "UNRESOLVED_NO_APPROVED_POLICY"
+    }
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_reference_dimension_count": 0,
+    "committed_reference_coordinate_count": 0,
+    "committed_reference_layout_count": 0
+  },
+  "exact_final_status": "SAFE_UNRESOLVED_NO_CODE_CHANGE",
+  "exact_recommended_next_action": "COORDINATOR_REVIEW_BLOCKER_TAXONOMY_AND_AUTHORIZE_SOURCE_BACKED_RULE_LIBRARY_OR_KEEP_T1_UNRESOLVED",
+  "blocker_taxonomy": [
+    "NO_APPROVED_STANDARD_CABINET_LIBRARY",
+    "NO_APPROVED_ENCLOSURE_CANDIDATE_SELECTION_RULE",
+    "NO_APPROVED_SURFACE_INFERENCE_RULE",
+    "NO_VERIFIED_MOUNTING_SURFACE_LIBRARY",
+    "NO_APPROVED_COMPARTMENT_RULE",
+    "NO_APPROVED_DOOR_TOPOLOGY_RULE",
+    "NO_APPROVED_MOUNTING_PLATE_RULE",
+    "NO_APPROVED_WIRING_ALLOWANCE_POLICY",
+    "NO_APPROVED_CABLE_BEND_ALLOWANCE_POLICY",
+    "NO_APPROVED_GLOBAL_ACCESS_CLEARANCE_RULE",
+    "NO_COMPONENT_CLASS_CLEARANCE_LIBRARY",
+    "NO_APPROVED_THERMAL_RULE",
+    "NO_APPROVED_VENTILATION_REGION_RULE",
+    "NO_APPROVED_SPARE_SPACE_POLICY",
+    "NO_SUPPORTED_PANEL_FILL_CALCULATION_DENOMINATOR",
+    "SOURCE_LIMITED_TOPOLOGY_SIZING_COVERAGE"
+  ],
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "not_recorded_by_harness",
+    "completed_at": "2026-06-24T16:46:31.6523547+08:00",
+    "duration": "not_measured"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-coverage-recovery/topology_sizing_rule_recovery_report.json": "8AAA854555A82AF38CB78E7EE3CD837A3F4E83C08BBC586421C1CEF41FE8A0E4",
+    "reports/sheetmetal-v1/t1-coverage-recovery/topology_sizing_rule_recovery_report.md": "A310A31C13BD67F1E80D845E2C8C497CB447035C65BE93CAB423BD42246541A8",
+    "orchestration/master/child-results/SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}
