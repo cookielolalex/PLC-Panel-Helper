@@ -536,3 +536,36 @@ and `orchestration/results/SMV1-CANDIDATE-SELECTION-AUDIT.json` report `PASS`.
 
 Generation status: no customer drawing was generated. `SHEETMETAL_ALLOWED_EVAL`
 approved count remains `0`.
+
+## sheetmetal-v1 one-project component graph calibration protocol
+
+Status: `ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION_IN_PROGRESS`.
+
+Decision: `D-0028`.
+
+Purpose: freeze the one-project component-register and typed-graph calibration
+procedure for candidate `1110101` before any project-specific fact extraction.
+
+Checkpoint verification: expected HEAD `5409f29` matched
+`5409f2998eb77e3b61762b4d2d5c2f68835cb557`; the tracked worktree was clean;
+the only permitted untracked file was the known legacy v4 corpus-screening
+script; full `scripts/run_tests.py` returned final status `PASS`; legacy and
+active scoped freeze verification returned `PASS`; the selected sanitized
+bundle verifier returned `PASS`; all 17 recorded bundle hashes matched; all
+six approved decisions had worksheet fingerprints; privacy remained
+`NOT_APPROVED`; no sheetmetal-v1 customer drawing output or baseline-generation
+directory existed.
+
+Protocol result: the generator lane is source-only and
+`SOURCE_MODE_A_INVENTORY_ONLY`; the evaluator lane remains closed until
+generator artifacts are frozen and hashed; project-specific component facts and
+graph contents must be written only to an ignored private workspace; committed
+outputs are limited to neutral counts, hashes, coverage metrics, status codes,
+schemas, scripts, synthetic fixtures, and audit summaries.
+
+Generation status: no customer drawing was generated. `SHEETMETAL_ALLOWED_EVAL`
+approved count remains `0`.
+
+Evidence: `docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md`,
+`manifests/sheetmetal-v1/one-project-model-calibration/1110101/calibration_protocol.json`,
+and `reports/sheetmetal-v1/one-project-model-calibration/1110101/calibration_plan.md`.

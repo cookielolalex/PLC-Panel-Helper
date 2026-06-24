@@ -1,0 +1,221 @@
+{
+  "schema_version": "sheetmetal-v1.one_project_component_graph_calibration_protocol.v1",
+  "protocol_id": "SMV1-1110101-COMPONENT-GRAPH-CALIBRATION-V1",
+  "status": "FROZEN_PROTOCOL",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "task": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION",
+  "selected_project_id": "1110101",
+  "candidate_selection_locked": true,
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "functional_source_mode_authorized": false,
+  "starting_checkpoint": {
+    "expected_head_short": "5409f29",
+    "verified_head": "5409f2998eb77e3b61762b4d2d5c2f68835cb557",
+    "tracked_worktree_clean_before_protocol": true,
+    "only_permitted_untracked_path": "scripts/run_reference_detection_v4_corpus_screening.py",
+    "known_legacy_untracked_path_touched": false,
+    "privacy_status": "NOT_APPROVED",
+    "sheetmetal_allowed_eval_count": 0,
+    "real_customer_drawings_generated_under_v1": 0,
+    "baseline_generation_attempts": 0
+  },
+  "checkpoint_verification": {
+    "run_tests_status": "PASS",
+    "legacy_scoped_freeze_status": "PASS",
+    "active_sheetmetal_v1_scoped_freeze_status": "PASS",
+    "selected_bundle_verifier_status": "PASS",
+    "bundle_hash_cross_check_status": "PASS",
+    "bundle_hash_entry_count": 17,
+    "worksheet_fingerprint_presence_status": "PASS",
+    "approved_decision_count": 6,
+    "source_role_chronology_status": "SOURCE_ROLE_CHRONOLOGY_CLASSIFICATION_PASS",
+    "source_role_approved_count": 6,
+    "source_role_excluded_count": 12,
+    "effective_reference_package_status": "EFFECTIVE_SHEETMETAL_REFERENCE_PACKAGE_QUALIFIED",
+    "generator_bundle_reference_manifest_or_drawing_media_scan": "PASS",
+    "sheetmetal_v1_customer_drawing_output_scan": "PASS",
+    "sheetmetal_v1_baseline_generation_directory_scan": "PASS"
+  },
+  "bound_authority_files": [
+    {
+      "path": "docs/SESSION_CHECKPOINT.md",
+      "sha256": "E22255546A4CB27B236A98D038CB42F6790E41F46116F42870844099C476AE9F"
+    },
+    {
+      "path": "orchestration/NEXT_THREAD_PROMPT.txt",
+      "sha256": "20DCA8A7D8DC896E19B96C796A3188D5617BD6853AF791C48CB54491125DACE8"
+    },
+    {
+      "path": "docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md",
+      "sha256": "AD388EE5E39E576F2C8BC24D0CDB162B06438107748430D771DDFE20CFF07E79"
+    },
+    {
+      "path": "docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md",
+      "sha256": "67F25DEA549626A2ECF72DB657D66276FDDC44F6CC698ECD5728E86E25863543"
+    },
+    {
+      "path": "docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md",
+      "sha256": "72920B19759334A49323B5BE63A2B6E59B6E073D08406D0D70B5534EF67B0FBC"
+    },
+    {
+      "path": "docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md",
+      "sha256": "05EFAB1DE2FE03F845991E2E3010CD2856F4523DAA25AF55441B9DEE6485B622"
+    },
+    {
+      "path": "docs/specs/FROZEN_WORKFLOW_SCOPE_AND_LINEAGE_POLICY.md",
+      "sha256": "85282C3F78BAD4E9028834C46FA275E8CB325F44FB651606E383773565DE97B2"
+    },
+    {
+      "path": "docs/PRIVACY_APPROVAL.md",
+      "sha256": "EC70B7AB47DDBB23EC029E7E5BF0F744C96DAB641DA2056FB4CD4B1619F3489E"
+    },
+    {
+      "path": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
+      "sha256": "5EBD8164F0B02576644EA53B61018896DEAC7BF58C017E174F5F15A0303419E5"
+    },
+    {
+      "path": "reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md",
+      "sha256": "CCFFBB7F1F1EBA1B65AD29DF500F64A54E90FC716E9BF9112829504AB6B2D05B"
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/bundle_hashes.json",
+      "sha256": "1B65A8EDEAE43BB763821D329145FA78D11BDD664AD640BC4BEA8D9B6A24D029"
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/verification_results.json",
+      "sha256": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699"
+    }
+  ],
+  "generator_lane": {
+    "allowed_inputs": [
+      "verified sanitized source bundle",
+      "accepted source-role decisions",
+      "accepted chronology decisions",
+      "field-authority policy",
+      "canonical schemas",
+      "approved component-library entries",
+      "approved engineering and accessory rules",
+      "synthetic regression fixtures"
+    ],
+    "forbidden_inputs": [
+      "completed customer drawings",
+      "production-control drawing references",
+      "sheet-metal drawing references",
+      "punch drawing references",
+      "post-design allocation labels",
+      "evaluator labels",
+      "expected components",
+      "expected dimensions",
+      "expected panel assignments",
+      "expected layouts",
+      "completed-reference filenames",
+      "completed-reference hashes",
+      "completed-reference page images",
+      "completed-reference OCR",
+      "completed-reference title-block content",
+      "completed-reference answer keys"
+    ],
+    "private_project_values_may_be_written_only_to_ignored_workspace": true,
+    "model_agents_may_not_inspect_project_1110101_content": true
+  },
+  "evaluator_lane": {
+    "opens_after_generator_freeze": true,
+    "allowed_inputs_after_freeze": [
+      "frozen generated models",
+      "qualified evaluator-only sheetmetal reference package",
+      "accepted evaluator-only post-design labels",
+      "approved scoring schemas"
+    ],
+    "may_return_only": [
+      "metrics",
+      "coverage",
+      "neutral mismatch IDs",
+      "generalized error classes",
+      "severity",
+      "provenance gaps",
+      "unsupported-inference counts"
+    ],
+    "must_not_return": [
+      "completed-reference dimensions",
+      "component values",
+      "panel layouts",
+      "title-block text",
+      "images",
+      "crops",
+      "filenames",
+      "hashes",
+      "answer keys"
+    ],
+    "may_modify_generator_artifacts": false
+  },
+  "private_workspace_policy": {
+    "preferred_path": ".private/sheetmetal-v1/1110101/",
+    "must_be_git_ignored_before_project_fact_writes": true,
+    "required_check": "git check-ignore .private/sheetmetal-v1/1110101/",
+    "private_content_transmission_count_required": 0,
+    "private_values_printed_to_stdout_stderr_or_trajectories": false
+  },
+  "generator_outputs_to_freeze_privately": [
+    "source_fact_model",
+    "component_register",
+    "panel_assignment_model",
+    "typed_inventory_physical_graph",
+    "accessory_reconciliation",
+    "provenance_map",
+    "validation_report"
+  ],
+  "committed_outputs_allowed": [
+    "schemas",
+    "scripts",
+    "synthetic fixtures",
+    "neutral counts",
+    "hashes",
+    "coverage metrics",
+    "status codes",
+    "audit summaries"
+  ],
+  "committed_outputs_forbidden": [
+    "component names",
+    "manufacturer names from project data",
+    "models from project data",
+    "quantities from project data",
+    "customer text",
+    "workbook values",
+    "panel facts",
+    "project-specific graph contents"
+  ],
+  "hard_gates": {
+    "schemas": "PASS",
+    "run_tests": "PASS",
+    "scoped_workflow_freezes": "PASS",
+    "bundle_hashes_and_fingerprints": "PASS",
+    "private_content_transmission_count": 0,
+    "completed_reference_leakage_into_generator_artifacts": 0,
+    "post_design_leakage_into_generator_artifacts": 0,
+    "unsupported_critical_generated_facts": 0,
+    "silently_discarded_authorized_source_lines": 0,
+    "quantity_stage_overwrite_violations": 0,
+    "graph_referential_integrity_failures": 0,
+    "forbidden_functional_edges_inventory_only": 0,
+    "unsupported_panel_assignments": 0,
+    "duplicate_inferred_accessories": 0,
+    "temporary_private_artifact_leakage_into_git": 0,
+    "deterministic_rerun": "PASS",
+    "real_customer_drawings_generated": 0
+  },
+  "completion_statuses": {
+    "pass": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS",
+    "inconclusive_low_coverage": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_INCONCLUSIVE_LOW_COVERAGE",
+    "failure_statuses": [
+      "ONE_PROJECT_COMPONENT_CALIBRATION_FAILED_SOURCE_EXTRACTION",
+      "ONE_PROJECT_COMPONENT_CALIBRATION_FAILED_AUTHORITY_OR_CHRONOLOGY",
+      "ONE_PROJECT_COMPONENT_CALIBRATION_FAILED_REFERENCE_LEAKAGE",
+      "ONE_PROJECT_COMPONENT_CALIBRATION_FAILED_POST_DESIGN_LEAKAGE",
+      "ONE_PROJECT_COMPONENT_CALIBRATION_FAILED_UNSUPPORTED_INFERENCE",
+      "ONE_PROJECT_COMPONENT_CALIBRATION_FAILED_GRAPH_INTEGRITY",
+      "ONE_PROJECT_COMPONENT_CALIBRATION_FAILED_NONDETERMINISM",
+      "ONE_PROJECT_COMPONENT_CALIBRATION_FAILED_PRIVACY_BOUNDARY"
+    ]
+  },
+  "next_action_on_pass": "RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION"
+}

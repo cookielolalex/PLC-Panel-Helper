@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: one-project sheetmetal candidate selection and input-bundle
-freeze complete.
+Current phase: one-project component register and graph calibration protocol
+frozen; private-workspace boundary pending.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `ONE_PROJECT_SHEETMETAL_CANDIDATE_SELECTION_FREEZE_PASS`.
+Current status: `ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION_IN_PROGRESS`.
 
 Current candidate: `1110101`.
 
@@ -114,9 +114,32 @@ One-project candidate freeze:
 - `SHEETMETAL_ALLOWED_EVAL` promotion: not yet; still requires model
   calibration and adjudication.
 
+One-project component graph calibration protocol:
+
+- Decision: `D-0028`.
+- Protocol:
+  `docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md`.
+- Machine protocol:
+  `manifests/sheetmetal-v1/one-project-model-calibration/1110101/calibration_protocol.json`.
+- Plan:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/calibration_plan.md`.
+- Status: `ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION_IN_PROGRESS`.
+- Source mode: `SOURCE_MODE_A_INVENTORY_ONLY`.
+- Generator lane: source-only; no completed references, post-design labels,
+  evaluator labels, expected answers, reference hashes, images, OCR, title-block
+  text, or reviewer findings.
+- Evaluator lane: closed until generator artifacts are frozen and hashed.
+- Privacy: project-specific facts and graph contents must be written only to an
+  ignored private workspace and must not be printed or committed.
+- Checkpoint gates before protocol freeze: full tests `PASS`, legacy scoped
+  freeze `PASS`, active sheetmetal-v1 freeze `PASS`, selected bundle verifier
+  `PASS`, bundle hash cross-check `PASS`, worksheet fingerprint presence
+  `PASS`, privacy `NOT_APPROVED`, real customer drawing count `0`, baseline
+  generation attempts `0`.
+
 Exact next action:
 
-Begin one-project sheetmetal model calibration from the verified `1110101`
-source bundle. Produce canonical panel-model artifacts and evaluation evidence
-only; do not generate a customer drawing and do not promote `1110101` to
+Create and verify the ignored private workspace for `1110101`, then add the
+private-boundary tests before writing project-specific component facts or graph
+artifacts. Do not generate a customer drawing and do not promote `1110101` to
 `SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.

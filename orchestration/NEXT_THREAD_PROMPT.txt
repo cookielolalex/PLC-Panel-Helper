@@ -17,7 +17,7 @@ Read the canonical checkpoint files, especially:
 
 Current status:
 
-`ONE_PROJECT_SHEETMETAL_CANDIDATE_SELECTION_FREEZE_PASS`
+`ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION_IN_PROGRESS`
 
 Active goal:
 
@@ -94,10 +94,31 @@ Candidate selection and bundle state:
   `orchestration/results/SMV1-CANDIDATE-SELECTION-AUDIT.json`.
 - `SHEETMETAL_ALLOWED_EVAL` approved count remains `0`.
 
+One-project component graph calibration protocol:
+
+- Decision `D-0028` freezes
+  `docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md`.
+- Machine protocol:
+  `manifests/sheetmetal-v1/one-project-model-calibration/1110101/calibration_protocol.json`.
+- Plan:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/calibration_plan.md`.
+- Source mode is `SOURCE_MODE_A_INVENTORY_ONLY`.
+- Generator lane is source-only and must not see completed references,
+  post-design labels, evaluator labels, expected answers, reference hashes,
+  images, OCR, title-block content, or reviewer findings.
+- Evaluator lane remains closed until generator artifacts are frozen and hashed.
+- Project-specific component facts and graph contents must be private,
+  git-ignored, and never printed or committed.
+- Checkpoint gates before protocol freeze passed: full tests, legacy scoped
+  freeze, active sheetmetal-v1 freeze, selected bundle verifier, bundle hashes,
+  worksheet fingerprint presence, privacy `NOT_APPROVED`, no drawing output,
+  and no sheetmetal-v1 baseline-generation directory.
+
 Exact next action:
 
-Begin one-project sheetmetal model calibration from the verified `1110101`
-source bundle. Produce canonical panel-model artifacts and evaluation evidence
+Create and verify the ignored private workspace for `1110101`, then add the
+private-boundary tests before writing project-specific component facts or graph
+artifacts. Produce canonical panel-model artifacts and evaluation evidence
 only; do not start a new baseline, do not generate a customer drawing, and do
 not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and
 adjudication pass.

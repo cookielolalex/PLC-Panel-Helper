@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: one-project sheetmetal candidate selection and input-bundle
-freeze complete.
+Current phase: one-project component register and graph calibration protocol
+frozen; private-workspace boundary pending.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `ONE_PROJECT_SHEETMETAL_CANDIDATE_SELECTION_FREEZE_PASS`.
+Current status: `ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION_IN_PROGRESS`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -251,8 +251,17 @@ Independent audit passes in
 `SHEETMETAL_ALLOWED_EVAL` approved count remains `0`; no customer drawing was
 generated.
 
-Exact next action: begin one-project sheetmetal model calibration from the
-verified `1110101` sheetmetal-v1 source bundle. Produce canonical panel-model
-artifacts and evaluation evidence only; do not generate a customer drawing and
-do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until model calibration
-and adjudication pass.
+One-project component graph calibration after `D-0028`: the protocol for
+`ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION` is frozen for candidate
+`1110101`. It fixes `SOURCE_MODE_A_INVENTORY_ONLY`, isolates generator and
+evaluator lanes, binds the starting checkpoint hashes, requires an ignored
+private workspace before project fact extraction, and keeps committed outputs
+limited to neutral counts, hashes, status codes, coverage metrics, and audit
+summaries. The full test suite, legacy scoped freeze, active sheetmetal-v1
+scoped freeze, selected bundle verifier, bundle hash cross-check, worksheet
+fingerprint presence check, privacy status, no drawing-output scan, and no
+baseline-generation scan passed before protocol freeze.
+
+Exact next action: create and verify the ignored private workspace for
+`1110101`, then add the private-boundary tests before writing project-specific
+component facts or graph artifacts.

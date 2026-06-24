@@ -273,3 +273,17 @@
 - Updated `manifests/sheetmetal-v1/requalification_queue.json`: `1110101` is
   selected and bundle-verified; `SHEETMETAL_ALLOWED_EVAL` approved count
   remains `0`. No customer drawing was generated.
+- Began `ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION` for candidate
+  `1110101`.
+- Verified checkpoint gates at HEAD `5409f29`: full tests passed, legacy and
+  active scoped workflow freezes passed, the selected sanitized bundle
+  verifier passed, bundle hashes and worksheet fingerprints checked out,
+  privacy remained `NOT_APPROVED`, no sheetmetal-v1 drawing output was present,
+  and no sheetmetal-v1 baseline-generation directory existed.
+- Froze `docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md`,
+  `manifests/sheetmetal-v1/one-project-model-calibration/1110101/calibration_protocol.json`,
+  and
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/calibration_plan.md`.
+  The protocol fixes generator/evaluator lane isolation, inventory-only mode,
+  private-workspace requirements, deterministic freeze requirements, evaluator
+  metric minimization, and hard gates before project-specific fact extraction.
