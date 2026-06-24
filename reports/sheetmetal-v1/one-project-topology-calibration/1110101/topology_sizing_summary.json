@@ -1,0 +1,26 @@
+{
+  "schema_version": "sheetmetal-v1.topology_sizing_summary.v1",
+  "status": "PASS_WITH_SAFE_UNRESOLVED",
+  "project_id": "1110101",
+  "private_artifact_hashes": {
+    "topology_candidates.json": "E446A4CBEF45EA53453392B3D15B937FFAC7CF31AB89E41135C6E7EBBBFC0D90",
+    "sizing_candidates.json": "3F21A39B0C7A2317C5E98A1D330E7C8EB39322B06A8F617ACC3F47A356E03204",
+    "provenance_map.json": "9391E3D941D9FB7C1265CFFF1A1DEEEF4609BD4A48E0A6F922F1652B1CC19299"
+  },
+  "topology_candidate_count": 1,
+  "multiple_valid_candidates_preserved": false,
+  "topology_status": "PASS_WITH_SAFE_UNRESOLVED",
+  "sizing_status": "PASS_WITH_SAFE_UNRESOLVED",
+  "geometry_status_counts": {
+    "VERIFIED_MODEL_GEOMETRY": 0,
+    "APPROVED_GENERIC_CONSERVATIVE_ENVELOPE": 0,
+    "GEOMETRY_MISSING": 53,
+    "GEOMETRY_CONFLICT": 0,
+    "NOT_APPLICABLE": 0
+  },
+  "unsupported_critical_dimensions": 0,
+  "dimension_provenance": "PASS",
+  "completed_reference_leakage": 0,
+  "post_design_leakage": 0,
+  "private_content_transmission_count": 0
+}
