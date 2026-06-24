@@ -512,6 +512,69 @@ def test_signed_authority_decision_draft_scaffold_fail_closed() -> None:
     assert_true(all(check["status"] == "PASS" for check in validation["hash_checks"]), "draft hash bindings must be valid")
 
 
+def test_signed_authority_decision_submission_package() -> None:
+    work = ROOT / "tmp" / "signed_authority_decision_submission"
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+
+    accepted_decision = synthetic_signed_authority_decision(["A", "C"])
+    accepted_path = work / "accepted_decision.json"
+    accepted_out = work / "accepted_submission"
+    write_json(accepted_path, accepted_decision)
+    passed = subprocess.run(
+        [
+            PY,
+            "scripts/process_signed_authority_decision.py",
+            "--decision",
+            str(accepted_path),
+            "--output-dir",
+            str(accepted_out),
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    assert_true(passed.returncode == 0, f"valid signed decision package should pass: {passed.stdout} {passed.stderr}")
+    validation = read_json(accepted_out / "validation.json")
+    intake = read_json(accepted_out / "intake.json")
+    summary = read_json(accepted_out / "submission_summary.json")
+    assert_true(validation["status"] == "PASS", "submission package validation must pass for valid decision")
+    assert_true(intake["status"] == "PASS", "submission package intake must pass for valid decision")
+    assert_true(summary["status"] == "SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY", "accepted-lane submission status must be intake-ready")
+    assert_true(summary["selected_choice_ids"] == ["A", "C"], "submission package must preserve accepted choices")
+    assert_true(summary["next_action"] == "ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX", "accepted submission must route to test-before-fix gate")
+    assert_true(summary["implementation_authorized"] is False, "submission package must not directly authorize implementation")
+    assert_true(summary["customer_pdf_dxf_dwg_generation_authorized"] is False, "submission package must not authorize customer drawings")
+    assert_true(summary["production_approval_declared"] is False, "submission package must not declare production approval")
+    assert_true(all(check["status"] == "PASS" for check in summary["hash_checks"]), "submission package must preserve passing hash checks")
+
+    draft_path = work / "unsigned_draft.json"
+    draft_result = subprocess.run([PY, "scripts/prepare_signed_authority_decision_draft.py", "--output", str(draft_path)], cwd=ROOT, capture_output=True, text=True)
+    assert_true(draft_result.returncode == 0, f"unsigned draft setup should pass: {draft_result.stdout} {draft_result.stderr}")
+    draft_out = work / "draft_submission"
+    failed = subprocess.run(
+        [
+            PY,
+            "scripts/process_signed_authority_decision.py",
+            "--decision",
+            str(draft_path),
+            "--output-dir",
+            str(draft_out),
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    assert_true(failed.returncode != 0, "unsigned draft submission package must fail closed")
+    draft_summary = read_json(draft_out / "submission_summary.json")
+    assert_true(draft_summary["status"] == "SIGNED_AUTHORITY_DECISION_INVALID_FAIL_CLOSED", "invalid submission summary must fail closed")
+    assert_true(draft_summary["next_action"] == "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION", "invalid submission must keep waiting")
+    assert_true("NO_AUTHORITY_CHOICES_SELECTED" in draft_summary["validation_errors"], "invalid submission must surface missing choice")
+    assert_true("MISSING_SIGNER" in draft_summary["validation_errors"], "invalid submission must surface missing signer")
+    assert_true("INVALID_SIGNED_AT_DATE" in draft_summary["validation_errors"], "invalid submission must surface missing date")
+
+
 def test_bundle_verifier_rejects_leaks_and_traversal() -> None:
     bundle = ROOT / "tmp" / "bad_bundle"
     bundle.mkdir(parents=True, exist_ok=True)
@@ -1774,6 +1837,7 @@ def main() -> None:
         test_signed_authority_decision_validator_fail_closed,
         test_signed_authority_decision_intake_routing,
         test_signed_authority_decision_draft_scaffold_fail_closed,
+        test_signed_authority_decision_submission_package,
         test_bundle_verifier_rejects_leaks_and_traversal,
         test_reference_detection_v3_boundary_and_page_level_sets,
         test_reference_detection_v3_duplicates_identity_and_missing_types,

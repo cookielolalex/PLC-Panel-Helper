@@ -1,0 +1,99 @@
+{
+  "task_id": "SMV1-SIGNED-AUTHORITY-DECISION-SUBMISSION-PROCESSOR",
+  "starting_commit": "6045976b7cf57a3b458caec55a7df209fab1ec4f",
+  "ending_commit": "6045976b7cf57a3b458caec55a7df209fab1ec4f",
+  "tracked_worktree_status": {
+    "allowed_paths_written": [
+      "scripts/process_signed_authority_decision.py",
+      "scripts/run_tests.py",
+      "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+      "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json",
+      "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/validation.json",
+      "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/intake.json",
+      "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/submission_summary.json",
+      "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission_processor_summary.json",
+      "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission_processor_summary.md",
+      "orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-SUBMISSION-PROCESSOR.json"
+    ],
+    "implementation_code_files_changed": 0,
+    "authority_processing_files_changed": 1,
+    "rule_files_changed": 0,
+    "schema_files_changed": 0,
+    "source_manifests_changed": 0,
+    "frozen_releases_or_graders_mutated": false,
+    "forbidden_artifacts_opened": false
+  },
+  "test_result": {
+    "python_compile": "PASS",
+    "targeted_submission_package_test": "PASS",
+    "full_test_runner": "PASS"
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": "PASS",
+    "sheetmetal_v1_active": "PASS",
+    "sheetmetal_v1_topology_sizing_placement": "PASS"
+  },
+  "artifacts_created": [
+    "scripts/process_signed_authority_decision.py",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/validation.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/intake.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/submission_summary.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission_processor_summary.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission_processor_summary.md",
+    "orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-SUBMISSION-PROCESSOR.json"
+  ],
+  "schemas_validated": {
+    "json_parse": "PASS",
+    "unsigned_draft_submission": "FAIL_EXPECTED"
+  },
+  "hard_gates": {
+    "overall": "PASS_PROCESSOR_ONLY",
+    "authority_selected": false,
+    "implementation_applied": false,
+    "source_roots_opened": false,
+    "private_artifacts_opened": false,
+    "completed_references_opened": false,
+    "post_design_files_opened": false,
+    "public_web_used": false,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false
+  },
+  "coverage": {
+    "valid_decision_package": "PASS",
+    "unsigned_draft_fail_closed_submission": "PASS",
+    "accepted_lane_routes_to_test_before_fix": "PASS",
+    "reject_all_routes_to_terminal_review": "PASS",
+    "capability_success_claimed": false
+  },
+  "privacy_leakage_counts": {
+    "private_content_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "committed_private_values": 0
+  },
+  "exact_final_status": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED",
+  "exact_recommended_next_action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+  "blocker_taxonomy": {
+    "classification": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION_REQUIRED",
+    "same_blocking_condition_as_prior_checkpoint": true,
+    "strict_blocked_audit_count": "CONTINUATION_AFTER_UNSIGNED_DRAFT_BUT_MEANINGFUL_PROGRESS_MADE"
+  },
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "2026-06-24T17:59:20+08:00",
+    "completed_at": "2026-06-24T18:03:11.6544091+08:00"
+  },
+  "output_hashes": {
+    "scripts/run_tests.py": "DB5A23AA3376D8F8783A31F4B5F2D5B2E0EA3EF2E1505E455511764EFAA5EB12",
+    "scripts/process_signed_authority_decision.py": "B87D48109A3346DF879B85ACE6029DCEC4CAA33FC2BCF7B737F32D6379D85BDE",
+    "evals/sheetmetal-v1/frozen_workflow_manifest.json": "3A49FEF47393DE39D995C035E8FCF27D9BC15587504A4CA95DF5783D4C8B82AA",
+    "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json": "C7988D53C9E7B962E3FFF4E81C8CB6CC1F4CBAFB7166CF76948DE329ADC81FCF",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/validation.json": "F630D9892971B6B1B985E6F66E59F45ACBCA9E5C253555817DE45E46B1AB8113",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/intake.json": "C4400985EE63D189CCBAFC1D4D08BE4061EFEA053C28AC08C0A047A62653C8D1",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/submission_summary.json": "CCC41BE84CBA443F304922196B75B8AD03A84490589D320760A48386EE02086E",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission_processor_summary.json": "3165150148349B1E4E337A9386E26BB0632160DF989D8B83DEB29D80DFB6BB32",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission_processor_summary.md": "690F5BA1A1AE12C8A530C42616459F5F42B346968E1FD9298940E64AAEEBC04B",
+    "orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-SUBMISSION-PROCESSOR.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}
