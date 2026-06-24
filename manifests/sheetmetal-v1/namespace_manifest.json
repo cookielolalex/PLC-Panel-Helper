@@ -1,0 +1,17 @@
+{
+  "schema_version": "sheetmetal-v1",
+  "status": "ACTIVE_MIGRATION_NAMESPACE",
+  "namespaces": [
+    "reports/sheetmetal-v1/",
+    "manifests/sheetmetal-v1/",
+    "evals/sheetmetal-v1/",
+    "orchestration/sheetmetal-v1/"
+  ],
+  "legacy_namespaces_preserved": [
+    "reports/baseline-024/",
+    "manifests/baseline-024/",
+    "evals/baseline-024/",
+    "manifests/reference_detection/"
+  ],
+  "overwrite_legacy_evidence": false
+}
