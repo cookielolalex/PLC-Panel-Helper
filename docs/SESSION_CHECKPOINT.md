@@ -1,8 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: deterministic accessory and cutout reconciliation complete for
-one-project component graph calibration; final deterministic freeze evidence
-pending.
+Current phase: deterministic generator freeze evidence complete for one-project
+component graph calibration; evaluator-only metrics pending.
 
 Accepted release: none.
 
@@ -261,9 +260,29 @@ Accessory and cutout reconciliation:
 - Evidence:
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json`.
 
+Generator freeze evidence:
+
+- Decision: `D-0034`.
+- Rerun directory:
+  `.private/sheetmetal-v1/1110101/freeze-rerun/`.
+- Frozen input hashes: bundle hashes
+  `1B65A8EDEAE43BB763821D329145FA78D11BDD664AD640BC4BEA8D9B6A24D029`,
+  source-role/chronology classification
+  `9AA79023082793C3419E926486B46F5166E1102A0616E91E323D89692D7D1EB1`,
+  and active workflow manifest
+  `D45B722FE76E25390A5C0943F8DCFBFB7615D129DF68B9275BE5E279F28B480F`.
+- Deterministic rerun status: `PASS_CANONICAL_JSON_SEMANTIC`.
+- Artifact count: `9`; byte-identical count: `7`; canonical JSON match
+  count: `9`; excluded fields: none.
+- Hard gates: full tests `PASS`, legacy scoped freeze `PASS`, active scoped
+  freeze `PASS`, private content transmission count `0`, private Git leakage
+  `0`, and customer drawing/PDF/DXF/DWG/baseline-generation outputs `0`.
+- Evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json`.
+
 Exact next action:
 
-Produce final deterministic freeze evidence for the private `1110101` source
-fact model, component register, panel graph, and accessory reconciliation. Do
-not generate a customer drawing and do not promote `1110101` to
-`SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.
+Run evaluator-only component graph metrics against the frozen private generator
+artifacts. Do not modify generator artifacts, do not generate a customer
+drawing, and do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until
+calibration and adjudication pass.

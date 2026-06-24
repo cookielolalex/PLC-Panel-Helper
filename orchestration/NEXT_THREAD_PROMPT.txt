@@ -231,10 +231,27 @@ Accessory and cutout reconciliation:
 - Active scoped manifest is refreshed for `scripts/sheetmetal_v1.py` and
   `scripts/run_tests.py`.
 
+Generator freeze evidence:
+
+- Decision `D-0034` accepts deterministic generator freeze evidence.
+- Rerun directory:
+  `.private/sheetmetal-v1/1110101/freeze-rerun/`.
+- Deterministic rerun status: `PASS_CANONICAL_JSON_SEMANTIC`.
+- Artifact count: `9`; byte-identical count: `7`; canonical JSON match
+  count: `9`; excluded fields: none.
+- Hard gates: full tests `PASS`, legacy scoped freeze `PASS`, active scoped
+  freeze `PASS`, bundle hashes/fingerprints `PASS`, private content
+  transmission count `0`, private Git leakage `0`, and customer
+  drawing/PDF/DXF/DWG/baseline-generation outputs `0`.
+- Neutral committed evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json`
+  and
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.md`.
+
 Exact next action:
 
-Produce final deterministic freeze evidence for the private `1110101` source
-fact model, component register, panel graph, and accessory reconciliation.
-Produce canonical panel-model artifacts and evaluation evidence only; do not
-start a new baseline, do not generate a customer drawing, and do not promote
-`1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.
+Run evaluator-only component graph metrics against the frozen private
+generator artifacts. Produce evaluation evidence only; do not modify generator
+artifacts, do not start a new baseline, do not generate a customer drawing, and
+do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and
+adjudication pass.

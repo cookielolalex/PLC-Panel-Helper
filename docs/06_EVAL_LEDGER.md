@@ -765,3 +765,39 @@ Evidence:
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.md`,
 and
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json`.
+
+## sheetmetal-v1 one-project generator freeze
+
+Status: `PASS`.
+
+Decision: `D-0034`.
+
+Purpose: freeze generator-side private artifacts and prove deterministic rerun
+behavior before opening evaluator-only calibration.
+
+Implementation: the source-fact extraction, component-register, panel-graph,
+and accessory/cutout stages were rerun from the frozen sanitized source bundle
+and source-role/chronology classification into
+`.private/sheetmetal-v1/1110101/freeze-rerun/`.
+
+Deterministic result: 9 private artifacts were compared. Seven were
+byte-identical. All 9 matched under canonical JSON hashing with sorted keys
+and compact separators. No fields were excluded.
+
+Hard gates: full tests `PASS`; legacy scoped freeze `PASS`; active scoped
+freeze `PASS`; bundle hashes and worksheet fingerprints `PASS`; private
+content transmission count `0`; reference leakage `0`; post-design leakage
+`0`; unsupported critical generated facts `0`; silently discarded authorized
+source lines `0`; quantity-stage overwrite violations `0`; graph
+referential-integrity failures `0`; forbidden functional edges in
+inventory-only mode `0`; unsupported panel assignments `0`; duplicate inferred
+accessories `0`; temporary private-artifact leakage into Git `0`; customer
+drawing outputs `0`.
+
+Generation status: no customer drawing, PDF, DXF, DWG, drawing model,
+baseline generation, or `SHEETMETAL_ALLOWED_EVAL` promotion occurred.
+
+Evidence:
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.md`
+and
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json`.

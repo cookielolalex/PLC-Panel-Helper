@@ -353,3 +353,12 @@
   transmissions.
 - Recorded neutral accessory/cutout evidence under
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/`.
+- Reran the generator-side private stages under
+  `.private/sheetmetal-v1/1110101/freeze-rerun/` from the frozen sanitized
+  bundle and source-role classification.
+- Recorded deterministic generator freeze evidence: 7 of 9 private artifacts
+  were byte-identical and all 9 matched under canonical JSON hashing with no
+  excluded fields.
+- Reverified hard gates: full tests `PASS`, legacy and active scoped freezes
+  `PASS`, private content transmission `0`, private Git leakage `0`, and no
+  customer drawing/PDF/DXF/DWG/baseline-generation output.

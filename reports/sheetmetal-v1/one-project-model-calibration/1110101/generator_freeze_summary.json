@@ -1,0 +1,145 @@
+{
+  "schema_version": "sheetmetal-v1.generator_freeze_summary.v1",
+  "status": "PASS",
+  "task": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION",
+  "project_id": "1110101",
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "generator_freeze_head": "6b2148bc0e73ee9a6bf09fef541dd3bad40eab31",
+  "privacy_status": "NOT_APPROVED",
+  "runtime": {
+    "python": "3.12.13",
+    "execution_mode": "local_private_workspace_quiet_cli"
+  },
+  "input_hashes": {
+    "bundle_hashes_json": "1B65A8EDEAE43BB763821D329145FA78D11BDD664AD640BC4BEA8D9B6A24D029",
+    "bundle_verification_results_json": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699",
+    "source_role_chronology_classification_json": "9AA79023082793C3419E926486B46F5166E1102A0616E91E323D89692D7D1EB1",
+    "visible_file_manifest_json": "0BD13CDB875FEC92534AFF7C6CFACF3D001E2A4FFF517ABA2035F254F6908E79",
+    "bundle_provenance_map_json": "C617EF27CF0739F7EC1B183CA475D7ECB8606FA78E92075CBA68C87261948D4A",
+    "active_workflow_manifest_json": "D45B722FE76E25390A5C0943F8DCFBFB7615D129DF68B9275BE5E279F28B480F",
+    "synthetic_accessory_rule_fixture_json": "9D7737D3C345BFFE429092B1F8936B8963BA7D7414BD13D78283999FCB6AD7F9"
+  },
+  "stage_summary_hashes": {
+    "source_fact_extraction_summary_json": "AE205A461354C891F103ED09B9ECDE4E343EAA21298B12BAA3C665E3C37C9FAA",
+    "component_register_summary_json": "7189CF56EBEEF5CD1AA3B3B64C4A59720AF4867B3E7CBD7C7ED6365DF76F4A09",
+    "panel_graph_summary_json": "13A7BC1EB1A2FC36DA376A27845643E48C0B236402C362EA13E9B1E62B2E3F62",
+    "accessory_cutout_summary_json": "D7FEA1B61CBA23102C49975C56E2ACD628C2C48F00C2CDCABADC7E037F690B8B"
+  },
+  "deterministic_rerun": {
+    "status": "PASS_CANONICAL_JSON_SEMANTIC",
+    "artifact_count": 9,
+    "byte_match_count": 7,
+    "canonical_match_count": 9,
+    "canonicalization": "json-sort-keys-compact-separators",
+    "excluded_fields": [],
+    "byte_only_mismatch_count": 2,
+    "byte_only_mismatch_names": [
+      "source_fact_model.json",
+      "component_register_validation.json"
+    ]
+  },
+  "private_artifacts": [
+    {
+      "name": "source_fact_model.json",
+      "original_sha256": "23A1F4731794A3F6574B709567859351323AFB53F6F77849937F1E77809E5738",
+      "rerun_sha256": "6BED64203E6A692987C49E6FBB8B6655490AA21627C60771FF5E9D1EE0799436",
+      "byte_match": false,
+      "canonical_json_sha256": "36CC054C65DF022F15D6F829174B6E8A018B643CC27A092B30F15CD191DF76D6",
+      "canonical_match": true
+    },
+    {
+      "name": "source_fact_validation.json",
+      "original_sha256": "8B9DD11E67CCBFD8E9DED710D917A9D736B963FCC331FBC51382AF2AB0849B16",
+      "rerun_sha256": "8B9DD11E67CCBFD8E9DED710D917A9D736B963FCC331FBC51382AF2AB0849B16",
+      "byte_match": true,
+      "canonical_json_sha256": "FCD2AF753D457D53C3E239F532789F02CACFEF27DA542B34B8273C511111CC83",
+      "canonical_match": true
+    },
+    {
+      "name": "component_register.json",
+      "original_sha256": "D0C354C964D3D9D614E5BCE300F877DE3E43F6E7C770CA9461C7A5DF9481E247",
+      "rerun_sha256": "D0C354C964D3D9D614E5BCE300F877DE3E43F6E7C770CA9461C7A5DF9481E247",
+      "byte_match": true,
+      "canonical_json_sha256": "85CF958834F5E7AB5F9A266D1109041E9BAA8F9496B7746BB35D3C9391712DA8",
+      "canonical_match": true
+    },
+    {
+      "name": "component_register_validation.json",
+      "original_sha256": "AD1917C52019D2BDE516B414333D2761CA9C0E31DEAC537940486EE39C0D6B69",
+      "rerun_sha256": "E8C19F6DF4B03539E42D32B520B7057812619610188CC4B83054740A0EB070E9",
+      "byte_match": false,
+      "canonical_json_sha256": "53F74976134041E3868AFA9E36CF86DAFEBF0BE4567688A232ED77DE0B48E8DD",
+      "canonical_match": true
+    },
+    {
+      "name": "panel_assignment.json",
+      "original_sha256": "1531D1DFA7BD6AB329AD6964C38367C9C0094AD8B32AE2802176712F3D957FD8",
+      "rerun_sha256": "1531D1DFA7BD6AB329AD6964C38367C9C0094AD8B32AE2802176712F3D957FD8",
+      "byte_match": true,
+      "canonical_json_sha256": "AAB9EECDD629CA7C64E8E7E82F83774649D6144556F8095D79E1350D8CAEB4F3",
+      "canonical_match": true
+    },
+    {
+      "name": "panel_graph.json",
+      "original_sha256": "B3A68E597703AA8C8B6C29998F8D28A811912A071BCA34C7018F4BDB38479CB1",
+      "rerun_sha256": "B3A68E597703AA8C8B6C29998F8D28A811912A071BCA34C7018F4BDB38479CB1",
+      "byte_match": true,
+      "canonical_json_sha256": "CB0798050DA61C13794ECFACDC986750C1665B9A5CD6B86AC185473774268F4E",
+      "canonical_match": true
+    },
+    {
+      "name": "panel_graph_validation.json",
+      "original_sha256": "02209B427FFDD9C1947F7A22CD77D43E714C9930A72177DF68A9C289F1C1D9E8",
+      "rerun_sha256": "02209B427FFDD9C1947F7A22CD77D43E714C9930A72177DF68A9C289F1C1D9E8",
+      "byte_match": true,
+      "canonical_json_sha256": "8D67AE2D799B55B2FE7019FE8487C7F5780B83EC21A39288863A401F2C512163",
+      "canonical_match": true
+    },
+    {
+      "name": "accessory_requirements.json",
+      "original_sha256": "905873D62249831598177FC12DBE7225C28299202945CC4D764126995A6BAFB1",
+      "rerun_sha256": "905873D62249831598177FC12DBE7225C28299202945CC4D764126995A6BAFB1",
+      "byte_match": true,
+      "canonical_json_sha256": "03907057CD02D5EB996133278132730A7830B23A5928A852C4E77FD458D51886",
+      "canonical_match": true
+    },
+    {
+      "name": "accessory_cutout_validation.json",
+      "original_sha256": "CF7DF2955F414690F03253401B158E7A85AD8922659433039F70D85F7B2E52A9",
+      "rerun_sha256": "CF7DF2955F414690F03253401B158E7A85AD8922659433039F70D85F7B2E52A9",
+      "byte_match": true,
+      "canonical_json_sha256": "9E2EE013B9FD690D5E4527BCE4C87BBD854F8330FBF2F5A5C34B79CA97E8FAD2",
+      "canonical_match": true
+    }
+  ],
+  "hard_gates": {
+    "run_tests": "PASS",
+    "legacy_scoped_workflow_freeze": "PASS",
+    "legacy_verified_file_count": 15,
+    "active_scoped_workflow_freeze": "PASS",
+    "active_verified_file_count": 49,
+    "bundle_hashes_and_fingerprints": "PASS",
+    "private_content_transmission_count": 0,
+    "completed_reference_leakage_into_generator_artifacts": 0,
+    "post_design_leakage_into_generator_artifacts": 0,
+    "unsupported_critical_generated_facts": 0,
+    "silently_discarded_authorized_source_lines": 0,
+    "quantity_stage_overwrite_violations": 0,
+    "graph_referential_integrity_failures": 0,
+    "forbidden_functional_edges_inventory_only": 0,
+    "unsupported_panel_assignments": 0,
+    "duplicate_inferred_accessories": 0,
+    "temporary_private_artifact_leakage_into_git": 0,
+    "deterministic_rerun": "PASS_CANONICAL_JSON_SEMANTIC",
+    "real_customer_drawings_generated": 0,
+    "sheetmetal_v1_pdf_dxf_dwg_file_count": 0,
+    "sheetmetal_v1_baseline_generation_dir_exists": false
+  },
+  "privacy": {
+    "private_values_committed": false,
+    "private_values_printed_by_builders": false,
+    "private_outputs_tracked_by_git": false,
+    "private_rerun_outputs_tracked_by_git": false,
+    "customer_drawing_generated": false
+  }
+}

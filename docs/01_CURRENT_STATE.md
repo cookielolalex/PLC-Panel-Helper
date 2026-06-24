@@ -1,8 +1,7 @@
 # Current State
 
-Current phase: deterministic accessory and cutout reconciliation complete for
-one-project component graph calibration; final deterministic freeze evidence
-pending.
+Current phase: deterministic generator freeze evidence complete for one-project
+component graph calibration; evaluator-only metrics pending.
 
 Accepted release: none.
 
@@ -42,8 +41,8 @@ source-fact extraction into the private workspace with neutral committed
 summary evidence; `D-0031` accepts deterministic private component-register
 construction from that source-fact model; `D-0032` accepts deterministic
 private panel-assignment and typed graph construction; `D-0033` accepts
-deterministic private accessory and cutout reconciliation. These amendments do
-not weaken
+deterministic private accessory and cutout reconciliation; `D-0034` accepts
+deterministic generator freeze evidence. These amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -322,6 +321,16 @@ accessory/cutout files remain ignored and are recorded only by neutral hashes
 in
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json`.
 
-Exact next action: produce final deterministic freeze evidence for the private
-`1110101` source fact model, component register, panel graph, and accessory
-reconciliation before evaluator-only metrics or any adjudication.
+Generator freeze after `D-0034`: the private source-fact extraction,
+component-register, panel-graph, and accessory/cutout stages were rerun from
+the frozen sanitized bundle and source-role/chronology classification into
+`.private/sheetmetal-v1/1110101/freeze-rerun/`. Seven of nine private artifacts
+were byte-identical and all nine matched under canonical JSON hashing with no
+excluded fields. Full tests, legacy scoped freeze, active scoped freeze, bundle
+hash/fingerprint checks, privacy, reference/post-design leakage, graph,
+accessory, and no-drawing gates passed. Evidence is recorded in
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json`.
+
+Exact next action: run evaluator-only component graph metrics against the
+frozen private generator artifacts without modifying generator artifacts or
+promoting `1110101` to `SHEETMETAL_ALLOWED_EVAL`.
