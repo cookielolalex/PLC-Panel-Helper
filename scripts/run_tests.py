@@ -391,6 +391,33 @@ def create_reference_v3_pdf(path: Path, page_texts: list[str]) -> None:
     c.save()
 
 
+def create_reference_v4_image_only_pdf(path: Path, page_texts: list[str]) -> None:
+    from PIL import Image, ImageDraw, ImageFont
+    from reportlab.lib.pagesizes import letter
+    from reportlab.pdfgen import canvas
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    c = canvas.Canvas(str(path), pagesize=letter)
+    width, height = letter
+    image_dir = path.parent / f"{path.stem}_images"
+    image_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        font = ImageFont.truetype("arial.ttf", 64)
+    except Exception:
+        font = ImageFont.load_default()
+    for index, text in enumerate(page_texts, start=1):
+        image = Image.new("RGB", (1100, 420), "white")
+        draw = ImageDraw.Draw(image)
+        draw.text((60, 70), "PROJECT 1999001", fill="black", font=font)
+        draw.text((60, 210), text, fill="black", font=font)
+        png = image_dir / f"page_{index}.png"
+        image.save(png)
+        c.drawImage(str(png), 60, height / 2, width=500, height=190)
+        c.showPage()
+    c.save()
+    shutil.rmtree(image_dir)
+
+
 def reference_v3_manifest(path: Path, project_id: str, files: list[dict[str, str]]) -> None:
     rows = []
     for item in files:
@@ -540,6 +567,91 @@ def test_reference_detector_v3_known_positive_recall_gate() -> None:
         assert_true("IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION" in result["failure_reason"], f"{project_id} missing real-vision failure reason")
 
 
+def test_windows_media_ocr_probe_minimized() -> None:
+    probe = read_json(ROOT / "reports" / "baseline-024" / "reference-detector-calibration" / "windows_media_ocr_local_probe.json")
+    assert_true(probe["synthetic_execution"]["status"] == "PASS", "Windows.Media.Ocr synthetic execution must pass")
+    assert_true("PUNCH_DRAWING" in probe["synthetic_execution"]["role_hits"], "synthetic OCR must return a minimized role code")
+    assert_true(probe["language_availability"]["english_available"] is True, "English OCR language should be available")
+    assert_true(probe["language_availability"]["traditional_chinese_available"] is True, "Traditional Chinese OCR language should be available")
+    assert_true(probe["language_availability"]["simplified_chinese_available"] is False, "Simplified Chinese availability should be recorded as false in this local probe")
+    assert_true(probe["privacy"]["private_content_transmitted_outside_machine"] == 0, "OCR probe must not transmit private content")
+    assert_true(probe["privacy"]["ocr_output_appeared_in_stdout"] is False, "OCR output must not appear in stdout")
+    assert_true(probe["private_page_execution"]["status"] == "SKIPPED_NETWORK_DISABLE_BOUNDARY_NOT_ENFORCED", "private-page probe must stay skipped without enforceable network disable")
+
+
+def test_reference_detection_v4_multisignal_and_conflicts() -> None:
+    project_id = "1999001"
+    work = ROOT / "tmp" / "reference_detection_v4_tests" / "multisignal"
+    if work.exists():
+        shutil.rmtree(work)
+    combined = work / "combined.pdf"
+    electrical = work / "misleading_production_name.pdf"
+    source_confuser = work / "source_confuser.pdf"
+    create_reference_v3_pdf(combined, [
+        "PROJECT 1999001 PRODUCTION DRAWING",
+        "PROJECT 1999001 SHEET METAL DRAWING",
+        "PROJECT 1999001 PUNCH DRAWING",
+    ])
+    create_reference_v3_pdf(electrical, ["PROJECT 1999001 ELECTRICAL DRAWING"])
+    create_reference_v3_pdf(source_confuser, ["PROJECT 1999001 SOURCE DOCUMENT PUNCH DRAWING"])
+    candidate_manifest = work / "candidate_manifest.json"
+    reference_v3_manifest(candidate_manifest, project_id, [
+        {"file_id": "REF-V4-COMBINED", "path": str(combined), "metadata_text": "combined target package"},
+        {"file_id": "REF-V4-ELECTRICAL-MISLEADING", "path": str(electrical), "role_hint": "completed_production_drawing_reference", "metadata_text": "PRODUCTION_DRAWING misleading filename"},
+        {"file_id": "REF-V4-SOURCE-CONFUSER", "path": str(source_confuser), "metadata_text": "source document mentions punch"},
+    ])
+    output_dir = work / "out"
+    run([PY, "scripts/detect_reference_presence_v4.py", "--project-id", project_id, "--candidate-manifest", str(candidate_manifest), "--output-dir", str(output_dir), "--task-id", "TEST-REFDET-V4-MULTI", "--disable-ocr"])
+    run([PY, "scripts/verify_reference_detection_v4_output.py", "--output-dir", str(output_dir)])
+    effective = read_json(output_dir / "effective_reference_set.json")
+    pages = read_json(output_dir / "reference_page_classifications.json")["page_classifications"]
+    audit = read_json(output_dir / "reference_detection_audit.json")
+    assert_true(effective["status"] == "VERIFIED_ALL_THREE_COMBINED_PACKAGE", "v4 must segment combined target packages")
+    assert_true(set(effective["target_types_present"]) == {"PRODUCTION_DRAWING", "SHEETMETAL_DRAWING", "PUNCH_DRAWING"}, "v4 must detect all target roles")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-V4-ELECTRICAL-MISLEADING" and row["page_classification"] == "ELECTRICAL_DRAWING" for row in pages), "explicit electrical page content must override misleading target hints")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-V4-SOURCE-CONFUSER" and row["page_classification"] == "AMBIGUOUS" for row in pages), "source document with target words must fail closed")
+    assert_true(audit["temporary_workspace_removed"], "v4 temporary renders must be deleted")
+    assert_true(audit["generator_isolation_pass"] and audit["source_review_blindness_pass"], "v4 must preserve downstream isolation")
+
+
+def test_reference_detection_v4_image_only_ocr_and_failure_modes() -> None:
+    project_id = "1999001"
+    work = ROOT / "tmp" / "reference_detection_v4_tests" / "image_ocr"
+    if work.exists():
+        shutil.rmtree(work)
+    production = work / "production.pdf"
+    sheetmetal = work / "sheetmetal.pdf"
+    image_punch = work / "image_punch.pdf"
+    create_reference_v3_pdf(production, ["PROJECT 1999001 PRODUCTION DRAWING"])
+    create_reference_v3_pdf(sheetmetal, ["PROJECT 1999001 SHEET METAL DRAWING"])
+    create_reference_v4_image_only_pdf(image_punch, ["PUNCH DRAWING"])
+    candidate_manifest = work / "candidate_manifest.json"
+    reference_v3_manifest(candidate_manifest, project_id, [
+        {"file_id": "REF-V4-PRODUCTION", "path": str(production), "metadata_text": "production"},
+        {"file_id": "REF-V4-SHEETMETAL", "path": str(sheetmetal), "metadata_text": "sheetmetal"},
+        {"file_id": "REF-V4-IMAGE-PUNCH", "path": str(image_punch), "metadata_text": "image only punch"},
+    ])
+    output_dir = work / "out"
+    run([PY, "scripts/detect_reference_presence_v4.py", "--project-id", project_id, "--candidate-manifest", str(candidate_manifest), "--output-dir", str(output_dir), "--task-id", "TEST-REFDET-V4-OCR"])
+    run([PY, "scripts/verify_reference_detection_v4_output.py", "--output-dir", str(output_dir)])
+    effective = read_json(output_dir / "effective_reference_set.json")
+    pages = read_json(output_dir / "reference_page_classifications.json")["page_classifications"]
+    assert_true(effective["status"] == "VERIFIED_ALL_THREE_BY_CONTENT", "OCR-backed image-only punch page should complete all-three set")
+    assert_true(any(row["neutral_reference_file_id"] == "REF-V4-IMAGE-PUNCH" and row["page_classification"] == "PUNCH_DRAWING" and "WINDOWS_MEDIA_OCR" in row["evidence_channel_codes"] for row in pages), "image-only target page must use Windows OCR signal")
+
+    fail_dir = work / "out_ocr_fail"
+    run([PY, "scripts/detect_reference_presence_v4.py", "--project-id", project_id, "--candidate-manifest", str(candidate_manifest), "--output-dir", str(fail_dir), "--task-id", "TEST-REFDET-V4-OCR-FAIL", "--simulate-ocr-failure"])
+    run([PY, "scripts/verify_reference_detection_v4_output.py", "--output-dir", str(fail_dir)])
+    fail_pages = read_json(fail_dir / "reference_page_classifications.json")["page_classifications"]
+    assert_true(any(row["neutral_reference_file_id"] == "REF-V4-IMAGE-PUNCH" and row["page_classification"] == "UNCLASSIFIED" and "OCR_UNAVAILABLE" in row["evidence_channel_codes"] for row in fail_pages), "OCR failure must fail closed for image-only target pages")
+
+    missing_lang_dir = work / "out_missing_lang"
+    run([PY, "scripts/detect_reference_presence_v4.py", "--project-id", project_id, "--candidate-manifest", str(candidate_manifest), "--output-dir", str(missing_lang_dir), "--task-id", "TEST-REFDET-V4-MISSING-LANG", "--ocr-language", "zh-Hans-CN"])
+    run([PY, "scripts/verify_reference_detection_v4_output.py", "--output-dir", str(missing_lang_dir)])
+    missing_lang_pages = read_json(missing_lang_dir / "reference_page_classifications.json")["page_classifications"]
+    assert_true(any(row["neutral_reference_file_id"] == "REF-V4-IMAGE-PUNCH" and row["page_classification"] == "UNCLASSIFIED" for row in missing_lang_pages), "missing OCR language support must fail closed")
+
+
 def test_qualification_recovery_controller_state() -> None:
     work = ROOT / "tmp" / "qualification_recovery_controller_test"
     if work.exists():
@@ -590,6 +702,9 @@ def main() -> None:
         test_reference_detection_v3_boundary_and_page_level_sets,
         test_reference_detection_v3_duplicates_identity_and_missing_types,
         test_reference_detector_v3_known_positive_recall_gate,
+        test_windows_media_ocr_probe_minimized,
+        test_reference_detection_v4_multisignal_and_conflicts,
+        test_reference_detection_v4_image_only_ocr_and_failure_modes,
         test_qualification_recovery_controller_state,
     ]
     failures = []
