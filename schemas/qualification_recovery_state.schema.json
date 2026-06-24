@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Qualification Recovery State",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_at",
+    "baseline_id",
+    "decision_id",
+    "status",
+    "privacy",
+    "checkpoint_verification",
+    "current_allowed_eval",
+    "blocker_taxonomy",
+    "active_blockers",
+    "attempted_strategies",
+    "detector_calibration",
+    "candidate_queues",
+    "source_qualification",
+    "bundle_verification",
+    "local_capabilities",
+    "next_selected_action",
+    "progress_since_previous_iteration",
+    "generation_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "qualification_recovery_state_v1"},
+    "generated_at": {"type": "string"},
+    "baseline_id": {"type": "string"},
+    "decision_id": {"type": "string"},
+    "status": {
+      "enum": [
+        "RECOVERY_CONTROLLER_READY",
+        "RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE",
+        "RECOVERY_BLOCKED",
+        "TWENTY_FOUR_ALLOWED_EVAL_PROJECTS_BASELINE_GENERATION_PENDING",
+        "STRUCTURAL_CORPUS_INSUFFICIENCY"
+      ]
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "approval_status",
+        "private_reference_pages_sent_to_external_or_inherited_models",
+        "private_reference_pages_inspected_by_actual_vision_agents",
+        "external_network_use_authorized"
+      ],
+      "properties": {
+        "approval_status": {"enum": ["NOT_APPROVED", "APPROVED"]},
+        "private_reference_pages_sent_to_external_or_inherited_models": {"type": "integer", "minimum": 0},
+        "private_reference_pages_inspected_by_actual_vision_agents": {"type": "integer", "minimum": 0},
+        "external_network_use_authorized": {"type": "boolean"}
+      }
+    },
+    "checkpoint_verification": {
+      "type": "object",
+      "required": [
+        "git_head",
+        "worktree_clean",
+        "accepted_bundle_hashes",
+        "frozen_workflow_hashes",
+        "privacy_status",
+        "baseline_generation_absence"
+      ],
+      "properties": {
+        "git_head": {"type": "string"},
+        "worktree_clean": {"type": ["boolean", "null"]},
+        "accepted_bundle_hashes": {"type": "object"},
+        "frozen_workflow_hashes": {"type": "object"},
+        "privacy_status": {"type": "string"},
+        "baseline_generation_absence": {"type": "object"}
+      }
+    },
+    "current_allowed_eval": {
+      "type": "object",
+      "required": ["required_count", "current_count", "deficit", "reserve_target", "project_ids"],
+      "properties": {
+        "required_count": {"type": "integer", "minimum": 24},
+        "current_count": {"type": "integer", "minimum": 0},
+        "deficit": {"type": "integer", "minimum": 0},
+        "reserve_target": {"type": "integer", "minimum": 0},
+        "project_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "blocker_taxonomy": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/blocker_class"}
+    },
+    "active_blockers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["blocker_class", "status", "recoverable", "detail"],
+        "properties": {
+          "blocker_class": {"$ref": "#/$defs/blocker_class"},
+          "status": {"type": "string"},
+          "recoverable": {"type": "boolean"},
+          "detail": {"type": "string"}
+        }
+      }
+    },
+    "attempted_strategies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["strategy_id", "status", "strategy_signature", "evidence_hashes"],
+        "properties": {
+          "strategy_id": {"type": "string"},
+          "status": {"type": "string"},
+          "strategy_signature": {"type": "string"},
+          "evidence_hashes": {"type": "array", "items": {"type": "object"}}
+        }
+      }
+    },
+    "detector_calibration": {"type": "object"},
+    "candidate_queues": {"type": "object"},
+    "source_qualification": {"type": "object"},
+    "bundle_verification": {"type": "object"},
+    "local_capabilities": {"type": "object"},
+    "next_selected_action": {
+      "type": "object",
+      "required": ["action_id", "phase", "status", "reason"],
+      "properties": {
+        "action_id": {"type": "string"},
+        "phase": {"type": "string"},
+        "status": {"type": "string"},
+        "reason": {"type": "string"}
+      }
+    },
+    "progress_since_previous_iteration": {"type": "object"},
+    "generation_boundary": {
+      "type": "object",
+      "required": ["baseline_generation_authorized", "baseline_generation_attempts_observed"],
+      "properties": {
+        "baseline_generation_authorized": {"type": "boolean"},
+        "baseline_generation_attempts_observed": {"type": "integer", "minimum": 0}
+      }
+    }
+  },
+  "$defs": {
+    "blocker_class": {
+      "enum": [
+        "RECOVERABLE_DETECTOR_LIMITATION",
+        "RECOVERABLE_OCR_LIMITATION",
+        "RECOVERABLE_PARSER_LIMITATION",
+        "RECOVERABLE_SANITIZATION_LIMITATION",
+        "RECOVERABLE_PROCEDURE_AMBIGUITY",
+        "SUBSTANTIVE_REFERENCE_INCOMPLETE",
+        "SUBSTANTIVE_SOURCE_DISQUALIFICATION",
+        "PRIVACY_PERMISSION_REQUIRED",
+        "UNKNOWN_REQUIRES_NEW_TEST"
+      ]
+    }
+  }
+}

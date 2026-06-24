@@ -540,6 +540,40 @@ def test_reference_detector_v3_known_positive_recall_gate() -> None:
         assert_true("IMAGE_OR_NO_TARGET_TEXT_WITHOUT_REAL_VISION_CLASSIFICATION" in result["failure_reason"], f"{project_id} missing real-vision failure reason")
 
 
+def test_qualification_recovery_controller_state() -> None:
+    work = ROOT / "tmp" / "qualification_recovery_controller_test"
+    if work.exists():
+        shutil.rmtree(work)
+    report_dir = work / "reports"
+    queue_path = work / "queue.json"
+    run([
+        PY,
+        "scripts/run_qualification_recovery.py",
+        "--report-dir",
+        str(report_dir),
+        "--queue-path",
+        str(queue_path),
+        "--skip-capability-probe",
+    ])
+    state_path = report_dir / "recovery_state.json"
+    state = read_json(state_path)
+    errors = validate(state, read_json(ROOT / "schemas/qualification_recovery_state.schema.json"))
+    assert_true(not errors, f"qualification recovery state schema errors: {errors}")
+    assert_true(state["decision_id"] == "D-0021", "recovery state must bind to accepted decision D-0021")
+    assert_true(state["current_allowed_eval"]["current_count"] == 13, "current ALLOWED_EVAL count must remain 13")
+    assert_true(state["current_allowed_eval"]["deficit"] == 11, "deficit must remain 11")
+    assert_true(state["privacy"]["approval_status"] == "NOT_APPROVED", "privacy approval must remain NOT_APPROVED")
+    assert_true(state["privacy"]["private_reference_pages_inspected_by_actual_vision_agents"] == 0, "private vision inspection count must stay zero")
+    assert_true(state["detector_calibration"]["regression_gate_behavior_status"] == "PASS_BLOCKS_KNOWN_FAILING_DETECTOR", "gate behavior must be reported separately")
+    assert_true(state["detector_calibration"]["detector_performance_status"] == "FAIL", "v3 detector performance must remain failed")
+    assert_true("RECOVERABLE_DETECTOR_LIMITATION" in state["blocker_taxonomy"], "recoverable detector blocker class missing")
+    assert_true(state["next_selected_action"]["action_id"] == "RUN_LOCAL_CAPABILITY_DISCOVERY", "test-mode next action should be capability discovery")
+    assert_true(queue_path.exists(), "qualification recovery queue must be written")
+    queue = read_json(queue_path)
+    assert_true(queue["privacy_minimization"]["stores_private_paths"] is False, "queue must not store private paths")
+    assert_true(queue["privacy_minimization"]["stores_reference_content"] is False, "queue must not store reference content")
+
+
 def main() -> None:
     tests = [
         test_json_schemas_parse,
@@ -556,6 +590,7 @@ def main() -> None:
         test_reference_detection_v3_boundary_and_page_level_sets,
         test_reference_detection_v3_duplicates_identity_and_missing_types,
         test_reference_detector_v3_known_positive_recall_gate,
+        test_qualification_recovery_controller_state,
     ]
     failures = []
     for test in tests:
