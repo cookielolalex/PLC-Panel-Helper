@@ -947,3 +947,43 @@ Evidence:
 `reports/sheetmetal-v1/one-project-topology-calibration/1110101/coordinator_audit_addendum.json`,
 and
 `orchestration/master/child-results/SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT.json`.
+
+## sheetmetal-v1 T1 targeted coverage recovery
+
+Status: `T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED_SOURCE_RULE_PROPOSAL_PENDING`.
+
+Decision: `D-0040`.
+
+Purpose: attempt bounded recovery for the T0 low-coverage result without
+inventing unsupported panel assignments, component geometry, topology, sizing,
+or placements.
+
+Worker result: the panel-assignment, component-geometry, and
+topology/sizing-rule recovery workers all returned safe-unresolved outcomes.
+They found no compliant approved-source or approved-rule path and made no
+implementation, rule, schema, frozen-release, or frozen-grader changes.
+
+Integration result: `SAFE_UNRESOLVED_T1_NO_COMPLIANT_CODE_OR_RULE_RECOVERY_PATHS_AUDIT_REQUIRED`.
+
+Independent audit result:
+`PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS`.
+
+Coordinator addendum: full `scripts/run_tests.py` passed with the bundled
+runtime, and the legacy baseline-024, active sheetmetal-v1, and
+topology-stage scoped frozen workflow verifiers all passed.
+
+Coverage remains source-limited: assignment `0/53`, component geometry `0/53`,
+topology `0/1`, sizing `0/0`, and placement `0/53`. This is safe unresolved
+evidence only, not engineering capability success and not drawing readiness.
+
+Generation status: no customer drawing, PDF, DXF, or DWG was generated; no
+production approval was declared; `SHEETMETAL_ALLOWED_EVAL` remains `1`.
+
+Evidence:
+`reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.json`,
+`reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.json`,
+`reports/sheetmetal-v1/t1-coverage-recovery/topology_sizing_rule_recovery_report.json`,
+`reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json`,
+`reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json`,
+`reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json`,
+and `orchestration/master/child-results/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.json`.

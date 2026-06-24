@@ -416,3 +416,18 @@
 - Set next action to `RUN_TARGETED_COVERAGE_RECOVERY_T1` while keeping
   `SHEETMETAL_ALLOWED_EVAL` at `1`, privacy `NOT_APPROVED`, and customer
   drawing generation count `0`.
+- Recorded T1 targeted recovery results for panel assignment, component
+  geometry, and topology/sizing rules. All three branches returned safe
+  unresolved because no compliant approved-source or approved-rule recovery
+  path exists at the current authority level.
+- Integrated T1 worker outputs and accepted the independent T1 recovery audit
+  as `PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS`.
+- Resolved the auditor's Python-runtime limitation with coordinator-side full
+  tests and legacy, active sheetmetal-v1, and topology-stage scoped freeze
+  verification; all passed.
+- Preserved hard gates: no implementation code/rule/schema/frozen artifacts
+  changed during T1, no customer drawing/PDF/DXF/DWG was generated, no
+  production approval was declared, and coverage remains assignment `0/53`,
+  component geometry `0/53`, topology `0/1`, sizing `0/0`, and placement
+  `0/53`.
+- Set next action to `RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH`.

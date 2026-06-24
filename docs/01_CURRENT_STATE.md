@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: one-project topology, sizing, and placement audit completed
-with source-limited low coverage; targeted recovery pending.
+Current phase: T1 targeted coverage recovery accepted as safe unresolved;
+proposal-first source/rule approval branch pending.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT_INCONCLUSIVE_LOW_COVERAGE_T1_PENDING`.
+Current status: `T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED_SOURCE_RULE_PROPOSAL_PENDING`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -49,7 +49,10 @@ sizing, and placement calibration protocol; `D-0038` freezes deterministic
 topology/sizing/placement implementation evidence and evaluator-only aggregate
 metrics pending independent audit; and `D-0039` accepts the independent
 topology/sizing/placement audit as safety/integrity pass but engineering
-coverage inconclusive at low coverage, requiring targeted T1 recovery. These
+coverage inconclusive at low coverage, requiring targeted T1 recovery; and
+`D-0040` accepts T1 targeted recovery and the independent recovery audit as
+safe unresolved with no compliant code/rule recovery path, requiring a
+proposal-first source/rule approval branch. These
 amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
@@ -393,5 +396,16 @@ Evidence is recorded in
 `coordinator_audit_addendum.json`, and
 `manifests/sheetmetal-v1/one-project-topology-calibration/1110101/audit_input_manifest.json`.
 
+T1 targeted recovery after `D-0040`: the three T1 workers found no compliant
+approved-source or approved-rule path for panel assignment, component geometry,
+or topology/sizing/placement recovery. The integration result and independent
+audit both pass as `SAFE_UNRESOLVED`; no implementation code, rules, schemas,
+frozen releases, frozen graders, customer drawings, PDFs, DXFs, or DWGs were
+changed or generated. Coordinator verification reran full tests and legacy,
+active sheetmetal-v1, and topology-stage scoped freezes with the bundled
+runtime; all passed. Coverage remains assignment `0/53`, component geometry
+`0/53`, topology `0/1`, sizing `0/0`, and placement `0/53`. This is not
+capability success and does not authorize drawing generation.
+
 Exact next action: run
-`RUN_TARGETED_COVERAGE_RECOVERY_T1`.
+`RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH`.

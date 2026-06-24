@@ -2,22 +2,23 @@
   "schema_version": "master-autopilot-v1",
   "queue": [
     {
-      "task_id": "SMV1-T1-INDEPENDENT-RECOVERY-AUDIT",
-      "stage_id": "T1",
-      "role": "independent_auditor",
-      "status": "IN_PROGRESS",
-      "agent_id": "019ef8d8-4332-7f23-90d9-7fb8626afa56",
-      "starting_commit": "a6cf5d98baea9e577939bb5e529f34070c3f24fb",
-      "action": "AUDIT_T1_SAFE_UNRESOLVED_NO_COMPLIANT_RECOVERY_PATHS",
-      "expected_result_path": "orchestration/master/child-results/SMV1-T1-INDEPENDENT-RECOVERY-AUDIT.json",
+      "task_id": "SMV1-SOURCE-RULE-APPROVAL-PROPOSAL",
+      "stage_id": "SOURCE_RULE_APPROVAL_BRANCH",
+      "role": "coordinator",
+      "status": "PENDING",
+      "agent_id": "ROOT_COORDINATOR",
+      "starting_commit": "cea602a46f978a74a746cf97e09784c43953c0cd",
+      "action": "CREATE_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_PACKET",
+      "expected_result_path": "orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL.json",
       "hard_requirements": [
-        "parse_all_t1_worker_and_integration_json",
-        "verify_no_implementation_or_rule_changes",
-        "verify_coverage_not_reported_as_capability_success",
-        "verify_hard_gates_zero_or_false",
-        "do_not_open_private_workspace_source_roots_or_completed_references",
-        "do_not_use_public_web",
-        "emit_neutral_counts_hashes_and_blockers"
+        "proposal_first_no_implementation_before_approval",
+        "bind_to_current_t1_evidence_hashes",
+        "identify_candidate_source_or_rule_authority_without_opening_forbidden_roots",
+        "define_regression_tests_required_before_any_fix",
+        "define_exact_diff_scope_and_rollback",
+        "require_independent_review_before_application",
+        "do_not_generate_customer_pdf_dxf_dwg",
+        "do_not_declare_production_approved"
       ]
     }
   ]

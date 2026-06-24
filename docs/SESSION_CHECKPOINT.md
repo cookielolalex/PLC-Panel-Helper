@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: one-project topology, sizing, and placement independent audit
-completed with low coverage; targeted recovery pending.
+Current phase: T1 targeted coverage recovery accepted as safe unresolved;
+proposal-first source/rule approval branch pending.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT_INCONCLUSIVE_LOW_COVERAGE_T1_PENDING`.
+Current status: `T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED_SOURCE_RULE_PROPOSAL_PENDING`.
 
 Current candidate: `1110101`.
 
@@ -372,6 +372,29 @@ Independent topology/sizing/placement audit:
 
 Exact next action:
 
-Run `RUN_TARGETED_COVERAGE_RECOVERY_T1`. Do not generate a customer drawing,
-PDF, DXF, or DWG during recovery unless a later approved protocol explicitly
-authorizes it.
+T1 targeted coverage recovery:
+
+- Decision: `D-0040`.
+- Final status: `T1_SAFE_UNRESOLVED_AUDIT_ACCEPTED`.
+- Panel-assignment recovery:
+  `SAFE_UNRESOLVED_NO_COMPLIANT_PANEL_ASSIGNMENT_RECOVERY_PATH`.
+- Component-geometry recovery:
+  `SAFE_UNRESOLVED_NO_COMPLIANT_COMPONENT_GEOMETRY_RECOVERY`.
+- Topology/sizing-rule recovery: `SAFE_UNRESOLVED_NO_CODE_CHANGE`.
+- Integration status:
+  `SAFE_UNRESOLVED_T1_NO_COMPLIANT_CODE_OR_RULE_RECOVERY_PATHS_AUDIT_REQUIRED`.
+- Independent audit:
+  `PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS`.
+- Coordinator addendum: full tests `PASS`; legacy scoped freeze `PASS`;
+  active sheetmetal-v1 scoped freeze `PASS`; topology-stage scoped freeze
+  `PASS`.
+- Coverage remains assignment `0/53`, component geometry `0/53`, topology
+  `0/1`, sizing `0/0`, and placement `0/53`.
+- No customer drawing, PDF, DXF, or DWG was generated; no production approval
+  was declared.
+
+Exact next action:
+
+Run `RUN_PROPOSAL_FIRST_SOURCE_RULE_APPROVAL_BRANCH`. This branch may propose
+source or rule authority for human/independent review, but must not implement
+or apply unsupported fabrication assumptions before approval.

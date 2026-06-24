@@ -1,7 +1,7 @@
 {
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
-  "current_node": "T1_AUDIT",
+  "current_node": "SOURCE_RULE_APPROVAL_BRANCH",
   "nodes": [
     {
       "id": "T0",
@@ -20,11 +20,19 @@
     {
       "id": "T1_AUDIT",
       "name": "T1_SAFE_UNRESOLVED_INDEPENDENT_RECOVERY_AUDIT",
-      "status": "IN_PROGRESS",
+      "status": "PASS_SAFE_UNRESOLVED",
       "on_pass": "SOURCE_RULE_APPROVAL_BRANCH",
       "on_inconclusive": "RECOVERY_BRANCH",
       "on_fail_recoverable": "RECOVERY_BRANCH",
       "on_fail_irreducible": "TERMINAL_REVIEW"
+    },
+    {
+      "id": "SOURCE_RULE_APPROVAL_BRANCH",
+      "name": "PROPOSAL_FIRST_SOURCE_RULE_APPROVAL",
+      "status": "PENDING",
+      "on_accepted_proposal": "T2",
+      "on_rejected_or_no_authority": "TERMINAL_REVIEW",
+      "on_needs_human_decision": "FABRICATION_DOMAIN_DECISION_REQUIRED"
     },
     {
       "id": "T2",
