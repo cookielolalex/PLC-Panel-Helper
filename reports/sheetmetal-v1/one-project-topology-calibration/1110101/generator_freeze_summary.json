@@ -1,0 +1,137 @@
+{
+  "schema_version": "sheetmetal-v1.topology_generator_freeze_summary.v1",
+  "status": "PASS_CANONICAL_JSON_AND_BYTE_IDENTICAL",
+  "project_id": "1110101",
+  "input_manifest_sha256": "E8B5C712407F30F2CBDDEA096B6B9CCCEF023D1788C7F1EE6193731C884040CE",
+  "artifact_count": 12,
+  "byte_identical_count": 12,
+  "canonical_json_match_count": 12,
+  "excluded_fields": [],
+  "comparisons": [
+    {
+      "artifact_name": "panel_assignment_recovery.json",
+      "run1_sha256": "F27667FA8126108BA0FD6E947E718626449D5CC61166DAE93204D7C47F88848A",
+      "run2_sha256": "F27667FA8126108BA0FD6E947E718626449D5CC61166DAE93204D7C47F88848A",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "5239EF4FE33813EFF7C3D17FB3EBC211AE5740D046765177D66CC4D6461B6847",
+      "run2_canonical_json_sha256": "5239EF4FE33813EFF7C3D17FB3EBC211AE5740D046765177D66CC4D6461B6847",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "topology_candidates.json",
+      "run1_sha256": "E446A4CBEF45EA53453392B3D15B937FFAC7CF31AB89E41135C6E7EBBBFC0D90",
+      "run2_sha256": "E446A4CBEF45EA53453392B3D15B937FFAC7CF31AB89E41135C6E7EBBBFC0D90",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "8B3B6156E8B993F85616679488FF1F20EC57FECA381B44CFE8150F46D127B44B",
+      "run2_canonical_json_sha256": "8B3B6156E8B993F85616679488FF1F20EC57FECA381B44CFE8150F46D127B44B",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "sizing_candidates.json",
+      "run1_sha256": "3F21A39B0C7A2317C5E98A1D330E7C8EB39322B06A8F617ACC3F47A356E03204",
+      "run2_sha256": "3F21A39B0C7A2317C5E98A1D330E7C8EB39322B06A8F617ACC3F47A356E03204",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "360DC95C8E21F3644D0C4D39D65F932287424D7CFFD7914331644C42A7FD8B09",
+      "run2_canonical_json_sha256": "360DC95C8E21F3644D0C4D39D65F932287424D7CFFD7914331644C42A7FD8B09",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "placement_plan.json",
+      "run1_sha256": "CDBBDB2D1957865CDC5A878ADA5974D310B15EB8B2B5A3272F1389D09D525DA6",
+      "run2_sha256": "CDBBDB2D1957865CDC5A878ADA5974D310B15EB8B2B5A3272F1389D09D525DA6",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "CF1FB42F4DC15BFA1DF2AE88068479FF492F59D642C14DC9D4F86593D1044CF9",
+      "run2_canonical_json_sha256": "CF1FB42F4DC15BFA1DF2AE88068479FF492F59D642C14DC9D4F86593D1044CF9",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "unplaced_component_register.json",
+      "run1_sha256": "AA1D6AD79DEAA79C65C2F1C2B62CD9020AFBE098A8A2D454864B573921A16255",
+      "run2_sha256": "AA1D6AD79DEAA79C65C2F1C2B62CD9020AFBE098A8A2D454864B573921A16255",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "178DD5B8E6E374C3EAEE7406DF3D353E62DF7E1795A6A78E4097C486F6462AF1",
+      "run2_canonical_json_sha256": "178DD5B8E6E374C3EAEE7406DF3D353E62DF7E1795A6A78E4097C486F6462AF1",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "hard_constraint_model.json",
+      "run1_sha256": "437AB6D7885970469843493388BEB455B3E40966DB625E0D13835DA3CB9DF077",
+      "run2_sha256": "437AB6D7885970469843493388BEB455B3E40966DB625E0D13835DA3CB9DF077",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "BE147434AFEE8E5D91F079575A35769119DFAE8D1C21DA4C38DDBA6D32B7ADB4",
+      "run2_canonical_json_sha256": "BE147434AFEE8E5D91F079575A35769119DFAE8D1C21DA4C38DDBA6D32B7ADB4",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "validation_report.json",
+      "run1_sha256": "E770E528405795581B37ADC4E5B745128B85124DE9FA464710F948401BD95F54",
+      "run2_sha256": "E770E528405795581B37ADC4E5B745128B85124DE9FA464710F948401BD95F54",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "9AD1B142068393578D25689E01E977B7631E923B8969BDD0D51A775FE2705086",
+      "run2_canonical_json_sha256": "9AD1B142068393578D25689E01E977B7631E923B8969BDD0D51A775FE2705086",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "provenance_map.json",
+      "run1_sha256": "9391E3D941D9FB7C1265CFFF1A1DEEEF4609BD4A48E0A6F922F1652B1CC19299",
+      "run2_sha256": "9391E3D941D9FB7C1265CFFF1A1DEEEF4609BD4A48E0A6F922F1652B1CC19299",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "4F85278C76033D0F26BB80B22145A983C3DF8B064FDDFED6F44A0D171BB67248",
+      "run2_canonical_json_sha256": "4F85278C76033D0F26BB80B22145A983C3DF8B064FDDFED6F44A0D171BB67248",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "capability_probe.json",
+      "run1_sha256": "17A9CC0D4382E186292DDB98DAE10F2220AEB826B5F560F4BBD3EBF165EA0DF2",
+      "run2_sha256": "17A9CC0D4382E186292DDB98DAE10F2220AEB826B5F560F4BBD3EBF165EA0DF2",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "D00A81AF6C4AEA59AD52846682D5A80752F820C952D9CC9CDE7A71460427DD0F",
+      "run2_canonical_json_sha256": "D00A81AF6C4AEA59AD52846682D5A80752F820C952D9CC9CDE7A71460427DD0F",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "rule_versions.json",
+      "run1_sha256": "AC50004DCABA9FF1B4F73FE81382BB5298532E1ED681DCA65499D1E193D9D460",
+      "run2_sha256": "AC50004DCABA9FF1B4F73FE81382BB5298532E1ED681DCA65499D1E193D9D460",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "0C882D640DD7C7983ED84BAF46692915CF3D0A332785D8FD5B5D9290A868F973",
+      "run2_canonical_json_sha256": "0C882D640DD7C7983ED84BAF46692915CF3D0A332785D8FD5B5D9290A868F973",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "schema_versions.json",
+      "run1_sha256": "DB06761232700BF2DD3A23468178CE636B087A65AE0FDC64D8E81FF5EC7F02A7",
+      "run2_sha256": "DB06761232700BF2DD3A23468178CE636B087A65AE0FDC64D8E81FF5EC7F02A7",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "4B498439D0622D27C325D5D0994D6B7FA02231BC99A84B4507287D8FB08A7E5A",
+      "run2_canonical_json_sha256": "4B498439D0622D27C325D5D0994D6B7FA02231BC99A84B4507287D8FB08A7E5A",
+      "canonical_json_match": true
+    },
+    {
+      "artifact_name": "workflow_version.json",
+      "run1_sha256": "6DEAF45DA2F347B4696C1560E1571B3EBF6297B403734052945D8C24B28FF95D",
+      "run2_sha256": "6DEAF45DA2F347B4696C1560E1571B3EBF6297B403734052945D8C24B28FF95D",
+      "byte_identical": true,
+      "run1_canonical_json_sha256": "6A038AB12DA0F42881EE1FCBCF6F54B2968ABEA5183058C58BA8A7EADA5707BB",
+      "run2_canonical_json_sha256": "6A038AB12DA0F42881EE1FCBCF6F54B2968ABEA5183058C58BA8A7EADA5707BB",
+      "canonical_json_match": true
+    }
+  ],
+  "hard_gates": {
+    "unsupported_critical_dimensions": 0,
+    "unsupported_panel_assignments": 0,
+    "unsupported_placements": 0,
+    "accepted_overlap_violations": 0,
+    "containment_violations": 0,
+    "clearance_violations": 0,
+    "quantity_stage_overwrite_violations": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "tracked_private_artifacts": 0,
+    "customer_drawing_generation_count": 0
+  },
+  "private_paths_committed": false,
+  "private_content_transmission_count": 0,
+  "customer_drawing_generation_count": 0
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "sheetmetal-v1.topology_calibration_input_manifest.v1",
+  "status": "FROZEN_INPUTS_FOR_TOPOLOGY_SIZING_PLACEMENT",
+  "project_id": "1110101",
+  "input_artifacts": [
+    {
+      "artifact_name": "accessory_requirements.json",
+      "sha256": "905873D62249831598177FC12DBE7225C28299202945CC4D764126995A6BAFB1"
+    },
+    {
+      "artifact_name": "calibration_protocol.json",
+      "sha256": "EB0B67E7EA1A32CD61F8554EEEAE06ACF76D0E529742FF19B2C14EA186AE651E"
+    },
+    {
+      "artifact_name": "capability_probe_summary.json",
+      "sha256": "AA0E83CEB51B21FA368A86C6E3E1B5A37B37F009DBCD9DBB1C253A0F8B77FD48"
+    },
+    {
+      "artifact_name": "component_register.json",
+      "sha256": "D0C354C964D3D9D614E5BCE300F877DE3E43F6E7C770CA9461C7A5DF9481E247"
+    },
+    {
+      "artifact_name": "panel_assignment.json",
+      "sha256": "1531D1DFA7BD6AB329AD6964C38367C9C0094AD8B32AE2802176712F3D957FD8"
+    },
+    {
+      "artifact_name": "panel_graph.json",
+      "sha256": "B3A68E597703AA8C8B6C29998F8D28A811912A071BCA34C7018F4BDB38479CB1"
+    },
+    {
+      "artifact_name": "source_fact_model.json",
+      "sha256": "23A1F4731794A3F6574B709567859351323AFB53F6F77849937F1E77809E5738"
+    }
+  ],
+  "private_paths_committed": false,
+  "private_content_transmission_count": 0
+}
