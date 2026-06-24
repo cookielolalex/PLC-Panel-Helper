@@ -1,0 +1,259 @@
+{
+  "manifest_version": "frozen-workflow-v2",
+  "scope": "SHEETMETAL_V1_ACTIVE",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "anchor_commit": "ab955b854e31d37666445f5a62ee6556f85f1352",
+  "creation_decision_id": "D-0026",
+  "hash_algorithm": "SHA-256",
+  "verification_algorithm": "sha256-file-v1;current-tracked-files;git-lineage-ancestor-check",
+  "supersedes_historical_manifest": false,
+  "supersedes_no_historical_manifest_statement": "This sheetmetal-v1 active manifest supersedes no historical manifest, including evals/baseline-024/frozen_workflow_manifest.json.",
+  "legacy_manifest_preserved": "evals/baseline-024/frozen_workflow_manifest.json",
+  "dynamic_files_excluded": [
+    "docs/01_CURRENT_STATE.md",
+    "docs/06_EVAL_LEDGER.md",
+    "docs/07_CHANGELOG.md",
+    "docs/SESSION_CHECKPOINT.md",
+    "orchestration/TASK_REGISTRY.csv",
+    "orchestration/NEXT_THREAD_PROMPT.txt",
+    "generated reports",
+    "generated qualification queues"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "4CA078C3F02217CED8491C53A11641152B38A364F157E36523408016074EB227",
+      "role": "active repository agent boundary for sheetmetal-v1"
+    },
+    {
+      "path": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+      "sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+      "role": "master workflow authority"
+    },
+    {
+      "path": "docs/specs/FROZEN_WORKFLOW_SCOPE_AND_LINEAGE_POLICY.md",
+      "sha256": "85282C3F78BAD4E9028834C46FA275E8CB325F44FB651606E383773565DE97B2",
+      "role": "scoped freeze policy"
+    },
+    {
+      "path": "docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md",
+      "sha256": "AD388EE5E39E576F2C8BC24D0CDB162B06438107748430D771DDFE20CFF07E79",
+      "role": "sheetmetal-first architecture"
+    },
+    {
+      "path": "docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md",
+      "sha256": "67F25DEA549626A2ECF72DB657D66276FDDC44F6CC698ECD5728E86E25863543",
+      "role": "source role and chronology policy"
+    },
+    {
+      "path": "docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md",
+      "sha256": "72920B19759334A49323B5BE63A2B6E59B6E073D08406D0D70B5534EF67B0FBC",
+      "role": "source fact authority matrix"
+    },
+    {
+      "path": "docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md",
+      "sha256": "05EFAB1DE2FE03F845991E2E3010CD2856F4523DAA25AF55441B9DEE6485B622",
+      "role": "sheetmetal qualification policy"
+    },
+    {
+      "path": "docs/specs/SOURCE_GUARD_SPEC.md",
+      "sha256": "4326CCFD104F51CC14BF6C8EAB6DA30512DF72A24DB6E01CD5EEA51118CBFCDE",
+      "role": "source guard specification"
+    },
+    {
+      "path": "docs/specs/SANITIZED_GENERATOR_BUNDLE_SPEC.md",
+      "sha256": "E9210879C6EABC26483834C29E89562341079F66A704006B3DE11ED0C4A818F0",
+      "role": "sanitized bundle specification"
+    },
+    {
+      "path": "docs/specs/GENERATOR_INPUT_POLICY.md",
+      "sha256": "2899DD888E05528CFE1E540C391C490AD796D72A573CAC982D4CBB82ABB665DD",
+      "role": "positive generator input policy"
+    },
+    {
+      "path": "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md",
+      "sha256": "9CCE463845097C6686B481C8F94D8D0B459B521B170474E93B2B550EE4F6F530",
+      "role": "source quorum approval policy"
+    },
+    {
+      "path": "schemas/source_evidence.schema.json",
+      "sha256": "9585B866E421058553BEC0E10DFC018165CEFFF3BEE1AFE576D9558F3504F42F",
+      "role": "source evidence schema"
+    },
+    {
+      "path": "schemas/source_fact.schema.json",
+      "sha256": "5568E0255C2EB62438630D2A3CD27576176C5C3E0F1E6682E94DCDC0B48DB9E3",
+      "role": "source fact schema"
+    },
+    {
+      "path": "schemas/source_manifest.schema.json",
+      "sha256": "400E86770BBA98DF0571E0D5BC7C547648D238F9EBF401ED82A6285C3348CCDA",
+      "role": "source manifest schema"
+    },
+    {
+      "path": "schemas/workbook_sheet_adjudication.schema.json",
+      "sha256": "1E4CB9581EDE3D26B15F2C5EE89984FAF24FCC0251FB86904E914118013BE6E8",
+      "role": "worksheet adjudication schema"
+    },
+    {
+      "path": "schemas/source_guard_decision.schema.json",
+      "sha256": "D26DDEADE91C30B1DB79A7F0DE1AB90DAD0E6AA389A81CA7E7BE8296E8622D9B",
+      "role": "source guard decision schema"
+    },
+    {
+      "path": "schemas/source_approval.schema.json",
+      "sha256": "8567933CF66ADFB0031ED8D2EC8FA93EF227712FB41F7A8257C8498A808F179E",
+      "role": "source approval schema"
+    },
+    {
+      "path": "schemas/source_review_batch.schema.json",
+      "sha256": "470FF5AD516E3DFF31B581E8F220C616BF5872C808943D1979D36A127256C49E",
+      "role": "source review batch schema"
+    },
+    {
+      "path": "schemas/source_quorum_review.schema.json",
+      "sha256": "BB8A3AAD6EA3D3F735DC6A5CA7470D59D9CFDB1D0139BAE3FD828CB90FE02CEC",
+      "role": "source quorum review schema"
+    },
+    {
+      "path": "schemas/source_quorum_adjudication.schema.json",
+      "sha256": "678DA3E1CC57B0F23D26068962F753813560B438ECC9C03937694F71B3457D06",
+      "role": "source quorum adjudication schema"
+    },
+    {
+      "path": "schemas/sanitized_source_manifest.schema.json",
+      "sha256": "A3898E6580EB5AC44E26BC577AB7B388BDC6883A6ABD581AECD2E7B424C0E646",
+      "role": "sanitized source manifest schema"
+    },
+    {
+      "path": "schemas/generator_input_manifest.schema.json",
+      "sha256": "A6DE65391D66BCB9369FA17F7A15C455B5017E31DD6B811D8B63272A6614B18B",
+      "role": "generator input manifest schema"
+    },
+    {
+      "path": "schemas/generator_allowlist.schema.json",
+      "sha256": "EA6BE8C2C1903D2FBE444758819B4F1CCA0FFCF5BA884438CAC90238E117A7A8",
+      "role": "generator allowlist schema"
+    },
+    {
+      "path": "schemas/source_authority_profile.schema.json",
+      "sha256": "C9A150200624ED3646BEA8D238ED7981ABA7B378BA1C2EF4B5B3CD69C182380D",
+      "role": "source authority profile schema"
+    },
+    {
+      "path": "schemas/component_type.schema.json",
+      "sha256": "0060CC947686DBA3072A6DBF527A07858F3668D1992D9651F3CD6518395CA2F5",
+      "role": "component type schema"
+    },
+    {
+      "path": "schemas/component_instance.schema.json",
+      "sha256": "579680E0DEB7AC62250D0F6527E68860918F8F8D32D8C14918F4BC05482A3A00",
+      "role": "component instance schema"
+    },
+    {
+      "path": "schemas/component_register.schema.json",
+      "sha256": "47B0FD25EC7CBB3D425B5E85607EBBA69D73A2C460FB273B85673DE96B794E90",
+      "role": "component register schema"
+    },
+    {
+      "path": "schemas/component_geometry.schema.json",
+      "sha256": "89083FECFE383CDC31BFC5DC9F9C77AB486211AF8381F3F8AFF980785255943B",
+      "role": "component geometry schema"
+    },
+    {
+      "path": "schemas/accessory_rule.schema.json",
+      "sha256": "9505E54CCDC68170C3AAC9CA34D1974B8CAF41F81357E9B415964B8D5C76E7F1",
+      "role": "accessory rule schema"
+    },
+    {
+      "path": "schemas/panel_definition.schema.json",
+      "sha256": "1BC014A81C09CC5DDDFD5910CF9DF733853FE637E63DF60BD123D152EA5D5084",
+      "role": "panel definition schema"
+    },
+    {
+      "path": "schemas/panel_assignment.schema.json",
+      "sha256": "F6797948493BEC059333262C9F5F44AFB9D7C86E9836D3954E188CC55C2E5D51",
+      "role": "panel assignment schema"
+    },
+    {
+      "path": "schemas/panel_graph.schema.json",
+      "sha256": "08E2C5E9DD42E02A8D7399DD40ECA38AC3D5B8D964016C459DAD9C915FCB074D",
+      "role": "typed panel graph schema"
+    },
+    {
+      "path": "schemas/panel_constraint_model.schema.json",
+      "sha256": "749392CBB5F8E1E5EF13E15E80363EEBE51A34EEC7F89608230663D132F6FEB3",
+      "role": "placement constraint schema"
+    },
+    {
+      "path": "schemas/sheetmetal_drawing_model.schema.json",
+      "sha256": "233E3D77E352DE4AD18A306C226471747CB39D0C79FDF99DD269179D088031DF",
+      "role": "canonical sheetmetal drawing model schema"
+    },
+    {
+      "path": "schemas/drawing_provenance_map.schema.json",
+      "sha256": "E081DFC9DBF539FA7F8869C1CC9D2C6E9BD747F3271D2C27824AD0A925E0D5A3",
+      "role": "drawing provenance map schema"
+    },
+    {
+      "path": "rules/source_authority_profile.json",
+      "sha256": "0382862DC9530B27A830826EC2477AA4C450B480CE40C415322982C459E02A69",
+      "role": "source authority profile rules"
+    },
+    {
+      "path": "rules/sheetmetal-v1/accessory_rules.synthetic.json",
+      "sha256": "9D7737D3C345BFFE429092B1F8936B8963BA7D7414BD13D78283999FCB6AD7F9",
+      "role": "active synthetic accessory rule fixture"
+    },
+    {
+      "path": "manifests/source_guard/source_guard_policy.json",
+      "sha256": "B7CE12909CFFD0B349414CD5AFA9FCA7BD33B17CAAC3F59194726B363971261F",
+      "role": "source guard policy manifest"
+    },
+    {
+      "path": "scripts/source_guard.py",
+      "sha256": "C658A3D33BC5DBBDF7E1BAB64E0F62A5625842325D4F9C70A963D3F272055F76",
+      "role": "deterministic source guard implementation"
+    },
+    {
+      "path": "scripts/validate_source_approval.py",
+      "sha256": "3FFD0A02FB9EB4B776CC0EA9AFE515DF0E0A7AB5A96D6DEFCF5E9A653857A9F6",
+      "role": "source approval verifier"
+    },
+    {
+      "path": "scripts/build_source_review_batch.py",
+      "sha256": "5D2D23C2990EF31A60C5AB3B920C9FA12F889E4443863EB7C9F3207C10F644E6",
+      "role": "source review batch builder"
+    },
+    {
+      "path": "scripts/build_sanitized_generator_bundle.py",
+      "sha256": "F80140DBE1DB02456AAF850E0F94ECAEEDB5B497E88B48DF3D0D5D54E2204BBF",
+      "role": "sanitized bundle builder"
+    },
+    {
+      "path": "scripts/verify_generator_bundle.py",
+      "sha256": "5FC9D56D270469AF5D84BB2581ED1521325EADC2E0669C9EB2C5A0E8CAAEE19D",
+      "role": "sanitized bundle verifier"
+    },
+    {
+      "path": "scripts/sheetmetal_v1.py",
+      "sha256": "28BEBE451D9CEA356C46C51E17E4E334AF54185C909DCBCE098DABA23800E94C",
+      "role": "deterministic sheetmetal-v1 model implementation"
+    },
+    {
+      "path": "scripts/verify_frozen_workflow.py",
+      "sha256": "3BE1626DDF3A832F011EC247F4D1E054F8EE0E0F4C8E3EE5864D7E883E1EA13A",
+      "role": "scoped frozen workflow verifier"
+    },
+    {
+      "path": "scripts/run_tests.py",
+      "sha256": "C2AFEA5950C26EE00C8F0F60C9777EA6B44EDB20BAF595E12E129340FECAB598",
+      "role": "regression test runner"
+    },
+    {
+      "path": "evals/fixtures/sheetmetal-v1/complete_pipeline_fixture.json",
+      "sha256": "96F50B3279EA537B2E183E1EF9065DEEB4DEBBCC3C74AFC1C21FACD521020017",
+      "role": "synthetic sheetmetal-v1 pipeline fixture"
+    }
+  ]
+}
