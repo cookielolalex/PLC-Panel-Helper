@@ -6,7 +6,7 @@
     {
       "id": "T0",
       "name": "INDEPENDENT_TOPOLOGY_SIZING_PLACEMENT_AUDIT",
-      "status": "QUEUED",
+      "status": "WORKTREE_PENDING",
       "on_pass": "T3",
       "on_inconclusive_low_coverage": "T1",
       "on_fail_recoverable": "RECOVERY_BRANCH",

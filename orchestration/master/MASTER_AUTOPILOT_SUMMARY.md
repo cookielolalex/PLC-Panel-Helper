@@ -26,3 +26,10 @@ Next action:
 The next child must independently audit the frozen topology/sizing/placement
 implementation, report safety and engineering coverage separately, and emit a
 minimized child result without private engineering facts.
+
+T0 audit dispatch:
+
+- Codex App returned pending worktree id
+  `local:75736337-550b-4e6b-aded-25b6cbbbccea`.
+- No concrete child thread id was visible at registration time.
+- Registry status is `WORKTREE_PENDING` until a thread id is available.
