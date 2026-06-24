@@ -765,6 +765,102 @@ def test_qualification_recovery_controller_state() -> None:
     assert_true(queue["privacy_minimization"]["stores_reference_content"] is False, "queue must not store reference content")
 
 
+def test_sheetmetal_v1_modular_foundation() -> None:
+    work = ROOT / "tmp" / "sheetmetal_v1_pipeline_test"
+    if work.exists():
+        shutil.rmtree(work)
+    fixture = ROOT / "evals" / "fixtures" / "sheetmetal-v1" / "complete_pipeline_fixture.json"
+    run([PY, "scripts/sheetmetal_v1.py", "--fixture", str(fixture), "--output-dir", str(work)])
+    fixture_data = read_json(fixture)
+    for fact in fixture_data["source_facts"]:
+        errors = validate(fact, read_json(ROOT / "schemas/source_fact.schema.json"))
+        assert_true(not errors, f"source fact schema errors: {errors}")
+    for panel_definition in fixture_data["panel_definitions"]:
+        errors = validate(panel_definition, read_json(ROOT / "schemas/panel_definition.schema.json"))
+        assert_true(not errors, f"panel definition schema errors: {errors}")
+
+    schema_pairs = {
+        "source_evidence.json": "schemas/source_evidence.schema.json",
+        "component_register.json": "schemas/component_register.schema.json",
+        "panel_assignment.json": "schemas/panel_assignment.schema.json",
+        "panel_graph.json": "schemas/panel_graph.schema.json",
+        "panel_constraint_model.json": "schemas/panel_constraint_model.schema.json",
+        "sheetmetal_drawing_model.json": "schemas/sheetmetal_drawing_model.schema.json",
+        "drawing_provenance_map.json": "schemas/drawing_provenance_map.schema.json",
+    }
+    for instance, schema in schema_pairs.items():
+        errors = validate_file(work / instance, ROOT / schema)
+        assert_true(not errors, f"{instance} failed {schema}: {errors}")
+
+    register = read_json(work / "component_register.json")
+    for component_type in register["component_types"]:
+        errors = validate(component_type, read_json(ROOT / "schemas/component_type.schema.json"))
+        assert_true(not errors, f"component type schema errors: {errors}")
+        if component_type.get("geometry"):
+            errors = validate(component_type["geometry"], read_json(ROOT / "schemas/component_geometry.schema.json"))
+            assert_true(not errors, f"component geometry schema errors: {errors}")
+    for component_instance in register["component_instances"]:
+        errors = validate(component_instance, read_json(ROOT / "schemas/component_instance.schema.json"))
+        assert_true(not errors, f"component instance schema errors: {errors}")
+    rule_pack = read_json(ROOT / "rules" / "sheetmetal-v1" / "accessory_rules.synthetic.json")
+    for rule in rule_pack["rules"]:
+        errors = validate(rule, read_json(ROOT / "schemas/accessory_rule.schema.json"))
+        assert_true(not errors, f"accessory rule schema errors: {errors}")
+    instances = {row["component_key"]: row for row in register["component_instances"]}
+    fan_qty = instances["fan_main"]["quantity"]
+    assert_true(fan_qty["required_qty"] == 1, "required quantity must come from requirement evidence")
+    assert_true(fan_qty["ordered_qty"] == 2, "procurement quantity must remain separate")
+
+    breaker = instances["breaker_conflict"]
+    assert_true(breaker["status"] == "CONFLICT", "conflicting component model must not be resolved")
+    assert_true(any(row["field"] == "model" for row in breaker["conflict_records"]), "model conflict record missing")
+
+    accessories = read_json(work / "accessory_requirements.json")
+    assert_true(accessories["duplicate_accessory_count"] == 0, "explicit accessory must prevent duplicate inferred accessory")
+    assert_true(accessories["requirements"][0]["status"] == "SATISFIED_BY_EXPLICIT_SOURCE", "explicit accessory should satisfy rule output")
+    assert_true(not accessories["generated_component_instances"], "rule must not create duplicate explicit accessory instance")
+
+    assignment = read_json(work / "panel_assignment.json")
+    assert_true(any(row["reason"] == "POST_DESIGN_OR_REFERENCE_ASSIGNMENT_REJECTED" for row in assignment["rejected_assignments"]), "post-design allocation label must be rejected")
+    assert_true(all(row["placement_resolved"] is False for row in assignment["assignments"]), "panel assignment must stay separate from placement")
+
+    graph = read_json(work / "panel_graph.json")
+    functional_edges = [row for row in graph["edges"] if row["edge_type"] in {"CONNECTS_TO", "SUPPLIES", "PROTECTS", "CONTROLS", "MEASURES", "REPORTS_TO", "INTERLOCKS_WITH"}]
+    assert_true(functional_edges, "inventory-only mode should record missing functional relationships as unverified")
+    assert_true(all(row["status"] == "UNVERIFIED" for row in functional_edges), "inventory-only mode must not invent supported functional edges")
+    fan_id = instances["fan_main"]["component_instance_id"]
+    fan_edge_types = {row["edge_type"] for row in graph["edges"] if row["from_node_id"] == f"CINST:{fan_id}"}
+    assert_true({"REQUIRED_BY", "ASSIGNED_TO_PANEL", "REQUIRES_ACCESSORY", "REQUIRES_CUTOUT", "MOUNTED_ON"}.issubset(fan_edge_types), "component should support several typed relationships")
+
+    drawing = read_json(work / "sheetmetal_drawing_model.json")
+    dims = drawing["dimensions"][0]
+    assert_true(dims["width_mm"] == 800 and dims["height_mm"] == 2300 and dims["depth_mm"] == 800, "width, height, and depth must remain individually named and not reordered")
+    assert_true(drawing["panel_topology"]["rejected_raw_dimension_strings"], "ambiguous raw dimension string must not be silently parsed")
+
+    constraints = read_json(work / "panel_constraint_model.json")
+    assert_true(constraints["placements"], "valid placement should be recorded separately")
+    assert_true(any("CONTAINMENT" in row["unsatisfied_constraints"] and row["soft_objective_override_rejected"] for row in constraints["failed_placements"]), "hard placement constraints cannot be overridden by soft objectives")
+
+    provenance = read_json(work / "drawing_provenance_map.json")
+    assert_true(provenance["coverage_status"] == "PASS", "every critical drawing-model fact must have support or safe unresolved status")
+
+    validation = read_json(work / "validation_report.json")
+    assert_true(validation["status"] == "PASS", f"sheetmetal v1 validation failed: {validation}")
+    assert_true(validation["leakage_scan"]["status"] == "PASS", "completed-reference IDs and content must not enter generator artifacts")
+    serialized_generator_artifacts = "\n".join((work / name).read_text(encoding="utf-8") for name in [
+        "component_register.json",
+        "panel_assignment.json",
+        "panel_graph.json",
+        "accessory_requirements.json",
+        "panel_topology.json",
+        "panel_constraint_model.json",
+        "sheetmetal_drawing_model.json",
+        "drawing_provenance_map.json",
+    ])
+    for forbidden in ["REF-COMPLETE-001", "completed-reference-secret", "post-design-secret"]:
+        assert_true(forbidden not in serialized_generator_artifacts, f"forbidden token leaked to generator artifact: {forbidden}")
+
+
 def main() -> None:
     tests = [
         test_json_schemas_parse,
@@ -786,6 +882,7 @@ def main() -> None:
         test_reference_detection_v4_image_only_ocr_and_failure_modes,
         test_reference_detection_v4_private_ocr_disabled_layout_prior,
         test_qualification_recovery_controller_state,
+        test_sheetmetal_v1_modular_foundation,
     ]
     failures = []
     for test in tests:
