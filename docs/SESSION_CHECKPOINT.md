@@ -76,7 +76,7 @@ New namespaces:
 Qualification state:
 
 - `LEGACY_THREE_OUTPUT_ALLOWED_EVAL`: 13 historical projects preserved.
-- `SHEETMETAL_ALLOWED_EVAL`: 0 approved projects.
+- `SHEETMETAL_ALLOWED_EVAL`: 1 approved calibration project (`1110101`) for the component-register and graph stage.
 - Selected one-project calibration candidate: `1110101`.
 - Projects awaiting future sheetmetal requalification after this selection: 12.
 - New sheetmetal baseline: not started.
@@ -295,7 +295,24 @@ Evaluator metrics:
 
 Exact next action:
 
-Run an independent audit/adjudication checkpoint for the one-project component
-graph calibration evidence. Do not modify generator artifacts, do not generate
-a customer drawing, and do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL`
-until calibration and adjudication pass.
+Run `RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION` as the next calibration step. Do not modify frozen generator artifacts for the passed component-register/graph audit, do not generate a customer drawing, and do not declare production approval.
+
+
+Independent component-register and graph audit:
+
+- Decision: `D-0036`.
+- Result: `PASS`.
+- Final status: `ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS`.
+- `SHEETMETAL_ALLOWED_EVAL`: approved count `1`; accepted project `1110101`.
+- Determinism: canonical match `9/9`; byte-identical `7/9`; byte-only mismatches `source_fact_model.json` and `component_register_validation.json` were parsed-JSON equal with matching canonical hashes and no excluded fields.
+- Hard gates: all PASS; private transmission `0`; reference leakage `0`; post-design leakage `0`; unsupported facts `0`; graph referential failures `0`; unsupported panel assignments `0`; duplicate inferred accessories `0`; unsupported cutout geometry `0`; tracked private artifacts `0`; generated drawings `0`.
+- Safe unresolved coverage: panel assignment `0/53` is assigned to `RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`; accessory-rule scorability `0/0` is not reported as recall.
+- Evidence:
+  `manifests/sheetmetal-v1/one-project-model-calibration/1110101/audit_input_manifest.json`,
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/independent_audit.json`,
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/hard_gate_adjudication.json`,
+  and `reports/sheetmetal-v1/one-project-model-calibration/1110101/determinism_adjudication.json`.
+
+Exact next action:
+
+Run `RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`. Do not generate a customer drawing, PDF, DXF, or DWG during that calibration step unless a later approved protocol explicitly authorizes it.

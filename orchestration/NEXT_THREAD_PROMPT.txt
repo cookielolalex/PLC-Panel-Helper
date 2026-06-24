@@ -1,6 +1,6 @@
 You are a fresh root coordinator continuing this repository.
 
-Read the canonical checkpoint files, especially:
+Read the canonical checkpoint files first:
 
 - `docs/01_CURRENT_STATE.md`
 - `docs/04_DECISION_LEDGER.md`
@@ -8,265 +8,54 @@ Read the canonical checkpoint files, especially:
 - `docs/07_CHANGELOG.md`
 - `docs/SESSION_CHECKPOINT.md`
 - `docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md`
-- `docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md`
-- `docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md`
-- `docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md`
-- `reports/sheetmetal-v1/migration_report.md`
+- `docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md`
 - `manifests/sheetmetal-v1/requalification_queue.json`
 - `orchestration/TASK_REGISTRY.csv`
 
 Current status:
 
-`ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION_IN_PROGRESS`
+`ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS`
 
 Active goal:
 
 `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`
 
-Legacy status:
+Current qualification state:
 
-The old detector-v4.1 three-output qualification track is preserved as
-historical evidence. Do not continue detector v4 under the old all-three-output
-qualification objective unless the user explicitly asks for legacy work.
-
-Starting verification:
-
-- Expected request HEAD was `b55ed7625cfaad4eccffda9c4bc0d1c1cd109c4d`;
-  current work is a documented descendant.
-- A pre-existing untracked file, `scripts/run_reference_detection_v4_corpus_screening.py`,
-  was left untouched.
-- Full repository tests passed in revised Phase 0.
-- Independent sheetmetal-v1 audit is recorded as `PASS_WITH_RESIDUAL_RISKS`;
-  coordinator addendum resolves auditor-local Git/Python limitations and the
-  migration-report status wording drift.
+- `SHEETMETAL_ALLOWED_EVAL` approved count is `1`.
+- `1110101` is the first accepted sheetmetal-v1 calibration project for the modular component-register and graph stage.
+- This is not production approval and does not authorize real customer drawing generation.
 - `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
-- Source roots remain read-only by policy.
-- Baseline generation attempts must remain `0`.
 
-Scoped freeze state:
+Independent audit evidence:
 
-- `D-0026` accepts frozen workflow manifests as scope-bound and commit-anchored.
-- Legacy baseline-024 provenance passes at historical anchor
-  `fac44321491633181f1fa53a062084d072b0b582`.
-- Active sheetmetal-v1 workflow freeze passes at current descendant of active
-  anchor `ab955b854e31d37666445f5a62ee6556f85f1352`.
-- Evidence is in `evals/baseline-024/frozen_workflow_attestation.json`,
-  `evals/sheetmetal-v1/frozen_workflow_manifest.json`, and
-  `reports/sheetmetal-v1/revised_phase0_verification.json`.
+- Audit input manifest: `manifests/sheetmetal-v1/one-project-model-calibration/1110101/audit_input_manifest.json`
+- Independent audit: `reports/sheetmetal-v1/one-project-model-calibration/1110101/independent_audit.json`
+- Hard-gate table: `reports/sheetmetal-v1/one-project-model-calibration/1110101/hard_gate_adjudication.json`
+- Determinism adjudication: `reports/sheetmetal-v1/one-project-model-calibration/1110101/determinism_adjudication.json`
 
-Implemented sheetmetal-v1 foundation:
+Audit result summary:
 
-- deterministic source evidence filtering by role and chronology;
-- canonical component register with separate component types and instances;
-- separated quantity fields;
-- panel assignment separate from placement;
-- typed JSON graph;
-- accessory and cutout rule reconciliation;
-- panel topology and named dimensions;
-- placement hard-constraint validation;
-- canonical sheet-metal drawing model;
-- drawing provenance map;
-- synthetic fixture and regression coverage.
+- Full tests `PASS`.
+- Active sheetmetal-v1 scoped freeze `PASS`.
+- Legacy baseline-024 scoped freeze `PASS`.
+- Selected sanitized generator bundle verification `PASS`.
+- Deterministic canonical match `9/9`; byte-identical match `7/9`.
+- The two byte-only mismatches were structurally identical parsed JSON with no excluded fields.
+- Private-content external transmissions `0`.
+- Completed-reference leakage events `0`.
+- Post-design leakage events `0`.
+- Tracked private artifacts `0`.
+- Temporary render leftovers `0`.
+- Generated customer drawings/PDF/DXF/DWG `0`.
 
-Qualification state:
+Known source-limited coverage:
 
-- `SHEETMETAL_ALLOWED_EVAL` approved count is `0`.
-- Project `1110101` is selected for one-project sheetmetal calibration.
-- 12 remaining legacy projects are pending future independent sheetmetal
-  requalification after this selection.
-- No real customer drawing and no new baseline generation occurred.
-
-Candidate selection and bundle state:
-
-- Decision `D-0027` accepts deterministic metadata-only selection of `1110101`.
-- Selection is frozen in
-  `manifests/sheetmetal-v1/one_project_candidate_selection.json`.
-- Completed-reference metadata was opened only after selection freeze.
-- Effective sheetmetal reference package is evaluator-only:
-  `manifests/sheetmetal-v1/selected_candidate/1110101/effective_sheetmetal_reference_package.json`.
-- Source-role/chronology classification approves six source-only
-  `AGENT_QUORUM_APPROVED_EVAL` items and excludes twelve quarantined items:
-  `manifests/sheetmetal-v1/selected_candidate/1110101/source_role_chronology_classification.json`.
-- Clean generator bundle verifies `PASS`:
-  `manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/`.
-- Independent audit passes:
-  `reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md` and
-  `orchestration/results/SMV1-CANDIDATE-SELECTION-AUDIT.json`.
-- `SHEETMETAL_ALLOWED_EVAL` approved count remains `0`.
-
-One-project component graph calibration protocol:
-
-- Decision `D-0028` freezes
-  `docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md`.
-- Machine protocol:
-  `manifests/sheetmetal-v1/one-project-model-calibration/1110101/calibration_protocol.json`.
-- Plan:
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/calibration_plan.md`.
-- Source mode is `SOURCE_MODE_A_INVENTORY_ONLY`.
-- Generator lane is source-only and must not see completed references,
-  post-design labels, evaluator labels, expected answers, reference hashes,
-  images, OCR, title-block content, or reviewer findings.
-- Evaluator lane remains closed until generator artifacts are frozen and hashed.
-- Project-specific component facts and graph contents must be private,
-  git-ignored, and never printed or committed.
-- Checkpoint gates before protocol freeze passed: full tests, legacy scoped
-  freeze, active sheetmetal-v1 freeze, selected bundle verifier, bundle hashes,
-  worksheet fingerprint presence, privacy `NOT_APPROVED`, no drawing output,
-  and no sheetmetal-v1 baseline-generation directory.
-
-Private workspace boundary:
-
-- Decision `D-0029` accepts the ignored private workspace boundary.
-- `.private/` is ignored.
-- Local private workspace `.private/sheetmetal-v1/1110101/` exists.
-- `git check-ignore` passes for the project-private probe path.
-- `git ls-files -- .private` returns no tracked paths.
-- Regression test:
-  `test_sheetmetal_v1_private_workspace_boundary`.
-- Active sheetmetal-v1 scoped manifest is refreshed for `.gitignore` and
-  `scripts/run_tests.py`.
-- No `.private` path is tracked.
-
-Source-fact extraction:
-
-- Decision `D-0030` accepts deterministic source-fact extraction.
-- `scripts/sheetmetal_v1.py` now supports sanitized-bundle source-fact
-  extraction with `--bundle-dir`, `--source-classification`, `--output-dir`,
-  and `--quiet`.
-- Source-specific values were written only to
-  `.private/sheetmetal-v1/1110101/source-fact-extraction/`.
-- Private outputs are `source_fact_model.json` and
-  `source_fact_validation.json`; both are git-ignored.
-- Neutral private-run counts: 6 evidence records, 125 represented source
-  lines, 87 source facts, 0 silently discarded authorized source lines, 0
-  quantity-stage overwrite violations, 0 completed-reference facts, and 0
-  private content transmissions.
-- Neutral committed evidence:
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json`
-  and
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.md`.
-- Regression coverage:
-  `test_sheetmetal_v1_source_fact_extractor`.
-- Active scoped manifest is refreshed for
-  `schemas/source_fact_model.schema.json`, `scripts/sheetmetal_v1.py`, and
-  `scripts/run_tests.py`.
-
-Component-register construction:
-
-- Decision `D-0031` accepts deterministic private component-register
-  construction.
-- `scripts/sheetmetal_v1.py` now supports `--source-fact-model` register-only
-  construction.
-- Private input:
-  `.private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json`.
-- Private output directory:
-  `.private/sheetmetal-v1/1110101/component-register/`.
-- Private outputs are `component_register.json` and
-  `component_register_validation.json`; both are git-ignored.
-- Neutral private-run counts: 53 component types, 53 component instances, 0
-  conflicts, 87 source facts, 125 source lines, 0 unregistered allowed
-  component keys, 0 completed-reference components, and 0 private content
-  transmissions.
-- Neutral committed evidence:
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.json`
-  and
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.md`.
-- Regression coverage:
-  `test_sheetmetal_v1_component_register_from_source_facts`.
-- Active scoped manifest is refreshed for `scripts/sheetmetal_v1.py` and
-  `scripts/run_tests.py`.
-
-Panel-assignment and graph construction:
-
-- Decision `D-0032` accepts deterministic private panel-assignment and typed
-  graph construction.
-- `scripts/sheetmetal_v1.py` now supports `--source-fact-model` plus
-  `--component-register` for private panel-assignment and inventory-only graph
-  construction.
-- Private inputs:
-  `.private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json`
-  and `.private/sheetmetal-v1/1110101/component-register/component_register.json`.
-- Private output directory:
-  `.private/sheetmetal-v1/1110101/panel-graph/`.
-- Private outputs are `panel_assignment.json`, `panel_graph.json`, and
-  `panel_graph_validation.json`; all are git-ignored.
-- Neutral private-run counts: 0 explicit panel assignments, 53 unresolved
-  components, 0 rejected assignments, 56 graph nodes, 107 graph edges, 0
-  dangling edges, 1 inventory-only unverified function edge, and 0 private
-  content transmissions.
-- Neutral committed evidence:
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json`
-  and
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.md`.
-- Regression coverage:
-  `test_sheetmetal_v1_panel_assignment_graph_from_private_models`.
-- Active scoped manifest is refreshed for `scripts/sheetmetal_v1.py` and
-  `scripts/run_tests.py`.
-
-Accessory and cutout reconciliation:
-
-- Decision `D-0033` accepts deterministic private accessory and cutout
-  reconciliation.
-- `scripts/sheetmetal_v1.py` now supports `--source-fact-model` plus
-  `--component-register` plus `--panel-graph` for private accessory/cutout
-  reconciliation.
-- Private inputs:
-  `.private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json`,
-  `.private/sheetmetal-v1/1110101/component-register/component_register.json`,
-  and `.private/sheetmetal-v1/1110101/panel-graph/panel_graph.json`.
-- Private output directory:
-  `.private/sheetmetal-v1/1110101/accessory-cutout/`.
-- Private outputs are `accessory_requirements.json` and
-  `accessory_cutout_validation.json`; both are git-ignored.
-- Neutral private-run counts: 0 accessory requirements, 0 generated accessory
-  component instances, 0 cutouts, 0 duplicate accessories, 0 missing
-  requirement sources, 0 missing cutout sources, and 0 private content
-  transmissions.
-- Neutral committed evidence:
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json`
-  and
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.md`.
-- Regression coverage:
-  `test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models`.
-- Active scoped manifest is refreshed for `scripts/sheetmetal_v1.py` and
-  `scripts/run_tests.py`.
-
-Generator freeze evidence:
-
-- Decision `D-0034` accepts deterministic generator freeze evidence.
-- Rerun directory:
-  `.private/sheetmetal-v1/1110101/freeze-rerun/`.
-- Deterministic rerun status: `PASS_CANONICAL_JSON_SEMANTIC`.
-- Artifact count: `9`; byte-identical count: `7`; canonical JSON match
-  count: `9`; excluded fields: none.
-- Hard gates: full tests `PASS`, legacy scoped freeze `PASS`, active scoped
-  freeze `PASS`, bundle hashes/fingerprints `PASS`, private content
-  transmission count `0`, private Git leakage `0`, and customer
-  drawing/PDF/DXF/DWG/baseline-generation outputs `0`.
-- Neutral committed evidence:
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json`
-  and
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.md`.
-
-Evaluator metrics:
-
-- Decision `D-0035` accepts evaluator-only component graph metrics.
-- Status: `PASS_WITH_SOURCE_LIMITED_PANEL_ASSIGNMENT_COVERAGE`.
-- Reference content opened for metric values: no.
-- Generator artifacts modified after freeze: no.
-- Metric highlights: source line representation `125/125`, authorized source
-  fact retention `87/87`, component registration `53/53`, graph referential
-  integrity `107/107`, deterministic freeze canonical match `9/9`, panel
-  assignment resolution `0/53`, and accessory-rule scorability `0/0`.
-- Neutral committed evidence:
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.json`
-  and
-  `reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.md`.
+- Panel assignment resolution remains safely unresolved at `0/53` and is assigned to the next calibration module.
+- Accessory-rule scorability is `0/0`; do not report recall for that denominator-zero metric.
 
 Exact next action:
 
-Run an independent audit/adjudication checkpoint for the one-project component
-graph calibration evidence. Produce evaluation evidence only; do not modify
-generator artifacts, do not start a new baseline, do not generate a customer
-drawing, and do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until
-calibration and adjudication pass.
+`RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`
+
+Do not resume the legacy three-output detector workflow. Do not modify frozen generator artifacts for the passed component-register/graph audit. Do not generate a customer drawing, PDF, DXF, or DWG unless a later approved topology/sizing/placement protocol explicitly authorizes that output.

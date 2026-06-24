@@ -1,13 +1,12 @@
 # Current State
 
-Current phase: evaluator-only component graph metrics complete for one-project
-component graph calibration; independent audit pending.
+Current phase: one-project component register and graph calibration passed; topology, sizing, and placement calibration pending.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION_IN_PROGRESS`.
+Current status: `ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -228,7 +227,7 @@ named, hard placement constraints reject soft-objective overrides, critical
 drawing-model facts have provenance or safe unresolved status, and completed
 reference IDs/content do not enter generator artifacts.
 
-New qualification status: `SHEETMETAL_ALLOWED_EVAL` approved count is `0`.
+New qualification status: `SHEETMETAL_ALLOWED_EVAL` approved count is `1`; `1110101` is the first accepted sheetmetal-v1 calibration project for the component-register and graph stage.
 Project `1110101` is selected for one-project calibration; the other 12 legacy
 projects remain pending future sheetmetal requalification.
 
@@ -341,5 +340,10 @@ resolution is source-limited at `0/53`, and accessory-rule scorability is
 `0/0`. Evidence is recorded in
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.json`.
 
-Exact next action: run an independent audit/adjudication checkpoint for the
-one-project component graph calibration evidence before any status promotion.
+Exact next action: run
+`RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`. Do not generate a
+customer drawing during that calibration step unless a later approved protocol
+explicitly authorizes it.
+
+
+Independent component graph audit after `D-0036`: the independent audit/adjudication for candidate `1110101` passes. Checkpoint verification confirmed HEAD `abc5a86`, clean tracked worktree with only the permitted legacy untracked script, full tests `PASS`, active and legacy scoped freezes `PASS`, selected bundle verification `PASS`, privacy `NOT_APPROVED`, no tracked private artifacts, no temporary render leftovers, and no generated customer drawing/PDF/DXF/DWG. Determinism adjudication identified the two byte-only mismatches as `source_fact_model.json` and `component_register_validation.json`; both were parsed-JSON equal and canonically hash-identical with no excluded fields. All hard gates passed. `SHEETMETAL_ALLOWED_EVAL` increments from `0` to `1`, preserving `1110101` as the first accepted sheetmetal-v1 calibration project for this stage. Current next action: `RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`. Evidence is recorded in `reports/sheetmetal-v1/one-project-model-calibration/1110101/independent_audit.json`, `hard_gate_adjudication.json`, `determinism_adjudication.json`, and `manifests/sheetmetal-v1/one-project-model-calibration/1110101/audit_input_manifest.json`.

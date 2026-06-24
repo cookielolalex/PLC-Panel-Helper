@@ -367,3 +367,8 @@
 - Recorded source-limited coverage explicitly: component registration `53/53`,
   graph referential integrity `107/107`, deterministic freeze `9/9`, panel
   assignment `0/53`, and accessory-rule scorability `0/0`.
+
+- Added independent component-register and graph calibration audit artifacts for `1110101`, including the audit-input manifest, hard-gate adjudication table, determinism adjudication, and minimized Markdown summary.
+- Adjudicated the generator freeze byte-only mismatches: `source_fact_model.json` and `component_register_validation.json` are structurally identical parsed JSON with matching canonical hashes and no excluded fields.
+- Accepted `1110101` as the first sheetmetal-v1 calibration project for the modular component-register and graph stage; `SHEETMETAL_ALLOWED_EVAL` approved count is now `1`.
+- Set next action to `RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION` while preserving privacy `NOT_APPROVED` and customer drawing generation count `0`.

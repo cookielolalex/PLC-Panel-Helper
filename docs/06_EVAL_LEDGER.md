@@ -833,3 +833,29 @@ Evidence:
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.md`
 and
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.json`.
+
+
+## sheetmetal-v1 one-project independent component graph audit
+
+Status: `PASS`.
+
+Decision: `D-0036`.
+
+Purpose: independently adjudicate candidate `1110101` after source-fact extraction, component-register construction, panel-assignment/graph construction, accessory/cutout reconciliation, deterministic generator freeze, and evaluator-only metrics.
+
+Checkpoint result: HEAD `abc5a86`; tracked worktree clean except for the permitted legacy untracked screening script; full tests `PASS`; active sheetmetal-v1 scoped freeze `PASS`; legacy baseline-024 scoped freeze `PASS`; selected sanitized bundle verification `PASS`; privacy `NOT_APPROVED`; no tracked private artifacts; no generated customer drawings.
+
+Determinism result: canonical matches `9 / 9`; byte-identical matches `7 / 9`. The byte-only mismatches were `source_fact_model.json` and `component_register_validation.json`; both had structural diff count `0`, matching canonical hashes, and no excluded fields.
+
+Hard-gate result: all qualification-critical gates passed, including generator/reference separation, post-design-label separation, private transmission count `0`, unsupported critical facts `0`, silently discarded source lines `0`, quantity overwrite violations `0`, graph referential failures `0`, forbidden functional edges `0`, unsupported panel assignments `0`, duplicate inferred accessories `0`, unsupported cutout geometry `0`, private Git leakage `0`, temporary cleanup `PASS`, and customer drawing generation count `0`.
+
+Metric interpretation: panel assignment remains safely unresolved at `0 / 53` and is assigned to `RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION`. Accessory-rule scorability remains `0 / 0`; no recall is reported for a zero denominator.
+
+Result: `1110101` is accepted as the first `SHEETMETAL_ALLOWED_EVAL` calibration project for the modular component-register and graph stage. Approved count is now `1`. This is not production approval and does not authorize drawing generation.
+
+Evidence:
+`manifests/sheetmetal-v1/one-project-model-calibration/1110101/audit_input_manifest.json`,
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/independent_audit.json`,
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/hard_gate_adjudication.json`,
+and
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/determinism_adjudication.json`.
