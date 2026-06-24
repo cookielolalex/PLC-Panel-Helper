@@ -29,10 +29,18 @@
     {
       "id": "SOURCE_RULE_APPROVAL_BRANCH",
       "name": "PROPOSAL_FIRST_SOURCE_RULE_APPROVAL",
-      "status": "PENDING",
+      "status": "PROPOSAL_REVIEW_IN_PROGRESS",
       "on_accepted_proposal": "T2",
       "on_rejected_or_no_authority": "TERMINAL_REVIEW",
       "on_needs_human_decision": "FABRICATION_DOMAIN_DECISION_REQUIRED"
+    },
+    {
+      "id": "SOURCE_RULE_PROPOSAL_REVIEW",
+      "name": "INDEPENDENT_SOURCE_RULE_PROPOSAL_REVIEW",
+      "status": "IN_PROGRESS",
+      "on_pass": "SOURCE_RULE_AUTHORITY_DECISION_PACKET",
+      "on_fail": "PROPOSAL_REVISION_OR_TERMINAL_REVIEW",
+      "on_inconclusive": "PROPOSAL_REVISION"
     },
     {
       "id": "T2",
