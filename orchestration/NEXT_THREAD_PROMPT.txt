@@ -12,7 +12,7 @@ Read the canonical checkpoint files, especially:
 
 Current status:
 
-`RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE`
+`DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`
 
 Starting point for verification:
 
@@ -62,11 +62,24 @@ Queue state:
 - previous bundle rejections: `7`
 - previous quarantined/no-bundle projects: `6`
 
+Detector v4 state:
+
+- v4 calibration protocol is frozen.
+- implementation-facing calibration IDs are in
+  `manifests/reference_detection/calibration/v4_calibration_manifest.json`.
+- sealed holdout IDs are in a separate auditor-only manifest and must not be
+  used for tuning.
+- Windows.Media.Ocr synthetic proof passed locally; private-page OCR probe was
+  skipped because no enforceable per-process network-disable boundary was
+  available.
+- v4 detector, v4 schemas, verifier, and regression tests are implemented.
+- full repository tests pass.
+
 Exact next action:
 
-Build `target_output_detection_v4_local_multisignal_recovery` as a local-only
-prototype. Add regression coverage for current known-positive false negatives
-and supported real negative controls. Do not start source-review quorum,
-sanitized-bundle construction, cohort freeze, baseline generation, review,
-optimization, or expanded corpus screening until detector calibration passes
-positive and negative controls and an independent audit approves it.
+Run `RUN_DETECTOR_V4_CALIBRATION_PARTITION` using only the implementation-facing
+calibration manifest and local-only v4 detector. Do not start source-review
+quorum, sanitized-bundle construction, cohort freeze, baseline generation,
+review, optimization, sealed holdout, or expanded corpus screening until the
+calibration partition has frozen minimized evidence and the next gate permits
+it.

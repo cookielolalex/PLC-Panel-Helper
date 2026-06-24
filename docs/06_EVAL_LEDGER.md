@@ -336,3 +336,39 @@ Evidence: `docs/specs/AUTONOMOUS_QUALIFICATION_RECOVERY.md`,
 `reports/baseline-024/qualification-recovery/recovery_state.md`,
 `reports/baseline-024/qualification-recovery/checkpoint_verification.json`,
 and `reports/baseline-024/qualification-recovery/local_capability_probe.json`.
+
+## baseline-024-cycle-000 detector v4 local recovery prototype
+
+Status: `DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`.
+
+Purpose: create the next local-only detector candidate after v3 known-positive
+recall failed and GPT-5/private-reference vision remained prohibited.
+
+Protocol: v4 calibration was frozen before implementation. The deterministic
+salted split creates 8 calibration controls and 5 sealed holdout controls from
+the 13 known-positive `ALLOWED_EVAL` projects. The negative-control manifest
+contains 24 minimized real non-target page controls from prior reference-vault
+outputs. Holdout identities and results remain unavailable for tuning.
+
+OCR proof: Windows.Media.Ocr synthetic execution passed through local
+`Windows.Media.Ocr.OcrEngine.RecognizeAsync` hosted by `powershell.exe`.
+Installed languages were `en-US` and `zh-Hant-TW`; Simplified Chinese was not
+available. OCR text was not persisted, printed, logged, or returned. The
+private-page OCR probe was skipped because an enforceable per-process
+network-disable boundary was not available.
+
+Implementation: `target_output_detection_v4_local_multisignal_recovery` adds
+minimized v4 schemas, local Poppler rendering, pypdf embedded text, optional
+Windows OCR role signals, Pillow/NumPy layout buckets, weak metadata priors,
+duplicate grouping, combined-package page segmentation, and fail-closed
+`AMBIGUOUS`/`UNCLASSIFIED` behavior.
+
+Regression coverage: full repository test runner `PASS`. New coverage includes
+Windows.Media.Ocr minimization, combined three-target packages, image-only OCR
+target PDFs, CJK language availability recording, misleading target hints,
+electrical/source-document negatives, OCR failure, missing OCR language support,
+temporary-render deletion, raw OCR non-persistence, generator isolation, and
+source-review blindness.
+
+Generation status: not authorized. Calibration partition, sealed holdout,
+all-13 final recall, negative-control audit, and independent audit have not run.

@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: cycle-000 autonomous qualification recovery, Phase A local
-capability discovery complete.
+Current phase: cycle-000 autonomous qualification recovery, detector v4 local
+calibration in progress.
 
 Accepted release: none.
 
 Current candidate: `baseline-024-cycle-000` reference-complete project discovery.
 
-Current status: `RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE`.
+Current status: `DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`.
 
 Accepted amendments: `D-0017` expands baseline-024 candidate discovery beyond
 the prior twenty-project metadata-only pool to the full approved development
@@ -83,14 +83,41 @@ locally; no local Tesseract, OCRmyPDF, PaddleOCR, EasyOCR, ONNX Runtime,
 OpenCV, PyMuPDF, ImageMagick, or `pdfimages` was available. No private project
 data was opened by the probe and no network endpoint probe was performed.
 
+Detector v4 local recovery result after `D-0021`: the v4 calibration protocol
+was frozen before implementation. The split uses 8 implementation-facing
+calibration IDs and 5 sealed holdout IDs, with 24 minimized real negative
+controls from prior reference-vault page classifications. Windows.Media.Ocr was
+bound through local `Windows.Media.Ocr.OcrEngine.RecognizeAsync` in
+`powershell.exe`; installed OCR languages are `en-US` and `zh-Hant-TW`, while
+Simplified Chinese was unavailable in this local probe. Synthetic OCR returned
+a minimized `PUNCH_DRAWING` role signal and did not print or persist OCR text.
+The private-page OCR probe was skipped because this environment did not provide
+an independently enforceable per-process network-disable boundary. No private
+content was transmitted outside the machine.
+
+Detector v4 implementation status: `target_output_detection_v4_local_multisignal_recovery`
+now exists with v4-specific minimized schemas and verifier. It uses pypdf
+embedded text, local Poppler rendering, Pillow/NumPy layout buckets, optional
+Windows.Media.Ocr role signals, Unicode normalization, weak metadata priors
+that cannot independently promote target status, exact duplicate grouping,
+page-level effective-set construction, and fail-closed `AMBIGUOUS` or
+`UNCLASSIFIED` outcomes. Corpus-wide screening remains unauthorized until
+calibration partition, sealed holdout, all-13 recall, negative controls, and
+independent audit pass.
+
 Regression coverage after `D-0021`: `scripts/run_tests.py` includes
 `test_reference_detector_v3_known_positive_recall_gate`, covering all 13 missed
 known-positive projects and preventing the local deterministic v3 replay from
 being treated as actual vision classification. It also includes
 `test_qualification_recovery_controller_state`, which validates the recovery
 state schema, privacy invariants, the `13 / 24` count, the `11` project deficit,
-and separation between gate behavior and detector performance. Full test runner
-status: `PASS`.
+and separation between gate behavior and detector performance. V4 regression
+coverage now includes the Windows.Media.Ocr minimized proof, combined
+three-target packages, image-only OCR target pages, misleading filename/folder
+hints overridden by page content, source-document target-word confusers,
+missing OCR language support, OCR engine failure, fail-closed output, temporary
+render deletion, raw OCR non-persistence, generator isolation, and
+source-review blindness. Full test runner status: `PASS`.
 
 Portfolio result: mean score `42`, median `42`, minimum `42`, mean scorable
 coverage `38`; validity rate `100%`; critical findings `0`; high findings `36`
@@ -131,9 +158,9 @@ Instructions, production Knowledge, extraction logic, renderer behavior,
 validation behavior, grading weights, or tolerance profiles were optimized.
 
 Exact next action: do not start source screening, cohort freeze, baseline
-generation, review, optimization, or source-quorum work from the v3 exhaustion
-result. Treat that exhaustion conclusion as provisional. The next compliant
-action is `CREATE_DETECTOR_V4_LOCAL_MULTISIGNAL_RECOVERY_PROTOTYPE` using only
-local deterministic/OCR/CV/layout signals and the existing sealed calibration
-discipline. Rerun known-positive controls and real negative controls before any
-expanded screening.
+generation, review, optimization, corpus-wide screening, or source-quorum work
+from the v3 exhaustion result or from v4 creation alone. Treat v3 exhaustion as
+provisional and v4 implementation as uncalibrated. The next compliant action is
+`RUN_DETECTOR_V4_CALIBRATION_PARTITION` using only the implementation-facing
+calibration manifest. Sealed holdout identities, holdout results, and holdout
+failure examples must remain unavailable to tuning.

@@ -31,6 +31,11 @@ PHASE_C_STATUS = ROOT / "manifests" / "baseline-024" / "source_approvals" / "pha
 UNIVERSE = ROOT / "reports" / "baseline-024" / "expanded-screening" / "full_project_universe.json"
 KNOWN_POSITIVE = ROOT / "reports" / "baseline-024" / "reference-detector-calibration" / "known_positive_replay_summary.json"
 VISION_PROBE = ROOT / "reports" / "baseline-024" / "reference-detector-calibration" / "vision_classifier_availability_probe.json"
+WINDOWS_OCR_PROBE = ROOT / "reports" / "baseline-024" / "reference-detector-calibration" / "windows_media_ocr_local_probe.json"
+V4_CALIBRATION_MANIFEST = ROOT / "manifests" / "reference_detection" / "calibration" / "v4_calibration_manifest.json"
+V4_HOLDOUT_MANIFEST = ROOT / "manifests" / "reference_detection" / "calibration" / "v4_holdout_manifest.sealed.json"
+V4_NEGATIVE_CONTROLS = ROOT / "manifests" / "reference_detection" / "calibration" / "v4_negative_controls.json"
+V4_DETECTOR_SCRIPT = ROOT / "scripts" / "detect_reference_presence_v4.py"
 FROZEN_WORKFLOW = ROOT / "evals" / "baseline-024" / "frozen_workflow_manifest.json"
 PRIVACY_APPROVAL = ROOT / "docs" / "PRIVACY_APPROVAL.md"
 TASK_REGISTRY = ROOT / "orchestration" / "TASK_REGISTRY.csv"
@@ -500,7 +505,7 @@ def attempted_strategies(known_positive: dict[str, Any], vision_probe: dict[str,
         [VISION_PROBE, PRIVACY_APPROVAL],
         {"final_status": vision_probe.get("final_status"), "privacy": privacy_status()},
     )
-    return [
+    strategies = [
         {
             "strategy_id": "target_output_detection_v3_page_content_isolated_known_positive_replay",
             "status": str(known_positive.get("status")),
@@ -520,6 +525,25 @@ def attempted_strategies(known_positive: dict[str, Any], vision_probe: dict[str,
             "repeat_policy": "DO_NOT_SEND_PRIVATE_REFERENCE_PAGES_WHILE_PRIVACY_NOT_APPROVED",
         },
     ]
+    if WINDOWS_OCR_PROBE.exists():
+        ocr_probe = read_json(WINDOWS_OCR_PROBE)
+        ocr_sig, ocr_hashes = strategy_signature(
+            "windows_media_ocr_local_synthetic_execution_proof",
+            [WINDOWS_OCR_PROBE],
+            {"status": ocr_probe.get("synthetic_execution", {}).get("status")},
+        )
+        strategies.append(
+            {
+                "strategy_id": "windows_media_ocr_local_synthetic_execution_proof",
+                "status": str(ocr_probe.get("synthetic_execution", {}).get("status")),
+                "strategy_signature": ocr_sig,
+                "evidence_hashes": ocr_hashes,
+                "requested_classifier": ocr_probe.get("requested_classifier"),
+                "actual_classifier": ocr_probe.get("actual_classifier"),
+                "repeat_policy": "DO_NOT_PERSIST_OR_PRINT_OCR_TEXT",
+            }
+        )
+    return strategies
 
 
 def select_next_action(capabilities: dict[str, Any]) -> dict[str, str]:
@@ -529,6 +553,13 @@ def select_next_action(capabilities: dict[str, Any]) -> dict[str, str]:
             "phase": "PHASE_A",
             "status": "SELECTED",
             "reason": "Capability discovery was skipped in test mode and must be run before detector recovery.",
+        }
+    if V4_DETECTOR_SCRIPT.exists() and V4_CALIBRATION_MANIFEST.exists():
+        return {
+            "action_id": "RUN_DETECTOR_V4_CALIBRATION_PARTITION",
+            "phase": "PHASE_B",
+            "status": "SELECTED",
+            "reason": "Detector v4 and its frozen calibration protocol exist; run only the implementation-facing calibration partition before sealed holdout or corpus screening.",
         }
     return {
         "action_id": "CREATE_DETECTOR_V4_LOCAL_MULTISIGNAL_RECOVERY_PROTOTYPE",
@@ -544,6 +575,7 @@ def build_state(skip_capability_probe: bool = False) -> dict[str, Any]:
     universe = read_json(UNIVERSE)
     known_positive = read_json(KNOWN_POSITIVE)
     vision_probe = read_json(VISION_PROBE)
+    ocr_probe = read_json(WINDOWS_OCR_PROBE) if WINDOWS_OCR_PROBE.exists() else {}
     allowed_ids = list(shortfall.get("current_allowed_eval_project_ids", []))
     git = git_status()
     capabilities = discover_local_capabilities(skip_capability_probe)
@@ -580,7 +612,8 @@ def build_state(skip_capability_probe: bool = False) -> dict[str, Any]:
         },
     ]
     next_action = select_next_action(capabilities)
-    status = "RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE"
+    v4_created = V4_DETECTOR_SCRIPT.exists() and V4_CALIBRATION_MANIFEST.exists()
+    status = "DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS" if v4_created and not skip_capability_probe else "RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE"
     if skip_capability_probe:
         status = "RECOVERY_CONTROLLER_READY"
     return {
@@ -614,13 +647,19 @@ def build_state(skip_capability_probe: bool = False) -> dict[str, Any]:
         "detector_calibration": {
             "current_detector_version": known_positive.get("detector_version"),
             "current_detector_performance_status": known_positive.get("status"),
+            "candidate_detector_version": "target_output_detection_v4_local_multisignal_recovery",
+            "candidate_detector_status": "CREATED_AWAITING_CALIBRATION_PARTITION" if v4_created else "NOT_CREATED",
             "regression_gate_behavior_status": "PASS_BLOCKS_KNOWN_FAILING_DETECTOR",
             "detector_performance_status": "FAIL",
             "known_positive_all_three_recall": f"{known_positive.get('positive_projects_detected_all_three')}/{len(known_positive.get('known_positive_projects', []))}",
             "per_type_recall": known_positive.get("per_type_recall"),
             "false_negative_output_type_count": known_positive.get("false_negative_output_type_count"),
             "negative_controls_executed": 0,
-            "detector_v4_created": False,
+            "detector_v4_created": v4_created,
+            "v4_calibration_protocol_frozen": V4_CALIBRATION_MANIFEST.exists() and V4_HOLDOUT_MANIFEST.exists(),
+            "v4_negative_control_count": read_json(V4_NEGATIVE_CONTROLS).get("negative_control_count", 0) if V4_NEGATIVE_CONTROLS.exists() else 0,
+            "windows_media_ocr_synthetic_status": ocr_probe.get("synthetic_execution", {}).get("status"),
+            "windows_media_ocr_private_page_status": ocr_probe.get("private_page_execution", {}).get("status"),
             "corpus_wide_screening_authorized": False,
         },
         "candidate_queues": queues,

@@ -161,3 +161,21 @@
   `reports/baseline-024/qualification-recovery/` and
   `orchestration/QUALIFICATION_RECOVERY_QUEUE.json`. The next selected action is
   `CREATE_DETECTOR_V4_LOCAL_MULTISIGNAL_RECOVERY_PROTOTYPE`.
+- Froze `docs/specs/REFERENCE_DETECTION_V4_CALIBRATION_PROTOCOL.md` with an
+  8-project calibration partition, a 5-project sealed holdout partition, and 24
+  minimized real negative controls.
+- Added a local Windows.Media.Ocr signal bridge and synthetic OCR proof. The
+  probe found `en-US` and `zh-Hant-TW`; Simplified Chinese was unavailable.
+  OCR text was not persisted or printed, and the private-page probe was skipped
+  because an enforceable per-process network-disable boundary was unavailable.
+- Added `target_output_detection_v4_local_multisignal_recovery` with minimized
+  v4 schemas, Poppler rendering, pypdf text extraction, Pillow/NumPy layout
+  buckets, optional Windows OCR role signals, weak-prior handling, duplicate
+  grouping, combined-package segmentation, and fail-closed ambiguity.
+- Added v4 regression coverage for combined target packages, image-only OCR
+  pages, misleading target hints, electrical and source-document negatives,
+  missing OCR language support, OCR failure, temporary cleanup, raw OCR
+  non-persistence, generator isolation, and source-review blindness.
+- Updated the recovery controller. Current status is
+  `DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`; the next selected action is
+  `RUN_DETECTOR_V4_CALIBRATION_PARTITION`.

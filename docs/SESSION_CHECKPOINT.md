@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: cycle-000 autonomous qualification recovery, Phase A local
-capability discovery complete.
+Current phase: cycle-000 autonomous qualification recovery, detector v4 local
+calibration in progress.
 
 Accepted release: none.
 
@@ -13,7 +13,7 @@ Evaluator version for future cycle-000 work: `plc_layout_evaluator_v2_sensitivit
 
 Baseline-024 seed: `BASELINE024-CYCLE000-20260623`.
 
-Current status: `RECOVERY_PHASE_A_LOCAL_CAPABILITY_DISCOVERY_COMPLETE`.
+Current status: `DETECTOR_V4_LOCAL_CALIBRATION_IN_PROGRESS`.
 
 Latest evidence: `reports/baseline-024/reference-detection-v3/screening_yield.md`,
 `reports/baseline-024/reference-detection-v3/independent_audit.json`,
@@ -143,6 +143,24 @@ Tesseract, OCRmyPDF, PaddleOCR, EasyOCR, ONNX Runtime, OpenCV, PyMuPDF, and
 ImageMagick were not available in the local probe. No private project data was
 opened and no network endpoint probe was performed.
 
+Detector v4 local recovery result: the v4 calibration protocol was frozen and
+committed before implementation. The implementation-facing calibration
+partition contains 8 known-positive project IDs; the sealed holdout contains 5
+project IDs and remains auditor-only. The negative-control manifest contains 24
+minimized real non-target controls. Windows.Media.Ocr synthetic execution
+passed locally through `Windows.Media.Ocr.OcrEngine.RecognizeAsync` in
+`powershell.exe`; installed OCR languages are `en-US` and `zh-Hant-TW`, with no
+Simplified Chinese language in the local probe. No OCR text was persisted,
+printed, logged, or returned. The private-page OCR probe was skipped because no
+enforceable per-process network-disable boundary was available.
+
+Detector v4 implementation result: `target_output_detection_v4_local_multisignal_recovery`
+now exists with minimized v4 schemas, local Poppler rendering, pypdf embedded
+text, optional Windows OCR role signals, Pillow/NumPy layout buckets, weak
+metadata priors, duplicate grouping, combined-package segmentation, and
+fail-closed `AMBIGUOUS`/`UNCLASSIFIED` outputs. Full repository tests pass with
+new v4 coverage.
+
 Regression coverage result: `scripts/run_tests.py` now includes
 `test_reference_detector_v3_known_positive_recall_gate`, covering all 13 missed
 known-positive projects from the v3 replay, and
@@ -155,9 +173,10 @@ generation, review, or production approval occurred. Baseline generation
 attempts remain `0`.
 
 Exact next action: do not start source-review quorum, sanitized-bundle
-construction, cohort freeze, baseline generation, review, optimization, or
-expanded screening from the v3 exhaustion result. Build
-`target_output_detection_v4_local_multisignal_recovery` as a local-only
-prototype using the capability report, add regression coverage for the current
-known-positive false negatives and real negative controls, then rerun positive
-and negative calibration before any corpus-wide screening.
+construction, cohort freeze, baseline generation, review, optimization,
+expanded corpus screening, or sealed holdout work. Run
+`RUN_DETECTOR_V4_CALIBRATION_PARTITION` using only
+`manifests/reference_detection/calibration/v4_calibration_manifest.json` and
+the local-only v4 detector. Do not expose sealed holdout identities, holdout
+results, private OCR text, rendered pages, crops, filenames, paths, hashes, or
+failure examples to implementation tuning.
