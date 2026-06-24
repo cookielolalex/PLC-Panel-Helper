@@ -1,0 +1,26 @@
+{
+  "schema_version": "sheetmetal-v1",
+  "status": "SYNTHETIC_REGRESSION_ONLY",
+  "rules": [
+    {
+      "rule_id": "RULE-FAN-FILTER-001",
+      "version": "1.0.0",
+      "applicable_component_family": "FAN",
+      "condition": "door-mounted ventilation fan",
+      "generated_requirement": {
+        "family": "ACCESSORY",
+        "model": "FILTER-GRILLE-120",
+        "required_qty": 1
+      },
+      "generated_cutout": {
+        "shape": "RECTANGLE",
+        "width_mm": 120,
+        "height_mm": 120
+      },
+      "evidence_basis": "synthetic verified component-library rule",
+      "confidence": 0.9,
+      "priority": 20,
+      "conflict_behavior": "explicit_source_wins"
+    }
+  ]
+}
