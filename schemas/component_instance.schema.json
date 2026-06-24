@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Component Instance",
+  "type": "object",
+  "required": ["component_instance_id", "component_key", "project_id", "component_type_id", "quantity", "evidence_ids", "status", "conflict_records"],
+  "properties": {
+    "component_instance_id": {"type": "string"},
+    "component_key": {"type": "string"},
+    "project_id": {"type": "string"},
+    "component_type_id": {"type": "string"},
+    "raw_source_names": {"type": "array"},
+    "quantity": {
+      "type": "object",
+      "required": ["required_qty", "ordered_qty", "received_qty", "allocated_qty", "installed_qty"],
+      "properties": {
+        "required_qty": {"type": ["integer", "null"]},
+        "ordered_qty": {"type": ["integer", "null"]},
+        "received_qty": {"type": ["integer", "null"]},
+        "allocated_qty": {"type": ["integer", "null"]},
+        "installed_qty": {"type": ["integer", "null"]}
+      }
+    },
+    "panel_assignment": {"type": ["string", "null"]},
+    "circuit_or_function_assignment": {"type": ["string", "null"]},
+    "mounting_surface": {"type": ["string", "null"]},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "confidence": {"type": "number"},
+    "status": {"type": "string"},
+    "conflict_records": {"type": "array"}
+  }
+}

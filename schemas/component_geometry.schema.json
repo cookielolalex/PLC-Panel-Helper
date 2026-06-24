@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Component Geometry",
+  "type": "object",
+  "required": ["width_mm", "height_mm", "depth_mm", "status"],
+  "properties": {
+    "width_mm": {"type": "number"},
+    "height_mm": {"type": "number"},
+    "depth_mm": {"type": "number"},
+    "status": {"type": "string"}
+  }
+}

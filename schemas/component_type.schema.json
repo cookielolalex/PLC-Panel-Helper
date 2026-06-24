@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Component Type",
+  "type": "object",
+  "required": ["component_type_id", "canonical_family", "evidence_ids", "status"],
+  "properties": {
+    "component_type_id": {"type": "string"},
+    "canonical_family": {"type": "string"},
+    "manufacturer": {"type": ["string", "null"]},
+    "model": {"type": ["string", "null"]},
+    "normalized_specification": {"type": ["string", "null"]},
+    "geometry": {"type": ["object", "null"]},
+    "mounting_method": {"type": "string"},
+    "permitted_surfaces": {"type": "array"},
+    "orientation_rules": {"type": "array"},
+    "cutout_geometry": {"type": ["object", "null"]},
+    "compatible_accessories": {"type": "array"},
+    "library_revision": {"type": ["string", "null"]},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "status": {"type": "string"}
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical Sheetmetal Drawing Model V1",
+  "type": "object",
+  "required": ["schema_version", "project_id", "model_role", "source_mode", "panel_topology", "component_register_hash", "panel_assignment_hash", "component_placement", "cutouts", "dimensions", "unresolved_facts", "validation_results", "provenance_map_hash"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project_id": {"type": "string"},
+    "model_role": {"type": "string"},
+    "source_mode": {"type": "string"},
+    "panel_topology": {"type": "object"},
+    "component_register_hash": {"type": "string"},
+    "panel_assignment_hash": {"type": "string"},
+    "component_placement": {"type": "object"},
+    "cutouts": {"type": "array"},
+    "datum_references": {"type": "array"},
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["panel_id", "width_mm", "height_mm", "depth_mm"],
+        "properties": {
+          "panel_id": {"type": "string"},
+          "width_mm": {"type": "number"},
+          "height_mm": {"type": "number"},
+          "depth_mm": {"type": "number"}
+        }
+      }
+    },
+    "unresolved_facts": {"type": "array"},
+    "validation_results": {"type": "object"},
+    "provenance_map_hash": {"type": "string"}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Drawing Provenance Map",
+  "type": "object",
+  "required": ["schema_version", "project_id", "evidence_codes", "critical_items", "coverage_status", "coverage_failures"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project_id": {"type": "string"},
+    "evidence_codes": {"type": "array"},
+    "critical_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item_path", "status", "support_type", "support_ids"],
+        "properties": {
+          "item_path": {"type": "string"},
+          "status": {"type": "string"},
+          "support_type": {"type": "string"},
+          "support_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "coverage_status": {"type": "string"},
+    "coverage_failures": {"type": "array"}
+  }
+}

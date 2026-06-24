@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Component Register",
+  "type": "object",
+  "required": ["schema_version", "project_id", "component_types", "component_instances", "quantity_policy", "conflicts"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project_id": {"type": "string"},
+    "component_types": {"type": "array", "minItems": 1},
+    "component_instances": {"type": "array", "minItems": 1},
+    "quantity_policy": {"type": "string"},
+    "conflicts": {"type": "array"}
+  }
+}

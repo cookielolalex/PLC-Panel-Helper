@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Panel Constraint Model",
+  "type": "object",
+  "required": ["schema_version", "project_id", "hard_constraints", "soft_objectives", "placements", "failed_placements", "status"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project_id": {"type": "string"},
+    "hard_constraints": {"type": "array", "items": {"type": "string"}},
+    "soft_objectives": {"type": "array", "items": {"type": "string"}},
+    "placements": {"type": "array"},
+    "failed_placements": {"type": "array"},
+    "status": {"type": "string"}
+  }
+}

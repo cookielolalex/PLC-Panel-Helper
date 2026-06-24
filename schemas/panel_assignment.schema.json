@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Panel Assignment",
+  "type": "object",
+  "required": ["schema_version", "project_id", "assignments", "unresolved_components", "rejected_assignments", "quantity_balance"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project_id": {"type": "string"},
+    "assignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["assignment_id", "component_instance_id", "component_key", "panel_id", "assignment_status", "assignment_evidence_ids", "placement_resolved"],
+        "properties": {
+          "assignment_id": {"type": "string"},
+          "component_instance_id": {"type": "string"},
+          "component_key": {"type": "string"},
+          "panel_id": {"type": "string"},
+          "assignment_status": {"type": "string"},
+          "assignment_evidence_ids": {"type": "array", "items": {"type": "string"}},
+          "placement_resolved": {"type": "boolean"}
+        }
+      }
+    },
+    "unresolved_components": {"type": "array"},
+    "rejected_assignments": {"type": "array"},
+    "quantity_balance": {"type": "string"}
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Source Evidence",
+  "type": "object",
+  "required": ["schema_version", "project_id", "allowed_evidence", "rejected_source_role_counts", "generator_excludes_reference_or_post_design_roles"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project_id": {"type": "string"},
+    "allowed_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "source_role", "chronology_status", "status"],
+        "properties": {
+          "evidence_id": {"type": "string"},
+          "source_role": {"type": "string"},
+          "chronology_status": {"type": "string"},
+          "status": {"type": "string"}
+        }
+      }
+    },
+    "rejected_source_role_counts": {"type": "object"},
+    "generator_excludes_reference_or_post_design_roles": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Source Fact",
+  "type": "object",
+  "required": ["fact_id", "evidence_id", "fact_type", "status"],
+  "properties": {
+    "fact_id": {"type": "string"},
+    "evidence_id": {"type": "string"},
+    "fact_type": {"type": "string"},
+    "component_key": {"type": "string"},
+    "value": {},
+    "raw_value": {"type": "string"},
+    "unit": {"type": "string"},
+    "status": {"type": "string"}
+  }
+}

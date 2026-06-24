@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Accessory Rule",
+  "type": "object",
+  "required": ["rule_id", "version", "applicable_component_family", "condition", "generated_requirement", "evidence_basis", "confidence", "priority", "conflict_behavior"],
+  "properties": {
+    "rule_id": {"type": "string"},
+    "version": {"type": "string"},
+    "applicable_component_family": {"type": "string"},
+    "condition": {"type": "string"},
+    "generated_requirement": {"type": "object"},
+    "generated_cutout": {"type": "object"},
+    "evidence_basis": {"type": "string"},
+    "confidence": {"type": "number"},
+    "priority": {"type": "integer"},
+    "conflict_behavior": {"type": "string"}
+  }
+}

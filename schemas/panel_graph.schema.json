@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sheetmetal V1 Typed Panel Graph",
+  "type": "object",
+  "required": ["schema_version", "project_id", "source_mode", "nodes", "edges"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "project_id": {"type": "string"},
+    "source_mode": {"type": "string"},
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["node_id", "node_type", "status"],
+        "properties": {
+          "node_id": {"type": "string"},
+          "node_type": {"type": "string"},
+          "status": {"type": "string"}
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["edge_id", "edge_type", "from_node_id", "to_node_id", "status", "support"],
+        "properties": {
+          "edge_id": {"type": "string"},
+          "edge_type": {"type": "string"},
+          "from_node_id": {"type": "string"},
+          "to_node_id": {"type": "string"},
+          "status": {"type": "string"},
+          "support": {"type": "object"}
+        }
+      }
+    }
+  }
+}
