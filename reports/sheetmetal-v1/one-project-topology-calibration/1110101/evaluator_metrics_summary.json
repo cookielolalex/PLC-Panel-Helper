@@ -1,0 +1,114 @@
+{
+  "schema_version": "sheetmetal-v1.topology_evaluator_metrics.v1",
+  "status": "PASS_WITH_SOURCE_LIMITED_TOPOLOGY_SIZING_PLACEMENT_COVERAGE",
+  "project_id": "1110101",
+  "evaluator_lane_opened_after_generator_freeze": true,
+  "reference_package_available": true,
+  "reference_values_persisted": false,
+  "generator_artifacts_modified_after_freeze": false,
+  "panel_assignment": {
+    "scorable_assignment_count": 0,
+    "precision": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "confidence": "high"
+    },
+    "recall": "NOT_REPORTED_ZERO_DENOMINATOR",
+    "unresolved_count": 53,
+    "unsupported_assignment_count": 0,
+    "coverage": {
+      "numerator": 0,
+      "denominator": 53,
+      "coverage": 0.0,
+      "confidence": "high"
+    }
+  },
+  "topology": {
+    "scorable_panel_count": 0,
+    "panel_count_accuracy": "NOT_REPORTED_ZERO_DENOMINATOR",
+    "surface_and_compartment_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "confidence": "medium"
+    },
+    "unsupported_topology_facts": 0,
+    "topology_coverage": {
+      "numerator": 0,
+      "denominator": 1,
+      "coverage": 0.0,
+      "confidence": "medium"
+    }
+  },
+  "sizing": {
+    "scorable_dimension_count": 0,
+    "exact_match_count": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "confidence": "medium"
+    },
+    "within_tolerance_count": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "confidence": "medium"
+    },
+    "unsupported_dimensions": 0,
+    "unresolved_dimensions": 3,
+    "sizing_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "confidence": "medium"
+    }
+  },
+  "placement": {
+    "scorable_component_count": 0,
+    "correctly_assigned_surface_count": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "confidence": "medium"
+    },
+    "approximate_region_agreement": {
+      "numerator": 0,
+      "denominator": 0,
+      "coverage": null,
+      "confidence": "medium"
+    },
+    "unplaced_count": 53,
+    "overlap_violations": 0,
+    "containment_violations": 0,
+    "clearance_violations": 0,
+    "placement_coverage": {
+      "numerator": 0,
+      "denominator": 53,
+      "coverage": 0.0,
+      "confidence": "high"
+    }
+  },
+  "provenance_and_safety": {
+    "critical_facts_without_evidence": 0,
+    "reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_transmissions": 0,
+    "deterministic_rerun_result": {
+      "numerator": 12,
+      "denominator": 12,
+      "coverage": 1.0,
+      "confidence": "high"
+    }
+  },
+  "generalized_error_classes": [
+    "SOURCE_LIMITED_PANEL_ASSIGNMENT_UNAVAILABLE",
+    "PANEL_TOPOLOGY_UNSUPPORTED_FROM_GENERATOR_SOURCES",
+    "COMPONENT_GEOMETRY_MISSING",
+    "PLACEMENT_BLOCKED_BY_ASSIGNMENT_AND_GEOMETRY"
+  ],
+  "private_content_transmission_count": 0,
+  "committed_reference_dimension_count": 0,
+  "committed_reference_coordinate_count": 0,
+  "committed_reference_layout_count": 0
+}
