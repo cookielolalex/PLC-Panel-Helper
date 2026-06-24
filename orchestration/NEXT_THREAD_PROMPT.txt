@@ -7,15 +7,19 @@ Read the canonical checkpoint files first:
 - `docs/06_EVAL_LEDGER.md`
 - `docs/07_CHANGELOG.md`
 - `docs/SESSION_CHECKPOINT.md`
+- `docs/specs/MASTER_AUTOPILOT_PROTOCOL.md`
 - `docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md`
 - `docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md`
 - `docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md`
 - `manifests/sheetmetal-v1/requalification_queue.json`
+- `orchestration/master/MASTER_STATE.json`
+- `orchestration/master/THREAD_REGISTRY.csv`
+- `orchestration/master/NEXT_ACTION_QUEUE.json`
 - `orchestration/TASK_REGISTRY.csv`
 
 Current status:
 
-`ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING`
+`ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT_INCONCLUSIVE_LOW_COVERAGE_T1_PENDING`
 
 Active goal:
 
@@ -24,31 +28,39 @@ Active goal:
 Current qualification state:
 
 - `SHEETMETAL_ALLOWED_EVAL` approved count remains `1`.
-- `1110101` is the first accepted sheetmetal-v1 calibration project for the modular component-register and graph stage.
-- The topology/sizing/placement implementation is frozen for audit, not independently adjudicated.
-- This is not production approval and does not authorize real customer drawing generation.
+- `1110101` is the first accepted sheetmetal-v1 calibration project for the
+  modular component-register and graph stage.
+- The topology/sizing/placement implementation was independently audited.
+- T0 safety and implementation integrity pass, but engineering coverage is
+  inconclusive and low.
+- This is not production approval and does not authorize real customer drawing
+  generation.
 - `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
 
-Topology/sizing/placement evidence:
+T0 audit evidence:
 
-- Protocol: `docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md`
-- Machine protocol: `manifests/sheetmetal-v1/one-project-topology-calibration/1110101/calibration_protocol.json`
-- Input manifest: `manifests/sheetmetal-v1/one-project-topology-calibration/1110101/calibration_input_manifest.json`
-- Assignment summary: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/panel_assignment_recovery_summary.json`
-- Topology/sizing summary: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/topology_sizing_summary.json`
-- Placement/validation summary: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/placement_validation_summary.json`
-- Generator freeze: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/generator_freeze_summary.json`
-- Evaluator metrics: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/evaluator_metrics_summary.json`
-- Implementation checkpoint: `reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json`
-- Stage manifest: `evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json`
+- Independent audit:
+  `reports/sheetmetal-v1/one-project-topology-calibration/1110101/independent_audit.json`
+- Hard gates:
+  `reports/sheetmetal-v1/one-project-topology-calibration/1110101/hard_gate_adjudication.json`
+- Determinism:
+  `reports/sheetmetal-v1/one-project-topology-calibration/1110101/determinism_adjudication.json`
+- Coordinator addendum:
+  `reports/sheetmetal-v1/one-project-topology-calibration/1110101/coordinator_audit_addendum.json`
+- Audit input manifest:
+  `manifests/sheetmetal-v1/one-project-topology-calibration/1110101/audit_input_manifest.json`
+- Child result:
+  `orchestration/master/child-results/SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT.json`
 
-Implementation result summary:
+T0 result summary:
 
-- Full tests `PASS`.
+- Exact status: `INCONCLUSIVE_LOW_COVERAGE`.
+- Full tests `PASS` after coordinator addendum.
 - Legacy baseline-024 scoped freeze `PASS`.
 - Active sheetmetal-v1 scoped freeze `PASS`.
 - Topology/sizing/placement scoped freeze `PASS`.
-- Deterministic topology-stage canonical match `12/12`; byte-identical match `12/12`.
+- Deterministic topology-stage canonical match `12/12`; byte-identical match
+  `12/12`.
 - Panel assignment coverage is source-limited at `0/53`.
 - Component geometry coverage is source-limited at `0/53`.
 - Placement coverage is source-limited at `0/53`.
@@ -61,18 +73,22 @@ Implementation result summary:
 - Tracked private artifacts `0`.
 - Generated customer drawings/PDF/DXF/DWG `0`.
 
-Known source-limited blocking categories:
-
-- `SOURCE_LIMITED_PANEL_ASSIGNMENT_UNAVAILABLE`
-- `PANEL_TOPOLOGY_UNSUPPORTED_FROM_GENERATOR_SOURCES`
-- `COMPONENT_GEOMETRY_MISSING`
-- `PLACEMENT_BLOCKED_BY_ASSIGNMENT_AND_GEOMETRY`
-
 Exact next action:
 
-`RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT`
+`RUN_TARGETED_COVERAGE_RECOVERY_T1`
 
-Do not resume the legacy three-output detector workflow. Do not modify frozen
-generator artifacts for the passed component-register/graph stage or the frozen
-topology/sizing/placement implementation. Do not generate a customer drawing,
-PDF, DXF, or DWG during the audit.
+Launch bounded T1 recovery workers for:
+
+1. `SMV1-T1-PANEL-ASSIGNMENT-RECOVERY`
+2. `SMV1-T1-COMPONENT-GEOMETRY-RECOVERY`
+3. `SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY`
+
+Each worker must use only approved pre-design/source-only evidence, approved
+rules, local generic libraries, synthetic fixtures, and neutral committed
+summaries. They must not open source roots outside the repository, `.private`
+artifacts, completed references, post-design files, customer drawings, or
+`scripts/run_reference_detection_v4_corpus_screening.py`.
+
+Do not generate a customer drawing, PDF, DXF, or DWG during T1. Use safe
+unresolved statuses rather than invented assignments, dimensions, geometry, or
+placements.

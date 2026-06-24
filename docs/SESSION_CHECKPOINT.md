@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: one-project topology, sizing, and placement implementation
-frozen; independent audit pending.
+Current phase: one-project topology, sizing, and placement independent audit
+completed with low coverage; targeted recovery pending.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING`.
+Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT_INCONCLUSIVE_LOW_COVERAGE_T1_PENDING`.
 
 Current candidate: `1110101`.
 
@@ -347,8 +347,31 @@ Topology, sizing, and placement implementation:
 - Evidence:
   `reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json`.
 
+Independent topology/sizing/placement audit:
+
+- Decision: `D-0039`.
+- Exact status: `INCONCLUSIVE_LOW_COVERAGE`.
+- Safety and implementation integrity: `PASS` after coordinator addendum
+  reran full tests and legacy, active sheetmetal-v1, and topology-stage scoped
+  freezes with the bundled runtime.
+- Engineering capability: inconclusive because assignment, geometry, and
+  placement coverage remain `0/53`.
+- Determinism: topology-stage rerun remains `12/12`.
+- Hard gates: unsupported critical dimensions `0`, unsupported panel
+  assignments `0`, unsupported placements `0`, accepted hard-constraint
+  violations `0`, reference leakage `0`, post-design leakage `0`, private
+  transmissions `0`, tracked private artifacts `0`, and customer PDF/DXF/DWG
+  generation `0`.
+- Evidence:
+  `reports/sheetmetal-v1/one-project-topology-calibration/1110101/independent_audit.json`,
+  `reports/sheetmetal-v1/one-project-topology-calibration/1110101/hard_gate_adjudication.json`,
+  `reports/sheetmetal-v1/one-project-topology-calibration/1110101/determinism_adjudication.json`,
+  `reports/sheetmetal-v1/one-project-topology-calibration/1110101/coordinator_audit_addendum.json`,
+  and
+  `manifests/sheetmetal-v1/one-project-topology-calibration/1110101/audit_input_manifest.json`.
+
 Exact next action:
 
-Run `RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT`. Do not
-generate a customer drawing, PDF, DXF, or DWG during that audit step unless a
-later approved protocol explicitly authorizes it.
+Run `RUN_TARGETED_COVERAGE_RECOVERY_T1`. Do not generate a customer drawing,
+PDF, DXF, or DWG during recovery unless a later approved protocol explicitly
+authorizes it.

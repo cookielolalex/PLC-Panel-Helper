@@ -914,3 +914,36 @@ Evidence:
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/hard_gate_adjudication.json`,
 and
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/determinism_adjudication.json`.
+
+## sheetmetal-v1 one-project topology sizing placement independent audit
+
+Status: `INCONCLUSIVE_LOW_COVERAGE`.
+
+Decision: `D-0039`.
+
+Purpose: independently adjudicate the frozen topology/sizing/placement
+implementation for candidate `1110101` before any model or renderer promotion.
+
+Safety and implementation integrity: `PASS`. The coordinator addendum reran
+fresh full tests and the legacy, active sheetmetal-v1, and topology-stage
+scoped freezes with the bundled runtime; all passed. Deterministic rerun
+remains `12 / 12`, completed-reference leakage remains `0`, post-design
+leakage remains `0`, private transmissions remain `0`, tracked private
+artifacts remain `0`, and customer PDF/DXF/DWG generation remains `0`.
+
+Engineering capability: `INCONCLUSIVE_LOW_COVERAGE`. Assignment coverage is
+`0 / 53`, geometry coverage is `0 / 53`, and placement coverage is `0 / 53`.
+These safe unresolved states are not capability success.
+
+Result: branch to `RUN_TARGETED_COVERAGE_RECOVERY_T1`. No customer drawing was
+generated, no production approval was declared, and
+`SHEETMETAL_ALLOWED_EVAL` remains `1`.
+
+Evidence:
+`manifests/sheetmetal-v1/one-project-topology-calibration/1110101/audit_input_manifest.json`,
+`reports/sheetmetal-v1/one-project-topology-calibration/1110101/independent_audit.json`,
+`reports/sheetmetal-v1/one-project-topology-calibration/1110101/hard_gate_adjudication.json`,
+`reports/sheetmetal-v1/one-project-topology-calibration/1110101/determinism_adjudication.json`,
+`reports/sheetmetal-v1/one-project-topology-calibration/1110101/coordinator_audit_addendum.json`,
+and
+`orchestration/master/child-results/SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT.json`.

@@ -1,12 +1,12 @@
 {
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
-  "current_node": "T0",
+  "current_node": "T1",
   "nodes": [
     {
       "id": "T0",
       "name": "INDEPENDENT_TOPOLOGY_SIZING_PLACEMENT_AUDIT",
-      "status": "WORKTREE_PENDING",
+      "status": "INCONCLUSIVE_LOW_COVERAGE",
       "on_pass": "T3",
       "on_inconclusive_low_coverage": "T1",
       "on_fail_recoverable": "RECOVERY_BRANCH",
@@ -15,7 +15,7 @@
     {
       "id": "T1",
       "name": "TARGETED_COVERAGE_RECOVERY",
-      "status": "PENDING"
+      "status": "QUEUED"
     },
     {
       "id": "T2",

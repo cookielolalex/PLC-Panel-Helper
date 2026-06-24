@@ -1,12 +1,13 @@
 # Current State
 
-Current phase: one-project topology, sizing, and placement implementation frozen; independent audit pending.
+Current phase: one-project topology, sizing, and placement audit completed
+with source-limited low coverage; targeted recovery pending.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING`.
+Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT_INCONCLUSIVE_LOW_COVERAGE_T1_PENDING`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -44,9 +45,12 @@ deterministic private accessory and cutout reconciliation; `D-0034` accepts
 deterministic generator freeze evidence; `D-0035` accepts evaluator-only
 component graph metrics; `D-0036` accepts the independent component-register
 and graph calibration audit; `D-0037` freezes the one-project topology,
-sizing, and placement calibration protocol; and `D-0038` freezes deterministic
+sizing, and placement calibration protocol; `D-0038` freezes deterministic
 topology/sizing/placement implementation evidence and evaluator-only aggregate
-metrics pending independent audit. These amendments do not weaken
+metrics pending independent audit; and `D-0039` accepts the independent
+topology/sizing/placement audit as safety/integrity pass but engineering
+coverage inconclusive at low coverage, requiring targeted T1 recovery. These
+amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -374,5 +378,20 @@ not reported. Final independent adjudication was not performed in this thread.
 Evidence is recorded under
 `reports/sheetmetal-v1/one-project-topology-calibration/1110101/`.
 
+Independent topology, sizing, and placement audit after `D-0039`: the
+independent audit for candidate `1110101` returns exact status
+`INCONCLUSIVE_LOW_COVERAGE`. Safety and implementation integrity pass after
+coordinator fresh-command addendum: full tests, legacy scoped freeze, active
+sheetmetal-v1 scoped freeze, topology-stage scoped freeze, deterministic
+rerun, private Git exclusion, privacy, and no customer PDF/DXF/DWG generation
+all pass. Engineering capability remains inconclusive because assignment,
+geometry, and placement coverage remain `0/53`; this is not capability
+success and does not authorize drawing generation or approval promotion.
+Evidence is recorded in
+`reports/sheetmetal-v1/one-project-topology-calibration/1110101/independent_audit.json`,
+`hard_gate_adjudication.json`, `determinism_adjudication.json`,
+`coordinator_audit_addendum.json`, and
+`manifests/sheetmetal-v1/one-project-topology-calibration/1110101/audit_input_manifest.json`.
+
 Exact next action: run
-`RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT`.
+`RUN_TARGETED_COVERAGE_RECOVERY_T1`.
