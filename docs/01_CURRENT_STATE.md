@@ -1,7 +1,8 @@
 # Current State
 
-Current phase: deterministic source-fact extraction complete for one-project
-component graph calibration; component-register implementation pending.
+Current phase: deterministic component-register construction complete for
+one-project component graph calibration; panel-assignment and graph
+implementation pending.
 
 Accepted release: none.
 
@@ -38,7 +39,8 @@ and independent audit for one-project sheetmetal calibration; `D-0028` freezes
 the one-project component graph calibration protocol; `D-0029` accepts the
 ignored private workspace boundary; and `D-0030` accepts deterministic
 source-fact extraction into the private workspace with neutral committed
-summary evidence. These amendments
+summary evidence; `D-0031` accepts deterministic private component-register
+construction from that source-fact model. These amendments
 do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
@@ -287,6 +289,16 @@ private content transmissions. Private model files remain ignored and are
 recorded only by neutral hashes in
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json`.
 
-Exact next action: implement deterministic component-register construction
-from the private `1110101` source fact model with synthetic regression coverage
-before producing panel-assignment or graph artifacts.
+Component-register construction after `D-0031`: `scripts/sheetmetal_v1.py` now
+supports `--source-fact-model` register-only mode and writes
+`component_register.json` plus `component_register_validation.json` to an
+ignored output directory. The private `1110101` run consumed the private
+source-fact model and produced 53 component types, 53 component instances, 0
+conflicts, 0 unregistered allowed component keys, 0 completed-reference
+components, and 0 private content transmissions. Private register files remain
+ignored and are recorded only by neutral hashes in
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.json`.
+
+Exact next action: implement deterministic panel-assignment and typed graph
+construction from the private `1110101` component register/source fact model
+with synthetic regression coverage before accessory/cutout reconciliation.

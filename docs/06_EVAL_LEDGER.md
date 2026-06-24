@@ -638,3 +638,45 @@ Evidence:
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.md`,
 and
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json`.
+
+## sheetmetal-v1 one-project component register
+
+Status: `PASS`.
+
+Decision: `D-0031`.
+
+Purpose: construct the private component register from the private `1110101`
+source-fact model without committing project-specific values.
+
+Implementation: `scripts/sheetmetal_v1.py` accepts `--source-fact-model` for
+register-only construction. It writes `component_register.json` and
+`component_register_validation.json` only to the requested private output
+directory.
+
+Private run: input was
+`.private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json`;
+output was written to `.private/sheetmetal-v1/1110101/component-register/`.
+Both private outputs are ignored by Git and no `.private` path is tracked.
+
+Validation result: component register schema `PASS`; component type schema
+`PASS`; component instance schema `PASS`; component type count `53`;
+component instance count `53`; conflict count `0`; source fact count `87`;
+source line count `125`; unregistered allowed component key count `0`;
+completed-reference component count `0`; private content transmission count
+`0`.
+
+Regression result: full `scripts/run_tests.py` status `PASS`.
+`test_sheetmetal_v1_component_register_from_source_facts` covers source-value
+non-printing, formal source-fact fields, schema validity, quantity-stage
+preservation, and registration coverage.
+
+Generation status: no customer drawing, PDF, DXF, DWG, drawing model,
+baseline generation, or `SHEETMETAL_ALLOWED_EVAL` promotion occurred.
+
+Evidence:
+`scripts/sheetmetal_v1.py`,
+`scripts/run_tests.py`,
+`evals/sheetmetal-v1/frozen_workflow_manifest.json`,
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.md`,
+and
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.json`.

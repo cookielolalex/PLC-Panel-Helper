@@ -151,10 +151,36 @@ Source-fact extraction:
   `schemas/source_fact_model.schema.json`, `scripts/sheetmetal_v1.py`, and
   `scripts/run_tests.py`.
 
+Component-register construction:
+
+- Decision `D-0031` accepts deterministic private component-register
+  construction.
+- `scripts/sheetmetal_v1.py` now supports `--source-fact-model` register-only
+  construction.
+- Private input:
+  `.private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json`.
+- Private output directory:
+  `.private/sheetmetal-v1/1110101/component-register/`.
+- Private outputs are `component_register.json` and
+  `component_register_validation.json`; both are git-ignored.
+- Neutral private-run counts: 53 component types, 53 component instances, 0
+  conflicts, 87 source facts, 125 source lines, 0 unregistered allowed
+  component keys, 0 completed-reference components, and 0 private content
+  transmissions.
+- Neutral committed evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.json`
+  and
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.md`.
+- Regression coverage:
+  `test_sheetmetal_v1_component_register_from_source_facts`.
+- Active scoped manifest is refreshed for `scripts/sheetmetal_v1.py` and
+  `scripts/run_tests.py`.
+
 Exact next action:
 
-Implement deterministic component-register construction from the private
-`1110101` source fact model with synthetic regression coverage. Produce
-canonical panel-model artifacts and evaluation evidence only; do not start a
-new baseline, do not generate a customer drawing, and do not promote `1110101`
-to `SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.
+Implement deterministic panel-assignment and typed graph construction from the
+private `1110101` component register/source fact model with synthetic
+regression coverage. Produce canonical panel-model artifacts and evaluation
+evidence only; do not start a new baseline, do not generate a customer drawing,
+and do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and
+adjudication pass.

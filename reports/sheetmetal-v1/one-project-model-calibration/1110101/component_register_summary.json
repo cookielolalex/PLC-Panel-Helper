@@ -1,0 +1,55 @@
+{
+  "schema_version": "sheetmetal-v1.component_register_summary.v1",
+  "status": "PASS",
+  "task": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION",
+  "project_id": "1110101",
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "private_input": ".private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json",
+  "private_output_dir": ".private/sheetmetal-v1/1110101/component-register/",
+  "private_outputs": [
+    {
+      "name": "component_register.json",
+      "sha256": "D0C354C964D3D9D614E5BCE300F877DE3E43F6E7C770CA9461C7A5DF9481E247",
+      "git_check_ignore_status": "PASS"
+    },
+    {
+      "name": "component_register_validation.json",
+      "sha256": "AD1917C52019D2BDE516B414333D2761CA9C0E31DEAC537940486EE39C0D6B69",
+      "git_check_ignore_status": "PASS"
+    }
+  ],
+  "schema_validation": {
+    "component_register": "PASS",
+    "component_register_schema_error_count": 0,
+    "component_type_schema_error_count": 0,
+    "component_instance_schema_error_count": 0
+  },
+  "counts": {
+    "component_type_count": 53,
+    "component_instance_count": 53,
+    "conflict_count": 0,
+    "source_fact_count": 87,
+    "source_line_count": 125,
+    "unregistered_allowed_component_key_count": 0,
+    "quantity_stage_instance_counts": {
+      "required_qty": 0,
+      "ordered_qty": 0,
+      "received_qty": 0,
+      "allocated_qty": 0,
+      "installed_qty": 0
+    },
+    "completed_reference_component_count": 0,
+    "private_content_transmission_count": 0
+  },
+  "privacy": {
+    "private_values_committed": false,
+    "private_values_printed_by_builder": false,
+    "private_outputs_tracked_by_git": false,
+    "customer_drawing_generated": false
+  },
+  "covered_by_tests": [
+    "test_sheetmetal_v1_component_register_from_source_facts",
+    "test_sheetmetal_v1_private_workspace_boundary",
+    "test_frozen_workflow_active_scope_verifier"
+  ]
+}

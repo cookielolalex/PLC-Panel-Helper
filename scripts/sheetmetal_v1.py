@@ -347,8 +347,16 @@ def grouped_component_facts(data: dict[str, Any]) -> dict[str, list[dict[str, An
     return grouped
 
 
+def fact_kind(fact: dict[str, Any]) -> str | None:
+    return fact.get("fact_type") or fact.get("field_type")
+
+
+def fact_value(fact: dict[str, Any]) -> Any:
+    return fact["value"] if "value" in fact else fact.get("normalized_value")
+
+
 def fact_values(facts: list[dict[str, Any]], fact_type: str) -> list[dict[str, Any]]:
-    return [fact for fact in facts if fact.get("fact_type") == fact_type]
+    return [fact for fact in facts if fact_kind(fact) == fact_type]
 
 
 def single_value(facts: list[dict[str, Any]], fact_type: str) -> Any | None:
@@ -357,8 +365,9 @@ def single_value(facts: list[dict[str, Any]], fact_type: str) -> Any | None:
         return None
     unique = []
     for row in values:
-        if row.get("value") not in unique:
-            unique.append(row.get("value"))
+        value = fact_value(row)
+        if value not in unique:
+            unique.append(value)
     return unique[0] if len(unique) == 1 else None
 
 
@@ -366,8 +375,9 @@ def conflict_record(facts: list[dict[str, Any]], fact_type: str) -> dict[str, An
     values = fact_values(facts, fact_type)
     unique = []
     for row in values:
-        if row.get("value") not in unique:
-            unique.append(row.get("value"))
+        value = fact_value(row)
+        if value not in unique:
+            unique.append(value)
     if len(unique) <= 1:
         return None
     return {
@@ -375,7 +385,7 @@ def conflict_record(facts: list[dict[str, Any]], fact_type: str) -> dict[str, An
         "status": "CONFLICT",
         "competing_values": [
             {
-                "value": row.get("value"),
+                "value": fact_value(row),
                 "evidence_id": row.get("evidence_id"),
                 "fact_id": row.get("fact_id"),
             }
@@ -465,7 +475,7 @@ def build_component_register(data: dict[str, Any]) -> dict[str, Any]:
                 "component_key": component_key,
                 "project_id": data["project_id"],
                 "component_type_id": component_type_id,
-                "raw_source_names": [row.get("raw_value") or str(row.get("value")) for row in facts if row.get("fact_type") in {"model", "manufacturer"}],
+                "raw_source_names": [row.get("raw_value") or str(fact_value(row)) for row in facts if fact_kind(row) in {"model", "manufacturer"}],
                 "quantity": quantity,
                 "panel_assignment": None,
                 "circuit_or_function_assignment": None,
@@ -493,7 +503,7 @@ def build_panel_assignment(data: dict[str, Any], register: dict[str, Any]) -> di
     idx = evidence_index(data)
     instances_by_key = {row["component_key"]: row for row in register["component_instances"]}
     for fact in data.get("source_facts", []):
-        if fact.get("fact_type") != "panel_assignment":
+        if fact_kind(fact) != "panel_assignment":
             continue
         evidence = idx.get(fact.get("evidence_id"), {})
         if not is_generator_allowed_evidence(evidence):
@@ -511,16 +521,16 @@ def build_panel_assignment(data: dict[str, Any], register: dict[str, Any]) -> di
             continue
         assignments.append(
             {
-                "assignment_id": stable_id("ASSIGN", data["project_id"], fact["component_key"], fact["value"]),
+                "assignment_id": stable_id("ASSIGN", data["project_id"], fact["component_key"], fact_value(fact)),
                 "component_instance_id": inst["component_instance_id"],
                 "component_key": fact["component_key"],
-                "panel_id": fact["value"],
+                "panel_id": fact_value(fact),
                 "assignment_status": "EXPLICIT_SOURCE",
                 "assignment_evidence_ids": [fact["evidence_id"]],
                 "placement_resolved": False,
             }
         )
-        inst["panel_assignment"] = fact["value"]
+        inst["panel_assignment"] = fact_value(fact)
     return {
         "schema_version": "sheetmetal-v1",
         "project_id": data["project_id"],
@@ -1066,10 +1076,52 @@ def write_source_fact_outputs(model: dict[str, Any], output_dir: Path) -> None:
     write_json(output_dir / "source_fact_validation.json", model["validation"])
 
 
+def validate_component_register_from_source_facts(register: dict[str, Any], source_model: dict[str, Any]) -> dict[str, Any]:
+    allowed_component_keys = {
+        fact.get("component_key")
+        for fact in allowed_fact_rows(source_model)
+        if fact.get("component_key")
+    }
+    registered_component_keys = {
+        row.get("component_key")
+        for row in register.get("component_instances", [])
+        if row.get("component_key")
+    }
+    unregistered = sorted(allowed_component_keys - registered_component_keys)
+    quantity_counts = {stage: 0 for stage in QUANTITY_FIELD_TYPES}
+    for instance in register.get("component_instances", []):
+        for stage, value in instance.get("quantity", {}).items():
+            if stage in quantity_counts and value is not None:
+                quantity_counts[stage] += 1
+    status = "PASS" if register.get("component_instances") and not unregistered else "FAIL"
+    return {
+        "status": status,
+        "project_id": register.get("project_id"),
+        "component_type_count": len(register.get("component_types", [])),
+        "component_instance_count": len(register.get("component_instances", [])),
+        "conflict_count": len(register.get("conflicts", [])),
+        "source_fact_count": source_model.get("validation", {}).get("source_fact_count", len(source_model.get("source_facts", []))),
+        "source_line_count": source_model.get("validation", {}).get("source_line_count", len(source_model.get("source_line_accounting", []))),
+        "unregistered_allowed_component_key_count": len(unregistered),
+        "quantity_stage_instance_counts": quantity_counts,
+        "completed_reference_component_count": 0,
+        "private_content_transmission_count": 0,
+    }
+
+
+def write_component_register_outputs(source_model: dict[str, Any], output_dir: Path) -> dict[str, Any]:
+    register = build_component_register(source_model)
+    validation = validate_component_register_from_source_facts(register, source_model)
+    write_json(output_dir / "component_register.json", register)
+    write_json(output_dir / "component_register_validation.json", validation)
+    return validation
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run the sheetmetal-v1 modular foundation pipeline.")
     parser.add_argument("--fixture", type=Path)
     parser.add_argument("--bundle-dir", type=Path)
+    parser.add_argument("--source-fact-model", type=Path)
     parser.add_argument("--source-classification", type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--quiet", action="store_true")
@@ -1088,8 +1140,22 @@ def main() -> None:
         if not args.quiet:
             print(json.dumps(summary, ensure_ascii=False, indent=2))
         raise SystemExit(0 if model["validation"]["status"] == "PASS" else 1)
+    if args.source_fact_model:
+        source_model = read_json(args.source_fact_model)
+        validation = write_component_register_outputs(source_model, args.output_dir)
+        summary = {
+            "status": validation["status"],
+            "project_id": validation["project_id"],
+            "component_type_count": validation["component_type_count"],
+            "component_instance_count": validation["component_instance_count"],
+            "conflict_count": validation["conflict_count"],
+            "private_content_transmission_count": validation["private_content_transmission_count"],
+        }
+        if not args.quiet:
+            print(json.dumps(summary, ensure_ascii=False, indent=2))
+        raise SystemExit(0 if validation["status"] == "PASS" else 1)
     if not args.fixture:
-        raise SystemExit("--fixture or --bundle-dir is required")
+        raise SystemExit("--fixture, --bundle-dir, or --source-fact-model is required")
     fixture = read_json(args.fixture)
     outputs = run_pipeline(fixture)
     write_outputs(outputs, args.output_dir)

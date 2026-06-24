@@ -312,3 +312,18 @@
   source-fact schema, extractor, and regression test hashes.
 - Recorded neutral source-fact extraction evidence under
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/`.
+- Added `--source-fact-model` register-only mode to `scripts/sheetmetal_v1.py`
+  so private source facts can produce a private component register without
+  running panel assignment, graph construction, or drawing-model generation.
+- Updated component fact helpers to accept formal source-fact fields
+  `field_type` and `normalized_value`, while preserving legacy synthetic
+  aliases.
+- Added `test_sheetmetal_v1_component_register_from_source_facts`, covering
+  source-value non-printing, schema validity, complete registration of allowed
+  source-fact component keys, and quantity-stage preservation.
+- Ran the private `1110101` component-register build under
+  `.private/sheetmetal-v1/1110101/component-register/`; schema validation
+  passed with 53 component types, 53 component instances, 0 conflicts, 0
+  unregistered allowed component keys, and 0 private content transmissions.
+- Recorded neutral component-register evidence under
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/`.

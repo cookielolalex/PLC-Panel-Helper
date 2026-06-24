@@ -1,7 +1,8 @@
 # SESSION CHECKPOINT
 
-Current phase: deterministic source-fact extraction complete for one-project
-component graph calibration; component-register implementation pending.
+Current phase: deterministic component-register construction complete for
+one-project component graph calibration; panel-assignment and graph
+implementation pending.
 
 Accepted release: none.
 
@@ -176,9 +177,36 @@ Source-fact extraction:
 - Evidence:
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json`.
 
+Component-register construction:
+
+- Decision: `D-0031`.
+- Builder: `scripts/sheetmetal_v1.py --source-fact-model ... --output-dir ... --quiet`.
+- Private input:
+  `.private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json`.
+- Private output directory:
+  `.private/sheetmetal-v1/1110101/component-register/`.
+- Private outputs: `component_register.json` and
+  `component_register_validation.json`.
+- Private output hashes:
+  `component_register.json`
+  `D0C354C964D3D9D614E5BCE300F877DE3E43F6E7C770CA9461C7A5DF9481E247`;
+  `component_register_validation.json`
+  `AD1917C52019D2BDE516B414333D2761CA9C0E31DEAC537940486EE39C0D6B69`.
+- Git ignore verification: `PASS`; no `.private` path is tracked.
+- Schema validation: `PASS` for component register, component types, and
+  component instances.
+- Neutral counts: 53 component types, 53 component instances, 0 conflicts, 87
+  source facts, 125 source lines, 0 unregistered allowed component keys, 0
+  completed-reference components, and 0 private content transmissions.
+- Regression test: `test_sheetmetal_v1_component_register_from_source_facts`.
+- Active scoped manifest refreshed for `scripts/sheetmetal_v1.py` and
+  `scripts/run_tests.py`.
+- Evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.json`.
+
 Exact next action:
 
-Implement deterministic component-register construction from the private
-`1110101` source fact model with synthetic regression coverage. Do not generate
-a customer drawing and do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL`
-until calibration and adjudication pass.
+Implement deterministic panel-assignment and typed graph construction from the
+private `1110101` component register/source fact model with synthetic
+regression coverage. Do not generate a customer drawing and do not promote
+`1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.

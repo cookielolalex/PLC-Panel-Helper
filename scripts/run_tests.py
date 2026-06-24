@@ -988,6 +988,87 @@ def test_sheetmetal_v1_source_fact_extractor() -> None:
     assert_true(model["validation"]["private_content_transmission_count"] == 0, "private transmission count must stay zero")
 
 
+def test_sheetmetal_v1_component_register_from_source_facts() -> None:
+    work = ROOT / "tmp" / "sheetmetal_v1_component_register_from_source_facts_test"
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+    out = work / "out"
+    secret_model = "REGISTER-SECRET-MODEL"
+    secret_maker = "REGISTER-SECRET-MAKER"
+    source_model = {
+        "schema_version": "sheetmetal-v1.source_fact_model.v1",
+        "project_id": "SYNTH-SMV1-REGISTER",
+        "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+        "source_evidence": [
+            {
+                "evidence_id": "EVID-REGISTER",
+                "neutral_source_document_id": "SRC-REGISTER",
+                "source_role": "MATERIAL_REQUIREMENT",
+                "chronology_status": "PRE_DESIGN",
+                "generator_input_eligible": True,
+                "contains_completed_reference_content": False,
+            }
+        ],
+        "source_facts": [
+            {"fact_id": "F1", "evidence_id": "EVID-REGISTER", "neutral_source_document_id": "SRC-REGISTER", "source_role": "MATERIAL_REQUIREMENT", "source_location_id": "ART:R1:C1", "field_type": "model", "fact_type": "model", "component_key": "ROW-1", "value": secret_model, "normalized_value": secret_model, "raw_value": secret_model, "authority_class": "PRIMARY", "confidence": 0.9, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+            {"fact_id": "F2", "evidence_id": "EVID-REGISTER", "neutral_source_document_id": "SRC-REGISTER", "source_role": "MATERIAL_REQUIREMENT", "source_location_id": "ART:R1:C2", "field_type": "manufacturer", "fact_type": "manufacturer", "component_key": "ROW-1", "value": secret_maker, "normalized_value": secret_maker, "raw_value": secret_maker, "authority_class": "PRIMARY", "confidence": 0.9, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+            {"fact_id": "F3", "evidence_id": "EVID-REGISTER", "neutral_source_document_id": "SRC-REGISTER", "source_role": "MATERIAL_REQUIREMENT", "source_location_id": "ART:R1:C3", "field_type": "required_qty", "fact_type": "required_qty", "component_key": "ROW-1", "value": 2, "normalized_value": 2, "raw_value": "2", "authority_class": "PRIMARY", "confidence": 0.9, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+            {"fact_id": "F4", "evidence_id": "EVID-REGISTER", "neutral_source_document_id": "SRC-REGISTER", "source_role": "MATERIAL_REQUIREMENT", "source_location_id": "ART:R2:C1", "field_type": "model", "component_key": "ROW-2", "normalized_value": "REGISTER-SECOND-MODEL", "raw_value": "REGISTER-SECOND-MODEL", "authority_class": "PRIMARY", "confidence": 0.9, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+            {"fact_id": "F5", "evidence_id": "EVID-REGISTER", "neutral_source_document_id": "SRC-REGISTER", "source_role": "MATERIAL_REQUIREMENT", "source_location_id": "ART:R2:C2", "field_type": "family", "component_key": "ROW-2", "normalized_value": "SYNTH_FAMILY", "raw_value": "SYNTH_FAMILY", "authority_class": "PRIMARY", "confidence": 0.9, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+            {"fact_id": "F6", "evidence_id": "EVID-REGISTER", "neutral_source_document_id": "SRC-REGISTER", "source_role": "MATERIAL_REQUIREMENT", "source_location_id": "ART:R2:C3", "field_type": "required_qty", "component_key": "ROW-2", "normalized_value": 1, "raw_value": "1", "authority_class": "PRIMARY", "confidence": 0.9, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+        ],
+        "source_line_accounting": [
+            {"source_line_id": "ROW-1", "evidence_id": "EVID-REGISTER", "neutral_source_document_id": "SRC-REGISTER", "row_index": 1, "status": "REPRESENTED", "fact_count": 3},
+            {"source_line_id": "ROW-2", "evidence_id": "EVID-REGISTER", "neutral_source_document_id": "SRC-REGISTER", "row_index": 2, "status": "REPRESENTED", "fact_count": 3},
+        ],
+        "quantity_stage_counts": {"required_qty": 2, "ordered_qty": 0, "received_qty": 0, "allocated_qty": 0, "installed_qty": 0},
+        "validation": {
+            "status": "PASS",
+            "evidence_count": 1,
+            "source_fact_count": 6,
+            "source_line_count": 2,
+            "silently_discarded_authorized_source_lines": 0,
+            "quantity_stage_overwrite_violations": 0,
+            "completed_reference_facts": 0,
+            "private_content_transmission_count": 0,
+        },
+    }
+    source_model_path = work / "source_fact_model.json"
+    write_json(source_model_path, source_model)
+    result = subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--source-fact-model",
+            str(source_model_path),
+            "--output-dir",
+            str(out),
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    assert_true(secret_model not in result.stdout and secret_maker not in result.stdout, "component register values must not be printed to stdout")
+    assert_true(secret_model not in result.stderr and secret_maker not in result.stderr, "component register values must not be printed to stderr")
+    errors = validate_file(out / "component_register.json", ROOT / "schemas/component_register.schema.json")
+    assert_true(not errors, f"component register schema errors: {errors}")
+    register = read_json(out / "component_register.json")
+    for component_type in register["component_types"]:
+        errors = validate(component_type, read_json(ROOT / "schemas/component_type.schema.json"))
+        assert_true(not errors, f"component type schema errors: {errors}")
+    for component_instance in register["component_instances"]:
+        errors = validate(component_instance, read_json(ROOT / "schemas/component_instance.schema.json"))
+        assert_true(not errors, f"component instance schema errors: {errors}")
+    validation = read_json(out / "component_register_validation.json")
+    assert_true(validation["status"] == "PASS", "component register validation must pass")
+    assert_true(validation["component_instance_count"] == 2, "two source rows should produce two component instances")
+    assert_true(validation["unregistered_allowed_component_key_count"] == 0, "every source fact component key must be registered")
+    assert_true(validation["quantity_stage_instance_counts"]["required_qty"] == 2, "required quantities must remain in required_qty")
+    assert_true(validation["private_content_transmission_count"] == 0, "private transmission count must stay zero")
+
+
 def test_frozen_workflow_legacy_scope_verifier() -> None:
     import verify_frozen_workflow as verifier
 
@@ -1116,6 +1197,7 @@ def main() -> None:
         test_sheetmetal_v1_modular_foundation,
         test_sheetmetal_v1_private_workspace_boundary,
         test_sheetmetal_v1_source_fact_extractor,
+        test_sheetmetal_v1_component_register_from_source_facts,
         test_frozen_workflow_legacy_scope_verifier,
         test_frozen_workflow_fail_closed_regressions,
         test_frozen_workflow_active_scope_verifier,
