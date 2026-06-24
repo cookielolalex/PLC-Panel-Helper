@@ -4,7 +4,7 @@
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "anchor_commit": "ab955b854e31d37666445f5a62ee6556f85f1352",
   "creation_decision_id": "D-0026",
-  "last_updated_decision_id": "D-0044",
+  "last_updated_decision_id": "D-0045",
   "hash_algorithm": "SHA-256",
   "verification_algorithm": "sha256-file-v1;current-tracked-files;git-lineage-ancestor-check",
   "supersedes_historical_manifest": false,
@@ -248,7 +248,7 @@
     },
     {
       "path": "scripts/run_tests.py",
-      "sha256": "B487366977ED76EAE229807710BFD064810D6A00BE28CBF7C18578D0816134FD",
+      "sha256": "F87FA6DD75F37D68683D5D405CA9B35C45CA9C6D330F0091D44FAB27B2753898",
       "role": "regression test runner including topology and signed-authority gate coverage"
     },
     {
@@ -270,6 +270,11 @@
       "path": "scripts/prepare_signed_authority_intake.py",
       "sha256": "0118EB1D9FC3164E2BA0769564235B3C707A059E29EEBE295E2B12D1337AC809",
       "role": "neutral signed source/rule authority decision intake router"
+    },
+    {
+      "path": "scripts/prepare_signed_authority_decision_draft.py",
+      "sha256": "C57930EF7BEC88BFB351C811FD2BA76B3E802D1B209F22069E4DB21640BA4CB1",
+      "role": "unsigned signed-authority decision JSON draft scaffold generator"
     },
     {
       "path": "scripts/validate_signed_authority_decision.py",

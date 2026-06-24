@@ -1,0 +1,65 @@
+{
+  "schema_version": "sheetmetal-v1.signed_authority_decision_draft_summary.v1",
+  "task_id": "SMV1-SIGNED-AUTHORITY-DECISION-DRAFT",
+  "created_at": "2026-06-24T17:53:02.1546594+08:00",
+  "starting_commit": "9d739ec0121a51cd75717f30e0b31a43990f4230",
+  "status": "UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "purpose": "provide a fillable JSON draft for the pending signed human/source-rule authority decision without selecting any authority lane",
+  "authority_selected": false,
+  "implementation_authorized": false,
+  "implementation_can_start": false,
+  "customer_pdf_dxf_dwg_generation_authorized": false,
+  "production_approval_declared": false,
+  "artifacts_created": [
+    "scripts/prepare_signed_authority_decision_draft.py",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft_validation.json"
+  ],
+  "artifacts_updated": [
+    "scripts/run_tests.py",
+    "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+    "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json"
+  ],
+  "draft_behavior": {
+    "draft_schema_version": "sheetmetal-v1.signed_authority_decision.v1",
+    "draft_selected_choice_ids": [],
+    "draft_signed_by": "",
+    "draft_signed_at": "YYYY-MM-DD",
+    "draft_validation_status": "FAIL_EXPECTED",
+    "draft_hash_bindings": "PASS",
+    "draft_implementation_can_start": false
+  },
+  "verification": {
+    "python_compile": "PASS",
+    "full_test_runner": "PASS",
+    "legacy_scoped_freeze": "PASS",
+    "active_sheetmetal_v1_scoped_freeze": "PASS",
+    "topology_stage_scoped_freeze": "PASS",
+    "verified_at": "2026-06-24T17:53:02.1546594+08:00"
+  },
+  "hard_gates": {
+    "source_roots_opened": false,
+    "private_artifacts_opened": false,
+    "completed_references_opened": false,
+    "post_design_files_opened": false,
+    "public_web_used": false,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false
+  },
+  "privacy_leakage_counts": {
+    "private_content_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "committed_private_values": 0
+  },
+  "output_hashes": {
+    "scripts/run_tests.py": "F87FA6DD75F37D68683D5D405CA9B35C45CA9C6D330F0091D44FAB27B2753898",
+    "scripts/prepare_signed_authority_decision_draft.py": "C57930EF7BEC88BFB351C811FD2BA76B3E802D1B209F22069E4DB21640BA4CB1",
+    "evals/sheetmetal-v1/frozen_workflow_manifest.json": "111B2AAC80F7C661EFFE7C2202D1FA55F983FBE37F99796F507FDF166E0ADA1E",
+    "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json": "FC6547005E852A04A9C497E752F0B3265FD89255368B4E84F0A97BCDD9798DC2",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft.json": "86CD424C3F7430B9C71970FFE2F93FC9232AF6250EDE17D592CDBB57E23CE147",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft_validation.json": "F630D9892971B6B1B985E6F66E59F45ACBCA9E5C253555817DE45E46B1AB8113"
+  },
+  "next_action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION"
+}

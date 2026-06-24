@@ -479,6 +479,39 @@ def test_signed_authority_decision_intake_routing() -> None:
     assert_true(invalid_data["next_action"] == "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION", "invalid intake must keep waiting for a valid signed decision")
 
 
+def test_signed_authority_decision_draft_scaffold_fail_closed() -> None:
+    work = ROOT / "tmp" / "signed_authority_decision_draft"
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+
+    draft_path = work / "draft_decision.json"
+    result = subprocess.run([PY, "scripts/prepare_signed_authority_decision_draft.py", "--output", str(draft_path)], cwd=ROOT, capture_output=True, text=True)
+    assert_true(result.returncode == 0, f"unsigned decision draft should be generated: {result.stdout} {result.stderr}")
+    draft = read_json(draft_path)
+    assert_true(draft["schema_version"] == "sheetmetal-v1.signed_authority_decision.v1", "draft must use signed decision schema version")
+    assert_true(draft["selected_choice_ids"] == [], "draft must not select authority choices")
+    assert_true(draft["signed_by"] == "", "draft must not invent signer")
+    assert_true(draft["signed_at"] == "YYYY-MM-DD", "draft must require signer date replacement")
+    assert_true(draft["customer_pdf_dxf_dwg_generation_authorized"] is False, "draft must not authorize customer drawings")
+    assert_true(draft["production_approval_declared"] is False, "draft must not declare production approval")
+
+    packet_path = ROOT / draft["bound_decision_packet"]["json_path"]
+    template_path = ROOT / draft["bound_decision_packet"]["template_path"]
+    assert_true(draft["bound_decision_packet"]["json_sha256"] == sha256_file(packet_path), "draft must bind current decision packet hash")
+    assert_true(draft["bound_decision_packet"]["template_sha256"] == sha256_file(template_path), "draft must bind current signed-decision template hash")
+
+    validation_out = work / "draft_validation.json"
+    failed = subprocess.run([PY, "scripts/validate_signed_authority_decision.py", "--decision", str(draft_path), "--output", str(validation_out)], cwd=ROOT, capture_output=True, text=True)
+    assert_true(failed.returncode != 0, "unsigned draft must fail signed decision validation")
+    validation = read_json(validation_out)
+    assert_true(validation["status"] == "FAIL", "unsigned draft validation status must fail")
+    assert_true("NO_AUTHORITY_CHOICES_SELECTED" in validation["errors"], "unsigned draft must not pass without selected choices")
+    assert_true("MISSING_SIGNER" in validation["errors"], "unsigned draft must not pass without signer")
+    assert_true("INVALID_SIGNED_AT_DATE" in validation["errors"], "unsigned draft must require a real signed date")
+    assert_true(all(check["status"] == "PASS" for check in validation["hash_checks"]), "draft hash bindings must be valid")
+
+
 def test_bundle_verifier_rejects_leaks_and_traversal() -> None:
     bundle = ROOT / "tmp" / "bad_bundle"
     bundle.mkdir(parents=True, exist_ok=True)
@@ -1740,6 +1773,7 @@ def main() -> None:
         test_source_approval_and_bundle_fail_closed,
         test_signed_authority_decision_validator_fail_closed,
         test_signed_authority_decision_intake_routing,
+        test_signed_authority_decision_draft_scaffold_fail_closed,
         test_bundle_verifier_rejects_leaks_and_traversal,
         test_reference_detection_v3_boundary_and_page_level_sets,
         test_reference_detection_v3_duplicates_identity_and_missing_types,

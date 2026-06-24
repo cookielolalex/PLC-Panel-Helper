@@ -1,0 +1,33 @@
+{
+  "schema_version": "sheetmetal-v1.signed_authority_decision_validation.v1",
+  "status": "FAIL",
+  "decision_path": "reports\\sheetmetal-v1\\source-rule-approval\\smv1_unsigned_authority_decision_draft.json",
+  "decision_sha256_canonical": "F40554C5911C8671E2F0FA28195D814FA09DDF94C26EE0E03A51BEA96F80C248",
+  "selected_choice_ids": [],
+  "selected_authority_lanes": [],
+  "reject_all_authority_lanes": false,
+  "implementation_can_start": false,
+  "implementation_next_gate": "TERMINAL_REVIEW_OR_NO_IMPLEMENTATION",
+  "customer_pdf_dxf_dwg_generation_authorized": false,
+  "production_approval_declared": false,
+  "hash_checks": [
+    {
+      "path": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json",
+      "expected_sha256": "A22FC1CA7C6D299E21EFCFBE495F1BFAA6F14D74049085133CB02C00ED152AA1",
+      "actual_sha256": "A22FC1CA7C6D299E21EFCFBE495F1BFAA6F14D74049085133CB02C00ED152AA1",
+      "status": "PASS"
+    },
+    {
+      "path": "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json",
+      "expected_sha256": "B6DF8D3626FB51D96F078821B6FA3824F0885058DDDD5EDD41091EE3B6D36725",
+      "actual_sha256": "B6DF8D3626FB51D96F078821B6FA3824F0885058DDDD5EDD41091EE3B6D36725",
+      "status": "PASS"
+    }
+  ],
+  "errors": [
+    "SCHEMA:$.selected_choice_ids: expected at least 1 items",
+    "NO_AUTHORITY_CHOICES_SELECTED",
+    "MISSING_SIGNER",
+    "INVALID_SIGNED_AT_DATE"
+  ]
+}
