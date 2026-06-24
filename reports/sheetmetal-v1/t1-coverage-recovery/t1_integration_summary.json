@@ -1,0 +1,206 @@
+{
+  "schema_version": "sheetmetal-v1.t1_integration_summary.v1",
+  "task_id": "SMV1-T1-INTEGRATION",
+  "created_at": "2026-06-24T16:50:21.1675019+08:00",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "privacy_mode": "LOCAL_ONLY_PRIVACY_NOT_APPROVED",
+  "scope": "stage-level integration of three T1 coverage recovery workers",
+  "inputs_read": [
+    "AGENTS.md",
+    "docs/specs/MASTER_AUTOPILOT_PROTOCOL.md",
+    "docs/SESSION_CHECKPOINT.md",
+    "orchestration/NEXT_THREAD_PROMPT.txt",
+    "reports/sheetmetal-v1/t1-coverage-recovery/panel_assignment_recovery_report.json",
+    "reports/sheetmetal-v1/t1-coverage-recovery/component_geometry_recovery_report.json",
+    "reports/sheetmetal-v1/t1-coverage-recovery/topology_sizing_rule_recovery_report.json",
+    "orchestration/master/child-results/SMV1-T1-PANEL-ASSIGNMENT-RECOVERY.json",
+    "orchestration/master/child-results/SMV1-T1-COMPONENT-GEOMETRY-RECOVERY.json",
+    "orchestration/master/child-results/SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY.json"
+  ],
+  "worker_reconciliation": [
+    {
+      "task_id": "SMV1-T1-PANEL-ASSIGNMENT-RECOVERY",
+      "exact_final_status": "SAFE_UNRESOLVED_NO_COMPLIANT_PANEL_ASSIGNMENT_RECOVERY_PATH",
+      "child_result_contract": "ACCEPTED_REQUIRED_FIELDS_PRESENT",
+      "code_or_rule_change_performed": false,
+      "fresh_verification_depth": "JSON_PARSE_PASS_COMMITTED_FREEZE_EVIDENCE_ONLY",
+      "coverage_delta": {
+        "assignment_numerator": 0,
+        "assignment_denominator": 53,
+        "unsupported_assignment_count": 0
+      }
+    },
+    {
+      "task_id": "SMV1-T1-COMPONENT-GEOMETRY-RECOVERY",
+      "exact_final_status": "SAFE_UNRESOLVED_NO_COMPLIANT_COMPONENT_GEOMETRY_RECOVERY",
+      "child_result_contract": "ACCEPTED_REQUIRED_FIELDS_PRESENT",
+      "code_or_rule_change_performed": false,
+      "fresh_verification_depth": "JSON_PARSE_PASS_NO_IMPLEMENTATION_TEST_RUN",
+      "coverage_delta": {
+        "geometry_numerator": 0,
+        "geometry_denominator": 53,
+        "unsupported_geometry_promotion_count": 0
+      }
+    },
+    {
+      "task_id": "SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY",
+      "exact_final_status": "SAFE_UNRESOLVED_NO_CODE_CHANGE",
+      "child_result_contract": "ACCEPTED_REQUIRED_FIELDS_PRESENT",
+      "code_or_rule_change_performed": false,
+      "fresh_verification_depth": "FULL_TESTS_AND_SCOPED_FREEZES_PASS",
+      "coverage_delta": {
+        "new_rule_family_count": 0,
+        "new_synthetic_fixture_count": 0,
+        "new_supported_customer_case_coverage": 0
+      }
+    }
+  ],
+  "status_reconciliation": {
+    "all_workers_reported_safe_unresolved": true,
+    "compliant_code_recovery_path_found": false,
+    "compliant_rule_recovery_path_found": false,
+    "source_or_rule_approval_needed_for_retry": true,
+    "unsupported_private_inference_attempted": false,
+    "customer_drawing_generation_authorized_or_performed": false,
+    "stage_interpretation": "T1 recovered no additional coverage and must not be treated as capability success."
+  },
+  "coverage": {
+    "baseline_from_t0_low_coverage_audit": {
+      "panel_assignment": {
+        "numerator": 0,
+        "denominator": 53,
+        "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+      },
+      "component_geometry": {
+        "numerator": 0,
+        "denominator": 53,
+        "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+      },
+      "topology": {
+        "numerator": 0,
+        "denominator": 1,
+        "interpretation": "SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+      },
+      "sizing": {
+        "numerator": 0,
+        "denominator": 0,
+        "interpretation": "ZERO_SOURCE_SUPPORTED_DENOMINATOR_RECALL_NOT_REPORTED"
+      },
+      "placement": {
+        "numerator": 0,
+        "denominator": 53,
+        "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+      }
+    },
+    "after_t1_recovery": {
+      "panel_assignment": {
+        "numerator": 0,
+        "denominator": 53,
+        "delta": 0,
+        "interpretation": "SOURCE_LIMITED_SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+      },
+      "component_geometry": {
+        "numerator": 0,
+        "denominator": 53,
+        "delta": 0,
+        "interpretation": "SOURCE_LIMITED_SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+      },
+      "topology": {
+        "numerator": 0,
+        "denominator": 1,
+        "delta": 0,
+        "interpretation": "SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+      },
+      "sizing": {
+        "numerator": 0,
+        "denominator": 0,
+        "delta": 0,
+        "interpretation": "ZERO_SOURCE_SUPPORTED_DENOMINATOR_RECALL_NOT_REPORTED"
+      },
+      "placement": {
+        "numerator": 0,
+        "denominator": 53,
+        "delta": 0,
+        "interpretation": "UNCHANGED_BECAUSE_NO_ASSIGNMENT_GEOMETRY_OR_RULE_RECOVERY"
+      }
+    }
+  },
+  "hard_gates": {
+    "overall": "PASS_SAFE_UNRESOLVED_AUDIT_REQUIRED",
+    "unsupported_panel_assignments": 0,
+    "unsupported_geometry_promotions": 0,
+    "unsupported_critical_dimensions": 0,
+    "unsupported_placements": 0,
+    "accepted_hard_constraint_violations": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_values": 0,
+    "customer_drawing_generation_count": 0,
+    "pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false,
+    "public_web_used_by_integration": false,
+    "children_spawned_by_integration": false,
+    "forbidden_artifacts_opened_by_integration": false,
+    "fresh_git_tracked_status": "NOT_VERIFIED_GIT_COMMAND_UNAVAILABLE"
+  },
+  "blocker_taxonomy": {
+    "panel_assignment": [
+      "NO_APPROVED_PANEL_ALLOCATION_SOURCE_IN_SELECTED_BUNDLE",
+      "NO_PANEL_ASSIGNMENT_FIELD_SIGNAL_IN_APPROVED_BUNDLE",
+      "NO_APPROVED_DETERMINISTIC_ASSIGNMENT_RULE_AVAILABLE",
+      "SOURCE_MODE_A_INVENTORY_ONLY_FUNCTIONAL_SOURCE_DISABLED",
+      "CODE_CHANGE_NOT_AUTHORIZED_WITHOUT_SOURCE_OR_RULE_SUPPORT"
+    ],
+    "component_geometry": [
+      "NO_APPROVED_COMPONENT_GEOMETRY_LIBRARY",
+      "NO_APPROVED_GENERIC_CONSERVATIVE_ENVELOPE_RULE",
+      "LOCAL_CATALOG_CANDIDATES_REQUIRE_HUMAN_REVIEW",
+      "LOCAL_CAD_CANDIDATES_NOT_APPROVED_FOR_GEOMETRY_EXTRACTION",
+      "PRIVATE_MODEL_IDENTIFIERS_NOT_PUBLIC_LOOKUP_ELIGIBLE",
+      "SYNTHETIC_FIXTURE_ONLY_NOT_REAL_COVERAGE",
+      "COMPONENT_GEOMETRY_MISSING"
+    ],
+    "topology_sizing_rule": [
+      "NO_APPROVED_STANDARD_CABINET_LIBRARY",
+      "NO_APPROVED_ENCLOSURE_CANDIDATE_SELECTION_RULE",
+      "NO_APPROVED_SURFACE_INFERENCE_RULE",
+      "NO_VERIFIED_MOUNTING_SURFACE_LIBRARY",
+      "NO_APPROVED_COMPARTMENT_RULE",
+      "NO_APPROVED_DOOR_TOPOLOGY_RULE",
+      "NO_APPROVED_MOUNTING_PLATE_RULE",
+      "NO_APPROVED_WIRING_ALLOWANCE_POLICY",
+      "NO_APPROVED_CABLE_BEND_ALLOWANCE_POLICY",
+      "NO_APPROVED_GLOBAL_ACCESS_CLEARANCE_RULE",
+      "NO_COMPONENT_CLASS_CLEARANCE_LIBRARY",
+      "NO_APPROVED_THERMAL_RULE",
+      "NO_APPROVED_VENTILATION_REGION_RULE",
+      "NO_APPROVED_SPARE_SPACE_POLICY",
+      "NO_SUPPORTED_PANEL_FILL_CALCULATION_DENOMINATOR",
+      "SOURCE_LIMITED_TOPOLOGY_SIZING_COVERAGE"
+    ],
+    "environment_verification_limitations": [
+      "LOCAL_PYTHON_UNAVAILABLE_FOR_INTEGRATION_FULL_TEST_COMMAND",
+      "LOCAL_GIT_COMMAND_UNAVAILABLE_FOR_FRESH_TRACKED_STATUS",
+      "PANEL_WORKER_LOCAL_PYTHON_UNAVAILABLE_FOR_FRESH_TEST_COMMAND",
+      "PANEL_WORKER_LOCAL_GIT_COMMAND_UNAVAILABLE_FOR_TRACKED_STATUS"
+    ]
+  },
+  "master_protocol_blocker_classification": {
+    "terminal_state_recommended_now": false,
+    "classification": "NON_TERMINAL_SOURCE_RULE_AUTHORITY_GAP",
+    "candidate_future_terminal_states_if_no_compliant_branch_remains": [
+      "STRUCTURAL_SOURCE_INSUFFICIENCY",
+      "FABRICATION_DOMAIN_DECISION_REQUIRED"
+    ],
+    "reason": "The workers found no approved source or rule authority, but a proposal-first source or rule approval branch has not yet been independently audited and exhausted."
+  },
+  "decision": {
+    "proceed_to_independent_recovery_audit_as_safe_unresolved": true,
+    "request_source_rule_approval_branch_before_audit": false,
+    "classify_terminal_blocker_before_audit": false,
+    "reason": "The master protocol requires independent audit where the stage requires one. T1 has produced only safe unresolved no-change artifacts, so the next coordinator action is to audit that unresolved outcome before any source/rule approval branch or terminal blocker classification."
+  },
+  "exact_final_status": "SAFE_UNRESOLVED_T1_NO_COMPLIANT_CODE_OR_RULE_RECOVERY_PATHS_AUDIT_REQUIRED",
+  "exact_recommended_next_action": "RUN_T1_SAFE_UNRESOLVED_INDEPENDENT_RECOVERY_AUDIT"
+}
