@@ -496,3 +496,43 @@ Evidence: `docs/specs/FROZEN_WORKFLOW_SCOPE_AND_LINEAGE_POLICY.md`,
 `evals/baseline-024/frozen_workflow_attestation.json`,
 `evals/sheetmetal-v1/frozen_workflow_manifest.json`, and
 `reports/sheetmetal-v1/revised_phase0_verification.json`.
+
+## sheetmetal-v1 one-project candidate selection
+
+Status: `ONE_PROJECT_SHEETMETAL_CANDIDATE_SELECTION_FREEZE_PASS`.
+
+Decision: `D-0027`.
+
+Selected project: `1110101`.
+
+Selection method: deterministic metadata-only source-bundle-readiness ranking.
+The frozen score formula gives `1110101` score `1156`, the highest score among
+the 13 queued legacy candidates. The selection artifact records no completed
+reference files read for selection.
+
+Ordering boundary: the candidate selection was frozen in
+`manifests/sheetmetal-v1/one_project_candidate_selection.json` before
+completed-reference metadata was opened. The effective sheetmetal reference
+package records the matching selection hash
+`5EBD8164F0B02576644EA53B61018896DEAC7BF58C017E174F5F15A0303419E5`.
+
+Reference package: `manifests/sheetmetal-v1/selected_candidate/1110101/effective_sheetmetal_reference_package.json`
+qualifies one evaluator-only completed sheetmetal reference and records that
+the generator receives no reference content, paths, or hashes.
+
+Source classification: `manifests/sheetmetal-v1/selected_candidate/1110101/source_role_chronology_classification.json`
+records six `AGENT_QUORUM_APPROVED_EVAL` source-only items and keeps twelve
+quarantined items out of the generator bundle.
+
+Bundle result: `manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/verification_results.json`
+is `PASS` with zero errors and zero warnings. `bundle_hashes.json` records 17
+verified files; the bundle contains six sanitized CSV inputs, six previews,
+and required source approval/provenance/visible-file/hash/verification
+manifests. It excludes `reference_manifest.json`, original workbooks,
+completed drawings, path escapes, and symlinks.
+
+Independent audit: `reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md`
+and `orchestration/results/SMV1-CANDIDATE-SELECTION-AUDIT.json` report `PASS`.
+
+Generation status: no customer drawing was generated. `SHEETMETAL_ALLOWED_EVAL`
+approved count remains `0`.

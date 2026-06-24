@@ -1,12 +1,13 @@
 # Current State
 
-Current phase: one-project sheetmetal requalification Phase 0 complete.
+Current phase: one-project sheetmetal candidate selection and input-bundle
+freeze complete.
 
 Accepted release: none.
 
-Current candidate: `deterministic-one-project-candidate-selection`.
+Current candidate: `1110101`.
 
-Current status: `ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`.
+Current status: `ONE_PROJECT_SHEETMETAL_CANDIDATE_SELECTION_FREEZE_PASS`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -30,7 +31,11 @@ individual screening; `D-0025` accepts
 `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1` as the active V1 goal and creates
 new `sheetmetal-v1` namespaces; `D-0026` accepts frozen workflow manifests as
 scope-bound and commit-anchored, separating legacy baseline-024 verification
-from active sheetmetal-v1 verification. These amendments do not weaken
+from active sheetmetal-v1 verification; `D-0027` accepts deterministic
+metadata-only selection of `1110101`, freezes its evaluator-only reference
+package, source-role/chronology classification, clean sanitized input bundle,
+and independent audit for one-project sheetmetal calibration. These amendments
+do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -216,7 +221,8 @@ drawing-model facts have provenance or safe unresolved status, and completed
 reference IDs/content do not enter generator artifacts.
 
 New qualification status: `SHEETMETAL_ALLOWED_EVAL` approved count is `0`.
-Projects awaiting sheetmetal requalification: `13`.
+Project `1110101` is selected for one-project calibration; the other 12 legacy
+projects remain pending future sheetmetal requalification.
 
 Audit result: independent audit reports `PASS_WITH_RESIDUAL_RISKS`; coordinator
 addendum resolves the auditor-local Git/Python tool limitations and the
@@ -232,9 +238,21 @@ sheetmetal-v1 workflow freeze passes through
 `ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`. Current `AGENTS.md` is
 not compared to the legacy baseline-024 expected hash.
 
-Exact next action: continue directly into
-`DETERMINISTIC_ONE_PROJECT_CANDIDATE_SELECTION`. Select exactly one candidate
-using metadata-only ranking, freeze the selection before opening
-completed-reference content, process private files only with local
-deterministic procedures, build and verify a new sheetmetal-v1 sanitized
-bundle, run the independent audit, and do not generate a customer drawing.
+One-project selection result after `D-0027`: project `1110101` is selected by
+metadata-only source-bundle readiness ranking and frozen in
+`manifests/sheetmetal-v1/one_project_candidate_selection.json` before any
+completed-reference metadata is opened. The evaluator-only effective
+sheetmetal reference package is qualified, source-role/chronology
+classification approves six source-only items and excludes twelve quarantined
+items, and the clean sheetmetal-v1 generator bundle verifies `PASS` under
+`manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/`.
+Independent audit passes in
+`reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md`.
+`SHEETMETAL_ALLOWED_EVAL` approved count remains `0`; no customer drawing was
+generated.
+
+Exact next action: begin one-project sheetmetal model calibration from the
+verified `1110101` sheetmetal-v1 source bundle. Produce canonical panel-model
+artifacts and evaluation evidence only; do not generate a customer drawing and
+do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until model calibration
+and adjudication pass.

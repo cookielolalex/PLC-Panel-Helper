@@ -1,0 +1,186 @@
+{
+  "agent_id": "019ef82a-f29b-73c0-851e-120dbe9fcc93",
+  "agent_type": "independent_auditor",
+  "context_files": [
+    {
+      "path": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+      "role": "READ_ONLY_CONTEXT",
+      "sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+      "size_bytes": 91511
+    },
+    {
+      "path": "docs/01_CURRENT_STATE.md",
+      "role": "READ_ONLY_CONTEXT",
+      "sha256": "F0B9FE8750A8CB246687C417D3420A0C8A0CB630AD351F055BC21250187BA6D2",
+      "size_bytes": 14546
+    },
+    {
+      "path": "docs/SESSION_CHECKPOINT.md",
+      "role": "READ_ONLY_CONTEXT",
+      "sha256": "9AB15D94C415027F09897024D01CB88053072940008135854242995C7C3392A9",
+      "size_bytes": 4010
+    },
+    {
+      "path": "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+      "role": "READ_ONLY_CONTEXT",
+      "sha256": "C92FD6A026A3EC67C679DEDFC3C18E0C203CCB41FCE5F23E33C3E94050D954AC",
+      "size_bytes": 10364
+    },
+    {
+      "path": "reports/sheetmetal-v1/revised_phase0_verification.json",
+      "role": "READ_ONLY_CONTEXT",
+      "sha256": "BAE8399C703C80F2CF6889E9E5D112F2840353B8386FE096B7B0BAACB9DB821F",
+      "size_bytes": 4575
+    },
+    {
+      "path": "orchestration/TASK_REGISTRY.csv",
+      "role": "READ_ONLY_CONTEXT",
+      "sha256": "535DDA4A36078515E8CBD9C53157670DCE8062C2A19D14B3266329F3C6AA41B1",
+      "size_bytes": 226050
+    }
+  ],
+  "created_at": "2026-06-24T14:20:00+08:00",
+  "files": [
+    {
+      "path": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
+      "role": "AUDIT_TARGET",
+      "sha256": "5EBD8164F0B02576644EA53B61018896DEAC7BF58C017E174F5F15A0303419E5",
+      "size_bytes": 32353
+    },
+    {
+      "path": "reports/sheetmetal-v1/selected_candidate_1110101_bundle_audit.json",
+      "role": "AUDIT_TARGET",
+      "sha256": "00D0122F6F1165A27F7CFF2550475FAB2F63AA9B183DF39FEA51A288000F85EA",
+      "size_bytes": 4226
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/effective_sheetmetal_reference_package.json",
+      "role": "AUDIT_TARGET",
+      "sha256": "8DCE3211CB566B307FAEF12A38FDF428BC6DB1DE0E7D18B8C1A9327910BCC18F",
+      "size_bytes": 3610
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/approval_manifest.json",
+      "role": "AUDIT_TARGET",
+      "sha256": "227EC3207C47AAA32571B1CE708F5D8119D24512E5F84FF809D585FF5BB4B32C",
+      "size_bytes": 3979
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/bundle_hashes.json",
+      "role": "AUDIT_TARGET",
+      "sha256": "1B65A8EDEAE43BB763821D329145FA78D11BDD664AD640BC4BEA8D9B6A24D029",
+      "size_bytes": 2967
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/bundle_manifest.json",
+      "role": "AUDIT_TARGET",
+      "sha256": "B0C11E1AACAFEC39B2A87C345AFACA2BE8E698210B7BF129C67358C17AD3FBFF",
+      "size_bytes": 2434
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/previews/SGD-11740DEB2744E6_Sheet2.md",
+      "role": "AUDIT_TARGET",
+      "sha256": "F41DBD66A5AE4804E010019AEA8417DCF7FF150114588E19C5F7E5C91003850F",
+      "size_bytes": 120
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/previews/SGD-419C4426214114_Sheet2.md",
+      "role": "AUDIT_TARGET",
+      "sha256": "BF1B35D6B8C12CC5463E8436E2B0B7F986DBF1C3C463A13FF267856B524A9B96",
+      "size_bytes": 121
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/previews/SGD-43F93E34D49CE2_Sheet3.md",
+      "role": "AUDIT_TARGET",
+      "sha256": "B4C25AFC16A5BB5B824845B1B4A7FD9D61CE8EB3915A728C17A32CDF63DEB668",
+      "size_bytes": 120
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/previews/SGD-4D05D836BBA6D4_Sheet1.md",
+      "role": "AUDIT_TARGET",
+      "sha256": "E5CE809D5F3A4F4462EA27A3926E208AE529EC55078A4D10E9D32C4094286043",
+      "size_bytes": 120
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/previews/SGD-909B67C6D196A6_Sheet1.md",
+      "role": "AUDIT_TARGET",
+      "sha256": "0A9A8D6EF603F3888DD1193DFEA08FBD0523D47DE302CAC5B0DBA433F4354764",
+      "size_bytes": 121
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/previews/SGD-96F5B42AF2AC0D_Sheet3.md",
+      "role": "AUDIT_TARGET",
+      "sha256": "B73BC212302ED7BAF2039D4A9B65E02F3ECD5CAE89FDE2D5B9BC0A7A95751A7C",
+      "size_bytes": 121
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/provenance_map.json",
+      "role": "AUDIT_TARGET",
+      "sha256": "C617EF27CF0739F7EC1B183CA475D7ECB8606FA78E92075CBA68C87261948D4A",
+      "size_bytes": 2128
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/sanitized_inputs/SGD-11740DEB2744E6_Sheet2.csv",
+      "role": "AUDIT_TARGET",
+      "sha256": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295",
+      "size_bytes": 5
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/sanitized_inputs/SGD-419C4426214114_Sheet2.csv",
+      "role": "AUDIT_TARGET",
+      "sha256": "404F03B5818E9F30AF64EEE67D5A4F9F33EC430C4F90B7C8951D34C5762AEB2F",
+      "size_bytes": 1305
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/sanitized_inputs/SGD-43F93E34D49CE2_Sheet3.csv",
+      "role": "AUDIT_TARGET",
+      "sha256": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295",
+      "size_bytes": 5
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/sanitized_inputs/SGD-4D05D836BBA6D4_Sheet1.csv",
+      "role": "AUDIT_TARGET",
+      "sha256": "4D398D2087C4969BB6095BF5F8C656131DE425F17D991B2A583724CC54AFC857",
+      "size_bytes": 282
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/sanitized_inputs/SGD-909B67C6D196A6_Sheet1.csv",
+      "role": "AUDIT_TARGET",
+      "sha256": "33608BD4DE7D0141116A71205CB8F53E1A73E67E28847E09576015179449D1C2",
+      "size_bytes": 1916
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/sanitized_inputs/SGD-96F5B42AF2AC0D_Sheet3.csv",
+      "role": "AUDIT_TARGET",
+      "sha256": "E97D3F368F95336A4E15FE67B8F1D3726DBADD40757EB7C2D9A8BCC21847765A",
+      "size_bytes": 995
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/verification_results.json",
+      "role": "AUDIT_TARGET",
+      "sha256": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699",
+      "size_bytes": 80
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/visible_file_manifest.json",
+      "role": "AUDIT_TARGET",
+      "sha256": "0BD13CDB875FEC92534AFF7C6CFACF3D001E2A4FFF517ABA2035F254F6908E79",
+      "size_bytes": 1097
+    },
+    {
+      "path": "manifests/sheetmetal-v1/selected_candidate/1110101/source_role_chronology_classification.json",
+      "role": "AUDIT_TARGET",
+      "sha256": "9AA79023082793C3419E926486B46F5166E1102A0616E91E323D89692D7D1EB1",
+      "size_bytes": 20205
+    }
+  ],
+  "forbidden_to_auditor": [
+    "source roots",
+    "completed drawing content beyond frozen evaluator-only metadata",
+    "generator execution",
+    "customer drawing generation"
+  ],
+  "project_id": "1110101",
+  "status": "VISIBLE_FILE_MANIFEST_FROZEN",
+  "task_id": "SMV1-CANDIDATE-SELECTION-AUDIT"
+}

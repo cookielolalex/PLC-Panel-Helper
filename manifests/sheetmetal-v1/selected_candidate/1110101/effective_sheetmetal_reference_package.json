@@ -1,0 +1,86 @@
+{
+  "effective_revision_manifests": [
+    {
+      "path": "evals/runs/RUN-1110101-CAL006-A/review/effective_sheet_revision_manifest.json",
+      "run_id": "RUN-1110101-CAL006-A",
+      "sha256": "712802B522923E962849BBF4393D13B8630887C32581BF5F1F92F79C48024044"
+    },
+    {
+      "path": "evals/runs/RUN-1110101-CAL006-B/review/effective_sheet_revision_manifest.json",
+      "run_id": "RUN-1110101-CAL006-B",
+      "sha256": "63D0695B45738A34D750870A0F8AB89DCB33A323BBE1DEF348672DE58BBE4472"
+    }
+  ],
+  "non_sheetmetal_completed_references": [
+    {
+      "drawing_output_type": "production",
+      "file_id": "SRC-ALL-PROJECTS-FILE-7ABB80368FBD",
+      "generator_visibility": "FORBIDDEN_REVIEWER_ONLY",
+      "role": "completed_production_drawing_reference",
+      "sha256": "972AAFD5E2D72636871E799899B53B91EE5EE0230DA73B2A6BDF936B37F4120A"
+    },
+    {
+      "drawing_output_type": "punch",
+      "file_id": "SRC-ALL-PROJECTS-FILE-5C3AF14EB985",
+      "generator_visibility": "FORBIDDEN_REVIEWER_ONLY",
+      "role": "completed_punch_drawing_reference",
+      "sha256": "6288AB656E1FC1A45E91B3EE50879FE304791BB8655C9D28BA7ACB0600BF80D7"
+    }
+  ],
+  "package_id": "SMV1-1110101-EFFECTIVE-SHEETMETAL-REFERENCE-PACKAGE",
+  "project_id": "1110101",
+  "qualified_sheetmetal_references": [
+    {
+      "content_opened_for_selection": false,
+      "drawing_output_type": "sheetmetal",
+      "file_id": "SRC-ALL-PROJECTS-FILE-9BAC035FA277",
+      "generator_visibility": "FORBIDDEN_REVIEWER_ONLY",
+      "role": "completed_sheetmetal_drawing_reference",
+      "sha256": "F653AB4388A9A48890FB04D7163322C95408C0DD2FFCBBF2B7BF45EB0F450EED"
+    }
+  ],
+  "reference_detection_v3": {
+    "audit_path": "manifests/reference_detection/calibration/v3_known_positive_replay/1110101/reference_detection_audit.json",
+    "audit_sha256": "96EBCC131FE5978C4D528418FF3652AF2BA92D825CAA1053BD8DE4A98AB89807",
+    "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS",
+    "effective_reference_set_path": "manifests/reference_detection/calibration/v3_known_positive_replay/1110101/effective_reference_set.json",
+    "effective_reference_set_sha256": "6DC146EEB5C0B229F606437E0660D5FE9138785B92D057396F340D49299CB2A9",
+    "generator_isolation_pass": true,
+    "status": "PARTIAL_REFERENCE_SET",
+    "target_types_present": [
+      "SHEETMETAL_DRAWING"
+    ],
+    "unresolved_issues": [
+      "UNCLASSIFIED_PAGES_REMAIN"
+    ]
+  },
+  "reference_manifest": {
+    "content_opened_after_selection_freeze": true,
+    "path": "evals/cases/development/1110101/reference_manifest.json",
+    "sha256": "9A0ABF5ED89AD4B979D1D1BAAB6580B6C87558673C56B2DECB98AF3B194DD505",
+    "status": "REVIEWER_ONLY_AFTER_GENERATION_FREEZE"
+  },
+  "schema_version": "sheetmetal-v1.effective-reference-package.v1",
+  "selection_freeze": {
+    "frozen_before_reference_open": true,
+    "path": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
+    "sha256": "5EBD8164F0B02576644EA53B61018896DEAC7BF58C017E174F5F15A0303419E5"
+  },
+  "selection_id": "SMV1-ONE-PROJECT-SELECTION-20260624",
+  "status": "EFFECTIVE_SHEETMETAL_REFERENCE_PACKAGE_QUALIFIED",
+  "summary": {
+    "complete_for_sheetmetal_v1_one_project_calibration": true,
+    "customer_drawing_generated": false,
+    "drawing_output_types_present": [
+      "production",
+      "punch",
+      "sheetmetal"
+    ],
+    "generator_receives_reference_content": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "reference_count": 3,
+    "reference_manifest_in_generator_bundle": false,
+    "sheetmetal_reference_count": 1
+  }
+}

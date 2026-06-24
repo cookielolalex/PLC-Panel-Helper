@@ -251,3 +251,25 @@
 - Recorded revised Phase-0 evidence:
   `ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`. The next action is
   `DETERMINISTIC_ONE_PROJECT_CANDIDATE_SELECTION`.
+- Accepted decision `D-0027`, selecting project `1110101` for one-project
+  sheetmetal calibration by deterministic metadata-only source-bundle
+  readiness ranking.
+- Froze `manifests/sheetmetal-v1/one_project_candidate_selection.json` before
+  opening completed-reference metadata, with `1110101` score `1156` and rank
+  `1` among 13 candidates.
+- Qualified the evaluator-only effective sheetmetal reference package for
+  `1110101`; completed references remain reviewer-only and are excluded from
+  generator inputs.
+- Recorded source-role/chronology classification for `1110101`: six
+  `AGENT_QUORUM_APPROVED_EVAL` source-only items and twelve quarantined items
+  excluded from the generator bundle.
+- Built and verified a clean sheetmetal-v1 sanitized bundle under
+  `manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/`.
+  Bundle verification is `PASS`; it excludes `reference_manifest.json`,
+  original workbooks, completed drawings, path escapes, and symlinks.
+- Recorded independent candidate-selection audit `PASS` in
+  `reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md` and
+  `orchestration/results/SMV1-CANDIDATE-SELECTION-AUDIT.json`.
+- Updated `manifests/sheetmetal-v1/requalification_queue.json`: `1110101` is
+  selected and bundle-verified; `SHEETMETAL_ALLOWED_EVAL` approved count
+  remains `0`. No customer drawing was generated.

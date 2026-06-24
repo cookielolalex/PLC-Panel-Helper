@@ -17,7 +17,7 @@ Read the canonical checkpoint files, especially:
 
 Current status:
 
-`ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`
+`ONE_PROJECT_SHEETMETAL_CANDIDATE_SELECTION_FREEZE_PASS`
 
 Active goal:
 
@@ -71,15 +71,33 @@ Implemented sheetmetal-v1 foundation:
 Qualification state:
 
 - `SHEETMETAL_ALLOWED_EVAL` approved count is `0`.
-- 13 legacy projects are queued for independent sheetmetal requalification.
+- Project `1110101` is selected for one-project sheetmetal calibration.
+- 12 remaining legacy projects are pending future independent sheetmetal
+  requalification after this selection.
 - No real customer drawing and no new baseline generation occurred.
+
+Candidate selection and bundle state:
+
+- Decision `D-0027` accepts deterministic metadata-only selection of `1110101`.
+- Selection is frozen in
+  `manifests/sheetmetal-v1/one_project_candidate_selection.json`.
+- Completed-reference metadata was opened only after selection freeze.
+- Effective sheetmetal reference package is evaluator-only:
+  `manifests/sheetmetal-v1/selected_candidate/1110101/effective_sheetmetal_reference_package.json`.
+- Source-role/chronology classification approves six source-only
+  `AGENT_QUORUM_APPROVED_EVAL` items and excludes twelve quarantined items:
+  `manifests/sheetmetal-v1/selected_candidate/1110101/source_role_chronology_classification.json`.
+- Clean generator bundle verifies `PASS`:
+  `manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/`.
+- Independent audit passes:
+  `reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md` and
+  `orchestration/results/SMV1-CANDIDATE-SELECTION-AUDIT.json`.
+- `SHEETMETAL_ALLOWED_EVAL` approved count remains `0`.
 
 Exact next action:
 
-Continue directly into `DETERMINISTIC_ONE_PROJECT_CANDIDATE_SELECTION`. Select
-exactly one candidate using metadata-only ranking, freeze selection before
-opening completed-reference content, process private files only with local
-deterministic procedures, qualify the effective reference package, classify
-source role and chronology, build and verify a sheetmetal-v1 sanitized bundle,
-run the independent audit, do not start a new baseline, and do not generate a
-customer drawing.
+Begin one-project sheetmetal model calibration from the verified `1110101`
+source bundle. Produce canonical panel-model artifacts and evaluation evidence
+only; do not start a new baseline, do not generate a customer drawing, and do
+not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and
+adjudication pass.

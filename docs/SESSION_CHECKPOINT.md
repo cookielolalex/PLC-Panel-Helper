@@ -1,6 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: one-project sheetmetal requalification Phase 0 complete.
+Current phase: one-project sheetmetal candidate selection and input-bundle
+freeze complete.
 
 Accepted release: none.
 
@@ -8,7 +9,9 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `ONE_PROJECT_SHEETMETAL_REQUALIFICATION_PHASE_0_PASS`.
+Current status: `ONE_PROJECT_SHEETMETAL_CANDIDATE_SELECTION_FREEZE_PASS`.
+
+Current candidate: `1110101`.
 
 Legacy workflow status: the detector-v4.1 three-output qualification track is
 preserved as historical evidence. Its last legacy status remains
@@ -74,7 +77,8 @@ Qualification state:
 
 - `LEGACY_THREE_OUTPUT_ALLOWED_EVAL`: 13 historical projects preserved.
 - `SHEETMETAL_ALLOWED_EVAL`: 0 approved projects.
-- Projects awaiting sheetmetal requalification: 13.
+- Selected one-project calibration candidate: `1110101`.
+- Projects awaiting future sheetmetal requalification after this selection: 12.
 - New sheetmetal baseline: not started.
 
 Regression coverage:
@@ -90,11 +94,29 @@ cannot be overridden, every critical drawing-model fact has evidence or a safe
 unresolved status, and completed-reference IDs/content do not enter generator
 artifacts.
 
+One-project candidate freeze:
+
+- Decision: `D-0027`.
+- Selected project: `1110101`.
+- Selection artifact:
+  `manifests/sheetmetal-v1/one_project_candidate_selection.json`.
+- Effective reference package:
+  `manifests/sheetmetal-v1/selected_candidate/1110101/effective_sheetmetal_reference_package.json`.
+- Source-role/chronology classification:
+  `manifests/sheetmetal-v1/selected_candidate/1110101/source_role_chronology_classification.json`.
+- Verified source bundle:
+  `manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/`.
+- Independent audit:
+  `reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md`.
+- Audit result: `PASS`.
+- Bundle verification: `PASS`.
+- Customer drawing generated: no.
+- `SHEETMETAL_ALLOWED_EVAL` promotion: not yet; still requires model
+  calibration and adjudication.
+
 Exact next action:
 
-Continue directly into `DETERMINISTIC_ONE_PROJECT_CANDIDATE_SELECTION`. Select
-exactly one candidate using metadata-only ranking, freeze that selection before
-opening completed-reference content, process private files only through local
-deterministic procedures, qualify the effective reference package, classify
-source role and chronology, build and verify a sheetmetal-v1 sanitized bundle,
-run the independent audit, and do not generate a customer drawing.
+Begin one-project sheetmetal model calibration from the verified `1110101`
+source bundle. Produce canonical panel-model artifacts and evaluation evidence
+only; do not generate a customer drawing and do not promote `1110101` to
+`SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.

@@ -1,0 +1,84 @@
+{
+  "artifact_count": 6,
+  "bundle_id": "sheetmetal-v1-1110101-source-bundle",
+  "completed_reference_content_included": false,
+  "files": [
+    {
+      "path": "approval_manifest.json",
+      "sha256": "227EC3207C47AAA32571B1CE708F5D8119D24512E5F84FF809D585FF5BB4B32C"
+    },
+    {
+      "path": "bundle_manifest.json",
+      "sha256": "B0C11E1AACAFEC39B2A87C345AFACA2BE8E698210B7BF129C67358C17AD3FBFF"
+    },
+    {
+      "path": "previews\\SGD-11740DEB2744E6_Sheet2.md",
+      "sha256": "F41DBD66A5AE4804E010019AEA8417DCF7FF150114588E19C5F7E5C91003850F"
+    },
+    {
+      "path": "previews\\SGD-419C4426214114_Sheet2.md",
+      "sha256": "BF1B35D6B8C12CC5463E8436E2B0B7F986DBF1C3C463A13FF267856B524A9B96"
+    },
+    {
+      "path": "previews\\SGD-43F93E34D49CE2_Sheet3.md",
+      "sha256": "B4C25AFC16A5BB5B824845B1B4A7FD9D61CE8EB3915A728C17A32CDF63DEB668"
+    },
+    {
+      "path": "previews\\SGD-4D05D836BBA6D4_Sheet1.md",
+      "sha256": "E5CE809D5F3A4F4462EA27A3926E208AE529EC55078A4D10E9D32C4094286043"
+    },
+    {
+      "path": "previews\\SGD-909B67C6D196A6_Sheet1.md",
+      "sha256": "0A9A8D6EF603F3888DD1193DFEA08FBD0523D47DE302CAC5B0DBA433F4354764"
+    },
+    {
+      "path": "previews\\SGD-96F5B42AF2AC0D_Sheet3.md",
+      "sha256": "B73BC212302ED7BAF2039D4A9B65E02F3ECD5CAE89FDE2D5B9BC0A7A95751A7C"
+    },
+    {
+      "path": "provenance_map.json",
+      "sha256": "C617EF27CF0739F7EC1B183CA475D7ECB8606FA78E92075CBA68C87261948D4A"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-11740DEB2744E6_Sheet2.csv",
+      "sha256": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-419C4426214114_Sheet2.csv",
+      "sha256": "404F03B5818E9F30AF64EEE67D5A4F9F33EC430C4F90B7C8951D34C5762AEB2F"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-43F93E34D49CE2_Sheet3.csv",
+      "sha256": "F01A374E9C81E3DB89B3A42940C4D6A5447684986A1296E42BF13F196EED6295"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-4D05D836BBA6D4_Sheet1.csv",
+      "sha256": "4D398D2087C4969BB6095BF5F8C656131DE425F17D991B2A583724CC54AFC857"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-909B67C6D196A6_Sheet1.csv",
+      "sha256": "33608BD4DE7D0141116A71205CB8F53E1A73E67E28847E09576015179449D1C2"
+    },
+    {
+      "path": "sanitized_inputs\\SGD-96F5B42AF2AC0D_Sheet3.csv",
+      "sha256": "E97D3F368F95336A4E15FE67B8F1D3726DBADD40757EB7C2D9A8BCC21847765A"
+    },
+    {
+      "path": "verification_results.json",
+      "sha256": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699"
+    },
+    {
+      "path": "visible_file_manifest.json",
+      "sha256": "0BD13CDB875FEC92534AFF7C6CFACF3D001E2A4FFF517ABA2035F254F6908E79"
+    }
+  ],
+  "forbidden_files_excluded": [
+    "reference_manifest.json",
+    "eligibility.json",
+    "environment_audit.json",
+    "contamination_check.json"
+  ],
+  "hash_algorithm": "SHA-256",
+  "selection_id": "SMV1-ONE-PROJECT-SELECTION-20260624",
+  "status": "PASS"
+}

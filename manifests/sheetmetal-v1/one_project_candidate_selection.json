@@ -1,0 +1,766 @@
+{
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "input_queue": {
+    "candidate_count": 13,
+    "path": "manifests/sheetmetal-v1/requalification_queue.json",
+    "sha256": "0D17B9AF9376AE21B635F18FBFF881CB41BBAAAD212997C7DD35BB4EF2BCF243"
+  },
+  "legacy_allowed_eval_manifest": {
+    "path": "manifests/sheetmetal-v1/legacy_three_output_allowed_eval.json",
+    "sha256": "C43C70202C50B65D57C03D7ADDEBE0F308BBF120E591DFA97C1248A4CBB14B26"
+  },
+  "no_customer_drawing_generation": true,
+  "post_selection_next_gates": [
+    "QUALIFY_EFFECTIVE_SHEETMETAL_REFERENCE_PACKAGE",
+    "CLASSIFY_SOURCE_ROLE_AND_CHRONOLOGY",
+    "BUILD_AND_VERIFY_SHEETMETAL_V1_SANITIZED_BUNDLE",
+    "INDEPENDENT_AUDIT"
+  ],
+  "ranked_candidates": [
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 6,
+          "allowed_file_count": 6,
+          "allowed_sheet_count": 6,
+          "approval_status": "PASS",
+          "artifact_count": 6,
+          "bundle_hashes_present": true,
+          "bundle_status": "ALLOWED_EVAL",
+          "excluded_count": 0,
+          "files_read": [
+            {
+              "path": "evals/cases/development/1110101/bundle_manifest.json",
+              "sha256": "094620F16074DB72589944E99080025A623BBCC14B632982DBC24B3D82929DEA"
+            },
+            {
+              "path": "evals/cases/development/1110101/approval_manifest.json",
+              "sha256": "BD37CF07402B41C5BAC1F559A9277FE82D02A81978EA813C23F7B952A39B5545"
+            },
+            {
+              "path": "evals/cases/development/1110101/generator_input_manifest.json",
+              "sha256": "74730A56EA41C37929DBA98E3C42FE2232198FFD014352F56F992E71DA8D116C"
+            },
+            {
+              "path": "evals/cases/development/1110101/visible_file_manifest.json",
+              "sha256": "8BEBEF3D02FA74A7A072736808E8CCC0E026503BC47960316752D71F8279E23C"
+            },
+            {
+              "path": "evals/cases/development/1110101/verification_results.json",
+              "sha256": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699"
+            },
+            {
+              "path": "evals/cases/development/1110101/bundle_hashes.json",
+              "sha256": "3A5A43901EDA2715C277B2C244B5FD651E6CD9BC04B2F8EF5C46C645C0C96BFA"
+            }
+          ],
+          "generator_eligibility": "ALLOWED_EVAL",
+          "human_approved_count": 0,
+          "kind": "ACTIVE_DEVELOPMENT_SOURCE_BUNDLE",
+          "path": "evals/cases/development/1110101",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 6,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1110101",
+      "score": 1156,
+      "score_terms": {
+        "active_development_source_bundle": 1000,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 6,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 4,
+          "allowed_file_count": 4,
+          "allowed_sheet_count": 4,
+          "approval_status": "PASS",
+          "artifact_count": 4,
+          "bundle_hashes_present": true,
+          "bundle_status": "ALLOWED_EVAL",
+          "excluded_count": 0,
+          "files_read": [
+            {
+              "path": "evals/cases/development/1110205/bundle_manifest.json",
+              "sha256": "77DB6B84667FADC3A81ADBDFCFDF8E1704997DF22CC581ED016780A6943CDF1F"
+            },
+            {
+              "path": "evals/cases/development/1110205/approval_manifest.json",
+              "sha256": "988254F2AE79EC0B1FC35E7354675B52827998F6E69F9A3C54C8BF11576FE7D8"
+            },
+            {
+              "path": "evals/cases/development/1110205/generator_input_manifest.json",
+              "sha256": "574A8A0C96278190D18FF4ED124BA2FA7AC0348201F90FB29746FADFFF96684F"
+            },
+            {
+              "path": "evals/cases/development/1110205/visible_file_manifest.json",
+              "sha256": "ED723B3920F5332E2EB985A92FC75F23F49390F53A5A2033661DC9683309F13D"
+            },
+            {
+              "path": "evals/cases/development/1110205/verification_results.json",
+              "sha256": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34"
+            },
+            {
+              "path": "evals/cases/development/1110205/bundle_hashes.json",
+              "sha256": "28F738084D8DBE8D3D930B443CDD10F982C8B3BBF042BC48B46BB5FDCF1B0893"
+            }
+          ],
+          "generator_eligibility": "ALLOWED_EVAL",
+          "human_approved_count": 0,
+          "kind": "ACTIVE_DEVELOPMENT_SOURCE_BUNDLE",
+          "path": "evals/cases/development/1110205",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 4,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1110205",
+      "score": 1154,
+      "score_terms": {
+        "active_development_source_bundle": 1000,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 4,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 4,
+          "allowed_file_count": 4,
+          "allowed_sheet_count": 4,
+          "approval_status": "PASS",
+          "artifact_count": 4,
+          "bundle_hashes_present": true,
+          "bundle_status": "ALLOWED_EVAL",
+          "excluded_count": 0,
+          "files_read": [
+            {
+              "path": "evals/cases/development/1110405/bundle_manifest.json",
+              "sha256": "1026CBF59DE86B745FE3D841D890BC542FBA4442640D2E67A5924EE021DABCE5"
+            },
+            {
+              "path": "evals/cases/development/1110405/approval_manifest.json",
+              "sha256": "9B21CEBF30A19A61C01F0C2CD2C69EFBC18E7F3432650D57CCCFA60DEFBDE6BE"
+            },
+            {
+              "path": "evals/cases/development/1110405/generator_input_manifest.json",
+              "sha256": "52EBC10C9EB091C6124562A3577D3E6EF82684FC0BB7E0130612623DF8788FBB"
+            },
+            {
+              "path": "evals/cases/development/1110405/visible_file_manifest.json",
+              "sha256": "126ECF288731442EAAA50C3EFB4161365713437D7B9C0774595AEACA420D7540"
+            },
+            {
+              "path": "evals/cases/development/1110405/verification_results.json",
+              "sha256": "0A9C296A6DF7754744AFBC5BFD2917E46F40B270503ACA091FBA0E2A33678D34"
+            },
+            {
+              "path": "evals/cases/development/1110405/bundle_hashes.json",
+              "sha256": "2394835295F261FBDDE826A6F33D551D12B2559D9CFCA848CA086B71F74C1230"
+            }
+          ],
+          "generator_eligibility": "ALLOWED_EVAL",
+          "human_approved_count": 0,
+          "kind": "ACTIVE_DEVELOPMENT_SOURCE_BUNDLE",
+          "path": "evals/cases/development/1110405",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 4,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1110405",
+      "score": 1154,
+      "score_terms": {
+        "active_development_source_bundle": 1000,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 4,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 3,
+          "allowed_file_count": 3,
+          "allowed_sheet_count": 3,
+          "approval_status": "PASS",
+          "artifact_count": 3,
+          "bundle_hashes_present": true,
+          "bundle_status": "ALLOWED_EVAL",
+          "excluded_count": 0,
+          "files_read": [
+            {
+              "path": "evals/cases/development/1110410/bundle_manifest.json",
+              "sha256": "02A160018835FD76806AB1B6137EAA5B339021E6E4049A4A1F314451A03CDDE8"
+            },
+            {
+              "path": "evals/cases/development/1110410/approval_manifest.json",
+              "sha256": "E33569F069D6C0309E0ADEBCFCC240F8B858B56CE0F70622C41868B2016A34D2"
+            },
+            {
+              "path": "evals/cases/development/1110410/generator_input_manifest.json",
+              "sha256": "EC1C319DC80279C681E20940F6B983145285A86399347E33F9E2261EB6ACF6F0"
+            },
+            {
+              "path": "evals/cases/development/1110410/visible_file_manifest.json",
+              "sha256": "91CB6D870B9F57F297BDBADC2080C352DB22AB6DF0E6091D7748C9B5D42BA4F4"
+            },
+            {
+              "path": "evals/cases/development/1110410/verification_results.json",
+              "sha256": "A714645AFEBA50596013C453F14E5E5FF93F5C82688810C3ECFD3F162534BA20"
+            },
+            {
+              "path": "evals/cases/development/1110410/bundle_hashes.json",
+              "sha256": "788A10971932EBABC451F76BA53EA5AB1E8535288901E4F72B9E61E01AA8A907"
+            }
+          ],
+          "generator_eligibility": "ALLOWED_EVAL",
+          "human_approved_count": 0,
+          "kind": "ACTIVE_DEVELOPMENT_SOURCE_BUNDLE",
+          "path": "evals/cases/development/1110410",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 3,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1110410",
+      "score": 1153,
+      "score_terms": {
+        "active_development_source_bundle": 1000,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 3,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 2,
+          "allowed_file_count": 2,
+          "allowed_sheet_count": 2,
+          "approval_status": "PASS",
+          "artifact_count": 2,
+          "bundle_hashes_present": true,
+          "bundle_status": "ALLOWED_EVAL",
+          "excluded_count": 0,
+          "files_read": [
+            {
+              "path": "evals/cases/development/1110104/bundle_manifest.json",
+              "sha256": "DF4068D4D10C4DF8FD084B4B4960E6604D45EAB307995BFC213B49BA723CEFC2"
+            },
+            {
+              "path": "evals/cases/development/1110104/approval_manifest.json",
+              "sha256": "4CBFF5FE88671AF3C61B1855B970997A5F22654AB94517164CE946E8B2BFA845"
+            },
+            {
+              "path": "evals/cases/development/1110104/generator_input_manifest.json",
+              "sha256": "19208EAECFE91231D193174FCA8279D495ABA0ED8C842E1D86E853EB21637155"
+            },
+            {
+              "path": "evals/cases/development/1110104/visible_file_manifest.json",
+              "sha256": "01169C6A9A933522374E88FD586A81287434F49366B2EFA9B06544B5C796FF61"
+            },
+            {
+              "path": "evals/cases/development/1110104/verification_results.json",
+              "sha256": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16"
+            },
+            {
+              "path": "evals/cases/development/1110104/bundle_hashes.json",
+              "sha256": "AACE176478D81946A429BB96DC72C8EAC3281037CA758C2686C7047C79385185"
+            }
+          ],
+          "generator_eligibility": "ALLOWED_EVAL",
+          "human_approved_count": 0,
+          "kind": "ACTIVE_DEVELOPMENT_SOURCE_BUNDLE",
+          "path": "evals/cases/development/1110104",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 2,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1110104",
+      "score": 1152,
+      "score_terms": {
+        "active_development_source_bundle": 1000,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 2,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 2,
+          "allowed_file_count": 2,
+          "allowed_sheet_count": 2,
+          "approval_status": "PASS",
+          "artifact_count": 2,
+          "bundle_hashes_present": true,
+          "bundle_status": "ALLOWED_EVAL",
+          "excluded_count": 0,
+          "files_read": [
+            {
+              "path": "evals/cases/development/1110204/bundle_manifest.json",
+              "sha256": "8F9F8486E9E23BA5DB3B1A0F8BA83A3C735BFF01669067F283E6C1E90DCBB672"
+            },
+            {
+              "path": "evals/cases/development/1110204/approval_manifest.json",
+              "sha256": "3F62442C8E3BC5A13819560E4B3DB00FFDA270C7EC358E36D85B0B16A612DAF2"
+            },
+            {
+              "path": "evals/cases/development/1110204/generator_input_manifest.json",
+              "sha256": "615A019B3F939FBC584163BA9CCC7CBB98A072B67D5F0BA8FF3EB2BA61B8298B"
+            },
+            {
+              "path": "evals/cases/development/1110204/visible_file_manifest.json",
+              "sha256": "99C1E83C44D83DDD8CED30365A50251820063B23EA22DDC97921930B26F4F7B6"
+            },
+            {
+              "path": "evals/cases/development/1110204/verification_results.json",
+              "sha256": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16"
+            },
+            {
+              "path": "evals/cases/development/1110204/bundle_hashes.json",
+              "sha256": "982D1560DFB4CE4549B79C589B498CB58D2A58AD1295000B8914B9E5B8C5EF01"
+            }
+          ],
+          "generator_eligibility": "ALLOWED_EVAL",
+          "human_approved_count": 0,
+          "kind": "ACTIVE_DEVELOPMENT_SOURCE_BUNDLE",
+          "path": "evals/cases/development/1110204",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 2,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1110204",
+      "score": 1152,
+      "score_terms": {
+        "active_development_source_bundle": 1000,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 2,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 15,
+          "approval_status": "PASS",
+          "artifact_count": 15,
+          "bundle_hashes_present": true,
+          "bundle_status": "BUILT_PENDING_VERIFICATION",
+          "files_read": [
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1120308/bundle_manifest.json",
+              "sha256": "1316B456CD418A98E245108AEE1DCA794648ABEFADEDCBA183492B83A2578255"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1120308/approval_manifest.json",
+              "sha256": "027E76D0227889072024C661F1D123BDF113BCFC2BFFDE68497E5F9F2CEDC973"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1120308/visible_file_manifest.json",
+              "sha256": "0E1B4E424BCE3820E27FC2198D86225ED2A63A1EEA8C74D0C0FD1F2BB8701D5D"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1120308/verification_results.json",
+              "sha256": "29BF67E59C0FC225BA834C3B1E1CE28F6B125C9E68ACBF29919E95CB44997801"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1120308/bundle_hashes.json",
+              "sha256": "E3763938ADE0E98187688FDFA0705EA8DD83C329A950CC7E4DCE016EC5639546"
+            }
+          ],
+          "human_approved_count": 0,
+          "kind": "LEGACY_ACCEPTED_SOURCE_BUNDLE",
+          "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1120308",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 15,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1120308",
+      "score": 165,
+      "score_terms": {
+        "active_development_source_bundle": 0,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 15,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 8,
+          "approval_status": "PASS",
+          "artifact_count": 8,
+          "bundle_hashes_present": true,
+          "bundle_status": "BUILT_PENDING_VERIFICATION",
+          "files_read": [
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1120305/bundle_manifest.json",
+              "sha256": "D8AB53A885387F40FDAD9C38E895425B4024F526C472069F533D6759D8D16E38"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1120305/approval_manifest.json",
+              "sha256": "1F6646AC2F555FB8AE570C57655637BF71C2CA1BB3C0F776B2CF7E8226A673DD"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1120305/visible_file_manifest.json",
+              "sha256": "FC90AB535504B42132568114C2C278E46B19AA441D9519A50652E39CA021575F"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1120305/verification_results.json",
+              "sha256": "2D1A9C7BBB186F36761B39A2ACEF803984B1BF8B444298AC013360A771F983F1"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1120305/bundle_hashes.json",
+              "sha256": "47059DB064A9BAB750339D9D58648D4EE1DB652055080BB6AC174D858FE5BB38"
+            }
+          ],
+          "human_approved_count": 0,
+          "kind": "LEGACY_ACCEPTED_SOURCE_BUNDLE",
+          "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1120305",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 8,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1120305",
+      "score": 158,
+      "score_terms": {
+        "active_development_source_bundle": 0,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 8,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 6,
+          "approval_status": "PASS",
+          "artifact_count": 6,
+          "bundle_hashes_present": true,
+          "bundle_status": "BUILT_PENDING_VERIFICATION",
+          "files_read": [
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110103/bundle_manifest.json",
+              "sha256": "FBC54C43894219D541FEF5615A1C2C397B75F14D095C97C4F0D8FFD757ED6CCD"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110103/approval_manifest.json",
+              "sha256": "611A9F68362C787879881C070EECFBBA636BC9B9BEB4F1D6162B79B67C96B650"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110103/visible_file_manifest.json",
+              "sha256": "C1ACA3DBFFA9F4F487E297AF4FA46AD007522290B51A4C8A3B7872E220F45B87"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110103/verification_results.json",
+              "sha256": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110103/bundle_hashes.json",
+              "sha256": "E7D20BB686228F1360EC001BDA9099F1D166758D3918DBDEB6544A53AA39BAD5"
+            }
+          ],
+          "human_approved_count": 0,
+          "kind": "LEGACY_ACCEPTED_SOURCE_BUNDLE",
+          "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110103",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 6,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1110103",
+      "score": 156,
+      "score_terms": {
+        "active_development_source_bundle": 0,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 6,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 6,
+          "approval_status": "PASS",
+          "artifact_count": 6,
+          "bundle_hashes_present": true,
+          "bundle_status": "BUILT_PENDING_VERIFICATION",
+          "files_read": [
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110203/bundle_manifest.json",
+              "sha256": "37D5EBEA29179C69C6254E784BDCD4436A5CE85A102EB8E98C009D6602FC9FF6"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110203/approval_manifest.json",
+              "sha256": "8A71DAFA71133D1FEA7093ED0C1C8EA1265507BC8CFDACF86FB2E6A2791D1CDC"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110203/visible_file_manifest.json",
+              "sha256": "42FA68B3F96FEEBE113FC10137161EF9D61D59F325A7D1F12C5EDF9F492F1B20"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110203/verification_results.json",
+              "sha256": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110203/bundle_hashes.json",
+              "sha256": "CF5564401FB167634C162BB8A38332C781EF2883B66BB177B4451E27566E8BF4"
+            }
+          ],
+          "human_approved_count": 0,
+          "kind": "LEGACY_ACCEPTED_SOURCE_BUNDLE",
+          "path": "manifests/baseline-024/project_bundles/batch-002/accepted/1110203",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 6,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1110203",
+      "score": 156,
+      "score_terms": {
+        "active_development_source_bundle": 0,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 6,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 6,
+          "approval_status": "PASS",
+          "artifact_count": 6,
+          "bundle_hashes_present": true,
+          "bundle_status": "BUILT_PENDING_VERIFICATION",
+          "files_read": [
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1110704/bundle_manifest.json",
+              "sha256": "0214E624F1B1ACE7AA6AA7B1ADDFF86611FAE68B9D49FDEB5424C209DB269591"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1110704/approval_manifest.json",
+              "sha256": "ADBB3A3F3CD469BC9A44B706DA7CFE3A30CE2650432EBE747E79CA6C37D8E3B3"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1110704/visible_file_manifest.json",
+              "sha256": "B71C02F8CC8F92F14115818E3593A43116EBC7DE25818D8BF055855C79D132BD"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1110704/verification_results.json",
+              "sha256": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1110704/bundle_hashes.json",
+              "sha256": "12B4521F83827B5160D249A45B8E311F2E8324D99957B74E603A72881682D78E"
+            }
+          ],
+          "human_approved_count": 0,
+          "kind": "LEGACY_ACCEPTED_SOURCE_BUNDLE",
+          "path": "manifests/baseline-024/project_bundles/batch-003/accepted/1110704",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 6,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1110704",
+      "score": 156,
+      "score_terms": {
+        "active_development_source_bundle": 0,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 6,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 2,
+          "approval_status": "PASS",
+          "artifact_count": 2,
+          "bundle_hashes_present": true,
+          "bundle_status": "BUILT_PENDING_VERIFICATION",
+          "files_read": [
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1110801/bundle_manifest.json",
+              "sha256": "DA5232B8A0ADDF18B19F58E0858316394F72D5EE6C85C5F6349597A6FCAD2664"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1110801/approval_manifest.json",
+              "sha256": "B66D08CDD38928C0F68B564838C02CCE87DBC4903BE9C5BA6709FC1903C76AAE"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1110801/visible_file_manifest.json",
+              "sha256": "870296D8B56BAF6F27EA6B0FF99F8AE9D3148B177C933B23011773BFE29D8A2A"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1110801/verification_results.json",
+              "sha256": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1110801/bundle_hashes.json",
+              "sha256": "15304422B2B6467A8EC45D8BBD0EDAAF42918F3F4E0D4DD09B7BADCCADBCB0CD"
+            }
+          ],
+          "human_approved_count": 0,
+          "kind": "LEGACY_ACCEPTED_SOURCE_BUNDLE",
+          "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1110801",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 2,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1110801",
+      "score": 152,
+      "score_terms": {
+        "active_development_source_bundle": 0,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 2,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    },
+    {
+      "completed_reference_files_read_for_selection": [],
+      "evidence": [
+        {
+          "agent_quorum_approved_count": 2,
+          "approval_status": "PASS",
+          "artifact_count": 2,
+          "bundle_hashes_present": true,
+          "bundle_status": "BUILT_PENDING_VERIFICATION",
+          "files_read": [
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1120207/bundle_manifest.json",
+              "sha256": "07B55181514614CD5EE07183786D08724098A32110DA5576BF53DEB7EFC39E13"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1120207/approval_manifest.json",
+              "sha256": "C7351FD9A80CC5376F7B2C5C1CF9100B4B636D87B6FBF584983CA5D25815DC3F"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1120207/visible_file_manifest.json",
+              "sha256": "E9DF16549D7C020890F66AEB7F9673419E2856CF9EB6564FB6933BC12E4C7E6D"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1120207/verification_results.json",
+              "sha256": "B93681B7C66D68458EE7B3D5831774413F20DDA9066290DA8F0F7399ADB0AC16"
+            },
+            {
+              "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1120207/bundle_hashes.json",
+              "sha256": "6579725F0E3A6DC563D8B0E41D70A9C64F3F7751146A5E63B1D427A76D92557C"
+            }
+          ],
+          "human_approved_count": 0,
+          "kind": "LEGACY_ACCEPTED_SOURCE_BUNDLE",
+          "path": "manifests/baseline-024/project_bundles/batch-001/accepted/1120207",
+          "verification_error_count": 0,
+          "verification_status": "PASS"
+        }
+      ],
+      "max_agent_quorum_approved_count": 2,
+      "max_human_approved_count": 0,
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "project_id": "1120207",
+      "score": 152,
+      "score_terms": {
+        "active_development_source_bundle": 0,
+        "bundle_hashes_present": 50,
+        "sanitized_artifact_count": 2,
+        "verified_source_bundle": 100
+      },
+      "sheetmetal_queue_status": "PENDING_REQUALIFICATION"
+    }
+  ],
+  "ranking_policy": {
+    "completed_reference_content_allowed_before_selection": false,
+    "forbidden_selection_signals": [
+      "completed target drawing content",
+      "completed target drawing filenames",
+      "target hashes",
+      "thumbnails",
+      "scores",
+      "reviewer findings",
+      "expected answers",
+      "reference_manifest.json content"
+    ],
+    "name": "metadata_only_source_bundle_readiness_v1",
+    "rationale": "Prefer candidates with current source-guard/development bundle evidence in the active repository namespace, then verified isolated source bundle evidence, then broader sanitized source coverage.",
+    "score_formula": "1000 if active development source bundle exists + 100 if verification_results PASS + 50 if bundle_hashes.json exists + sanitized artifact count; tie-break by ascending project_id"
+  },
+  "schema_version": "sheetmetal-v1.candidate-selection.v1",
+  "selected_project_id": "1110101",
+  "selection_head": "d3811931b0b317aad2ddba656e2dfe57b2ec252f",
+  "selection_id": "SMV1-ONE-PROJECT-SELECTION-20260624",
+  "selection_result": {
+    "project_id": "1110101",
+    "rank": 1,
+    "reason_codes": [
+      "ACTIVE_DEVELOPMENT_SOURCE_BUNDLE",
+      "VERIFIED_SOURCE_BUNDLE",
+      "BUNDLE_HASHES_PRESENT",
+      "HIGHEST_SCORE_AFTER_METADATA_ONLY_RANKING"
+    ],
+    "score": 1156,
+    "selection_frozen_before_completed_reference_open": true
+  },
+  "selection_timestamp": "2026-06-24T14:05:00+08:00",
+  "status": "DETERMINISTIC_ONE_PROJECT_CANDIDATE_SELECTION_FROZEN"
+}

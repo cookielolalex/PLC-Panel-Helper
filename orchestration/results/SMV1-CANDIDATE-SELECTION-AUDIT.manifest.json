@@ -1,0 +1,29 @@
+{
+  "agent_id": "019ef82a-f29b-73c0-851e-120dbe9fcc93",
+  "artifacts": [
+    {
+      "path": "orchestration/results/SMV1-CANDIDATE-SELECTION-AUDIT.json",
+      "sha256": "3C2F5614BAC8B9D6334ED78D69508220E296AF9DD5CFA2E41E51AC271E13C77A"
+    },
+    {
+      "path": "reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md",
+      "sha256": "CCFFBB7F1F1EBA1B65AD29DF500F64A54E90FC716E9BF9112829504AB6B2D05B"
+    },
+    {
+      "path": "orchestration/input_manifests/sheetmetal-v1/SMV1-CANDIDATE-SELECTION-AUDIT.visible_files.json",
+      "sha256": "F6547CBE50341F68D7E934066095E994C71D87E08788932E10F64769E6D42456"
+    },
+    {
+      "path": "orchestration/tasks/SMV1-CANDIDATE-SELECTION-AUDIT.md",
+      "sha256": "A59A8D6AF9D3A15124592B9B4859F1A4EC8538660BB4B0CB24D0D654A8E22F8C"
+    },
+    {
+      "path": "orchestration/trajectories/SMV1-CANDIDATE-SELECTION-AUDIT.md",
+      "sha256": "157837FD86D6242C95CB58DDF1150A77236964E67574E1FB17AA841635B0B2EE"
+    }
+  ],
+  "audit_status": "SMV1_CANDIDATE_SELECTION_AUDIT_PASS",
+  "blockers": [],
+  "status": "PASS",
+  "task_id": "SMV1-CANDIDATE-SELECTION-AUDIT"
+}

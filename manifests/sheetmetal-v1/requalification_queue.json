@@ -1,23 +1,82 @@
 {
   "schema_version": "sheetmetal-v1",
   "qualification_class": "SHEETMETAL_ALLOWED_EVAL",
-  "status": "QUEUE_CREATED_BASELINE_NOT_STARTED",
+  "status": "ONE_PROJECT_SELECTED_BUNDLE_VERIFIED_AUDIT_PASS",
   "approved_count": 0,
   "candidates": [
-    {"project_id": "1110101", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1110103", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1110104", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1110203", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1110204", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1110205", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1110405", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1110410", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1110704", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1110801", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1120207", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1120305", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"},
-    {"project_id": "1120308", "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL", "sheetmetal_status": "PENDING_REQUALIFICATION"}
+    {
+      "project_id": "1110101",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "SELECTED_FOR_ONE_PROJECT_REQUALIFICATION_BUNDLE_VERIFIED_AUDIT_PASS",
+      "selection_rank": 1,
+      "selection_artifact": "manifests/sheetmetal-v1/one_project_candidate_selection.json"
+    },
+    {
+      "project_id": "1110103",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1110104",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1110203",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1110204",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1110205",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1110405",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1110410",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1110704",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1110801",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1120207",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1120305",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    },
+    {
+      "project_id": "1120308",
+      "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
+      "sheetmetal_status": "PENDING_REQUALIFICATION_NOT_SELECTED"
+    }
   ],
   "additional_corpus_search_status": "NOT_STARTED_IN_MIGRATION_TASK",
-  "baseline_status": "NOT_STARTED"
+  "baseline_status": "ONE_PROJECT_INPUTS_READY_FOR_MODEL_CALIBRATION",
+  "selected_project_id": "1110101",
+  "selection_status": "DETERMINISTIC_ONE_PROJECT_CANDIDATE_SELECTION_FROZEN",
+  "selection_artifact": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
+  "selected_candidate_bundle": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle",
+  "selected_candidate_audit": "reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md"
 }

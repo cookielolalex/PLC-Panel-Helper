@@ -1,0 +1,80 @@
+{
+  "agent_id": "019ef82a-f29b-73c0-851e-120dbe9fcc93",
+  "agent_type": "independent_auditor",
+  "artifacts": [
+    "reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md",
+    "orchestration/input_manifests/sheetmetal-v1/SMV1-CANDIDATE-SELECTION-AUDIT.visible_files.json",
+    "orchestration/tasks/SMV1-CANDIDATE-SELECTION-AUDIT.md",
+    "orchestration/trajectories/SMV1-CANDIDATE-SELECTION-AUDIT.md",
+    "manifests/sheetmetal-v1/one_project_candidate_selection.json",
+    "reports/sheetmetal-v1/selected_candidate_1110101_bundle_audit.json",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/effective_sheetmetal_reference_package.json",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/source_role_chronology_classification.json",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/bundle_manifest.json"
+  ],
+  "audit_status": "SMV1_CANDIDATE_SELECTION_AUDIT_PASS",
+  "blockers": [],
+  "checks": [
+    {
+      "criterion": "exactly one candidate selected with metadata-only ranking",
+      "evidence": "Selection artifact selects only project 1110101, ranks 13 candidates, records metadata-only score formula, and records zero completed-reference files read for selection.",
+      "status": "PASS"
+    },
+    {
+      "criterion": "selection frozen before completed-reference use",
+      "evidence": "Selection hash is recorded in effective_sheetmetal_reference_package.json, and reference_manifest content is marked opened only after selection freeze.",
+      "status": "PASS"
+    },
+    {
+      "criterion": "deterministic ranking selected 1110101",
+      "evidence": "1110101 score 1156 is highest by the frozen formula; score terms and tie-break rule are recorded.",
+      "status": "PASS"
+    },
+    {
+      "criterion": "effective sheetmetal reference package evaluator-only",
+      "evidence": "Sheetmetal reference is FORBIDDEN_REVIEWER_ONLY; generator receives no reference content, paths, or hashes.",
+      "status": "PASS"
+    },
+    {
+      "criterion": "source role and chronology exclusions",
+      "evidence": "Six AGENT_QUORUM_APPROVED_EVAL items enter source-only bundle; twelve quarantined items remain excluded; no approved item has completed-reference or post-design marker.",
+      "status": "PASS"
+    },
+    {
+      "criterion": "generator bundle content boundary",
+      "evidence": "Bundle contains six sanitized CSVs, six previews, and required manifests only; reference_manifest.json and original workbooks are excluded.",
+      "status": "PASS"
+    },
+    {
+      "criterion": "bundle verifier and hashes",
+      "evidence": "verification_results.json is PASS with zero errors/warnings; all 17 bundle_hashes entries match actual SHA-256 values.",
+      "status": "PASS"
+    },
+    {
+      "criterion": "no customer drawing generated",
+      "evidence": "Audit and manifests record customer_drawing_generated=false; sheetmetal-v1 selected-candidate namespace contains no generated drawing files.",
+      "status": "PASS"
+    },
+    {
+      "criterion": "root coordinator Git verification",
+      "evidence": "Bundled Git verified HEAD d3811931b0b317aad2ddba656e2dfe57b2ec252f and status before docs updates showed only intended new artifacts plus the known untracked corpus-screening script.",
+      "status": "PASS"
+    }
+  ],
+  "hashes": {
+    "manifests/sheetmetal-v1/one_project_candidate_selection.json": "5EBD8164F0B02576644EA53B61018896DEAC7BF58C017E174F5F15A0303419E5",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/effective_sheetmetal_reference_package.json": "8DCE3211CB566B307FAEF12A38FDF428BC6DB1DE0E7D18B8C1A9327910BCC18F",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/bundle_hashes.json": "1B65A8EDEAE43BB763821D329145FA78D11BDD664AD640BC4BEA8D9B6A24D029",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/bundle_manifest.json": "B0C11E1AACAFEC39B2A87C345AFACA2BE8E698210B7BF129C67358C17AD3FBFF",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/verification_results.json": "E122E91D93CF6E65946A417C0EDC107ACAF342A495EE1F1944A8D8D0A4C57699",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/source_role_chronology_classification.json": "9AA79023082793C3419E926486B46F5166E1102A0616E91E323D89692D7D1EB1",
+    "orchestration/input_manifests/sheetmetal-v1/SMV1-CANDIDATE-SELECTION-AUDIT.visible_files.json": "F6547CBE50341F68D7E934066095E994C71D87E08788932E10F64769E6D42456",
+    "orchestration/tasks/SMV1-CANDIDATE-SELECTION-AUDIT.md": "A59A8D6AF9D3A15124592B9B4859F1A4EC8538660BB4B0CB24D0D654A8E22F8C",
+    "orchestration/trajectories/SMV1-CANDIDATE-SELECTION-AUDIT.md": "157837FD86D6242C95CB58DDF1150A77236964E67574E1FB17AA841635B0B2EE",
+    "reports/sheetmetal-v1/selected_candidate_1110101_bundle_audit.json": "00D0122F6F1165A27F7CFF2550475FAB2F63AA9B183DF39FEA51A288000F85EA",
+    "reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md": "CCFFBB7F1F1EBA1B65AD29DF500F64A54E90FC716E9BF9112829504AB6B2D05B"
+  },
+  "status": "PASS",
+  "summary": "Independent audit passed deterministic metadata-only selection, evaluator-only reference boundary, source exclusion rules, clean sanitized bundle contents, bundle verification, hash consistency, and no-customer-drawing boundary for selected project 1110101.",
+  "task_id": "SMV1-CANDIDATE-SELECTION-AUDIT"
+}
