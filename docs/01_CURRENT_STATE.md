@@ -1,7 +1,7 @@
 # Current State
 
-Current phase: deterministic generator freeze evidence complete for one-project
-component graph calibration; evaluator-only metrics pending.
+Current phase: evaluator-only component graph metrics complete for one-project
+component graph calibration; independent audit pending.
 
 Accepted release: none.
 
@@ -42,7 +42,8 @@ summary evidence; `D-0031` accepts deterministic private component-register
 construction from that source-fact model; `D-0032` accepts deterministic
 private panel-assignment and typed graph construction; `D-0033` accepts
 deterministic private accessory and cutout reconciliation; `D-0034` accepts
-deterministic generator freeze evidence. These amendments do not weaken
+deterministic generator freeze evidence; `D-0035` accepts evaluator-only
+component graph metrics. These amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -331,6 +332,14 @@ hash/fingerprint checks, privacy, reference/post-design leakage, graph,
 accessory, and no-drawing gates passed. Evidence is recorded in
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json`.
 
-Exact next action: run evaluator-only component graph metrics against the
-frozen private generator artifacts without modifying generator artifacts or
-promoting `1110101` to `SHEETMETAL_ALLOWED_EVAL`.
+Evaluator metrics after `D-0035`: neutral post-freeze metrics record
+numerators, denominators, scorable coverage, and confidence without modifying
+generator artifacts or opening completed-reference content for metric values.
+Component registration coverage is `53/53`, graph referential integrity is
+`107/107`, deterministic freeze canonical match is `9/9`, panel-assignment
+resolution is source-limited at `0/53`, and accessory-rule scorability is
+`0/0`. Evidence is recorded in
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.json`.
+
+Exact next action: run an independent audit/adjudication checkpoint for the
+one-project component graph calibration evidence before any status promotion.

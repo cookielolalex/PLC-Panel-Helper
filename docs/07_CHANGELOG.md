@@ -362,3 +362,8 @@
 - Reverified hard gates: full tests `PASS`, legacy and active scoped freezes
   `PASS`, private content transmission `0`, private Git leakage `0`, and no
   customer drawing/PDF/DXF/DWG/baseline-generation output.
+- Added evaluator-only component graph metrics with numerator, denominator,
+  scorable coverage, and confidence for each metric.
+- Recorded source-limited coverage explicitly: component registration `53/53`,
+  graph referential integrity `107/107`, deterministic freeze `9/9`, panel
+  assignment `0/53`, and accessory-rule scorability `0/0`.

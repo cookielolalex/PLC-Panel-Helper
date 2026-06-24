@@ -801,3 +801,35 @@ Evidence:
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.md`
 and
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json`.
+
+## sheetmetal-v1 one-project evaluator metrics
+
+Status: `PASS_WITH_SOURCE_LIMITED_PANEL_ASSIGNMENT_COVERAGE`.
+
+Decision: `D-0035`.
+
+Purpose: record evaluator-only component graph metrics with explicit
+numerators, denominators, scorable coverage, and confidence after generator
+freeze.
+
+Method: metrics were computed from frozen generator summaries and the
+qualified effective sheetmetal reference package metadata. Completed-reference
+content was not opened for metric values, generator artifacts were not
+modified, and only neutral counts were committed.
+
+Result: source line representation `125 / 125`; authorized source fact
+retention `87 / 87`; component registration coverage `53 / 53`; conflict-free
+component coverage `53 / 53`; panel assignment resolution `0 / 53`; graph
+referential integrity `107 / 107`; inventory-only functional safety `1 / 1`;
+accessory rule scorability `0 / 0`; deterministic freeze canonical match
+`9 / 9`; evaluator reference package availability `1 / 1`; generator
+reference isolation `2 / 2`.
+
+Interpretation: panel assignment remains source-limited and safely unresolved
+for all 53 components. Accessory-rule scoring is denominator-zero because no
+approved accessory rules were present.
+
+Evidence:
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.md`
+and
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.json`.

@@ -1,0 +1,146 @@
+{
+  "schema_version": "sheetmetal-v1.evaluator_metrics_summary.v1",
+  "status": "PASS_WITH_SOURCE_LIMITED_PANEL_ASSIGNMENT_COVERAGE",
+  "task": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION",
+  "project_id": "1110101",
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "metric_scope": "neutral_source_coverage_and_hard_gate_metrics",
+  "generator_artifacts_modified_after_freeze": false,
+  "reference_content_opened_for_metric_values": false,
+  "inputs": {
+    "generator_freeze_summary_sha256": "68FAEFC779FC4B5D2860C6AD7DB6D3D251E11DA5D3CBF4E83940194FC997DC05",
+    "effective_sheetmetal_reference_package_sha256": "8DCE3211CB566B307FAEF12A38FDF428BC6DB1DE0E7D18B8C1A9327910BCC18F",
+    "effective_sheetmetal_reference_package_status": "EFFECTIVE_SHEETMETAL_REFERENCE_PACKAGE_QUALIFIED",
+    "qualified_sheetmetal_reference_count": 1,
+    "non_sheetmetal_completed_reference_count": 2,
+    "generator_receives_reference_content": false,
+    "generator_receives_reference_hashes": false
+  },
+  "metrics": [
+    {
+      "metric_id": "source_line_representation",
+      "numerator": 125,
+      "denominator": 125,
+      "scorable_coverage": 1.0,
+      "confidence": "HIGH",
+      "classification": "PASS"
+    },
+    {
+      "metric_id": "authorized_source_fact_retention",
+      "numerator": 87,
+      "denominator": 87,
+      "scorable_coverage": 1.0,
+      "confidence": "HIGH",
+      "classification": "PASS"
+    },
+    {
+      "metric_id": "component_registration_coverage",
+      "numerator": 53,
+      "denominator": 53,
+      "scorable_coverage": 1.0,
+      "confidence": "HIGH",
+      "classification": "PASS"
+    },
+    {
+      "metric_id": "component_conflict_free_coverage",
+      "numerator": 53,
+      "denominator": 53,
+      "scorable_coverage": 1.0,
+      "confidence": "HIGH",
+      "classification": "PASS"
+    },
+    {
+      "metric_id": "panel_assignment_resolution_coverage",
+      "numerator": 0,
+      "denominator": 53,
+      "scorable_coverage": 0.0,
+      "confidence": "HIGH",
+      "classification": "SOURCE_UNAVAILABLE_SAFE_UNRESOLVED"
+    },
+    {
+      "metric_id": "graph_referential_integrity",
+      "numerator": 107,
+      "denominator": 107,
+      "scorable_coverage": 1.0,
+      "confidence": "HIGH",
+      "classification": "PASS"
+    },
+    {
+      "metric_id": "inventory_only_functional_safety",
+      "numerator": 1,
+      "denominator": 1,
+      "scorable_coverage": 1.0,
+      "confidence": "HIGH",
+      "classification": "PASS_UNVERIFIED_FUNCTION_EDGE_RETAINED"
+    },
+    {
+      "metric_id": "accessory_rule_scorability",
+      "numerator": 0,
+      "denominator": 0,
+      "scorable_coverage": 0.0,
+      "confidence": "HIGH",
+      "classification": "NOT_SCORABLE_NO_APPROVED_ACCESSORY_RULES",
+      "denominator_zero_reason": "No approved accessory rules were present in the frozen source-fact model."
+    },
+    {
+      "metric_id": "deterministic_freeze_canonical_match",
+      "numerator": 9,
+      "denominator": 9,
+      "scorable_coverage": 1.0,
+      "confidence": "HIGH",
+      "classification": "PASS"
+    },
+    {
+      "metric_id": "evaluator_reference_package_availability",
+      "numerator": 1,
+      "denominator": 1,
+      "scorable_coverage": 1.0,
+      "confidence": "HIGH",
+      "classification": "PASS_METADATA_ONLY"
+    },
+    {
+      "metric_id": "generator_reference_isolation",
+      "numerator": 2,
+      "denominator": 2,
+      "scorable_coverage": 1.0,
+      "confidence": "HIGH",
+      "classification": "PASS"
+    }
+  ],
+  "coverage_summary": {
+    "source_line_coverage": "125/125",
+    "component_registration_coverage": "53/53",
+    "panel_assignment_resolution_coverage": "0/53",
+    "graph_referential_integrity": "107/107",
+    "deterministic_freeze_canonical_match": "9/9"
+  },
+  "source_availability_gaps": [
+    {
+      "gap_id": "PANEL_ASSIGNMENT_SOURCE_UNAVAILABLE",
+      "affected_count": 53,
+      "status": "SAFE_UNRESOLVED",
+      "assigned_later_module": "RUN_ONE_PROJECT_TOPOLOGY_SIZING_AND_PLACEMENT_CALIBRATION"
+    },
+    {
+      "gap_id": "APPROVED_ACCESSORY_RULES_UNAVAILABLE",
+      "affected_count": 0,
+      "status": "NOT_SCORABLE",
+      "assigned_later_module": "MODEL_SPECIFIC_LIBRARY_RULE_EXPANSION"
+    }
+  ],
+  "hard_gate_snapshot": {
+    "private_content_transmission_count": 0,
+    "completed_reference_leakage_into_generator_artifacts": 0,
+    "post_design_leakage_into_generator_artifacts": 0,
+    "unsupported_panel_assignments": 0,
+    "duplicate_inferred_accessories": 0,
+    "temporary_private_artifact_leakage_into_git": 0,
+    "real_customer_drawings_generated": 0
+  },
+  "privacy": {
+    "private_values_committed": false,
+    "completed_reference_values_committed": false,
+    "generator_artifacts_modified_from_evaluator_values": false,
+    "customer_drawing_generated": false
+  }
+}

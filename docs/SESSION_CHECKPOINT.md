@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: deterministic generator freeze evidence complete for one-project
-component graph calibration; evaluator-only metrics pending.
+Current phase: evaluator-only component graph metrics complete for one-project
+component graph calibration; independent audit pending.
 
 Accepted release: none.
 
@@ -280,9 +280,22 @@ Generator freeze evidence:
 - Evidence:
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/generator_freeze_summary.json`.
 
+Evaluator metrics:
+
+- Decision: `D-0035`.
+- Status: `PASS_WITH_SOURCE_LIMITED_PANEL_ASSIGNMENT_COVERAGE`.
+- Reference content opened for metric values: no.
+- Generator artifacts modified after freeze: no.
+- Metric highlights: source line representation `125/125`, authorized source
+  fact retention `87/87`, component registration `53/53`, graph referential
+  integrity `107/107`, deterministic freeze canonical match `9/9`, panel
+  assignment resolution `0/53`, and accessory-rule scorability `0/0`.
+- Evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/evaluator_metrics_summary.json`.
+
 Exact next action:
 
-Run evaluator-only component graph metrics against the frozen private generator
-artifacts. Do not modify generator artifacts, do not generate a customer
-drawing, and do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until
-calibration and adjudication pass.
+Run an independent audit/adjudication checkpoint for the one-project component
+graph calibration evidence. Do not modify generator artifacts, do not generate
+a customer drawing, and do not promote `1110101` to `SHEETMETAL_ALLOWED_EVAL`
+until calibration and adjudication pass.
