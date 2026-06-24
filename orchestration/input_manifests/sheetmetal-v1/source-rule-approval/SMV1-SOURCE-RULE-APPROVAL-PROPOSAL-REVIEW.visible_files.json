@@ -1,0 +1,49 @@
+{
+  "schema_version": "visible-file-manifest-v1",
+  "task_id": "SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW",
+  "created_at": "2026-06-24T17:09:48.6183105+08:00",
+  "starting_commit": "de01dd57b0c4a7db98114a5a9913b25de6069f06",
+  "allowed_read_paths": [
+    "AGENTS.md",
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+    "docs/specs/MASTER_AUTOPILOT_PROTOCOL.md",
+    "docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md",
+    "docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md",
+    "docs/specs/SHEETMETAL_QUALIFICATION_POLICY.md",
+    "docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md",
+    "docs/specs/AUTONOMOUS_EVAL_SOURCE_APPROVAL.md",
+    "docs/specs/SANITIZED_GENERATOR_BUNDLE_SPEC.md",
+    "docs/01_CURRENT_STATE.md",
+    "docs/04_DECISION_LEDGER.md",
+    "docs/SESSION_CHECKPOINT.md",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_integration_summary.json",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_coordinator_audit_addendum.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.md",
+    "orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL.json",
+    "orchestration/tasks/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.md"
+  ],
+  "allowed_write_paths": [
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.md",
+    "orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.json"
+  ],
+  "forbidden_paths_and_content": [
+    "source roots listed in docs/SOURCE_ROOTS.md",
+    ".private",
+    "completed target drawings",
+    "post-design files",
+    "customer PDFs",
+    "customer DXFs",
+    "customer DWGs",
+    "completed-reference derivatives",
+    "extracted target text",
+    "reviewer findings",
+    "scores",
+    "expected answers",
+    "scripts/run_reference_detection_v4_corpus_screening.py"
+  ],
+  "network_mode": "local_only_no_public_web",
+  "privacy_approval": "NOT_APPROVED"
+}
