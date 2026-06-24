@@ -2,11 +2,15 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "a08d9a847fb76345e8a0c260905f7aa65e20ee33",
+  "current_head": "e133aa177967078d175a8da9fcff3fc95e7ad284",
   "current_canonical_status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT_INCONCLUSIVE_LOW_COVERAGE_T1_PENDING",
   "current_stage": "T1_TARGETED_COVERAGE_RECOVERY",
   "next_action": "RUN_TARGETED_COVERAGE_RECOVERY_T1",
-  "active_thread_ids": [],
+  "active_thread_ids": [
+    "SUBAGENT:019ef8c9-079c-7f71-8059-1bbf390992be",
+    "SUBAGENT:019ef8c9-2da4-7e83-aa95-7c2427ee2365",
+    "SUBAGENT:019ef8c9-5531-7fb3-8a30-6165f0c0e141"
+  ],
   "task_ids": [
     "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
     "SMV1-T1-PANEL-ASSIGNMENT-RECOVERY",
@@ -24,20 +28,22 @@
     "master_state_initialization_commit": "7f51c5beb893159779719cd2370516e9c90a0854",
     "pending_worktree_registration_commit": "2492c0f109c354711e7cd66c23bd380a5471bf02",
     "t0_audit_evidence_commit": "a08d9a847fb76345e8a0c260905f7aa65e20ee33"
+    ,
+    "t0_to_t1_state_commit": "e133aa177967078d175a8da9fcff3fc95e7ad284"
   },
   "expected_outputs": [
     "orchestration/master/child-results/SMV1-T1-PANEL-ASSIGNMENT-RECOVERY.json",
     "orchestration/master/child-results/SMV1-T1-COMPONENT-GEOMETRY-RECOVERY.json",
     "orchestration/master/child-results/SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY.json"
   ],
-  "last_heartbeat": "2026-06-24T16:35:15.7964626+08:00",
+  "last_heartbeat": "2026-06-24T16:40:11.5264488+08:00",
   "retries": {},
   "blockers": [],
   "audit_state": {
     "T0": "INCONCLUSIVE_LOW_COVERAGE",
     "safety_and_implementation_integrity": "PASS",
     "engineering_capability_and_coverage": "INCONCLUSIVE_LOW_COVERAGE",
-    "T1": "QUEUED"
+    "T1": "IN_PROGRESS"
   },
   "merge_state": {
     "pending_child_commits": [],

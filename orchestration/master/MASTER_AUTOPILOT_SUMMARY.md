@@ -48,3 +48,12 @@ T0 audit result:
 - Engineering capability: assignment, geometry, and placement remain `0/53`;
   not capability success.
 - Next action: `RUN_TARGETED_COVERAGE_RECOVERY_T1`.
+
+T1 worker dispatch:
+
+- `SMV1-T1-PANEL-ASSIGNMENT-RECOVERY`:
+  `019ef8c9-079c-7f71-8059-1bbf390992be`.
+- `SMV1-T1-COMPONENT-GEOMETRY-RECOVERY`:
+  `019ef8c9-2da4-7e83-aa95-7c2427ee2365`.
+- `SMV1-T1-TOPOLOGY-SIZING-RULE-RECOVERY`:
+  `019ef8c9-5531-7fb3-8a30-6165f0c0e141`.
