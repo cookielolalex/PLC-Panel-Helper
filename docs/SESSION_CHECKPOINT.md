@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: deterministic panel-assignment and graph construction complete
-for one-project component graph calibration; accessory/cutout reconciliation
+Current phase: deterministic accessory and cutout reconciliation complete for
+one-project component graph calibration; final deterministic freeze evidence
 pending.
 
 Accepted release: none.
@@ -233,9 +233,37 @@ Panel-assignment and graph construction:
 - Evidence:
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json`.
 
+Accessory and cutout reconciliation:
+
+- Decision: `D-0033`.
+- Builder: `scripts/sheetmetal_v1.py --source-fact-model ... --component-register ... --panel-graph ... --output-dir ... --quiet`.
+- Private inputs:
+  `.private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json`,
+  `.private/sheetmetal-v1/1110101/component-register/component_register.json`,
+  and `.private/sheetmetal-v1/1110101/panel-graph/panel_graph.json`.
+- Private output directory:
+  `.private/sheetmetal-v1/1110101/accessory-cutout/`.
+- Private outputs: `accessory_requirements.json` and
+  `accessory_cutout_validation.json`.
+- Private output hashes:
+  `accessory_requirements.json`
+  `905873D62249831598177FC12DBE7225C28299202945CC4D764126995A6BAFB1`;
+  `accessory_cutout_validation.json`
+  `CF7DF2955F414690F03253401B158E7A85AD8922659433039F70D85F7B2E52A9`.
+- Git ignore verification: `PASS`; no `.private` path is tracked.
+- Neutral counts: 0 accessory requirements, 0 generated accessory component
+  instances, 0 cutouts, 0 duplicate accessories, 0 missing requirement
+  sources, 0 missing cutout sources, and 0 private content transmissions.
+- Regression test:
+  `test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models`.
+- Active scoped manifest refreshed for `scripts/sheetmetal_v1.py` and
+  `scripts/run_tests.py`.
+- Evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json`.
+
 Exact next action:
 
-Implement deterministic accessory and cutout reconciliation against the private
-`1110101` component register and panel graph with synthetic regression
-coverage. Do not generate a customer drawing and do not promote `1110101` to
+Produce final deterministic freeze evidence for the private `1110101` source
+fact model, component register, panel graph, and accessory reconciliation. Do
+not generate a customer drawing and do not promote `1110101` to
 `SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.

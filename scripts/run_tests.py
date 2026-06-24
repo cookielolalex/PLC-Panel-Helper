@@ -1164,6 +1164,134 @@ def test_sheetmetal_v1_panel_assignment_graph_from_private_models() -> None:
     assert_true(validation["private_content_transmission_count"] == 0, "private transmission count must stay zero")
 
 
+def test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models() -> None:
+    work = ROOT / "tmp" / "sheetmetal_v1_accessory_cutout_test"
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+    register_out = work / "register"
+    graph_out = work / "graph"
+    accessory_out = work / "accessory"
+    secret_model = "ACCESSORY-SECRET-MODEL"
+    source_model = {
+        "schema_version": "sheetmetal-v1.source_fact_model.v1",
+        "project_id": "SYNTH-SMV1-ACCESSORY",
+        "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+        "source_evidence": [
+            {
+                "evidence_id": "EVID-ACCESSORY",
+                "neutral_source_document_id": "SRC-ACCESSORY",
+                "source_role": "MATERIAL_REQUIREMENT",
+                "chronology_status": "PRE_DESIGN",
+                "generator_input_eligible": True,
+                "contains_completed_reference_content": False,
+            }
+        ],
+        "source_facts": [
+            {"fact_id": "AF1", "evidence_id": "EVID-ACCESSORY", "neutral_source_document_id": "SRC-ACCESSORY", "source_role": "MATERIAL_REQUIREMENT", "source_location_id": "ART:R1:C1", "field_type": "model", "component_key": "ROW-ACCESSORY-1", "normalized_value": secret_model, "raw_value": secret_model, "authority_class": "SECONDARY_OR_CONTEXT", "confidence": 0.6, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+            {"fact_id": "AF2", "evidence_id": "EVID-ACCESSORY", "neutral_source_document_id": "SRC-ACCESSORY", "source_role": "MATERIAL_REQUIREMENT", "source_location_id": "ART:R1:C2", "field_type": "family", "component_key": "ROW-ACCESSORY-1", "normalized_value": "ACCESSORY_SOURCE_FAMILY", "raw_value": "ACCESSORY_SOURCE_FAMILY", "authority_class": "SOURCE_CONTEXT", "confidence": 0.6, "chronology_status": "PRE_DESIGN", "conflict_status": "NONE", "status": "EXPLICIT_SOURCE"},
+        ],
+        "source_line_accounting": [
+            {"source_line_id": "ROW-ACCESSORY-1", "evidence_id": "EVID-ACCESSORY", "neutral_source_document_id": "SRC-ACCESSORY", "row_index": 1, "status": "REPRESENTED", "fact_count": 2},
+        ],
+        "accessory_rules": [
+            {
+                "rule_id": "AR-SYNTH-1",
+                "version": "v1",
+                "applicable_component_family": "ACCESSORY_SOURCE_FAMILY",
+                "condition": "synthetic current-project rule",
+                "generated_requirement": {"family": "SYNTH_ACCESSORY", "model": "SYNTH-BRACKET"},
+                "generated_cutout": {"shape": "rectangle", "width_mm": 20, "height_mm": 10, "units": "mm"},
+                "evidence_basis": "synthetic unit test rule",
+                "confidence": 0.8,
+                "priority": 1,
+                "conflict_behavior": "do_not_duplicate_explicit_accessory",
+            }
+        ],
+        "quantity_stage_counts": {"required_qty": 0, "ordered_qty": 0, "received_qty": 0, "allocated_qty": 0, "installed_qty": 0},
+        "validation": {
+            "status": "PASS",
+            "evidence_count": 1,
+            "source_fact_count": 2,
+            "source_line_count": 1,
+            "silently_discarded_authorized_source_lines": 0,
+            "quantity_stage_overwrite_violations": 0,
+            "completed_reference_facts": 0,
+            "private_content_transmission_count": 0,
+        },
+    }
+    for rule in source_model["accessory_rules"]:
+        errors = validate(rule, read_json(ROOT / "schemas/accessory_rule.schema.json"))
+        assert_true(not errors, f"accessory rule schema errors: {errors}")
+    source_model_path = work / "source_fact_model.json"
+    write_json(source_model_path, source_model)
+    subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--source-fact-model",
+            str(source_model_path),
+            "--output-dir",
+            str(register_out),
+            "--quiet",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--source-fact-model",
+            str(source_model_path),
+            "--component-register",
+            str(register_out / "component_register.json"),
+            "--output-dir",
+            str(graph_out),
+            "--quiet",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    result = subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--source-fact-model",
+            str(source_model_path),
+            "--component-register",
+            str(register_out / "component_register.json"),
+            "--panel-graph",
+            str(graph_out / "panel_graph.json"),
+            "--output-dir",
+            str(accessory_out),
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    assert_true(secret_model not in result.stdout, "accessory summary must not print source values")
+    assert_true(secret_model not in result.stderr, "accessory errors must not print source values")
+    accessories = read_json(accessory_out / "accessory_requirements.json")
+    for component_instance in accessories["generated_component_instances"]:
+        errors = validate(component_instance, read_json(ROOT / "schemas/component_instance.schema.json"))
+        assert_true(not errors, f"generated accessory component instance schema errors: {errors}")
+    validation = read_json(accessory_out / "accessory_cutout_validation.json")
+    assert_true(validation["status"] == "PASS", "accessory/cutout validation must pass")
+    assert_true(validation["requirement_count"] == 1, "one accessory requirement should be generated")
+    assert_true(validation["generated_component_instance_count"] == 1, "one accessory component should be generated")
+    assert_true(validation["cutout_count"] == 1, "one cutout should be generated")
+    assert_true(validation["duplicate_accessory_count"] == 0, "no duplicate accessory should be reported")
+    assert_true(validation["missing_requirement_source_count"] == 0, "requirement source must resolve in graph")
+    assert_true(validation["missing_cutout_source_count"] == 0, "cutout source must resolve in graph")
+    assert_true(validation["private_content_transmission_count"] == 0, "private transmission count must stay zero")
+
+
 def test_frozen_workflow_legacy_scope_verifier() -> None:
     import verify_frozen_workflow as verifier
 
@@ -1294,6 +1422,7 @@ def main() -> None:
         test_sheetmetal_v1_source_fact_extractor,
         test_sheetmetal_v1_component_register_from_source_facts,
         test_sheetmetal_v1_panel_assignment_graph_from_private_models,
+        test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models,
         test_frozen_workflow_legacy_scope_verifier,
         test_frozen_workflow_fail_closed_regressions,
         test_frozen_workflow_active_scope_verifier,

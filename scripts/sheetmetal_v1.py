@@ -1218,12 +1218,51 @@ def write_panel_assignment_graph_outputs(source_model: dict[str, Any], register:
     return validation
 
 
+def validate_accessory_cutout_reconciliation(accessories: dict[str, Any], graph: dict[str, Any]) -> dict[str, Any]:
+    node_ids = {node["node_id"] for node in graph.get("nodes", [])}
+    missing_requirement_sources = [
+        row["requirement_id"]
+        for row in accessories.get("requirements", [])
+        if f"CINST:{row.get('source_component_instance_id')}" not in node_ids
+    ]
+    missing_cutout_sources = [
+        row["cutout_id"]
+        for row in accessories.get("cutouts", [])
+        if f"CINST:{row.get('source_component_instance_id')}" not in node_ids
+    ]
+    status = "PASS"
+    if accessories.get("duplicate_accessory_count", 0) or missing_requirement_sources or missing_cutout_sources:
+        status = "FAIL"
+    return {
+        "status": status,
+        "project_id": accessories.get("project_id"),
+        "requirement_count": len(accessories.get("requirements", [])),
+        "generated_component_instance_count": len(accessories.get("generated_component_instances", [])),
+        "cutout_count": len(accessories.get("cutouts", [])),
+        "duplicate_accessory_count": accessories.get("duplicate_accessory_count", 0),
+        "graph_node_count": len(graph.get("nodes", [])),
+        "graph_edge_count": len(graph.get("edges", [])),
+        "missing_requirement_source_count": len(missing_requirement_sources),
+        "missing_cutout_source_count": len(missing_cutout_sources),
+        "private_content_transmission_count": 0,
+    }
+
+
+def write_accessory_cutout_outputs(source_model: dict[str, Any], register: dict[str, Any], graph: dict[str, Any], output_dir: Path) -> dict[str, Any]:
+    accessories = build_accessory_requirements(source_model, register)
+    validation = validate_accessory_cutout_reconciliation(accessories, graph)
+    write_json(output_dir / "accessory_requirements.json", accessories)
+    write_json(output_dir / "accessory_cutout_validation.json", validation)
+    return validation
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run the sheetmetal-v1 modular foundation pipeline.")
     parser.add_argument("--fixture", type=Path)
     parser.add_argument("--bundle-dir", type=Path)
     parser.add_argument("--source-fact-model", type=Path)
     parser.add_argument("--component-register", type=Path)
+    parser.add_argument("--panel-graph", type=Path)
     parser.add_argument("--source-classification", type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--quiet", action="store_true")
@@ -1242,6 +1281,22 @@ def main() -> None:
         if not args.quiet:
             print(json.dumps(summary, ensure_ascii=False, indent=2))
         raise SystemExit(0 if model["validation"]["status"] == "PASS" else 1)
+    if args.source_fact_model and args.component_register and args.panel_graph:
+        source_model = read_json(args.source_fact_model)
+        register = read_json(args.component_register)
+        graph = read_json(args.panel_graph)
+        validation = write_accessory_cutout_outputs(source_model, register, graph, args.output_dir)
+        summary = {
+            "status": validation["status"],
+            "project_id": validation["project_id"],
+            "requirement_count": validation["requirement_count"],
+            "generated_component_instance_count": validation["generated_component_instance_count"],
+            "cutout_count": validation["cutout_count"],
+            "private_content_transmission_count": validation["private_content_transmission_count"],
+        }
+        if not args.quiet:
+            print(json.dumps(summary, ensure_ascii=False, indent=2))
+        raise SystemExit(0 if validation["status"] == "PASS" else 1)
     if args.source_fact_model and args.component_register:
         source_model = read_json(args.source_fact_model)
         register = read_json(args.component_register)

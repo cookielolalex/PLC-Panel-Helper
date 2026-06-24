@@ -340,3 +340,16 @@
   graph edges, 0 dangling edges, and 0 private content transmissions.
 - Recorded neutral panel graph evidence under
   `reports/sheetmetal-v1/one-project-model-calibration/1110101/`.
+- Added private accessory and cutout reconciliation to `scripts/sheetmetal_v1.py`
+  using `--source-fact-model`, `--component-register`, and `--panel-graph`.
+- Added `test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models`,
+  covering source-value non-printing, synthetic approved-rule accessory/cutout
+  derivation, graph-source referential integrity, and privacy counter
+  preservation.
+- Ran the private `1110101` accessory/cutout reconciliation under
+  `.private/sheetmetal-v1/1110101/accessory-cutout/`; validation passed with 0
+  accessory requirements, 0 generated accessory component instances, 0 cutouts,
+  0 duplicate accessories, 0 missing graph sources, and 0 private content
+  transmissions.
+- Recorded neutral accessory/cutout evidence under
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/`.

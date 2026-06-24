@@ -722,3 +722,46 @@ Evidence:
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.md`,
 and
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json`.
+
+## sheetmetal-v1 one-project accessory and cutout reconciliation
+
+Status: `PASS`.
+
+Decision: `D-0033`.
+
+Purpose: reconcile private accessory requirements and generated cutouts against
+the private `1110101` source-fact model, component register, and typed graph
+without committing project-specific values.
+
+Implementation: `scripts/sheetmetal_v1.py` accepts `--source-fact-model` plus
+`--component-register` plus `--panel-graph` for accessory/cutout
+reconciliation. It writes `accessory_requirements.json` and
+`accessory_cutout_validation.json` only to the requested private output
+directory.
+
+Private run: inputs were the private source-fact model, private component
+register, and private panel graph; output was written to
+`.private/sheetmetal-v1/1110101/accessory-cutout/`. All private outputs are
+ignored by Git and no `.private` path is tracked.
+
+Validation result: requirement count `0`; generated component instance count
+`0`; cutout count `0`; duplicate accessory count `0`; graph node count `56`;
+graph edge count `107`; missing requirement source count `0`; missing cutout
+source count `0`; private content transmission count `0`.
+
+Regression result: full `scripts/run_tests.py` status `PASS`.
+`test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models`
+covers source-value non-printing, generated accessory and cutout behavior from
+an approved synthetic rule, graph-source referential integrity, and privacy
+counter preservation.
+
+Generation status: no customer drawing, PDF, DXF, DWG, drawing model,
+baseline generation, or `SHEETMETAL_ALLOWED_EVAL` promotion occurred.
+
+Evidence:
+`scripts/sheetmetal_v1.py`,
+`scripts/run_tests.py`,
+`evals/sheetmetal-v1/frozen_workflow_manifest.json`,
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.md`,
+and
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json`.

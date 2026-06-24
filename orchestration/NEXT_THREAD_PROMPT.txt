@@ -203,11 +203,38 @@ Panel-assignment and graph construction:
 - Active scoped manifest is refreshed for `scripts/sheetmetal_v1.py` and
   `scripts/run_tests.py`.
 
+Accessory and cutout reconciliation:
+
+- Decision `D-0033` accepts deterministic private accessory and cutout
+  reconciliation.
+- `scripts/sheetmetal_v1.py` now supports `--source-fact-model` plus
+  `--component-register` plus `--panel-graph` for private accessory/cutout
+  reconciliation.
+- Private inputs:
+  `.private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json`,
+  `.private/sheetmetal-v1/1110101/component-register/component_register.json`,
+  and `.private/sheetmetal-v1/1110101/panel-graph/panel_graph.json`.
+- Private output directory:
+  `.private/sheetmetal-v1/1110101/accessory-cutout/`.
+- Private outputs are `accessory_requirements.json` and
+  `accessory_cutout_validation.json`; both are git-ignored.
+- Neutral private-run counts: 0 accessory requirements, 0 generated accessory
+  component instances, 0 cutouts, 0 duplicate accessories, 0 missing
+  requirement sources, 0 missing cutout sources, and 0 private content
+  transmissions.
+- Neutral committed evidence:
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json`
+  and
+  `reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.md`.
+- Regression coverage:
+  `test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models`.
+- Active scoped manifest is refreshed for `scripts/sheetmetal_v1.py` and
+  `scripts/run_tests.py`.
+
 Exact next action:
 
-Implement deterministic accessory and cutout reconciliation against the private
-`1110101` component register and panel graph with synthetic regression
-coverage. Produce canonical panel-model artifacts and evaluation evidence only;
-do not start a new baseline, do not generate a customer drawing, and do not
-promote `1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and
-adjudication pass.
+Produce final deterministic freeze evidence for the private `1110101` source
+fact model, component register, panel graph, and accessory reconciliation.
+Produce canonical panel-model artifacts and evaluation evidence only; do not
+start a new baseline, do not generate a customer drawing, and do not promote
+`1110101` to `SHEETMETAL_ALLOWED_EVAL` until calibration and adjudication pass.

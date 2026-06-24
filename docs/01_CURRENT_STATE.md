@@ -1,7 +1,7 @@
 # Current State
 
-Current phase: deterministic panel-assignment and graph construction complete
-for one-project component graph calibration; accessory/cutout reconciliation
+Current phase: deterministic accessory and cutout reconciliation complete for
+one-project component graph calibration; final deterministic freeze evidence
 pending.
 
 Accepted release: none.
@@ -41,8 +41,9 @@ ignored private workspace boundary; and `D-0030` accepts deterministic
 source-fact extraction into the private workspace with neutral committed
 summary evidence; `D-0031` accepts deterministic private component-register
 construction from that source-fact model; `D-0032` accepts deterministic
-private panel-assignment and typed graph construction. These amendments
-do not weaken
+private panel-assignment and typed graph construction; `D-0033` accepts
+deterministic private accessory and cutout reconciliation. These amendments do
+not weaken
 source immutability, source-root restrictions, positive source allowlisting,
 evaluation-only quorum, reference isolation, cohort isolation, held-out
 protection, parser requirements, sanitized-bundle verification, independent
@@ -310,6 +311,17 @@ No panel assignment was inferred from unavailable facts. Private panel graph
 files remain ignored and are recorded only by neutral hashes in
 `reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json`.
 
-Exact next action: implement deterministic accessory and cutout reconciliation
-against the private `1110101` component register and panel graph with synthetic
-regression coverage before final deterministic freeze evidence.
+Accessory and cutout reconciliation after `D-0033`: `scripts/sheetmetal_v1.py`
+now supports private accessory/cutout reconciliation from a private source-fact
+model, private component register, and private typed graph. The private
+`1110101` run produced 0 accessory requirements, 0 generated accessory
+component instances, 0 cutouts, 0 duplicate accessories, 0 missing requirement
+sources, 0 missing cutout sources, and 0 private content transmissions. No
+accessory or cutout was inferred from unavailable facts. Private
+accessory/cutout files remain ignored and are recorded only by neutral hashes
+in
+`reports/sheetmetal-v1/one-project-model-calibration/1110101/accessory_cutout_summary.json`.
+
+Exact next action: produce final deterministic freeze evidence for the private
+`1110101` source fact model, component register, panel graph, and accessory
+reconciliation before evaluator-only metrics or any adjudication.

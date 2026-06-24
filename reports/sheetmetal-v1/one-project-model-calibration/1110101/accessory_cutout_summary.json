@@ -1,0 +1,47 @@
+{
+  "schema_version": "sheetmetal-v1.accessory_cutout_summary.v1",
+  "status": "PASS",
+  "task": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION",
+  "project_id": "1110101",
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "private_inputs": [
+    ".private/sheetmetal-v1/1110101/source-fact-extraction/source_fact_model.json",
+    ".private/sheetmetal-v1/1110101/component-register/component_register.json",
+    ".private/sheetmetal-v1/1110101/panel-graph/panel_graph.json"
+  ],
+  "private_output_dir": ".private/sheetmetal-v1/1110101/accessory-cutout/",
+  "private_outputs": [
+    {
+      "name": "accessory_requirements.json",
+      "sha256": "905873D62249831598177FC12DBE7225C28299202945CC4D764126995A6BAFB1",
+      "git_check_ignore_status": "PASS"
+    },
+    {
+      "name": "accessory_cutout_validation.json",
+      "sha256": "CF7DF2955F414690F03253401B158E7A85AD8922659433039F70D85F7B2E52A9",
+      "git_check_ignore_status": "PASS"
+    }
+  ],
+  "counts": {
+    "requirement_count": 0,
+    "generated_component_instance_count": 0,
+    "cutout_count": 0,
+    "duplicate_accessory_count": 0,
+    "graph_node_count": 56,
+    "graph_edge_count": 107,
+    "missing_requirement_source_count": 0,
+    "missing_cutout_source_count": 0,
+    "private_content_transmission_count": 0
+  },
+  "privacy": {
+    "private_values_committed": false,
+    "private_values_printed_by_builder": false,
+    "private_outputs_tracked_by_git": false,
+    "customer_drawing_generated": false
+  },
+  "covered_by_tests": [
+    "test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models",
+    "test_sheetmetal_v1_private_workspace_boundary",
+    "test_frozen_workflow_active_scope_verifier"
+  ]
+}
