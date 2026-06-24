@@ -1,0 +1,24 @@
+{
+  "schema_version": "sheetmetal-v1.placement_validation_summary.v1",
+  "status": "PASS_WITH_SAFE_UNRESOLVED",
+  "project_id": "1110101",
+  "private_artifact_hashes": {
+    "placement_plan.json": "CDBBDB2D1957865CDC5A878ADA5974D310B15EB8B2B5A3272F1389D09D525DA6",
+    "unplaced_component_register.json": "AA1D6AD79DEAA79C65C2F1C2B62CD9020AFBE098A8A2D454864B573921A16255",
+    "hard_constraint_model.json": "437AB6D7885970469843493388BEB455B3E40966DB625E0D13835DA3CB9DF077",
+    "validation_report.json": "E770E528405795581B37ADC4E5B745128B85124DE9FA464710F948401BD95F54"
+  },
+  "placement_count": 0,
+  "unplaced_count": 53,
+  "unplaced_reason_counts": {
+    "UNASSIGNED_PANEL": 53
+  },
+  "accepted_overlap_violations": 0,
+  "containment_violations": 0,
+  "clearance_violations": 0,
+  "unsupported_placements": 0,
+  "hard_constraints_override_soft_objectives": true,
+  "customer_drawing_generation_count": 0,
+  "private_content_transmission_count": 0,
+  "tracked_private_artifacts": 0
+}
