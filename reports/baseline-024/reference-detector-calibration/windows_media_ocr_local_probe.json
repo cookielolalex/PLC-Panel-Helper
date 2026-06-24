@@ -1,0 +1,59 @@
+{
+  "probe_id": "windows_media_ocr_local_execution_proof_v1",
+  "generated_at": "2026-06-24T02:24:49+00:00",
+  "requested_classifier": "windows_media_ocr_local_signal_bridge",
+  "actual_classifier": "Windows.Media.Ocr.OcrEngine",
+  "api": "Windows.Media.Ocr.OcrEngine.RecognizeAsync",
+  "host_process": "powershell.exe",
+  "windows_runtime": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "os_version": "10.0.26200",
+    "release": "11"
+  },
+  "installed_ocr_languages": [
+    "en-US",
+    "zh-Hant-TW"
+  ],
+  "language_availability": {
+    "english_available": true,
+    "traditional_chinese_available": true,
+    "simplified_chinese_available": false
+  },
+  "synthetic_execution": {
+    "status": "PASS",
+    "actual_language_tag": "en-US",
+    "recognized_nonempty": true,
+    "role_hits": [
+      "PUNCH_DRAWING"
+    ],
+    "project_identity_status": "CONFIRMED",
+    "elapsed_ms": 253,
+    "process_returncode": 0,
+    "evidence_channel_codes": [
+      "WIN_MEDIA_OCR_ROLE_SIGNAL",
+      "WIN_MEDIA_OCR_IDENTITY_SIGNAL"
+    ]
+  },
+  "private_page_execution": {
+    "status": "SKIPPED_NETWORK_DISABLE_BOUNDARY_NOT_ENFORCED",
+    "page_processed_count": 0,
+    "minimized_evidence_codes": [],
+    "raw_ocr_text_persisted": false,
+    "private_content_transmitted_outside_machine": 0,
+    "reason": "Private-page OCR probe requires an independently enforceable process network-disable boundary; this script records synthetic proof only unless that boundary is supplied."
+  },
+  "network_disabled_execution_status": "NOT_VERIFIED_FOR_PRIVATE_CONTENT_PROCESS_NETWORK_BOUNDARY_NOT_ENFORCED",
+  "privacy": {
+    "private_reference_pages_sent_to_external_or_inherited_models": 0,
+    "private_reference_pages_inspected_by_actual_vision_agents": 0,
+    "external_network_use_authorized": false,
+    "private_content_transmitted_outside_machine": 0,
+    "ocr_output_appeared_in_stdout": false,
+    "ocr_output_appeared_in_stderr": false,
+    "ocr_output_appeared_in_logs": false
+  },
+  "cleanup": {
+    "synthetic_inputs_removed": true,
+    "temporary_render_or_crop_outputs_persisted": false
+  }
+}
