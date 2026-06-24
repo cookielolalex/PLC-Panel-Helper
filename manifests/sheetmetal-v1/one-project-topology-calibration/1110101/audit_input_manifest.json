@@ -1,0 +1,175 @@
+{
+  "schema_version": "sheetmetal-v1.topology_independent_audit_input_manifest.v1",
+  "task_id": "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
+  "project_id": "1110101",
+  "audit_scope": "fallback independent audit of frozen topology sizing placement calibration",
+  "network_services_used": false,
+  "children_spawned": false,
+  "forbidden_artifacts_opened": false,
+  "authority_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "4CA078C3F02217CED8491C53A11641152B38A364F157E36523408016074EB227"
+    },
+    {
+      "path": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+      "sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09"
+    },
+    {
+      "path": "docs/specs/MASTER_AUTOPILOT_PROTOCOL.md",
+      "sha256": "79D82FF11FA7019766F2E647538D52F7FD086A6E7E85357EE229D0D8E36CB2D1"
+    },
+    {
+      "path": "docs/SESSION_CHECKPOINT.md",
+      "sha256": "FA5DA4D087701C81DDF9EC9F6F6E2C1BC67B805E13AB910DF470060A87C03B73"
+    },
+    {
+      "path": "orchestration/NEXT_THREAD_PROMPT.txt",
+      "sha256": "B48A95559A1FB07942FDD8A038E93C666774A87CB4A5443EA8CF376EAF6C19B5"
+    },
+    {
+      "path": "docs/01_CURRENT_STATE.md",
+      "sha256": "3BF9AE00D56921D62062004D6A6CE4F2594E86B973D086E50BD69AF1000BFD42"
+    },
+    {
+      "path": "docs/04_DECISION_LEDGER.md",
+      "sha256": "3E73A4FAB0378FAD1B64828362FC3BDF9F4D4182FC0E4A44957B209DECDC8845"
+    },
+    {
+      "path": "docs/06_EVAL_LEDGER.md",
+      "sha256": "EDDDE2CE349DA93B7338D5D7CC5EF5053F441A44610EB8BF576C8E23164665EA"
+    },
+    {
+      "path": "docs/07_CHANGELOG.md",
+      "sha256": "AE2395A60A80A0338350B46EABB9B25ADCC25923778F9517A4B7B5B4E7A3EBDA"
+    },
+    {
+      "path": "docs/specs/SHEETMETAL_FIRST_MODULAR_ARCHITECTURE.md",
+      "sha256": "AD388EE5E39E576F2C8BC24D0CDB162B06438107748430D771DDFE20CFF07E79"
+    },
+    {
+      "path": "docs/specs/ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION.md",
+      "sha256": "85957D9E4284720345E6589CA33B7DB1A988A7F5E3723CE1AC1D2D812562CE8E"
+    },
+    {
+      "path": "docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md",
+      "sha256": "9FA9E4A7E640B7D7481C34A4A5D992C822B7EE0EA46918307CB69A489D278454"
+    },
+    {
+      "path": "manifests/sheetmetal-v1/requalification_queue.json",
+      "sha256": "FCC20F8F22A5B815C83CD096D2F08FAD2D6747A78181A58F3B531046161DF772"
+    }
+  ],
+  "topology_evidence_files": [
+    {
+      "path": "manifests/sheetmetal-v1/one-project-topology-calibration/1110101/calibration_protocol.json",
+      "sha256": "92F4E631AF913BBC7328B3A8C880DD96A7EE7AFAA56038343734718FF5914DC5"
+    },
+    {
+      "path": "manifests/sheetmetal-v1/one-project-topology-calibration/1110101/calibration_input_manifest.json",
+      "sha256": "520496F48338190A9B05AE48D4BC6251CE803F0FC4B03433FDEDE0A3725EB5B5"
+    },
+    {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/capability_probe_summary.json",
+      "sha256": "AA0E83CEB51B21FA368A86C6E3E1B5A37B37F009DBCD9DBB1C253A0F8B77FD48"
+    },
+    {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/panel_assignment_recovery_summary.json",
+      "sha256": "59DD7956ADEE1759A4D0461D5E2EE4E1EE2D6C0BEC6CE6D646EA35480D2A3518"
+    },
+    {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/topology_sizing_summary.json",
+      "sha256": "2214A5BB14E8D566BDEE827442E43B75B550650D14FA3F5AA68A02655DF87B7E"
+    },
+    {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/placement_validation_summary.json",
+      "sha256": "1F3698FB5B11EA5430E5B4A210B506FCA8E9BE025CD5FD062361BF5FECD2174D"
+    },
+    {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/generator_freeze_summary.json",
+      "sha256": "EB86997E083FF2D4B12C17E760F08B67D25A08329653D032E5A910B0663E2F3D"
+    },
+    {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/evaluator_metrics_summary.json",
+      "sha256": "C85D0FE103DBFC779D668351082C30AC9109D0377C3FF0F247A6F14A21317091"
+    },
+    {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/stage_workflow_freeze_summary.json",
+      "sha256": "8AD7715CBB46CEEFCC54B726D515B4CD2B42E1B6C594B5D18AE83F3940F055A0"
+    },
+    {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json",
+      "sha256": "1922468A0958AB755930E46BD24C3418647B796826F695E78FD70F263E295B4B"
+    },
+    {
+      "path": "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json",
+      "sha256": "6BAD7584F48876749D0D29499321E80F8BD198A7134AF02147FD308C1E3AC070"
+    }
+  ],
+  "command_evidence": [
+    {
+      "command": "git rev-parse HEAD",
+      "status": "PASS",
+      "result": "fc32f4dd6fb95e4327246c0b1b4b64a11f9a729a"
+    },
+    {
+      "command": "git merge-base --is-ancestor c526a6f3ccd5e4deb80752de220c9a820c1c4916 HEAD",
+      "status": "PASS",
+      "result": "c526a6f is ancestor of HEAD"
+    },
+    {
+      "command": "git diff --stat",
+      "status": "PASS",
+      "result": "no tracked diff before audit writes"
+    },
+    {
+      "command": "git status --short --untracked-files=no",
+      "status": "PASS",
+      "result": "tracked worktree clean before audit writes"
+    },
+    {
+      "command": "python scripts/run_tests.py",
+      "status": "NOT_VERIFIED",
+      "result": "Python interpreter not available in this shell"
+    },
+    {
+      "command": "python scripts/verify_frozen_workflow.py --manifest <scoped manifest>",
+      "status": "NOT_VERIFIED",
+      "result": "Python interpreter not available in this shell for all three scoped verifier attempts"
+    },
+    {
+      "command": "PowerShell ConvertFrom-Json over topology evidence set",
+      "status": "PASS",
+      "result": "all topology evidence JSON files parsed successfully"
+    },
+    {
+      "command": "git ls-files for tracked private workspace entries",
+      "status": "PASS",
+      "result": "zero tracked private workspace entries"
+    },
+    {
+      "command": "git check-ignore against private workspace probe",
+      "status": "PASS",
+      "result": "private workspace probe path is ignored"
+    },
+    {
+      "command": "tracked and workspace sheetmetal-v1 PDF/DXF/DWG count",
+      "status": "PASS",
+      "result": "0"
+    },
+    {
+      "command": "orchestration trajectory search for topology audit/freeze task",
+      "status": "NOT_VERIFIED",
+      "result": "no topology-specific trajectory file found in committed orchestration paths"
+    }
+  ],
+  "excluded_from_audit_read_scope": [
+    "private workspace artifacts",
+    "completed drawings",
+    "modified drawings",
+    "post-design files",
+    "reference crops/images/OCR/title blocks",
+    "customer PDF/DXF/DWG files",
+    "scripts/run_reference_detection_v4_corpus_screening.py"
+  ]
+}

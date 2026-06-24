@@ -1,0 +1,134 @@
+{
+  "task_id": "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
+  "starting_commit": "fc32f4dd6fb95e4327246c0b1b4b64a11f9a729a",
+  "checkpoint_commit": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
+  "ending_commit": "fc32f4dd6fb95e4327246c0b1b4b64a11f9a729a",
+  "tracked_worktree_status": {
+    "before_audit_writes": "CLEAN_TRACKED_WITH_PREEXISTING_UNTRACKED_FORBIDDEN_SCREENING_SCRIPT",
+    "after_audit_writes": "CLEAN_TRACKED_WITH_ALLOWED_UNTRACKED_AUDIT_OUTPUTS_AND_PREEXISTING_UNTRACKED_FORBIDDEN_SCREENING_SCRIPT",
+    "tracked_diff_before_audit_writes": "EMPTY",
+    "tracked_private_artifacts": 0
+  },
+  "test_result": {
+    "committed_evidence": "PASS",
+    "committed_evidence_file": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json",
+    "fresh_command": "NOT_VERIFIED",
+    "fresh_command_attempted": "python scripts/run_tests.py",
+    "not_verified_reason": "Python interpreter not available in this shell"
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": {
+      "committed_status": "PASS",
+      "fresh_command": "NOT_VERIFIED_PYTHON_NOT_AVAILABLE"
+    },
+    "sheetmetal_v1_active": {
+      "committed_status": "PASS",
+      "fresh_command": "NOT_VERIFIED_PYTHON_NOT_AVAILABLE"
+    },
+    "sheetmetal_v1_topology_sizing_placement": {
+      "committed_status": "PASS",
+      "fresh_command": "NOT_VERIFIED_PYTHON_NOT_AVAILABLE"
+    },
+    "evidence_file": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/stage_workflow_freeze_summary.json"
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/independent_audit.json",
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/independent_audit.md",
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/hard_gate_adjudication.json",
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/determinism_adjudication.json",
+    "manifests/sheetmetal-v1/one-project-topology-calibration/1110101/audit_input_manifest.json",
+    "orchestration/master/child-results/SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT.json"
+  ],
+  "schemas_validated": {
+    "method": "PowerShell ConvertFrom-Json parse validation",
+    "created_json_parse_status": "PASS",
+    "topology_evidence_json_parse_status": "PASS",
+    "schema_validator_execution": "NOT_VERIFIED_PYTHON_NOT_AVAILABLE"
+  },
+  "hard_gates": {
+    "overall": "PASS_WITH_NOT_VERIFIED_TEST_AND_TRAJECTORY_ITEMS",
+    "head_lineage": "PASS",
+    "tracked_worktree_clean": "PASS",
+    "full_tests": "NOT_VERIFIED_FRESH_COMMAND_COMMITTED_PASS",
+    "workflow_freezes": "PASS_COMMITTED_NOT_VERIFIED_FRESH_COMMAND",
+    "deterministic_topology_stage_rerun": "PASS",
+    "source_reference_lane_separation": "PASS",
+    "unsupported_critical_dimensions": "PASS_ZERO",
+    "unsupported_panel_assignments": "PASS_ZERO",
+    "unsupported_placements": "PASS_ZERO",
+    "accepted_overlap_violations": "PASS_ZERO",
+    "containment_violations": "PASS_ZERO",
+    "clearance_violations": "PASS_ZERO",
+    "quantity_stage_overwrite_violations": "PASS_ZERO",
+    "completed_reference_leakage": "PASS_ZERO",
+    "post_design_leakage": "PASS_ZERO",
+    "private_content_transmissions": "PASS_ZERO",
+    "tracked_private_artifacts": "PASS_ZERO",
+    "customer_pdf_dxf_dwg_generation": "PASS_ZERO",
+    "topology_stage_trajectory": "NOT_VERIFIED_NOT_COMMITTED"
+  },
+  "coverage": {
+    "assignment": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+    },
+    "geometry": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+    },
+    "topology": {
+      "numerator": 0,
+      "denominator": 1,
+      "interpretation": "SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+    },
+    "sizing": {
+      "numerator": 0,
+      "denominator": 0,
+      "interpretation": "ZERO_SOURCE_SUPPORTED_DENOMINATOR_RECALL_NOT_REPORTED"
+    },
+    "placement": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "LOW_SOURCE_LIMITED_NOT_CAPABILITY_SUCCESS"
+    },
+    "deterministic_rerun": {
+      "numerator": 12,
+      "denominator": 12,
+      "interpretation": "PASS"
+    }
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_reference_dimension_count": 0,
+    "committed_reference_coordinate_count": 0,
+    "committed_reference_layout_count": 0
+  },
+  "exact_final_status": "INCONCLUSIVE_LOW_COVERAGE",
+  "exact_recommended_next_action": "RUN_TARGETED_COVERAGE_RECOVERY_T1",
+  "blocker_taxonomy": [
+    "SOURCE_LIMITED_PANEL_ASSIGNMENT_UNAVAILABLE",
+    "PANEL_TOPOLOGY_UNSUPPORTED_FROM_GENERATOR_SOURCES",
+    "COMPONENT_GEOMETRY_MISSING",
+    "PLACEMENT_BLOCKED_BY_ASSIGNMENT_AND_GEOMETRY",
+    "LOCAL_PYTHON_NOT_AVAILABLE_FOR_FRESH_TEST_COMMAND",
+    "TOPOLOGY_TRAJECTORY_NOT_COMMITTED"
+  ],
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "not_recorded_by_harness",
+    "completed_at": "2026-06-24T16:32:06.9403439+08:00",
+    "duration": "not_measured"
+  },
+  "output_hashes": {
+    "manifests/sheetmetal-v1/one-project-topology-calibration/1110101/audit_input_manifest.json": "F7CB9B355E0F871524889BD2E6EFFFA9EFC0E1F2508C9E621621A9BBB37B48CF",
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/hard_gate_adjudication.json": "979700578622BE8A7308BDE89425ABCB5FC0989B8C2133C1815D104C4CEF7128",
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/determinism_adjudication.json": "D9AD6BDEFDFC11DBD1BBD297270CEB213642E2B0C0B90EBA188B71829767B424",
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/independent_audit.json": "4D6AEDC15F0BD7A44F52D58B10570CE223F7E5F63B1A4B9D311FB8AFF40C03D1",
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/independent_audit.md": "54B121FC29821A4CBC3C5E8F07F2DAE7A7D84671A5D954CF6125C3F86D24E302"
+  }
+}

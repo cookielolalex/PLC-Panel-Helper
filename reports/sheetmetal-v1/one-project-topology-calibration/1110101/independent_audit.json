@@ -1,0 +1,152 @@
+{
+  "schema_version": "sheetmetal-v1.topology_independent_audit.v1",
+  "task_id": "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
+  "project_id": "1110101",
+  "starting_commit": "fc32f4dd6fb95e4327246c0b1b4b64a11f9a729a",
+  "checkpoint_commit": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
+  "ending_commit": "fc32f4dd6fb95e4327246c0b1b4b64a11f9a729a",
+  "current_status_before_audit": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING",
+  "final_status": "INCONCLUSIVE",
+  "exact_final_status": "INCONCLUSIVE_LOW_COVERAGE",
+  "exact_recommended_next_action": "RUN_TARGETED_COVERAGE_RECOVERY_T1",
+  "safety_and_implementation_integrity": {
+    "status": "PASS_WITH_DIRECT_TEST_EXECUTION_CAVEAT",
+    "summary": "Committed evidence and local Git/JSON checks support lane separation, privacy, deterministic freeze, no customer drawing generation, private Git exclusion, and zero unsafe generated facts. Fresh Python-based tests and verifier commands were not executable in this shell."
+  },
+  "engineering_capability_and_coverage": {
+    "status": "INCONCLUSIVE_LOW_COVERAGE",
+    "summary": "Assignment, geometry, and placement coverage remain source-limited at 0/53 and must not be counted as capability success."
+  },
+  "criteria": [
+    {
+      "criterion": "HEAD lineage",
+      "status": "PASS",
+      "evidence": "c526a6f checkpoint is an ancestor of HEAD fc32f4dd6fb95e4327246c0b1b4b64a11f9a729a"
+    },
+    {
+      "criterion": "Git diff and tracked worktree",
+      "status": "PASS",
+      "evidence": "tracked diff was empty before audit writes; only pre-existing untracked forbidden screening script was present"
+    },
+    {
+      "criterion": "Full tests",
+      "status": "NOT_VERIFIED",
+      "evidence": "implementation_checkpoint.json records PASS; fresh python scripts/run_tests.py failed because Python was unavailable"
+    },
+    {
+      "criterion": "Three scoped workflow freezes",
+      "status": "PASS",
+      "evidence": "stage_workflow_freeze_summary.json records PASS for legacy, active sheetmetal-v1, and topology-stage scopes; fresh verifier commands were not executable without Python"
+    },
+    {
+      "criterion": "Deterministic topology-stage rerun",
+      "status": "PASS",
+      "evidence": "generator_freeze_summary.json records 12/12 byte-identical and 12/12 canonical JSON matches with no excluded fields"
+    },
+    {
+      "criterion": "Source/reference lane separation",
+      "status": "PASS",
+      "evidence": "protocol forbids completed references and post-design labels in generator lane; source classification reports zero such items in the generator bundle"
+    },
+    {
+      "criterion": "Assignment states",
+      "status": "PASS",
+      "evidence": "panel_assignment_recovery_summary.json records 0 explicit, 0 rule-assigned, 53 safe unassigned, and 0 unsupported assignments"
+    },
+    {
+      "criterion": "Geometry states",
+      "status": "PASS",
+      "evidence": "topology_sizing_summary.json records 0 verified/model or generic envelopes, 53 geometry missing, 0 geometry conflict"
+    },
+    {
+      "criterion": "Topology and sizing evidence",
+      "status": "PASS",
+      "evidence": "topology_sizing_summary.json records safe unresolved topology and sizing with unsupported critical dimensions 0"
+    },
+    {
+      "criterion": "Placement eligibility",
+      "status": "PASS",
+      "evidence": "placement_validation_summary.json records 0 accepted placements, 53 explicit unplaced, and 0 unsupported placements"
+    },
+    {
+      "criterion": "Hard constraints",
+      "status": "PASS",
+      "evidence": "placement summary records accepted overlap, containment, and clearance violations 0 and hard constraints overriding soft objectives"
+    },
+    {
+      "criterion": "Provenance",
+      "status": "PASS",
+      "evidence": "evaluator_metrics_summary.json records critical facts without evidence 0; topology_sizing_summary.json records dimension provenance PASS"
+    },
+    {
+      "criterion": "Privacy",
+      "status": "PASS",
+      "evidence": "privacy approval remains NOT_APPROVED and committed topology summaries record private transmissions 0"
+    },
+    {
+      "criterion": "Git exclusion",
+      "status": "PASS",
+      "evidence": "git ls-files for private workspace entries returned 0 and git check-ignore passed for a private workspace probe"
+    },
+    {
+      "criterion": "Evaluator metrics",
+      "status": "PASS",
+      "evidence": "evaluator_metrics_summary.json records post-freeze evaluator lane, no generator mutation, no persisted reference values, deterministic rerun 12/12"
+    },
+    {
+      "criterion": "Topology-stage trajectory",
+      "status": "NOT_VERIFIED",
+      "evidence": "no committed topology-specific trajectory file found in orchestration paths"
+    }
+  ],
+  "coverage": {
+    "assignment": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "source-limited unresolved coverage; not capability success"
+    },
+    "geometry": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "source-limited missing geometry; not capability success"
+    },
+    "topology": {
+      "numerator": 0,
+      "denominator": 1,
+      "interpretation": "safe unresolved topology candidate"
+    },
+    "sizing": {
+      "numerator": 0,
+      "denominator": 0,
+      "interpretation": "zero source-supported denominator; recall not reported"
+    },
+    "placement": {
+      "numerator": 0,
+      "denominator": 53,
+      "interpretation": "source-limited unplaced coverage; not capability success"
+    },
+    "determinism": {
+      "numerator": 12,
+      "denominator": 12,
+      "interpretation": "byte and canonical JSON match"
+    }
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_reference_dimension_count": 0,
+    "committed_reference_coordinate_count": 0,
+    "committed_reference_layout_count": 0
+  },
+  "blocker_taxonomy": [
+    "SOURCE_LIMITED_PANEL_ASSIGNMENT_UNAVAILABLE",
+    "PANEL_TOPOLOGY_UNSUPPORTED_FROM_GENERATOR_SOURCES",
+    "COMPONENT_GEOMETRY_MISSING",
+    "PLACEMENT_BLOCKED_BY_ASSIGNMENT_AND_GEOMETRY",
+    "LOCAL_PYTHON_NOT_AVAILABLE_FOR_FRESH_TEST_COMMAND",
+    "TOPOLOGY_TRAJECTORY_NOT_COMMITTED"
+  ],
+  "customer_drawing_generation_count": 0,
+  "production_approval_declared": false
+}

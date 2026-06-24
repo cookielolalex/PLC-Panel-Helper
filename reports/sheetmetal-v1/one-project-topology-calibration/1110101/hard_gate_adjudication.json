@@ -1,0 +1,123 @@
+{
+  "schema_version": "sheetmetal-v1.topology_hard_gate_independent_adjudication.v1",
+  "task_id": "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
+  "project_id": "1110101",
+  "overall_safety_and_integrity": "PASS_WITH_DIRECT_TEST_EXECUTION_CAVEAT",
+  "fresh_python_command_execution": "NOT_VERIFIED_PYTHON_NOT_AVAILABLE",
+  "gates": [
+    {
+      "criterion": "HEAD lineage from checkpoint c526a6f to current coordinator head",
+      "status": "PASS",
+      "evidence": "git merge-base ancestor check passed; current HEAD fc32f4dd6fb95e4327246c0b1b4b64a11f9a729a"
+    },
+    {
+      "criterion": "Current coordinator head changes are orchestration-only after checkpoint",
+      "status": "PASS",
+      "evidence": "git diff c526a6f..HEAD shows only master autopilot protocol/state files added or updated"
+    },
+    {
+      "criterion": "Tracked worktree clean before audit writes",
+      "status": "PASS",
+      "evidence": "git status --short --untracked-files=no returned no tracked changes"
+    },
+    {
+      "criterion": "Full tests",
+      "status": "NOT_VERIFIED",
+      "evidence": "implementation_checkpoint.json records full_tests PASS, but fresh command python scripts/run_tests.py could not execute because Python was unavailable"
+    },
+    {
+      "criterion": "Legacy scoped workflow freeze",
+      "status": "PASS",
+      "evidence": "stage_workflow_freeze_summary.json records LEGACY_BASELINE_024 status PASS with zero failures; fresh verifier command not executed because Python was unavailable"
+    },
+    {
+      "criterion": "Active sheetmetal-v1 scoped workflow freeze",
+      "status": "PASS",
+      "evidence": "stage_workflow_freeze_summary.json records SHEETMETAL_V1_ACTIVE status PASS with zero failures; fresh verifier command not executed because Python was unavailable"
+    },
+    {
+      "criterion": "Topology-stage scoped workflow freeze",
+      "status": "PASS",
+      "evidence": "stage_workflow_freeze_summary.json records SHEETMETAL_V1_TOPOLOGY_SIZING_PLACEMENT status PASS with zero failures; fresh verifier command not executed because Python was unavailable"
+    },
+    {
+      "criterion": "Unsupported critical dimensions",
+      "status": "PASS",
+      "evidence": "implementation_checkpoint.json and generator_freeze_summary.json record unsupported_critical_dimensions 0"
+    },
+    {
+      "criterion": "Unsupported panel assignments",
+      "status": "PASS",
+      "evidence": "panel_assignment_recovery_summary.json and generator_freeze_summary.json record unsupported panel assignment count 0"
+    },
+    {
+      "criterion": "Unsupported placements",
+      "status": "PASS",
+      "evidence": "placement_validation_summary.json and generator_freeze_summary.json record unsupported placements 0"
+    },
+    {
+      "criterion": "Accepted placement hard-constraint violations",
+      "status": "PASS",
+      "evidence": "placement_validation_summary.json records accepted overlap, containment, and clearance violations all 0"
+    },
+    {
+      "criterion": "Quantity-stage overwrite violations",
+      "status": "PASS",
+      "evidence": "implementation_checkpoint.json and generator_freeze_summary.json record quantity_stage_overwrite_violations 0"
+    },
+    {
+      "criterion": "Completed-reference leakage",
+      "status": "PASS",
+      "evidence": "implementation_checkpoint.json, generator_freeze_summary.json, and evaluator_metrics_summary.json record leakage 0 and no persisted reference values"
+    },
+    {
+      "criterion": "Post-design leakage",
+      "status": "PASS",
+      "evidence": "implementation_checkpoint.json, generator_freeze_summary.json, and evaluator_metrics_summary.json record post_design_leakage 0"
+    },
+    {
+      "criterion": "Private-content external transmissions",
+      "status": "PASS",
+      "evidence": "docs/PRIVACY_APPROVAL.md is NOT_APPROVED; topology summaries record private transmissions 0"
+    },
+    {
+      "criterion": "Tracked private artifacts",
+      "status": "PASS",
+      "evidence": "git ls-files for private workspace entries returned 0; committed summaries record tracked_private_artifacts 0"
+    },
+    {
+      "criterion": "Git ignore boundary for private workspace",
+      "status": "PASS",
+      "evidence": "git check-ignore private workspace probe returned pass"
+    },
+    {
+      "criterion": "Customer drawing/PDF/DXF/DWG generation",
+      "status": "PASS",
+      "evidence": "implementation_checkpoint.json records customer_drawing_generation_count 0; tracked/workspace sheetmetal-v1 PDF/DXF/DWG count is 0"
+    },
+    {
+      "criterion": "Generator source/reference lane separation",
+      "status": "PASS",
+      "evidence": "calibration_protocol.json lists completed references, post-design labels, expected values, reference files, OCR, title blocks, geometry, and reviewer findings as generator-forbidden; source classification summary records zero completed-reference and post-design items in the generator bundle"
+    },
+    {
+      "criterion": "Evaluator lane minimization",
+      "status": "PASS",
+      "evidence": "evaluator_metrics_summary.json records evaluator lane opened after freeze, generator artifacts not modified, reference values not persisted, and committed reference dimension/coordinate/layout counts 0"
+    },
+    {
+      "criterion": "Topology-stage trajectory evidence",
+      "status": "NOT_VERIFIED",
+      "evidence": "no committed topology-specific trajectory file found; task registry row for the topology freeze has an empty trajectory path"
+    }
+  ],
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_reference_dimension_count": 0,
+    "committed_reference_coordinate_count": 0,
+    "committed_reference_layout_count": 0
+  },
+  "hard_gate_conclusion": "PASS_WITH_NOT_VERIFIED_TEST_AND_TRAJECTORY_ITEMS"
+}

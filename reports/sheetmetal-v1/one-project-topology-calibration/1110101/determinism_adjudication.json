@@ -1,0 +1,50 @@
+{
+  "schema_version": "sheetmetal-v1.topology_determinism_independent_adjudication.v1",
+  "task_id": "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
+  "project_id": "1110101",
+  "status": "PASS",
+  "source_evidence": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/generator_freeze_summary.json",
+  "input_manifest_sha256": "520496F48338190A9B05AE48D4BC6251CE803F0FC4B03433FDEDE0A3725EB5B5",
+  "artifact_count": 12,
+  "byte_identical_count": 12,
+  "canonical_json_match_count": 12,
+  "excluded_fields": [],
+  "all_byte_identical": true,
+  "all_canonical_json_identical": true,
+  "artifact_names": [
+    "panel_assignment_recovery.json",
+    "topology_candidates.json",
+    "sizing_candidates.json",
+    "placement_plan.json",
+    "unplaced_component_register.json",
+    "hard_constraint_model.json",
+    "validation_report.json",
+    "provenance_map.json",
+    "capability_probe.json",
+    "rule_versions.json",
+    "schema_versions.json",
+    "workflow_version.json"
+  ],
+  "adjudication": [
+    {
+      "criterion": "deterministic rerun artifact count",
+      "status": "PASS",
+      "evidence": "12 compared artifacts"
+    },
+    {
+      "criterion": "byte identity",
+      "status": "PASS",
+      "evidence": "12/12 byte-identical"
+    },
+    {
+      "criterion": "canonical JSON identity",
+      "status": "PASS",
+      "evidence": "12/12 canonical JSON hashes matched"
+    },
+    {
+      "criterion": "excluded fields",
+      "status": "PASS",
+      "evidence": "excluded_fields is empty"
+    }
+  ]
+}
