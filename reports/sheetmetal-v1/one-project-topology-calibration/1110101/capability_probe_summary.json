@@ -1,0 +1,52 @@
+{
+  "schema_version": "sheetmetal-v1-topology-capability-probe-v1",
+  "status": "PASS",
+  "project_id": "1110101",
+  "probe_scope": "local installed Python capabilities only; no project facts opened",
+  "requested_solvers": [
+    "OR-Tools",
+    "SciPy optimize",
+    "PuLP",
+    "Z3"
+  ],
+  "probes": [
+    {
+      "requested_solver": "OR-Tools",
+      "module": "ortools",
+      "available": false,
+      "version": null,
+      "error_class": "ModuleNotFoundError"
+    },
+    {
+      "requested_solver": "SciPy optimize",
+      "module": "scipy",
+      "available": false,
+      "version": null,
+      "error_class": "ModuleNotFoundError"
+    },
+    {
+      "requested_solver": "PuLP",
+      "module": "pulp",
+      "available": false,
+      "version": null,
+      "error_class": "ModuleNotFoundError"
+    },
+    {
+      "requested_solver": "Z3",
+      "module": "z3",
+      "available": false,
+      "version": null,
+      "error_class": "ModuleNotFoundError"
+    }
+  ],
+  "selected_execution": {
+    "actual_solver": "DETERMINISTIC_GREEDY_BASELINE_WITH_HARD_CONSTRAINT_VALIDATOR",
+    "actual_module": "scripts.sheetmetal_v1",
+    "version": "repository-local",
+    "execution_mode": "LOCAL_DETERMINISTIC_BASELINE_NO_SOLVER_DEPENDENCY"
+  },
+  "network_disabled_status": "NOT_ENFORCED_BY_THREAD_ENVIRONMENT_LOCAL_ONLY_POLICY_USED",
+  "network_endpoint_probe_performed": false,
+  "dependency_download_attempted": false,
+  "private_content_transmission_count": 0
+}
