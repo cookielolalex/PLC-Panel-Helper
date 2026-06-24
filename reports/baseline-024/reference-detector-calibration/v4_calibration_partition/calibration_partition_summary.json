@@ -1,0 +1,413 @@
+{
+  "schema_version": "reference_detector_v4_calibration_partition_summary_v1",
+  "generated_at": "2026-06-24T02:50:39+00:00",
+  "detector_version": "target_output_detection_v4_local_multisignal_recovery",
+  "task_id": "B024-RDCAL-V4-CALIBRATION-PARTITION",
+  "privacy_mode": "PRIVATE_INPUT_OCR_DISABLED",
+  "gate_implementation_status": "PASS",
+  "detector_performance_status": "FAIL",
+  "calibration_positive_count": 8,
+  "project_level_all_three_recall": {
+    "detected": 0,
+    "expected": 8,
+    "recall": 0.0
+  },
+  "per_type_recall": {
+    "PRODUCTION_DRAWING": {
+      "detected": 0,
+      "expected": 8,
+      "recall": 0.0
+    },
+    "PUNCH_DRAWING": {
+      "detected": 0,
+      "expected": 8,
+      "recall": 0.0
+    },
+    "SHEETMETAL_DRAWING": {
+      "detected": 0,
+      "expected": 8,
+      "recall": 0.0
+    }
+  },
+  "real_negative_control_count": 24,
+  "real_negative_controls_executed": 0,
+  "synthetic_negative_control_count": 4,
+  "false_target_page_classifications": 0,
+  "false_all_three_project_promotions": 0,
+  "electrical_pages_falsely_accepted_as_targets": 0,
+  "source_documents_falsely_accepted_as_targets": 0,
+  "unclassified_count": 375,
+  "ambiguous_count": 0,
+  "actual_signal_channels_used": [
+    "NO_EMBEDDED_TARGET_TEXT",
+    "OCR_UNAVAILABLE",
+    "PIL_NUMPY_LAYOUT",
+    "POPPLER_RENDER",
+    "PYPDF_EMBEDDED_TEXT",
+    "WEAK_METADATA_PRIOR"
+  ],
+  "private_ocr_page_count": 0,
+  "private_content_external_transmission_count": 0,
+  "temporary_render_cleanup_result": "PASS",
+  "raw_content_persistence_result": "PASS",
+  "generator_isolation_result": "PASS",
+  "source_review_blindness_result": "PASS",
+  "split_and_isolation_verification": {
+    "deterministic_split_status": "PASS",
+    "implementation_worker_visibility": {
+      "status": "PASS",
+      "calibration_manifest_exposes_only_project_ids": true,
+      "sealed_holdout_ids_visible_to_implementation": false,
+      "expected_labels_visible_to_implementation": false
+    },
+    "holdout_manifest": {
+      "status": "PASS",
+      "hash": "B1C250E5D4A9AD48B9BBB7409B57774373FEDEC0591587EDDB3A0E27A4571E16",
+      "count": 5,
+      "contains_private_paths_or_reference_content": false
+    },
+    "negative_control_manifest": {
+      "status": "PASS",
+      "hash": "042CE2ED6C38F1B45E9E05BC32F12C54537D4E793FF0CDB938AC00E8F1409510",
+      "count": 24,
+      "contains_private_paths_or_reference_content": false
+    },
+    "holdout_runner_role": "AUDITOR_ONLY",
+    "holdout_results_available_to_implementation_worker": false
+  },
+  "calibration_project_results": [
+    {
+      "project_id": "1120305",
+      "status": "NO_REFERENCE_SET",
+      "detected_all_three": false,
+      "target_types_present": [],
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "target_page_classification_count": 0,
+      "electrical_page_classification_count": 0,
+      "source_document_page_classification_count": 0,
+      "unclassified_count": 51,
+      "ambiguous_count": 0,
+      "private_ocr_page_count": 0,
+      "evidence_channel_codes": [
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "PYPDF_EMBEDDED_TEXT",
+        "WEAK_METADATA_PRIOR"
+      ],
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+    },
+    {
+      "project_id": "1110405",
+      "status": "NO_REFERENCE_SET",
+      "detected_all_three": false,
+      "target_types_present": [],
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "target_page_classification_count": 0,
+      "electrical_page_classification_count": 0,
+      "source_document_page_classification_count": 0,
+      "unclassified_count": 48,
+      "ambiguous_count": 0,
+      "private_ocr_page_count": 0,
+      "evidence_channel_codes": [
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "PYPDF_EMBEDDED_TEXT",
+        "WEAK_METADATA_PRIOR"
+      ],
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+    },
+    {
+      "project_id": "1110205",
+      "status": "NO_REFERENCE_SET",
+      "detected_all_three": false,
+      "target_types_present": [],
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "target_page_classification_count": 0,
+      "electrical_page_classification_count": 0,
+      "source_document_page_classification_count": 0,
+      "unclassified_count": 94,
+      "ambiguous_count": 0,
+      "private_ocr_page_count": 0,
+      "evidence_channel_codes": [
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "PYPDF_EMBEDDED_TEXT",
+        "WEAK_METADATA_PRIOR"
+      ],
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+    },
+    {
+      "project_id": "1110204",
+      "status": "NO_REFERENCE_SET",
+      "detected_all_three": false,
+      "target_types_present": [],
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "target_page_classification_count": 0,
+      "electrical_page_classification_count": 0,
+      "source_document_page_classification_count": 0,
+      "unclassified_count": 58,
+      "ambiguous_count": 0,
+      "private_ocr_page_count": 0,
+      "evidence_channel_codes": [
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "PYPDF_EMBEDDED_TEXT",
+        "WEAK_METADATA_PRIOR"
+      ],
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+    },
+    {
+      "project_id": "1110103",
+      "status": "NO_REFERENCE_SET",
+      "detected_all_three": false,
+      "target_types_present": [],
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "target_page_classification_count": 0,
+      "electrical_page_classification_count": 0,
+      "source_document_page_classification_count": 0,
+      "unclassified_count": 22,
+      "ambiguous_count": 0,
+      "private_ocr_page_count": 0,
+      "evidence_channel_codes": [
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "PYPDF_EMBEDDED_TEXT",
+        "WEAK_METADATA_PRIOR"
+      ],
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+    },
+    {
+      "project_id": "1120308",
+      "status": "NO_REFERENCE_SET",
+      "detected_all_three": false,
+      "target_types_present": [],
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "target_page_classification_count": 0,
+      "electrical_page_classification_count": 0,
+      "source_document_page_classification_count": 0,
+      "unclassified_count": 35,
+      "ambiguous_count": 0,
+      "private_ocr_page_count": 0,
+      "evidence_channel_codes": [
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "PYPDF_EMBEDDED_TEXT",
+        "WEAK_METADATA_PRIOR"
+      ],
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+    },
+    {
+      "project_id": "1110101",
+      "status": "NO_REFERENCE_SET",
+      "detected_all_three": false,
+      "target_types_present": [],
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "target_page_classification_count": 0,
+      "electrical_page_classification_count": 0,
+      "source_document_page_classification_count": 0,
+      "unclassified_count": 44,
+      "ambiguous_count": 0,
+      "private_ocr_page_count": 0,
+      "evidence_channel_codes": [
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "PYPDF_EMBEDDED_TEXT",
+        "WEAK_METADATA_PRIOR"
+      ],
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+    },
+    {
+      "project_id": "1110801",
+      "status": "NO_REFERENCE_SET",
+      "detected_all_three": false,
+      "target_types_present": [],
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "target_page_classification_count": 0,
+      "electrical_page_classification_count": 0,
+      "source_document_page_classification_count": 0,
+      "unclassified_count": 23,
+      "ambiguous_count": 0,
+      "private_ocr_page_count": 0,
+      "evidence_channel_codes": [
+        "NO_EMBEDDED_TARGET_TEXT",
+        "OCR_UNAVAILABLE",
+        "PIL_NUMPY_LAYOUT",
+        "POPPLER_RENDER",
+        "PYPDF_EMBEDDED_TEXT",
+        "WEAK_METADATA_PRIOR"
+      ],
+      "temporary_workspace_removed": true,
+      "data_minimization_pass": true,
+      "generator_isolation_pass": true,
+      "source_review_blindness_pass": true,
+      "audit_status": "REFERENCE_PRESENCE_BATCH_AUDIT_PASS"
+    }
+  ],
+  "failure_root_causes": [
+    {
+      "project_id": "1120305",
+      "root_cause_code": "PRIVATE_OCR_DISABLED_OR_NO_EXPLICIT_TARGET_TEXT",
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "unclassified_count": 51,
+      "ambiguous_count": 0
+    },
+    {
+      "project_id": "1110405",
+      "root_cause_code": "PRIVATE_OCR_DISABLED_OR_NO_EXPLICIT_TARGET_TEXT",
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "unclassified_count": 48,
+      "ambiguous_count": 0
+    },
+    {
+      "project_id": "1110205",
+      "root_cause_code": "PRIVATE_OCR_DISABLED_OR_NO_EXPLICIT_TARGET_TEXT",
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "unclassified_count": 94,
+      "ambiguous_count": 0
+    },
+    {
+      "project_id": "1110204",
+      "root_cause_code": "PRIVATE_OCR_DISABLED_OR_NO_EXPLICIT_TARGET_TEXT",
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "unclassified_count": 58,
+      "ambiguous_count": 0
+    },
+    {
+      "project_id": "1110103",
+      "root_cause_code": "PRIVATE_OCR_DISABLED_OR_NO_EXPLICIT_TARGET_TEXT",
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "unclassified_count": 22,
+      "ambiguous_count": 0
+    },
+    {
+      "project_id": "1120308",
+      "root_cause_code": "PRIVATE_OCR_DISABLED_OR_NO_EXPLICIT_TARGET_TEXT",
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "unclassified_count": 35,
+      "ambiguous_count": 0
+    },
+    {
+      "project_id": "1110101",
+      "root_cause_code": "PRIVATE_OCR_DISABLED_OR_NO_EXPLICIT_TARGET_TEXT",
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "unclassified_count": 44,
+      "ambiguous_count": 0
+    },
+    {
+      "project_id": "1110801",
+      "root_cause_code": "PRIVATE_OCR_DISABLED_OR_NO_EXPLICIT_TARGET_TEXT",
+      "missing_target_types": [
+        "PRODUCTION_DRAWING",
+        "PUNCH_DRAWING",
+        "SHEETMETAL_DRAWING"
+      ],
+      "unclassified_count": 23,
+      "ambiguous_count": 0
+    }
+  ],
+  "negative_control_policy": "NOT_EXECUTED_BECAUSE_POSITIVE_CALIBRATION_GATE_FAILED",
+  "holdout_policy": "SEALED_HOLDOUT_NOT_OPENED_TO_IMPLEMENTATION_WORKER",
+  "corpus_screening_authorized": false
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "reference_detection_v4_schema_v1",
+  "detector_version": "target_output_detection_v4_local_multisignal_recovery",
+  "task_id": "B024-RDCAL-V4-CAL-1120308",
+  "project_id": "1120308",
+  "status": "NO_REFERENCE_SET",
+  "target_types_present": [],
+  "effective_pages": [],
+  "duplicate_groups": [
+    {
+      "original_neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-22F55210E516",
+      "duplicate_neutral_reference_file_ids": [
+        "SRC-ALL-PROJECTS-FILE-D359B603F9EA"
+      ]
+    },
+    {
+      "original_neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-36063F2A843A",
+      "duplicate_neutral_reference_file_ids": [
+        "SRC-ALL-PROJECTS-FILE-498D0796688F"
+      ]
+    },
+    {
+      "original_neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-805E47A96103",
+      "duplicate_neutral_reference_file_ids": [
+        "SRC-ALL-PROJECTS-FILE-DA4FB93841E8"
+      ]
+    },
+    {
+      "original_neutral_reference_file_id": "SRC-ALL-PROJECTS-FILE-ED33B1523E3D",
+      "duplicate_neutral_reference_file_ids": [
+        "SRC-ALL-PROJECTS-FILE-55D8C6209E52"
+      ]
+    }
+  ],
+  "unresolved_issues": [
+    "UNCLASSIFIED_PAGES_REMAIN"
+  ],
+  "generator_exposure": {
+    "generator_receives_reference_file_ids": false,
+    "generator_receives_reference_hashes": false,
+    "generator_receives_reference_paths": false,
+    "generator_receives_reference_content": false
+  },
+  "minimization": {
+    "raw_text_persisted": false,
+    "raw_ocr_text_persisted": false,
+    "rendered_images_persisted": false,
+    "title_crops_persisted": false,
+    "absolute_private_paths_persisted": false,
+    "drawing_details_persisted": false
+  }
+}
