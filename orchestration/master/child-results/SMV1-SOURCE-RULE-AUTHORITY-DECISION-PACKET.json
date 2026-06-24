@@ -1,0 +1,87 @@
+{
+  "task_id": "SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET",
+  "starting_commit": "23866217b5c6a74d2eda8517f4649e04fb0745d5",
+  "ending_commit": "23866217b5c6a74d2eda8517f4649e04fb0745d5",
+  "tracked_worktree_status": {
+    "allowed_paths_written": [
+      "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json",
+      "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.md",
+      "orchestration/master/child-results/SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET.json"
+    ],
+    "implementation_code_files_changed": 0,
+    "rule_files_changed": 0,
+    "schema_files_changed": 0,
+    "source_manifests_changed": 0,
+    "frozen_releases_or_graders_mutated": false,
+    "forbidden_artifacts_opened": false
+  },
+  "test_result": {
+    "decision_packet_json_parse": "PASS",
+    "child_result_json_parse": "PASS",
+    "full_test_runner": "NOT_RUN_DECISION_PACKET_ONLY_NO_IMPLEMENTATION_CHANGE"
+  },
+  "workflow_freeze_results": {
+    "fresh_freeze_commands": "NOT_RUN_DECISION_PACKET_ONLY_NO_IMPLEMENTATION_CHANGE",
+    "latest_coordinator_verification": {
+      "full_tests": "PASS",
+      "legacy_baseline_024": "PASS",
+      "sheetmetal_v1_active": "PASS",
+      "sheetmetal_v1_topology_sizing_placement": "PASS"
+    }
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.md",
+    "orchestration/master/child-results/SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET.json"
+  ],
+  "schemas_validated": {
+    "formal_schema": "NO_TASK_SPECIFIC_SCHEMA_PROVIDED",
+    "json_parse": "PASS"
+  },
+  "hard_gates": {
+    "overall": "PASS_DECISION_PACKET_ONLY",
+    "implementation_applied": false,
+    "source_roots_opened": false,
+    "private_artifacts_opened": false,
+    "completed_references_opened": false,
+    "post_design_files_opened": false,
+    "public_web_used": false,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false
+  },
+  "coverage": {
+    "panel_assignment": "UNCHANGED_0_OF_53",
+    "component_geometry": "UNCHANGED_0_OF_53",
+    "topology": "UNCHANGED_0_OF_1",
+    "sizing": "UNCHANGED_0_OF_0",
+    "placement": "UNCHANGED_0_OF_53",
+    "capability_success_claimed": false
+  },
+  "privacy_leakage_counts": {
+    "private_content_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "committed_private_values": 0
+  },
+  "exact_final_status": "DECISION_PACKET_PREPARED_HUMAN_AUTHORITY_REQUIRED",
+  "exact_recommended_next_action": "REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+  "blocker_taxonomy": {
+    "classification": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION_REQUIRED",
+    "no_lane_accepted_autonomously": true,
+    "candidate_terminal_states_if_rejected": [
+      "STRUCTURAL_SOURCE_INSUFFICIENCY",
+      "FABRICATION_DOMAIN_DECISION_REQUIRED"
+    ]
+  },
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "2026-06-24T17:19:59.5596364+08:00",
+    "completed_at": "2026-06-24T17:19:59.5596364+08:00"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json": "A22FC1CA7C6D299E21EFCFBE495F1BFAA6F14D74049085133CB02C00ED152AA1",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.md": "644A3E3275ABD323A59E552D0F05CAF9E2A0CEED8533525DC473F4B0787C8681",
+    "orchestration/master/child-results/SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}

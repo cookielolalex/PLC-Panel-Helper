@@ -1,0 +1,110 @@
+{
+  "schema_version": "sheetmetal-v1.source_rule_authority_decision_packet.v1",
+  "task_id": "SMV1-SOURCE-RULE-AUTHORITY-DECISION-PACKET",
+  "created_at": "2026-06-24T17:19:59.5596364+08:00",
+  "starting_commit": "23866217b5c6a74d2eda8517f4649e04fb0745d5",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "status": "DECISION_PACKET_PREPARED_HUMAN_AUTHORITY_REQUIRED",
+  "recommended_next_action": "REQUEST_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+  "privacy_mode": "LOCAL_ONLY_PRIVACY_NOT_APPROVED",
+  "source_roots_opened": false,
+  "private_artifacts_opened": false,
+  "completed_references_opened": false,
+  "post_design_files_opened": false,
+  "public_web_used": false,
+  "customer_pdf_dxf_dwg_generated": false,
+  "production_approval_declared": false,
+  "bound_evidence": {
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal.json": "959D5DC73938B056D43600BD5EF73DEE5CC36D045D73B0EAA563D8E1702BE740",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_approval_proposal_review.json": "D729355456551101A5DC1CC7E8EC86A3D3ED06A0B78FA494B6963F391BD6AB70",
+    "orchestration/master/child-results/SMV1-SOURCE-RULE-APPROVAL-PROPOSAL-REVIEW.json": "136951D0CEB1B70AF8AA20ADCC2A2B601ED0D994EC5DE918C86D90AF8DE8585A",
+    "reports/sheetmetal-v1/t1-coverage-recovery/t1_independent_recovery_audit.json": "FA5E9697047683BDB8850A66C014F40E42C83A3D02EF9ED8728AD5ADC6AE0221"
+  },
+  "lane_decisions": [
+    {
+      "lane_id": "LANE_A_PANEL_ALLOCATION_SOURCE",
+      "decision": "AUTHORITY_REQUIRED_NOT_ACCEPTED_AUTONOMOUSLY",
+      "accepted_for_implementation": false,
+      "reason": "No approved pre-design PANEL_ALLOCATION_SOURCE has been identified in the accepted generator bundle.",
+      "authority_needed": "signed approval to run bounded panel allocation source review or direct signed source authority",
+      "if_accepted_required_gates": [
+        "deterministic_source_validation",
+        "four_independent_specialist_reviews",
+        "unanimous_agent_quorum",
+        "separate_adjudication",
+        "sanitized_bundle_verification",
+        "independent_audit",
+        "failing_regression_before_fix"
+      ]
+    },
+    {
+      "lane_id": "LANE_B_COMPONENT_GEOMETRY_AUTHORITY",
+      "decision": "AUTHORITY_REQUIRED_NOT_ACCEPTED_AUTONOMOUSLY",
+      "accepted_for_implementation": false,
+      "reason": "No verified component geometry library or approved generic conservative envelope rule exists for the active evidence set.",
+      "authority_needed": "signed approval of verified geometry library or conservative generic envelope rule family",
+      "if_accepted_required_gates": [
+        "library_or_rule_source_authority_review",
+        "leakage_review",
+        "deterministic_matching_review",
+        "failing_regression_before_fix",
+        "independent_audit"
+      ]
+    },
+    {
+      "lane_id": "LANE_C_TOPOLOGY_SIZING_PLACEMENT_RULES",
+      "decision": "FABRICATION_DOMAIN_DECISION_REQUIRED_NOT_ACCEPTED_AUTONOMOUSLY",
+      "accepted_for_implementation": false,
+      "reason": "Cabinet, surface, clearance, thermal, ventilation, spare-space, and fill-denominator policy choices are fabrication/domain rules requiring explicit authority.",
+      "authority_needed": "signed fabrication-domain rule decision for each accepted reusable rule family",
+      "if_accepted_required_gates": [
+        "stable_rule_id_and_version",
+        "explicit_authority_source",
+        "failing_regression_before_fix",
+        "full_tests",
+        "scoped_frozen_workflow_verification",
+        "independent_audit"
+      ]
+    }
+  ],
+  "human_authority_choices": [
+    {
+      "choice_id": "A",
+      "label": "AUTHORIZE_PANEL_ALLOCATION_SOURCE_REVIEW",
+      "effect": "starts bounded source-review branch only; no implementation until source approval and audit pass"
+    },
+    {
+      "choice_id": "B",
+      "label": "AUTHORIZE_COMPONENT_GEOMETRY_AUTHORITY",
+      "effect": "allows a verified geometry library or conservative envelope rule proposal to enter test-before-fix implementation planning"
+    },
+    {
+      "choice_id": "C",
+      "label": "AUTHORIZE_TOPOLOGY_SIZING_PLACEMENT_RULE_AUTHORITY",
+      "effect": "allows selected reusable fabrication rule families to enter test-before-fix implementation planning"
+    },
+    {
+      "choice_id": "D",
+      "label": "REJECT_ALL_AUTHORITY_LANES",
+      "effect": "moves to terminal-candidate review for STRUCTURAL_SOURCE_INSUFFICIENCY and FABRICATION_DOMAIN_DECISION_REQUIRED"
+    }
+  ],
+  "non_negotiable_constraints": [
+    "no_completed_reference_inference",
+    "no_post_design_label_generator_authority",
+    "no_private_model_identifier_public_lookup",
+    "no_source_root_mutation",
+    "no_private_artifact_staging",
+    "no_customer_pdf_dxf_dwg_generation",
+    "no_production_approval_declaration"
+  ],
+  "implementation_authorized_by_this_packet": false,
+  "coverage": {
+    "panel_assignment": "UNCHANGED_0_OF_53",
+    "component_geometry": "UNCHANGED_0_OF_53",
+    "topology": "UNCHANGED_0_OF_1",
+    "sizing": "UNCHANGED_0_OF_0",
+    "placement": "UNCHANGED_0_OF_53",
+    "capability_success_claimed": false
+  }
+}
