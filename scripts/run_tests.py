@@ -861,6 +861,110 @@ def test_sheetmetal_v1_modular_foundation() -> None:
         assert_true(forbidden not in serialized_generator_artifacts, f"forbidden token leaked to generator artifact: {forbidden}")
 
 
+def test_frozen_workflow_legacy_scope_verifier() -> None:
+    import verify_frozen_workflow as verifier
+
+    manifest_path = ROOT / "evals" / "baseline-024" / "frozen_workflow_manifest.json"
+    manifest_before = manifest_path.read_bytes()
+    attestation = verifier.build_legacy_attestation(worktree_name="legacy-baseline-024-test-attest")
+    assert_true(attestation["status"] == "PASS", f"legacy attestation should pass: {attestation}")
+    assert_true(attestation["verified_file_count"] == 15, "legacy attestation must verify every frozen file")
+    assert_true(
+        any(
+            row["key"] == "agents_md"
+            and row["expected_sha256"] == "6298E5EEB469DEBA38CD3F83D5697C402815B7E0C94F61E7F355D6D704D8E433"
+            and row["status"] == "PASS"
+            for row in attestation["hashes"]
+        ),
+        "historical AGENTS.md hash must reproduce at the legacy anchor",
+    )
+    current_agents_hash = verifier.sha256_file(ROOT / "AGENTS.md")
+    assert_true(
+        current_agents_hash != "6298E5EEB469DEBA38CD3F83D5697C402815B7E0C94F61E7F355D6D704D8E433",
+        "test assumes current sheetmetal-v1 AGENTS.md differs from legacy hash",
+    )
+    result = verifier.verify_legacy_scope(attestation=attestation, worktree_name="legacy-baseline-024-test-verify")
+    assert_true(result["status"] == "PASS", f"legacy scoped verifier must not compare current AGENTS.md: {result}")
+    assert_true(not (ROOT / "tmp" / "frozen_workflow_verification").exists(), "temporary legacy worktree root must be removed")
+    assert_true(manifest_path.read_bytes() == manifest_before, "old legacy manifest must remain byte-identical")
+
+
+def test_frozen_workflow_fail_closed_regressions() -> None:
+    import verify_frozen_workflow as verifier
+
+    fake_root = ROOT / "tmp" / "frozen_workflow_unit" / "hash_root"
+    if fake_root.exists():
+        shutil.rmtree(fake_root)
+    fake_root.mkdir(parents=True)
+    sample = fake_root / "sample.txt"
+    sample.write_text("accepted\n", encoding="utf-8", newline="\n")
+    expected = verifier.sha256_file(sample)
+    checks = verifier.hash_checks_in_directory(fake_root, {"sample": expected}, {"sample": "sample.txt"})
+    assert_true(checks[0]["status"] == "PASS", "matching historical file should pass")
+    sample.write_text("altered\n", encoding="utf-8", newline="\n")
+    checks = verifier.hash_checks_in_directory(fake_root, {"sample": expected}, {"sample": "sample.txt"})
+    assert_true(checks[0]["status"] == "FAIL", "altered historical file must fail")
+
+    attestation = verifier.build_legacy_attestation(worktree_name="legacy-baseline-024-test-failclosed")
+    mutated_hash = json.loads(json.dumps(attestation))
+    mutated_hash["manifest_sha256"] = "0" * 64
+    result = verifier.verify_legacy_scope(attestation=mutated_hash, worktree_name="legacy-baseline-024-test-mutatedhash")
+    assert_true(result["status"] == "FAIL" and "MANIFEST_HASH_MISMATCH" in result["failures"], "legacy manifest hash mutation must fail")
+
+    missing_anchor = json.loads(json.dumps(attestation))
+    missing_anchor["resolved_historical_anchor_commit"] = "0" * 40
+    result = verifier.verify_legacy_scope(attestation=missing_anchor, worktree_name="legacy-baseline-024-test-missinganchor")
+    assert_true(result["status"] == "FAIL" and "MISSING_ANCHOR_COMMIT" in result["failures"], "missing historical anchor must fail closed")
+
+    ambiguous = verifier.resolve_unique_legacy_anchor([
+        {"commit": "a" * 40, "status": "PASS"},
+        {"commit": "b" * 40, "status": "PASS"},
+    ])
+    assert_true(ambiguous["status"] == "FAIL" and ambiguous["error"] == "AMBIGUOUS_LEGACY_ANCHOR", "ambiguous anchor must fail closed")
+
+
+def test_frozen_workflow_active_scope_verifier() -> None:
+    import verify_frozen_workflow as verifier
+
+    if verifier.ACTIVE_MANIFEST.exists():
+        manifest = read_json(verifier.ACTIVE_MANIFEST)
+        result = verifier.verify_active_scope()
+        assert_true(result["status"] == "PASS", f"active sheetmetal-v1 manifest must pass: {result}")
+    else:
+        manifest = {
+            "manifest_version": "frozen-workflow-v2",
+            "scope": "SHEETMETAL_V1_ACTIVE",
+            "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+            "anchor_commit": verifier.current_head(),
+            "hash_algorithm": "SHA-256",
+            "supersedes_historical_manifest": False,
+            "files": [{"path": "AGENTS.md", "sha256": verifier.sha256_file(ROOT / "AGENTS.md")}],
+        }
+        result = verifier.verify_active_manifest_data(manifest, manifest_path=ROOT / "tmp" / "active_manifest_fixture.json")
+        assert_true(result["status"] == "PASS", f"active manifest fixture should pass: {result}")
+
+    mutated_agents = json.loads(json.dumps(manifest))
+    for row in mutated_agents["files"]:
+        if row["path"] == "AGENTS.md":
+            row["sha256"] = "0" * 64
+    result = verifier.verify_active_manifest_data(mutated_agents, manifest_path=ROOT / "tmp" / "active_manifest_mutated.json")
+    assert_true(result["status"] == "FAIL" and any("AGENTS.md" in failure for failure in result["failures"]), "active AGENTS.md hash mutation must fail")
+
+    cross_scope = read_json(ROOT / "evals" / "baseline-024" / "frozen_workflow_manifest.json")
+    result = verifier.verify_active_manifest_data(cross_scope, manifest_path=ROOT / "evals" / "baseline-024" / "frozen_workflow_manifest.json")
+    assert_true(result["status"] == "FAIL" and "SCOPE_MISMATCH" in result["failures"], "cross-scope manifest use must fail")
+
+    missing_anchor = json.loads(json.dumps(manifest))
+    missing_anchor["anchor_commit"] = "0" * 40
+    result = verifier.verify_active_manifest_data(missing_anchor, manifest_path=ROOT / "tmp" / "active_manifest_missing_anchor.json")
+    assert_true(result["status"] == "FAIL" and "MISSING_ANCHOR_COMMIT" in result["failures"], "active missing anchor must fail closed")
+
+    dynamic = json.loads(json.dumps(manifest))
+    dynamic["files"].append({"path": "docs/01_CURRENT_STATE.md", "sha256": verifier.sha256_file(ROOT / "docs" / "01_CURRENT_STATE.md")})
+    result = verifier.verify_active_manifest_data(dynamic, manifest_path=ROOT / "tmp" / "active_manifest_dynamic.json")
+    assert_true(result["status"] == "FAIL" and any(failure.startswith("DYNAMIC_FILE_INCLUDED") for failure in result["failures"]), "dynamic state files must stay out of active workflow freeze")
+
+
 def main() -> None:
     tests = [
         test_json_schemas_parse,
@@ -883,6 +987,9 @@ def main() -> None:
         test_reference_detection_v4_private_ocr_disabled_layout_prior,
         test_qualification_recovery_controller_state,
         test_sheetmetal_v1_modular_foundation,
+        test_frozen_workflow_legacy_scope_verifier,
+        test_frozen_workflow_fail_closed_regressions,
+        test_frozen_workflow_active_scope_verifier,
     ]
     failures = []
     for test in tests:
