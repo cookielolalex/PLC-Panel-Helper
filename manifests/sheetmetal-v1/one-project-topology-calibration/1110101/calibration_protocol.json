@@ -1,0 +1,119 @@
+{
+  "protocol_id": "SMV1-1110101-TOPOLOGY-SIZING-PLACEMENT-CALIBRATION-V1",
+  "schema_version": "sheetmetal-v1-topology-calibration-protocol-v1",
+  "status": "FROZEN_PROTOCOL",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "candidate_project_id": "1110101",
+  "source_mode": "SOURCE_MODE_A_INVENTORY_ONLY",
+  "anchor_head": "536c76d852f9c6c1e55017d17650b05e1915e479",
+  "checkpoint_status_before_protocol": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS",
+  "temporary_status_after_protocol": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS",
+  "privacy_status": "NOT_APPROVED",
+  "sheetmetal_allowed_eval": {
+    "approved_count": 1,
+    "accepted_project": "1110101",
+    "do_not_increase_in_this_thread": true
+  },
+  "generator_lane_allowed_inputs": [
+    "verified sanitized source bundle",
+    "frozen private source-fact model",
+    "frozen private component register",
+    "frozen private panel-assignment model",
+    "frozen private inventory graph",
+    "frozen private accessory/cutout reconciliation",
+    "accepted source-role and chronology decisions",
+    "accepted authority policy",
+    "approved rules",
+    "schemas",
+    "synthetic fixtures"
+  ],
+  "generator_lane_forbidden_inputs": [
+    "completed customer drawings",
+    "production-control references",
+    "sheet-metal references",
+    "punch references",
+    "post-design allocation labels",
+    "unauthorized electrical drawings",
+    "evaluator labels",
+    "expected dimensions",
+    "expected assignments",
+    "expected placements",
+    "reference filenames",
+    "reference hashes",
+    "reference images",
+    "reference OCR",
+    "reference title blocks",
+    "reference geometry",
+    "reviewer findings"
+  ],
+  "evaluator_lane_allowed_after_generator_freeze": [
+    "frozen generator hashes",
+    "neutral generator summaries",
+    "qualified evaluator-only reference package",
+    "accepted evaluator labels"
+  ],
+  "evaluator_lane_output_limits": [
+    "neutral metrics",
+    "coverage",
+    "confidence",
+    "generalized mismatch classes",
+    "severity",
+    "constraint findings",
+    "provenance gaps"
+  ],
+  "evaluator_lane_forbidden_outputs": [
+    "reference dimensions",
+    "reference coordinates",
+    "reference layouts",
+    "component values",
+    "screenshots",
+    "crops",
+    "filenames",
+    "hashes",
+    "answer keys"
+  ],
+  "private_workspace": ".private/sheetmetal-v1/1110101/topology-sizing-placement/",
+  "required_private_outputs": [
+    "panel_assignment_recovery.json",
+    "topology_candidates.json",
+    "sizing_candidates.json",
+    "placement_plan.json",
+    "unplaced_component_register.json",
+    "hard_constraint_model.json",
+    "validation_report.json",
+    "provenance_map.json",
+    "capability_probe.json",
+    "rule_versions.json",
+    "schema_versions.json",
+    "workflow_version.json"
+  ],
+  "required_committed_neutral_outputs": [
+    "capability_probe_summary.json",
+    "panel_assignment_recovery_summary.json",
+    "topology_sizing_summary.json",
+    "placement_validation_summary.json",
+    "generator_freeze_summary.json",
+    "evaluator_metrics_summary.json",
+    "implementation_checkpoint.json"
+  ],
+  "required_zero_counts": [
+    "unsupported_critical_dimensions",
+    "unsupported_panel_assignments",
+    "unsupported_placements",
+    "accepted_overlap_violations",
+    "containment_violations",
+    "quantity_stage_overwrite_violations",
+    "completed_reference_leakage",
+    "post_design_leakage",
+    "private_content_transmissions",
+    "tracked_private_artifacts"
+  ],
+  "determinism_requirement": {
+    "reruns": 2,
+    "canonical_json_hash_match_required": true,
+    "byte_difference_policy": "permitted only for structurally identical JSON with no excluded fields"
+  },
+  "drawing_generation_authorized": false,
+  "final_independent_adjudication_authorized_in_this_thread": false,
+  "next_action_on_freeze": "RUN_INDEPENDENT_ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_AUDIT"
+}

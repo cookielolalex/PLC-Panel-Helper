@@ -1,13 +1,13 @@
 {
   "schema_version": "sheetmetal-v1",
   "qualification_class": "SHEETMETAL_ALLOWED_EVAL",
-  "status": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS",
+  "status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS",
   "approved_count": 1,
   "candidates": [
     {
       "project_id": "1110101",
       "prior_classification": "LEGACY_THREE_OUTPUT_ALLOWED_EVAL",
-      "sheetmetal_status": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS",
+      "sheetmetal_status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS",
       "selection_rank": 1,
       "selection_artifact": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
       "accepted_as_first_sheetmetal_v1_calibration_project": true,
@@ -76,9 +76,9 @@
     }
   ],
   "additional_corpus_search_status": "NOT_STARTED_IN_MIGRATION_TASK",
-  "baseline_status": "ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS",
+  "baseline_status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS",
   "selected_project_id": "1110101",
-  "selection_status": "FIRST_SHEETMETAL_V1_CALIBRATION_PROJECT_ACCEPTED",
+  "selection_status": "TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS",
   "selection_artifact": "manifests/sheetmetal-v1/one_project_candidate_selection.json",
   "selected_candidate_bundle": "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle",
   "selected_candidate_audit": "reports/sheetmetal-v1/selected_candidate_1110101_independent_audit.md",

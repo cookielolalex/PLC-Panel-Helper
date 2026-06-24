@@ -1,12 +1,12 @@
 # Current State
 
-Current phase: one-project component register and graph calibration passed; topology, sizing, and placement calibration pending.
+Current phase: one-project topology, sizing, and placement calibration in progress.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `ONE_PROJECT_COMPONENT_REGISTER_AND_GRAPH_CALIBRATION_PASS`.
+Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 

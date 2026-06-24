@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: evaluator-only component graph metrics complete for one-project
-component graph calibration; independent audit pending.
+Current phase: one-project topology, sizing, and placement calibration in
+progress.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `ONE_PROJECT_COMPONENT_GRAPH_CALIBRATION_IN_PROGRESS`.
+Current status: `ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION_IN_PROGRESS`.
 
 Current candidate: `1110101`.
 
