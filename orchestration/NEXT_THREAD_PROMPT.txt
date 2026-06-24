@@ -19,7 +19,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`
+`SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`
 
 Active goal:
 
@@ -37,6 +37,9 @@ Current qualification state:
 - A neutral signed authority decision intake router is prepared.
 - An unsigned signed-authority decision JSON draft is prepared and
   intentionally fails validation until filled and signed.
+- A signed-authority decision submission processor is prepared. It writes
+  validation, intake, and summary artifacts together, and the current unsigned
+  draft submission fails closed as expected.
 - No source/rule lane is accepted autonomously.
 - This is not engineering capability success, production approval, or drawing
   generation authorization.
@@ -74,6 +77,13 @@ Signed authority decision draft:
 - `reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_draft_validation.json`
 - `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_draft_summary.json`
 - `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-DRAFT.json`
+
+Signed authority decision submission processor:
+
+- `scripts/process_signed_authority_decision.py`
+- `reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/submission_summary.json`
+- `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission_processor_summary.json`
+- `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-SUBMISSION-PROCESSOR.json`
 
 Authority choices:
 

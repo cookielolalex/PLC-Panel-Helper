@@ -459,3 +459,7 @@
   current packet/template hashes, plus fail-closed regression coverage and
   neutral draft evidence. The draft intentionally remains invalid until a
   signed human/source-rule authority decision is filled, validated, and routed.
+- Added an atomic signed-authority decision submission processor that writes
+  validation, intake, and summary artifacts together. The current unsigned
+  draft was processed as expected-fail evidence, preserving the signed-human
+  authority wait state and all no-implementation/no-drawing gates.

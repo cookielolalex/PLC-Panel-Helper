@@ -1168,3 +1168,44 @@ Evidence:
 `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_draft_summary.json`,
 and
 `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-DRAFT.json`.
+
+## sheetmetal-v1 signed authority decision submission processor
+
+Status: `SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`.
+
+Decision: `D-0046`.
+
+Purpose: process a future signed source/rule authority decision into a complete
+validation, intake, and submission-summary package with one command.
+
+Processor result:
+
+- Validator-passing accepted lanes route to
+  `ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`.
+- Validator-passing reject-all decisions route to
+  `ENTER_TERMINAL_CANDIDATE_REVIEW`.
+- Invalid decisions fail closed and remain at
+  `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+- Implementation authorization, customer PDF/DXF/DWG generation, and
+  production approval remain false.
+
+Unsigned draft proof: the current unsigned draft was processed into
+`reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/`.
+The processor returned expected exit code `1`, reported missing choice, signer,
+and date errors, preserved passing packet/template hash checks, and kept the
+next action at `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+
+Verification: full `scripts/run_tests.py` passed, including
+`test_signed_authority_decision_submission_package` and the legacy, active
+sheetmetal-v1, and topology-stage scoped frozen workflow checks.
+
+Generation status: no authority lane was selected, no implementation was
+applied, no customer drawing, PDF, DXF, or DWG was generated, and no
+production approval was declared.
+
+Evidence:
+`scripts/process_signed_authority_decision.py`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/submission_summary.json`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission_processor_summary.json`,
+and
+`orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-SUBMISSION-PROCESSOR.json`.

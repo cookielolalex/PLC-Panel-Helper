@@ -2,8 +2,8 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "7b85d5a9ebc16b91834fc2a7d3f85e560359f918",
-  "current_canonical_status": "UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED",
+  "current_head": "25031fb4a93df94c9e48be3e5f2c37d774cd0f19",
+  "current_canonical_status": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED",
   "current_stage": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
   "next_action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
   "active_thread_ids": [],
@@ -21,6 +21,7 @@
     "SMV1-SIGNED-AUTHORITY-DECISION-VALIDATOR",
     "SMV1-SIGNED-AUTHORITY-DECISION-INTAKE",
     "SMV1-SIGNED-AUTHORITY-DECISION-DRAFT",
+    "SMV1-SIGNED-AUTHORITY-DECISION-SUBMISSION-PROCESSOR",
     "SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION"
   ],
   "worktree_paths": [
@@ -50,12 +51,13 @@
     "signed_authority_decision_template_commit": "98e582fb23655951414ab88505064d3349f1cd9a",
     "signed_authority_decision_validator_commit": "d18b1a6e175d1cd296ba46870b952fedc8251ea2",
     "signed_authority_decision_intake_commit": "f03e970bdfe7135dc291607cf2676177c0ae3f87",
-    "signed_authority_decision_draft_commit": "7b85d5a9ebc16b91834fc2a7d3f85e560359f918"
+    "signed_authority_decision_draft_commit": "7b85d5a9ebc16b91834fc2a7d3f85e560359f918",
+    "signed_authority_decision_submission_processor_commit": "25031fb4a93df94c9e48be3e5f2c37d774cd0f19"
   },
   "expected_outputs": [
     "signed human authority decision selecting one or more authority choices, or rejecting all lanes"
   ],
-  "last_heartbeat": "2026-06-24T17:58:50.4492109+08:00",
+  "last_heartbeat": "2026-06-24T18:07:39.8495750+08:00",
   "retries": {},
   "blockers": [],
   "audit_state": {
@@ -72,7 +74,8 @@
     "signed_authority_decision_template": "SIGNED_AUTHORITY_DECISION_TEMPLATE_PREPARED_NO_AUTHORITY_SELECTED",
     "signed_authority_decision_validator": "SIGNED_AUTHORITY_DECISION_VALIDATOR_READY_NO_AUTHORITY_SELECTED",
     "signed_authority_decision_intake": "SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED",
-    "signed_authority_decision_draft": "UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED"
+    "signed_authority_decision_draft": "UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED",
+    "signed_authority_decision_submission_processor": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED"
   },
   "merge_state": {
     "pending_child_commits": [],
@@ -87,9 +90,10 @@
       "98e582fb23655951414ab88505064d3349f1cd9a",
       "d18b1a6e175d1cd296ba46870b952fedc8251ea2",
       "f03e970bdfe7135dc291607cf2676177c0ae3f87",
-      "7b85d5a9ebc16b91834fc2a7d3f85e560359f918"
+      "7b85d5a9ebc16b91834fc2a7d3f85e560359f918",
+      "25031fb4a93df94c9e48be3e5f2c37d774cd0f19"
     ],
-    "last_merge_result": "UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED"
+    "last_merge_result": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED"
   },
   "pending_worktrees": [
     {
@@ -111,7 +115,7 @@
   "latest_verified_test_result": {
     "command": "python scripts/run_tests.py",
     "status": "PASS",
-    "verified_at": "2026-06-24T17:58:50.4492109+08:00"
+    "verified_at": "2026-06-24T18:07:39.8495750+08:00"
   },
   "scoped_workflow_freeze_results": {
     "legacy_baseline_024": "PASS",

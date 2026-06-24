@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: unsigned source/rule authority decision draft ready; signed
-human authority decision still required.
+Current phase: signed source/rule authority decision submission processor
+ready; signed human authority decision still required.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`.
+Current status: `SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`.
 
 Current candidate: `1110101`.
 
@@ -507,6 +507,28 @@ Unsigned signed authority decision draft:
 - The draft binds to the current authority packet and signed-decision template
   hashes but intentionally has no selected choices, signer, or real date.
 - Validator result: `FAIL_EXPECTED`; hash checks pass.
+- Full tests: `PASS`.
+- Legacy, active sheetmetal-v1, and topology-stage scoped freezes: `PASS`.
+- No authority lane was selected.
+- No implementation code, rule, source manifest, source root, `.private`
+  artifact, completed reference, customer drawing, PDF, DXF, or DWG was
+  changed or generated.
+
+Signed authority decision submission processor:
+
+- Decision: `D-0046`.
+- Processor commit: `25031fb`.
+- Processor status:
+  `SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`.
+- Processor:
+  `scripts/process_signed_authority_decision.py`.
+- Expected-fail unsigned submission:
+  `reports/sheetmetal-v1/source-rule-approval/smv1_unsigned_authority_decision_submission/submission_summary.json`.
+- Accepted valid lanes route only to
+  `ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`.
+- Valid reject-all decisions route to `ENTER_TERMINAL_CANDIDATE_REVIEW`.
+- Invalid decisions fail closed and keep waiting for a valid signed authority
+  decision.
 - Full tests: `PASS`.
 - Legacy, active sheetmetal-v1, and topology-stage scoped freezes: `PASS`.
 - No authority lane was selected.

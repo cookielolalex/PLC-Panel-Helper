@@ -5,7 +5,7 @@ Status: initialized.
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
 Current canonical status:
-`UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`.
+`SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`.
 
 Verified checkpoint:
 
@@ -168,6 +168,24 @@ Signed authority decision draft:
   is filled and signed.
 - Validation result: `FAIL_EXPECTED`; missing choice, signer, and date are the
   expected blockers while hash checks pass.
+- Full tests and legacy, active sheetmetal-v1, and topology-stage scoped
+  freezes passed.
+- No authority lane was selected.
+- No implementation, source manifest, rule, source-root, private,
+  completed-reference, customer drawing, PDF, DXF, or DWG artifact was changed
+  or generated.
+- Next action: `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+
+Signed authority decision submission processor:
+
+- Processor commit: `25031fb`.
+- Status: `SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`.
+- The processor writes validation, intake, and submission-summary artifacts from
+  one signed authority decision input.
+- Accepted lanes route only to the regression-test-before-fix gate; reject-all
+  routes to terminal-candidate review; invalid decisions fail closed.
+- The current unsigned draft was processed as expected-fail evidence and kept
+  the next action at `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
 - Full tests and legacy, active sheetmetal-v1, and topology-stage scoped
   freezes passed.
 - No authority lane was selected.

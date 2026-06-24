@@ -1,13 +1,13 @@
 # Current State
 
-Current phase: unsigned source/rule authority decision draft ready; signed
-human authority decision still required.
+Current phase: signed source/rule authority decision submission processor ready;
+signed human authority decision still required.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED`.
+Current status: `SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -63,6 +63,9 @@ neutral intake routing for future validator-passing signed decisions, still
 without selecting any lane or authorizing implementation. `D-0045` adds an
 unsigned JSON draft scaffold bound to the current packet/template hashes; it
 intentionally fails closed until filled, signed, validated, and routed.
+`D-0046` adds an atomic submission processor for future signed decisions; it
+packages validation, intake, and summary artifacts, while the current unsigned
+draft still fails closed.
 These
 amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
@@ -473,6 +476,17 @@ and date errors while packet/template hash checks pass. Full tests and legacy,
 active sheetmetal-v1, and topology-stage scoped freezes pass. No authority lane
 was selected and no implementation, customer drawing, or production approval
 was authorized.
+
+Signed authority decision submission processor after `D-0046`: the processor
+`scripts/process_signed_authority_decision.py` writes validation, intake, and
+submission-summary artifacts from one signed decision input. Validator-passing
+accepted lanes route only to the regression-test-before-fix gate; reject-all
+routes to terminal-candidate review; invalid decisions fail closed. The current
+unsigned draft submission package intentionally fails closed with missing
+choice, signer, and date errors while packet/template hash checks pass. Full
+tests and legacy, active sheetmetal-v1, and topology-stage scoped freezes pass.
+No authority lane was selected and no implementation, customer drawing, or
+production approval was authorized.
 
 Exact next action: wait for
 `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
