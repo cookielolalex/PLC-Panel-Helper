@@ -210,11 +210,14 @@ Signed authority decision accepted:
 T1 authorized recovery dispatch:
 
 - `SMV1-T1A-PANEL-ALLOCATION-RECOVERY` pending worktree:
-  `local:f3c896b6-d6ca-4557-b4de-e3a6646e7898`.
+  `local:4d54348d-e6ef-46c5-b8a7-f1daf3df1732`.
 - `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY` pending worktree:
-  `local:65737500-91f4-4489-9bcb-426004734398`.
+  `local:05e9923c-fa55-4899-a85a-9a21cfe9d508`.
 - `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY` pending worktree:
-  `local:42e9df4f-5b6b-4740-ba22-c077b18055d0`.
+  `local:15401954-4eed-43da-9544-e517d1ddecc5`.
+- Initial T1A/T1B/T1C worktree requests failed with invalid branch references;
+  local branch refs were created from checkpoint `5b8dbeb` and replacement
+  worktrees were queued.
 - Integration remains blocked until schema-valid hashed T1A/T1B/T1C child
   results are available.
 - Independent audit remains blocked until a frozen integration commit exists.

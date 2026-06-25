@@ -32,6 +32,25 @@
       ],
       "autonomous_recovery_available": true,
       "required_external_input": null
+    },
+    {
+      "ts": "2026-06-25T11:18:23.2396526+08:00",
+      "stage": "T1_AUTHORIZED_RECOVERY",
+      "status": "WORKTREE_BRANCH_REFS_CREATED_AND_REQUEUED",
+      "blocker_class": "RECOVERABLE_WORKTREE_SETUP_DEFECT",
+      "failed_pending_worktrees": [
+        "local:f3c896b6-d6ca-4557-b4de-e3a6646e7898",
+        "local:65737500-91f4-4489-9bcb-426004734398",
+        "local:42e9df4f-5b6b-4740-ba22-c077b18055d0"
+      ],
+      "replacement_pending_worktrees": [
+        "local:4d54348d-e6ef-46c5-b8a7-f1daf3df1732",
+        "local:05e9923c-fa55-4899-a85a-9a21cfe9d508",
+        "local:15401954-4eed-43da-9544-e517d1ddecc5"
+      ],
+      "repair": "Created local branch refs from current master checkpoint before requeueing worktree threads.",
+      "autonomous_recovery_available": true,
+      "required_external_input": null
     }
   ],
   "blocker_classes": [

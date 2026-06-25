@@ -2,8 +2,8 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "f27eb72e0270a8b89d75d9ace1287b56739c6e75",
-  "current_canonical_status": "SIGNED_AUTHORITY_DECISION_ACCEPTED_T1_AUTHORIZED_RECOVERY_QUEUED",
+  "current_head": "5b8dbebc64ab93289f2a5fe709c12751537a8847",
+  "current_canonical_status": "T1_AUTHORIZED_RECOVERY_WORKTREES_REQUEUED",
   "current_stage": "T1_AUTHORIZED_RECOVERY",
   "next_action": "MONITOR_T1A_T1B_T1C_AUTHORIZED_RECOVERY_THREADS",
   "active_thread_ids": [],
@@ -32,9 +32,9 @@
     "subagent:019ef8bb-cadd-78d2-bd33-86de4072ce3f",
     "subagent:019ef8d8-4332-7f23-90d9-7fb8626afa56",
     "subagent:019ef8e5-46ea-7e21-bb3f-8c61c5d1e31c",
-    "pendingWorktreeId:local:f3c896b6-d6ca-4557-b4de-e3a6646e7898",
-    "pendingWorktreeId:local:65737500-91f4-4489-9bcb-426004734398",
-    "pendingWorktreeId:local:42e9df4f-5b6b-4740-ba22-c077b18055d0"
+    "pendingWorktreeId:local:4d54348d-e6ef-46c5-b8a7-f1daf3df1732",
+    "pendingWorktreeId:local:05e9923c-fa55-4899-a85a-9a21cfe9d508",
+    "pendingWorktreeId:local:15401954-4eed-43da-9544-e517d1ddecc5"
   ],
   "starting_commits": {
     "user_expected_head": "c526a6f",
@@ -69,7 +69,7 @@
     "T1B authorized component geometry recovery child result",
     "T1C authorized topology sizing rule recovery child result"
   ],
-  "last_heartbeat": "2026-06-25T11:08:50.6520818+08:00",
+  "last_heartbeat": "2026-06-25T11:18:23.2396526+08:00",
   "retries": {},
   "blockers": [],
   "audit_state": {
@@ -128,21 +128,48 @@
       "pending_worktree_id": "local:f3c896b6-d6ca-4557-b4de-e3a6646e7898",
       "requested_at": "2026-06-25T11:08:50.6520818+08:00",
       "thread_id": null,
-      "status": "WORKTREE_PENDING",
-      "branch_name": "smv1-t1a-panel-allocation-recovery"
+      "status": "WORKTREE_CREATE_FAILED_INVALID_REF",
+      "branch_name": "smv1-t1a-panel-allocation-recovery",
+      "replacement_pending_worktree_id": "local:4d54348d-e6ef-46c5-b8a7-f1daf3df1732"
     },
     {
       "task_id": "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
       "pending_worktree_id": "local:65737500-91f4-4489-9bcb-426004734398",
       "requested_at": "2026-06-25T11:08:50.6520818+08:00",
       "thread_id": null,
-      "status": "WORKTREE_PENDING",
-      "branch_name": "smv1-t1b-component-geometry-recovery"
+      "status": "WORKTREE_CREATE_FAILED_INVALID_REF",
+      "branch_name": "smv1-t1b-component-geometry-recovery",
+      "replacement_pending_worktree_id": "local:05e9923c-fa55-4899-a85a-9a21cfe9d508"
     },
     {
       "task_id": "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
       "pending_worktree_id": "local:42e9df4f-5b6b-4740-ba22-c077b18055d0",
       "requested_at": "2026-06-25T11:08:50.6520818+08:00",
+      "thread_id": null,
+      "status": "WORKTREE_CREATE_FAILED_INVALID_REF",
+      "branch_name": "smv1-t1c-topology-sizing-rule-recovery",
+      "replacement_pending_worktree_id": "local:15401954-4eed-43da-9544-e517d1ddecc5"
+    },
+    {
+      "task_id": "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
+      "pending_worktree_id": "local:4d54348d-e6ef-46c5-b8a7-f1daf3df1732",
+      "requested_at": "2026-06-25T11:18:23.2396526+08:00",
+      "thread_id": null,
+      "status": "WORKTREE_PENDING",
+      "branch_name": "smv1-t1a-panel-allocation-recovery"
+    },
+    {
+      "task_id": "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
+      "pending_worktree_id": "local:05e9923c-fa55-4899-a85a-9a21cfe9d508",
+      "requested_at": "2026-06-25T11:18:23.2396526+08:00",
+      "thread_id": null,
+      "status": "WORKTREE_PENDING",
+      "branch_name": "smv1-t1b-component-geometry-recovery"
+    },
+    {
+      "task_id": "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
+      "pending_worktree_id": "local:15401954-4eed-43da-9544-e517d1ddecc5",
+      "requested_at": "2026-06-25T11:18:23.2396526+08:00",
       "thread_id": null,
       "status": "WORKTREE_PENDING",
       "branch_name": "smv1-t1c-topology-sizing-rule-recovery"

@@ -484,3 +484,7 @@
   `SMV1-T1A-PANEL-ALLOCATION-RECOVERY`,
   `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY`, and
   `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY`.
+- Created the missing local branch refs for the three T1 recovery lanes after
+  the first worktree setup returned `fatal: invalid reference`, then requeued
+  replacement pending worktrees and marked the first pending IDs as setup
+  failures in the coordinator registries.

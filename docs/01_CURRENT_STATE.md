@@ -514,11 +514,13 @@ remains `NOT_APPROVED`.
 
 T1 authorized recovery dispatch after `D-0047`: three worktree lanes are
 pending: `SMV1-T1A-PANEL-ALLOCATION-RECOVERY`
-(`local:f3c896b6-d6ca-4557-b4de-e3a6646e7898`),
+(`local:4d54348d-e6ef-46c5-b8a7-f1daf3df1732`),
 `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY`
-(`local:65737500-91f4-4489-9bcb-426004734398`), and
+(`local:05e9923c-fa55-4899-a85a-9a21cfe9d508`), and
 `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY`
-(`local:42e9df4f-5b6b-4740-ba22-c077b18055d0`). Integration and independent
+(`local:15401954-4eed-43da-9544-e517d1ddecc5`). The initial worktree requests
+failed with invalid branch references; local branch refs were created from
+checkpoint `5b8dbeb` and the lanes were requeued. Integration and independent
 audit remain blocked until schema-valid hashed child results and a frozen
 integration commit exist.
 
