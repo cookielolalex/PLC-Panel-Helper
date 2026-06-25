@@ -1,8 +1,20 @@
 {
   "task_id": "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
   "starting_commit": "5B8DBEBC64AB93289F2A5FE709C12751537A8847",
-  "ending_commit": "PENDING_FINAL_COMMIT_SHA",
-  "tracked_worktree_status": "PENDING_COMMIT_THEN_EXPECTED_CLEAN",
+  "ending_commit": "ad5d633bbddaec9ea6d08d283f6c8e7fefe6edb3",
+  "tracked_worktree_status": {
+    "status": "CLEAN_AFTER_RECOVERY_COMMIT_BEFORE_METADATA_FINALIZATION",
+    "recovery_commit": "ad5d633bbddaec9ea6d08d283f6c8e7fefe6edb3",
+    "allowed_paths_written": [
+      "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.json",
+      "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.md",
+      "orchestration/master/child-results/SMV1-T1A-PANEL-ALLOCATION-RECOVERY.json"
+    ],
+    "code_files_changed": 0,
+    "rule_files_changed": 0,
+    "schema_files_changed": 0,
+    "canonical_master_files_changed_outside_assigned_child_result": 0
+  },
   "test_result": {
     "json_parse_validation": "PASS",
     "scripts_run_tests_py": "FAIL_FROZEN_WORKFLOW_HASH_GATES_AFTER_FUNCTIONAL_TESTS_PASSED",
