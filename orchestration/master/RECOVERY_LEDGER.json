@@ -9,6 +9,29 @@
       "blocked_audit": "orchestration/master/blocked-audits/SMV1-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-BLOCKED.json",
       "autonomous_recovery_available": false,
       "required_external_input": "signed authority decision selecting A/B/C or D"
+    },
+    {
+      "ts": "2026-06-25T11:08:50.6520818+08:00",
+      "stage": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+      "status": "SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY",
+      "blocker_class": "RESOLVED_BY_SIGNED_HUMAN_AUTHORITY_DECISION",
+      "decision": "A+B+C accepted; D not selected",
+      "next_gate": "ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX",
+      "autonomous_recovery_available": true,
+      "required_external_input": null
+    },
+    {
+      "ts": "2026-06-25T11:08:50.6520818+08:00",
+      "stage": "T1_AUTHORIZED_RECOVERY",
+      "status": "WORKTREES_PENDING",
+      "blocker_class": "RECOVERABLE_ASSIGNMENT_GEOMETRY_RULE_COVERAGE",
+      "pending_worktrees": [
+        "local:f3c896b6-d6ca-4557-b4de-e3a6646e7898",
+        "local:65737500-91f4-4489-9bcb-426004734398",
+        "local:42e9df4f-5b6b-4740-ba22-c077b18055d0"
+      ],
+      "autonomous_recovery_available": true,
+      "required_external_input": null
     }
   ],
   "blocker_classes": [

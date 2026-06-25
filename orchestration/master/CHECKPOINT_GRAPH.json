@@ -1,61 +1,74 @@
 {
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
-  "current_node": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+  "current_node": "T1_AUTHORIZED_RECOVERY",
   "nodes": [
     {
       "id": "T0",
       "name": "INDEPENDENT_TOPOLOGY_SIZING_PLACEMENT_AUDIT",
       "status": "INCONCLUSIVE_LOW_COVERAGE",
-      "on_pass": "T3",
-      "on_inconclusive_low_coverage": "T1",
-      "on_fail_recoverable": "RECOVERY_BRANCH",
-      "on_fail_irreducible": "TERMINAL_REVIEW"
+      "on_inconclusive_low_coverage": "T1"
     },
     {
       "id": "T1",
-      "name": "TARGETED_COVERAGE_RECOVERY",
-      "status": "SAFE_UNRESOLVED_AUDIT_IN_PROGRESS"
+      "name": "TARGETED_COVERAGE_RECOVERY_PRE_AUTHORITY",
+      "status": "PASS_SAFE_UNRESOLVED"
     },
     {
       "id": "T1_AUDIT",
       "name": "T1_SAFE_UNRESOLVED_INDEPENDENT_RECOVERY_AUDIT",
       "status": "PASS_SAFE_UNRESOLVED",
-      "on_pass": "SOURCE_RULE_APPROVAL_BRANCH",
-      "on_inconclusive": "RECOVERY_BRANCH",
-      "on_fail_recoverable": "RECOVERY_BRANCH",
-      "on_fail_irreducible": "TERMINAL_REVIEW"
+      "on_pass": "SOURCE_RULE_APPROVAL_BRANCH"
     },
     {
       "id": "SOURCE_RULE_APPROVAL_BRANCH",
       "name": "PROPOSAL_FIRST_SOURCE_RULE_APPROVAL",
-      "status": "HUMAN_AUTHORITY_DECISION_PENDING",
-      "on_accepted_proposal": "T2",
-      "on_rejected_or_no_authority": "TERMINAL_REVIEW",
-      "on_needs_human_decision": "FABRICATION_DOMAIN_DECISION_REQUIRED"
-    },
-    {
-      "id": "SOURCE_RULE_PROPOSAL_REVIEW",
-      "name": "INDEPENDENT_SOURCE_RULE_PROPOSAL_REVIEW",
-      "status": "PASS",
-      "on_pass": "SOURCE_RULE_AUTHORITY_DECISION_PACKET",
-      "on_fail": "PROPOSAL_REVISION_OR_TERMINAL_REVIEW",
-      "on_inconclusive": "PROPOSAL_REVISION"
+      "status": "PASS_PROPOSAL_READY_FOR_HUMAN_OR_AUTHORITY_REVIEW",
+      "on_accepted_proposal": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION"
     },
     {
       "id": "SOURCE_RULE_AUTHORITY_DECISION_PACKET",
       "name": "SOURCE_RULE_AUTHORITY_DECISION_PACKET",
-      "status": "PREPARED",
-      "on_accept_lane": "IMPLEMENT_ACCEPTED_AUTHORITY_LANE",
-      "on_reject_all": "TERMINAL_REVIEW",
-      "on_human_required": "FABRICATION_DOMAIN_DECISION_REQUIRED"
+      "status": "PREPARED"
     },
     {
       "id": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
       "name": "SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
-      "status": "BLOCKED_SIGNED_DECISION_REQUIRED",
-      "on_authorize_lane": "IMPLEMENT_ACCEPTED_AUTHORITY_LANE",
-      "on_reject_all": "TERMINAL_REVIEW"
+      "status": "SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY",
+      "selected_choice_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rejected_choice_ids": [
+        "D"
+      ],
+      "on_authorize_lane": "T1_AUTHORIZED_RECOVERY",
+      "next_gate": "ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX"
+    },
+    {
+      "id": "T1_AUTHORIZED_RECOVERY",
+      "name": "AUTHORIZED_PANEL_GEOMETRY_RULE_RECOVERY",
+      "status": "IN_PROGRESS_WORKTREES_PENDING",
+      "active_tasks": [
+        "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
+        "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
+        "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY"
+      ],
+      "on_all_accepted_results": "T1_AUTHORIZED_INTEGRATION",
+      "on_recoverable_blocker": "RECOVERY_BRANCH",
+      "on_irreducible_blocker": "TERMINAL_REVIEW"
+    },
+    {
+      "id": "T1_AUTHORIZED_INTEGRATION",
+      "name": "INTEGRATE_AUTHORIZED_RECOVERY_RESULTS",
+      "status": "PENDING_T1A_T1B_T1C"
+    },
+    {
+      "id": "T1_AUTHORIZED_AUDIT",
+      "name": "INDEPENDENT_AUTHORIZED_RECOVERY_AUDIT",
+      "status": "PENDING_FROZEN_INTEGRATION_COMMIT",
+      "on_pass": "T2"
     },
     {
       "id": "T2",

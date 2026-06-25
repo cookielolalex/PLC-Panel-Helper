@@ -467,3 +467,20 @@
   decision gate. All safe autonomous gate-preparation work is complete; the
   remaining queued task requires an external signed decision selecting `A`,
   `B`, `C`, or `D`.
+- Recorded the signed `D-0047` source/rule authority decision from
+  `PROJECT_OWNER_USER`, selecting `A`, `B`, and `C`, and explicitly not
+  selecting `D`.
+- Validated and processed the signed decision with
+  `scripts/validate_signed_authority_decision.py` and
+  `scripts/process_signed_authority_decision.py`; the accepted decision routes
+  to `ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`.
+- Preserved the decision boundary: implementation authorization remains
+  false until tests-before-fix are added, customer PDF/DXF/DWG generation is
+  still unauthorized, production approval remains forbidden, and privacy
+  remains `NOT_APPROVED`.
+- Re-created the master heartbeat automation as
+  `plc-panels-master-autopilot-heartbeat` on the 15-minute cadence.
+- Queued three bounded authorized recovery worktrees:
+  `SMV1-T1A-PANEL-ALLOCATION-RECOVERY`,
+  `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY`, and
+  `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY`.

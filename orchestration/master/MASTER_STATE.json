@@ -2,10 +2,10 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "d2e4afd12373ba07b10ca8017e50a3d0618e86d5",
-  "current_canonical_status": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
-  "current_stage": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
-  "next_action": "WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+  "current_head": "f27eb72e0270a8b89d75d9ace1287b56739c6e75",
+  "current_canonical_status": "SIGNED_AUTHORITY_DECISION_ACCEPTED_T1_AUTHORIZED_RECOVERY_QUEUED",
+  "current_stage": "T1_AUTHORIZED_RECOVERY",
+  "next_action": "MONITOR_T1A_T1B_T1C_AUTHORIZED_RECOVERY_THREADS",
   "active_thread_ids": [],
   "task_ids": [
     "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
@@ -22,13 +22,19 @@
     "SMV1-SIGNED-AUTHORITY-DECISION-INTAKE",
     "SMV1-SIGNED-AUTHORITY-DECISION-DRAFT",
     "SMV1-SIGNED-AUTHORITY-DECISION-SUBMISSION-PROCESSOR",
-    "SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION"
+    "SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION",
+    "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
+    "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
+    "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY"
   ],
   "worktree_paths": [
     "pendingWorktreeId:local:75736337-550b-4e6b-aded-25b6cbbbccea",
     "subagent:019ef8bb-cadd-78d2-bd33-86de4072ce3f",
     "subagent:019ef8d8-4332-7f23-90d9-7fb8626afa56",
-    "subagent:019ef8e5-46ea-7e21-bb3f-8c61c5d1e31c"
+    "subagent:019ef8e5-46ea-7e21-bb3f-8c61c5d1e31c",
+    "pendingWorktreeId:local:f3c896b6-d6ca-4557-b4de-e3a6646e7898",
+    "pendingWorktreeId:local:65737500-91f4-4489-9bcb-426004734398",
+    "pendingWorktreeId:local:42e9df4f-5b6b-4740-ba22-c077b18055d0"
   ],
   "starting_commits": {
     "user_expected_head": "c526a6f",
@@ -53,24 +59,19 @@
     "signed_authority_decision_intake_commit": "f03e970bdfe7135dc291607cf2676177c0ae3f87",
     "signed_authority_decision_draft_commit": "7b85d5a9ebc16b91834fc2a7d3f85e560359f918",
     "signed_authority_decision_submission_processor_commit": "25031fb4a93df94c9e48be3e5f2c37d774cd0f19",
-    "signed_authority_decision_blocked_audit_commit": "d2e4afd12373ba07b10ca8017e50a3d0618e86d5"
+    "signed_authority_decision_blocked_audit_commit": "d2e4afd12373ba07b10ca8017e50a3d0618e86d5",
+    "signed_authority_decision_commit": "f7ccdc94636b6dc6be6f3ce10088d572c7f73d98",
+    "signed_authority_validation_commit": "c27e35970659f4e6252807ff9063fd00bc09ff4c",
+    "signed_authority_intake_routing_commit": "f27eb72e0270a8b89d75d9ace1287b56739c6e75"
   },
   "expected_outputs": [
-    "signed human authority decision selecting one or more authority choices, or rejecting all lanes"
+    "T1A authorized panel allocation recovery child result",
+    "T1B authorized component geometry recovery child result",
+    "T1C authorized topology sizing rule recovery child result"
   ],
-  "last_heartbeat": "2026-06-24T18:12:23.1653462+08:00",
+  "last_heartbeat": "2026-06-25T11:08:50.6520818+08:00",
   "retries": {},
-  "blockers": [
-    {
-      "classification": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION_REQUIRED",
-      "status": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
-      "blocked_audit": "orchestration/master/blocked-audits/SMV1-HUMAN-SOURCE-RULE-AUTHORITY-DECISION-BLOCKED.json",
-      "strict_blocked_audit_threshold_met": true,
-      "autonomous_progress_exhausted": true,
-      "required_external_input": "signed authority decision selecting A/B/C or D",
-      "resume_action": "process signed decision with scripts/process_signed_authority_decision.py"
-    }
-  ],
+  "blockers": [],
   "audit_state": {
     "T0": "INCONCLUSIVE_LOW_COVERAGE",
     "safety_and_implementation_integrity": "PASS",
@@ -87,7 +88,9 @@
     "signed_authority_decision_intake": "SIGNED_AUTHORITY_DECISION_INTAKE_READY_NO_AUTHORITY_SELECTED",
     "signed_authority_decision_draft": "UNSIGNED_AUTHORITY_DECISION_DRAFT_READY_FAIL_CLOSED",
     "signed_authority_decision_submission_processor": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED",
-    "signed_authority_decision_blocked_audit": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION"
+    "signed_authority_decision_blocked_audit": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
+    "signed_human_authority_decision": "SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY",
+    "T1_authorized_recovery": "WORKTREES_PENDING"
   },
   "merge_state": {
     "pending_child_commits": [],
@@ -104,9 +107,12 @@
       "f03e970bdfe7135dc291607cf2676177c0ae3f87",
       "7b85d5a9ebc16b91834fc2a7d3f85e560359f918",
       "25031fb4a93df94c9e48be3e5f2c37d774cd0f19",
-      "d2e4afd12373ba07b10ca8017e50a3d0618e86d5"
+      "d2e4afd12373ba07b10ca8017e50a3d0618e86d5",
+      "f7ccdc94636b6dc6be6f3ce10088d572c7f73d98",
+      "c27e35970659f4e6252807ff9063fd00bc09ff4c",
+      "f27eb72e0270a8b89d75d9ace1287b56739c6e75"
     ],
-    "last_merge_result": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION"
+    "last_merge_result": "SIGNED_AUTHORITY_DECISION_ACCEPTED_T1_AUTHORIZED_RECOVERY_QUEUED"
   },
   "pending_worktrees": [
     {
@@ -116,19 +122,44 @@
       "thread_id": null,
       "status": "SUPERSEDED_BY_FALLBACK_SUBAGENT",
       "replacement_agent_id": "019ef8bb-cadd-78d2-bd33-86de4072ce3f"
+    },
+    {
+      "task_id": "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
+      "pending_worktree_id": "local:f3c896b6-d6ca-4557-b4de-e3a6646e7898",
+      "requested_at": "2026-06-25T11:08:50.6520818+08:00",
+      "thread_id": null,
+      "status": "WORKTREE_PENDING",
+      "branch_name": "smv1-t1a-panel-allocation-recovery"
+    },
+    {
+      "task_id": "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
+      "pending_worktree_id": "local:65737500-91f4-4489-9bcb-426004734398",
+      "requested_at": "2026-06-25T11:08:50.6520818+08:00",
+      "thread_id": null,
+      "status": "WORKTREE_PENDING",
+      "branch_name": "smv1-t1b-component-geometry-recovery"
+    },
+    {
+      "task_id": "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
+      "pending_worktree_id": "local:42e9df4f-5b6b-4740-ba22-c077b18055d0",
+      "requested_at": "2026-06-25T11:08:50.6520818+08:00",
+      "thread_id": null,
+      "status": "WORKTREE_PENDING",
+      "branch_name": "smv1-t1c-topology-sizing-rule-recovery"
     }
   ],
   "heartbeat_automation": {
-    "automation_id": "smv1-master-autopilot-heartbeat",
+    "automation_id": "plc-panels-master-autopilot-heartbeat",
     "kind": "heartbeat",
     "cadence": "15 minutes",
     "status": "ACTIVE",
-    "created_at": "2026-06-24T16:22:58.2161776+08:00"
+    "created_at": "2026-06-25T11:08:50.6520818+08:00",
+    "supersedes_automation_id": "smv1-master-autopilot-heartbeat"
   },
   "latest_verified_test_result": {
     "command": "python scripts/run_tests.py",
     "status": "PASS",
-    "verified_at": "2026-06-24T18:12:23.1653462+08:00"
+    "verified_at": "2026-06-25T11:08:50.6520818+08:00"
   },
   "scoped_workflow_freeze_results": {
     "legacy_baseline_024": "PASS",
@@ -142,7 +173,7 @@
     "post_design_leakage": 0
   },
   "readiness_gate_state": {
-    "status": "HUMAN_SOURCE_RULE_AUTHORITY_DECISION_REQUIRED",
+    "status": "T1_AUTHORIZED_RECOVERY_QUEUED",
     "highest_allowed_success_status": "READY_FOR_PRIVATE_PREVIEW",
     "forbidden_status": "PRODUCTION_APPROVED",
     "customer_pdf_dxf_dwg_generation_count": 0
@@ -155,7 +186,10 @@
     "t1_independent_recovery_audit": "PASS_SAFE_UNRESOLVED_T1_NO_COMPLIANT_RECOVERY_PATHS",
     "unsupported_assignments": 0,
     "unsupported_placements": 0,
-    "accepted_hard_constraint_violations": 0
+    "accepted_hard_constraint_violations": 0,
+    "signed_authority_decision_validation": "PASS",
+    "signed_authority_decision_next_gate": "ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX",
+    "authorized_recovery_threads": "T1A/T1B/T1C worktrees pending"
   },
   "untracked_file_policy": {
     "permitted_pre_existing_untracked": [

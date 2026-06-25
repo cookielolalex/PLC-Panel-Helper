@@ -1,7 +1,7 @@
 # SESSION CHECKPOINT
 
-Current phase: blocked at signed source/rule authority decision gate; signed
-human authority decision required.
+Current phase: signed source/rule authority decision accepted; T1 authorized
+recovery lanes queued.
 
 Accepted release: none.
 
@@ -9,7 +9,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+Current status: `SIGNED_AUTHORITY_DECISION_ACCEPTED_T1_AUTHORIZED_RECOVERY_QUEUED`.
 
 Current candidate: `1110101`.
 
@@ -554,7 +554,40 @@ Strict blocked audit:
   artifact, completed reference, customer drawing, PDF, DXF, or DWG was
   changed or generated.
 
+Signed authority decision accepted:
+
+- Decision: `D-0047`.
+- Signed date: `2026-06-25`.
+- Signer: `PROJECT_OWNER_USER`.
+- Selected choices: `A`, `B`, and `C`.
+- Rejected choice: `D`.
+- Validation status: `PASS`.
+- Processor status: `SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY`.
+- Next gate:
+  `ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`.
+- Evidence:
+  `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision.json`,
+  `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_validation.json`,
+  `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission/submission_summary.json`,
+  and
+  `orchestration/master/child-results/SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION.json`.
+- Full tests `PASS`; legacy, active sheetmetal-v1, and topology-stage scoped
+  freezes `PASS`.
+- `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
+- No customer drawing, PDF, DXF, or DWG was generated.
+- No production approval was declared.
+
+T1 authorized recovery lanes queued:
+
+- `SMV1-T1A-PANEL-ALLOCATION-RECOVERY`:
+  pending worktree `local:f3c896b6-d6ca-4557-b4de-e3a6646e7898`.
+- `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY`:
+  pending worktree `local:65737500-91f4-4489-9bcb-426004734398`.
+- `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY`:
+  pending worktree `local:42e9df4f-5b6b-4740-ba22-c077b18055d0`.
+
 Exact next action:
 
-Wait for `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION` selecting one or
-more authority choices, or rejecting all lanes for terminal-candidate review.
+Monitor `MONITOR_T1A_T1B_T1C_AUTHORIZED_RECOVERY_THREADS`, reconcile concrete
+thread IDs or child results when available, then integrate only schema-valid
+hashed outputs and run the required independent audit before T2.

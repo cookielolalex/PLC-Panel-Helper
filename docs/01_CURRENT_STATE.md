@@ -499,3 +499,28 @@ no implementation, customer drawing, or production approval was authorized.
 
 Exact next action: wait for
 `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+
+Signed authority decision after `D-0047`: the project owner signed and selected
+choices `A`, `B`, and `C`, and did not select `D`. The signed decision validates
+against `schemas/signed_authority_decision.schema.json` and the processor routes
+the repository to `ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`.
+This accepts authority to run bounded recovery lanes for panel allocation
+source review, component geometry authority, and topology/sizing/placement rule
+authority; it does not authorize implementation without tests first, customer
+drawing/PDF/DXF/DWG generation, fabrication release, production approval,
+source-root mutation, completed-reference inference, post-design label
+authority, or unrestricted private-content transmission. `docs/PRIVACY_APPROVAL.md`
+remains `NOT_APPROVED`.
+
+T1 authorized recovery dispatch after `D-0047`: three worktree lanes are
+pending: `SMV1-T1A-PANEL-ALLOCATION-RECOVERY`
+(`local:f3c896b6-d6ca-4557-b4de-e3a6646e7898`),
+`SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY`
+(`local:65737500-91f4-4489-9bcb-426004734398`), and
+`SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY`
+(`local:42e9df4f-5b6b-4740-ba22-c077b18055d0`). Integration and independent
+audit remain blocked until schema-valid hashed child results and a frozen
+integration commit exist.
+
+Exact next action: monitor
+`MONITOR_T1A_T1B_T1C_AUTHORIZED_RECOVERY_THREADS`.

@@ -5,7 +5,7 @@ Status: initialized.
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
 Current canonical status:
-`BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+`SIGNED_AUTHORITY_DECISION_ACCEPTED_T1_AUTHORIZED_RECOVERY_QUEUED`.
 
 Verified checkpoint:
 
@@ -21,7 +21,7 @@ Verified checkpoint:
 - Sheetmetal-v1 customer PDF/DXF/DWG output candidates: `0`.
 
 Next action:
-`WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+`MONITOR_T1A_T1B_T1C_AUTHORIZED_RECOVERY_THREADS`.
 
 Strict blocked audit:
 
@@ -52,7 +52,7 @@ T0 audit dispatch:
 
 Heartbeat:
 
-- Automation `smv1-master-autopilot-heartbeat` is active on a 15-minute
+- Automation `plc-panels-master-autopilot-heartbeat` is active on a 15-minute
   cadence for this coordinator thread.
 
 T0 audit result:
@@ -191,6 +191,33 @@ Signed authority decision draft:
   completed-reference, customer drawing, PDF, DXF, or DWG artifact was changed
   or generated.
 - Next action: `WAIT_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+
+Signed authority decision accepted:
+
+- Decision commits: signed decision `f7ccdc9`, validation evidence `c27e359`,
+  and intake routing `f27eb72`.
+- Selected choices: `A`, `B`, and `C`.
+- Rejected choice: `D`.
+- Validation status: `PASS`; processor status:
+  `SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY`.
+- Routing gate:
+  `ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`.
+- Implementation authorization remains false at the decision boundary.
+- Customer PDF/DXF/DWG generation authorization remains false.
+- Production approval remains forbidden.
+- `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
+
+T1 authorized recovery dispatch:
+
+- `SMV1-T1A-PANEL-ALLOCATION-RECOVERY` pending worktree:
+  `local:f3c896b6-d6ca-4557-b4de-e3a6646e7898`.
+- `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY` pending worktree:
+  `local:65737500-91f4-4489-9bcb-426004734398`.
+- `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY` pending worktree:
+  `local:42e9df4f-5b6b-4740-ba22-c077b18055d0`.
+- Integration remains blocked until schema-valid hashed T1A/T1B/T1C child
+  results are available.
+- Independent audit remains blocked until a frozen integration commit exists.
 
 Signed authority decision submission processor:
 

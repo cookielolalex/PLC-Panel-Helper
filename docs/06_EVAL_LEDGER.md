@@ -1209,3 +1209,44 @@ Evidence:
 `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission_processor_summary.json`,
 and
 `orchestration/master/child-results/SMV1-SIGNED-AUTHORITY-DECISION-SUBMISSION-PROCESSOR.json`.
+
+## sheetmetal-v1 signed authority decision accepted
+
+Status: `SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY`.
+
+Decision: `D-0047`.
+
+Result:
+
+- Selected choices: `A`, `B`, and `C`.
+- Rejected choice: `D`.
+- Validator status: `PASS`.
+- Processor next action:
+  `ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`.
+- Implementation authorization: `false`.
+- Customer PDF/DXF/DWG generation authorization: `false`.
+- Production approval declared: `false`.
+- Privacy approval remains `NOT_APPROVED`.
+
+Verification:
+
+- Full `scripts/run_tests.py`: `PASS`.
+- Legacy baseline-024 scoped freeze: `PASS`.
+- Active sheetmetal-v1 scoped freeze: `PASS`.
+- Topology/sizing/placement scoped freeze: `PASS`.
+
+T1 authorized recovery queue:
+
+- `SMV1-T1A-PANEL-ALLOCATION-RECOVERY` pending worktree
+  `local:f3c896b6-d6ca-4557-b4de-e3a6646e7898`.
+- `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY` pending worktree
+  `local:65737500-91f4-4489-9bcb-426004734398`.
+- `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY` pending worktree
+  `local:42e9df4f-5b6b-4740-ba22-c077b18055d0`.
+
+Evidence:
+`reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision.json`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_validation.json`,
+`reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission/submission_summary.json`,
+and
+`orchestration/master/child-results/SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION.json`.
