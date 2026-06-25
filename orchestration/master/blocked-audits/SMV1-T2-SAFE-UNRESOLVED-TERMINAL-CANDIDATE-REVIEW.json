@@ -1,0 +1,184 @@
+{
+  "schema_version": "master-autopilot-terminal-candidate-review-v1",
+  "audit_id": "SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW",
+  "created_at": "2026-06-25T15:02:41.722000+08:00",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "starting_commit": "b26a1b72b76a2a475f1e45b38aa82ac329c7f9e1",
+  "current_stage": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
+  "review_status": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED",
+  "terminal_candidate_status": "STRUCTURAL_SOURCE_INSUFFICIENCY_PENDING_ADDITIONAL_APPROVED_EVIDENCE",
+  "terminal_candidate_classes": [
+    "STRUCTURAL_SOURCE_INSUFFICIENCY"
+  ],
+  "conditional_classes": [
+    "FABRICATION_DOMAIN_DECISION_REQUIRED_FOR_NEW_OR_PROMOTED_T1C_RULE_AUTHORITY"
+  ],
+  "autonomous_recovery_available": false,
+  "autonomous_progress_exhausted": true,
+  "autonomous_progress_exhaustion_reason": "Accepted T1 authorized recovery and T2 independent audit produced zero promotable T2 inputs; coverage remains source-limited at assignment 0/53, real-project geometry 0/53, and placement 0/53.",
+  "input_evidence": [
+    {
+      "name": "t2_audit_child_result",
+      "path": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json",
+      "sha256": "A059B0170F3CB0983D30B424376B85BF209F89B7BDA613C7A429A6934AA78B20"
+    },
+    {
+      "name": "t2_audit_report",
+      "path": "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json",
+      "sha256": "EA892B17C0ED3085251901B672DCF7C1EF06E2C92A6587A6A34B3D294798070C"
+    },
+    {
+      "name": "t2_audit_report_md",
+      "path": "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.md",
+      "sha256": "80FDD2DC6618D27012E2A9607148DC14234A10D8C6987850251C14886F6BCB82"
+    },
+    {
+      "name": "t2_recalibration_child_result",
+      "path": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json",
+      "sha256": "0E79FBA1945001473E74639CEFF9D13BBB1C516CC2FC24923BFA241D311283E0"
+    },
+    {
+      "name": "t2_recalibration_summary",
+      "path": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+      "sha256": "99028CC8233F074A98399B86FC74A16B9C051AE5F6324B09D36654A76FEC7141"
+    }
+  ],
+  "json_parse_validation": {
+    "status": "PASS",
+    "artifacts": [
+      "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json",
+      "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json",
+      "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json",
+      "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json"
+    ]
+  },
+  "required_field_validation": {
+    "status": "PASS",
+    "artifacts": {
+      "t2_audit_child_result": {
+        "status": "PASS",
+        "missing_fields": []
+      },
+      "t2_audit_report": {
+        "status": "PASS",
+        "missing_fields": []
+      },
+      "t2_recalibration_child_result": {
+        "status": "PASS",
+        "missing_fields": []
+      },
+      "t2_recalibration_summary": {
+        "status": "PASS",
+        "missing_fields": []
+      }
+    }
+  },
+  "hash_validation": {
+    "status": "PASS",
+    "non_self_hash_checks": [
+      {
+        "source": "t2_audit_child_result",
+        "path": "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json",
+        "declared_sha256": "EA892B17C0ED3085251901B672DCF7C1EF06E2C92A6587A6A34B3D294798070C",
+        "actual_sha256": "EA892B17C0ED3085251901B672DCF7C1EF06E2C92A6587A6A34B3D294798070C",
+        "status": "PASS"
+      },
+      {
+        "source": "t2_audit_child_result",
+        "path": "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.md",
+        "declared_sha256": "80FDD2DC6618D27012E2A9607148DC14234A10D8C6987850251C14886F6BCB82",
+        "actual_sha256": "80FDD2DC6618D27012E2A9607148DC14234A10D8C6987850251C14886F6BCB82",
+        "status": "PASS"
+      },
+      {
+        "source": "t2_recalibration_child_result",
+        "path": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+        "declared_sha256": "99028CC8233F074A98399B86FC74A16B9C051AE5F6324B09D36654A76FEC7141",
+        "actual_sha256": "99028CC8233F074A98399B86FC74A16B9C051AE5F6324B09D36654A76FEC7141",
+        "status": "PASS"
+      },
+      {
+        "source": "t2_recalibration_child_result",
+        "path": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.md",
+        "declared_sha256": "0616CB9B96DB0D13471B76C7F18E4C0E99706D1AD730C5376D8D7A50AABDAD48",
+        "actual_sha256": "0616CB9B96DB0D13471B76C7F18E4C0E99706D1AD730C5376D8D7A50AABDAD48",
+        "status": "PASS"
+      }
+    ]
+  },
+  "privacy_cleanliness": {
+    "status": "PASS",
+    "source_roots_read_or_modified": false,
+    "private_paths_read_or_written": false,
+    "completed_references_read": false,
+    "post_design_labels_read": false,
+    "external_private_transmission": false,
+    "private_project_data_transmitted": false
+  },
+  "t1_boundaries": {
+    "t1a_panel_allocation": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+    "t1b_component_geometry": "SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_0_OF_53_SYNTHETIC_ONLY",
+    "t1c_topology_sizing_rules": "PROPOSAL_ONLY_NOT_PROMOTED"
+  },
+  "coverage": {
+    "assignment": {
+      "numerator": 0,
+      "denominator": 53
+    },
+    "geometry": {
+      "verified_or_generic": 0,
+      "denominator": 53
+    },
+    "sizing": {
+      "supported_dimensions": 0,
+      "denominator": 0,
+      "note": "not reported as recall for zero source-supported denominator"
+    },
+    "placement": {
+      "numerator": 0,
+      "denominator": 53
+    }
+  },
+  "promotion_decisions": {
+    "canonical_model_promotion_approved": false,
+    "renderer_promotion_approved": false,
+    "private_preview_readiness_approved": false,
+    "customer_drawing_generation_approved": false,
+    "production_approval_declared": false
+  },
+  "hard_gates": {
+    "source_root_mutation_count": 0,
+    "private_workspace_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "customer_drawing_generation_count": 0,
+    "production_approval_declared": false,
+    "model_promotion_approved": false,
+    "renderer_promotion_approved": false,
+    "private_preview_readiness_approved": false,
+    "t1c_rule_artifacts_promoted": false,
+    "tracked_private_artifacts": 0,
+    "forbidden_screening_script_read_staged_executed_or_modified": false
+  },
+  "required_external_input": [
+    "additional approved panel allocation source that passes source-role and chronology gates",
+    "real component geometry authority or approved generic envelope rule with provenance",
+    "independently accepted T1C rule promotion evidence under the signed authority boundary"
+  ],
+  "blocked_promotions": [
+    "canonical panel model promotion",
+    "renderer promotion",
+    "private preview readiness",
+    "customer drawing generation",
+    "production approval"
+  ],
+  "next_action": "WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE",
+  "resume_condition": "Provide additional approved source or rule evidence, then route it through the proposal/test-first and independent-audit gates before any model, renderer, preview, or drawing promotion.",
+  "output_hashes": {
+    "reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.md": "FDD042E0A066C670415D95E0DE0F9615811BEF9500914990E55767C498FE9484",
+    "reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.json": "F415BB209C0C09FBC302D82E4EC3D0838D93B6979DBD690712BCDD383AD5A69E",
+    "orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}

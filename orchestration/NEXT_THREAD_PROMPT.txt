@@ -19,83 +19,26 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED`
+`T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED`
 
 Active goal:
 
 `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`
 
-Integrated and audited T1 authorized recovery evidence:
+Terminal-candidate evidence:
 
-- Integration child result:
-  `orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json`.
-- Integration summary:
-  `reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json`.
-- Independent audit brief:
-  `orchestration/tasks/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.md`.
-- Independent audit visible-file manifest:
-  `orchestration/input_manifests/sheetmetal-v1/t1-authorized-recovery/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.visible_files.json`.
-- Accepted independent audit child result:
-  `orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json`.
-- Accepted independent audit report:
-  `reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json`.
+- T2 safe-unresolved terminal-candidate review: `orchestration\master\blocked-audits\SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json`.
+- Terminal-candidate review report JSON: `reports\sheetmetal-v1\t2-recalibration\terminal-candidate-review\t2_safe_unresolved_terminal_candidate_review.json`.
+- Terminal-candidate review report: `reports\sheetmetal-v1\t2-recalibration\terminal-candidate-review\t2_safe_unresolved_terminal_candidate_review.md`.
+- Accepted T2 independent audit child result: `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json`.
+- Accepted T2 independent audit report: `reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json`.
 
-T1 authorized recovery dispositions:
+Boundary:
 
-- T1A final status:
-  `SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE`.
-- T1B final status:
-  `SAFE_UNRESOLVED_GEOMETRY_REQUIRES_MORE_AUTHORITY_OR_DATA`; real-project
-  geometry coverage remains `0/53`; synthetic authority-state coverage only.
-- T1C worker status:
-  `RECOVERABLE_BLOCKER`; coordinator stale-hash validation was not reproduced
-  on `main`; rule artifacts remain proposal-only and were not promoted by the
-  independent audit.
-
-Verification:
-
-- Full `scripts/run_tests.py`: `PASS`.
-- Legacy baseline-024 scoped freeze: `PASS`.
-- Active sheetmetal-v1 scoped freeze: `PASS`.
-- Topology/sizing/placement scoped freeze: `PASS`.
-- Independent T1 authorized recovery audit:
-  `PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY`.
-
-Hard boundaries:
-
-- `docs/PRIVACY_APPROVAL.md` remains `NOT_APPROVED`.
-- Do not change it to `APPROVED`.
-- Do not upload or transmit private files, customer identity, source workbooks,
-  drawings, OCR text, screenshots, crops, project quantities, project topology,
-  panel assignments, or private paths externally.
-- Do not use completed references or post-design labels as generator inputs.
-- Do not mutate source roots or `.private` artifacts.
-- Do not generate customer PDF, DXF, DWG, or fabrication drawings at this
-  stage.
-- Never declare `PRODUCTION_APPROVED`.
-- T1C rule artifacts must remain proposal-only unless an independent audit
-  explicitly accepts them under the signed authority boundary.
+The T2 independent audit was accepted only as safe unresolved. It does not promote the canonical model, renderer, private-preview readiness, customer drawing generation, or production approval. T1A and T1B remain safe unresolved. T1C rule artifacts remain proposal-only unless later accepted evidence explicitly changes that boundary under signed authority and independent audit.
 
 Exact next action:
 
-`ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW`
+`WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`
 
-Review the accepted T2 independent-audit result as a terminal-candidate gate.
-Do not promote the canonical model, renderer, private-preview readiness, or
-customer drawing generation from a safe-unresolved audit. Preserve T1A/T1B as
-safe unresolved and keep T1C rule artifacts proposal-only unless later
-accepted evidence explicitly changes that boundary under signed authority.
-
-T2 recalibration evidence:
-
-- T2 child result: `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json`.
-- T2 summary: `reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json`.
-- T2 audit brief: `orchestration/tasks/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.md`.
-- T2 audit visible-file manifest: `orchestration/input_manifests/sheetmetal-v1/t2-recalibration/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.visible_files.json`.
-- T2 independent audit child result: `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json`.
-- T2 independent audit report: `reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json`.
-
-Enter terminal-candidate review for the unresolved evidence gap. Keep T1C
-proposal-only, do not mutate source roots or `.private`, do not transmit
-private project data, do not generate customer drawings, and never declare
-production approval.
+Do not mutate source roots or `.private`, do not transmit private project data, do not generate customer drawings, and never declare production approval. Resume only if additional approved panel allocation source evidence, real component geometry authority or approved generic envelope rules, or independently accepted T1C rule-promotion evidence is provided and routed through proposal/test-first plus independent-audit gates.

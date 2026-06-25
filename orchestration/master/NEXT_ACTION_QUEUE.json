@@ -143,10 +143,10 @@
       "task_id": "SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW",
       "stage_id": "T2_TERMINAL_CANDIDATE_REVIEW",
       "role": "coordinator",
-      "status": "READY_TO_START",
+      "status": "ACCEPTED_TERMINAL_CANDIDATE_RECORDED",
       "agent_id": "COORDINATOR",
       "starting_commit": "a8acc55779afbaec874d9102bbd206d9223b13b1",
-      "action": "REVIEW_T2_SAFE_UNRESOLVED_FOR_STRUCTURAL_SOURCE_INSUFFICIENCY_OR_REQUIRED_EXTERNAL_EVIDENCE",
+      "action": "RECORDED_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
       "expected_result_path": "orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json",
       "hard_requirements": [
         "do_not_promote_model_or_renderer_from_safe_unresolved_audit",
@@ -155,7 +155,30 @@
         "identify_required_external_or_approved_evidence_if_any",
         "no_customer_pdf_dxf_dwg_generation",
         "do_not_declare_production_approved"
-      ]
+      ],
+      "result_hash": "36E118FA9B6D906A0D740B7D83F1D1304EA2220599DF40966193DC4F95C7C766",
+      "blocker_class": "STRUCTURAL_SOURCE_INSUFFICIENCY",
+      "next_action": "WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE"
+    },
+    {
+      "task_id": "SMV1-T2-ADDITIONAL-APPROVED-EVIDENCE-INTAKE",
+      "stage_id": "T2_TERMINAL_CANDIDATE_REVIEW",
+      "role": "human_or_signed_authority_evidence",
+      "status": "BLOCKED_EXTERNAL_INPUT_REQUIRED",
+      "agent_id": "EXTERNAL_EVIDENCE_REQUIRED",
+      "starting_commit": "b26a1b72b76a2a475f1e45b38aa82ac329c7f9e1",
+      "action": "WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE",
+      "expected_result_path": "orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json",
+      "hard_requirements": [
+        "new_evidence_must_be_approved_source_or_rule_authority",
+        "proposal_first_and_tests_before_fix_before_any_implementation",
+        "independent_audit_required_before_model_or_renderer_promotion",
+        "preserve_t1a_t1b_safe_unresolved_until_evidence_changes_boundary",
+        "keep_t1c_rule_artifacts_proposal_only_until_independently_accepted",
+        "no_customer_pdf_dxf_dwg_generation",
+        "do_not_declare_production_approved"
+      ],
+      "blocking_condition": "T2 terminal-candidate review found no autonomous promotable evidence path."
     }
   ]
 }

@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: T2 recalibration audit passed safe unresolved; terminal-candidate review required.
+Current phase: T2 safe-unresolved terminal-candidate review recorded; awaiting additional approved source or rule evidence.
 
 Accepted release: none.
 
@@ -8,7 +8,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED`.
+Current status: `T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED`.
 
 Current candidate: `1110101`.
 
@@ -703,4 +703,9 @@ and
 `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json`.
 
 Exact next action:
-`ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW`.
+`WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`.
+
+
+T2 safe-unresolved terminal-candidate review after `D-0053`: the coordinator accepted only a terminal-candidate record from the T2 independent audit. The review status is `T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED` and the terminal candidate class is `STRUCTURAL_SOURCE_INSUFFICIENCY`. No model, renderer, private-preview, customer drawing, or production approval promotion is authorized from this safe-unresolved audit. Required external or approved evidence is an approved panel allocation source, real component geometry authority or approved generic envelope rule, or independently accepted T1C rule promotion evidence under the signed authority boundary. Evidence is recorded in `orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json`, `reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.json`, and `reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.md`.
+
+Exact next action: `WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`.

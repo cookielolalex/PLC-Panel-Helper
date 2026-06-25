@@ -99,35 +99,44 @@
     {
       "id": "T2_SAFE_UNRESOLVED_TERMINAL_REVIEW",
       "name": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
-      "status": "READY_TO_START",
+      "status": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED",
       "input_evidence": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json",
-      "next_action": "ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
-      "promotion_status": "MODEL_AND_RENDERER_PROMOTION_BLOCKED_PENDING_FURTHER_ACCEPTED_EVIDENCE"
+      "next_action": "WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE",
+      "promotion_status": "MODEL_RENDERER_PREVIEW_AND_DRAWING_PROMOTION_BLOCKED_PENDING_ADDITIONAL_APPROVED_EVIDENCE",
+      "evidence": "orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json",
+      "result_hash": "36E118FA9B6D906A0D740B7D83F1D1304EA2220599DF40966193DC4F95C7C766",
+      "terminal_candidate_class": "STRUCTURAL_SOURCE_INSUFFICIENCY",
+      "autonomous_recovery_available": false,
+      "required_external_input": [
+        "additional approved panel allocation source that passes source-role and chronology gates",
+        "real component geometry authority or approved generic envelope rule with provenance",
+        "independently accepted T1C rule promotion evidence under the signed authority boundary"
+      ]
     },
     {
       "id": "T3",
       "name": "CANONICAL_DRAWING_MODEL",
-      "status": "PENDING"
+      "status": "PENDING_BLOCKED_BY_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW"
     },
     {
       "id": "T4",
       "name": "RENDERER_FOUNDATION",
-      "status": "PENDING"
+      "status": "PENDING_BLOCKED_BY_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW"
     },
     {
       "id": "T5",
       "name": "ONE_PROJECT_BLIND_PRIVATE_PREVIEW",
-      "status": "PENDING"
+      "status": "PENDING_BLOCKED_BY_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW"
     },
     {
       "id": "T6",
       "name": "MULTI_PROJECT_EXPANSION",
-      "status": "PENDING"
+      "status": "PENDING_BLOCKED_BY_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW"
     },
     {
       "id": "T7",
       "name": "PRIVATE_PREVIEW_READINESS_AUDIT",
-      "status": "PENDING"
+      "status": "PENDING_BLOCKED_BY_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW"
     }
   ],
   "terminal_states": [

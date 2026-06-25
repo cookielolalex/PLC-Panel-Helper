@@ -526,3 +526,8 @@
 - Accepted `SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT` as `PASS_T2_RECALIBRATION_AUDIT` for the safe-unresolved gate only.
 - Kept model promotion, renderer promotion, private preview readiness, customer drawing generation, and production approval blocked pending further accepted evidence.
 - Set next action to `ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW`.
+
+- Recorded T2 safe-unresolved terminal-candidate review as `T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED`.
+- Classified the unresolved gate as `STRUCTURAL_SOURCE_INSUFFICIENCY` pending additional approved panel allocation, component geometry, or independently accepted T1C rule-promotion evidence.
+- Kept canonical model promotion, renderer promotion, private preview readiness, customer drawing generation, and production approval blocked.
+- Stopped the heartbeat after terminal-candidate recording because there is no further autonomous action until approved evidence is provided.

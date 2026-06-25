@@ -1355,3 +1355,20 @@ Evidence:
 `reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.md`,
 and
 `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json`.
+
+
+## sheetmetal-v1 T2 safe-unresolved terminal-candidate review
+
+Status: `T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED`.
+
+Decision: `D-0053`.
+
+The coordinator reviewed the accepted T2 independent audit as a terminal-candidate gate. JSON parseability, required fields, declared non-self hashes, and privacy cleanliness passed. The result is a terminal candidate for `STRUCTURAL_SOURCE_INSUFFICIENCY`, with additional approved evidence required before any model, renderer, private preview, or customer drawing promotion can resume.
+
+Boundaries remain unchanged: T1A and T1B are safe unresolved, T1C rule artifacts are proposal-only, source roots and `.private` were not mutated, customer PDF/DXF/DWG generation remains `0`, and production approval remains `false`.
+
+Evidence:
+`orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json`,
+`reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.json`,
+and
+`reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.md`.

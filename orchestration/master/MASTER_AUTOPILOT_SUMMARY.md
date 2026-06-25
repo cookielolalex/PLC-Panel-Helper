@@ -1,11 +1,11 @@
 # Master Autopilot Summary
 
-Status: initialized.
+Status: T2 safe-unresolved terminal-candidate review recorded.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
 Current canonical status:
-`SIGNED_AUTHORITY_DECISION_ACCEPTED_T1_AUTHORIZED_RECOVERY_QUEUED`.
+`T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED`.
 
 Verified checkpoint:
 
@@ -21,7 +21,7 @@ Verified checkpoint:
 - Sheetmetal-v1 customer PDF/DXF/DWG output candidates: `0`.
 
 Next action:
-`MONITOR_T1A_T1B_T1C_AUTHORIZED_RECOVERY_THREADS`.
+`WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`.
 
 Strict blocked audit:
 
@@ -273,3 +273,14 @@ T2 topology/sizing/placement independent audit:
 - Full tests and legacy, active sheetmetal-v1, and topology-stage scoped freezes pass.
 - Model and renderer promotion remain blocked pending further accepted evidence.
 - Next action: `ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW`.
+
+
+T2 safe-unresolved terminal-candidate review:
+
+- Status: `T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED`.
+- Evidence: `orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json`.
+- Terminal candidate class: `STRUCTURAL_SOURCE_INSUFFICIENCY`.
+- T1A/T1B remain safe unresolved; T1C remains proposal-only and not promoted.
+- Model promotion, renderer promotion, private-preview readiness, customer drawing generation, and production approval remain blocked.
+- Next action: `WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`.
+- Heartbeat automation status: stopped after this terminal-candidate review because additional approved source or rule evidence is required before further autonomous progress.

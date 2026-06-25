@@ -2,10 +2,10 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "a8acc55779afbaec874d9102bbd206d9223b13b1",
-  "current_canonical_status": "T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED",
+  "current_head": "b26a1b72b76a2a475f1e45b38aa82ac329c7f9e1",
+  "current_canonical_status": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED",
   "current_stage": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
-  "next_action": "ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
+  "next_action": "WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE",
   "active_thread_ids": [],
   "task_ids": [
     "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
@@ -70,9 +70,10 @@
     "signed_authority_intake_routing_commit": "f27eb72e0270a8b89d75d9ace1287b56739c6e75"
   },
   "expected_outputs": [
-    "T2 safe-unresolved terminal-candidate review packet"
+    "T2 safe-unresolved terminal-candidate review packet",
+    "additional approved source or rule evidence before any promotion"
   ],
-  "last_heartbeat": "2026-06-25T14:33:23.061600+08:00",
+  "last_heartbeat": "2026-06-25T15:02:41.722000+08:00",
   "retries": {},
   "blockers": [],
   "audit_state": {
@@ -99,7 +100,9 @@
     "T1_authorized_recovery_independent_audit": "PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY",
     "T2": "RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED",
     "T2_recalibration": "T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED",
-    "T2_independent_audit": "PASS_T2_RECALIBRATION_AUDIT_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED"
+    "T2_independent_audit": "PASS_T2_RECALIBRATION_AUDIT_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED",
+    "T2_safe_unresolved_terminal_candidate_review": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED",
+    "T2_terminal_candidate_class": "STRUCTURAL_SOURCE_INSUFFICIENCY_PENDING_ADDITIONAL_APPROVED_EVIDENCE"
   },
   "merge_state": {
     "pending_child_commits": [],
@@ -133,7 +136,7 @@
       "56220a86d2d47db417a184916078697516254435",
       "a8acc55779afbaec874d9102bbd206d9223b13b1"
     ],
-    "last_merge_result": "T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED"
+    "last_merge_result": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED"
   },
   "pending_worktrees": [
     {
@@ -207,15 +210,17 @@
     "automation_id": "plc-panels-master-autopilot-heartbeat",
     "kind": "heartbeat",
     "cadence": "15 minutes",
-    "status": "ACTIVE",
+    "status": "STOPPED_AFTER_TERMINAL_CANDIDATE_REVIEW",
     "created_at": "2026-06-25T11:08:50.6520818+08:00",
-    "supersedes_automation_id": "smv1-master-autopilot-heartbeat"
+    "supersedes_automation_id": "smv1-master-autopilot-heartbeat",
+    "stopped_at": "2026-06-25T15:02:41.722000+08:00",
+    "stop_reason": "terminal candidate review recorded; awaiting additional approved source or rule evidence"
   },
   "latest_verified_test_result": {
     "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/run_tests.py",
     "status": "PASS",
-    "verified_at": "2026-06-25T14:33:23.061600+08:00",
-    "head": "a8acc55779afbaec874d9102bbd206d9223b13b1"
+    "verified_at": "2026-06-25T15:05:06.841847+08:00",
+    "head": "b26a1b72b76a2a475f1e45b38aa82ac329c7f9e1"
   },
   "scoped_workflow_freeze_results": {
     "legacy_baseline_024": "PASS",
@@ -229,10 +234,15 @@
     "post_design_leakage": 0
   },
   "readiness_gate_state": {
-    "status": "T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED",
+    "status": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED",
     "highest_allowed_success_status": "READY_FOR_PRIVATE_PREVIEW",
     "forbidden_status": "PRODUCTION_APPROVED",
-    "customer_pdf_dxf_dwg_generation_count": 0
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "model_promotion_approved": false,
+    "renderer_promotion_approved": false,
+    "private_preview_readiness_approved": false,
+    "customer_drawing_generation_count": 0,
+    "terminal_candidate_class": "STRUCTURAL_SOURCE_INSUFFICIENCY"
   },
   "workflow_freeze_results": {
     "deterministic_topology_stage_rerun": "12/12 byte-identical and canonical",
@@ -255,8 +265,9 @@
     "t2_recalibration": "T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED",
     "t2_recalibration_next_action": "DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT",
     "t2_independent_audit": "PASS_T2_RECALIBRATION_AUDIT_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED",
-    "t2_model_renderer_promotion": "BLOCKED_PENDING_FURTHER_ACCEPTED_EVIDENCE",
-    "t2_next_action": "ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW"
+    "t2_model_renderer_promotion": "BLOCKED_PENDING_ADDITIONAL_APPROVED_EVIDENCE",
+    "t2_next_action": "WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE",
+    "t2_terminal_candidate_review": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED"
   },
   "untracked_file_policy": {
     "permitted_pre_existing_untracked": [

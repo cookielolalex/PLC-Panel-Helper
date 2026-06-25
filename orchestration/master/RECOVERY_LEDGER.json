@@ -93,6 +93,20 @@
       "autonomous_recovery_available": false,
       "next_action": "ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
       "required_external_input": "additional approved panel allocation source, real component geometry authority, or independently accepted T1C rule promotion evidence"
+    },
+    {
+      "ts": "2026-06-25T15:02:41.722000+08:00",
+      "stage": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
+      "status": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED",
+      "blocker_class": "STRUCTURAL_SOURCE_INSUFFICIENCY",
+      "blocked_audit": "orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json",
+      "blocked_audit_hash": "36E118FA9B6D906A0D740B7D83F1D1304EA2220599DF40966193DC4F95C7C766",
+      "t1a": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+      "t1b": "SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_0_OF_53_SYNTHETIC_ONLY",
+      "t1c": "PROPOSAL_ONLY_NOT_PROMOTED",
+      "autonomous_recovery_available": false,
+      "next_action": "WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE",
+      "required_external_input": "additional approved panel allocation source that passes source-role and chronology gates; real component geometry authority or approved generic envelope rule with provenance; independently accepted T1C rule promotion evidence under the signed authority boundary"
     }
   ],
   "blocker_classes": [
