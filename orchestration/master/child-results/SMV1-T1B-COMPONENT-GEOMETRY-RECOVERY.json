@@ -1,0 +1,131 @@
+{
+  "task_id": "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
+  "starting_commit": "5b8dbebc64ab93289f2a5fe709c12751537a8847",
+  "ending_commit": "c53f76e33e83ec4474c7a0c249a74183afe5097c",
+  "tracked_worktree_status": {
+    "before_writes": "CLEAN_TRACKED_ON_DETACHED_HEAD",
+    "branch_created": "codex/smv1-t1b-component-geometry-recovery",
+    "after_implementation_commit": "CLEAN_TRACKED",
+    "after_child_result_write": "CHILD_RESULT_UNTRACKED_PENDING_COMMIT",
+    "tracked_private_artifacts": 0
+  },
+  "test_result": {
+    "targeted_geometry_authority_test": {
+      "command": "bundled Python import run_tests; run test_sheetmetal_v1_component_geometry_authority_states",
+      "status": "PASS"
+    },
+    "sheetmetal_scoped_tests": {
+      "command": "bundled Python import run_tests; run modular foundation, private workspace boundary, component register, component geometry authority, topology calibration tests",
+      "status": "PASS"
+    },
+    "full_test_runner": {
+      "command": "bundled Python scripts/run_tests.py",
+      "status": "FAIL",
+      "failure_class": "STALE_FROZEN_WORKFLOW_MANIFEST_HASHES",
+      "notes": [
+        "Functional tests through sheetmetal-v1 topology tests passed.",
+        "test_frozen_workflow_active_scope_verifier failed with broad HASH_MISMATCH entries against an older active manifest anchor.",
+        "test_frozen_workflow_topology_scope_verifier failed with broad HASH_MISMATCH entries against an older topology manifest anchor.",
+        "This worker did not rewrite frozen manifests."
+      ]
+    }
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": {
+      "fresh_command": "scripts/run_tests.py internal verifier",
+      "status": "PASS"
+    },
+    "sheetmetal_v1_active": {
+      "fresh_command": "scripts/run_tests.py internal verifier",
+      "status": "FAIL_STALE_MANIFEST_HASHES"
+    },
+    "sheetmetal_v1_topology_sizing_placement": {
+      "fresh_command": "scripts/run_tests.py internal verifier",
+      "status": "FAIL_STALE_MANIFEST_HASHES"
+    },
+    "no_frozen_release_or_grader_mutated": true,
+    "frozen_manifests_updated_by_worker": false
+  },
+  "artifacts_created": [
+    "evals/fixtures/sheetmetal-v1/component_geometry_authority_fixture.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_library.proposed.v1.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.md",
+    "orchestration/master/child-results/SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY.json"
+  ],
+  "schemas_validated": {
+    "component_geometry_recovery_report_json_parse": "PASS",
+    "component_geometry_library_proposal_json_parse": "PASS",
+    "synthetic_fixture_source_fact_schema_validation": "PASS_IN_TEST",
+    "synthetic_component_geometry_schema_validation": "PASS_IN_TEST",
+    "child_result_json_parse": "PASS",
+    "recovery_report_instance_schema": "NOT_RUN_NO_DEDICATED_SCHEMA"
+  },
+  "hard_gates": {
+    "overall": "PASS_WITH_SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY",
+    "no_customer_drawing_generation": "PASS_ZERO",
+    "no_pdf_dxf_dwg_generation": "PASS_ZERO",
+    "no_completed_reference_access": "PASS_ZERO",
+    "no_post_design_access": "PASS_ZERO",
+    "no_source_root_mutation": "PASS_ZERO",
+    "no_private_identifier_public_lookup": "PASS_ZERO",
+    "no_private_identifier_output": "PASS_ZERO",
+    "unsupported_real_project_geometry_promotions": "PASS_ZERO",
+    "generic_envelopes_promoted_to_verified_model_geometry": "PASS_ZERO",
+    "private_content_transmissions": "PASS_ZERO",
+    "production_approval_declared": "PASS_ZERO"
+  },
+  "coverage": {
+    "real_project_geometry": {
+      "verified_model_geometry": 0,
+      "approved_generic_conservative_envelope": 0,
+      "geometry_missing": 53,
+      "denominator": 53,
+      "recovery_delta": 0,
+      "interpretation": "SOURCE_AND_AUTHORITY_LIMITED_SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS"
+    },
+    "synthetic_regression_geometry": {
+      "verified_model_geometry": 1,
+      "approved_generic_conservative_envelope": 1,
+      "geometry_missing": 1,
+      "interpretation": "TEST_COVERAGE_ONLY_NOT_REAL_PROJECT_SCORING"
+    }
+  },
+  "privacy_leakage_counts": {
+    "private_project_identifiers_in_outputs": 0,
+    "private_component_model_identifiers_in_outputs": 0,
+    "private_component_value_strings_in_outputs": 0,
+    "source_root_paths_in_outputs": 0,
+    "private_dimensions_or_coordinates_in_outputs": 0,
+    "completed_reference_details_in_outputs": 0,
+    "private_content_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0
+  },
+  "exact_final_status": "SAFE_UNRESOLVED_GEOMETRY_REQUIRES_MORE_AUTHORITY_OR_DATA",
+  "exact_recommended_next_action": "Run independent T1B authority/leakage review, then either provide approved non-private manufacturer geometry documents or have the coordinator accept a reviewed real component-geometry library before promoting any real-project geometry coverage.",
+  "blocker_taxonomy": [
+    "REAL_PROJECT_GEOMETRY_REQUIRES_OFFICIAL_OR_APPROVED_DOCUMENTATION",
+    "NO_REAL_PROJECT_COMPONENT_GEOMETRY_LIBRARY_PROMOTED",
+    "PRIVATE_MODEL_IDENTIFIER_PUBLIC_LOOKUP_NOT_USED",
+    "SYNTHETIC_REGRESSION_ONLY_NOT_REAL_COVERAGE",
+    "FROZEN_WORKFLOW_MANIFESTS_STALE_RELATIVE_TO_CURRENT_HEAD"
+  ],
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "source_thread_id": "019ef8b3-b806-77a1-bf02-a704861d7d70",
+    "started_at": "2026-06-25T11:08:50+08:00",
+    "completed_at": "2026-06-25T11:24:44.8749403+08:00",
+    "implementation_commit": "c53f76e33e83ec4474c7a0c249a74183afe5097c",
+    "public_web_used": false
+  },
+  "output_hashes": {
+    "scripts/sheetmetal_v1.py": "B49D732BA3EEAA3D04021C3529B7632F080C1FA117C0E95846CE39A9F28C2B11",
+    "scripts/run_tests.py": "344CA153B6E9022ED174AA483186D2EC6D6051F4974F826D3B53B04502C75D12",
+    "evals/fixtures/sheetmetal-v1/component_geometry_authority_fixture.json": "134919EACFFE4FE95A48B1FA228627A85C5B01DCA8854E24B1375BD881930AC6",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_library.proposed.v1.json": "187FD7444F3D7D7F3A2AC06F42B96E3E87D9D46C91C8F5B8733AEC83AACAAC0D",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.json": "758EAF746F3347E0AEF4333A859CF3442765A7382C769FC7C0C8840E29F11FA5",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.md": "CB7C0D2044B8158F7B3F6DD4A8C2F1395120878438105BB66B2C4AF7BB510BE6"
+  }
+}
