@@ -1,0 +1,54 @@
+{
+  "schema_version": "sheetmetal-v1.signed_authority_decision_intake.v1",
+  "status": "PASS",
+  "decision_path": "reports\\sheetmetal-v1\\source-rule-approval\\smv1_signed_authority_decision.json",
+  "decision_sha256_canonical": "D7EB784BDF66A46463A26333B7DD55DF873625BE4EB12F8EA2A7CE2DE09C6DDF",
+  "validation_status": "PASS",
+  "selected_choice_ids": [
+    "A",
+    "B",
+    "C"
+  ],
+  "selected_authority_lanes": [
+    {
+      "choice_id": "A",
+      "label": "AUTHORIZE_PANEL_ALLOCATION_SOURCE_REVIEW"
+    },
+    {
+      "choice_id": "B",
+      "label": "AUTHORIZE_COMPONENT_GEOMETRY_AUTHORITY"
+    },
+    {
+      "choice_id": "C",
+      "label": "AUTHORIZE_TOPOLOGY_SIZING_PLACEMENT_RULE_AUTHORITY"
+    }
+  ],
+  "reject_all_authority_lanes": false,
+  "implementation_authorized": false,
+  "implementation_can_start": false,
+  "customer_pdf_dxf_dwg_generation_authorized": false,
+  "production_approval_declared": false,
+  "next_action": "ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX",
+  "required_follow_up": [
+    "record_signed_authority_decision_in_decision_ledger",
+    "write_regression_tests_before_any_accepted_lane_fix",
+    "bound_implementation_scope_to_selected_authority_lanes",
+    "rerun_full_tests_and_relevant_scoped_freezes",
+    "run_independent_audit_before_model_promotion"
+  ],
+  "validation_errors": [],
+  "hash_checks": [
+    {
+      "path": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json",
+      "expected_sha256": "A22FC1CA7C6D299E21EFCFBE495F1BFAA6F14D74049085133CB02C00ED152AA1",
+      "actual_sha256": "A22FC1CA7C6D299E21EFCFBE495F1BFAA6F14D74049085133CB02C00ED152AA1",
+      "status": "PASS"
+    },
+    {
+      "path": "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json",
+      "expected_sha256": "B6DF8D3626FB51D96F078821B6FA3824F0885058DDDD5EDD41091EE3B6D36725",
+      "actual_sha256": "B6DF8D3626FB51D96F078821B6FA3824F0885058DDDD5EDD41091EE3B6D36725",
+      "status": "PASS"
+    }
+  ]
+}
