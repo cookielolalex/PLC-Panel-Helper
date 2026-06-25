@@ -1,0 +1,44 @@
+{
+  "schema_version": "sheetmetal-v1.t1c_topology_sizing_rules.artifact_gate_validation.v1",
+  "task_id": "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
+  "validated_at": "2026-06-25T00:00:00+08:00",
+  "command": "PowerShell ConvertFrom-Json rule/fixture checks for authority choice C, unique rule versions, required fields, fixture coverage, and zero private/reference fixture values",
+  "status": "PASS",
+  "rule_artifact_path": "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/rule_artifacts/smv1_choice_c_topology_sizing_placement_rules.v1.json",
+  "fixture_manifest_path": "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/synthetic_rule_fixture_manifest.json",
+  "rule_count": 8,
+  "fixture_count": 5,
+  "checks": [
+    {
+      "criterion": "signed authority choice C is bound",
+      "status": "PASS",
+      "evidence": "rule artifact authority.selected_choice_id is C and decision hash is D7EB784BDF66A46463A26333B7DD55DF873625BE4EB12F8EA2A7CE2DE09C6DDF"
+    },
+    {
+      "criterion": "unique rule ID/version pairs",
+      "status": "PASS",
+      "evidence": "8 unique rule_id@version pairs"
+    },
+    {
+      "criterion": "required audit fields present",
+      "status": "PASS",
+      "evidence": "every rule has evidence/basis, applicability, exclusions, fixture IDs, fail-closed behavior, and independent-audit requirements"
+    },
+    {
+      "criterion": "synthetic coverage exists before behavior promotion",
+      "status": "PASS",
+      "evidence": "all 8 rule IDs are covered by at least one synthetic fixture"
+    },
+    {
+      "criterion": "hard constraints separated from soft objectives",
+      "status": "PASS",
+      "evidence": "rule artifact has top-level hard_constraints and soft_objectives arrays; placement rule blocks soft objective override"
+    },
+    {
+      "criterion": "privacy and reference boundary",
+      "status": "PASS",
+      "evidence": "fixture private_value_count and reference_value_count are zero for all fixtures; global policy forbids completed references and post-design labels as generator inputs"
+    }
+  ],
+  "errors": []
+}

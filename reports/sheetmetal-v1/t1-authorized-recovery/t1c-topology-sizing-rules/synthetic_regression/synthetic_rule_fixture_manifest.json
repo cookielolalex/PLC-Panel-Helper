@@ -1,0 +1,79 @@
+{
+  "schema_version": "sheetmetal-v1.t1c_topology_sizing_rules.synthetic_fixture_manifest.v1",
+  "task_id": "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
+  "fixture_scope": "SYNTHETIC_REGRESSION_ONLY_NO_CUSTOMER_VALUES",
+  "privacy_mode": "LOCAL_ONLY_PRIVACY_NOT_APPROVED",
+  "completed_references_used": false,
+  "post_design_labels_used_as_generator_truth": false,
+  "customer_pdf_dxf_dwg_generation": false,
+  "fixtures": [
+    {
+      "fixture_id": "SMV1-T1C-FIXTURE-TOPOLOGY-EXPLICIT-ONLY",
+      "covers_rule_ids": [
+        "SMV1-C-TOPOLOGY-001",
+        "SMV1-C-PROVENANCE-001"
+      ],
+      "input_condition": "allowed source provides explicit neutral panel topology fields",
+      "expected_behavior": "preserve explicit topology candidate with provenance; do not infer missing surfaces or compartments",
+      "expected_fail_closed_status": "UNVERIFIED_FOR_UNSUPPORTED_TOPOLOGY_FACTS",
+      "private_value_count": 0,
+      "reference_value_count": 0
+    },
+    {
+      "fixture_id": "SMV1-T1C-FIXTURE-TOPOLOGY-POST-DESIGN-BLOCK",
+      "covers_rule_ids": [
+        "SMV1-C-TOPOLOGY-002",
+        "SMV1-C-PROVENANCE-001"
+      ],
+      "input_condition": "only a post-design allocation label or completed-reference derivative suggests a panel arrangement",
+      "expected_behavior": "reject the label as generator authority and retain safe unresolved topology state",
+      "expected_fail_closed_status": "HUMAN_REVIEW_REQUIRED_OR_UNVERIFIED",
+      "private_value_count": 0,
+      "reference_value_count": 0
+    },
+    {
+      "fixture_id": "SMV1-T1C-FIXTURE-SIZING-NAMED-DIMENSIONS",
+      "covers_rule_ids": [
+        "SMV1-C-SIZING-001",
+        "SMV1-C-SIZING-002"
+      ],
+      "input_condition": "source dimension is ambiguous or an exact cabinet size lacks explicit source/library authority",
+      "expected_behavior": "reject ambiguous dimension strings and avoid selecting an exact cabinet size",
+      "expected_fail_closed_status": "GEOMETRY_MISSING_OR_TBD",
+      "private_value_count": 0,
+      "reference_value_count": 0
+    },
+    {
+      "fixture_id": "SMV1-T1C-FIXTURE-CLEARANCE-AUTHORITY",
+      "covers_rule_ids": [
+        "SMV1-C-CLEARANCE-001",
+        "SMV1-C-PLACEMENT-001"
+      ],
+      "input_condition": "placement request lacks explicit or approved clearance authority",
+      "expected_behavior": "do not invent clearance; mark component unplaceable when clearance is required but unsupported",
+      "expected_fail_closed_status": "CLEARANCE_RULE_MISSING",
+      "private_value_count": 0,
+      "reference_value_count": 0
+    },
+    {
+      "fixture_id": "SMV1-T1C-FIXTURE-PLACEMENT-HARD-BEFORE-SOFT",
+      "covers_rule_ids": [
+        "SMV1-C-PLACEMENT-001",
+        "SMV1-C-PLACEMENT-002"
+      ],
+      "input_condition": "a soft objective would prefer a placement that violates containment, overlap, or edge-clearance constraints",
+      "expected_behavior": "reject the placement and report hard-constraint reason codes",
+      "expected_fail_closed_status": "NO_VALID_PLACEMENT",
+      "private_value_count": 0,
+      "reference_value_count": 0
+    }
+  ],
+  "coverage_expectation": {
+    "all_rule_ids_have_at_least_one_fixture": true,
+    "hard_constraints_tested_separately_from_soft_objectives": true,
+    "fail_closed_behavior_tested": true,
+    "private_content_transmission_count": 0,
+    "completed_reference_leakage_count": 0,
+    "post_design_leakage_count": 0
+  }
+}

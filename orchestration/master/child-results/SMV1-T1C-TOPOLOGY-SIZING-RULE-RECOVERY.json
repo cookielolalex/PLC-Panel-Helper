@@ -1,0 +1,140 @@
+{
+  "task_id": "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
+  "starting_commit": "5b8dbebc64ab93289f2a5fe709c12751537a8847",
+  "ending_commit": "PENDING_FINAL_COMMIT_SELF_REFERENTIAL_EXCLUDED",
+  "tracked_worktree_status": {
+    "before_report_writes": "DETACHED_HEAD_WITH_NO_TRACKED_CHANGES",
+    "after_report_writes": "ONLY_ASSIGNED_T1C_OUTPUTS_ADDED",
+    "tracked_diff_scope": [
+      "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules",
+      "orchestration/master/child-results/SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY.json"
+    ],
+    "tracked_private_artifacts": 0,
+    "source_roots_mutated": false,
+    "canonical_master_files_mutated": false
+  },
+  "test_result": {
+    "status": "FAIL_PREEXISTING_STALE_FREEZE_HASHES",
+    "commands": [
+      {
+        "command": "PowerShell ConvertFrom-Json rule/fixture checks",
+        "status": "PASS",
+        "summary": "8 rules and 5 synthetic fixtures passed authority, uniqueness, required-field, fixture-coverage, hard/soft separation, and privacy checks."
+      },
+      {
+        "command": "bundled-python scripts/run_tests.py",
+        "status": "FAIL_PREEXISTING_STALE_FREEZE_HASHES",
+        "summary": "Functional tests passed until frozen-manifest verifier tests; active and topology freeze manifests report hash mismatches across existing frozen entries."
+      },
+      {
+        "command": "bundled-python scripts/validate_signed_authority_decision.py --decision reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision.json --output tmp/t1c_signed_authority_validation.json",
+        "status": "FAIL_PREEXISTING_BOUND_PACKET_HASH_MISMATCH",
+        "summary": "Current rerun reports bound decision packet/template hash mismatches; committed intake summary previously recorded PASS."
+      }
+    ]
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": {
+      "status": "NOT_RERUN_SEPARATELY",
+      "reason": "Full test command reached legacy frozen workflow tests before failing later active/topology freeze checks."
+    },
+    "sheetmetal_v1_active": {
+      "status": "FAIL_PREEXISTING_STALE_FREEZE_HASHES",
+      "command": "bundled-python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+      "verified_file_count": 55,
+      "failure_class": "HASH_MISMATCH_ACROSS_EXISTING_FROZEN_ENTRIES"
+    },
+    "sheetmetal_v1_topology_sizing_placement": {
+      "status": "FAIL_PREEXISTING_STALE_FREEZE_HASHES",
+      "command": "bundled-python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+      "verified_file_count": 23,
+      "failure_class": "HASH_MISMATCH_ACROSS_EXISTING_FROZEN_ENTRIES"
+    }
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/rule_artifacts/smv1_choice_c_topology_sizing_placement_rules.v1.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/synthetic_rule_fixture_manifest.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/artifact_gate_validation.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.md",
+    "orchestration/master/child-results/SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY.json"
+  ],
+  "schemas_validated": {
+    "json_parse_validation": "PASS",
+    "rule_artifact_gate": "PASS",
+    "task_specific_schema": "NO_FORMAL_SCHEMA_AVAILABLE",
+    "child_result_contract_fields": "PRESENT"
+  },
+  "hard_gates": {
+    "overall": "RECOVERABLE_BLOCKER_STALE_HASH_GATES",
+    "unsupported_critical_dimensions": "PASS_ZERO",
+    "unsupported_panel_assignments": "PASS_ZERO",
+    "unsupported_placements": "PASS_ZERO",
+    "completed_reference_leakage": "PASS_ZERO",
+    "post_design_leakage": "PASS_ZERO",
+    "private_content_transmissions": "PASS_ZERO",
+    "tracked_private_artifacts": "PASS_ZERO",
+    "committed_private_source_values": "PASS_ZERO",
+    "customer_drawing_generation_count": "PASS_ZERO",
+    "pdf_dxf_dwg_generation_count": "PASS_ZERO",
+    "production_approval_declared": "PASS_FALSE",
+    "source_roots_mutated": "PASS_FALSE",
+    "canonical_master_files_mutated": "PASS_FALSE"
+  },
+  "coverage": {
+    "rule_artifact": {
+      "rule_count": 8,
+      "fixture_count": 5,
+      "rule_families": [
+        "topology",
+        "sizing",
+        "clearance",
+        "placement",
+        "provenance"
+      ],
+      "all_rule_ids_have_synthetic_fixture_coverage": true,
+      "hard_constraints_separated_from_soft_objectives": true,
+      "fail_closed_behavior_documented_for_every_rule": true
+    },
+    "customer_case_coverage_delta": {
+      "assignment": 0,
+      "geometry": 0,
+      "topology": 0,
+      "sizing": 0,
+      "placement": 0,
+      "interpretation": "RULE_ARTIFACT_ONLY_NOT_ACTIVE_GENERATOR_CAPABILITY_SUCCESS"
+    }
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_reference_dimension_count": 0,
+    "committed_reference_coordinate_count": 0,
+    "committed_reference_layout_count": 0,
+    "committed_private_source_value_count": 0
+  },
+  "exact_final_status": "RECOVERABLE_BLOCKER",
+  "exact_recommended_next_action": "COORDINATOR_REFRESH_OR_ADJUDICATE_STALE_HASH_GATES_THEN_RUN_INDEPENDENT_CHOICE_C_RULE_AUDIT",
+  "blocker_taxonomy": [
+    "ACTIVE_SHEETMETAL_V1_FROZEN_MANIFEST_STALE_HASHES",
+    "TOPOLOGY_SIZING_PLACEMENT_FROZEN_MANIFEST_STALE_HASHES",
+    "SIGNED_AUTHORITY_BOUND_PACKET_TEMPLATE_HASH_MISMATCH_ON_RERUN",
+    "COORDINATOR_ADOPTION_AND_INDEPENDENT_AUDIT_REQUIRED_BEFORE_MODEL_PROMOTION"
+  ],
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "2026-06-25T00:00:00+08:00",
+    "completed_at": "2026-06-25T00:00:00+08:00",
+    "duration": "not_measured"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/rule_artifacts/smv1_choice_c_topology_sizing_placement_rules.v1.json": "49264FEAE1503EFAC4B113289BE31D535B2015E510F430C9BF9C45FA8C5F033E",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/synthetic_rule_fixture_manifest.json": "20FD12DF69B8C97F6F1C5F13AB272EADCDFF343CB615FA9F384C6D31CB34FBBB",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/artifact_gate_validation.json": "8FA8E0C6D75DC9EC7188ADB1F790A0FFE627BFE9A9E378CF896D67C4D03934B3",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.json": "D23423FAC2674D9318EB8FF27624EF242BD624CE608C5B11B1EFB0E4F93F2C43",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.md": "0A641FC3D01A39154E79533E2632548B8D2E9F895C7164FCC8F731A7DBF80736",
+    "orchestration/master/child-results/SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}

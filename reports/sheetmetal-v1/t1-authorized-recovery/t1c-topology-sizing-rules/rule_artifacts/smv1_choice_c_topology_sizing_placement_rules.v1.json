@@ -1,0 +1,422 @@
+{
+  "schema_version": "sheetmetal-v1.choice_c_topology_sizing_placement_rules.v1",
+  "artifact_id": "SMV1-CHOICE-C-TOPOLOGY-SIZING-PLACEMENT-RULES-V1",
+  "artifact_version": "1.0.0",
+  "task_id": "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "authority": {
+    "signed_decision_id": "SMV1-SIGNED-AUTHORITY-D-0047",
+    "selected_choice_id": "C",
+    "selected_choice_label": "AUTHORIZE_TOPOLOGY_SIZING_PLACEMENT_RULE_AUTHORITY",
+    "decision_sha256_canonical": "D7EB784BDF66A46463A26333B7DD55DF873625BE4EB12F8EA2A7CE2DE09C6DDF",
+    "scope": [
+      "development",
+      "testing",
+      "evaluation",
+      "private-preview readiness",
+      "outputs marked NOT FOR FABRICATION / PRIVATE PREVIEW"
+    ],
+    "does_not_authorize": [
+      "fabrication release",
+      "PRODUCTION_APPROVED",
+      "customer PDF/DXF/DWG generation",
+      "completed-reference inference",
+      "post-design-label generator authority",
+      "unsupported exact cabinet dimensions",
+      "unsupported placement coordinates"
+    ]
+  },
+  "rule_state": "AUTHORIZED_PROPOSED_RULE_ARTIFACT_PENDING_COORDINATOR_ADOPTION_AND_INDEPENDENT_AUDIT",
+  "hard_constraints": [
+    "source eligibility and chronology",
+    "completed-reference exclusion",
+    "post-design-label exclusion",
+    "explicit topology provenance",
+    "named dimension fields only",
+    "no exact cabinet size without explicit or approved-library authority",
+    "mounting-surface compatibility",
+    "containment",
+    "no physical overlap",
+    "edge clearance when explicitly specified or approved",
+    "maintenance access when explicitly specified or approved",
+    "door swing when explicitly specified or approved",
+    "ventilation clearance when explicitly specified or approved",
+    "thermal separation when explicitly specified or approved",
+    "wiring-duct corridor when explicitly specified or approved",
+    "cable-entry and bend space when explicitly specified or approved",
+    "partition boundary when explicitly specified or approved",
+    "cutout containment when explicitly specified or approved",
+    "quantity consistency"
+  ],
+  "soft_objectives": [
+    "compactness",
+    "regular alignment",
+    "grouped components",
+    "shorter wiring distance",
+    "maintainability",
+    "symmetry"
+  ],
+  "global_fail_closed_policy": {
+    "unsupported_scope_behavior": "do_not_infer_mark_TBD_UNVERIFIED_CONFLICT_OR_HUMAN_REVIEW_REQUIRED",
+    "soft_objective_override_allowed": false,
+    "private_content_transmission_allowed": false,
+    "completed_references_allowed_as_generator_input": false,
+    "post_design_labels_allowed_as_generator_input": false,
+    "customer_drawing_generation_allowed": false
+  },
+  "rules": [
+    {
+      "rule_id": "SMV1-C-TOPOLOGY-001",
+      "version": "1.0.0",
+      "rule_family": "topology",
+      "title": "Explicit Topology Passthrough Only",
+      "rule_type": "hard_constraint",
+      "evidence_or_engineering_basis": [
+        "SOURCE_FACT_AUTHORITY_MATRIX: panel dimensions and panel assignment require explicit source, approved rule, verified library, design choice with constraints, or safe unresolved state",
+        "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION: topology facts must be EXPLICIT_SOURCE, DERIVED_BY_APPROVED_RULE, DESIGN_CHOICE_WITH_CONSTRAINTS, UNVERIFIED, CONFLICT, or HUMAN_REVIEW_REQUIRED",
+        "signed authority choice C permits versioned topology rules with evidence, applicability, exclusions, synthetic regression coverage, and fail-closed behavior"
+      ],
+      "applicability": [
+        "allowed generator bundle inputs",
+        "explicit neutral topology fields",
+        "approved source evidence with pre-design or during-design chronology"
+      ],
+      "exclusions": [
+        "completed drawings",
+        "modified drawings",
+        "post-design allocation labels",
+        "historical drawing arrangement",
+        "implicit inference from component co-occurrence"
+      ],
+      "required_inputs": [
+        "source evidence ID",
+        "allowed source role",
+        "chronology status",
+        "explicit topology field or approved rule ID"
+      ],
+      "permitted_outputs": [
+        "explicit topology candidate",
+        "UNVERIFIED",
+        "CONFLICT",
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "fail_closed_behavior": "if explicit topology evidence or approved rule is absent, preserve one or more unresolved neutral candidates and do not select exact arrangement",
+      "synthetic_regression_fixture_ids": [
+        "SMV1-T1C-FIXTURE-TOPOLOGY-EXPLICIT-ONLY"
+      ],
+      "independent_audit_requirements": [
+        "verify source role and chronology",
+        "verify no completed-reference or post-design source was consumed",
+        "verify unresolved alternatives are preserved"
+      ]
+    },
+    {
+      "rule_id": "SMV1-C-TOPOLOGY-002",
+      "version": "1.0.0",
+      "rule_family": "topology",
+      "title": "Post-Design Arrangement Block",
+      "rule_type": "hard_constraint",
+      "evidence_or_engineering_basis": [
+        "SOURCE_FACT_AUTHORITY_MATRIX forbids completed drawing title blocks and post-design labels as generator resolvers",
+        "MASTER_AUTOPILOT_PROTOCOL forbids completed drawings, modified drawings, post-design labels, and derivatives as generator inputs"
+      ],
+      "applicability": [
+        "any topology, cabinet count, surface, door, compartment, or plate fact candidate with post-design or completed-reference origin"
+      ],
+      "exclusions": [
+        "evaluator-only comparison after generator freeze",
+        "signed current user correction that is not derived from completed references"
+      ],
+      "required_inputs": [
+        "source role classification",
+        "chronology classification",
+        "completed-reference derivative flag"
+      ],
+      "permitted_outputs": [
+        "rejected_source_record",
+        "UNVERIFIED",
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "fail_closed_behavior": "reject topology arrangement authority and record unresolved fact rather than using the post-design label",
+      "synthetic_regression_fixture_ids": [
+        "SMV1-T1C-FIXTURE-TOPOLOGY-POST-DESIGN-BLOCK"
+      ],
+      "independent_audit_requirements": [
+        "verify post-design source did not become rule support",
+        "verify evaluator-only evidence is not copied into generator artifacts"
+      ]
+    },
+    {
+      "rule_id": "SMV1-C-SIZING-001",
+      "version": "1.0.0",
+      "rule_family": "sizing",
+      "title": "Named Dimension Fields Only",
+      "rule_type": "hard_constraint",
+      "evidence_or_engineering_basis": [
+        "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION requires width_mm, height_mm, and depth_mm and rejects ambiguous dimension strings"
+      ],
+      "applicability": [
+        "component envelopes",
+        "panel envelopes",
+        "mounting surfaces",
+        "cutout envelopes"
+      ],
+      "exclusions": [
+        "free-text dimension strings",
+        "drawing-scale estimates",
+        "historical reference geometry",
+        "model-name guesses"
+      ],
+      "required_inputs": [
+        "width_mm",
+        "height_mm",
+        "depth_mm",
+        "geometry status",
+        "source evidence ID, approved rule ID, or verified library ID"
+      ],
+      "permitted_outputs": [
+        "VERIFIED_MODEL_GEOMETRY",
+        "APPROVED_GENERIC_CONSERVATIVE_ENVELOPE",
+        "GEOMETRY_MISSING",
+        "GEOMETRY_CONFLICT",
+        "NOT_APPLICABLE"
+      ],
+      "fail_closed_behavior": "if named fields are missing or ambiguous, set GEOMETRY_MISSING or GEOMETRY_CONFLICT and prohibit exact placement or exact cabinet sizing",
+      "synthetic_regression_fixture_ids": [
+        "SMV1-T1C-FIXTURE-SIZING-NAMED-DIMENSIONS"
+      ],
+      "independent_audit_requirements": [
+        "verify all accepted dimensions carry named fields",
+        "verify ambiguous text does not create numeric geometry"
+      ]
+    },
+    {
+      "rule_id": "SMV1-C-SIZING-002",
+      "version": "1.0.0",
+      "rule_family": "sizing",
+      "title": "Exact Cabinet Size Authority Gate",
+      "rule_type": "hard_constraint",
+      "evidence_or_engineering_basis": [
+        "SOURCE_FACT_AUTHORITY_MATRIX forbids historical cabinet-size copy",
+        "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION requires unsupported exact cabinet sizes to remain range/TBD"
+      ],
+      "applicability": [
+        "panel dimensions",
+        "cabinet candidates",
+        "standard cabinet selection"
+      ],
+      "exclusions": [
+        "historical cabinet size copy",
+        "completed drawing dimensions",
+        "layout preference",
+        "unverified standard-cabinet catalog"
+      ],
+      "required_inputs": [
+        "explicit project dimension requirement or approved sizing rule",
+        "approved standard-cabinet library entry when selecting a standard size"
+      ],
+      "permitted_outputs": [
+        "explicit_dimension_candidate",
+        "approved_standard_candidate",
+        "TBD",
+        "UNVERIFIED",
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "fail_closed_behavior": "if exact size authority is missing, retain unresolved/range candidate and do not emit exact width_mm, height_mm, or depth_mm",
+      "synthetic_regression_fixture_ids": [
+        "SMV1-T1C-FIXTURE-SIZING-NAMED-DIMENSIONS"
+      ],
+      "independent_audit_requirements": [
+        "verify exact cabinet dimensions are not reference-derived",
+        "verify standard library entry is separately approved before use"
+      ]
+    },
+    {
+      "rule_id": "SMV1-C-CLEARANCE-001",
+      "version": "1.0.0",
+      "rule_family": "clearance",
+      "title": "Clearance Authority Gate",
+      "rule_type": "hard_constraint",
+      "evidence_or_engineering_basis": [
+        "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION lists edge clearance, maintenance access, door swing, ventilation clearance, thermal separation, wiring duct corridors, and cable-entry space as hard constraints",
+        "signed authority choice C requires fail-closed behavior outside supported rule scope"
+      ],
+      "applicability": [
+        "edge clearance",
+        "maintenance access",
+        "door swing",
+        "ventilation clearance",
+        "thermal separation",
+        "wiring duct corridor",
+        "cable-entry and bend space"
+      ],
+      "exclusions": [
+        "implicit clearance from historical drawing layout",
+        "unapproved company habit",
+        "component-family guess without approved clearance rule"
+      ],
+      "required_inputs": [
+        "explicit clearance requirement or approved clearance rule ID",
+        "applicable component family or mounting context",
+        "exclusion check"
+      ],
+      "permitted_outputs": [
+        "clearance_constraint",
+        "CLEARANCE_RULE_MISSING",
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "fail_closed_behavior": "when a required clearance family lacks explicit or approved authority, mark affected placement unplaceable rather than using a guessed margin",
+      "synthetic_regression_fixture_ids": [
+        "SMV1-T1C-FIXTURE-CLEARANCE-AUTHORITY"
+      ],
+      "independent_audit_requirements": [
+        "verify every applied clearance has a rule or evidence ID",
+        "verify missing clearance blocks placement when clearance is required"
+      ]
+    },
+    {
+      "rule_id": "SMV1-C-PLACEMENT-001",
+      "version": "1.0.0",
+      "rule_family": "placement",
+      "title": "Placement Prerequisite Gate",
+      "rule_type": "hard_constraint",
+      "evidence_or_engineering_basis": [
+        "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION permits placement only for component instances with supported panel assignment, allowed mounting surface, verified or approved conservative geometry, and applicable clearance rules"
+      ],
+      "applicability": [
+        "all accepted placement records"
+      ],
+      "exclusions": [
+        "unassigned components",
+        "missing geometry",
+        "unknown mounting surface",
+        "missing required clearance rule",
+        "conflicting source facts"
+      ],
+      "required_inputs": [
+        "component_instance_id",
+        "panel_id",
+        "mounting_surface_id",
+        "geometry status",
+        "assignment evidence or rule ID",
+        "clearance evidence or rule ID when applicable"
+      ],
+      "permitted_outputs": [
+        "DESIGN_CHOICE_WITH_CONSTRAINTS",
+        "UNASSIGNED_PANEL",
+        "GEOMETRY_MISSING",
+        "MOUNTING_SURFACE_UNKNOWN",
+        "CLEARANCE_RULE_MISSING",
+        "CONFLICTING_SOURCE",
+        "NO_VALID_PLACEMENT",
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "fail_closed_behavior": "do not create placement coordinates unless all prerequisites are satisfied",
+      "synthetic_regression_fixture_ids": [
+        "SMV1-T1C-FIXTURE-CLEARANCE-AUTHORITY",
+        "SMV1-T1C-FIXTURE-PLACEMENT-HARD-BEFORE-SOFT"
+      ],
+      "independent_audit_requirements": [
+        "verify every accepted placement has prerequisite support",
+        "verify every unplaceable component has a reason code"
+      ]
+    },
+    {
+      "rule_id": "SMV1-C-PLACEMENT-002",
+      "version": "1.0.0",
+      "rule_family": "placement",
+      "title": "Hard Constraints Before Soft Objectives",
+      "rule_type": "hard_constraint",
+      "evidence_or_engineering_basis": [
+        "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION states soft objectives never override hard constraints"
+      ],
+      "applicability": [
+        "placement acceptance",
+        "placement rejection",
+        "layout scoring after generator freeze"
+      ],
+      "exclusions": [
+        "using compactness or symmetry to accept overlap",
+        "using historical visual arrangement to override containment",
+        "using maintainability preference to ignore clearance authority"
+      ],
+      "required_inputs": [
+        "hard-constraint validation result",
+        "soft-objective request if any"
+      ],
+      "permitted_outputs": [
+        "accepted_placement_when_hard_constraints_pass",
+        "rejected_placement_with_reason_codes"
+      ],
+      "fail_closed_behavior": "if any hard constraint fails, reject the placement even when a soft objective would prefer it",
+      "synthetic_regression_fixture_ids": [
+        "SMV1-T1C-FIXTURE-PLACEMENT-HARD-BEFORE-SOFT"
+      ],
+      "independent_audit_requirements": [
+        "verify soft objective override flag cannot suppress hard-constraint failure",
+        "verify accepted hard-constraint violation counts remain zero"
+      ]
+    },
+    {
+      "rule_id": "SMV1-C-PROVENANCE-001",
+      "version": "1.0.0",
+      "rule_family": "provenance",
+      "title": "Generator Authority Provenance Gate",
+      "rule_type": "hard_constraint",
+      "evidence_or_engineering_basis": [
+        "SOURCE_FACT_AUTHORITY_MATRIX requires every critical fact to carry explicit source evidence, approved rule, verified library entry, design choice, TBD, UNVERIFIED, CONFLICT, HUMAN_REVIEW_REQUIRED, or NOT_APPLICABLE",
+        "MASTER_AUTOPILOT_PROTOCOL requires zero completed-reference leakage, zero post-design leakage, and zero private-content transmissions"
+      ],
+      "applicability": [
+        "topology facts",
+        "sizing facts",
+        "clearance facts",
+        "placement facts",
+        "unresolved critical facts"
+      ],
+      "exclusions": [
+        "prose-only support",
+        "unhashed result",
+        "completed-reference derivative support",
+        "post-design label support",
+        "private external transmission"
+      ],
+      "required_inputs": [
+        "support type",
+        "support ID or safe unresolved status",
+        "leakage counters"
+      ],
+      "permitted_outputs": [
+        "source_evidence",
+        "approved_rule",
+        "verified_library",
+        "design_choice_with_constraints",
+        "TBD",
+        "UNVERIFIED",
+        "CONFLICT",
+        "HUMAN_REVIEW_REQUIRED",
+        "NOT_APPLICABLE"
+      ],
+      "fail_closed_behavior": "if a critical fact lacks support and is not in a safe unresolved status, fail validation",
+      "synthetic_regression_fixture_ids": [
+        "SMV1-T1C-FIXTURE-TOPOLOGY-EXPLICIT-ONLY",
+        "SMV1-T1C-FIXTURE-TOPOLOGY-POST-DESIGN-BLOCK"
+      ],
+      "independent_audit_requirements": [
+        "verify every critical fact has support or safe unresolved status",
+        "verify leakage counters are zero"
+      ]
+    }
+  ],
+  "audit_readiness": {
+    "unique_rule_id_version_pairs": true,
+    "every_rule_has_evidence_or_engineering_basis": true,
+    "every_rule_has_applicability": true,
+    "every_rule_has_exclusions": true,
+    "every_rule_has_synthetic_regression_coverage": true,
+    "every_rule_has_fail_closed_behavior": true,
+    "hard_constraints_separated_from_soft_objectives": true,
+    "completed_references_remain_evaluator_only": true,
+    "private_source_values_committed": false
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": "sheetmetal-v1.t1c_topology_sizing_rule_recovery_report.v1",
+  "task_id": "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "created_at": "2026-06-25T00:00:00+08:00",
+  "privacy_mode": "LOCAL_ONLY_PRIVACY_NOT_APPROVED",
+  "authority_basis": {
+    "signed_decision_id": "SMV1-SIGNED-AUTHORITY-D-0047",
+    "selected_choice_id": "C",
+    "selected_choice_label": "AUTHORIZE_TOPOLOGY_SIZING_PLACEMENT_RULE_AUTHORITY",
+    "decision_sha256_canonical": "D7EB784BDF66A46463A26333B7DD55DF873625BE4EB12F8EA2A7CE2DE09C6DDF",
+    "customer_pdf_dxf_dwg_generation_authorized": false,
+    "production_approval_declared": false
+  },
+  "implementation_decision": {
+    "decision": "VERSIONED_RULE_ARTIFACTS_BUILT_NOT_ACTIVATED_IN_FROZEN_GENERATOR",
+    "reason": "Choice C authorizes topology, sizing, clearance, and placement rule authority, but coordinator adoption and independent audit are still required before model promotion. This worker therefore produced a bounded rule artifact and synthetic fixture coverage without modifying frozen generator implementation or master state.",
+    "active_generator_behavior_changed": false,
+    "canonical_master_files_updated": false,
+    "customer_drawing_generated": false
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/rule_artifacts/smv1_choice_c_topology_sizing_placement_rules.v1.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/synthetic_rule_fixture_manifest.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/artifact_gate_validation.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.md"
+  ],
+  "rule_artifact_summary": {
+    "artifact_id": "SMV1-CHOICE-C-TOPOLOGY-SIZING-PLACEMENT-RULES-V1",
+    "artifact_version": "1.0.0",
+    "rule_state": "AUTHORIZED_PROPOSED_RULE_ARTIFACT_PENDING_COORDINATOR_ADOPTION_AND_INDEPENDENT_AUDIT",
+    "rule_count": 8,
+    "rule_families": [
+      "topology",
+      "sizing",
+      "clearance",
+      "placement",
+      "provenance"
+    ],
+    "hard_constraints_separated_from_soft_objectives": true,
+    "rules": [
+      "SMV1-C-TOPOLOGY-001@1.0.0",
+      "SMV1-C-TOPOLOGY-002@1.0.0",
+      "SMV1-C-SIZING-001@1.0.0",
+      "SMV1-C-SIZING-002@1.0.0",
+      "SMV1-C-CLEARANCE-001@1.0.0",
+      "SMV1-C-PLACEMENT-001@1.0.0",
+      "SMV1-C-PLACEMENT-002@1.0.0",
+      "SMV1-C-PROVENANCE-001@1.0.0"
+    ]
+  },
+  "synthetic_regression_coverage": {
+    "fixture_count": 5,
+    "all_rule_ids_have_fixture_coverage": true,
+    "private_value_count": 0,
+    "reference_value_count": 0,
+    "customer_value_count": 0,
+    "fixture_ids": [
+      "SMV1-T1C-FIXTURE-TOPOLOGY-EXPLICIT-ONLY",
+      "SMV1-T1C-FIXTURE-TOPOLOGY-POST-DESIGN-BLOCK",
+      "SMV1-T1C-FIXTURE-SIZING-NAMED-DIMENSIONS",
+      "SMV1-T1C-FIXTURE-CLEARANCE-AUTHORITY",
+      "SMV1-T1C-FIXTURE-PLACEMENT-HARD-BEFORE-SOFT"
+    ]
+  },
+  "verification": {
+    "artifact_gate_validation": {
+      "status": "PASS",
+      "command": "PowerShell ConvertFrom-Json rule/fixture checks",
+      "rule_count": 8,
+      "fixture_count": 5
+    },
+    "full_tests": {
+      "status": "FAIL_PREEXISTING_STALE_FREEZE_HASHES",
+      "command": "bundled-python scripts/run_tests.py",
+      "details": "All functional tests before frozen-manifest checks passed; failures occurred in test_frozen_workflow_active_scope_verifier and test_frozen_workflow_topology_scope_verifier because current tracked file hashes differ from committed frozen manifests across many existing frozen entries."
+    },
+    "active_sheetmetal_v1_freeze": {
+      "status": "FAIL_PREEXISTING_STALE_FREEZE_HASHES",
+      "command": "bundled-python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+      "verified_file_count": 55,
+      "failure_class": "HASH_MISMATCH_ACROSS_EXISTING_FROZEN_ENTRIES"
+    },
+    "topology_sizing_placement_freeze": {
+      "status": "FAIL_PREEXISTING_STALE_FREEZE_HASHES",
+      "command": "bundled-python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+      "verified_file_count": 23,
+      "failure_class": "HASH_MISMATCH_ACROSS_EXISTING_FROZEN_ENTRIES"
+    },
+    "signed_authority_validator_rerun": {
+      "status": "FAIL_PREEXISTING_BOUND_PACKET_HASH_MISMATCH",
+      "command": "bundled-python scripts/validate_signed_authority_decision.py --decision reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision.json --output tmp/t1c_signed_authority_validation.json",
+      "note": "The already committed submission summary reported PASS, but current validator rerun reports bound packet/template hash mismatches. This worker did not alter those files."
+    }
+  },
+  "hard_gates": {
+    "unsupported_critical_dimensions": 0,
+    "unsupported_panel_assignments": 0,
+    "unsupported_placements": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "tracked_private_artifacts": 0,
+    "customer_drawing_generation_count": 0,
+    "pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false,
+    "source_roots_mutated": false,
+    "canonical_master_files_mutated": false
+  },
+  "blocker_taxonomy": [
+    "ACTIVE_SHEETMETAL_V1_FROZEN_MANIFEST_STALE_HASHES",
+    "TOPOLOGY_SIZING_PLACEMENT_FROZEN_MANIFEST_STALE_HASHES",
+    "SIGNED_AUTHORITY_BOUND_PACKET_TEMPLATE_HASH_MISMATCH_ON_RERUN",
+    "COORDINATOR_ADOPTION_AND_INDEPENDENT_AUDIT_REQUIRED_BEFORE_MODEL_PROMOTION"
+  ],
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_reference_dimension_count": 0,
+    "committed_reference_coordinate_count": 0,
+    "committed_reference_layout_count": 0,
+    "committed_private_source_value_count": 0
+  },
+  "exact_final_status": "RECOVERABLE_BLOCKER",
+  "exact_recommended_next_action": "COORDINATOR_REFRESH_OR_ADJUDICATE_STALE_HASH_GATES_THEN_RUN_INDEPENDENT_CHOICE_C_RULE_AUDIT"
+}
