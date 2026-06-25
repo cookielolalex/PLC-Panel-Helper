@@ -1,0 +1,447 @@
+{
+  "schema_version": "sheetmetal-v1.t1_authorized_recovery_independent_audit.v1",
+  "task_id": "SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT",
+  "created_at": "2026-06-25T13:04:39.4708748+08:00",
+  "role": "independent_auditor",
+  "overall_status": "FAIL",
+  "exact_final_status": "INDEPENDENT_AUDIT_NOT_ACCEPTED",
+  "status_reason": "Current HEAD does not match the visible manifest integration head, required Python validation commands could not execute, and several declared non-self child output hashes were outside the visible-file read boundary.",
+  "read_boundary": {
+    "task_brief": {
+      "path": "orchestration/tasks/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.md"
+    },
+    "visible_file_manifest": {
+      "path": "orchestration/input_manifests/sheetmetal-v1/t1-authorized-recovery/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.visible_files.json",
+      "sha256": "09D8ED948FB7D493AEDC6F8F7177C73FCACB6E9580623D1CDB7751FBB0E29419",
+      "current_integration_head": "980529e32c6014be23c9e3c7e53046ea62b718d4",
+      "privacy_status": "NOT_APPROVED"
+    },
+    "visible_files_all_hash_matched_manifest": true,
+    "non_visible_material_not_read": [
+      "source roots listed in docs/SOURCE_ROOTS.md",
+      ".private/**",
+      "completed drawings",
+      "post-design labels",
+      "customer PDFs/DXFs/DWGs",
+      "scripts/run_reference_detection_v4_corpus_screening.py",
+      "master spec/current phase/canonical state files not listed in the visible manifest",
+      "trajectory files not listed in the visible manifest",
+      "declared child output files not listed in the visible manifest"
+    ]
+  },
+  "current_repository_state": {
+    "git_rev_parse_head": "55d151f578a2dd5189ed9d1124279746ea0f5199",
+    "manifest_current_integration_head": "980529e32c6014be23c9e3c7e53046ea62b718d4",
+    "head_matches_manifest_current_integration_head": false,
+    "git_log_1": {
+      "commit": "55d151f578a2dd5189ed9d1124279746ea0f5199",
+      "author": "Codex Coordinator <codex-coordinator@example.local>",
+      "author_date": "2026-06-25T12:39:45+08:00",
+      "subject": "Integrate T1 authorized recovery artifacts"
+    },
+    "git_diff_name_status_head": "",
+    "git_status_porcelain_v1": "?? scripts/run_reference_detection_v4_corpus_screening.py",
+    "recent_commit_path_metadata": {
+      "command": "git log --name-status --format='COMMIT %H %s' -5",
+      "summary": "Recent T1 commits added T1B/T1C reports, synthetic fixture/proposed artifacts, scripts/run_tests.py, scripts/sheetmetal_v1.py, child results, frozen manifests, and integration/orchestration metadata. No renderer-named path was listed. MASTER_STATE and other orchestration files changed in the final integration commit but were not visible for content review."
+    }
+  },
+  "criteria": [
+    {
+      "id": "C01_VISIBLE_MANIFEST_AND_HASHES",
+      "criterion": "Visible-file manifest is parseable and visible files match listed SHA-256 hashes.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "command": "Get-FileHash -Algorithm SHA256 for each visible_files entry",
+          "result": "All listed visible file hashes matched the manifest."
+        }
+      ]
+    },
+    {
+      "id": "C02_CURRENT_HEAD_BOUND_TO_MANIFEST",
+      "criterion": "Audit manifest current_integration_head matches current repository HEAD.",
+      "status": "FAIL",
+      "evidence": [
+        {
+          "command": "git rev-parse HEAD",
+          "stdout": "55d151f578a2dd5189ed9d1124279746ea0f5199"
+        },
+        {
+          "path": "orchestration/input_manifests/sheetmetal-v1/t1-authorized-recovery/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.visible_files.json",
+          "line": 6,
+          "value": "980529e32c6014be23c9e3c7e53046ea62b718d4"
+        }
+      ]
+    },
+    {
+      "id": "C03_INTEGRATION_AND_CHILD_JSON_REQUIRED_FIELDS",
+      "criterion": "Integration, T1A, T1B, and T1C result/report JSON files are parseable and required-field-complete.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "command": "ConvertFrom-Json plus required field checks",
+          "result": "PASS for integration child result, integration summary, T1A child/report, T1B child/report, T1C child/report, and T1C rule artifact."
+        }
+      ]
+    },
+    {
+      "id": "C04_NON_SELF_OUTPUT_HASHES",
+      "criterion": "Non-self output hashes declared by T1A, T1B, T1C, and integration child results match current files.",
+      "status": "NOT_VERIFIED",
+      "evidence": [
+        {
+          "result": "Visible declared output hashes matched; self hashes were correctly excluded."
+        },
+        {
+          "result": "Seven declared non-self output paths were not in the visible-file manifest and were not read."
+        }
+      ],
+      "not_verified_paths": [
+        "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.md",
+        "evals/fixtures/sheetmetal-v1/component_geometry_authority_fixture.json",
+        "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_library.proposed.v1.json",
+        "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.md",
+        "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/synthetic_rule_fixture_manifest.json",
+        "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/artifact_gate_validation.json",
+        "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.md"
+      ]
+    },
+    {
+      "id": "C05_T1A_SAFE_UNRESOLVED",
+      "criterion": "T1A remains safe unresolved with no panel allocation promotion.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.json",
+          "sha256": "ED5E822D085A51F3A52A5D1B16361FB6693151F70A74709A93933C148D782643",
+          "lines": "18,71-99,125-126",
+          "summary": "Implementation boundary excludes canonical source approval; after state remains explicitly_assigned 0, rule_assigned 0, unassigned 53, unsupported_assignment_count 0; capability_success_claimed false; final status SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE."
+        }
+      ]
+    },
+    {
+      "id": "C06_T1B_REAL_PROJECT_GEOMETRY_COVERAGE",
+      "criterion": "T1B real-project geometry coverage remains 0/53 with no real-project geometry promotion.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.json",
+          "sha256": "C02AE1FB6EB38643109EDC0B0A20B03011A37C08C3A01CEC864722C8A2B34673",
+          "lines": "29,50-61,66-67,94,116",
+          "summary": "active_real_project_geometry_library_promoted false; verified_model_geometry 0; approved_generic_conservative_envelope 0; geometry_missing 53; denominator 53; verified_fact_promotion_count 0; generic_envelope_real_project_promotion_count 0."
+        }
+      ]
+    },
+    {
+      "id": "C07_T1B_SYNTHETIC_AUTHORITY_STATE_EXECUTION",
+      "criterion": "T1B only preserves synthetic authority-state behavior and does not treat synthetic evidence as real-project capability success.",
+      "status": "NOT_VERIFIED",
+      "evidence": [
+        {
+          "path": "scripts/sheetmetal_v1.py",
+          "sha256": "8427AD942B18C8B904E2EAE79F83D4CF3A5F8FE219134C551ED1D22A427BC82B",
+          "lines": "404-419,1262-1275,1455-1467,1580-1585",
+          "summary": "Visible implementation preserves component_geometry status values and keeps GEOMETRY_MISSING/GEOMETRY_CONFLICT unresolved."
+        },
+        {
+          "path": "scripts/run_tests.py",
+          "sha256": "5B4F077D4EC3B36033D7D95D15C2CA414825936B56E7C9C17E620933BB5608C1",
+          "lines": "1288-1329,1392-1406",
+          "summary": "Visible tests assert verified/generic/missing synthetic authority states and no drawing generation/leakage."
+        },
+        {
+          "result": "The synthetic fixture and proposed geometry library were outside the visible manifest, and Python was unavailable, so fixture content and execution were not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "C08_T1C_PROPOSAL_ONLY_NOT_PROMOTED",
+      "criterion": "T1C rule artifacts remain proposal-only and are not promoted to canonical model, renderer, or T2 recalibration input.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.json",
+          "sha256": "096CD977FBB63802909FB90176F2C1B6BDB2C2F5C180C925834974B41CA3601A",
+          "lines": "16-20,32,107-109,126",
+          "summary": "Decision is VERSIONED_RULE_ARTIFACTS_BUILT_NOT_ACTIVATED_IN_FROZEN_GENERATOR; active_generator_behavior_changed false; canonical_master_files_updated false; customer_drawing_generated false; canonical_master_files_mutated false."
+        },
+        {
+          "path": "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/rule_artifacts/smv1_choice_c_topology_sizing_placement_rules.v1.json",
+          "sha256": "D4C908C18F9037F633EB812D27F656B7DD12A2EC89A84023CB68D2948EB3F2B4",
+          "line": 29,
+          "summary": "rule_state is AUTHORIZED_PROPOSED_RULE_ARTIFACT_PENDING_COORDINATOR_ADOPTION_AND_INDEPENDENT_AUDIT."
+        },
+        {
+          "path": "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json",
+          "sha256": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+          "lines": "53-56,137",
+          "summary": "Integration preserved T1C proposal-only, model_promotion_performed false, t2_recalibration_started false, customer_drawing_generated false, and t1c_rule_artifacts_promoted false."
+        },
+        {
+          "command": "rg -n proposed artifact patterns in visible scripts and frozen manifests",
+          "stdout": "NO_MATCHES"
+        },
+        {
+          "command": "git log --name-status --format='COMMIT %H %s' -5",
+          "summary": "Recent commit path metadata showed T1C report/artifact paths and orchestration metadata, not renderer-named paths."
+        }
+      ],
+      "limitation": "Non-visible canonical/master-state content was not opened; final integration commit path metadata showed MASTER_STATE changed but its content was outside the visible manifest."
+    },
+    {
+      "id": "C09_FULL_TEST_RERUN",
+      "criterion": "Rerun scripts/run_tests.py.",
+      "status": "NOT_VERIFIED",
+      "evidence": [
+        {
+          "command": "python scripts/run_tests.py",
+          "exit_code": 1,
+          "stdout": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+        }
+      ]
+    },
+    {
+      "id": "C10_LEGACY_FREEZE_RERUN",
+      "criterion": "Rerun scripts/verify_frozen_workflow.py --scope legacy-baseline-024.",
+      "status": "NOT_VERIFIED",
+      "evidence": [
+        {
+          "command": "python scripts/verify_frozen_workflow.py --scope legacy-baseline-024",
+          "exit_code": 1,
+          "stdout": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+        }
+      ]
+    },
+    {
+      "id": "C11_ACTIVE_FREEZE_RERUN",
+      "criterion": "Rerun scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active.",
+      "status": "NOT_VERIFIED",
+      "evidence": [
+        {
+          "command": "python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+          "exit_code": 1,
+          "stdout": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+        }
+      ]
+    },
+    {
+      "id": "C12_TOPOLOGY_FREEZE_RERUN",
+      "criterion": "Rerun scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement.",
+      "status": "NOT_VERIFIED",
+      "evidence": [
+        {
+          "command": "python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+          "exit_code": 1,
+          "stdout": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+        }
+      ]
+    },
+    {
+      "id": "C13_HARD_GATES",
+      "criterion": "Hard gates: source-root mutation count 0, private external transmissions 0, completed-reference leakage 0, post-design leakage 0, customer PDF/DXF/DWG generation 0, production approval false.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json",
+          "sha256": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+          "lines": "54-58,131-137",
+          "summary": "model_promotion_performed false; t2_recalibration_started false; customer_drawing_generated false; private_data_transmitted false; all requested hard-gate counts zero or false."
+        },
+        {
+          "path": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json",
+          "sha256": "FDB0B9457E09A87A25965A40B83D864BCCE2584F25B063858B070C637DCF6FF7",
+          "lines": "64-70,110-114",
+          "summary": "Integration child result repeats hard-gate counts zero or false."
+        },
+        {
+          "path": "docs/PRIVACY_APPROVAL.md",
+          "sha256": "EC70B7AB47DDBB23EC029E7E5BF0F744C96DAB641DA2056FB4CD4B1619F3489E",
+          "lines": "3,5",
+          "summary": "Privacy approval remains NOT_APPROVED and local-only."
+        }
+      ]
+    },
+    {
+      "id": "C14_CURRENT_WORKTREE",
+      "criterion": "Current tracked diff is clean and no forbidden untracked script path is present.",
+      "status": "FAIL",
+      "evidence": [
+        {
+          "command": "git diff --name-status HEAD",
+          "stdout": ""
+        },
+        {
+          "command": "git status --porcelain=v1",
+          "stdout": "?? scripts/run_reference_detection_v4_corpus_screening.py"
+        }
+      ],
+      "note": "The audit did not read, stage, execute, or modify the forbidden script path."
+    },
+    {
+      "id": "C15_MASTER_SPEC_PHASE_CANONICAL_TRAJECTORIES",
+      "criterion": "Master spec, current phase plan, canonical state, and trajectories reviewed.",
+      "status": "NOT_VERIFIED",
+      "evidence": [
+        {
+          "reason": "These files were not listed in the visible-file manifest. The read boundary prohibited opening them."
+        },
+        {
+          "command": "git show --name-status --format='%H%n%s' 55d151f578a2dd5189ed9d1124279746ea0f5199",
+          "summary": "Latest commit changed docs/01_CURRENT_STATE.md and orchestration/master/MASTER_STATE.json, but their contents were not visible for audit."
+        }
+      ]
+    }
+  ],
+  "child_output_hash_verification": [
+    {
+      "child_result": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json",
+      "output_path": "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json",
+      "expected_sha256": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+      "actual_sha256": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+      "status": "PASS"
+    },
+    {
+      "child_result": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json",
+      "output_path": "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.md",
+      "expected_sha256": "F401A8BC8720F0FED403B7BFA33949AC20849B99559AC38D19E9BF9CCD33FD12",
+      "actual_sha256": "F401A8BC8720F0FED403B7BFA33949AC20849B99559AC38D19E9BF9CCD33FD12",
+      "status": "PASS"
+    },
+    {
+      "child_result": "orchestration/master/child-results/SMV1-T1A-PANEL-ALLOCATION-RECOVERY.json",
+      "output_path": "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.json",
+      "expected_sha256": "ED5E822D085A51F3A52A5D1B16361FB6693151F70A74709A93933C148D782643",
+      "actual_sha256": "ED5E822D085A51F3A52A5D1B16361FB6693151F70A74709A93933C148D782643",
+      "status": "PASS"
+    },
+    {
+      "child_result": "orchestration/master/child-results/SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY.json",
+      "output_path": "scripts/sheetmetal_v1.py",
+      "expected_sha256": "8427AD942B18C8B904E2EAE79F83D4CF3A5F8FE219134C551ED1D22A427BC82B",
+      "actual_sha256": "8427AD942B18C8B904E2EAE79F83D4CF3A5F8FE219134C551ED1D22A427BC82B",
+      "status": "PASS"
+    },
+    {
+      "child_result": "orchestration/master/child-results/SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY.json",
+      "output_path": "scripts/run_tests.py",
+      "expected_sha256": "5B4F077D4EC3B36033D7D95D15C2CA414825936B56E7C9C17E620933BB5608C1",
+      "actual_sha256": "5B4F077D4EC3B36033D7D95D15C2CA414825936B56E7C9C17E620933BB5608C1",
+      "status": "PASS"
+    },
+    {
+      "child_result": "orchestration/master/child-results/SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY.json",
+      "output_path": "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.json",
+      "expected_sha256": "C02AE1FB6EB38643109EDC0B0A20B03011A37C08C3A01CEC864722C8A2B34673",
+      "actual_sha256": "C02AE1FB6EB38643109EDC0B0A20B03011A37C08C3A01CEC864722C8A2B34673",
+      "status": "PASS"
+    },
+    {
+      "child_result": "orchestration/master/child-results/SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY.json",
+      "output_path": "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/rule_artifacts/smv1_choice_c_topology_sizing_placement_rules.v1.json",
+      "expected_sha256": "D4C908C18F9037F633EB812D27F656B7DD12A2EC89A84023CB68D2948EB3F2B4",
+      "actual_sha256": "D4C908C18F9037F633EB812D27F656B7DD12A2EC89A84023CB68D2948EB3F2B4",
+      "status": "PASS"
+    },
+    {
+      "child_result": "orchestration/master/child-results/SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY.json",
+      "output_path": "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.json",
+      "expected_sha256": "096CD977FBB63802909FB90176F2C1B6BDB2C2F5C180C925834974B41CA3601A",
+      "actual_sha256": "096CD977FBB63802909FB90176F2C1B6BDB2C2F5C180C925834974B41CA3601A",
+      "status": "PASS"
+    }
+  ],
+  "hard_gates": {
+    "source_root_mutation_count": {
+      "status": "PASS",
+      "value": 0,
+      "evidence": "integration summary lines 131-137; current tracked git diff empty"
+    },
+    "private_external_transmissions": {
+      "status": "PASS",
+      "value": 0,
+      "evidence": "integration summary lines 132 and 58; privacy approval NOT_APPROVED"
+    },
+    "completed_reference_leakage": {
+      "status": "PASS",
+      "value": 0,
+      "evidence": "integration summary line 133"
+    },
+    "post_design_leakage": {
+      "status": "PASS",
+      "value": 0,
+      "evidence": "integration summary line 134"
+    },
+    "customer_pdf_dxf_dwg_generation_count": {
+      "status": "PASS",
+      "value": 0,
+      "evidence": "integration summary lines 56 and 135"
+    },
+    "production_approval_declared": {
+      "status": "PASS",
+      "value": false,
+      "evidence": "integration summary line 136"
+    }
+  },
+  "validation_command_results": [
+    {
+      "command": "python scripts/run_tests.py",
+      "status": "NOT_VERIFIED",
+      "exit_code": 1,
+      "stdout": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+    },
+    {
+      "command": "python scripts/verify_frozen_workflow.py --scope legacy-baseline-024",
+      "status": "NOT_VERIFIED",
+      "exit_code": 1,
+      "stdout": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+    },
+    {
+      "command": "python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+      "status": "NOT_VERIFIED",
+      "exit_code": 1,
+      "stdout": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+    },
+    {
+      "command": "python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+      "status": "NOT_VERIFIED",
+      "exit_code": 1,
+      "stdout": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+    }
+  ],
+  "runtime_discovery": {
+    "commands_checked": {
+      "python": "C:\\Users\\alex1\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+      "python3": "C:\\Users\\alex1\\AppData\\Local\\Microsoft\\WindowsApps\\python3.exe",
+      "py": null,
+      "uv": null,
+      "pixi": null,
+      "poetry": null
+    },
+    "local_python_candidates_found": []
+  },
+  "blockers": [
+    "Visible manifest current_integration_head is 980529e32c6014be23c9e3c7e53046ea62b718d4, but current repository HEAD is 55d151f578a2dd5189ed9d1124279746ea0f5199.",
+    "Required Python validation commands could not run because only Microsoft Store Python stubs were available on PATH and no checked local Python candidate existed.",
+    "Seven declared non-self output hashes could not be recomputed because those files were outside the visible-file manifest.",
+    "Current git status contains untracked scripts/run_reference_detection_v4_corpus_screening.py. The audit did not read, stage, execute, or modify it.",
+    "Master spec, current phase plan, canonical state content, and trajectories were not independently read because they were outside the visible-file manifest."
+  ],
+  "forbidden_actions_observed_by_auditor": {
+    "source_roots_read_or_modified": false,
+    "private_paths_read_or_written": false,
+    "completed_drawings_read": false,
+    "post_design_labels_read": false,
+    "customer_pdf_dxf_dwg_generated": false,
+    "forbidden_screening_script_read_staged_executed_or_modified": false,
+    "external_private_transmission": false,
+    "commit_or_push_performed": false,
+    "production_approval_declared": false
+  },
+  "expected_outputs": [
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md",
+    "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json"
+  ],
+  "exact_recommended_next_action": "Regenerate an audit visible-file manifest bound to current HEAD, include every declared child output hash path or relax that criterion explicitly, provide an executable Python runtime, and adjudicate or remove the untracked forbidden screening script before rerunning this independent audit."
+}

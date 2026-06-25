@@ -1,0 +1,180 @@
+{
+  "task_id": "SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT",
+  "starting_commit": "55d151f578a2dd5189ed9d1124279746ea0f5199",
+  "ending_commit": "55d151f578a2dd5189ed9d1124279746ea0f5199",
+  "tracked_worktree_status": {
+    "status": "AUDIT_OUTPUTS_WRITTEN_UNCOMMITTED",
+    "allowed_paths_written": [
+      "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json",
+      "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md",
+      "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json"
+    ],
+    "current_head": "55d151f578a2dd5189ed9d1124279746ea0f5199",
+    "visible_manifest_current_integration_head": "980529e32c6014be23c9e3c7e53046ea62b718d4",
+    "head_matches_visible_manifest": false,
+    "pre_output_git_diff_name_status": "",
+    "pre_output_git_status_porcelain_v1": "?? scripts/run_reference_detection_v4_corpus_screening.py",
+    "forbidden_screening_script_read_staged_executed_or_modified_by_audit": false,
+    "source_roots_mutated_by_audit": false,
+    "private_paths_read_or_written_by_audit": false
+  },
+  "test_result": {
+    "full_test_runner": {
+      "command": "python scripts/run_tests.py",
+      "status": "NOT_VERIFIED",
+      "exit_code": 1,
+      "failure_class": "PYTHON_RUNTIME_NOT_FOUND",
+      "stdout": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+    },
+    "json_parse_validation": {
+      "command": "Get-Content -Raw reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json | ConvertFrom-Json",
+      "status": "PASS"
+    },
+    "visible_json_artifact_parse_and_required_fields": {
+      "status": "PASS"
+    },
+    "child_non_self_output_hash_validation": {
+      "status": "NOT_VERIFIED",
+      "visible_declared_outputs": "PASS",
+      "non_visible_declared_outputs_not_read": 7
+    }
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": {
+      "command": "python scripts/verify_frozen_workflow.py --scope legacy-baseline-024",
+      "status": "NOT_VERIFIED",
+      "exit_code": 1,
+      "failure_class": "PYTHON_RUNTIME_NOT_FOUND"
+    },
+    "sheetmetal_v1_active": {
+      "command": "python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+      "status": "NOT_VERIFIED",
+      "exit_code": 1,
+      "failure_class": "PYTHON_RUNTIME_NOT_FOUND"
+    },
+    "sheetmetal_v1_topology_sizing_placement": {
+      "command": "python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+      "status": "NOT_VERIFIED",
+      "exit_code": 1,
+      "failure_class": "PYTHON_RUNTIME_NOT_FOUND"
+    }
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md",
+    "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json"
+  ],
+  "schemas_validated": {
+    "audit_json_parseable": true,
+    "child_result_required_fields_present": true
+  },
+  "hard_gates": {
+    "overall": "PASS_STATIC_VISIBLE_EVIDENCE_TEST_RERUN_NOT_VERIFIED",
+    "source_root_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false,
+    "source_roots_read_or_modified_by_audit": false,
+    "private_paths_read_or_written_by_audit": false,
+    "customer_drawing_generated_by_audit": false,
+    "forbidden_screening_script_read_staged_executed_or_modified_by_audit": false
+  },
+  "coverage": {
+    "integration_and_child_json_parse_required_fields": {
+      "status": "PASS"
+    },
+    "non_self_output_hashes": {
+      "status": "NOT_VERIFIED",
+      "visible_hashes_pass": true,
+      "non_visible_output_path_count": 7
+    },
+    "t1a_panel_allocation": {
+      "status": "PASS",
+      "final_status": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+      "after": {
+        "explicitly_assigned": 0,
+        "rule_assigned": 0,
+        "unassigned": 53,
+        "unsupported_assignment_count": 0
+      }
+    },
+    "t1b_component_geometry": {
+      "real_project_coverage_status": "PASS",
+      "synthetic_execution_status": "NOT_VERIFIED",
+      "after": {
+        "verified_model_geometry": 0,
+        "approved_generic_conservative_envelope": 0,
+        "geometry_missing": 53,
+        "denominator": 53
+      },
+      "promotion_counts": {
+        "verified_fact_promotion_count": 0,
+        "generic_envelope_real_project_promotion_count": 0
+      }
+    },
+    "t1c_topology_sizing_rules": {
+      "status": "PASS",
+      "rule_state": "AUTHORIZED_PROPOSED_RULE_ARTIFACT_PENDING_COORDINATOR_ADOPTION_AND_INDEPENDENT_AUDIT",
+      "model_promotion_performed": false,
+      "t2_recalibration_started": false,
+      "t1c_rule_artifacts_promoted": false
+    },
+    "current_head_matches_manifest": {
+      "status": "FAIL"
+    },
+    "current_worktree_forbidden_untracked_script_absent": {
+      "status": "FAIL"
+    }
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_value_count": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0
+  },
+  "exact_final_status": "INDEPENDENT_AUDIT_NOT_ACCEPTED",
+  "exact_recommended_next_action": "Regenerate an audit visible-file manifest bound to current HEAD, include every declared child output hash path or relax that criterion explicitly, provide an executable Python runtime, and adjudicate or remove the untracked forbidden screening script before rerunning this independent audit.",
+  "blocker_taxonomy": [
+    {
+      "blocker": "CURRENT_HEAD_NOT_BOUND_TO_VISIBLE_MANIFEST",
+      "status": "FAIL",
+      "details": "Manifest current_integration_head is 980529e32c6014be23c9e3c7e53046ea62b718d4 but current HEAD is 55d151f578a2dd5189ed9d1124279746ea0f5199."
+    },
+    {
+      "blocker": "PYTHON_RUNTIME_NOT_FOUND",
+      "status": "NOT_VERIFIED",
+      "details": "All required Python validation commands exited before executing repository tests."
+    },
+    {
+      "blocker": "INCOMPLETE_VISIBLE_OUTPUT_HASH_BOUNDARY",
+      "status": "NOT_VERIFIED",
+      "details": "Seven declared non-self output paths were outside the visible-file manifest."
+    },
+    {
+      "blocker": "UNTRACKED_FORBIDDEN_SCREENING_SCRIPT_PRESENT",
+      "status": "FAIL",
+      "details": "git status --porcelain=v1 reported ?? scripts/run_reference_detection_v4_corpus_screening.py. The audit did not read, stage, execute, or modify it."
+    },
+    {
+      "blocker": "NON_VISIBLE_MASTER_CANONICAL_TRAJECTORY_FILES",
+      "status": "NOT_VERIFIED",
+      "details": "Master spec, current phase plan, canonical state content, and trajectories were not listed in the visible manifest and were not opened."
+    }
+  ],
+  "requested_model": "GPT-5 Codex",
+  "actual_model": "GPT-5 Codex",
+  "runtime": {
+    "shell": "powershell",
+    "cwd": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper",
+    "python_runtime": "NOT_FOUND",
+    "created_at": "2026-06-25T13:04:39.4708748+08:00"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json": "B1A3F889BA99B18190FD004068AA5B367BD129D43B1461C6B3F5F238638FA3A7",
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md": "9D03F1D8B5346790BB30FEE78E088920E6C677F81FFB2069791EBD53084658B2",
+    "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}
