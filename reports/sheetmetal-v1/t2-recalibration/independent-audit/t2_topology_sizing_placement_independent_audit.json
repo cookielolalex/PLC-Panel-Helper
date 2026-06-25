@@ -1,0 +1,547 @@
+{
+  "schema_version": "sheetmetal-v1.t2_topology_sizing_placement_independent_audit.v1",
+  "task_id": "SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT",
+  "role": "independent_auditor",
+  "created_at": "2026-06-25T14:35:00+08:00",
+  "overall_status": "PASS_T2_RECALIBRATION_AUDIT",
+  "safe_unresolved_audit_accepted_only": true,
+  "model_promotion_approved": false,
+  "renderer_promotion_approved": false,
+  "private_preview_readiness_approved": false,
+  "production_approval_declared": false,
+  "status_reason": "T2 child result and summary are parseable, required-field-complete, hash-bound, and privacy-clean from committed neutral evidence. T1A/T1B remain safe unresolved, T1C remains proposal-only, accepted T1 audit provides zero promotable T2 inputs, coverage remains unresolved, required tests and scoped freeze verifiers pass, and model/renderer promotion remains blocked pending further accepted evidence.",
+  "read_boundary": {
+    "workspace": "C:\\Users\\alex1\\OneDrive\\Documents\\PLC Panels Generation Helper",
+    "task_brief_path": "orchestration/tasks/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.md",
+    "task_brief_sha256": "363675074BE34FE7FCE3F6AD5B2A8F38FB520A66B582F7970896E36CAA713549",
+    "visible_file_manifest_path": "orchestration/input_manifests/sheetmetal-v1/t2-recalibration/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.visible_files.json",
+    "visible_file_manifest_observed_sha256": "7E811484A6173224F0067DFFCC5360727CC1E0B893CC0D2934706CEF0429099F",
+    "visible_file_count": 28,
+    "all_visible_file_hashes_matched": true,
+    "task_brief_expected_output_paths_not_used_due_user_allowed_scope": [
+      "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_independent_audit.json",
+      "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_independent_audit.md"
+    ],
+    "user_allowed_output_paths_used": [
+      "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json",
+      "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.md",
+      "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json"
+    ],
+    "forbidden_material_not_read_or_written": [
+      "source roots",
+      ".private/**",
+      "completed drawings",
+      "post-design labels",
+      "customer PDF/DXF/DWG outputs",
+      "scripts/run_reference_detection_v4_corpus_screening.py"
+    ]
+  },
+  "repository_state": {
+    "git_head": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+    "git_head_subject": "Record T2 recalibration gate",
+    "git_head_author_date": "2026-06-25T14:01:36+08:00",
+    "manifest_current_t2_recalibration_head": "d5d8f69f71a97229ea004e4eea974cf529601800",
+    "t2_child_starting_commit": "d5d8f69f71a97229ea004e4eea974cf529601800",
+    "t2_child_ending_commit": "d5d8f69f71a97229ea004e4eea974cf529601800",
+    "tracked_diff_before_audit_outputs": "EMPTY",
+    "git_status_short_before_audit_outputs": "?? scripts/run_reference_detection_v4_corpus_screening.py",
+    "pre_existing_untracked_path_presence_is_not_failure": true,
+    "t2_artifact_commit_paths_reviewed": true,
+    "t2_artifact_commit_path_boundary": "neutral docs/orchestration/reports only; no source roots, .private paths, customer drawings, PDF/DXF/DWG outputs, or forbidden screening script path listed",
+    "metadata_limitations": [
+      "T2 child result records d5d8f69f71a97229ea004e4eea974cf529601800 as both starting and ending commit, while the committed T2 gate artifacts are present at current HEAD a8acc55779afbaec874d9102bbd206d9223b13b1. This is recorded as a metadata limitation, not a hash/privacy failure."
+    ]
+  },
+  "material_input_hashes": {
+    "AGENTS.md": "4CA078C3F02217CED8491C53A11641152B38A364F157E36523408016074EB227",
+    "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+    "docs/01_CURRENT_STATE.md": "AB4FDD0816905E581336C97FBFB7EB3F59A5C01E91180EA57E2BEC430CFA8EB1",
+    "docs/04_DECISION_LEDGER.md": "2D26321D232BDF1F64D161B8EFA1B12657D6480B7035C6AC3BF228BB0E9B5C4B",
+    "docs/06_EVAL_LEDGER.md": "0FDF836AFB1D1D1A980E7D13FFCB35B20773D1E06A99B733F4395B1D1D69FE1F",
+    "docs/07_CHANGELOG.md": "6C055B357BDAA8B55566FA33EDD1535C477D06AB1489ECE9154796F4F69619DB",
+    "docs/SESSION_CHECKPOINT.md": "063D10C0DC8B96AAA381959721A6249F789218431EFEA596EB3D2F18B89D3B95",
+    "docs/specs/MASTER_AUTOPILOT_PROTOCOL.md": "79D82FF11FA7019766F2E647538D52F7FD086A6E7E85357EE229D0D8E36CB2D1",
+    "docs/specs/ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_CALIBRATION.md": "9FA9E4A7E640B7D7481C34A4A5D992C822B7EE0EA46918307CB69A489D278454",
+    "orchestration/master/MASTER_STATE.json": "325AEDA5311D557EA5F5CA42C734F9C7284FF63D4F824CCB630BA85421682427",
+    "orchestration/master/THREAD_REGISTRY.csv": "88FA3026B099283224C01CD7445915578F914358E361130294A9C4B30D71811C",
+    "orchestration/master/NEXT_ACTION_QUEUE.json": "8E91FB56B2E861AF0D07B5CE3DB8E13E6F66888AA41ED1A25ADFE8211DFC9475",
+    "orchestration/master/CHECKPOINT_GRAPH.json": "8BD736C96D3069CBA53E4D03B27A7457EC877B83F30771736AAB74EA514D9AA3",
+    "orchestration/master/RECOVERY_LEDGER.json": "AD97BE1F0F276D707016C4FCDE82F3457BFF7C4084E56377F1C2BC4DE95453EA",
+    "orchestration/NEXT_THREAD_PROMPT.txt": "C845759C80B6D7CA508183AF3A7A49D1FD8D24D5FC692B197ACEF204FA3E0EA1",
+    "orchestration/tasks/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.md": "363675074BE34FE7FCE3F6AD5B2A8F38FB520A66B582F7970896E36CAA713549",
+    "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json": "0E79FBA1945001473E74639CEFF9D13BBB1C516CC2FC24923BFA241D311283E0",
+    "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json": "99028CC8233F074A98399B86FC74A16B9C051AE5F6324B09D36654A76FEC7141",
+    "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.md": "0616CB9B96DB0D13471B76C7F18E4C0E99706D1AD730C5376D8D7A50AABDAD48",
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json": "18B4D90599ED65A5B7A12B487C33C104C928ABB52544CBC0B7C2B639D80CD8D1",
+    "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json": "1922468A0958AB755930E46BD24C3418647B796826F695E78FD70F263E295B4B",
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/generator_freeze_summary.json": "EB86997E083FF2D4B12C17E760F08B67D25A08329653D032E5A910B0663E2F3D",
+    "scripts/run_tests.py": "5B4F077D4EC3B36033D7D95D15C2CA414825936B56E7C9C17E620933BB5608C1",
+    "scripts/verify_frozen_workflow.py": "22CF4F7B70802CD4A2CCF6B9110B2B653C5A6579564BF98497B1D4774E0F9142",
+    "scripts/sheetmetal_v1.py": "8427AD942B18C8B904E2EAE79F83D4CF3A5F8FE219134C551ED1D22A427BC82B",
+    "evals/sheetmetal-v1/frozen_workflow_manifest.json": "639BBB7CAF7DCF620370EF796A095985F93CDAA11C6C71A61D32E11C33874134",
+    "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json": "0BE823F215AF44158F97CEB7AACB06CFDAD67E5FE1A161EA8E81717CB11CAD06"
+  },
+  "json_parse_validation": {
+    "status": "PASS",
+    "parsed_paths": [
+      "orchestration/input_manifests/sheetmetal-v1/t2-recalibration/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.visible_files.json",
+      "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json",
+      "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+      "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json",
+      "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json",
+      "reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json",
+      "reports/sheetmetal-v1/one-project-topology-calibration/1110101/generator_freeze_summary.json",
+      "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+      "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json",
+      "orchestration/master/MASTER_STATE.json",
+      "orchestration/master/NEXT_ACTION_QUEUE.json",
+      "orchestration/master/CHECKPOINT_GRAPH.json",
+      "orchestration/master/RECOVERY_LEDGER.json"
+    ]
+  },
+  "required_field_validation": {
+    "status": "PASS",
+    "t2_child_result_required_fields_present": [
+      "task_id",
+      "starting_commit",
+      "ending_commit",
+      "tracked_worktree_status",
+      "test_result",
+      "workflow_freeze_results",
+      "artifacts_created",
+      "schemas_validated",
+      "hard_gates",
+      "coverage",
+      "privacy_leakage_counts",
+      "exact_final_status",
+      "exact_recommended_next_action",
+      "blocker_taxonomy",
+      "runtime",
+      "output_hashes"
+    ],
+    "t2_summary_required_fields_present": [
+      "schema_version",
+      "task_id",
+      "created_at",
+      "starting_commit",
+      "ending_commit",
+      "active_goal",
+      "project_id",
+      "recalibration_mode",
+      "recalibration_inputs",
+      "t1_authorized_recovery_adjudication_for_t2",
+      "coverage",
+      "determinism",
+      "hard_gates",
+      "validation",
+      "test_result",
+      "workflow_freeze_results",
+      "exact_final_status",
+      "exact_recommended_next_action",
+      "blocker_taxonomy"
+    ],
+    "formal_schema": "NO_DEDICATED_SCHEMA_AVAILABLE"
+  },
+  "hash_consistency": {
+    "status": "PASS",
+    "visible_manifest_hashes": "28/28 PASS",
+    "t2_child_output_hashes": [
+      {
+        "path": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+        "declared_sha256": "99028CC8233F074A98399B86FC74A16B9C051AE5F6324B09D36654A76FEC7141",
+        "actual_sha256": "99028CC8233F074A98399B86FC74A16B9C051AE5F6324B09D36654A76FEC7141",
+        "status": "PASS"
+      },
+      {
+        "path": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.md",
+        "declared_sha256": "0616CB9B96DB0D13471B76C7F18E4C0E99706D1AD730C5376D8D7A50AABDAD48",
+        "actual_sha256": "0616CB9B96DB0D13471B76C7F18E4C0E99706D1AD730C5376D8D7A50AABDAD48",
+        "status": "PASS"
+      },
+      {
+        "path": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json",
+        "declared_sha256": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH",
+        "status": "SELF_EXCLUDED"
+      }
+    ],
+    "summary_recalibration_input_hashes": [
+      {
+        "input": "accepted_t1_authorized_recovery_audit",
+        "path": "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json",
+        "declared_sha256": "18B4D90599ED65A5B7A12B487C33C104C928ABB52544CBC0B7C2B639D80CD8D1",
+        "actual_sha256": "18B4D90599ED65A5B7A12B487C33C104C928ABB52544CBC0B7C2B639D80CD8D1",
+        "manifest_sha256": "18B4D90599ED65A5B7A12B487C33C104C928ABB52544CBC0B7C2B639D80CD8D1",
+        "status": "PASS"
+      },
+      {
+        "input": "integration_summary",
+        "path": "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json",
+        "declared_sha256": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+        "actual_sha256": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+        "manifest_sha256": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+        "status": "PASS"
+      },
+      {
+        "input": "frozen_topology_implementation_checkpoint",
+        "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json",
+        "declared_sha256": "1922468A0958AB755930E46BD24C3418647B796826F695E78FD70F263E295B4B",
+        "actual_sha256": "1922468A0958AB755930E46BD24C3418647B796826F695E78FD70F263E295B4B",
+        "manifest_sha256": "1922468A0958AB755930E46BD24C3418647B796826F695E78FD70F263E295B4B",
+        "status": "PASS"
+      },
+      {
+        "input": "frozen_topology_generator_freeze",
+        "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/generator_freeze_summary.json",
+        "declared_sha256": "EB86997E083FF2D4B12C17E760F08B67D25A08329653D032E5A910B0663E2F3D",
+        "actual_sha256": "EB86997E083FF2D4B12C17E760F08B67D25A08329653D032E5A910B0663E2F3D",
+        "manifest_sha256": "EB86997E083FF2D4B12C17E760F08B67D25A08329653D032E5A910B0663E2F3D",
+        "status": "PASS"
+      }
+    ]
+  },
+  "t1_and_t2_adjudication": {
+    "accepted_t1_audit_status": "PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY",
+    "t1a_panel_assignment": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+    "t1b_component_geometry": "SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_0_OF_53_SYNTHETIC_ONLY",
+    "t1c_topology_sizing_rules": "PROPOSAL_ONLY_NOT_PROMOTED",
+    "promotable_t2_inputs_from_t1": 0,
+    "private_generator_rerun_performed": false,
+    "coverage": {
+      "assignment": "0/53",
+      "geometry": "0/53",
+      "sizing": "0/0_zero_source_supported_denominator",
+      "placement": "0/53"
+    },
+    "model_renderer_promotion_blocked": true,
+    "blocker_taxonomy": [
+      "SOURCE_LIMITED_PANEL_ASSIGNMENT_UNAVAILABLE",
+      "COMPONENT_GEOMETRY_MISSING",
+      "T1C_RULE_ARTIFACTS_PROPOSAL_ONLY_NOT_PROMOTED"
+    ]
+  },
+  "hard_gates": {
+    "status": "PASS",
+    "source_root_mutation_count": 0,
+    "private_workspace_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "customer_drawing_generation_count": 0,
+    "production_approval_declared": false,
+    "t1c_rule_artifacts_promoted": false,
+    "forbidden_screening_script_read_staged_executed_or_modified": false,
+    "private_paths_committed": false,
+    "tracked_private_artifacts": 0
+  },
+  "verification_commands": [
+    {
+      "command": "$env:PYTHONDONTWRITEBYTECODE='1'; & 'C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' scripts/run_tests.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "tests_reported": 35,
+      "notes": [
+        "Final JSON status was PASS.",
+        "The test runner emitted expected negative-control FAIL lines before final PASS.",
+        "The test runner wrote ignored synthetic tmp harness artifacts and rendered synthetic PDFs; no tracked file changed and no customer drawing was generated."
+      ]
+    },
+    {
+      "command": "$env:PYTHONDONTWRITEBYTECODE='1'; & 'C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' scripts/verify_frozen_workflow.py --scope legacy-baseline-024",
+      "exit_code": 0,
+      "status": "PASS",
+      "scope": "LEGACY_BASELINE_024",
+      "manifest_sha256": "D4C319005B2ABD4253B9FC9C2859E3C859B1C76E41952184DF1B867A3705C329",
+      "verified_file_count": 15
+    },
+    {
+      "command": "$env:PYTHONDONTWRITEBYTECODE='1'; & 'C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+      "exit_code": 0,
+      "status": "PASS",
+      "scope": "SHEETMETAL_V1_ACTIVE",
+      "manifest_sha256": "639BBB7CAF7DCF620370EF796A095985F93CDAA11C6C71A61D32E11C33874134",
+      "anchor_commit": "980529e32c6014be23c9e3c7e53046ea62b718d4",
+      "current_head": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+      "verified_file_count": 56
+    },
+    {
+      "command": "$env:PYTHONDONTWRITEBYTECODE='1'; & 'C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+      "exit_code": 0,
+      "status": "PASS",
+      "scope": "SHEETMETAL_V1_TOPOLOGY_SIZING_PLACEMENT",
+      "manifest_sha256": "0BE823F215AF44158F97CEB7AACB06CFDAD67E5FE1A161EA8E81717CB11CAD06",
+      "anchor_commit": "980529e32c6014be23c9e3c7e53046ea62b718d4",
+      "current_head": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+      "verified_file_count": 24
+    }
+  ],
+  "criteria_summary": {
+    "pass": 15,
+    "fail": 0,
+    "not_verified": 0
+  },
+  "criteria": [
+    {
+      "id": "C01_JSON_PARSEABILITY",
+      "criterion": "T2 child result and summary JSON are parseable.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "command": "ConvertFrom-Json over material JSON inputs",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "C02_REQUIRED_FIELDS",
+      "criterion": "T2 child result and summary are required-field-complete.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "file": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json",
+          "sha256": "0E79FBA1945001473E74639CEFF9D13BBB1C516CC2FC24923BFA241D311283E0"
+        },
+        {
+          "file": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+          "sha256": "99028CC8233F074A98399B86FC74A16B9C051AE5F6324B09D36654A76FEC7141"
+        }
+      ]
+    },
+    {
+      "id": "C03_HASH_CONSISTENCY",
+      "criterion": "T2 child result output hashes, summary input hashes, and visible manifest hashes recompute.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "result": "28/28 visible hashes matched; T2 child summary JSON/MD output hashes matched; four summary recalibration input hashes matched declared and manifest values."
+        }
+      ]
+    },
+    {
+      "id": "C04_COMMITTED_ARTIFACT_BOUNDARY",
+      "criterion": "Committed T2 artifacts are neutral and do not mutate source roots, .private, forbidden script, or customer drawing outputs.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "command": "git show --name-status --format='%H%n%aI%n%s' --no-renames HEAD",
+          "result": "HEAD a8acc55779afbaec874d9102bbd206d9223b13b1 added/modified docs, orchestration, and reports only."
+        },
+        {
+          "command": "git diff --name-status HEAD",
+          "result": "EMPTY before audit outputs were written."
+        }
+      ]
+    },
+    {
+      "id": "C05_PRIVACY_AND_SOURCE_BOUNDARY",
+      "criterion": "Hard gates show no source-root mutation, no .private mutation, no completed-reference or post-design leakage, no private transmissions, no customer drawing generation, and no production approval.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "file": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+          "json_fields": [
+            "hard_gates.source_root_mutation_count=0",
+            "hard_gates.private_workspace_mutation_count=0",
+            "hard_gates.private_external_transmissions=0",
+            "hard_gates.completed_reference_leakage=0",
+            "hard_gates.post_design_leakage=0",
+            "hard_gates.customer_pdf_dxf_dwg_generation_count=0",
+            "hard_gates.production_approval_declared=false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C06_T1A_SAFE_UNRESOLVED",
+      "criterion": "T1A remains safe unresolved and is not promoted.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "file": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+          "json_field": "t1_authorized_recovery_adjudication_for_t2.t1a_panel_assignment=SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE"
+        }
+      ]
+    },
+    {
+      "id": "C07_T1B_SAFE_UNRESOLVED",
+      "criterion": "T1B remains safe unresolved with real-project geometry coverage 0/53.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "file": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+          "json_fields": [
+            "t1_authorized_recovery_adjudication_for_t2.t1b_component_geometry=SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_0_OF_53_SYNTHETIC_ONLY",
+            "coverage.geometry.verified_or_generic=0",
+            "coverage.geometry.denominator=53"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C08_T1C_PROPOSAL_ONLY",
+      "criterion": "T1C remains proposal-only and is not promoted into model, renderer, frozen generator, or T2 inputs.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "file": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+          "json_fields": [
+            "t1_authorized_recovery_adjudication_for_t2.t1c_topology_sizing_rules=PROPOSAL_ONLY_NOT_PROMOTED",
+            "hard_gates.t1c_rule_artifacts_promoted=false"
+          ]
+        },
+        {
+          "file": "docs/01_CURRENT_STATE.md",
+          "sha256": "AB4FDD0816905E581336C97FBFB7EB3F59A5C01E91180EA57E2BEC430CFA8EB1",
+          "line_evidence": "T1C rule artifacts remain proposal-only and were not promoted into canonical model, renderer, frozen generator, or T2 recalibration input."
+        }
+      ]
+    },
+    {
+      "id": "C09_T2_SAFE_UNRESOLVED_JUSTIFIED",
+      "criterion": "T2 safe-unresolved conclusion is justified by zero promotable T2 inputs and unresolved coverage.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "file": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+          "json_fields": [
+            "t1_authorized_recovery_adjudication_for_t2.promotable_t2_inputs_from_t1=0",
+            "coverage.assignment=0/53",
+            "coverage.geometry=0/53",
+            "coverage.sizing=0/0",
+            "coverage.placement=0/53",
+            "exact_final_status=T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C10_MODEL_AND_RENDERER_PROMOTION_BLOCKED",
+      "criterion": "Canonical model and renderer promotion remain blocked until further accepted evidence.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "file": "orchestration/master/CHECKPOINT_GRAPH.json",
+          "sha256": "8BD736C96D3069CBA53E4D03B27A7457EC877B83F30771736AAB74EA514D9AA3",
+          "json_fields": [
+            "T2.status=RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED",
+            "T3.status=PENDING",
+            "T4.status=PENDING"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C11_FULL_TESTS",
+      "criterion": "Full tests are recorded and independently rerun as PASS.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/run_tests.py",
+          "exit_code": 0,
+          "final_status": "PASS",
+          "tests_reported": 35
+        }
+      ]
+    },
+    {
+      "id": "C12_LEGACY_FREEZE",
+      "criterion": "Legacy freeze verifier is recorded and rerun as PASS.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "command": "scripts/verify_frozen_workflow.py --scope legacy-baseline-024",
+          "exit_code": 0,
+          "status": "PASS",
+          "manifest_sha256": "D4C319005B2ABD4253B9FC9C2859E3C859B1C76E41952184DF1B867A3705C329",
+          "verified_file_count": 15
+        }
+      ]
+    },
+    {
+      "id": "C13_ACTIVE_FREEZE",
+      "criterion": "Active sheetmetal-v1 freeze verifier is recorded and rerun as PASS.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "command": "scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+          "exit_code": 0,
+          "status": "PASS",
+          "manifest_sha256": "639BBB7CAF7DCF620370EF796A095985F93CDAA11C6C71A61D32E11C33874134",
+          "current_head": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+          "verified_file_count": 56
+        }
+      ]
+    },
+    {
+      "id": "C14_TOPOLOGY_FREEZE",
+      "criterion": "Topology/sizing/placement scoped freeze verifier is recorded and rerun as PASS.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "command": "scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+          "exit_code": 0,
+          "status": "PASS",
+          "manifest_sha256": "0BE823F215AF44158F97CEB7AACB06CFDAD67E5FE1A161EA8E81717CB11CAD06",
+          "current_head": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+          "verified_file_count": 24
+        }
+      ]
+    },
+    {
+      "id": "C15_NO_PRODUCTION_APPROVAL",
+      "criterion": "Audit does not declare production approval and respects highest automated status boundary.",
+      "status": "PASS",
+      "evidence": [
+        {
+          "file": "CODEX_MASTER_CUSTOM_GPT_DRAWING_WORKFLOW.txt",
+          "sha256": "EBA9A30139A43862A7705F3123B050245DFA47FE3234D6A4E7579C6213E8FF09",
+          "line_evidence": "Master spec states never output PRODUCTION_APPROVED and highest automated status is READY_FOR_PRIVATE_PREVIEW."
+        },
+        {
+          "file": "orchestration/master/MASTER_STATE.json",
+          "sha256": "325AEDA5311D557EA5F5CA42C734F9C7284FF63D4F824CCB630BA85421682427",
+          "json_fields": [
+            "readiness_gate_state.forbidden_status=PRODUCTION_APPROVED",
+            "readiness_gate_state.customer_pdf_dxf_dwg_generation_count=0"
+          ]
+        }
+      ]
+    }
+  ],
+  "test_and_freeze_results": {
+    "full_tests": "PASS",
+    "legacy_baseline_024_freeze": "PASS",
+    "sheetmetal_v1_active_freeze": "PASS",
+    "sheetmetal_v1_topology_sizing_placement_freeze": "PASS"
+  },
+  "forbidden_actions_observed_by_auditor": {
+    "source_roots_read_or_modified": false,
+    "private_paths_read_or_written": false,
+    "completed_references_read": false,
+    "post_design_labels_read": false,
+    "customer_pdf_dxf_dwg_generated": false,
+    "forbidden_screening_script_read_staged_executed_or_modified": false,
+    "external_private_transmission": false,
+    "commit_or_push_performed": false,
+    "production_approval_declared": false
+  },
+  "residual_blockers": [
+    "Panel assignment coverage remains 0/53.",
+    "Real-project component geometry coverage remains 0/53.",
+    "Placement coverage remains 0/53.",
+    "T1C rule artifacts remain proposal-only and cannot support promotion.",
+    "Model and renderer promotion remain blocked until further accepted evidence."
+  ],
+  "expected_outputs": [
+    "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json",
+    "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.md",
+    "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json"
+  ],
+  "output_hashes": {
+    "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH",
+    "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.md": "80FDD2DC6618D27012E2A9607148DC14234A10D8C6987850251C14886F6BCB82"
+  },
+  "exact_final_status": "PASS_T2_RECALIBRATION_AUDIT",
+  "exact_recommended_next_action": "COORDINATOR_RECORD_T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_WITH_MODEL_AND_RENDERER_PROMOTION_BLOCKED"
+}

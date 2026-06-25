@@ -1,7 +1,7 @@
 {
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
-  "current_node": "T2",
+  "current_node": "T2_SAFE_UNRESOLVED_TERMINAL_REVIEW",
   "nodes": [
     {
       "id": "T0",
@@ -77,12 +77,32 @@
     {
       "id": "T2",
       "name": "TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION",
-      "status": "RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED",
+      "status": "RECALIBRATION_SAFE_UNRESOLVED_AUDIT_PASSED",
       "input_evidence": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json",
       "required_boundary": "T1C_PROPOSAL_ONLY_NOT_PROMOTED",
       "evidence": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json",
-      "next_action": "DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT",
-      "t1c_rule_artifacts": "PROPOSAL_ONLY_NOT_PROMOTED"
+      "next_action": "ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
+      "t1c_rule_artifacts": "PROPOSAL_ONLY_NOT_PROMOTED",
+      "audit_evidence": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json",
+      "audit_result_hash": "A059B0170F3CB0983D30B424376B85BF209F89B7BDA613C7A429A6934AA78B20",
+      "on_audit_pass_safe_unresolved": "T2_SAFE_UNRESOLVED_TERMINAL_REVIEW"
+    },
+    {
+      "id": "T2_INDEPENDENT_AUDIT",
+      "name": "T2_RECALIBRATION_INDEPENDENT_AUDIT",
+      "status": "PASS_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED",
+      "input_evidence": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json",
+      "evidence": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json",
+      "result_hash": "A059B0170F3CB0983D30B424376B85BF209F89B7BDA613C7A429A6934AA78B20",
+      "on_pass_safe_unresolved": "T2_SAFE_UNRESOLVED_TERMINAL_REVIEW"
+    },
+    {
+      "id": "T2_SAFE_UNRESOLVED_TERMINAL_REVIEW",
+      "name": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
+      "status": "READY_TO_START",
+      "input_evidence": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json",
+      "next_action": "ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
+      "promotion_status": "MODEL_AND_RENDERER_PROMOTION_BLOCKED_PENDING_FURTHER_ACCEPTED_EVIDENCE"
     },
     {
       "id": "T3",

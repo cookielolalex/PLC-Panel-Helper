@@ -1330,3 +1330,28 @@ Status: `T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIR
 Decision: `D-0051`.
 
 The accepted T1 audit produced no promotable T2 input. T1A and T1B remain safe unresolved, T1C rule artifacts remain proposal-only, and coverage remains assignment `0/53`, real-project geometry `0/53`, sizing with zero source-supported denominator, and placement `0/53`. No private generator rerun was performed because this heartbeat forbids `.private` mutation. Full tests and legacy, active sheetmetal-v1, and topology-stage scoped freezes pass. Evidence: `reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json`, `reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.md`, and `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json`.
+
+## sheetmetal-v1 T2 topology/sizing/placement independent audit
+
+Status: `T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED`.
+
+Decision: `D-0052`.
+
+The independent auditor accepted the T2 recalibration gate only as safe
+unresolved. JSON parseability, required fields, declared hashes, visible-file
+manifest hashes, full tests, and legacy, active sheetmetal-v1, and
+topology-stage scoped freezes all pass. T1A and T1B remain safe unresolved,
+T1C rule artifacts remain proposal-only and not promoted, and promotable T2
+inputs remain `0`. Coverage remains assignment `0/53`, real-project geometry
+`0/53`, sizing with zero source-supported denominator, and placement `0/53`.
+
+Hard gates remain closed: source-root mutation `0`, `.private` mutation `0`,
+private external transmissions `0`, completed-reference leakage `0`,
+post-design leakage `0`, customer PDF/DXF/DWG generation `0`, and production
+approval `false`.
+
+Evidence:
+`reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json`,
+`reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.md`,
+and
+`orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json`.

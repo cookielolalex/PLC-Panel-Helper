@@ -79,6 +79,20 @@
       "autonomous_recovery_available": true,
       "next_action": "DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT",
       "required_external_input": null
+    },
+    {
+      "ts": "2026-06-25T14:33:23.061600+08:00",
+      "stage": "T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT",
+      "status": "T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED",
+      "blocker_class": "STRUCTURAL_SOURCE_INSUFFICIENCY",
+      "audit_result": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json",
+      "audit_result_hash": "A059B0170F3CB0983D30B424376B85BF209F89B7BDA613C7A429A6934AA78B20",
+      "t1a": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+      "t1b": "SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_0_OF_53_SYNTHETIC_ONLY",
+      "t1c": "PROPOSAL_ONLY_NOT_PROMOTED",
+      "autonomous_recovery_available": false,
+      "next_action": "ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
+      "required_external_input": "additional approved panel allocation source, real component geometry authority, or independently accepted T1C rule promotion evidence"
     }
   ],
   "blocker_classes": [

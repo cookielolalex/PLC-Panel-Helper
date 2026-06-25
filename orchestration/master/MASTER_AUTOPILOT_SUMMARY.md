@@ -264,3 +264,12 @@ T2 topology/sizing/placement recalibration gate:
 - No private generator rerun was performed under the heartbeat `.private` mutation boundary.
 - Full tests and relevant scoped freezes pass.
 - Next action: `DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT`.
+
+T2 topology/sizing/placement independent audit:
+
+- Status: `T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED`.
+- Independent audit result: `PASS_T2_RECALIBRATION_AUDIT`.
+- T1A/T1B remain safe unresolved; T1C remains proposal-only and not promoted.
+- Full tests and legacy, active sheetmetal-v1, and topology-stage scoped freezes pass.
+- Model and renderer promotion remain blocked pending further accepted evidence.
+- Next action: `ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW`.

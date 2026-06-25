@@ -523,3 +523,6 @@
 - Recorded T2 topology/sizing/placement recalibration gate as `T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED`.
 - Confirmed the accepted T1 audit did not promote T1C rules or any new T2 generator input.
 - Queued `SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT` before any model promotion, renderer work, customer drawing generation, or readiness promotion.
+- Accepted `SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT` as `PASS_T2_RECALIBRATION_AUDIT` for the safe-unresolved gate only.
+- Kept model promotion, renderer promotion, private preview readiness, customer drawing generation, and production approval blocked pending further accepted evidence.
+- Set next action to `ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW`.

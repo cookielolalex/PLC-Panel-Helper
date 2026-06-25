@@ -19,7 +19,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED`
+`T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED`
 
 Active goal:
 
@@ -78,13 +78,13 @@ Hard boundaries:
 
 Exact next action:
 
-`DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT`
+`ENTER_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW`
 
-Run the T2 topology/sizing/placement recalibration from the accepted audit
-boundary. Preserve T1A/T1B as safe unresolved, keep T1C rule artifacts
-proposal-only unless a later independent audit explicitly accepts promotion
-under signed authority, rerun full tests and scoped freezes, and do not
-generate customer drawings or declare production approval.
+Review the accepted T2 independent-audit result as a terminal-candidate gate.
+Do not promote the canonical model, renderer, private-preview readiness, or
+customer drawing generation from a safe-unresolved audit. Preserve T1A/T1B as
+safe unresolved and keep T1C rule artifacts proposal-only unless later
+accepted evidence explicitly changes that boundary under signed authority.
 
 T2 recalibration evidence:
 
@@ -92,5 +92,10 @@ T2 recalibration evidence:
 - T2 summary: `reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json`.
 - T2 audit brief: `orchestration/tasks/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.md`.
 - T2 audit visible-file manifest: `orchestration/input_manifests/sheetmetal-v1/t2-recalibration/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.visible_files.json`.
+- T2 independent audit child result: `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json`.
+- T2 independent audit report: `reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json`.
 
-Dispatch an independent auditor before model promotion or renderer work. Keep T1C proposal-only unless that audit explicitly accepts promotion under signed authority.
+Enter terminal-candidate review for the unresolved evidence gap. Keep T1C
+proposal-only, do not mutate source roots or `.private`, do not transmit
+private project data, do not generate customer drawings, and never declare
+production approval.

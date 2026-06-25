@@ -1,0 +1,143 @@
+{
+  "schema_version": "master-child-result-v1",
+  "task_id": "SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT",
+  "role": "independent_auditor",
+  "created_at": "2026-06-25T14:35:00+08:00",
+  "starting_commit": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+  "ending_commit": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+  "audit_input_boundary": {
+    "task_brief_path": "orchestration/tasks/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.md",
+    "task_brief_sha256": "363675074BE34FE7FCE3F6AD5B2A8F38FB520A66B582F7970896E36CAA713549",
+    "visible_file_manifest_path": "orchestration/input_manifests/sheetmetal-v1/t2-recalibration/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.visible_files.json",
+    "visible_file_manifest_observed_sha256": "7E811484A6173224F0067DFFCC5360727CC1E0B893CC0D2934706CEF0429099F",
+    "visible_file_count": 28,
+    "all_visible_file_hashes_matched": true
+  },
+  "inputs_audited": {
+    "t2_child_result": {
+      "path": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json",
+      "sha256": "0E79FBA1945001473E74639CEFF9D13BBB1C516CC2FC24923BFA241D311283E0",
+      "json_parse": "PASS",
+      "required_fields": "PASS",
+      "hash_consistency": "PASS"
+    },
+    "t2_summary_json": {
+      "path": "reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json",
+      "sha256": "99028CC8233F074A98399B86FC74A16B9C051AE5F6324B09D36654A76FEC7141",
+      "json_parse": "PASS",
+      "required_fields": "PASS",
+      "hash_consistency": "PASS"
+    },
+    "accepted_t1_audit": {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json",
+      "sha256": "18B4D90599ED65A5B7A12B487C33C104C928ABB52544CBC0B7C2B639D80CD8D1",
+      "status": "PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY"
+    },
+    "t1_integration_summary": {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json",
+      "sha256": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221"
+    },
+    "topology_implementation_checkpoint": {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json",
+      "sha256": "1922468A0958AB755930E46BD24C3418647B796826F695E78FD70F263E295B4B"
+    },
+    "topology_generator_freeze_summary": {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/generator_freeze_summary.json",
+      "sha256": "EB86997E083FF2D4B12C17E760F08B67D25A08329653D032E5A910B0663E2F3D"
+    }
+  },
+  "criteria_summary": {
+    "pass": 15,
+    "fail": 0,
+    "not_verified": 0
+  },
+  "hard_gates": {
+    "source_root_mutation_count": 0,
+    "private_workspace_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "customer_drawing_generation_count": 0,
+    "production_approval_declared": false,
+    "t1c_rule_artifacts_promoted": false,
+    "forbidden_screening_script_read_staged_executed_or_modified": false
+  },
+  "adjudication": {
+    "t1a_panel_assignment": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+    "t1b_component_geometry": "SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_0_OF_53_SYNTHETIC_ONLY",
+    "t1c_topology_sizing_rules": "PROPOSAL_ONLY_NOT_PROMOTED",
+    "promotable_t2_inputs_from_t1": 0,
+    "private_generator_rerun_performed": false,
+    "coverage": {
+      "assignment": "0/53",
+      "geometry": "0/53",
+      "sizing": "0/0_zero_source_supported_denominator",
+      "placement": "0/53"
+    },
+    "safe_unresolved_audit_accepted_only": true,
+    "model_promotion_approved": false,
+    "renderer_promotion_approved": false,
+    "private_preview_readiness_approved": false
+  },
+  "verification_commands": {
+    "full_tests": {
+      "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/run_tests.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "tests_reported": 35
+    },
+    "legacy_baseline_024_freeze": {
+      "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/verify_frozen_workflow.py --scope legacy-baseline-024",
+      "exit_code": 0,
+      "status": "PASS",
+      "manifest_sha256": "D4C319005B2ABD4253B9FC9C2859E3C859B1C76E41952184DF1B867A3705C329",
+      "verified_file_count": 15
+    },
+    "sheetmetal_v1_active_freeze": {
+      "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+      "exit_code": 0,
+      "status": "PASS",
+      "manifest_sha256": "639BBB7CAF7DCF620370EF796A095985F93CDAA11C6C71A61D32E11C33874134",
+      "current_head": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+      "verified_file_count": 56
+    },
+    "sheetmetal_v1_topology_sizing_placement_freeze": {
+      "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+      "exit_code": 0,
+      "status": "PASS",
+      "manifest_sha256": "0BE823F215AF44158F97CEB7AACB06CFDAD67E5FE1A161EA8E81717CB11CAD06",
+      "current_head": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+      "verified_file_count": 24
+    }
+  },
+  "forbidden_actions_observed_by_auditor": {
+    "source_roots_read_or_modified": false,
+    "private_paths_read_or_written": false,
+    "completed_references_read": false,
+    "post_design_labels_read": false,
+    "customer_pdf_dxf_dwg_generated": false,
+    "forbidden_screening_script_read_staged_executed_or_modified": false,
+    "external_private_transmission": false,
+    "commit_or_push_performed": false,
+    "production_approval_declared": false
+  },
+  "runtime_notes": [
+    "The required full test runner produced ignored synthetic tmp harness artifacts and rendered synthetic PDFs; no tracked file changed and no customer drawing output was generated.",
+    "The permitted pre-existing untracked path scripts/run_reference_detection_v4_corpus_screening.py remained untracked and was not read, staged, executed, modified, or committed."
+  ],
+  "residual_blockers": [
+    "Panel assignment coverage remains 0/53.",
+    "Real-project component geometry coverage remains 0/53.",
+    "Placement coverage remains 0/53.",
+    "T1C rule artifacts remain proposal-only and cannot support promotion.",
+    "Model and renderer promotion remain blocked until further accepted evidence."
+  ],
+  "output_hashes": {
+    "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json": "EA892B17C0ED3085251901B672DCF7C1EF06E2C92A6587A6A34B3D294798070C",
+    "reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.md": "80FDD2DC6618D27012E2A9607148DC14234A10D8C6987850251C14886F6BCB82",
+    "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  },
+  "exact_final_status": "PASS_T2_RECALIBRATION_AUDIT",
+  "exact_recommended_next_action": "COORDINATOR_RECORD_T2_RECALIBRATION_AUDIT_PASS_SAFE_UNRESOLVED_WITH_MODEL_AND_RENDERER_PROMOTION_BLOCKED"
+}

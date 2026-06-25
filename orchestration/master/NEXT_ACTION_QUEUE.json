@@ -124,16 +124,35 @@
       "task_id": "SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT",
       "stage_id": "T2_INDEPENDENT_AUDIT",
       "role": "independent_auditor",
-      "status": "READY_TO_START",
-      "agent_id": "UNASSIGNED",
-      "starting_commit": "TBD_AFTER_T2_RECALIBRATION_COMMIT",
-      "action": "INDEPENDENTLY_AUDIT_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_GATE",
+      "status": "ACCEPTED",
+      "agent_id": "SUBAGENT:019efd6e-6686-7593-8e20-1c15c2914f31",
+      "starting_commit": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+      "action": "ACCEPTED_T2_RECALIBRATION_AUDIT_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED",
       "expected_result_path": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json",
       "hard_requirements": [
         "auditor_must_not_be_t2_coordinator_or_implementation_worker",
         "verify_json_required_fields_hashes_privacy_cleanliness",
         "verify_t1a_t1b_safe_unresolved_and_t1c_proposal_only_boundaries",
         "rerun_full_tests_and_scoped_freezes",
+        "no_customer_pdf_dxf_dwg_generation",
+        "do_not_declare_production_approved"
+      ],
+      "result_hash": "A059B0170F3CB0983D30B424376B85BF209F89B7BDA613C7A429A6934AA78B20"
+    },
+    {
+      "task_id": "SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW",
+      "stage_id": "T2_TERMINAL_CANDIDATE_REVIEW",
+      "role": "coordinator",
+      "status": "READY_TO_START",
+      "agent_id": "COORDINATOR",
+      "starting_commit": "a8acc55779afbaec874d9102bbd206d9223b13b1",
+      "action": "REVIEW_T2_SAFE_UNRESOLVED_FOR_STRUCTURAL_SOURCE_INSUFFICIENCY_OR_REQUIRED_EXTERNAL_EVIDENCE",
+      "expected_result_path": "orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json",
+      "hard_requirements": [
+        "do_not_promote_model_or_renderer_from_safe_unresolved_audit",
+        "preserve_t1a_t1b_safe_unresolved_boundaries",
+        "keep_t1c_rule_artifacts_proposal_only",
+        "identify_required_external_or_approved_evidence_if_any",
         "no_customer_pdf_dxf_dwg_generation",
         "do_not_declare_production_approved"
       ]
