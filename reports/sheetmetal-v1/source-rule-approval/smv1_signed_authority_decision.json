@@ -1,0 +1,84 @@
+{
+  "schema_version": "sheetmetal-v1.signed_authority_decision.v1",
+  "decision_id": "SMV1-SIGNED-AUTHORITY-D-0047",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "bound_decision_packet": {
+    "json_path": "reports/sheetmetal-v1/source-rule-approval/smv1_source_rule_authority_decision_packet.json",
+    "json_sha256": "A22FC1CA7C6D299E21EFCFBE495F1BFAA6F14D74049085133CB02C00ED152AA1",
+    "template_path": "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_template.json",
+    "template_sha256": "B6DF8D3626FB51D96F078821B6FA3824F0885058DDDD5EDD41091EE3B6D36725"
+  },
+  "selected_choice_ids": [
+    "A",
+    "B",
+    "C"
+  ],
+  "signed_by": "PROJECT_OWNER_USER",
+  "signed_at": "2026-06-25",
+  "signed_statement": "I authorize SMV1 source/rule authority choices A, B, and C: AUTHORIZE_PANEL_ALLOCATION_SOURCE_REVIEW, AUTHORIZE_COMPONENT_GEOMETRY_AUTHORITY, and AUTHORIZE_TOPOLOGY_SIZING_PLACEMENT_RULE_AUTHORITY. I do not select D: REJECT_ALL_AUTHORITY_LANES. This authorization is limited to SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1, calibration project 1110101, subsequently qualified SHEETMETAL_ALLOWED_EVAL projects, development, testing, evaluation, private-preview readiness, and outputs clearly marked NOT FOR FABRICATION / PRIVATE PREVIEW. All non-negotiable constraints remain in force.",
+  "non_negotiable_constraints_acknowledged": [
+    "no_production_approval",
+    "no_customer_pdf_dxf_dwg_generation_before_authorized_renderer_gate",
+    "no_completed_reference_inference",
+    "no_post_design_label_generator_authority",
+    "no_private_model_identifier_public_lookup",
+    "no_source_root_mutation",
+    "no_private_artifact_staging",
+    "tests_before_any_fix",
+    "independent_audit_before_model_promotion"
+  ],
+  "implementation_requires_regression_tests": true,
+  "independent_audit_before_model_promotion": true,
+  "customer_pdf_dxf_dwg_generation_authorized": false,
+  "production_approval_declared": false,
+  "selected_authority_lanes": [
+    {
+      "choice_id": "A",
+      "label": "AUTHORIZE_PANEL_ALLOCATION_SOURCE_REVIEW",
+      "scope": "bounded local review and possible approval of panel-allocation evidence only when chronology, role, identity, revision, non-derivation, privacy, provenance, confidence, and unresolved-status requirements are met"
+    },
+    {
+      "choice_id": "B",
+      "label": "AUTHORIZE_COMPONENT_GEOMETRY_AUTHORITY",
+      "scope": "versioned component-geometry library using official or approved documentation, explicit allowed-source geometry, or approved conservative generic envelopes; public lookup may use only minimal manufacturer/model identifiers and no private project context"
+    },
+    {
+      "choice_id": "C",
+      "label": "AUTHORIZE_TOPOLOGY_SIZING_PLACEMENT_RULE_AUTHORITY",
+      "scope": "versioned private-preview engineering-rule library for topology, sizing, clearance, and placement constraints with evidence, applicability, exclusions, synthetic regression coverage, fail-closed behavior, and independent audit"
+    }
+  ],
+  "rejected_choice_ids": [
+    "D"
+  ],
+  "authorization_scope": {
+    "applies_to": [
+      "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+      "calibration project 1110101",
+      "subsequently qualified SHEETMETAL_ALLOWED_EVAL projects",
+      "development",
+      "testing",
+      "evaluation",
+      "private-preview readiness",
+      "outputs clearly marked NOT FOR FABRICATION / PRIVATE PREVIEW"
+    ],
+    "does_not_permit": [
+      "PRODUCTION_APPROVED",
+      "fabrication release",
+      "removal of mandatory human CAD review",
+      "unsupported engineering facts",
+      "silent conflict resolution",
+      "completed-reference leakage",
+      "post-design answer leakage",
+      "unrestricted private-content transmission",
+      "automatic approval of every proposed source, geometry entry, or rule"
+    ]
+  },
+  "privacy_and_boundary_acknowledgement": {
+    "privacy_approval_status_must_remain": "NOT_APPROVED",
+    "private_external_transmissions_allowed": false,
+    "source_roots_mutable": false,
+    "completed_references_generator_inputs": false,
+    "human_cad_review_required_before_fabrication": true
+  }
+}
