@@ -19,64 +19,40 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`T1_AUTHORIZED_RECOVERY_CHILD_RESULTS_ADJUDICATED_INTEGRATION_READY`
+`T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED`
 
 Active goal:
 
 `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`
 
-Signed authority decision:
+Integrated T1 authorized recovery evidence:
 
-- Decision: `D-0047`.
-- Signer: `PROJECT_OWNER_USER`.
-- Selected choices: `A`, `B`, and `C`.
-- Rejected choice: `D`.
-- Validation: `PASS`.
-- Processor status: `SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY`.
-- Next gate:
-  `ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX`.
+- Integration child result:
+  `orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json`.
+- Integration summary:
+  `reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json`.
+- Independent audit brief:
+  `orchestration/tasks/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.md`.
+- Independent audit visible-file manifest:
+  `orchestration/input_manifests/sheetmetal-v1/t1-authorized-recovery/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.visible_files.json`.
 
-Decision evidence:
+T1 authorized recovery dispositions:
 
-- `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision.json`
-- `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_validation.json`
-- `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission/submission_summary.json`
-- `orchestration/master/child-results/SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION.json`
-
-T1 authorized recovery lane results:
-
-- `SMV1-T1A-PANEL-ALLOCATION-RECOVERY`
-  thread `019efcc8-cc1f-7660-8e82-c1b52e9e5736`; final status
+- T1A final status:
   `SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE`.
-- `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY`
-  thread `019efcc8-e982-7d92-82e8-26d260557a53`; final status
-  `SAFE_UNRESOLVED_GEOMETRY_REQUIRES_MORE_AUTHORITY_OR_DATA`.
-- `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY`
-  thread `019efcc9-1270-7643-99cd-5ede7bea95ae`; worker status
-  `RECOVERABLE_BLOCKER`; coordinator validation did not reproduce the stale
-  hash gates on `main`.
+- T1B final status:
+  `SAFE_UNRESOLVED_GEOMETRY_REQUIRES_MORE_AUTHORITY_OR_DATA`; real-project
+  geometry coverage remains `0/53`; synthetic authority-state coverage only.
+- T1C worker status:
+  `RECOVERABLE_BLOCKER`; coordinator stale-hash validation was not reproduced
+  on `main`; rule artifacts remain proposal-only pending independent audit.
 
-Coordinator adjudication:
+Verification:
 
-- Full tests: `PASS`.
-- Signed authority decision validator: `PASS`.
-- Child results: JSON-parseable, required-field-complete, non-self hashes
-  verified.
-- Worktrees: clean.
-- Adjudication artifact:
-  `orchestration/master/adjudications/SMV1-T1-AUTHORIZED-RECOVERY-COORDINATOR-ADJUDICATION.json`.
-
-Worktree setup correction:
-
-- The first T1A/T1B/T1C pending worktrees failed because the branch refs did
-  not exist before worktree creation.
-- Branch refs were created from checkpoint `5b8dbeb`.
-- The active pending worktrees are the replacement IDs listed above.
-
-Heartbeat:
-
-- Automation `plc-panels-master-autopilot-heartbeat` is active on a 15-minute
-  cadence.
+- Full `scripts/run_tests.py`: `PASS`.
+- Legacy baseline-024 scoped freeze: `PASS`.
+- Active sheetmetal-v1 scoped freeze: `PASS`.
+- Topology/sizing/placement scoped freeze: `PASS`.
 
 Hard boundaries:
 
@@ -90,13 +66,14 @@ Hard boundaries:
 - Do not generate customer PDF, DXF, DWG, or fabrication drawings at this
   stage.
 - Never declare `PRODUCTION_APPROVED`.
-- Accepted lanes still require synthetic regression tests before fixes and an
-  independent audit before recalibration or model promotion.
+- T1C rule artifacts must remain proposal-only unless an independent audit
+  explicitly accepts them under the signed authority boundary.
 
 Exact next action:
 
-`RUN_T1_AUTHORIZED_RECOVERY_INTEGRATION`
+`DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT`
 
-Integrate the adjudicated T1A/T1B/T1C recovery results from the frozen child
-commits, rerun full tests and relevant scoped freezes, and then dispatch an
-independent auditor who did not implement the recovery work.
+Dispatch or run an independent auditor who did not implement the recovery work.
+The auditor must verify T1A/T1B/T1C authority compliance, output hashes,
+privacy and no-drawing gates, full tests, scoped freeze results, and the T1C
+proposal-only boundary before any T2 recalibration or model promotion.

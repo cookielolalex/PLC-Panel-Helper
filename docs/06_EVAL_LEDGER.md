@@ -1250,3 +1250,36 @@ Evidence:
 `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission/submission_summary.json`,
 and
 `orchestration/master/child-results/SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION.json`.
+
+## sheetmetal-v1 T1 authorized recovery integration
+
+Status: `T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED`.
+
+Decision: `D-0049`.
+
+Purpose: integrate the adjudicated authorized recovery worker outputs for T1A,
+T1B, and T1C after the signed A+B+C authority decision, while preserving the
+independent audit gate before T2, model promotion, or drawing generation.
+
+Integration result:
+
+- T1A remains `SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE`.
+- T1B remains `SAFE_UNRESOLVED_GEOMETRY_REQUIRES_MORE_AUTHORITY_OR_DATA`; real-project geometry coverage remains `0/53`, and the new authority-state coverage is synthetic only.
+- T1C worker status was `RECOVERABLE_BLOCKER`; the coordinator did not reproduce stale hash gates on `main`, and the rule artifacts remain proposal-only pending independent audit.
+
+Verification:
+
+- Full `scripts/run_tests.py`: `PASS`.
+- Legacy baseline-024 scoped freeze: `PASS`.
+- Active sheetmetal-v1 scoped freeze: `PASS`.
+- Topology/sizing/placement scoped freeze: `PASS`.
+
+Hard gates: source-root mutation `0`, private external transmission `0`,
+completed-reference leakage `0`, post-design leakage `0`, customer
+PDF/DXF/DWG generation `0`, and production approval `false`.
+
+Evidence:
+`reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json`,
+`orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json`,
+`orchestration/tasks/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.md`, and
+`orchestration/input_manifests/sheetmetal-v1/t1-authorized-recovery/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.visible_files.json`.

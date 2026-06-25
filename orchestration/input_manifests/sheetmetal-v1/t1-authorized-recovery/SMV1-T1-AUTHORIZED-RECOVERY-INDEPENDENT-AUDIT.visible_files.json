@@ -1,0 +1,113 @@
+{
+  "schema_version": "visible-file-manifest-v1",
+  "task_id": "SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT",
+  "created_at": "2026-06-25T12:22:51.5100000+08:00",
+  "starting_commit": "TBD_AFTER_INTEGRATION_COMMIT",
+  "current_integration_head": "980529e32c6014be23c9e3c7e53046ea62b718d4",
+  "privacy_status": "NOT_APPROVED",
+  "visible_files": [
+    {
+      "path": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json",
+      "sha256": "FDB0B9457E09A87A25965A40B83D864BCCE2584F25B063858B070C637DCF6FF7",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json",
+      "sha256": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.md",
+      "sha256": "F401A8BC8720F0FED403B7BFA33949AC20849B99559AC38D19E9BF9CCD33FD12",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "orchestration/master/child-results/SMV1-T1A-PANEL-ALLOCATION-RECOVERY.json",
+      "sha256": "496DFEA716158ED2F3036BB828FCBD97228DF9950771BFFDC821F8229C0C2CD8",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "orchestration/master/child-results/SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY.json",
+      "sha256": "0DC581159FB195B09FDE670A8AC46536031254CB3D6D97A02488CC2CAEE9F3C0",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "orchestration/master/child-results/SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY.json",
+      "sha256": "F124F6C81B39B8B8FDF4AC38F249C328F18B920CAA5F8A6428B84C83F16958D0",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "orchestration/master/adjudications/SMV1-T1-AUTHORIZED-RECOVERY-COORDINATOR-ADJUDICATION.json",
+      "sha256": "DBEF19C2AA459D84AFD229CA014E619E764168C694E8D0367DD6E42D1A1092C2",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.json",
+      "sha256": "ED5E822D085A51F3A52A5D1B16361FB6693151F70A74709A93933C148D782643",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.json",
+      "sha256": "C02AE1FB6EB38643109EDC0B0A20B03011A37C08C3A01CEC864722C8A2B34673",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.json",
+      "sha256": "096CD977FBB63802909FB90176F2C1B6BDB2C2F5C180C925834974B41CA3601A",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/rule_artifacts/smv1_choice_c_topology_sizing_placement_rules.v1.json",
+      "sha256": "D4C908C18F9037F633EB812D27F656B7DD12A2EC89A84023CB68D2948EB3F2B4",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+      "sha256": "639BBB7CAF7DCF620370EF796A095985F93CDAA11C6C71A61D32E11C33874134",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json",
+      "sha256": "0BE823F215AF44158F97CEB7AACB06CFDAD67E5FE1A161EA8E81717CB11CAD06",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "scripts/run_tests.py",
+      "sha256": "5B4F077D4EC3B36033D7D95D15C2CA414825936B56E7C9C17E620933BB5608C1",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "scripts/sheetmetal_v1.py",
+      "sha256": "8427AD942B18C8B904E2EAE79F83D4CF3A5F8FE219134C551ED1D22A427BC82B",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "scripts/verify_frozen_workflow.py",
+      "sha256": "22CF4F7B70802CD4A2CCF6B9110B2B653C5A6579564BF98497B1D4774E0F9142",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "docs/PRIVACY_APPROVAL.md",
+      "sha256": "EC70B7AB47DDBB23EC029E7E5BF0F744C96DAB641DA2056FB4CD4B1619F3489E",
+      "visible_to_auditor": true
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "4CA078C3F02217CED8491C53A11641152B38A364F157E36523408016074EB227",
+      "visible_to_auditor": true
+    }
+  ],
+  "forbidden_files_or_actions": [
+    "source roots listed in docs/SOURCE_ROOTS.md",
+    ".private/**",
+    "completed drawings and post-design labels as generator inputs",
+    "customer PDF/DXF/DWG generation",
+    "production approval declaration",
+    "scripts/run_reference_detection_v4_corpus_screening.py"
+  ],
+  "expected_outputs": [
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md",
+    "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json"
+  ]
+}

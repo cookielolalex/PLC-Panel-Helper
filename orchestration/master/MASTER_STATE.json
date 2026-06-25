@@ -2,15 +2,11 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "d1dd9f64259eabc6a64567a45c650b2adaf7584e",
-  "current_canonical_status": "T1_AUTHORIZED_RECOVERY_CHILD_RESULTS_ADJUDICATED_INTEGRATION_READY",
-  "current_stage": "T1_AUTHORIZED_RECOVERY",
-  "next_action": "RUN_T1_AUTHORIZED_RECOVERY_INTEGRATION",
-  "active_thread_ids": [
-    "019efcc8-cc1f-7660-8e82-c1b52e9e5736",
-    "019efcc8-e982-7d92-82e8-26d260557a53",
-    "019efcc9-1270-7643-99cd-5ede7bea95ae"
-  ],
+  "current_head": "980529e32c6014be23c9e3c7e53046ea62b718d4",
+  "current_canonical_status": "T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED",
+  "current_stage": "T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT",
+  "next_action": "DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT",
+  "active_thread_ids": [],
   "task_ids": [
     "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
     "SMV1-T1-PANEL-ASSIGNMENT-RECOVERY",
@@ -29,7 +25,9 @@
     "SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION",
     "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
     "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
-    "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY"
+    "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
+    "SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION",
+    "SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT"
   ],
   "worktree_paths": [
     "pendingWorktreeId:local:75736337-550b-4e6b-aded-25b6cbbbccea",
@@ -69,11 +67,9 @@
     "signed_authority_intake_routing_commit": "f27eb72e0270a8b89d75d9ace1287b56739c6e75"
   },
   "expected_outputs": [
-    "T1A authorized panel allocation recovery child result",
-    "T1B authorized component geometry recovery child result",
-    "T1C authorized topology sizing rule recovery child result"
+    "T1 authorized recovery independent audit child result"
   ],
-  "last_heartbeat": "2026-06-25T12:00:51.1540000+08:00",
+  "last_heartbeat": "2026-06-25T12:22:51.5100000+08:00",
   "retries": {},
   "blockers": [],
   "audit_state": {
@@ -95,14 +91,12 @@
     "signed_authority_decision_blocked_audit": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
     "signed_human_authority_decision": "SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY",
     "T1_authorized_recovery": "CHILD_RESULTS_ADJUDICATED_INTEGRATION_READY",
-    "T1_authorized_recovery_coordinator_adjudication": "PASS_STALE_HASH_GATES_NOT_REPRODUCED_ON_MAIN"
+    "T1_authorized_recovery_coordinator_adjudication": "PASS_STALE_HASH_GATES_NOT_REPRODUCED_ON_MAIN",
+    "T1_authorized_recovery_integration": "INTEGRATED_AUDIT_REQUIRED",
+    "T1_authorized_recovery_independent_audit": "READY_TO_DISPATCH"
   },
   "merge_state": {
-    "pending_child_commits": [
-      "1e40f81b512978f9e5f31feb49d9ad7bed4be5cd",
-      "f2b69e4cbb0c5fa01b19f6d8725394b7dbf42e05",
-      "8ffdd4fbd8a257b18a480eaa2a851e24390b2d1d"
-    ],
+    "pending_child_commits": [],
     "accepted_child_commits": [
       "a08d9a847fb76345e8a0c260905f7aa65e20ee33",
       "c02656fbd179bf2e9a7aac7a882b505d443ac82b",
@@ -119,9 +113,18 @@
       "d2e4afd12373ba07b10ca8017e50a3d0618e86d5",
       "f7ccdc94636b6dc6be6f3ce10088d572c7f73d98",
       "c27e35970659f4e6252807ff9063fd00bc09ff4c",
-      "f27eb72e0270a8b89d75d9ace1287b56739c6e75"
+      "f27eb72e0270a8b89d75d9ace1287b56739c6e75",
+      "1e40f81b512978f9e5f31feb49d9ad7bed4be5cd",
+      "f2b69e4cbb0c5fa01b19f6d8725394b7dbf42e05",
+      "8ffdd4fbd8a257b18a480eaa2a851e24390b2d1d",
+      "d9d71c4",
+      "eb77884",
+      "580be10",
+      "053ee34",
+      "321379d",
+      "980529e"
     ],
-    "last_merge_result": "T1_AUTHORIZED_RECOVERY_CHILD_RESULTS_ADJUDICATED_INTEGRATION_READY"
+    "last_merge_result": "T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED"
   },
   "pending_worktrees": [
     {
@@ -164,7 +167,7 @@
       "pending_worktree_id": "local:4d54348d-e6ef-46c5-b8a7-f1daf3df1732",
       "requested_at": "2026-06-25T11:18:23.2396526+08:00",
       "thread_id": "019efcc8-cc1f-7660-8e82-c1b52e9e5736",
-      "status": "CHILD_RESULT_ADJUDICATED_READY_FOR_INTEGRATION",
+      "status": "INTEGRATED_ACCEPTED_AUDIT_REQUIRED",
       "branch_name": "smv1-t1a-panel-allocation-recovery",
       "worktree_head": "1e40f81b512978f9e5f31feb49d9ad7bed4be5cd",
       "child_result_hash": "9EA1C9D808D2A77341FE923CB4EC5117FBD70CF0A72418A13DB4D46F63E6A43C"
@@ -174,7 +177,7 @@
       "pending_worktree_id": "local:05e9923c-fa55-4899-a85a-9a21cfe9d508",
       "requested_at": "2026-06-25T11:18:23.2396526+08:00",
       "thread_id": "019efcc8-e982-7d92-82e8-26d260557a53",
-      "status": "CHILD_RESULT_ADJUDICATED_READY_FOR_INTEGRATION",
+      "status": "INTEGRATED_ACCEPTED_AUDIT_REQUIRED",
       "branch_name": "smv1-t1b-component-geometry-recovery",
       "worktree_head": "f2b69e4cbb0c5fa01b19f6d8725394b7dbf42e05",
       "child_result_hash": "602FCFFDA935182425FFEC995900DBAAC05B285322E12574F054268DA5057368"
@@ -184,7 +187,7 @@
       "pending_worktree_id": "local:15401954-4eed-43da-9544-e517d1ddecc5",
       "requested_at": "2026-06-25T11:18:23.2396526+08:00",
       "thread_id": "019efcc9-1270-7643-99cd-5ede7bea95ae",
-      "status": "CHILD_RESULT_ADJUDICATED_READY_FOR_INTEGRATION",
+      "status": "INTEGRATED_ACCEPTED_AUDIT_REQUIRED",
       "branch_name": "smv1-t1c-topology-sizing-rule-recovery",
       "worktree_head": "8ffdd4fbd8a257b18a480eaa2a851e24390b2d1d",
       "child_result_hash": "E15B23A102ACB7061A3334A584F49EB48FF5076189701FE5011115FA9C90E4BE",
@@ -202,7 +205,7 @@
   "latest_verified_test_result": {
     "command": "python scripts/run_tests.py",
     "status": "PASS",
-    "verified_at": "2026-06-25T11:08:50.6520818+08:00"
+    "verified_at": "2026-06-25T12:22:51.5100000+08:00"
   },
   "scoped_workflow_freeze_results": {
     "legacy_baseline_024": "PASS",
@@ -216,7 +219,7 @@
     "post_design_leakage": 0
   },
   "readiness_gate_state": {
-    "status": "T1_AUTHORIZED_RECOVERY_QUEUED",
+    "status": "T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED",
     "highest_allowed_success_status": "READY_FOR_PRIVATE_PREVIEW",
     "forbidden_status": "PRODUCTION_APPROVED",
     "customer_pdf_dxf_dwg_generation_count": 0
@@ -232,7 +235,9 @@
     "accepted_hard_constraint_violations": 0,
     "signed_authority_decision_validation": "PASS",
     "signed_authority_decision_next_gate": "ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX",
-    "authorized_recovery_threads": "T1A/T1B/T1C child results adjudicated integration-ready"
+    "authorized_recovery_threads": "T1A/T1B/T1C child results adjudicated integration-ready",
+    "authorized_recovery_integration": "PASS_AUDIT_REQUIRED",
+    "authorized_recovery_next_action": "DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT"
   },
   "untracked_file_policy": {
     "permitted_pre_existing_untracked": [

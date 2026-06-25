@@ -130,11 +130,15 @@
     "duration": "not_measured"
   },
   "output_hashes": {
-    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/rule_artifacts/smv1_choice_c_topology_sizing_placement_rules.v1.json": "49264FEAE1503EFAC4B113289BE31D535B2015E510F430C9BF9C45FA8C5F033E",
-    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/synthetic_rule_fixture_manifest.json": "20FD12DF69B8C97F6F1C5F13AB272EADCDFF343CB615FA9F384C6D31CB34FBBB",
-    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/artifact_gate_validation.json": "8FA8E0C6D75DC9EC7188ADB1F790A0FFE627BFE9A9E378CF896D67C4D03934B3",
-    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.json": "D23423FAC2674D9318EB8FF27624EF242BD624CE608C5B11B1EFB0E4F93F2C43",
-    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.md": "0A641FC3D01A39154E79533E2632548B8D2E9F895C7164FCC8F731A7DBF80736",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/rule_artifacts/smv1_choice_c_topology_sizing_placement_rules.v1.json": "D4C908C18F9037F633EB812D27F656B7DD12A2EC89A84023CB68D2948EB3F2B4",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/synthetic_rule_fixture_manifest.json": "017A08ED1C0A788BFB6C4C554360DF9CEA2C50CE3330A06B531DEE7233B8BCDB",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/synthetic_regression/artifact_gate_validation.json": "A8CB5F8B17E03CFF2B761B65CD7BC9193D8791C22D65A6009E728C6974947E72",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.json": "096CD977FBB63802909FB90176F2C1B6BDB2C2F5C180C925834974B41CA3601A",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1c-topology-sizing-rules/topology_sizing_rule_recovery_report.md": "7A7B18A7F062637A2D5FE898D99352E28D963A6334922D416D4C5DA1960BB360",
     "orchestration/master/child-results/SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  },
+  "integration_import": {
+    "main_branch_hashes_refreshed_at": "2026-06-25T12:22:51.5100000+08:00",
+    "reason": "mechanical hash refresh after accepted worker artifacts were cherry-picked onto main"
   }
 }

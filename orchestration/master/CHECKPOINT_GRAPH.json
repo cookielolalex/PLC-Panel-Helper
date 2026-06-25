@@ -1,7 +1,7 @@
 {
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
-  "current_node": "T1_AUTHORIZED_RECOVERY",
+  "current_node": "T1_AUTHORIZED_AUDIT",
   "nodes": [
     {
       "id": "T0",
@@ -49,26 +49,29 @@
     {
       "id": "T1_AUTHORIZED_RECOVERY",
       "name": "AUTHORIZED_PANEL_GEOMETRY_RULE_RECOVERY",
-      "status": "IN_PROGRESS_WORKTREES_PENDING",
-      "active_tasks": [
+      "status": "INTEGRATED_AUDIT_REQUIRED",
+      "active_tasks": [],
+      "on_all_accepted_results": "T1_AUTHORIZED_INTEGRATION",
+      "on_recoverable_blocker": "RECOVERY_BRANCH",
+      "on_irreducible_blocker": "TERMINAL_REVIEW",
+      "integrated_tasks": [
         "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
         "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
         "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY"
-      ],
-      "on_all_accepted_results": "T1_AUTHORIZED_INTEGRATION",
-      "on_recoverable_blocker": "RECOVERY_BRANCH",
-      "on_irreducible_blocker": "TERMINAL_REVIEW"
+      ]
     },
     {
       "id": "T1_AUTHORIZED_INTEGRATION",
       "name": "INTEGRATE_AUTHORIZED_RECOVERY_RESULTS",
-      "status": "PENDING_T1A_T1B_T1C"
+      "status": "PASS_AUDIT_REQUIRED",
+      "evidence": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json"
     },
     {
       "id": "T1_AUTHORIZED_AUDIT",
       "name": "INDEPENDENT_AUTHORIZED_RECOVERY_AUDIT",
-      "status": "PENDING_FROZEN_INTEGRATION_COMMIT",
-      "on_pass": "T2"
+      "status": "READY_TO_START",
+      "on_pass": "T2",
+      "input_evidence": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json"
     },
     {
       "id": "T2",

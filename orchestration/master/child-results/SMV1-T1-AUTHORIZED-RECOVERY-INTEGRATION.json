@@ -1,0 +1,136 @@
+{
+  "task_id": "SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION",
+  "starting_commit": "966f68c4ff841246d287c6ee7050ea0435f02680",
+  "ending_commit": "980529e32c6014be23c9e3c7e53046ea62b718d4",
+  "tracked_worktree_status": {
+    "status": "MAIN_BRANCH_AHEAD_WITH_INTEGRATED_T1_AUTHORIZED_RECOVERY_COMMITS",
+    "allowed_paths_written": [
+      "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json",
+      "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.md",
+      "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json",
+      "evals/sheetmetal-v1/frozen_workflow_manifest.json",
+      "evals/sheetmetal-v1/topology-sizing-placement/frozen_workflow_manifest.json"
+    ],
+    "implementation_code_files_changed_by_integration_coordinator": 0,
+    "source_roots_mutated": false,
+    "private_paths_written_or_staged": false,
+    "forbidden_untracked_legacy_screening_script_staged_or_run": false
+  },
+  "test_result": {
+    "full_test_runner": {
+      "command": "python scripts/run_tests.py",
+      "status": "PASS",
+      "verified_at": "2026-06-25T12:22:51.5100000+08:00",
+      "note": "Poppler emitted display-font warnings after successful tests; test runner status remained PASS."
+    },
+    "json_parse_validation": "PASS",
+    "child_result_hash_validation": "PASS"
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": {
+      "command": "python scripts/verify_frozen_workflow.py --scope legacy-baseline-024",
+      "status": "PASS",
+      "manifest_sha256": "D4C319005B2ABD4253B9FC9C2859E3C859B1C76E41952184DF1B867A3705C329"
+    },
+    "sheetmetal_v1_active": {
+      "command": "python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+      "status": "PASS",
+      "manifest_sha256": "639BBB7CAF7DCF620370EF796A095985F93CDAA11C6C71A61D32E11C33874134",
+      "anchor_commit": "980529e32c6014be23c9e3c7e53046ea62b718d4"
+    },
+    "sheetmetal_v1_topology_sizing_placement": {
+      "command": "python scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+      "status": "PASS",
+      "manifest_sha256": "0BE823F215AF44158F97CEB7AACB06CFDAD67E5FE1A161EA8E81717CB11CAD06",
+      "anchor_commit": "980529e32c6014be23c9e3c7e53046ea62b718d4"
+    }
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.md",
+    "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json"
+  ],
+  "schemas_validated": {
+    "method": "json_parse_and_required_field_validation",
+    "integration_summary_json": "PASS",
+    "integration_child_result_json": "PASS",
+    "input_child_results_json_parse_required_fields_hashes": "PASS"
+  },
+  "hard_gates": {
+    "overall": "PASS_AUDIT_REQUIRED_BEFORE_PROMOTION",
+    "json_parseable_required_field_complete_child_results": true,
+    "hashed_child_results": true,
+    "privacy_clean_child_results": true,
+    "source_root_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false,
+    "t1c_rule_artifacts_promoted": false
+  },
+  "coverage": {
+    "panel_assignment": {
+      "after": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "interpretation": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE"
+    },
+    "component_geometry": {
+      "after": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "interpretation": "REAL_PROJECT_GEOMETRY_REMAINS_SOURCE_LIMITED_ZERO_SYNTHETIC_FIXTURE_ONLY"
+    },
+    "topology": {
+      "after": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "interpretation": "RULE_ARTIFACTS_PROPOSAL_ONLY_NOT_PROMOTED"
+    },
+    "sizing": {
+      "after": {
+        "numerator": 0,
+        "denominator": 0
+      },
+      "interpretation": "ZERO_SOURCE_SUPPORTED_DENOMINATOR_RECALL_NOT_REPORTED"
+    },
+    "placement": {
+      "after": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "interpretation": "UNCHANGED_PENDING_AUTHORIZED_AUDIT_AND_FUTURE_CALIBRATION"
+    }
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_value_count": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0
+  },
+  "exact_final_status": "T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED",
+  "exact_recommended_next_action": "DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT",
+  "blocker_taxonomy": {
+    "panel_allocation": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+    "component_geometry": "SAFE_UNRESOLVED_GEOMETRY_REQUIRES_MORE_AUTHORITY_OR_DATA_REAL_PROJECT_COVERAGE_ZERO",
+    "topology_sizing_rule": "PROPOSAL_ONLY_PENDING_INDEPENDENT_AUDIT",
+    "master_protocol_classification": "AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED"
+  },
+  "requested_model": "not_specified_by_heartbeat",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "2026-06-25T12:22:51.5100000+08:00",
+    "completed_at": "2026-06-25T12:22:51.5100000+08:00",
+    "mode": "local_only_no_private_external_transmission"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+    "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.md": "F401A8BC8720F0FED403B7BFA33949AC20849B99559AC38D19E9BF9CCD33FD12",
+    "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}

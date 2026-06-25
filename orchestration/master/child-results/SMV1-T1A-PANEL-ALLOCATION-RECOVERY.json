@@ -95,8 +95,12 @@
     "test_failure_summary": "Full suite failed only at active and topology frozen-workflow manifest hash gates; panel assignment, topology calibration, JSON parse, signed authority, and legacy frozen-scope tests reported PASS before the failure summary."
   },
   "output_hashes": {
-    "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.json": "50F4CFDE98219F520CE8561A4C17641D25E957449107BE28EFD4E65F13B87B04",
-    "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.md": "91AB212D58752576C44BB94FBC1161B145529944304610FC0CA8FA05741922D6",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.json": "ED5E822D085A51F3A52A5D1B16361FB6693151F70A74709A93933C148D782643",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.md": "0FA5783F45AA2971241F8091B70D33122D80BF9C6BE5A910F0D1799B5943D4FE",
     "orchestration/master/child-results/SMV1-T1A-PANEL-ALLOCATION-RECOVERY.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  },
+  "integration_import": {
+    "main_branch_hashes_refreshed_at": "2026-06-25T12:22:51.5100000+08:00",
+    "reason": "mechanical hash refresh after accepted worker artifacts were cherry-picked onto main"
   }
 }

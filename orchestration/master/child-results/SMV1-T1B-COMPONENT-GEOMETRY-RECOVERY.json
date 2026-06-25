@@ -121,11 +121,15 @@
     "public_web_used": false
   },
   "output_hashes": {
-    "scripts/sheetmetal_v1.py": "B49D732BA3EEAA3D04021C3529B7632F080C1FA117C0E95846CE39A9F28C2B11",
-    "scripts/run_tests.py": "344CA153B6E9022ED174AA483186D2EC6D6051F4974F826D3B53B04502C75D12",
-    "evals/fixtures/sheetmetal-v1/component_geometry_authority_fixture.json": "134919EACFFE4FE95A48B1FA228627A85C5B01DCA8854E24B1375BD881930AC6",
-    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_library.proposed.v1.json": "187FD7444F3D7D7F3A2AC06F42B96E3E87D9D46C91C8F5B8733AEC83AACAAC0D",
-    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.json": "758EAF746F3347E0AEF4333A859CF3442765A7382C769FC7C0C8840E29F11FA5",
-    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.md": "CB7C0D2044B8158F7B3F6DD4A8C2F1395120878438105BB66B2C4AF7BB510BE6"
+    "scripts/sheetmetal_v1.py": "8427AD942B18C8B904E2EAE79F83D4CF3A5F8FE219134C551ED1D22A427BC82B",
+    "scripts/run_tests.py": "5B4F077D4EC3B36033D7D95D15C2CA414825936B56E7C9C17E620933BB5608C1",
+    "evals/fixtures/sheetmetal-v1/component_geometry_authority_fixture.json": "3D26E7165D5A9014771A46FE0ABC00B2409BC22FA028B13864097B6C0F692379",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_library.proposed.v1.json": "0D6B9E07816F2D5C7EA3424E3C0EDC5C6CEAFAD0EE52F2711E83F2701AF0801B",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.json": "C02AE1FB6EB38643109EDC0B0A20B03011A37C08C3A01CEC864722C8A2B34673",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1b-component-geometry/component_geometry_recovery_report.md": "E9D5EB382E237129C27AC1999A70D7CBF7ECD4A32DC0EC05E2D56FEE806FA785"
+  },
+  "integration_import": {
+    "main_branch_hashes_refreshed_at": "2026-06-25T12:22:51.5100000+08:00",
+    "reason": "mechanical hash refresh after accepted worker artifacts were cherry-picked onto main"
   }
 }

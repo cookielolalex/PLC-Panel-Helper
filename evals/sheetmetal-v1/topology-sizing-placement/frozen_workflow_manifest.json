@@ -2,7 +2,7 @@
   "manifest_version": "frozen-workflow-v2",
   "scope": "SHEETMETAL_V1_TOPOLOGY_SIZING_PLACEMENT",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
-  "anchor_commit": "f788afce07c736ee41438fd3e42e4c4a01bd9081",
+  "anchor_commit": "980529e32c6014be23c9e3c7e53046ea62b718d4",
   "creation_decision_id": "D-0038",
   "hash_algorithm": "SHA-256",
   "verification_algorithm": "sha256-file-v1;current-tracked-files;git-lineage-ancestor-check",
@@ -121,18 +121,24 @@
     },
     {
       "path": "scripts/sheetmetal_v1.py",
-      "sha256": "5B377C8812000E41E4CFA579D778AF571FB15F3ACD6D8CA0D1FE547145488E78",
+      "sha256": "8427AD942B18C8B904E2EAE79F83D4CF3A5F8FE219134C551ED1D22A427BC82B",
       "role": "deterministic topology sizing placement implementation"
     },
     {
       "path": "scripts/run_tests.py",
-      "sha256": "DB5A23AA3376D8F8783A31F4B5F2D5B2E0EA3EF2E1505E455511764EFAA5EB12",
+      "sha256": "5B4F077D4EC3B36033D7D95D15C2CA414825936B56E7C9C17E620933BB5608C1",
       "role": "regression test runner including topology sizing placement tests"
     },
     {
       "path": "scripts/verify_frozen_workflow.py",
       "sha256": "22CF4F7B70802CD4A2CCF6B9110B2B653C5A6579564BF98497B1D4774E0F9142",
       "role": "stage scoped workflow verifier"
+    },
+    {
+      "path": "evals/fixtures/sheetmetal-v1/component_geometry_authority_fixture.json",
+      "sha256": "3D26E7165D5A9014771A46FE0ABC00B2409BC22FA028B13864097B6C0F692379",
+      "role": "synthetic component geometry authority fixture used by topology-safe unresolved regression"
     }
-  ]
+  ],
+  "last_updated_decision_id": "D-0049"
 }

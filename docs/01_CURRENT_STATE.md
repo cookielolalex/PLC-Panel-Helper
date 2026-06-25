@@ -1,13 +1,12 @@
 # Current State
 
-Current phase: blocked at signed source/rule authority decision gate; signed
-human authority decision required.
+Current phase: T1 authorized recovery integrated; independent audit required.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION`.
+Current status: `T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -526,3 +525,17 @@ integration commit exist.
 
 Exact next action: monitor
 `MONITOR_T1A_T1B_T1C_AUTHORIZED_RECOVERY_THREADS`.
+
+
+T1 authorized recovery integration after `D-0049`: the accepted T1A/T1B/T1C
+worker artifacts were imported onto `main`, imported child-result hashes were
+refreshed, and active/topology scoped freeze manifests were refreshed. Full
+tests and legacy, active sheetmetal-v1, and topology-stage scoped freezes pass.
+T1A remains safe unresolved with no approved panel allocation source. T1B
+preserves synthetic authority-state behavior only, with real-project geometry
+coverage still `0/53`. T1C rule artifacts remain proposal-only pending an
+independent audit and are not promoted to the model, renderer, or T2 inputs.
+No source root, `.private` artifact, completed reference, customer drawing,
+PDF, DXF, or DWG was changed or generated; no production approval was declared.
+
+Exact next action: `DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT`.

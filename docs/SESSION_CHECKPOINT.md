@@ -1,7 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: signed source/rule authority decision accepted; T1 authorized
-recovery lanes queued.
+Current phase: T1 authorized recovery integrated; independent audit required.
 
 Accepted release: none.
 
@@ -9,7 +8,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `SIGNED_AUTHORITY_DECISION_ACCEPTED_T1_AUTHORIZED_RECOVERY_QUEUED`.
+Current status: `T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED`.
 
 Current candidate: `1110101`.
 
@@ -619,3 +618,37 @@ Exact next action:
 Run `RUN_T1_AUTHORIZED_RECOVERY_INTEGRATION` from the adjudicated child
 results, rerun full tests and relevant scoped freezes, then dispatch the
 required independent audit before T2 or model promotion.
+
+
+T1 authorized recovery integration:
+
+- Decision: `D-0049`.
+- Status: `T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED`.
+- Integration head after imported worker commits: `980529e32c6014be23c9e3c7e53046ea62b718d4`.
+- `SMV1-T1A-PANEL-ALLOCATION-RECOVERY` remains
+  `SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE`.
+- `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY` remains
+  `SAFE_UNRESOLVED_GEOMETRY_REQUIRES_MORE_AUTHORITY_OR_DATA`; real-project
+  geometry coverage remains `0/53`, with synthetic authority-state regression
+  coverage only.
+- `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY` remains proposal-only after the
+  coordinator did not reproduce stale hash gates on `main`; it is not promoted
+  into the canonical model, renderer, or T2 recalibration input.
+- Verification: full tests `PASS`; legacy scoped freeze `PASS`; active
+  sheetmetal-v1 scoped freeze `PASS`; topology-stage scoped freeze `PASS`.
+- Hard gates: source-root mutation `0`, private external transmissions `0`,
+  completed-reference leakage `0`, post-design leakage `0`, customer
+  PDF/DXF/DWG generation `0`, and production approval `false`.
+- Evidence:
+  `reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json`,
+  `orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json`,
+  `orchestration/tasks/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.md`,
+  and
+  `orchestration/input_manifests/sheetmetal-v1/t1-authorized-recovery/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.visible_files.json`.
+
+Exact next action:
+
+Run `DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT`. The independent auditor must verify the integrated T1A/T1B/T1C
+artifacts, test/freeze results, T1C proposal-only boundary, and hard gates
+before any T2 recalibration, model promotion, renderer work, customer drawing
+generation, or readiness promotion.

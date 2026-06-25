@@ -488,3 +488,23 @@
   the first worktree setup returned `fatal: invalid reference`, then requeued
   replacement pending worktrees and marked the first pending IDs as setup
   failures in the coordinator registries.
+
+## 2026-06-25
+
+- Recorded the signed `D-0047` source/rule authority decision from
+  `PROJECT_OWNER_USER`, selecting `A`, `B`, and `C`, and explicitly not
+  selecting `D`.
+- Queued and reconciled the T1A/T1B/T1C authorized recovery worktrees after
+  repairing initial invalid branch-reference setup failures.
+- Integrated adjudicated T1 authorized recovery artifacts onto `main`.
+- Refreshed imported child-result hashes and active/topology scoped freeze
+  manifests after import.
+- Reran full tests plus legacy, active sheetmetal-v1, and topology-stage scoped
+  freezes; all passed.
+- Preserved T1C topology/sizing rule artifacts as proposal-only pending
+  independent audit.
+- Prepared the independent authorized-recovery audit brief and visible-file
+  manifest.
+- Preserved hard gates: no source-root mutation, no `.private` mutation, no
+  private external transmission, no customer PDF/DXF/DWG generation, and no
+  production approval.
