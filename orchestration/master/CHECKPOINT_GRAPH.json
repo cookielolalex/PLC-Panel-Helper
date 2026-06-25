@@ -1,7 +1,7 @@
 {
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
-  "current_node": "T1_AUTHORIZED_AUDIT",
+  "current_node": "T2",
   "nodes": [
     {
       "id": "T0",
@@ -69,14 +69,17 @@
     {
       "id": "T1_AUTHORIZED_AUDIT",
       "name": "INDEPENDENT_AUTHORIZED_RECOVERY_AUDIT",
-      "status": "READY_TO_START",
+      "status": "PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY",
       "on_pass": "T2",
-      "input_evidence": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json"
+      "input_evidence": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json",
+      "evidence": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json"
     },
     {
       "id": "T2",
       "name": "TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION",
-      "status": "PENDING"
+      "status": "READY_TO_START",
+      "input_evidence": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json",
+      "required_boundary": "T1C_PROPOSAL_ONLY_NOT_PROMOTED"
     },
     {
       "id": "T3",

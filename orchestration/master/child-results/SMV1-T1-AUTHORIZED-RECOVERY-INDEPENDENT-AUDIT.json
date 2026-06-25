@@ -1,0 +1,121 @@
+{
+  "task_id": "SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT",
+  "starting_commit": "56220a86d2d47db417a184916078697516254435",
+  "ending_commit": "56220a86d2d47db417a184916078697516254435",
+  "tracked_worktree_status": {
+    "status": "AUDIT_OUTPUTS_WRITTEN_ONLY_TO_ASSIGNED_PATHS_UNCOMMITTED",
+    "allowed_paths_written": [
+      "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json",
+      "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md",
+      "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json"
+    ],
+    "pre_existing_untracked_paths_not_owned": [
+      "scripts/run_reference_detection_v4_corpus_screening.py"
+    ],
+    "forbidden_legacy_screening_script_read_staged_executed_or_modified": false,
+    "source_roots_read_or_modified": false,
+    "private_paths_read_or_written": false,
+    "commit_or_push_performed": false
+  },
+  "test_result": {
+    "full_test_runner": {
+      "command": "& C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/run_tests.py",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "json_parse_validation": "PASS",
+    "required_field_validation": "PASS",
+    "manifest_visible_hash_validation": "PASS",
+    "declared_non_self_output_hash_validation": "PASS"
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": {
+      "command": "& C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/verify_frozen_workflow.py --scope legacy-baseline-024",
+      "status": "PASS",
+      "manifest_sha256": "D4C319005B2ABD4253B9FC9C2859E3C859B1C76E41952184DF1B867A3705C329",
+      "verified_file_count": 15
+    },
+    "sheetmetal_v1_active": {
+      "command": "& C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/verify_frozen_workflow.py --scope sheetmetal-v1-active",
+      "status": "PASS",
+      "manifest_sha256": "639BBB7CAF7DCF620370EF796A095985F93CDAA11C6C71A61D32E11C33874134",
+      "anchor_commit": "980529e32c6014be23c9e3c7e53046ea62b718d4",
+      "current_head": "56220a86d2d47db417a184916078697516254435",
+      "verified_file_count": 56
+    },
+    "sheetmetal_v1_topology_sizing_placement": {
+      "command": "& C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/verify_frozen_workflow.py --scope sheetmetal-v1-topology-sizing-placement",
+      "status": "PASS",
+      "manifest_sha256": "0BE823F215AF44158F97CEB7AACB06CFDAD67E5FE1A161EA8E81717CB11CAD06",
+      "anchor_commit": "980529e32c6014be23c9e3c7e53046ea62b718d4",
+      "current_head": "56220a86d2d47db417a184916078697516254435",
+      "verified_file_count": 24
+    }
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md",
+    "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json"
+  ],
+  "schemas_validated": {
+    "audit_result_json_parse": "PASS",
+    "child_result_json_parse": "PASS",
+    "required_fields": "PASS",
+    "formal_schema": "NO_DEDICATED_SCHEMA_AVAILABLE"
+  },
+  "hard_gates": {
+    "overall": "PASS",
+    "source_root_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false,
+    "t1c_rule_artifacts_promoted": false,
+    "forbidden_screening_script_read_staged_executed_or_modified": false
+  },
+  "coverage": {
+    "panel_assignment": {
+      "after": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "interpretation": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE"
+    },
+    "component_geometry": {
+      "after": {
+        "numerator": 0,
+        "denominator": 53
+      },
+      "interpretation": "SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_ZERO_SYNTHETIC_FIXTURE_ONLY"
+    },
+    "topology_sizing_placement_rules": {
+      "rule_count": 8,
+      "fixture_count": 5,
+      "interpretation": "PROPOSAL_ONLY_NOT_PROMOTED"
+    }
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_value_count": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0
+  },
+  "exact_final_status": "PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY",
+  "exact_recommended_next_action": "COORDINATOR_RECORD_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_PASS_WITH_T1A_T1B_SAFE_UNRESOLVED_AND_T1C_PROPOSAL_ONLY_BOUNDARY_PRESERVED",
+  "blocker_taxonomy": [],
+  "requested_model": "not_specified_by_task",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "started_at": "2026-06-25T13:23:23.5684756+08:00",
+    "completed_at": "2026-06-25T13:23:23.5684756+08:00",
+    "mode": "local_only_no_private_external_transmission",
+    "bundled_python_command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json": "18B4D90599ED65A5B7A12B487C33C104C928ABB52544CBC0B7C2B639D80CD8D1",
+    "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md": "731BDF65C519B0A968D86AF5620C0F25070CFE9584FAFDBEF87FF2535C29DDA7",
+    "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}

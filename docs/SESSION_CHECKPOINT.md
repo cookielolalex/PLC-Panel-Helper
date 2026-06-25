@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: T1 authorized recovery integrated; independent audit required.
+Current phase: T1 authorized recovery independently audited; T2 recalibration ready.
 
 Accepted release: none.
 
@@ -8,7 +8,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED`.
+Current status: `T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_PASS_T2_READY`.
 
 Current candidate: `1110101`.
 
@@ -648,7 +648,35 @@ T1 authorized recovery integration:
 
 Exact next action:
 
-Run `DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT`. The independent auditor must verify the integrated T1A/T1B/T1C
-artifacts, test/freeze results, T1C proposal-only boundary, and hard gates
-before any T2 recalibration, model promotion, renderer work, customer drawing
-generation, or readiness promotion.
+T1 authorized recovery independent audit:
+
+- Decision: `D-0050`.
+- Audit setup head: `56220a86d2d47db417a184916078697516254435`.
+- Status:
+  `PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY`.
+- `SMV1-T1A-PANEL-ALLOCATION-RECOVERY` remains
+  `SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE`.
+- `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY` remains safe unresolved; real-project
+  geometry coverage remains `0/53`, and synthetic authority-state fixture
+  coverage is not capability success.
+- `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY` remains proposal-only. Its rule
+  artifacts were not promoted into the canonical model, renderer, frozen
+  generator, or T2 recalibration input.
+- Verification: full tests `PASS`; legacy scoped freeze `PASS`; active
+  sheetmetal-v1 scoped freeze `PASS`; topology-stage scoped freeze `PASS`.
+- Hard gates: source-root mutation `0`, private external transmissions `0`,
+  completed-reference leakage `0`, post-design leakage `0`, customer
+  PDF/DXF/DWG generation `0`, and production approval `false`.
+- Evidence:
+  `reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json`,
+  `reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md`,
+  and
+  `orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json`.
+
+Exact next action:
+
+Run `RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION` from the accepted audit
+boundary. Preserve T1A/T1B as safe unresolved and T1C as proposal-only unless
+a later independent audit explicitly accepts promotion under signed authority.
+Do not generate a customer drawing, mutate source roots or `.private`, transmit
+private project data, promote a model, or declare production approval.

@@ -1283,3 +1283,42 @@ Evidence:
 `orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json`,
 `orchestration/tasks/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.md`, and
 `orchestration/input_manifests/sheetmetal-v1/t1-authorized-recovery/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.visible_files.json`.
+
+## sheetmetal-v1 T1 authorized recovery independent audit
+
+Status: `T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_PASS_T2_READY`.
+
+Decision: `D-0050`.
+
+Purpose: independently audit the integrated authorized T1A/T1B/T1C recovery
+result before T2 recalibration, model promotion, renderer work, customer
+drawing generation, or readiness promotion.
+
+Result:
+
+- Independent audit status:
+  `PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY`.
+- T1A remains `SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE`.
+- T1B remains safe unresolved with real-project geometry coverage `0/53`;
+  synthetic authority-state fixture coverage is not counted as real-project
+  capability success.
+- T1C remains proposal-only and was not promoted into the canonical model,
+  renderer, frozen generator, or T2 recalibration input.
+
+Verification:
+
+- Full `scripts/run_tests.py`: `PASS`.
+- Legacy baseline-024 scoped freeze: `PASS`.
+- Active sheetmetal-v1 scoped freeze: `PASS`.
+- Topology/sizing/placement scoped freeze: `PASS`.
+- Declared non-self output hashes: `PASS`.
+
+Hard gates: source-root mutation `0`, private external transmission `0`,
+completed-reference leakage `0`, post-design leakage `0`, customer
+PDF/DXF/DWG generation `0`, and production approval `false`.
+
+Evidence:
+`reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json`,
+`reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md`,
+and
+`orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json`.

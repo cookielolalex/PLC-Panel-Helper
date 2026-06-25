@@ -19,13 +19,13 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED`
+`T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_PASS_T2_READY`
 
 Active goal:
 
 `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`
 
-Integrated T1 authorized recovery evidence:
+Integrated and audited T1 authorized recovery evidence:
 
 - Integration child result:
   `orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION.json`.
@@ -35,6 +35,10 @@ Integrated T1 authorized recovery evidence:
   `orchestration/tasks/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.md`.
 - Independent audit visible-file manifest:
   `orchestration/input_manifests/sheetmetal-v1/t1-authorized-recovery/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.visible_files.json`.
+- Accepted independent audit child result:
+  `orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json`.
+- Accepted independent audit report:
+  `reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json`.
 
 T1 authorized recovery dispositions:
 
@@ -45,7 +49,8 @@ T1 authorized recovery dispositions:
   geometry coverage remains `0/53`; synthetic authority-state coverage only.
 - T1C worker status:
   `RECOVERABLE_BLOCKER`; coordinator stale-hash validation was not reproduced
-  on `main`; rule artifacts remain proposal-only pending independent audit.
+  on `main`; rule artifacts remain proposal-only and were not promoted by the
+  independent audit.
 
 Verification:
 
@@ -53,6 +58,8 @@ Verification:
 - Legacy baseline-024 scoped freeze: `PASS`.
 - Active sheetmetal-v1 scoped freeze: `PASS`.
 - Topology/sizing/placement scoped freeze: `PASS`.
+- Independent T1 authorized recovery audit:
+  `PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY`.
 
 Hard boundaries:
 
@@ -71,9 +78,10 @@ Hard boundaries:
 
 Exact next action:
 
-`DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT`
+`RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION`
 
-Dispatch or run an independent auditor who did not implement the recovery work.
-The auditor must verify T1A/T1B/T1C authority compliance, output hashes,
-privacy and no-drawing gates, full tests, scoped freeze results, and the T1C
-proposal-only boundary before any T2 recalibration or model promotion.
+Run the T2 topology/sizing/placement recalibration from the accepted audit
+boundary. Preserve T1A/T1B as safe unresolved, keep T1C rule artifacts
+proposal-only unless a later independent audit explicitly accepts promotion
+under signed authority, rerun full tests and scoped freezes, and do not
+generate customer drawings or declare production approval.

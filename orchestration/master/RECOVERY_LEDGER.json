@@ -51,6 +51,20 @@
       "repair": "Created local branch refs from current master checkpoint before requeueing worktree threads.",
       "autonomous_recovery_available": true,
       "required_external_input": null
+    },
+    {
+      "ts": "2026-06-25T12:55:52.0830000+08:00",
+      "stage": "T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT",
+      "status": "PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY",
+      "blocker_class": null,
+      "audit_result": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json",
+      "audit_result_hash": "5D682368EE93736533F48B6EF257FDC226D7C4ED7F5593F380918EED7218DFFB",
+      "t1a": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+      "t1b": "SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_0_OF_53_SYNTHETIC_ONLY",
+      "t1c": "PROPOSAL_ONLY_NOT_PROMOTED",
+      "autonomous_recovery_available": true,
+      "next_action": "RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION",
+      "required_external_input": null
     }
   ],
   "blocker_classes": [

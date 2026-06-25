@@ -505,6 +505,17 @@
   independent audit.
 - Prepared the independent authorized-recovery audit brief and visible-file
   manifest.
+- Preserved the first independent audit attempt as setup-failure evidence after
+  it found a stale handoff hash and runtime mismatch rather than a domain
+  blocker.
+- Corrected the independent audit handoff and reran the audit with the bundled
+  Python runtime.
+- Accepted the independent authorized-recovery audit as
+  `PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY`.
+- Kept T1A/T1B safe unresolved and T1C topology/sizing rule artifacts
+  proposal-only; no rule artifact was promoted into the canonical model,
+  renderer, frozen generator, or T2 recalibration input.
+- Set next action to `RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION`.
 - Preserved hard gates: no source-root mutation, no `.private` mutation, no
   private external transmission, no customer PDF/DXF/DWG generation, and no
   production approval.

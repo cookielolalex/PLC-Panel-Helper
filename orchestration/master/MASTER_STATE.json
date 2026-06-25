@@ -2,10 +2,10 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "980529e32c6014be23c9e3c7e53046ea62b718d4",
-  "current_canonical_status": "T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED",
-  "current_stage": "T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT",
-  "next_action": "DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT",
+  "current_head": "56220a86d2d47db417a184916078697516254435",
+  "current_canonical_status": "T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_PASS_T2_READY",
+  "current_stage": "T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION",
+  "next_action": "RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION",
   "active_thread_ids": [],
   "task_ids": [
     "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
@@ -27,7 +27,8 @@
     "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
     "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
     "SMV1-T1-AUTHORIZED-RECOVERY-INTEGRATION",
-    "SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT"
+    "SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT",
+    "SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION"
   ],
   "worktree_paths": [
     "pendingWorktreeId:local:75736337-550b-4e6b-aded-25b6cbbbccea",
@@ -67,9 +68,10 @@
     "signed_authority_intake_routing_commit": "f27eb72e0270a8b89d75d9ace1287b56739c6e75"
   },
   "expected_outputs": [
-    "T1 authorized recovery independent audit child result"
+    "T2 topology/sizing/placement recalibration result",
+    "T2 independent audit brief and visible-file manifest"
   ],
-  "last_heartbeat": "2026-06-25T12:22:51.5100000+08:00",
+  "last_heartbeat": "2026-06-25T12:55:52.0830000+08:00",
   "retries": {},
   "blockers": [],
   "audit_state": {
@@ -90,10 +92,11 @@
     "signed_authority_decision_submission_processor": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED",
     "signed_authority_decision_blocked_audit": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
     "signed_human_authority_decision": "SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY",
-    "T1_authorized_recovery": "CHILD_RESULTS_ADJUDICATED_INTEGRATION_READY",
+    "T1_authorized_recovery": "AUDIT_ACCEPTED_SAFE_UNRESOLVED_T1A_T1B_T1C_PROPOSAL_ONLY",
     "T1_authorized_recovery_coordinator_adjudication": "PASS_STALE_HASH_GATES_NOT_REPRODUCED_ON_MAIN",
     "T1_authorized_recovery_integration": "INTEGRATED_AUDIT_REQUIRED",
-    "T1_authorized_recovery_independent_audit": "READY_TO_DISPATCH"
+    "T1_authorized_recovery_independent_audit": "PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY",
+    "T2": "READY_TO_START"
   },
   "merge_state": {
     "pending_child_commits": [],
@@ -122,9 +125,11 @@
       "580be10",
       "053ee34",
       "321379d",
-      "980529e"
+      "980529e",
+      "55d151f578a2dd5189ed9d1124279746ea0f5199",
+      "56220a86d2d47db417a184916078697516254435"
     ],
-    "last_merge_result": "T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED"
+    "last_merge_result": "T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_PASS_T2_READY"
   },
   "pending_worktrees": [
     {
@@ -203,9 +208,10 @@
     "supersedes_automation_id": "smv1-master-autopilot-heartbeat"
   },
   "latest_verified_test_result": {
-    "command": "python scripts/run_tests.py",
+    "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/run_tests.py",
     "status": "PASS",
-    "verified_at": "2026-06-25T12:22:51.5100000+08:00"
+    "verified_at": "2026-06-25T12:55:52.0830000+08:00",
+    "head": "56220a86d2d47db417a184916078697516254435"
   },
   "scoped_workflow_freeze_results": {
     "legacy_baseline_024": "PASS",
@@ -219,7 +225,7 @@
     "post_design_leakage": 0
   },
   "readiness_gate_state": {
-    "status": "T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED",
+    "status": "T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_PASS_T2_READY",
     "highest_allowed_success_status": "READY_FOR_PRIVATE_PREVIEW",
     "forbidden_status": "PRODUCTION_APPROVED",
     "customer_pdf_dxf_dwg_generation_count": 0
@@ -237,7 +243,11 @@
     "signed_authority_decision_next_gate": "ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX",
     "authorized_recovery_threads": "T1A/T1B/T1C child results adjudicated integration-ready",
     "authorized_recovery_integration": "PASS_AUDIT_REQUIRED",
-    "authorized_recovery_next_action": "DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT"
+    "authorized_recovery_next_action": "RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION",
+    "authorized_recovery_independent_audit": "PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY",
+    "t1a_panel_assignment": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+    "t1b_component_geometry": "SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_0_OF_53_SYNTHETIC_ONLY",
+    "t1c_rule_artifacts": "PROPOSAL_ONLY_NOT_PROMOTED"
   },
   "untracked_file_policy": {
     "permitted_pre_existing_untracked": [

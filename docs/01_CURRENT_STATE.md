@@ -1,12 +1,12 @@
 # Current State
 
-Current phase: T1 authorized recovery integrated; independent audit required.
+Current phase: T1 authorized recovery independently audited; T2 recalibration ready.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `T1_AUTHORIZED_RECOVERY_INTEGRATED_AUDIT_REQUIRED`.
+Current status: `T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_PASS_T2_READY`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -64,7 +64,10 @@ unsigned JSON draft scaffold bound to the current packet/template hashes; it
 intentionally fails closed until filled, signed, validated, and routed.
 `D-0046` adds an atomic submission processor for future signed decisions; it
 packages validation, intake, and summary artifacts, while the current unsigned
-draft still fails closed.
+draft still fails closed. `D-0047` accepts the signed A+B+C authority decision,
+`D-0049` integrates adjudicated T1 authorized recovery artifacts, and `D-0050`
+accepts the independent audit while keeping T1A/T1B safe unresolved and T1C
+proposal-only.
 These
 amendments do not weaken
 source immutability, source-root restrictions, positive source allowlisting,
@@ -538,4 +541,16 @@ independent audit and are not promoted to the model, renderer, or T2 inputs.
 No source root, `.private` artifact, completed reference, customer drawing,
 PDF, DXF, or DWG was changed or generated; no production approval was declared.
 
-Exact next action: `DISPATCH_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT`.
+T1 authorized recovery independent audit after `D-0050`: the independent audit
+accepted the integrated T1A/T1B/T1C authorized recovery result with status
+`PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY`.
+T1A remains safe unresolved with no approved panel allocation source. T1B
+remains safe unresolved with real-project geometry coverage `0/53`; synthetic
+authority-state fixture coverage is not treated as real-project capability.
+T1C rule artifacts remain proposal-only and were not promoted into the
+canonical model, renderer, frozen generator, or T2 recalibration input. Full
+tests and legacy, active sheetmetal-v1, and topology-stage scoped freezes pass.
+No source root, `.private` artifact, completed reference, customer drawing,
+PDF, DXF, or DWG was changed or generated; no production approval was declared.
+
+Exact next action: `RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION`.
