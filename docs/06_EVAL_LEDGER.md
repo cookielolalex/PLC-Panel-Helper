@@ -1391,3 +1391,16 @@ Evidence:
 `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.md`,
 and
 `orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json`.
+
+
+## sheetmetal-v1 Phase 1 1140304 panel-allocation source qualification
+
+Status: `PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED`.
+
+Decision: `D-0055`.
+
+The coordinator reconciled the accepted package intake summary and child result, verified the proposed panel-allocation evidence hash from ignored local intake storage, and recorded only neutral counts. Candidate `1140304` is not approved for generator use because source-document identity, revision, chronology, leakage, and reconciliation gates cannot be independently verified from a package index alone.
+
+Generation status: no customer drawing, PDF, DXF, or DWG was generated; no production approval was declared; accepted panel-allocation facts remain `0`; `SHEETMETAL_ALLOWED_EVAL` remains `1`.
+
+Evidence: `reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.json`, `reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.md`, and `orchestration/master/child-results/SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304.json`.

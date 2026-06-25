@@ -302,3 +302,14 @@ Heartbeat re-enabled for source-rich Phase 1:
 - Automation id: `plc-panels-master-autopilot-heartbeat`.
 - Cadence: 15 minutes.
 - Next action: `RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.
+
+
+## Phase 1 1140304 Source Qualification
+
+Status: `PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED`.
+
+Decision: `D-0055`.
+
+The package intake summary and child result were reconciled by hash, parseability, and required fields. The local ignored package intake was used only for neutral counts. Candidate `1140304` remains not approved for generator use because the package index does not include independently verifiable source-document bytes for identity, revision, chronology, leakage, and reconciliation gates. `1110101` remains the accepted component-register and graph calibration case; source-rich facts transferred into it: `0`.
+
+Exact next action: `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.

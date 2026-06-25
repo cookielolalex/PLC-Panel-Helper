@@ -19,26 +19,27 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS`
+`PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED`
 
 Active goal:
 
 `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`
 
-Package intake evidence:
+Phase 1 result:
 
-- Package id: `SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25`.
-- Neutral intake summary: `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json`.
-- Intake child result: `orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json`.
+- Result: `reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.json`.
+- Child result: `orchestration/master/child-results/SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304.json`.
+- Child result hash: `01111CF938BE4E0155A21445101D76A4FA1C051DB9E7F9D724C1052368E27835`.
+- Candidate `1140304` is not approved for generator use from package-index evidence alone.
+- Accepted panel-allocation facts: `0`.
+- `1110101` remains preserved as the accepted component-register and graph calibration case; source-rich fact transfer into `1110101`: `0`.
 
 Boundary:
 
-The package is authorized only for development, evaluation, and `READY_FOR_PRIVATE_PREVIEW` calibration. It does not authorize production approval, fabrication release, removing mandatory human CAD review, completed-reference or post-design leakage, unsupported engineering facts, public transmission of private project context, or automatic promotion of proposed sources, geometry entries, or rules.
-
-Preserve `1110101` as the accepted component-register and graph calibration case. Open a parallel source-rich requalification path for preferred candidate `1140304`. Never transfer source-rich assignments, dimensions, or source facts into `1110101`.
+Do not mutate source roots, do not commit package contents or private intake paths, do not transmit private project data, do not generate customer drawings, and never declare production approval.
 
 Exact next action:
 
-`RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`
+`WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`
 
-Run Phase 1 panel-allocation source qualification from the local ignored package intake. Accept only hash-bound, parseable, privacy-clean artifacts. Commit only neutral hashes, counts, statuses, tests, and audit results. Do not mutate source roots, do not commit package contents or private intake paths, do not transmit private project data, do not generate customer drawings, and never declare production approval.
+Resume only when approved 1140304 source documents or an approved source-rich candidate index with underlying source documents is available. The deleted heartbeat should not be recreated unless fresh approved evidence creates a new autonomous action.

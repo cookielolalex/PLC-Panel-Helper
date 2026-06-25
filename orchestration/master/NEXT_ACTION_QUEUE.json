@@ -202,10 +202,10 @@
       "task_id": "SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304",
       "stage_id": "SOURCE_RICH_REQUALIFICATION_PHASE1",
       "role": "source_qualification_worker",
-      "status": "READY_TO_START",
-      "agent_id": "COORDINATOR_OR_INDEPENDENT_WORKER",
-      "starting_commit": "277245418be4e5ff50b3fb23caa7793333ac3055",
-      "action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304",
+      "status": "ACCEPTED_FAIL_CLOSED",
+      "agent_id": "COORDINATOR",
+      "starting_commit": "0e3ca0b6678d4a7ea3c7db07c054f0cb6cb10546",
+      "action": "RECORDED_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED",
       "expected_result_path": "reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.json",
       "hard_requirements": [
         "preserve_1110101_no_fact_transfer",
@@ -215,7 +215,28 @@
         "no_completed_reference_or_post_design_dependency",
         "no_customer_pdf_dxf_dwg_generation",
         "do_not_declare_production_approved"
-      ]
+      ],
+      "result_hash": "01111CF938BE4E0155A21445101D76A4FA1C051DB9E7F9D724C1052368E27835",
+      "blocker": "SOURCE_DOCUMENTS_REQUIRED",
+      "next_action": "WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX"
+    },
+    {
+      "task_id": "SMV1-SOURCE-RICH-PANEL-ALLOCATION-EVIDENCE-WAIT",
+      "stage_id": "SOURCE_RICH_REQUALIFICATION_PHASE1",
+      "role": "human_or_signed_authority_evidence",
+      "status": "BLOCKED_EXTERNAL_INPUT_REQUIRED",
+      "agent_id": "EXTERNAL_EVIDENCE_REQUIRED",
+      "starting_commit": "0e3ca0b6678d4a7ea3c7db07c054f0cb6cb10546",
+      "action": "WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX",
+      "expected_result_path": "reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.json",
+      "hard_requirements": [
+        "approved_source_documents_required_before_generator_fact_acceptance",
+        "preserve_1110101_no_fact_transfer",
+        "commit_only_neutral_hash_count_status_audit_evidence",
+        "no_customer_pdf_dxf_dwg_generation",
+        "do_not_declare_production_approved"
+      ],
+      "blocking_condition": "Phase 1 cannot approve 1140304 from package index evidence without independently verifiable source-document bytes."
     }
   ]
 }

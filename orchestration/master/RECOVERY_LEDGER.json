@@ -121,6 +121,21 @@
       "autonomous_recovery_available": true,
       "next_action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304",
       "required_external_input": null
+    },
+    {
+      "ts": "2026-06-25T17:07:31.845000+08:00",
+      "stage": "SOURCE_RICH_REQUALIFICATION_PHASE1",
+      "status": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
+      "blocker_class": "STRUCTURAL_SOURCE_INSUFFICIENCY",
+      "result": "orchestration/master/child-results/SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304.json",
+      "result_hash": "01111CF938BE4E0155A21445101D76A4FA1C051DB9E7F9D724C1052368E27835",
+      "package_id": "SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25",
+      "preferred_source_rich_candidate": "1140304",
+      "accepted_panel_allocation_fact_count": 0,
+      "preserve_1110101": true,
+      "autonomous_recovery_available": false,
+      "next_action": "WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX",
+      "required_external_input": "approved 1140304 source documents or source-rich candidate index with underlying approved source documents"
     }
   ],
   "blocker_classes": [

@@ -537,3 +537,7 @@
 - Preserved `1110101` as the accepted component-register and graph calibration case.
 - Opened preferred source-rich candidate `1140304` for Phase 1 panel-allocation source qualification without transferring facts into `1110101`.
 - Kept proposed source, geometry, and rule artifacts unpromoted pending qualification, tests, and independent audits.
+
+- Reconciled the evidence package intake summary and child result for Phase 1.
+- Recorded 1140304 panel-allocation source qualification as fail-closed because the package index lacks independently verifiable source-document bytes for identity, revision, chronology, leakage, and reconciliation gates.
+- Preserved `1110101` with zero source-rich fact transfer, accepted zero panel-allocation facts, generated no customer drawings, and deleted the heartbeat because the next step requires external approved evidence.

@@ -1,0 +1,99 @@
+{
+  "schema_version": "sheetmetal-v1.phase1_panel_allocation_source_qualification.v1",
+  "decision_id": "D-0055",
+  "task_id": "SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304",
+  "created_at": "2026-06-25T17:07:31.845000+08:00",
+  "status": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "starting_commit": "0e3ca0b6678d4a7ea3c7db07c054f0cb6cb10546",
+  "package_id": "SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25",
+  "candidate": {
+    "preferred_source_rich_candidate": "1140304",
+    "candidate_presence_in_package_index": "PRESENT_COUNT_ONLY",
+    "candidate_count_in_panel_allocation_evidence": 1,
+    "source_classification": "NOT_APPROVED_FOR_GENERATOR_USE",
+    "accepted_for_phase1_panel_allocation_source": false,
+    "automatic_next_source_selection_available_from_package": false,
+    "reason": "The local package intake provides a hash-bound proposed evidence index, but not independently verifiable source-document bytes needed for identity, revision, chronology, leakage, and reconciliation gates."
+  },
+  "reconciled_package_intake": {
+    "package_intake_summary_path": "reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json",
+    "package_intake_summary_sha256": "69F74303A85D4283A5F2833657E68EEEE77A56554D9EBA2D861973DA072236F8",
+    "package_intake_child_result_path": "orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json",
+    "package_intake_child_result_sha256": "B11EE0EBCED34870CEE92E48AAB49C752F95F1B7BB83303136CF666D4AEE8EDA",
+    "package_intake_child_status": "ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS",
+    "package_intake_next_action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304",
+    "panel_allocation_evidence_proposed_json_sha256": "EE333B4483EA9E7F3DAF8320D62D435DD7B09328DF6A8074AC90F24729029551",
+    "panel_allocation_evidence_hash_matches_intake_summary": true,
+    "local_ignored_package_intake_used": true,
+    "private_intake_path_committed": false,
+    "source_root_read_count": 0,
+    "source_root_mutation_count": 0
+  },
+  "neutral_counts": {
+    "source_candidate_count": 1,
+    "candidate_page_group_count": 3,
+    "activation_gate_count": 8,
+    "known_date_signal_count": 3,
+    "permitted_generator_fact_count_after_pass": 8,
+    "prohibited_generator_fact_count": 6
+  },
+  "phase1_gate_results": {
+    "package_intake_child_result": "PASS_RECONCILED_HASHED_PARSEABLE",
+    "package_intake_summary": "PASS_RECONCILED_HASHED_PARSEABLE",
+    "panel_allocation_evidence_proposed_json": "PASS_HASH_MATCH_PARSEABLE_COUNTED_ONLY",
+    "title_block_identity": "FAIL_CLOSED_SOURCE_DOCUMENT_BYTES_NOT_AVAILABLE",
+    "revision_and_effective_status": "FAIL_CLOSED_SOURCE_DOCUMENT_BYTES_NOT_AVAILABLE",
+    "source_chronology_before_sheetmetal_reference": "FAIL_CLOSED_SOURCE_DOCUMENT_BYTES_NOT_AVAILABLE",
+    "sheetmetal_reference_chronology": "FAIL_CLOSED_COMPLETED_REFERENCE_EVIDENCE_NOT_OPENED_FOR_GENERATOR_FACTS",
+    "completed_reference_or_post_design_derivation": "FAIL_CLOSED_NOT_INDEPENDENTLY_DISPROVEN_FROM_PACKAGE_INDEX_ONLY",
+    "component_model_quantity_reconciliation": "FAIL_CLOSED_SOURCE_DOCUMENT_BYTES_NOT_AVAILABLE",
+    "panel_allocation_fact_provenance": "FAIL_CLOSED_SOURCE_DOCUMENT_BYTES_NOT_AVAILABLE"
+  },
+  "qualification_result": {
+    "phase1_status": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
+    "accepted_panel_allocation_fact_count": 0,
+    "accepted_component_to_panel_allocation_count": 0,
+    "sanitized_panel_allocation_model_created": false,
+    "approved_generator_source_created": false,
+    "sheetmetal_allowed_eval_current": 1,
+    "sheetmetal_allowed_eval_incremented": false,
+    "preserve_1110101_component_register_graph_case": true,
+    "source_rich_fact_transfer_to_1110101_count": 0,
+    "next_action": "WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX"
+  },
+  "required_external_or_approved_evidence": [
+    "Approved 1140304 source-document package or equivalent source-rich candidate package with verifiable identity, revision/effective date, source chronology, and source-role metadata.",
+    "Evidence sufficient to disprove completed-reference or post-design derivation before any panel-allocation fact is accepted.",
+    "If 1140304 remains unavailable, a source-rich candidate index with underlying approved source documents for the next candidate."
+  ],
+  "hard_gates": {
+    "privacy_status": "NOT_APPROVED",
+    "source_root_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "customer_drawing_generation_count": 0,
+    "production_approval_declared": false,
+    "tracked_private_artifacts": 0,
+    "private_intake_path_committed": false,
+    "source_rich_fact_transfer_to_1110101_count": 0,
+    "accepted_panel_allocation_fact_count": 0,
+    "sanitized_panel_allocation_model_created": false,
+    "sheetmetal_allowed_eval_incremented": false
+  },
+  "verification": {
+    "json_parseability": "PASS",
+    "required_fields": "PASS",
+    "hashes": "PASS",
+    "privacy_cleanliness": "PASS",
+    "full_tests": "PASS",
+    "legacy_baseline_024_scoped_freeze": "PASS",
+    "sheetmetal_v1_active_scoped_freeze": "PASS",
+    "sheetmetal_v1_topology_sizing_placement_scoped_freeze": "PASS"
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}

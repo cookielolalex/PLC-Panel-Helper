@@ -1,0 +1,60 @@
+{
+  "schema_version": "master-child-result-v1",
+  "task_id": "SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304",
+  "created_at": "2026-06-25T17:07:31.845000+08:00",
+  "role": "coordinator",
+  "starting_commit": "0e3ca0b6678d4a7ea3c7db07c054f0cb6cb10546",
+  "exact_final_status": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
+  "exact_recommended_next_action": "WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX",
+  "package_id": "SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25",
+  "candidate_id": "1140304",
+  "input_hashes": {
+    "package_intake_summary_json_sha256": "69F74303A85D4283A5F2833657E68EEEE77A56554D9EBA2D861973DA072236F8",
+    "package_intake_child_result_sha256": "B11EE0EBCED34870CEE92E48AAB49C752F95F1B7BB83303136CF666D4AEE8EDA",
+    "panel_allocation_evidence_proposed_json_sha256": "EE333B4483EA9E7F3DAF8320D62D435DD7B09328DF6A8074AC90F24729029551"
+  },
+  "validation": {
+    "package_intake_summary_parseability": "PASS",
+    "package_intake_child_result_parseability": "PASS",
+    "panel_allocation_evidence_parseability": "PASS",
+    "required_fields": "PASS",
+    "hashes": "PASS",
+    "privacy_cleanliness": "PASS",
+    "source_document_phase1_gates": "FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
+    "full_tests": "PASS",
+    "scoped_freezes": "PASS"
+  },
+  "qualification_result": {
+    "phase1_status": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
+    "accepted_panel_allocation_fact_count": 0,
+    "accepted_component_to_panel_allocation_count": 0,
+    "sanitized_panel_allocation_model_created": false,
+    "approved_generator_source_created": false,
+    "sheetmetal_allowed_eval_current": 1,
+    "sheetmetal_allowed_eval_incremented": false,
+    "preserve_1110101_component_register_graph_case": true,
+    "source_rich_fact_transfer_to_1110101_count": 0,
+    "next_action": "WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX"
+  },
+  "hard_gates": {
+    "privacy_status": "NOT_APPROVED",
+    "source_root_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "customer_drawing_generation_count": 0,
+    "production_approval_declared": false,
+    "tracked_private_artifacts": 0,
+    "private_intake_path_committed": false,
+    "source_rich_fact_transfer_to_1110101_count": 0,
+    "accepted_panel_allocation_fact_count": 0,
+    "sanitized_panel_allocation_model_created": false,
+    "sheetmetal_allowed_eval_incremented": false
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.json": "F9F305DCB44B5E5589416ED1791C863CC8869B8B871EB026BA967F21498CB885",
+    "reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.md": "77610D117A3A4C38C3C4B7F05CF9D7E965A74659F956760471DB4D3C0D1C0F6A",
+    "orchestration/master/child-results/SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}

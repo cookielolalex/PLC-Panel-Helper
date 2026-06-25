@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: additional evidence package intake in progress; source-rich 1140304 requalification path opened.
+Current phase: source-rich 1140304 Phase 1 qualification failed closed; approved source documents required.
 
 Accepted release: none.
 
@@ -8,7 +8,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS`.
+Current status: `PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED`.
 
 Current candidate: `1110101`.
 
@@ -708,9 +708,20 @@ Exact next action:
 
 T2 safe-unresolved terminal-candidate review after `D-0053`: the coordinator accepted only a terminal-candidate record from the T2 independent audit. The review status is `T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED` and the terminal candidate class is `STRUCTURAL_SOURCE_INSUFFICIENCY`. No model, renderer, private-preview, customer drawing, or production approval promotion is authorized from this safe-unresolved audit. Required external or approved evidence is an approved panel allocation source, real component geometry authority or approved generic envelope rule, or independently accepted T1C rule promotion evidence under the signed authority boundary. Evidence is recorded in `orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json`, `reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.json`, and `reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.md`.
 
-Exact next action: `RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.
+Exact next action: `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.
 
 
 Additional evidence recovery package intake after `D-0054`: `SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25` was hash-validated, parse-validated, and copied into ignored local intake storage. Committed artifacts contain only neutral hashes/counts/status and no package contents or private intake path. The decision preserves `1110101` as the component-register and graph case, opens source-rich candidate `1140304` for Phase 1 qualification, and keeps customer drawing generation, fabrication release, and `PRODUCTION_APPROVED` forbidden. Evidence: `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json`, `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.md`, and `orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json`.
 
-Exact next action: `RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.
+Exact next action: `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.
+
+
+## Phase 1 1140304 Source Qualification
+
+Status: `PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED`.
+
+Decision: `D-0055`.
+
+The package intake summary and child result were reconciled by hash, parseability, and required fields. The local ignored package intake was used only for neutral counts. Candidate `1140304` remains not approved for generator use because the package index does not include independently verifiable source-document bytes for identity, revision, chronology, leakage, and reconciliation gates. `1110101` remains the accepted component-register and graph calibration case; source-rich facts transferred into it: `0`.
+
+Exact next action: `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.

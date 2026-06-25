@@ -2,10 +2,10 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "277245418be4e5ff50b3fb23caa7793333ac3055",
-  "current_canonical_status": "ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS",
-  "current_stage": "EVIDENCE_RECOVERY_PACKAGE_INTAKE",
-  "next_action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304",
+  "current_head": "0e3ca0b6678d4a7ea3c7db07c054f0cb6cb10546",
+  "current_canonical_status": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
+  "current_stage": "SOURCE_RICH_REQUALIFICATION_PHASE1",
+  "next_action": "WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX",
   "active_thread_ids": [],
   "task_ids": [
     "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
@@ -32,7 +32,8 @@
     "SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT",
     "SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW",
     "SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE",
-    "SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304"
+    "SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304",
+    "SMV1-SOURCE-RICH-PANEL-ALLOCATION-EVIDENCE-WAIT"
   ],
   "worktree_paths": [
     "pendingWorktreeId:local:75736337-550b-4e6b-aded-25b6cbbbccea",
@@ -72,12 +73,14 @@
     "signed_authority_intake_routing_commit": "f27eb72e0270a8b89d75d9ace1287b56739c6e75"
   },
   "expected_outputs": [
-    "neutral evidence recovery package intake summary",
-    "Phase 1 source-rich panel-allocation source qualification for 1140304"
+    "neutral phase 1 panel-allocation source qualification result for 1140304",
+    "approved 1140304 source documents or source-rich candidate index before any further promotion"
   ],
-  "last_heartbeat": "2026-06-25T16:50:05.848821+08:00",
+  "last_heartbeat": "2026-06-25T17:07:31.845000+08:00",
   "retries": {},
-  "blockers": [],
+  "blockers": [
+    "APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX_REQUIRED"
+  ],
   "audit_state": {
     "T0": "INCONCLUSIVE_LOW_COVERAGE",
     "safety_and_implementation_integrity": "PASS",
@@ -105,8 +108,9 @@
     "T2_independent_audit": "PASS_T2_RECALIBRATION_AUDIT_SAFE_UNRESOLVED_MODEL_RENDERER_PROMOTION_BLOCKED",
     "T2_safe_unresolved_terminal_candidate_review": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED",
     "T2_terminal_candidate_class": "STRUCTURAL_SOURCE_INSUFFICIENCY_PENDING_ADDITIONAL_APPROVED_EVIDENCE",
-    "additional_evidence_package_intake": "ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS",
-    "source_rich_requalification_path": "1140304_PREFERRED_CANDIDATE_PENDING_PHASE1_QUALIFICATION"
+    "additional_evidence_package_intake": "ACCEPTED_RECONCILED_HASHED_PRIVACY_CLEAN",
+    "source_rich_requalification_path": "BLOCKED_SOURCE_DOCUMENTS_REQUIRED",
+    "phase1_panel_allocation_source_qualification_1140304": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED"
   },
   "merge_state": {
     "pending_child_commits": [],
@@ -140,7 +144,7 @@
       "56220a86d2d47db417a184916078697516254435",
       "a8acc55779afbaec874d9102bbd206d9223b13b1"
     ],
-    "last_merge_result": "ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS"
+    "last_merge_result": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED"
   },
   "pending_worktrees": [
     {
@@ -214,16 +218,16 @@
     "automation_id": "plc-panels-master-autopilot-heartbeat",
     "kind": "heartbeat",
     "cadence": "15 minutes",
-    "status": "ACTIVE",
-    "created_at": "2026-06-25T16:50:57.343333+08:00",
-    "resumed_for_status": "ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS",
-    "next_action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304"
+    "status": "DELETED_EXTERNAL_EVIDENCE_REQUIRED",
+    "stopped_at": "2026-06-25T17:07:31.845000+08:00",
+    "stopped_for_status": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
+    "next_action": "WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX"
   },
   "latest_verified_test_result": {
     "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/run_tests.py",
     "status": "PASS",
-    "verified_at": "2026-06-25T16:50:05.848821+08:00",
-    "head": "277245418be4e5ff50b3fb23caa7793333ac3055"
+    "verified_at": "2026-06-25T17:07:31.845000+08:00",
+    "head": "0e3ca0b6678d4a7ea3c7db07c054f0cb6cb10546"
   },
   "scoped_workflow_freeze_results": {
     "legacy_baseline_024": "PASS",
@@ -237,7 +241,7 @@
     "post_design_leakage": 0
   },
   "readiness_gate_state": {
-    "status": "ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS",
+    "status": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
     "highest_allowed_success_status": "READY_FOR_PRIVATE_PREVIEW",
     "forbidden_status": "PRODUCTION_APPROVED",
     "customer_pdf_dxf_dwg_generation_count": 0,
@@ -271,9 +275,11 @@
     "t2_model_renderer_promotion": "BLOCKED_PENDING_ADDITIONAL_APPROVED_EVIDENCE",
     "t2_next_action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304",
     "t2_terminal_candidate_review": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED",
-    "evidence_recovery_package_intake": "PASS_NEUTRAL_HASH_COUNT_INTAKE_ONLY",
-    "source_rich_requalification_candidate": "1140304_PENDING_PHASE1_SOURCE_QUALIFICATION",
-    "1110101_policy": "PRESERVED_COMPONENT_REGISTER_AND_GRAPH_CASE_NO_FACT_TRANSFER"
+    "evidence_recovery_package_intake": "PASS_RECONCILED_HASHED_PRIVACY_CLEAN",
+    "source_rich_requalification_candidate": "1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
+    "1110101_policy": "PRESERVED_COMPONENT_REGISTER_AND_GRAPH_CASE_NO_FACT_TRANSFER",
+    "phase1_panel_allocation_source_qualification_1140304": "PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED",
+    "source_rich_next_action": "WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX"
   },
   "untracked_file_policy": {
     "permitted_pre_existing_untracked": [

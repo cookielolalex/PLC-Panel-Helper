@@ -1,12 +1,12 @@
 # Current State
 
-Current phase: additional evidence package intake in progress; source-rich 1140304 requalification path opened.
+Current phase: source-rich 1140304 Phase 1 qualification failed closed; approved source documents required.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS`.
+Current status: `PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -587,4 +587,15 @@ Exact next action: `WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`.
 
 Additional evidence recovery package intake after `D-0054`: the user authorized local intake and independent evaluation of `SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25` for development, evaluation, and `READY_FOR_PRIVATE_PREVIEW` calibration only. The coordinator validated package hashes, JSON parseability, manifest-declared hashes, ignored-workspace intake, full tests, and legacy/active/topology scoped freezes. The committed evidence records neutral hashes, counts, and status only; proposed source, geometry, and rule artifacts are not automatically promoted. Project `1110101` remains preserved as the accepted component-register and graph calibration case, while preferred source-rich candidate `1140304` is opened for Phase 1 panel-allocation source qualification. Evidence is recorded in `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json`, `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.md`, and `orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json`.
 
-Exact next action: `RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.
+Exact next action: `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.
+
+
+## Phase 1 1140304 Source Qualification
+
+Status: `PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED`.
+
+Decision: `D-0055`.
+
+The package intake summary and child result were reconciled by hash, parseability, and required fields. The local ignored package intake was used only for neutral counts. Candidate `1140304` remains not approved for generator use because the package index does not include independently verifiable source-document bytes for identity, revision, chronology, leakage, and reconciliation gates. `1110101` remains the accepted component-register and graph calibration case; source-rich facts transferred into it: `0`.
+
+Exact next action: `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.
