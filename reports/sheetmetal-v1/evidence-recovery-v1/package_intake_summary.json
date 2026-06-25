@@ -1,0 +1,275 @@
+{
+  "schema_version": "sheetmetal-v1.evidence_recovery_package_intake_summary.v1",
+  "decision_id": "D-0054",
+  "task_id": "SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE",
+  "created_at": "2026-06-25T16:50:05.848821+08:00",
+  "status": "ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "starting_commit": "277245418be4e5ff50b3fb23caa7793333ac3055",
+  "package_id": "SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25",
+  "package_created_date": "2026-06-25",
+  "repository": "cookielolalex/PLC-Panel-Helper",
+  "repository_checkpoint": "277245418be4e5ff50b3fb23caa7793333ac3055",
+  "zip_sha256": "9C875A2D829781D958075A9FF09A7B00378730B2F63C56660F4FEBE7BEBAB62F",
+  "zip_bytes": 16263,
+  "zip_integrity": {
+    "status": "PASS",
+    "testzip_bad_entry": null
+  },
+  "path_safety": {
+    "status": "PASS",
+    "path_traversal_violations": []
+  },
+  "manifest_validation": {
+    "status": "PASS",
+    "declared_file_count": 6,
+    "checks": [
+      {
+        "path": "README.md",
+        "declared_sha256": "672A3B953CEEB2A0921ED9AC2D47C0402CD052D670B00A9BDCB861F92E2FAA42",
+        "actual_sha256": "672A3B953CEEB2A0921ED9AC2D47C0402CD052D670B00A9BDCB861F92E2FAA42",
+        "declared_bytes": 1113,
+        "actual_bytes": 1113,
+        "status": "PASS"
+      },
+      {
+        "path": "archive_comparison.md",
+        "declared_sha256": "012622D453C0FE4BFE267916267AE4DA29F9EABD7C54A3D54F5000D266D0B0A3",
+        "actual_sha256": "012622D453C0FE4BFE267916267AE4DA29F9EABD7C54A3D54F5000D266D0B0A3",
+        "declared_bytes": 2671,
+        "actual_bytes": 2671,
+        "status": "PASS"
+      },
+      {
+        "path": "company_design_rules.proposed.json",
+        "declared_sha256": "DE7C85B7F32108A272E1A3FC026CDCE098814EFA1C016863E5424CDB2F599D89",
+        "actual_sha256": "DE7C85B7F32108A272E1A3FC026CDCE098814EFA1C016863E5424CDB2F599D89",
+        "declared_bytes": 9352,
+        "actual_bytes": 9352,
+        "status": "PASS"
+      },
+      {
+        "path": "component_geometry_library.proposed.json",
+        "declared_sha256": "CD3BFFFA7DADE24C517C8E139D597B21193B264CFB76CA14064829F68039540D",
+        "actual_sha256": "CD3BFFFA7DADE24C517C8E139D597B21193B264CFB76CA14064829F68039540D",
+        "declared_bytes": 10491,
+        "actual_bytes": 10491,
+        "status": "PASS"
+      },
+      {
+        "path": "next_master_prompt.txt",
+        "declared_sha256": "13068B752CA6B57D7B13F8A182B076080B082D68FA2CF7977B44E70589DE30B6",
+        "actual_sha256": "13068B752CA6B57D7B13F8A182B076080B082D68FA2CF7977B44E70589DE30B6",
+        "declared_bytes": 10560,
+        "actual_bytes": 10560,
+        "status": "PASS"
+      },
+      {
+        "path": "panel_allocation_evidence.proposed.json",
+        "declared_sha256": "EE333B4483EA9E7F3DAF8320D62D435DD7B09328DF6A8074AC90F24729029551",
+        "actual_sha256": "EE333B4483EA9E7F3DAF8320D62D435DD7B09328DF6A8074AC90F24729029551",
+        "declared_bytes": 5346,
+        "actual_bytes": 5346,
+        "status": "PASS"
+      }
+    ]
+  },
+  "entry_validation": {
+    "status": "PASS",
+    "actual_file_count": 7,
+    "expected_authorized_files_present": [
+      "archive_comparison.md",
+      "company_design_rules.proposed.json",
+      "component_geometry_library.proposed.json",
+      "panel_allocation_evidence.proposed.json"
+    ],
+    "missing_required_files": [],
+    "support_files_present": [
+      "README.md",
+      "next_master_prompt.txt",
+      "package_manifest.json"
+    ],
+    "extra_entries": [],
+    "entries": [
+      {
+        "path": "README.md",
+        "bytes": 1113,
+        "compress_size": 661,
+        "sha256": "672A3B953CEEB2A0921ED9AC2D47C0402CD052D670B00A9BDCB861F92E2FAA42",
+        "json_parse_status": null
+      },
+      {
+        "path": "archive_comparison.md",
+        "bytes": 2671,
+        "compress_size": 1402,
+        "sha256": "012622D453C0FE4BFE267916267AE4DA29F9EABD7C54A3D54F5000D266D0B0A3",
+        "json_parse_status": null
+      },
+      {
+        "path": "company_design_rules.proposed.json",
+        "bytes": 9352,
+        "compress_size": 2920,
+        "sha256": "DE7C85B7F32108A272E1A3FC026CDCE098814EFA1C016863E5424CDB2F599D89",
+        "json_parse_status": "PASS"
+      },
+      {
+        "path": "component_geometry_library.proposed.json",
+        "bytes": 10491,
+        "compress_size": 2679,
+        "sha256": "CD3BFFFA7DADE24C517C8E139D597B21193B264CFB76CA14064829F68039540D",
+        "json_parse_status": "PASS"
+      },
+      {
+        "path": "next_master_prompt.txt",
+        "bytes": 10560,
+        "compress_size": 4511,
+        "sha256": "13068B752CA6B57D7B13F8A182B076080B082D68FA2CF7977B44E70589DE30B6",
+        "json_parse_status": null
+      },
+      {
+        "path": "package_manifest.json",
+        "bytes": 1353,
+        "compress_size": 707,
+        "sha256": "C1FEF45AE3FE00B66381ACCA19298933F5B7D43F76C9BF14C0A4F489444A9C98",
+        "json_parse_status": "PASS"
+      },
+      {
+        "path": "panel_allocation_evidence.proposed.json",
+        "bytes": 5346,
+        "compress_size": 1981,
+        "sha256": "EE333B4483EA9E7F3DAF8320D62D435DD7B09328DF6A8074AC90F24729029551",
+        "json_parse_status": "PASS"
+      }
+    ]
+  },
+  "json_parse_validation": {
+    "status": "PASS",
+    "json_file_count": 4,
+    "files": [
+      {
+        "path": "company_design_rules.proposed.json",
+        "status": "PASS",
+        "neutral_structure": {
+          "top_type": "dict",
+          "top_level_key_count": 7,
+          "list_counts": {
+            "archive_observations": 4,
+            "external_basis": 2,
+            "rules": 11
+          },
+          "dict_counts": {}
+        }
+      },
+      {
+        "path": "component_geometry_library.proposed.json",
+        "status": "PASS",
+        "neutral_structure": {
+          "top_type": "dict",
+          "top_level_key_count": 8,
+          "list_counts": {
+            "entries": 8,
+            "unresolved_entries": 5,
+            "activation_policy": 7
+          },
+          "dict_counts": {
+            "official_sources": 6
+          }
+        }
+      },
+      {
+        "path": "package_manifest.json",
+        "status": "PASS",
+        "neutral_structure": {
+          "top_type": "dict",
+          "top_level_key_count": 7,
+          "list_counts": {
+            "files": 6
+          },
+          "dict_counts": {}
+        }
+      },
+      {
+        "path": "panel_allocation_evidence.proposed.json",
+        "status": "PASS",
+        "neutral_structure": {
+          "top_type": "dict",
+          "top_level_key_count": 8,
+          "list_counts": {
+            "source_candidates": 1
+          },
+          "dict_counts": {
+            "current_repository_blocker": 4,
+            "recommended_strategy": 2,
+            "1110101_policy": 2
+          }
+        }
+      }
+    ]
+  },
+  "private_intake_copy": {
+    "status": "PASS",
+    "git_check_ignore": "PASS",
+    "committed_private_paths": 0,
+    "private_path_committed": false,
+    "private_workspace_reference_committed": false,
+    "copied_zip_sha256": "9C875A2D829781D958075A9FF09A7B00378730B2F63C56660F4FEBE7BEBAB62F",
+    "extracted_file_count": 7
+  },
+  "authorization_scope": {
+    "status": "AUTHORIZED_FOR_DEVELOPMENT_EVALUATION_READY_FOR_PRIVATE_PREVIEW_CALIBRATION_ONLY",
+    "production_approved": false,
+    "fabrication_release_authorized": false,
+    "mandatory_human_cad_review_removed": false,
+    "automatic_promotion_of_all_proposals": false,
+    "private_project_public_transmission_authorized": false
+  },
+  "strategy": {
+    "preserve_1110101_component_register_graph_case": true,
+    "open_parallel_source_rich_path": true,
+    "preferred_source_rich_candidate": "1140304",
+    "never_transfer_source_rich_assignments_or_dimensions_into_1110101": true,
+    "sheetmetal_allowed_eval_current": 1,
+    "sheetmetal_allowed_eval_incremented": false
+  },
+  "soft_private_preview_parameters": {
+    "target_spare_usable_mounting_area_ratio": 0.2,
+    "search_range": {
+      "min": 0.15,
+      "max": 0.3
+    },
+    "initial_outer_edge_frame_reserve_candidate_mm": 50,
+    "initial_floor_standing_lower_service_plinth_candidate_mm": 100,
+    "status": "SOFT_CANDIDATE_GENERATION_PARAMETERS_ONLY_NOT_FABRICATION_DIMENSIONS"
+  },
+  "hard_gates": {
+    "privacy_status": "NOT_APPROVED",
+    "source_root_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "customer_drawing_generation_count": 0,
+    "production_approval_declared": false,
+    "tracked_private_artifacts": 0,
+    "known_untracked_legacy_script_only": true
+  },
+  "verification": {
+    "starting_head_verified": "277245418be4e5ff50b3fb23caa7793333ac3055",
+    "tracked_worktree_clean_except_known_untracked_legacy_script": true,
+    "full_tests": "PASS",
+    "legacy_baseline_024_scoped_freeze": "PASS",
+    "sheetmetal_v1_active_scoped_freeze": "PASS",
+    "sheetmetal_v1_topology_sizing_placement_scoped_freeze": "PASS"
+  },
+  "current_limitations": [
+    "Package intake validation does not activate proposed source, geometry, or rule facts.",
+    "Panel allocation source qualification for 1140304 still requires independent chronology, identity, revision, and leakage gates.",
+    "Public geometry entries still require official-source retrieval, exact matching, tests, and independent audit before activation.",
+    "Company design rules remain proposal-only until regression tests and independent rule audit pass."
+  ],
+  "next_action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304",
+  "output_hashes": {
+    "reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.md": "29CB7780542509CD44F5CC84B5096FF1E1CBD578C167ABA9FBCAD7A7DFF48FD5",
+    "reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}

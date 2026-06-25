@@ -1372,3 +1372,22 @@ Evidence:
 `reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.json`,
 and
 `reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.md`.
+
+
+## sheetmetal-v1 additional evidence recovery package intake
+
+Status: `ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS`.
+
+Decision: `D-0054`.
+
+Package `SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25` was accepted for local development/evaluation/private-preview calibration intake only. The zip integrity check, package manifest hash checks, JSON parse checks, git-ignore boundary, full tests, and legacy/active/topology scoped freezes passed. The package contents remain outside committed evidence; committed artifacts record only hashes, counts, and gate status.
+
+The source-rich branch preserves `1110101` and opens preferred candidate `1140304` for Phase 1 panel-allocation source qualification. `SHEETMETAL_ALLOWED_EVAL` remains `1`; no source-rich candidate is promoted yet.
+
+Hard gates remain closed: privacy is `NOT_APPROVED`, private external transmissions `0`, completed-reference leakage `0`, post-design leakage `0`, customer PDF/DXF/DWG generation `0`, and production approval `false`.
+
+Evidence:
+`reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json`,
+`reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.md`,
+and
+`orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json`.

@@ -1,11 +1,11 @@
 # Master Autopilot Summary
 
-Status: T2 safe-unresolved terminal-candidate review recorded.
+Status: additional evidence package intake in progress.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
 Current canonical status:
-`T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED`.
+`ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS`.
 
 Verified checkpoint:
 
@@ -21,7 +21,7 @@ Verified checkpoint:
 - Sheetmetal-v1 customer PDF/DXF/DWG output candidates: `0`.
 
 Next action:
-`WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`.
+`RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.
 
 Strict blocked audit:
 
@@ -284,3 +284,21 @@ T2 safe-unresolved terminal-candidate review:
 - Model promotion, renderer promotion, private-preview readiness, customer drawing generation, and production approval remain blocked.
 - Next action: `WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`.
 - Heartbeat automation status: stopped after this terminal-candidate review because additional approved source or rule evidence is required before further autonomous progress.
+
+
+Additional evidence recovery package intake:
+
+- Status: `ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS`.
+- Package id: `SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25`.
+- Intake evidence: `orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json`.
+- Zip hash: `9C875A2D829781D958075A9FF09A7B00378730B2F63C56660F4FEBE7BEBAB62F`.
+- `1110101` remains the accepted component-register and graph calibration case.
+- Source-rich candidate `1140304` is opened for Phase 1 qualification.
+- Proposed source, geometry, and rule artifacts remain unpromoted until qualification, tests, and independent audits pass.
+- Next action: `RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.
+
+Heartbeat re-enabled for source-rich Phase 1:
+
+- Automation id: `plc-panels-master-autopilot-heartbeat`.
+- Cadence: 15 minutes.
+- Next action: `RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.

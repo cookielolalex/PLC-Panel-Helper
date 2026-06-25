@@ -1,6 +1,6 @@
 # SESSION CHECKPOINT
 
-Current phase: T2 safe-unresolved terminal-candidate review recorded; awaiting additional approved source or rule evidence.
+Current phase: additional evidence package intake in progress; source-rich 1140304 requalification path opened.
 
 Accepted release: none.
 
@@ -8,7 +8,7 @@ Active production Knowledge paths: none.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
-Current status: `T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED`.
+Current status: `ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS`.
 
 Current candidate: `1110101`.
 
@@ -703,9 +703,14 @@ and
 `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json`.
 
 Exact next action:
-`WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`.
+`RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.
 
 
 T2 safe-unresolved terminal-candidate review after `D-0053`: the coordinator accepted only a terminal-candidate record from the T2 independent audit. The review status is `T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED` and the terminal candidate class is `STRUCTURAL_SOURCE_INSUFFICIENCY`. No model, renderer, private-preview, customer drawing, or production approval promotion is authorized from this safe-unresolved audit. Required external or approved evidence is an approved panel allocation source, real component geometry authority or approved generic envelope rule, or independently accepted T1C rule promotion evidence under the signed authority boundary. Evidence is recorded in `orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json`, `reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.json`, and `reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.md`.
 
-Exact next action: `WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`.
+Exact next action: `RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.
+
+
+Additional evidence recovery package intake after `D-0054`: `SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25` was hash-validated, parse-validated, and copied into ignored local intake storage. Committed artifacts contain only neutral hashes/counts/status and no package contents or private intake path. The decision preserves `1110101` as the component-register and graph case, opens source-rich candidate `1140304` for Phase 1 qualification, and keeps customer drawing generation, fabrication release, and `PRODUCTION_APPROVED` forbidden. Evidence: `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json`, `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.md`, and `orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json`.
+
+Exact next action: `RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.

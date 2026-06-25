@@ -531,3 +531,9 @@
 - Classified the unresolved gate as `STRUCTURAL_SOURCE_INSUFFICIENCY` pending additional approved panel allocation, component geometry, or independently accepted T1C rule-promotion evidence.
 - Kept canonical model promotion, renderer promotion, private preview readiness, customer drawing generation, and production approval blocked.
 - Stopped the heartbeat after terminal-candidate recording because there is no further autonomous action until approved evidence is provided.
+
+- Recorded additional evidence recovery package intake as `ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS`.
+- Hash-validated `SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25` and copied it only into ignored local intake storage.
+- Preserved `1110101` as the accepted component-register and graph calibration case.
+- Opened preferred source-rich candidate `1140304` for Phase 1 panel-allocation source qualification without transferring facts into `1110101`.
+- Kept proposed source, geometry, and rule artifacts unpromoted pending qualification, tests, and independent audits.

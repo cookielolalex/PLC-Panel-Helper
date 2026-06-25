@@ -1,0 +1,60 @@
+{
+  "schema_version": "master-child-result-v1",
+  "task_id": "SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE",
+  "created_at": "2026-06-25T16:50:05.848821+08:00",
+  "role": "coordinator",
+  "starting_commit": "277245418be4e5ff50b3fb23caa7793333ac3055",
+  "exact_final_status": "ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS",
+  "exact_recommended_next_action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304",
+  "package_id": "SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25",
+  "input_package_hashes": {
+    "zip_sha256": "9C875A2D829781D958075A9FF09A7B00378730B2F63C56660F4FEBE7BEBAB62F",
+    "package_manifest_json_sha256": "C1FEF45AE3FE00B66381ACCA19298933F5B7D43F76C9BF14C0A4F489444A9C98",
+    "panel_allocation_evidence_proposed_json_sha256": "EE333B4483EA9E7F3DAF8320D62D435DD7B09328DF6A8074AC90F24729029551",
+    "component_geometry_library_proposed_json_sha256": "CD3BFFFA7DADE24C517C8E139D597B21193B264CFB76CA14064829F68039540D",
+    "company_design_rules_proposed_json_sha256": "DE7C85B7F32108A272E1A3FC026CDCE098814EFA1C016863E5424CDB2F599D89",
+    "archive_comparison_md_sha256": "012622D453C0FE4BFE267916267AE4DA29F9EABD7C54A3D54F5000D266D0B0A3"
+  },
+  "validation": {
+    "zip_integrity": "PASS",
+    "manifest_hashes": "PASS",
+    "json_parseability": "PASS",
+    "git_check_ignore_before_private_intake": "PASS",
+    "private_intake_copy": "PASS",
+    "full_tests": "PASS",
+    "scoped_freezes": "PASS"
+  },
+  "strategy": {
+    "preserve_1110101_component_register_graph_case": true,
+    "open_parallel_source_rich_path": true,
+    "preferred_source_rich_candidate": "1140304",
+    "never_transfer_source_rich_assignments_or_dimensions_into_1110101": true,
+    "sheetmetal_allowed_eval_current": 1,
+    "sheetmetal_allowed_eval_incremented": false
+  },
+  "hard_gates": {
+    "privacy_status": "NOT_APPROVED",
+    "source_root_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "customer_drawing_generation_count": 0,
+    "production_approval_declared": false,
+    "tracked_private_artifacts": 0,
+    "known_untracked_legacy_script_only": true
+  },
+  "authorization_scope": {
+    "status": "AUTHORIZED_FOR_DEVELOPMENT_EVALUATION_READY_FOR_PRIVATE_PREVIEW_CALIBRATION_ONLY",
+    "production_approved": false,
+    "fabrication_release_authorized": false,
+    "mandatory_human_cad_review_removed": false,
+    "automatic_promotion_of_all_proposals": false,
+    "private_project_public_transmission_authorized": false
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json": "69F74303A85D4283A5F2833657E68EEEE77A56554D9EBA2D861973DA072236F8",
+    "reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.md": "29CB7780542509CD44F5CC84B5096FF1E1CBD578C167ABA9FBCAD7A7DFF48FD5",
+    "orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}

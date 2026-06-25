@@ -1,12 +1,12 @@
 # Current State
 
-Current phase: T2 safe-unresolved terminal-candidate review recorded; awaiting additional approved source or rule evidence.
+Current phase: additional evidence package intake in progress; source-rich 1140304 requalification path opened.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED`.
+Current status: `ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -583,3 +583,8 @@ Exact next action:
 T2 safe-unresolved terminal-candidate review after `D-0053`: the coordinator recorded the accepted T2 independent audit as a terminal candidate for `STRUCTURAL_SOURCE_INSUFFICIENCY`, not as capability success. T1A and T1B remain safe unresolved, T1C rule artifacts remain proposal-only, and coverage remains assignment `0/53`, real-project geometry `0/53`, sizing with zero source-supported denominator, and placement `0/53`. Canonical model promotion, renderer promotion, private preview readiness, customer drawing generation, and production approval remain blocked until additional approved source or rule evidence passes proposal/test-first and independent-audit gates. Evidence is recorded in `orchestration/master/blocked-audits/SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json` and `reports/sheetmetal-v1/t2-recalibration/terminal-candidate-review/t2_safe_unresolved_terminal_candidate_review.md`.
 
 Exact next action: `WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`.
+
+
+Additional evidence recovery package intake after `D-0054`: the user authorized local intake and independent evaluation of `SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25` for development, evaluation, and `READY_FOR_PRIVATE_PREVIEW` calibration only. The coordinator validated package hashes, JSON parseability, manifest-declared hashes, ignored-workspace intake, full tests, and legacy/active/topology scoped freezes. The committed evidence records neutral hashes, counts, and status only; proposed source, geometry, and rule artifacts are not automatically promoted. Project `1110101` remains preserved as the accepted component-register and graph calibration case, while preferred source-rich candidate `1140304` is opened for Phase 1 panel-allocation source qualification. Evidence is recorded in `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json`, `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.md`, and `orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json`.
+
+Exact next action: `RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`.

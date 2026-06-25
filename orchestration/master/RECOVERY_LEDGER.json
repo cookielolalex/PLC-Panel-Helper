@@ -107,6 +107,20 @@
       "autonomous_recovery_available": false,
       "next_action": "WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE",
       "required_external_input": "additional approved panel allocation source that passes source-role and chronology gates; real component geometry authority or approved generic envelope rule with provenance; independently accepted T1C rule promotion evidence under the signed authority boundary"
+    },
+    {
+      "ts": "2026-06-25T16:50:05.848821+08:00",
+      "stage": "EVIDENCE_RECOVERY_PACKAGE_INTAKE",
+      "status": "ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS",
+      "blocker_class": "RESOLVED_BY_USER_AUTHORIZED_ADDITIONAL_EVIDENCE_PACKAGE",
+      "result": "orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json",
+      "result_hash": "B11EE0EBCED34870CEE92E48AAB49C752F95F1B7BB83303136CF666D4AEE8EDA",
+      "package_id": "SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25",
+      "preserve_1110101": true,
+      "preferred_source_rich_candidate": "1140304",
+      "autonomous_recovery_available": true,
+      "next_action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304",
+      "required_external_input": null
     }
   ],
   "blocker_classes": [

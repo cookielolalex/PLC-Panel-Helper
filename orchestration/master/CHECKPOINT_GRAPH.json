@@ -1,7 +1,7 @@
 {
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
-  "current_node": "T2_SAFE_UNRESOLVED_TERMINAL_REVIEW",
+  "current_node": "EVIDENCE_RECOVERY_PACKAGE_INTAKE",
   "nodes": [
     {
       "id": "T0",
@@ -99,7 +99,7 @@
     {
       "id": "T2_SAFE_UNRESOLVED_TERMINAL_REVIEW",
       "name": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW",
-      "status": "T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED",
+      "status": "SUPERSEDED_BY_USER_AUTHORIZED_ADDITIONAL_EVIDENCE_PACKAGE_INTAKE",
       "input_evidence": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json",
       "next_action": "WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE",
       "promotion_status": "MODEL_RENDERER_PREVIEW_AND_DRAWING_PROMOTION_BLOCKED_PENDING_ADDITIONAL_APPROVED_EVIDENCE",
@@ -111,7 +111,8 @@
         "additional approved panel allocation source that passes source-role and chronology gates",
         "real component geometry authority or approved generic envelope rule with provenance",
         "independently accepted T1C rule promotion evidence under the signed authority boundary"
-      ]
+      ],
+      "on_additional_evidence_authorized": "EVIDENCE_RECOVERY_PACKAGE_INTAKE"
     },
     {
       "id": "T3",
@@ -137,6 +138,23 @@
       "id": "T7",
       "name": "PRIVATE_PREVIEW_READINESS_AUDIT",
       "status": "PENDING_BLOCKED_BY_T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW"
+    },
+    {
+      "id": "EVIDENCE_RECOVERY_PACKAGE_INTAKE",
+      "name": "ADDITIONAL_SOURCE_GEOMETRY_AND_COMPANY_RULE_EVIDENCE_PACKAGE_INTAKE",
+      "status": "ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS",
+      "evidence": "orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json",
+      "result_hash": "B11EE0EBCED34870CEE92E48AAB49C752F95F1B7BB83303136CF666D4AEE8EDA",
+      "on_intake_validated": "SOURCE_RICH_PANEL_ALLOCATION_QUALIFICATION"
+    },
+    {
+      "id": "SOURCE_RICH_PANEL_ALLOCATION_QUALIFICATION",
+      "name": "SOURCE_RICH_1140304_PANEL_ALLOCATION_SOURCE_QUALIFICATION",
+      "status": "READY_TO_START",
+      "input_evidence": "orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json",
+      "next_action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304",
+      "preserve_1110101": true,
+      "forbidden_fact_transfer_to_1110101": true
     }
   ],
   "terminal_states": [

@@ -179,6 +179,43 @@
         "do_not_declare_production_approved"
       ],
       "blocking_condition": "T2 terminal-candidate review found no autonomous promotable evidence path."
+    },
+    {
+      "task_id": "SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE",
+      "stage_id": "EVIDENCE_RECOVERY_PACKAGE_INTAKE",
+      "role": "coordinator",
+      "status": "ACCEPTED_INTAKE_IN_PROGRESS",
+      "agent_id": "COORDINATOR",
+      "starting_commit": "277245418be4e5ff50b3fb23caa7793333ac3055",
+      "action": "HASH_VALIDATE_AND_PRIVATELY_INTAKE_EVIDENCE_RECOVERY_PACKAGE",
+      "expected_result_path": "orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json",
+      "result_hash": "B11EE0EBCED34870CEE92E48AAB49C752F95F1B7BB83303136CF666D4AEE8EDA",
+      "hard_requirements": [
+        "commit_only_hashes_counts_status_and_public_audit_evidence",
+        "do_not_commit_private_paths_or_package_contents",
+        "do_not_promote_proposed_sources_geometry_or_rules_during_intake",
+        "no_customer_pdf_dxf_dwg_generation",
+        "do_not_declare_production_approved"
+      ]
+    },
+    {
+      "task_id": "SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304",
+      "stage_id": "SOURCE_RICH_REQUALIFICATION_PHASE1",
+      "role": "source_qualification_worker",
+      "status": "READY_TO_START",
+      "agent_id": "COORDINATOR_OR_INDEPENDENT_WORKER",
+      "starting_commit": "277245418be4e5ff50b3fb23caa7793333ac3055",
+      "action": "RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304",
+      "expected_result_path": "reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.json",
+      "hard_requirements": [
+        "preserve_1110101_no_fact_transfer",
+        "verify_identity_revision_chronology_and_no_completed_reference_derivation",
+        "permit_component_to_panel_allocation_facts_only_if_all_gates_pass",
+        "commit_only_neutral_hash_count_status_evidence",
+        "no_completed_reference_or_post_design_dependency",
+        "no_customer_pdf_dxf_dwg_generation",
+        "do_not_declare_production_approved"
+      ]
     }
   ]
 }

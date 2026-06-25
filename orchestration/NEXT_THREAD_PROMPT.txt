@@ -19,26 +19,26 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`T2_SAFE_UNRESOLVED_TERMINAL_CANDIDATE_REVIEW_RECORDED`
+`ADDITIONAL_EVIDENCE_PACKAGE_INTAKE_IN_PROGRESS`
 
 Active goal:
 
 `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`
 
-Terminal-candidate evidence:
+Package intake evidence:
 
-- T2 safe-unresolved terminal-candidate review: `orchestration\master\blocked-audits\SMV1-T2-SAFE-UNRESOLVED-TERMINAL-CANDIDATE-REVIEW.json`.
-- Terminal-candidate review report JSON: `reports\sheetmetal-v1\t2-recalibration\terminal-candidate-review\t2_safe_unresolved_terminal_candidate_review.json`.
-- Terminal-candidate review report: `reports\sheetmetal-v1\t2-recalibration\terminal-candidate-review\t2_safe_unresolved_terminal_candidate_review.md`.
-- Accepted T2 independent audit child result: `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.json`.
-- Accepted T2 independent audit report: `reports/sheetmetal-v1/t2-recalibration/independent-audit/t2_topology_sizing_placement_independent_audit.json`.
+- Package id: `SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25`.
+- Neutral intake summary: `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json`.
+- Intake child result: `orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json`.
 
 Boundary:
 
-The T2 independent audit was accepted only as safe unresolved. It does not promote the canonical model, renderer, private-preview readiness, customer drawing generation, or production approval. T1A and T1B remain safe unresolved. T1C rule artifacts remain proposal-only unless later accepted evidence explicitly changes that boundary under signed authority and independent audit.
+The package is authorized only for development, evaluation, and `READY_FOR_PRIVATE_PREVIEW` calibration. It does not authorize production approval, fabrication release, removing mandatory human CAD review, completed-reference or post-design leakage, unsupported engineering facts, public transmission of private project context, or automatic promotion of proposed sources, geometry entries, or rules.
+
+Preserve `1110101` as the accepted component-register and graph calibration case. Open a parallel source-rich requalification path for preferred candidate `1140304`. Never transfer source-rich assignments, dimensions, or source facts into `1110101`.
 
 Exact next action:
 
-`WAIT_FOR_ADDITIONAL_APPROVED_SOURCE_OR_RULE_EVIDENCE`
+`RUN_PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304`
 
-Do not mutate source roots or `.private`, do not transmit private project data, do not generate customer drawings, and never declare production approval. Resume only if additional approved panel allocation source evidence, real component geometry authority or approved generic envelope rules, or independently accepted T1C rule-promotion evidence is provided and routed through proposal/test-first plus independent-audit gates.
+Run Phase 1 panel-allocation source qualification from the local ignored package intake. Accept only hash-bound, parseable, privacy-clean artifacts. Commit only neutral hashes, counts, statuses, tests, and audit results. Do not mutate source roots, do not commit package contents or private intake paths, do not transmit private project data, do not generate customer drawings, and never declare production approval.
