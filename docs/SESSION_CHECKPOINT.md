@@ -594,6 +594,28 @@ T1 authorized recovery lanes queued:
 
 Exact next action:
 
-Monitor `MONITOR_T1A_T1B_T1C_AUTHORIZED_RECOVERY_THREADS`, reconcile concrete
-thread IDs or child results when available, then integrate only schema-valid
-hashed outputs and run the required independent audit before T2.
+T1 authorized recovery coordinator adjudication:
+
+- `SMV1-T1A-PANEL-ALLOCATION-RECOVERY` completed in thread
+  `019efcc8-cc1f-7660-8e82-c1b52e9e5736` with final status
+  `SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE`.
+- `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY` completed in thread
+  `019efcc8-e982-7d92-82e8-26d260557a53` with final status
+  `SAFE_UNRESOLVED_GEOMETRY_REQUIRES_MORE_AUTHORITY_OR_DATA`.
+- `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY` completed in thread
+  `019efcc9-1270-7643-99cd-5ede7bea95ae` with worker status
+  `RECOVERABLE_BLOCKER`; coordinator validation did not reproduce the stale
+  hash gates on `main`.
+- Coordinator validation: full tests `PASS`; signed authority decision
+  validator `PASS`; child result required fields and non-self output hashes
+  `PASS`; worktrees clean.
+- Adjudication:
+  `orchestration/master/adjudications/SMV1-T1-AUTHORIZED-RECOVERY-COORDINATOR-ADJUDICATION.json`.
+- No customer drawing, PDF, DXF, or DWG was generated. No production approval
+  was declared. No source root or `.private` artifact was mutated.
+
+Exact next action:
+
+Run `RUN_T1_AUTHORIZED_RECOVERY_INTEGRATION` from the adjudicated child
+results, rerun full tests and relevant scoped freezes, then dispatch the
+required independent audit before T2 or model promotion.

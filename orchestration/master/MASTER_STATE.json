@@ -2,11 +2,15 @@
   "schema_version": "master-autopilot-v1",
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "checkpoint_start_head": "c526a6f3ccd5e4deb80752de220c9a820c1c4916",
-  "current_head": "5b8dbebc64ab93289f2a5fe709c12751537a8847",
-  "current_canonical_status": "T1_AUTHORIZED_RECOVERY_WORKTREES_REQUEUED",
+  "current_head": "d1dd9f64259eabc6a64567a45c650b2adaf7584e",
+  "current_canonical_status": "T1_AUTHORIZED_RECOVERY_CHILD_RESULTS_ADJUDICATED_INTEGRATION_READY",
   "current_stage": "T1_AUTHORIZED_RECOVERY",
-  "next_action": "MONITOR_T1A_T1B_T1C_AUTHORIZED_RECOVERY_THREADS",
-  "active_thread_ids": [],
+  "next_action": "RUN_T1_AUTHORIZED_RECOVERY_INTEGRATION",
+  "active_thread_ids": [
+    "019efcc8-cc1f-7660-8e82-c1b52e9e5736",
+    "019efcc8-e982-7d92-82e8-26d260557a53",
+    "019efcc9-1270-7643-99cd-5ede7bea95ae"
+  ],
   "task_ids": [
     "SMV1-T0-INDEPENDENT-TOPOLOGY-AUDIT",
     "SMV1-T1-PANEL-ASSIGNMENT-RECOVERY",
@@ -69,7 +73,7 @@
     "T1B authorized component geometry recovery child result",
     "T1C authorized topology sizing rule recovery child result"
   ],
-  "last_heartbeat": "2026-06-25T11:18:23.2396526+08:00",
+  "last_heartbeat": "2026-06-25T12:00:51.1540000+08:00",
   "retries": {},
   "blockers": [],
   "audit_state": {
@@ -90,10 +94,15 @@
     "signed_authority_decision_submission_processor": "SIGNED_AUTHORITY_DECISION_SUBMISSION_PROCESSOR_READY_FAIL_CLOSED",
     "signed_authority_decision_blocked_audit": "BLOCKED_WAITING_FOR_SIGNED_HUMAN_SOURCE_RULE_AUTHORITY_DECISION",
     "signed_human_authority_decision": "SIGNED_AUTHORITY_DECISION_VALIDATED_INTAKE_READY",
-    "T1_authorized_recovery": "WORKTREES_PENDING"
+    "T1_authorized_recovery": "CHILD_RESULTS_ADJUDICATED_INTEGRATION_READY",
+    "T1_authorized_recovery_coordinator_adjudication": "PASS_STALE_HASH_GATES_NOT_REPRODUCED_ON_MAIN"
   },
   "merge_state": {
-    "pending_child_commits": [],
+    "pending_child_commits": [
+      "1e40f81b512978f9e5f31feb49d9ad7bed4be5cd",
+      "f2b69e4cbb0c5fa01b19f6d8725394b7dbf42e05",
+      "8ffdd4fbd8a257b18a480eaa2a851e24390b2d1d"
+    ],
     "accepted_child_commits": [
       "a08d9a847fb76345e8a0c260905f7aa65e20ee33",
       "c02656fbd179bf2e9a7aac7a882b505d443ac82b",
@@ -112,7 +121,7 @@
       "c27e35970659f4e6252807ff9063fd00bc09ff4c",
       "f27eb72e0270a8b89d75d9ace1287b56739c6e75"
     ],
-    "last_merge_result": "SIGNED_AUTHORITY_DECISION_ACCEPTED_T1_AUTHORIZED_RECOVERY_QUEUED"
+    "last_merge_result": "T1_AUTHORIZED_RECOVERY_CHILD_RESULTS_ADJUDICATED_INTEGRATION_READY"
   },
   "pending_worktrees": [
     {
@@ -154,25 +163,32 @@
       "task_id": "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
       "pending_worktree_id": "local:4d54348d-e6ef-46c5-b8a7-f1daf3df1732",
       "requested_at": "2026-06-25T11:18:23.2396526+08:00",
-      "thread_id": null,
-      "status": "WORKTREE_PENDING",
-      "branch_name": "smv1-t1a-panel-allocation-recovery"
+      "thread_id": "019efcc8-cc1f-7660-8e82-c1b52e9e5736",
+      "status": "CHILD_RESULT_ADJUDICATED_READY_FOR_INTEGRATION",
+      "branch_name": "smv1-t1a-panel-allocation-recovery",
+      "worktree_head": "1e40f81b512978f9e5f31feb49d9ad7bed4be5cd",
+      "child_result_hash": "9EA1C9D808D2A77341FE923CB4EC5117FBD70CF0A72418A13DB4D46F63E6A43C"
     },
     {
       "task_id": "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
       "pending_worktree_id": "local:05e9923c-fa55-4899-a85a-9a21cfe9d508",
       "requested_at": "2026-06-25T11:18:23.2396526+08:00",
-      "thread_id": null,
-      "status": "WORKTREE_PENDING",
-      "branch_name": "smv1-t1b-component-geometry-recovery"
+      "thread_id": "019efcc8-e982-7d92-82e8-26d260557a53",
+      "status": "CHILD_RESULT_ADJUDICATED_READY_FOR_INTEGRATION",
+      "branch_name": "smv1-t1b-component-geometry-recovery",
+      "worktree_head": "f2b69e4cbb0c5fa01b19f6d8725394b7dbf42e05",
+      "child_result_hash": "602FCFFDA935182425FFEC995900DBAAC05B285322E12574F054268DA5057368"
     },
     {
       "task_id": "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
       "pending_worktree_id": "local:15401954-4eed-43da-9544-e517d1ddecc5",
       "requested_at": "2026-06-25T11:18:23.2396526+08:00",
-      "thread_id": null,
-      "status": "WORKTREE_PENDING",
-      "branch_name": "smv1-t1c-topology-sizing-rule-recovery"
+      "thread_id": "019efcc9-1270-7643-99cd-5ede7bea95ae",
+      "status": "CHILD_RESULT_ADJUDICATED_READY_FOR_INTEGRATION",
+      "branch_name": "smv1-t1c-topology-sizing-rule-recovery",
+      "worktree_head": "8ffdd4fbd8a257b18a480eaa2a851e24390b2d1d",
+      "child_result_hash": "E15B23A102ACB7061A3334A584F49EB48FF5076189701FE5011115FA9C90E4BE",
+      "coordinator_adjudication": "STALE_HASH_GATES_NOT_REPRODUCED_ON_MAIN"
     }
   ],
   "heartbeat_automation": {
@@ -216,7 +232,7 @@
     "accepted_hard_constraint_violations": 0,
     "signed_authority_decision_validation": "PASS",
     "signed_authority_decision_next_gate": "ADD_REGRESSION_TESTS_BEFORE_ACCEPTED_AUTHORITY_LANE_FIX",
-    "authorized_recovery_threads": "T1A/T1B/T1C worktrees pending"
+    "authorized_recovery_threads": "T1A/T1B/T1C child results adjudicated integration-ready"
   },
   "untracked_file_policy": {
     "permitted_pre_existing_untracked": [

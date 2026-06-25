@@ -19,7 +19,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`SIGNED_AUTHORITY_DECISION_ACCEPTED_T1_AUTHORIZED_RECOVERY_QUEUED`
+`T1_AUTHORIZED_RECOVERY_CHILD_RESULTS_ADJUDICATED_INTEGRATION_READY`
 
 Active goal:
 
@@ -43,14 +43,28 @@ Decision evidence:
 - `reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission/submission_summary.json`
 - `orchestration/master/child-results/SMV1-SIGNED-HUMAN-SOURCE-RULE-AUTHORITY-DECISION.json`
 
-T1 authorized recovery lanes:
+T1 authorized recovery lane results:
 
 - `SMV1-T1A-PANEL-ALLOCATION-RECOVERY`
-  pending worktree `local:4d54348d-e6ef-46c5-b8a7-f1daf3df1732`.
+  thread `019efcc8-cc1f-7660-8e82-c1b52e9e5736`; final status
+  `SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE`.
 - `SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY`
-  pending worktree `local:05e9923c-fa55-4899-a85a-9a21cfe9d508`.
+  thread `019efcc8-e982-7d92-82e8-26d260557a53`; final status
+  `SAFE_UNRESOLVED_GEOMETRY_REQUIRES_MORE_AUTHORITY_OR_DATA`.
 - `SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY`
-  pending worktree `local:15401954-4eed-43da-9544-e517d1ddecc5`.
+  thread `019efcc9-1270-7643-99cd-5ede7bea95ae`; worker status
+  `RECOVERABLE_BLOCKER`; coordinator validation did not reproduce the stale
+  hash gates on `main`.
+
+Coordinator adjudication:
+
+- Full tests: `PASS`.
+- Signed authority decision validator: `PASS`.
+- Child results: JSON-parseable, required-field-complete, non-self hashes
+  verified.
+- Worktrees: clean.
+- Adjudication artifact:
+  `orchestration/master/adjudications/SMV1-T1-AUTHORIZED-RECOVERY-COORDINATOR-ADJUDICATION.json`.
 
 Worktree setup correction:
 
@@ -81,10 +95,8 @@ Hard boundaries:
 
 Exact next action:
 
-`MONITOR_T1A_T1B_T1C_AUTHORIZED_RECOVERY_THREADS`
+`RUN_T1_AUTHORIZED_RECOVERY_INTEGRATION`
 
-Reconcile concrete thread IDs or child results when available. Accept only
-schema-valid, hashed, privacy-clean child results. After all three recovery
-lanes have accepted results or safe unresolved blockers, run T1 integration
-from the frozen accepted commits, then dispatch an independent auditor who did
-not implement the recovery work.
+Integrate the adjudicated T1A/T1B/T1C recovery results from the frozen child
+commits, rerun full tests and relevant scoped freezes, and then dispatch an
+independent auditor who did not implement the recovery work.

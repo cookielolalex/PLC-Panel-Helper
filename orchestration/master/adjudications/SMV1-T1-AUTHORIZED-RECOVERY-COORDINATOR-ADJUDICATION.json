@@ -1,0 +1,77 @@
+{
+  "schema_version": "master-autopilot-coordinator-adjudication-v1",
+  "task_id": "SMV1-T1-AUTHORIZED-RECOVERY-COORDINATOR-ADJUDICATION",
+  "adjudicated_at": "2026-06-25T12:00:51.1540000+08:00",
+  "coordinator_head": "d1dd9f64259eabc6a64567a45c650b2adaf7584e",
+  "source_stage": "T1_AUTHORIZED_RECOVERY",
+  "privacy_status": "NOT_APPROVED",
+  "child_result_checks": [
+    {
+      "task_id": "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
+      "thread_id": "019efcc8-cc1f-7660-8e82-c1b52e9e5736",
+      "worktree": "C:/Users/alex1/.codex/worktrees/de25/PLC Panels Generation Helper",
+      "worktree_head": "1e40f81b512978f9e5f31feb49d9ad7bed4be5cd",
+      "child_result_hash": "9EA1C9D808D2A77341FE923CB4EC5117FBD70CF0A72418A13DB4D46F63E6A43C",
+      "exact_final_status": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+      "json_parse": "PASS",
+      "required_fields": "PASS",
+      "non_self_output_hashes": "PASS",
+      "worktree_clean": true,
+      "coordinator_disposition": "ACCEPT_FOR_INTEGRATION_AS_SAFE_UNRESOLVED"
+    },
+    {
+      "task_id": "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
+      "thread_id": "019efcc8-e982-7d92-82e8-26d260557a53",
+      "worktree": "C:/Users/alex1/.codex/worktrees/cbf7/PLC Panels Generation Helper",
+      "worktree_head": "f2b69e4cbb0c5fa01b19f6d8725394b7dbf42e05",
+      "child_result_hash": "602FCFFDA935182425FFEC995900DBAAC05B285322E12574F054268DA5057368",
+      "exact_final_status": "SAFE_UNRESOLVED_GEOMETRY_REQUIRES_MORE_AUTHORITY_OR_DATA",
+      "json_parse": "PASS",
+      "required_fields": "PASS",
+      "non_self_output_hashes": "PASS",
+      "worktree_clean": true,
+      "coordinator_disposition": "ACCEPT_FOR_INTEGRATION_AS_SAFE_UNRESOLVED_WITH_AUDIT_REQUIRED"
+    },
+    {
+      "task_id": "SMV1-T1C-TOPOLOGY-SIZING-RULE-RECOVERY",
+      "thread_id": "019efcc9-1270-7643-99cd-5ede7bea95ae",
+      "worktree": "C:/Users/alex1/.codex/worktrees/6640/PLC Panels Generation Helper",
+      "worktree_head": "8ffdd4fbd8a257b18a480eaa2a851e24390b2d1d",
+      "child_result_hash": "E15B23A102ACB7061A3334A584F49EB48FF5076189701FE5011115FA9C90E4BE",
+      "exact_final_status": "RECOVERABLE_BLOCKER",
+      "json_parse": "PASS",
+      "required_fields": "PASS",
+      "non_self_output_hashes": "PASS",
+      "worktree_clean": true,
+      "worker_reported_blocker": "STALE_HASH_GATES",
+      "coordinator_adjudication": "STALE_HASH_GATES_NOT_REPRODUCED_ON_MAIN",
+      "coordinator_disposition": "ACCEPT_FOR_INTEGRATION_AS_PROPOSAL_ONLY_WITH_INDEPENDENT_AUDIT_REQUIRED"
+    }
+  ],
+  "coordinator_validation": {
+    "full_test_runner": {
+      "command": "python scripts/run_tests.py",
+      "status": "PASS"
+    },
+    "signed_authority_decision_validator": {
+      "command": "python scripts/validate_signed_authority_decision.py --decision reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision.json",
+      "status": "PASS"
+    },
+    "child_result_required_fields": "PASS",
+    "child_result_non_self_output_hashes": "PASS",
+    "worktree_statuses": "PASS_CLEAN",
+    "source_root_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false
+  },
+  "coverage_disposition": {
+    "panel_assignment": "SAFE_UNRESOLVED_NOT_CAPABILITY_SUCCESS",
+    "component_geometry": "SAFE_UNRESOLVED_NOT_REAL_PROJECT_CAPABILITY_SUCCESS",
+    "topology_sizing_rules": "PROPOSAL_ONLY_NOT_MODEL_PROMOTION",
+    "requires_integration": true,
+    "requires_independent_audit_before_promotion": true
+  },
+  "exact_final_status": "T1_AUTHORIZED_RECOVERY_CHILD_RESULTS_ADJUDICATED_INTEGRATION_READY",
+  "exact_next_action": "RUN_T1_AUTHORIZED_RECOVERY_INTEGRATION"
+}
