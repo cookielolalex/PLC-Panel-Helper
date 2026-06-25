@@ -65,6 +65,20 @@
       "autonomous_recovery_available": true,
       "next_action": "RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION",
       "required_external_input": null
+    },
+    {
+      "ts": "2026-06-25T13:52:22.8270000+08:00",
+      "stage": "T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION",
+      "status": "T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED",
+      "blocker_class": "SAFE_UNRESOLVED_SOURCE_LIMITED_COVERAGE",
+      "result": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json",
+      "result_hash": "0E79FBA1945001473E74639CEFF9D13BBB1C516CC2FC24923BFA241D311283E0",
+      "t1a": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+      "t1b": "SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_0_OF_53_SYNTHETIC_ONLY",
+      "t1c": "PROPOSAL_ONLY_NOT_PROMOTED",
+      "autonomous_recovery_available": true,
+      "next_action": "DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT",
+      "required_external_input": null
     }
   ],
   "blocker_classes": [

@@ -77,9 +77,12 @@
     {
       "id": "T2",
       "name": "TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION",
-      "status": "READY_TO_START",
+      "status": "RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED",
       "input_evidence": "orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json",
-      "required_boundary": "T1C_PROPOSAL_ONLY_NOT_PROMOTED"
+      "required_boundary": "T1C_PROPOSAL_ONLY_NOT_PROMOTED",
+      "evidence": "orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json",
+      "next_action": "DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT",
+      "t1c_rule_artifacts": "PROPOSAL_ONLY_NOT_PROMOTED"
     },
     {
       "id": "T3",

@@ -19,7 +19,7 @@ Read the canonical checkpoint files first:
 
 Current status:
 
-`T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_PASS_T2_READY`
+`T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED`
 
 Active goal:
 
@@ -78,10 +78,19 @@ Hard boundaries:
 
 Exact next action:
 
-`RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION`
+`DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT`
 
 Run the T2 topology/sizing/placement recalibration from the accepted audit
 boundary. Preserve T1A/T1B as safe unresolved, keep T1C rule artifacts
 proposal-only unless a later independent audit explicitly accepts promotion
 under signed authority, rerun full tests and scoped freezes, and do not
 generate customer drawings or declare production approval.
+
+T2 recalibration evidence:
+
+- T2 child result: `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json`.
+- T2 summary: `reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json`.
+- T2 audit brief: `orchestration/tasks/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.md`.
+- T2 audit visible-file manifest: `orchestration/input_manifests/sheetmetal-v1/t2-recalibration/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT.visible_files.json`.
+
+Dispatch an independent auditor before model promotion or renderer work. Keep T1C proposal-only unless that audit explicitly accepts promotion under signed authority.

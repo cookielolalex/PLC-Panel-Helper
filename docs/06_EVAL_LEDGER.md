@@ -1322,3 +1322,11 @@ Evidence:
 `reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.md`,
 and
 `orchestration/master/child-results/SMV1-T1-AUTHORIZED-RECOVERY-INDEPENDENT-AUDIT.json`.
+
+## sheetmetal-v1 T2 topology/sizing/placement recalibration gate
+
+Status: `T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED`.
+
+Decision: `D-0051`.
+
+The accepted T1 audit produced no promotable T2 input. T1A and T1B remain safe unresolved, T1C rule artifacts remain proposal-only, and coverage remains assignment `0/53`, real-project geometry `0/53`, sizing with zero source-supported denominator, and placement `0/53`. No private generator rerun was performed because this heartbeat forbids `.private` mutation. Full tests and legacy, active sheetmetal-v1, and topology-stage scoped freezes pass. Evidence: `reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json`, `reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.md`, and `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json`.

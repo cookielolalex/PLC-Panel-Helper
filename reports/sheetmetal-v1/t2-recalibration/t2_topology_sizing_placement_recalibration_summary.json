@@ -1,0 +1,114 @@
+{
+  "schema_version": "sheetmetal-v1.t2_topology_sizing_placement_recalibration_summary.v1",
+  "task_id": "SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION",
+  "created_at": "2026-06-25T13:52:22.8270000+08:00",
+  "starting_commit": "d5d8f69f71a97229ea004e4eea974cf529601800",
+  "ending_commit": "d5d8f69f71a97229ea004e4eea974cf529601800",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "project_id": "1110101",
+  "recalibration_mode": "COMMITTED_EVIDENCE_GATE_NO_PRIVATE_RERUN_DUE_HEARTBEAT_PRIVATE_MUTATION_BOUNDARY",
+  "recalibration_inputs": {
+    "accepted_t1_authorized_recovery_audit": {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/independent-audit/t1_authorized_recovery_independent_audit.json",
+      "sha256": "18B4D90599ED65A5B7A12B487C33C104C928ABB52544CBC0B7C2B639D80CD8D1",
+      "status": "PASS_T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_SAFE_UNRESOLVED_PROPOSAL_ONLY"
+    },
+    "integration_summary": {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/integration/t1_authorized_recovery_integration_summary.json",
+      "sha256": "A002199927817FF950EB7784C2D1F4067D2462CE4E15F2930CBD757D9A98B221",
+      "t2_recalibration_started_before_this_gate": false
+    },
+    "frozen_topology_implementation_checkpoint": {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/implementation_checkpoint.json",
+      "sha256": "1922468A0958AB755930E46BD24C3418647B796826F695E78FD70F263E295B4B",
+      "status": "ONE_PROJECT_TOPOLOGY_SIZING_PLACEMENT_FROZEN_AUDIT_PENDING"
+    },
+    "frozen_topology_generator_freeze": {
+      "path": "reports/sheetmetal-v1/one-project-topology-calibration/1110101/generator_freeze_summary.json",
+      "sha256": "EB86997E083FF2D4B12C17E760F08B67D25A08329653D032E5A910B0663E2F3D",
+      "status": "PASS_CANONICAL_JSON_AND_BYTE_IDENTICAL"
+    }
+  },
+  "t1_authorized_recovery_adjudication_for_t2": {
+    "t1a_panel_assignment": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+    "t1b_component_geometry": "SAFE_UNRESOLVED_REAL_PROJECT_GEOMETRY_REMAINS_0_OF_53_SYNTHETIC_ONLY",
+    "t1c_topology_sizing_rules": "PROPOSAL_ONLY_NOT_PROMOTED",
+    "promotable_t2_inputs_from_t1": 0,
+    "private_generator_rerun_performed": false,
+    "private_generator_rerun_reason_not_performed": "heartbeat forbids .private mutation and accepted T1 audit provides no promotable T2 input"
+  },
+  "coverage": {
+    "assignment": {
+      "numerator": 0,
+      "denominator": 53
+    },
+    "geometry": {
+      "verified_or_generic": 0,
+      "denominator": 53
+    },
+    "sizing": {
+      "supported_dimensions": 0,
+      "denominator": 0,
+      "note": "not reported as recall for zero source-supported denominator"
+    },
+    "placement": {
+      "numerator": 0,
+      "denominator": 53
+    }
+  },
+  "determinism": {
+    "artifact_count": 12,
+    "byte_identical_count": 12,
+    "canonical_json_match_count": 12,
+    "excluded_fields": []
+  },
+  "hard_gates": {
+    "unsupported_critical_dimensions": 0,
+    "unsupported_panel_assignments": 0,
+    "unsupported_placements": 0,
+    "accepted_overlap_violations": 0,
+    "containment_violations": 0,
+    "clearance_violations": 0,
+    "quantity_stage_overwrite_violations": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "tracked_private_artifacts": 0,
+    "customer_drawing_generation_count": 0,
+    "source_root_mutation_count": 0,
+    "private_workspace_mutation_count": 0,
+    "private_external_transmissions": 0,
+    "production_approval_declared": false,
+    "t1c_rule_artifacts_promoted": false,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "forbidden_screening_script_read_staged_executed_or_modified": false
+  },
+  "validation": {
+    "json_parseable": "PASS",
+    "required_fields": "PASS",
+    "privacy_clean_committed_outputs": "PASS",
+    "private_paths_committed": false,
+    "source_roots_mutated": false,
+    "private_workspace_mutated": false
+  },
+  "test_result": {
+    "full_test_runner": {
+      "command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/run_tests.py",
+      "status": "PASS",
+      "verified_at": "2026-06-25T13:52:22.8270000+08:00",
+      "note": "Re-run after T2 recalibration gate artifacts were written; final JSON status PASS."
+    }
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": "PASS",
+    "sheetmetal_v1_active": "PASS",
+    "sheetmetal_v1_topology_sizing_placement": "PASS"
+  },
+  "exact_final_status": "T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED",
+  "exact_recommended_next_action": "DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT",
+  "blocker_taxonomy": [
+    "SOURCE_LIMITED_PANEL_ASSIGNMENT_UNAVAILABLE",
+    "COMPONENT_GEOMETRY_MISSING",
+    "T1C_RULE_ARTIFACTS_PROPOSAL_ONLY_NOT_PROMOTED"
+  ]
+}

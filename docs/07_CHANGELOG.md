@@ -519,3 +519,7 @@
 - Preserved hard gates: no source-root mutation, no `.private` mutation, no
   private external transmission, no customer PDF/DXF/DWG generation, and no
   production approval.
+
+- Recorded T2 topology/sizing/placement recalibration gate as `T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED`.
+- Confirmed the accepted T1 audit did not promote T1C rules or any new T2 generator input.
+- Queued `SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-INDEPENDENT-AUDIT` before any model promotion, renderer work, customer drawing generation, or readiness promotion.

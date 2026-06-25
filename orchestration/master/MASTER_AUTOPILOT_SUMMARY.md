@@ -256,3 +256,11 @@ T1 authorized recovery independent audit:
   PDF, DXF, or DWG was changed or generated.
 - No production approval was declared.
 - Next action: `RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION`.
+
+T2 topology/sizing/placement recalibration gate:
+
+- Status: `T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED`.
+- T1A/T1B remain safe unresolved; T1C remains proposal-only and not promoted.
+- No private generator rerun was performed under the heartbeat `.private` mutation boundary.
+- Full tests and relevant scoped freezes pass.
+- Next action: `DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT`.

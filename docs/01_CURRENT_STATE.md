@@ -1,12 +1,12 @@
 # Current State
 
-Current phase: T1 authorized recovery independently audited; T2 recalibration ready.
+Current phase: T2 topology/sizing/placement recalibration safe unresolved; independent audit required.
 
 Accepted release: none.
 
 Current candidate: `1110101`.
 
-Current status: `T1_AUTHORIZED_RECOVERY_INDEPENDENT_AUDIT_PASS_T2_READY`.
+Current status: `T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION_SAFE_UNRESOLVED_AUDIT_REQUIRED`.
 
 Active goal: `SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1`.
 
@@ -554,3 +554,8 @@ No source root, `.private` artifact, completed reference, customer drawing,
 PDF, DXF, or DWG was changed or generated; no production approval was declared.
 
 Exact next action: `RUN_T2_TOPOLOGY_SIZING_PLACEMENT_RECALIBRATION`.
+
+
+T2 topology/sizing/placement recalibration gate after `D-0051`: the accepted T1 authorized recovery audit produced no promotable T2 input. T1A and T1B remain safe unresolved, and T1C rule artifacts remain proposal-only and not promoted into the canonical model, renderer, frozen generator, or T2 private inputs. No private generator rerun was performed because this heartbeat forbids `.private` mutation. Coverage remains assignment `0/53`, real-project geometry `0/53`, sizing with zero source-supported denominator, and placement `0/53`. No source root, `.private` artifact, completed reference, customer drawing, PDF, DXF, or DWG was changed or generated; no production approval was declared. Evidence is recorded in `reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.json`, `reports/sheetmetal-v1/t2-recalibration/t2_topology_sizing_placement_recalibration_summary.md`, and `orchestration/master/child-results/SMV1-T2-TOPOLOGY-SIZING-PLACEMENT-RECALIBRATION.json`.
+
+Exact next action: `DISPATCH_T2_TOPOLOGY_SIZING_PLACEMENT_INDEPENDENT_AUDIT`.
