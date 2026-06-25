@@ -1,0 +1,127 @@
+{
+  "schema_version": "sheetmetal-v1.t1a_panel_allocation_recovery_report.v1",
+  "task_id": "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
+  "project_id": "1110101",
+  "created_at": "2026-06-25T00:00:00+08:00",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "authority_scope": {
+    "signed_decision_id": "SMV1-SIGNED-AUTHORITY-D-0047",
+    "applied_choice_ids": [
+      "A"
+    ],
+    "excluded_choice_ids_for_this_task": [
+      "B",
+      "C",
+      "D"
+    ],
+    "choice_a_label": "AUTHORIZE_PANEL_ALLOCATION_SOURCE_REVIEW",
+    "implementation_boundary": "bounded local review only; no canonical source approval, no source-root mutation, no customer drawing generation"
+  },
+  "privacy_and_forbidden_actions": {
+    "privacy_approval": "NOT_APPROVED",
+    "external_private_transmissions": 0,
+    "public_web_used": false,
+    "completed_reference_opened": false,
+    "post_design_label_used": false,
+    "source_root_mutation_count": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false,
+    "committed_private_source_values": 0
+  },
+  "input_authority_hashes": {
+    "docs/specs/MASTER_AUTOPILOT_PROTOCOL.md": "F3D8AB60348588027BD3B4D382D40834A3065DB0D7BADBEB754665A5B278A909",
+    "docs/specs/SOURCE_FACT_AUTHORITY_MATRIX.md": "ED44A95922C3097716D7D5F207C06AABEA2EA374385F52F96C34948D103AA52E",
+    "docs/specs/SOURCE_ROLE_AND_CHRONOLOGY_POLICY.md": "32A1B01C53C136A39C8D46EED76BE8B7440E379D3B54D6C7B58FF26C2715A8EA",
+    "docs/PRIVACY_APPROVAL.md": "183506DB03E8B17D29BBB3604BBD649BACEE5274C1B23AFCABC1B28EF19386CE",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision.json": "517CFD540DFB4A25E5CB19EE41C71DDA18B7869FE7EDEB068995B5F674BEF072",
+    "reports/sheetmetal-v1/source-rule-approval/smv1_signed_authority_decision_submission/submission_summary.json": "CE9AC139B26FA0EC47FE4817C6F10B673046DC96DA70BF94A73D0A64DE88D92C",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/source_role_chronology_classification.json": "565446A1E6ACC5F5A153B35650E91E7AF8C97122AC3DCCF1CA91E60709B8E473",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/approval_manifest.json": "56F69A7C09BBC7CB9F91AAB37C2824D4101BA48B119AFCE0DF281E82551A2836",
+    "manifests/sheetmetal-v1/selected_candidate/1110101/generator_bundle/bundle_manifest.json": "890069F61D4E1052AC7011D2F84A01E61E8D65F06030F6D96D377DDDD8D093ED",
+    "reports/sheetmetal-v1/one-project-model-calibration/1110101/source_fact_extraction_summary.json": "87A276C7B4AD8A99BD60896529EA4AD5BA022E08EDF822BEFFCB558F0A566E80",
+    "reports/sheetmetal-v1/one-project-model-calibration/1110101/component_register_summary.json": "FF52F039DD49B59C804C8CD6E4A0B0A5EAF844D1F8893DAFF751D787DB8670BF",
+    "reports/sheetmetal-v1/one-project-model-calibration/1110101/panel_graph_summary.json": "FD69CF4F2E3D9014EB0583521A8B1070BC91090FC06A81FC34D7EDF3F842EC28",
+    "reports/sheetmetal-v1/one-project-topology-calibration/1110101/panel_assignment_recovery_summary.json": "DA228676ADA763EFC167E7D235136751B4990C3E70C5217336D868B184AEEE79"
+  },
+  "approved_bundle_review": {
+    "review_mode": "LOCAL_ONLY_NEUTRAL_SOURCE_SIGNAL_SCAN",
+    "approved_eval_item_count": 6,
+    "approved_file_hash_count": 2,
+    "approved_source_role_classification": "PERMITTED_CURRENT_PROJECT_INPUT_ROLE",
+    "approved_chronology_classification": "CURRENT_PROJECT_PRE_OR_DURING_DESIGN_INPUT_NOT_PRODUCTION_APPROVED",
+    "completed_reference_items_in_generator_bundle": 0,
+    "post_design_allocation_labels_in_generator_bundle": 0,
+    "sanitized_csv_artifact_count": 6,
+    "sanitized_csv_rows_scanned": 131,
+    "ascii_panel_allocation_signal_cells": 0,
+    "unicode_panel_or_cabinet_signal_cells": 23,
+    "unicode_signal_artifact_ids": [
+      "SGD-419C4426214114",
+      "SGD-909B67C6D196A6",
+      "SGD-96F5B42AF2AC0D"
+    ],
+    "panel_definition_or_container_list_signal_artifact_count": 3,
+    "component_to_panel_assignment_field_signal_count": 0,
+    "component_to_panel_assignment_row_count": 0,
+    "approved_component_level_panel_allocation_source_count": 0,
+    "source_approval_changes_committed": 0,
+    "raw_source_values_persisted": false
+  },
+  "assignment_recovery": {
+    "status": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+    "before": {
+      "explicitly_assigned": 0,
+      "rule_assigned": 0,
+      "unassigned": 53,
+      "ambiguous": 0,
+      "conflicting": 0,
+      "human_review_required": 0,
+      "unsupported_assignment_count": 0,
+      "denominator": 53
+    },
+    "after": {
+      "explicitly_assigned": 0,
+      "rule_assigned": 0,
+      "unassigned": 53,
+      "ambiguous": 0,
+      "conflicting": 0,
+      "human_review_required": 0,
+      "unsupported_assignment_count": 0,
+      "denominator": 53
+    },
+    "delta": {
+      "explicitly_assigned": 0,
+      "rule_assigned": 0,
+      "unassigned": 0,
+      "unsupported_assignment_count": 0
+    },
+    "unresolved_policy": "unsupported assignments remain UNASSIGNED rather than inferred from panel/container list signals",
+    "capability_success_claimed": false
+  },
+  "regression_fixture_or_test": {
+    "new_fixture_or_test_added": false,
+    "reason": "No behavior change and no canonical source-approval change were made. Existing synthetic coverage already accepts PRE_DESIGN PANEL_ALLOCATION_SOURCE facts and rejects post-design allocation labels.",
+    "existing_tests_observed": [
+      "test_sheetmetal_v1_panel_assignment_graph_from_private_models",
+      "test_sheetmetal_v1_topology_stage_from_private_models"
+    ]
+  },
+  "hard_gates": {
+    "unsupported_panel_assignments": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_values": 0,
+    "customer_drawing_generation_count": 0,
+    "production_approval_declared": false
+  },
+  "blocker_taxonomy": [
+    "PANEL_CONTAINER_LIST_SIGNAL_NOT_COMPONENT_ASSIGNMENT_SOURCE",
+    "NO_COMPONENT_TO_PANEL_ASSIGNMENT_FIELD_IN_APPROVED_BUNDLE",
+    "NO_APPROVED_COMPONENT_LEVEL_PANEL_ALLOCATION_SOURCE",
+    "NO_CANONICAL_SOURCE_APPROVAL_CHANGE_IN_WORKER_SCOPE",
+    "UNSUPPORTED_ASSIGNMENTS_REMAIN_UNASSIGNED"
+  ],
+  "exact_recommended_next_action": "REQUEST_EXPLICIT_PRE_DESIGN_COMPONENT_TO_PANEL_ALLOCATION_SOURCE_OR_SIGNED_HUMAN_CORRECTION_BEFORE_ASSIGNMENT_RECOVERY_RETRY",
+  "exact_final_status": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE"
+}

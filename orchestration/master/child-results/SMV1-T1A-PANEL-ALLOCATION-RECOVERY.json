@@ -1,0 +1,90 @@
+{
+  "task_id": "SMV1-T1A-PANEL-ALLOCATION-RECOVERY",
+  "starting_commit": "5B8DBEBC64AB93289F2A5FE709C12751537A8847",
+  "ending_commit": "PENDING_FINAL_COMMIT_SHA",
+  "tracked_worktree_status": "PENDING_COMMIT_THEN_EXPECTED_CLEAN",
+  "test_result": {
+    "json_parse_validation": "PASS",
+    "scripts_run_tests_py": "FAIL_FROZEN_WORKFLOW_HASH_GATES_AFTER_FUNCTIONAL_TESTS_PASSED",
+    "scoped_freeze": "NOT_RUN_NO_BEHAVIOR_OR_CANONICAL_SOURCE_APPROVAL_CHANGE"
+  },
+  "workflow_freeze_results": {
+    "legacy_baseline_024": "PASS_IN_FULL_TEST_RUN",
+    "sheetmetal_v1_active": "FAIL_EXISTING_MANIFEST_HASH_MISMATCHES_IN_FULL_TEST_RUN",
+    "sheetmetal_v1_topology_sizing_placement": "FAIL_EXISTING_MANIFEST_HASH_MISMATCHES_IN_FULL_TEST_RUN"
+  },
+  "artifacts_created": [
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.json",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.md",
+    "orchestration/master/child-results/SMV1-T1A-PANEL-ALLOCATION-RECOVERY.json"
+  ],
+  "schemas_validated": [
+    {
+      "path": "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.json",
+      "method": "json_parse",
+      "status": "PASS"
+    },
+    {
+      "path": "orchestration/master/child-results/SMV1-T1A-PANEL-ALLOCATION-RECOVERY.json",
+      "method": "json_parse",
+      "status": "PASS"
+    }
+  ],
+  "hard_gates": {
+    "unsupported_panel_assignments": 0,
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_values": 0,
+    "source_root_mutation_count": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0,
+    "production_approval_declared": false
+  },
+  "coverage": {
+    "before": {
+      "explicitly_assigned": 0,
+      "rule_assigned": 0,
+      "unassigned": 53,
+      "unsupported_assignment_count": 0,
+      "denominator": 53
+    },
+    "after": {
+      "explicitly_assigned": 0,
+      "rule_assigned": 0,
+      "unassigned": 53,
+      "unsupported_assignment_count": 0,
+      "denominator": 53
+    },
+    "interpretation": "source-limited safe unresolved; not capability success"
+  },
+  "privacy_leakage_counts": {
+    "completed_reference_leakage": 0,
+    "post_design_leakage": 0,
+    "private_content_transmissions": 0,
+    "committed_private_value_count": 0,
+    "customer_pdf_dxf_dwg_generation_count": 0
+  },
+  "exact_final_status": "SAFE_UNRESOLVED_NO_APPROVED_PANEL_ALLOCATION_SOURCE",
+  "exact_recommended_next_action": "REQUEST_EXPLICIT_PRE_DESIGN_COMPONENT_TO_PANEL_ALLOCATION_SOURCE_OR_SIGNED_HUMAN_CORRECTION_BEFORE_ASSIGNMENT_RECOVERY_RETRY",
+  "blocker_taxonomy": [
+    "PANEL_CONTAINER_LIST_SIGNAL_NOT_COMPONENT_ASSIGNMENT_SOURCE",
+    "NO_COMPONENT_TO_PANEL_ASSIGNMENT_FIELD_IN_APPROVED_BUNDLE",
+    "NO_APPROVED_COMPONENT_LEVEL_PANEL_ALLOCATION_SOURCE",
+    "NO_CANONICAL_SOURCE_APPROVAL_CHANGE_IN_WORKER_SCOPE",
+    "UNSUPPORTED_ASSIGNMENTS_REMAIN_UNASSIGNED"
+  ],
+  "requested_model": "GPT-5",
+  "actual_model": "GPT-5",
+  "runtime": {
+    "mode": "local_only",
+    "privacy_approval": "NOT_APPROVED",
+    "public_web_used": false,
+    "test_command": "C:\\Users\\alex1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe scripts/run_tests.py",
+    "test_failure_summary": "Full suite failed only at active and topology frozen-workflow manifest hash gates; panel assignment, topology calibration, JSON parse, signed authority, and legacy frozen-scope tests reported PASS before the failure summary."
+  },
+  "output_hashes": {
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.json": "50F4CFDE98219F520CE8561A4C17641D25E957449107BE28EFD4E65F13B87B04",
+    "reports/sheetmetal-v1/t1-authorized-recovery/t1a-panel-allocation/panel_allocation_recovery_report.md": "91AB212D58752576C44BB94FBC1161B145529944304610FC0CA8FA05741922D6",
+    "orchestration/master/child-results/SMV1-T1A-PANEL-ALLOCATION-RECOVERY.json": "SELF_HASH_EXCLUDED_TO_AVOID_RECURSIVE_HASH"
+  }
+}
