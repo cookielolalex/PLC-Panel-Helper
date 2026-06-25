@@ -1285,6 +1285,129 @@ def test_sheetmetal_v1_component_register_from_source_facts() -> None:
     assert_true(validation["private_content_transmission_count"] == 0, "private transmission count must stay zero")
 
 
+def test_sheetmetal_v1_component_geometry_authority_states() -> None:
+    work = ROOT / "tmp" / "sheetmetal_v1_component_geometry_authority_test"
+    if work.exists():
+        shutil.rmtree(work)
+    work.mkdir(parents=True)
+    source_model_path = ROOT / "evals" / "fixtures" / "sheetmetal-v1" / "component_geometry_authority_fixture.json"
+    register_out = work / "register"
+    graph_out = work / "graph"
+    accessory_out = work / "accessory"
+    topo_out = work / "topology"
+
+    source_model = read_json(source_model_path)
+    for fact in source_model["source_facts"]:
+        errors = validate(fact, read_json(ROOT / "schemas/source_fact.schema.json"))
+        assert_true(not errors, f"source fact schema errors: {errors}")
+
+    subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--source-fact-model",
+            str(source_model_path),
+            "--output-dir",
+            str(register_out),
+            "--quiet",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    register = read_json(register_out / "component_register.json")
+    geometry_by_key = {}
+    types = {row["component_type_id"]: row for row in register["component_types"]}
+    for instance in register["component_instances"]:
+        geometry_by_key[instance["component_key"]] = types[instance["component_type_id"]].get("geometry")
+    assert_true(geometry_by_key["ROW-VERIFIED"]["status"] == "VERIFIED_MODEL_GEOMETRY", "verified geometry status must be preserved")
+    assert_true(geometry_by_key["ROW-GENERIC"]["status"] == "APPROVED_GENERIC_CONSERVATIVE_ENVELOPE", "generic envelope must not become verified geometry")
+    assert_true(geometry_by_key["ROW-MISSING"] is None, "missing geometry must not be invented")
+    for geometry in [row for row in geometry_by_key.values() if row]:
+        errors = validate(geometry, read_json(ROOT / "schemas/component_geometry.schema.json"))
+        assert_true(not errors, f"component geometry schema errors: {errors}")
+
+    subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--source-fact-model",
+            str(source_model_path),
+            "--component-register",
+            str(register_out / "component_register.json"),
+            "--output-dir",
+            str(graph_out),
+            "--quiet",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--source-fact-model",
+            str(source_model_path),
+            "--component-register",
+            str(register_out / "component_register.json"),
+            "--panel-graph",
+            str(graph_out / "panel_graph.json"),
+            "--output-dir",
+            str(accessory_out),
+            "--quiet",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--topology-calibration",
+            "--source-fact-model",
+            str(source_model_path),
+            "--component-register",
+            str(register_out / "component_register.json"),
+            "--panel-assignment",
+            str(graph_out / "panel_assignment.json"),
+            "--panel-graph",
+            str(graph_out / "panel_graph.json"),
+            "--accessory-requirements",
+            str(accessory_out / "accessory_requirements.json"),
+            "--output-dir",
+            str(topo_out),
+            "--quiet",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    sizing = read_json(topo_out / "sizing_candidates.json")
+    assert_true(sizing["geometry_status_counts"]["VERIFIED_MODEL_GEOMETRY"] == 1, "one synthetic component should have verified model geometry")
+    assert_true(sizing["geometry_status_counts"]["APPROVED_GENERIC_CONSERVATIVE_ENVELOPE"] == 1, "one synthetic component should have approved generic geometry")
+    assert_true(sizing["geometry_status_counts"]["GEOMETRY_MISSING"] == 1, "one synthetic component should remain geometry missing")
+    placement = read_json(topo_out / "placement_plan.json")
+    placement_statuses = {row["geometry_status"] for row in placement["placements"]}
+    assert_true(placement_statuses == {"VERIFIED_MODEL_GEOMETRY", "APPROVED_GENERIC_CONSERVATIVE_ENVELOPE"}, "only supported geometry states should be placed")
+    unplaced = read_json(topo_out / "unplaced_component_register.json")
+    assert_true(unplaced["reason_counts"]["GEOMETRY_MISSING"] == 1, "missing geometry must stay unplaced")
+    validation = read_json(topo_out / "validation_report.json")
+    assert_true(validation["status"] == "PASS_WITH_SAFE_UNRESOLVED", "topology validation must preserve safe unresolved missing geometry")
+    assert_true(not validation["failures"], "safe unresolved geometry fixture must not create validation failures")
+    assert_true(validation["unsupported_critical_dimensions"] == 0, "synthetic geometry fixture must not create unsupported critical dimensions")
+    assert_true(validation["completed_reference_leakage"] == 0, "completed-reference leakage must remain zero")
+    assert_true(validation["post_design_leakage"] == 0, "post-design leakage must remain zero")
+    assert_true(validation["customer_drawing_generation_count"] == 0, "geometry authority test must not generate drawings")
+    for path in topo_out.iterdir():
+        assert_true(path.suffix.lower() not in {".pdf", ".dxf", ".dwg"}, "no drawing artifact may be generated")
+
+
 def test_sheetmetal_v1_panel_assignment_graph_from_private_models() -> None:
     work = ROOT / "tmp" / "sheetmetal_v1_panel_assignment_graph_test"
     if work.exists():
@@ -1851,6 +1974,7 @@ def main() -> None:
         test_sheetmetal_v1_private_workspace_boundary,
         test_sheetmetal_v1_source_fact_extractor,
         test_sheetmetal_v1_component_register_from_source_facts,
+        test_sheetmetal_v1_component_geometry_authority_states,
         test_sheetmetal_v1_panel_assignment_graph_from_private_models,
         test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models,
         test_sheetmetal_v1_topology_sizing_placement_calibration_private_models,

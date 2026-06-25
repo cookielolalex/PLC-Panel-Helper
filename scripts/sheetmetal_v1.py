@@ -408,11 +408,14 @@ def geometry_from_facts(facts: list[dict[str, Any]]) -> dict[str, Any] | None:
     required = {"width_mm", "height_mm", "depth_mm"}
     if not isinstance(value, dict) or set(value) & required != required:
         return None
+    status = value.get("status") or "EXPLICIT_SOURCE"
+    if status not in {"VERIFIED_MODEL_GEOMETRY", "APPROVED_GENERIC_CONSERVATIVE_ENVELOPE", "GEOMETRY_CONFLICT", "EXPLICIT_SOURCE"}:
+        status = "EXPLICIT_SOURCE"
     return {
         "width_mm": float(value["width_mm"]),
         "height_mm": float(value["height_mm"]),
         "depth_mm": float(value["depth_mm"]),
-        "status": "EXPLICIT_SOURCE",
+        "status": status,
     }
 
 

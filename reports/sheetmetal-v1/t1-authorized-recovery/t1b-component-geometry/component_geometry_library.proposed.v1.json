@@ -1,0 +1,92 @@
+{
+  "schema_version": "sheetmetal-v1.component_geometry_library_proposal.v1",
+  "proposal_id": "SMV1-T1B-COMPONENT-GEOMETRY-LIBRARY-PROPOSAL-001",
+  "task_id": "SMV1-T1B-COMPONENT-GEOMETRY-RECOVERY",
+  "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
+  "status": "PROPOSED_SYNTHETIC_REGRESSION_LIBRARY_NOT_ACTIVE_GENERATOR_INPUT",
+  "authority_basis": {
+    "signed_decision_id": "SMV1-SIGNED-AUTHORITY-D-0047",
+    "choice_id": "B",
+    "choice_label": "AUTHORIZE_COMPONENT_GEOMETRY_AUTHORITY",
+    "source_fact_authority_family": "footprint and mounting geometry"
+  },
+  "privacy_boundary": {
+    "privacy_approval_status": "NOT_APPROVED",
+    "public_web_used": false,
+    "private_model_identifier_public_lookup_count": 0,
+    "private_project_context_transmission_count": 0,
+    "source_root_files_opened": false,
+    "completed_reference_files_opened": false
+  },
+  "entries": [
+    {
+      "entry_id": "SYNTH-VERIFIED-GEOMETRY-001",
+      "entry_class": "SYNTHETIC_VERIFIED_MODEL_GEOMETRY_REGRESSION",
+      "manufacturer_key": "SYNTHETIC_MANUFACTURER",
+      "model_key": "SYNTH-VERIFIED-01",
+      "geometry": {
+        "width_mm": 40,
+        "height_mm": 20,
+        "depth_mm": 15,
+        "status": "VERIFIED_MODEL_GEOMETRY"
+      },
+      "mounting_method": "UNVERIFIED",
+      "permitted_surfaces": [],
+      "provenance": {
+        "evidence_class": "SYNTHETIC_REGRESSION_FIXTURE",
+        "fixture_path": "evals/fixtures/sheetmetal-v1/component_geometry_authority_fixture.json",
+        "source_fact_ids": [
+          "GAF1",
+          "GAF2",
+          "GAF3"
+        ],
+        "verification_status": "TEST_ONLY_NOT_REAL_PROJECT_FACT",
+        "confidence": 0.95
+      },
+      "activation_status": "NOT_PROMOTED_TO_REAL_PROJECT_COVERAGE"
+    },
+    {
+      "entry_id": "SYNTH-GENERIC-ENVELOPE-001",
+      "entry_class": "SYNTHETIC_APPROVED_GENERIC_CONSERVATIVE_ENVELOPE_REGRESSION",
+      "component_family": "SYNTH_GENERIC_COMPONENT",
+      "geometry": {
+        "width_mm": 60,
+        "height_mm": 30,
+        "depth_mm": 20,
+        "status": "APPROVED_GENERIC_CONSERVATIVE_ENVELOPE"
+      },
+      "applicability": [
+        "synthetic regression fixture only"
+      ],
+      "exclusions": [
+        "real project component matching",
+        "verified model-specific scoring",
+        "fabrication release"
+      ],
+      "provenance": {
+        "evidence_class": "SYNTHETIC_REGRESSION_FIXTURE",
+        "fixture_path": "evals/fixtures/sheetmetal-v1/component_geometry_authority_fixture.json",
+        "source_fact_ids": [
+          "GAF5",
+          "GAF6",
+          "GAF7"
+        ],
+        "verification_status": "TEST_ONLY_APPROVED_GENERIC_ENVELOPE_BEHAVIOR",
+        "confidence": 0.7
+      },
+      "activation_status": "NOT_PROMOTED_TO_REAL_PROJECT_COVERAGE"
+    }
+  ],
+  "real_project_recovery": {
+    "verified_model_geometry_entries_promoted": 0,
+    "approved_generic_conservative_envelopes_promoted": 0,
+    "reason": "No non-private official manufacturer geometry documents or approved real-project geometry library entries were available to this worker without using private model identifiers in public lookup or committing private source values."
+  },
+  "required_before_activation": [
+    "independent authority and leakage review",
+    "deterministic matching review",
+    "official or approved documentation for each real entry",
+    "source-provenance record with no private values in committed artifacts",
+    "coordinator acceptance into a versioned active library"
+  ]
+}
