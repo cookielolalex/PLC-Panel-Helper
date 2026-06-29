@@ -553,3 +553,7 @@
   `scripts/sheetmetal_v1.py` and `scripts/run_tests.py`.
 - Preserved the current blocker: next action remains
   `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.
+- Synchronized `README.md` with the active sheetmetal-first state, preserving
+  the `1140304` fail-closed blocker, `1110101` calibration boundary,
+  `13 / 24` `ALLOWED_EVAL` status, `NOT_APPROVED` privacy status, and no
+  24-project trial/customer-drawing authority.
