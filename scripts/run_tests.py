@@ -1204,6 +1204,114 @@ def test_sheetmetal_v1_source_fact_extractor() -> None:
     assert_true(model["validation"]["private_content_transmission_count"] == 0, "private transmission count must stay zero")
 
 
+def test_sheetmetal_v1_source_fact_extractor_missing_metadata_fails_closed() -> None:
+    work = ROOT / "tmp" / "sheetmetal_v1_missing_metadata_test"
+    if work.exists():
+        shutil.rmtree(work)
+    bundle = work / "bundle"
+    inputs = bundle / "sanitized_inputs"
+    out = work / "out"
+    inputs.mkdir(parents=True)
+    import csv
+    import hashlib
+
+    artifacts = [
+        ("ART-OK", "ok.csv", "DEC-OK", "APPROVED-SYNTH-MODEL"),
+        ("ART-NO-CLASS", "no_classification.csv", "DEC-NO-CLASS", "NO-CLASS-SYNTH-MODEL"),
+        ("ART-NO-CHRONOLOGY", "no_chronology.csv", "DEC-NO-CHRONOLOGY", "NO-CHRONOLOGY-SYNTH-MODEL"),
+        ("ART-NO-COMPLETED-FLAG", "no_completed_flag.csv", "DEC-NO-COMPLETED-FLAG", "NO-COMPLETED-FLAG-SYNTH-MODEL"),
+    ]
+    manifest_artifacts = []
+    provenance_rows = []
+    for artifact_id, filename, decision_id, model_value in artifacts:
+        csv_path = inputs / filename
+        with csv_path.open("w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=["item", "model", "required_qty"])
+            writer.writeheader()
+            writer.writerow({"item": artifact_id, "model": model_value, "required_qty": "1"})
+        manifest_artifacts.append(
+            {
+                "artifact_id": artifact_id,
+                "path": f"sanitized_inputs/{filename}",
+                "sha256": hashlib.sha256(csv_path.read_bytes()).hexdigest().upper(),
+                "source_decision_id": decision_id,
+            }
+        )
+        provenance_rows.append(
+            {
+                "neutral_source_id": f"SRC-{artifact_id}",
+                "sanitized_artifact": f"sanitized_inputs/{filename}",
+                "source_decision_id": decision_id,
+                "source_file_id": f"FILE-{artifact_id}",
+                "source_sheet_id": f"SHEET-{artifact_id}",
+            }
+        )
+
+    write_json(bundle / "bundle_manifest.json", {
+        "bundle_id": "SYNTH-MISSING-METADATA-BUNDLE",
+        "project_id": "SYNTH-SMV1-MISSING-METADATA",
+        "selection_id": "SYNTH-MISSING-METADATA-SELECTION",
+        "status": "BUILT",
+        "artifacts": manifest_artifacts,
+    })
+    write_json(bundle / "provenance_map.json", {
+        "bundle_id": "SYNTH-MISSING-METADATA-BUNDLE",
+        "selection_id": "SYNTH-MISSING-METADATA-SELECTION",
+        "rows": provenance_rows,
+    })
+    classification = work / "classification.json"
+    write_json(classification, {
+        "status": "SOURCE_ROLE_CHRONOLOGY_CLASSIFICATION_PASS",
+        "approved_eval_items": [
+            {
+                "decision_id": "DEC-OK",
+                "source_role_classification": "MATERIAL_REQUIREMENT",
+                "chronology_classification": "PRE_DESIGN",
+                "completed_reference_or_derivative": False,
+            },
+            {
+                "decision_id": "DEC-NO-CHRONOLOGY",
+                "source_role_classification": "MATERIAL_REQUIREMENT",
+                "completed_reference_or_derivative": False,
+            },
+            {
+                "decision_id": "DEC-NO-COMPLETED-FLAG",
+                "source_role_classification": "MATERIAL_REQUIREMENT",
+                "chronology_classification": "PRE_DESIGN",
+            },
+        ],
+    })
+
+    subprocess.run(
+        [
+            PY,
+            "scripts/sheetmetal_v1.py",
+            "--bundle-dir",
+            str(bundle),
+            "--source-classification",
+            str(classification),
+            "--output-dir",
+            str(out),
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    model = read_json(out / "source_fact_model.json")
+    by_artifact = {row["artifact_id"]: row for row in model["source_evidence"]}
+
+    assert_true(by_artifact["ART-OK"]["generator_input_eligible"] is True, "explicit approved metadata should remain generator-eligible")
+    assert_true(by_artifact["ART-NO-CLASS"]["generator_input_eligible"] is False, "missing source classification must fail closed")
+    assert_true(by_artifact["ART-NO-CHRONOLOGY"]["generator_input_eligible"] is False, "missing chronology must fail closed")
+    assert_true(by_artifact["ART-NO-COMPLETED-FLAG"]["generator_input_eligible"] is False, "missing completed-reference flag must fail closed")
+    assert_true(by_artifact["ART-NO-CLASS"]["source_role"] == "UNKNOWN_OR_QUARANTINED", "missing source classification must not default to an allowed role")
+    assert_true(by_artifact["ART-NO-CHRONOLOGY"]["chronology_status"] == "UNKNOWN_OR_MISSING_CHRONOLOGY", "missing chronology must not default to allowed chronology")
+    assert_true(model["validation"]["source_line_count"] == 1, "only the explicitly approved source row should be extracted")
+    assert_true(model["validation"]["source_fact_count"] == 3, "only explicit approved source facts should be represented")
+    assert_true({fact["source_location_id"].split(":")[0] for fact in model["source_facts"]} == {"ART-OK"}, "rejected metadata rows must not generate facts")
+
+
 def test_sheetmetal_v1_component_register_from_source_facts() -> None:
     work = ROOT / "tmp" / "sheetmetal_v1_component_register_from_source_facts_test"
     if work.exists():
@@ -1973,6 +2081,7 @@ def main() -> None:
         test_sheetmetal_v1_modular_foundation,
         test_sheetmetal_v1_private_workspace_boundary,
         test_sheetmetal_v1_source_fact_extractor,
+        test_sheetmetal_v1_source_fact_extractor_missing_metadata_fails_closed,
         test_sheetmetal_v1_component_register_from_source_facts,
         test_sheetmetal_v1_component_geometry_authority_states,
         test_sheetmetal_v1_panel_assignment_graph_from_private_models,

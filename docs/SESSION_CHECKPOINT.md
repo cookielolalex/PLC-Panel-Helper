@@ -711,6 +711,25 @@ T2 safe-unresolved terminal-candidate review after `D-0053`: the coordinator acc
 Exact next action: `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.
 
 
+Source fact metadata hardening:
+
+- Decision: `D-0056`.
+- Status: `SOURCE_FACT_MISSING_METADATA_FAIL_CLOSED`.
+- Missing source role classification, missing chronology classification, and
+  missing completed-reference/derivative metadata are no longer generator
+  eligible during source-fact extraction.
+- Synthetic regression coverage proves the three missing-metadata cases fail
+  closed and explicit approved metadata still extracts facts.
+- Active and topology scoped workflow manifests were refreshed for
+  `scripts/sheetmetal_v1.py` and `scripts/run_tests.py`.
+- No private external transmission, source-root mutation, `.private` mutation,
+  completed-reference inference, customer PDF/DXF/DWG generation, or
+  production approval occurred.
+
+Exact next action remains:
+`WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.
+
+
 Additional evidence recovery package intake after `D-0054`: `SMV1-EVIDENCE-RECOVERY-PACKAGE-V1-2026-06-25` was hash-validated, parse-validated, and copied into ignored local intake storage. Committed artifacts contain only neutral hashes/counts/status and no package contents or private intake path. The decision preserves `1110101` as the component-register and graph case, opens source-rich candidate `1140304` for Phase 1 qualification, and keeps customer drawing generation, fabrication release, and `PRODUCTION_APPROVED` forbidden. Evidence: `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.json`, `reports/sheetmetal-v1/evidence-recovery-v1/package_intake_summary.md`, and `orchestration/master/child-results/SMV1-EVIDENCE-RECOVERY-PACKAGE-INTAKE.json`.
 
 Exact next action: `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.

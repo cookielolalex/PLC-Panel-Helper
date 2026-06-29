@@ -590,6 +590,28 @@ Additional evidence recovery package intake after `D-0054`: the user authorized 
 Exact next action: `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.
 
 
+## Source Fact Metadata Fail-Closed Hardening
+
+Decision: `D-0056`.
+
+The source-fact extractor now fails closed when an artifact lacks source role
+classification, chronology classification, or completed-reference/derivative
+metadata. Missing source classification records
+`UNKNOWN_OR_QUARANTINED`; missing chronology records
+`UNKNOWN_OR_MISSING_CHRONOLOGY`; all missing-metadata cases set
+`generator_input_eligible` to `false` before source rows are read. A synthetic
+regression proves the three missing-metadata cases produce no source facts,
+while explicit approved metadata still works.
+
+The active and topology scoped workflow manifests were refreshed only for
+`scripts/sheetmetal_v1.py` and `scripts/run_tests.py`. No source roots,
+`.private` artifacts, completed references, customer PDFs/DXFs/DWGs, or
+production/fabrication approvals were touched.
+
+Exact next action remains:
+`WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.
+
+
 ## Phase 1 1140304 Source Qualification
 
 Status: `PHASE1_PANEL_ALLOCATION_SOURCE_QUALIFICATION_1140304_FAIL_CLOSED_SOURCE_DOCUMENTS_REQUIRED`.

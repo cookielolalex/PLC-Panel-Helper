@@ -121,12 +121,12 @@
     },
     {
       "path": "scripts/sheetmetal_v1.py",
-      "sha256": "8427AD942B18C8B904E2EAE79F83D4CF3A5F8FE219134C551ED1D22A427BC82B",
+      "sha256": "17251E4B3AE15EB4CABAF5789CC03705E9A1E34FA9F62FC9AAD1B602D296300B",
       "role": "deterministic topology sizing placement implementation"
     },
     {
       "path": "scripts/run_tests.py",
-      "sha256": "5B4F077D4EC3B36033D7D95D15C2CA414825936B56E7C9C17E620933BB5608C1",
+      "sha256": "80794C8518F50B1FFEB0708F0ECD9F687E7CD8F05BAC4B31A0F59785DBB43A0E",
       "role": "regression test runner including topology sizing placement tests"
     },
     {
@@ -140,5 +140,5 @@
       "role": "synthetic component geometry authority fixture used by topology-safe unresolved regression"
     }
   ],
-  "last_updated_decision_id": "D-0049"
+  "last_updated_decision_id": "D-0056"
 }

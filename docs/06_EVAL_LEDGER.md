@@ -1404,3 +1404,24 @@ The coordinator reconciled the accepted package intake summary and child result,
 Generation status: no customer drawing, PDF, DXF, or DWG was generated; no production approval was declared; accepted panel-allocation facts remain `0`; `SHEETMETAL_ALLOWED_EVAL` remains `1`.
 
 Evidence: `reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.json`, `reports/sheetmetal-v1/evidence-recovery-v1/phase1_panel_allocation_source_qualification_1140304.md`, and `orchestration/master/child-results/SMV1-PHASE1-PANEL-ALLOCATION-SOURCE-QUALIFICATION-1140304.json`.
+
+
+## sheetmetal-v1 source fact metadata fail-closed hardening
+
+Status: `SOURCE_FACT_MISSING_METADATA_FAIL_CLOSED`.
+
+Decision: `D-0056`.
+
+The source-fact extractor now rejects generator eligibility before row parsing
+when source role classification, chronology classification, or completed-
+reference/derivative metadata is missing. Synthetic regression coverage proves
+all three missing-metadata cases produce no source facts, while explicit
+approved metadata still extracts facts.
+
+Verification: targeted source-fact extraction regression checks passed; full
+test runner and scoped freeze results are recorded in the heartbeat report for
+this checkpoint.
+
+Hard gates remain closed: private external transmissions `0`, source-root
+mutation `0`, `.private` mutation `0`, completed-reference inference `0`,
+customer PDF/DXF/DWG generation `0`, and production approval `false`.

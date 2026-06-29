@@ -34,6 +34,9 @@ GENERATOR_ALLOWED_CHRONOLOGY = {
     "UNKNOWN_BUT_ALLOWED_BY_DECISION",
 }
 
+UNKNOWN_SOURCE_ROLE = "UNKNOWN_OR_QUARANTINED"
+UNKNOWN_CHRONOLOGY_STATUS = "UNKNOWN_OR_MISSING_CHRONOLOGY"
+
 CHRONOLOGY_ALIASES = {
     "CURRENT_PROJECT_PRE_OR_DURING_DESIGN_INPUT_NOT_PRODUCTION_APPROVED": "DURING_DESIGN",
 }
@@ -115,7 +118,7 @@ def source_role_to_chronology(role: str) -> str:
 
 def normalize_chronology_status(value: Any, source_role: str) -> str:
     if not value:
-        return source_role_to_chronology(source_role)
+        return UNKNOWN_CHRONOLOGY_STATUS
     text = str(value).strip()
     return CHRONOLOGY_ALIASES.get(text, text)
 
@@ -131,6 +134,56 @@ def normalize_completed_reference_flag(value: Any) -> bool:
     if text in COMPLETED_REFERENCE_TRUE_TOKENS:
         return True
     return bool(text)
+
+
+def has_classification_value(row: dict[str, Any], key: str) -> bool:
+    if key not in row or row[key] is None:
+        return False
+    if isinstance(row[key], str) and not row[key].strip():
+        return False
+    return True
+
+
+def source_evidence_metadata(class_row: dict[str, Any] | None) -> dict[str, Any]:
+    issues = []
+    if not class_row:
+        issues.append("MISSING_SOURCE_CLASSIFICATION")
+        class_row = {}
+
+    if has_classification_value(class_row, "source_role_classification"):
+        source_role = str(class_row["source_role_classification"]).strip()
+    else:
+        source_role = UNKNOWN_SOURCE_ROLE
+        if "MISSING_SOURCE_CLASSIFICATION" not in issues:
+            issues.append("MISSING_SOURCE_ROLE_CLASSIFICATION")
+
+    if has_classification_value(class_row, "chronology_classification"):
+        chronology_status = normalize_chronology_status(class_row["chronology_classification"], source_role)
+    else:
+        chronology_status = UNKNOWN_CHRONOLOGY_STATUS
+        if "MISSING_SOURCE_CLASSIFICATION" not in issues:
+            issues.append("MISSING_CHRONOLOGY_CLASSIFICATION")
+
+    if has_classification_value(class_row, "completed_reference_or_derivative"):
+        completed_reference = normalize_completed_reference_flag(class_row["completed_reference_or_derivative"])
+    else:
+        completed_reference = False
+        if "MISSING_SOURCE_CLASSIFICATION" not in issues:
+            issues.append("MISSING_COMPLETED_REFERENCE_FLAG")
+
+    generator_input_eligible = (
+        not issues
+        and source_role in GENERATOR_ALLOWED_ROLES
+        and chronology_status in GENERATOR_ALLOWED_CHRONOLOGY
+        and completed_reference is False
+    )
+    return {
+        "source_role": source_role,
+        "chronology_status": chronology_status,
+        "contains_completed_reference_content": completed_reference,
+        "generator_input_eligible": generator_input_eligible,
+        "metadata_issues": issues,
+    }
 
 
 def infer_field_type(header: str, source_role: str) -> str:
@@ -206,10 +259,11 @@ def build_source_fact_model_from_bundle(bundle_dir: Path, source_classification:
     source_line_accounting = []
     for artifact_index, artifact in enumerate(bundle_manifest.get("artifacts", []), start=1):
         decision_id = artifact["source_decision_id"]
-        class_row = classification.get(decision_id, {})
+        class_row = classification.get(decision_id)
         prov_row = provenance_by_decision.get(decision_id, {})
-        source_role = class_row.get("source_role_classification", "MATERIAL_REQUIREMENT")
-        chronology_status = normalize_chronology_status(class_row.get("chronology_classification"), source_role)
+        metadata = source_evidence_metadata(class_row)
+        source_role = metadata["source_role"]
+        chronology_status = metadata["chronology_status"]
         evidence_id = stable_id("EVID", bundle_manifest["project_id"], decision_id)
         neutral_source_id = prov_row.get("neutral_source_id") or stable_id("SRC", bundle_manifest["project_id"], artifact_index)
         evidence = {
@@ -217,8 +271,9 @@ def build_source_fact_model_from_bundle(bundle_dir: Path, source_classification:
             "neutral_source_document_id": neutral_source_id,
             "source_role": source_role,
             "chronology_status": chronology_status,
-            "generator_input_eligible": source_role in GENERATOR_ALLOWED_ROLES,
-            "contains_completed_reference_content": normalize_completed_reference_flag(class_row.get("completed_reference_or_derivative")),
+            "generator_input_eligible": metadata["generator_input_eligible"],
+            "contains_completed_reference_content": metadata["contains_completed_reference_content"],
+            "metadata_issues": metadata["metadata_issues"],
             "source_decision_id": decision_id,
             "artifact_id": artifact["artifact_id"],
             "artifact_sha256": artifact["sha256"],

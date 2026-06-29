@@ -541,3 +541,15 @@
 - Reconciled the evidence package intake summary and child result for Phase 1.
 - Recorded 1140304 panel-allocation source qualification as fail-closed because the package index lacks independently verifiable source-document bytes for identity, revision, chronology, leakage, and reconciliation gates.
 - Preserved `1110101` with zero source-rich fact transfer, accepted zero panel-allocation facts, generated no customer drawings, and deleted the heartbeat because the next step requires external approved evidence.
+
+## 2026-06-29
+
+- Hardened sheetmetal-v1 source-fact extraction so missing source role
+  classification, missing chronology classification, or missing
+  completed-reference/derivative metadata is not generator-eligible.
+- Added synthetic regression coverage for the three missing-metadata
+  fail-closed cases plus an explicit approved-metadata success case.
+- Refreshed active and topology scoped workflow manifest hashes for
+  `scripts/sheetmetal_v1.py` and `scripts/run_tests.py`.
+- Preserved the current blocker: next action remains
+  `WAIT_FOR_APPROVED_1140304_SOURCE_DOCUMENTS_OR_SOURCE_RICH_CANDIDATE_INDEX`.
