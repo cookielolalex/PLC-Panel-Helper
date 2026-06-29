@@ -1923,6 +1923,82 @@ def test_sheetmetal_v1_topology_sizing_placement_calibration_private_models() ->
         assert_true(sha256_json(read_json(topo_out / f"{name}.json")) == sha256_json(read_json(topo_rerun / f"{name}.json")), f"{name} must be deterministic")
 
 
+def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
+    import sheetmetal_v1
+
+    base_outputs = {
+        "panel_assignment_recovery": {
+            "project_id": "SYNTH-SMV1-VALIDATION",
+            "counts": {"unassigned": 0, "unsupported_assignment_count": 0},
+        },
+        "topology_candidates": {
+            "candidates": [
+                {
+                    "panels": [
+                        {
+                            "panel_id": "PANEL-A",
+                            "dimensions": {"width_mm": 100, "height_mm": 100, "depth_mm": 30},
+                        }
+                    ]
+                }
+            ]
+        },
+        "sizing_candidates": {"geometry_status_counts": {}},
+        "placement_plan": {
+            "placements": [
+                {
+                    "placement_id": "PLACE-OK",
+                    "component_instance_id": "CI-OK",
+                    "panel_id": "PANEL-A",
+                    "mounting_surface_id": "SURF-A",
+                    "x_mm": 10,
+                    "y_mm": 10,
+                    "width_mm": 20,
+                    "height_mm": 10,
+                    "minimum_edge_clearance_mm": 5,
+                }
+            ]
+        },
+        "unplaced_component_register": {"unplaced_count": 0},
+        "hard_constraint_model": {},
+        "provenance_map": {"coverage_status": "PASS"},
+    }
+    validation = sheetmetal_v1.validate_topology_stage_outputs(json.loads(json.dumps(base_outputs)))
+    assert_true(validation["status"] == "PASS", f"valid synthetic placement should pass: {validation}")
+    assert_true(validation["containment"] == "PASS", "containment must be evidence-derived pass")
+    assert_true(validation["clearance"] == "PASS", "clearance must be evidence-derived pass")
+    assert_true(validation["overlap"] == "PASS", "overlap must be evidence-derived pass")
+    assert_true("maintenance_access" in validation["not_evaluated_checks"], "unimplemented hard constraints must report NOT_EVALUATED")
+
+    containment_broken = json.loads(json.dumps(base_outputs))
+    containment_broken["placement_plan"]["placements"][0]["x_mm"] = 95
+    containment_validation = sheetmetal_v1.validate_topology_stage_outputs(containment_broken)
+    assert_true(containment_validation["status"] == "FAIL", "accepted placement outside panel must fail validation")
+    assert_true(containment_validation["containment_violations"] >= 1, "containment mutation must increment derived violation counter")
+    assert_true(any(row["issue_code"] == "CONTAINMENT" for row in containment_validation["validation_findings"]), "containment finding must be structured")
+
+    clearance_broken = json.loads(json.dumps(base_outputs))
+    clearance_broken["placement_plan"]["placements"][0]["x_mm"] = 2
+    clearance_validation = sheetmetal_v1.validate_topology_stage_outputs(clearance_broken)
+    assert_true(clearance_validation["status"] == "FAIL", "accepted placement inside edge clearance must fail validation")
+    assert_true(clearance_validation["clearance_violations"] >= 1, "clearance mutation must increment derived violation counter")
+
+    clearance_rule_broken = json.loads(json.dumps(base_outputs))
+    clearance_rule_broken["placement_plan"]["placements"][0]["minimum_edge_clearance_mm"] = "not-a-number"
+    clearance_rule_validation = sheetmetal_v1.validate_topology_stage_outputs(clearance_rule_broken)
+    assert_true(clearance_rule_validation["status"] == "FAIL", "non-numeric clearance rule must fail validation")
+    assert_true(any(row["issue_code"] == "EDGE_CLEARANCE_RULE_INVALID" for row in clearance_rule_validation["validation_findings"]), "invalid clearance rule must be structured")
+
+    overlap_broken = json.loads(json.dumps(base_outputs))
+    duplicate = dict(overlap_broken["placement_plan"]["placements"][0])
+    duplicate["placement_id"] = "PLACE-DUP"
+    duplicate["component_instance_id"] = "CI-DUP"
+    overlap_broken["placement_plan"]["placements"].append(duplicate)
+    overlap_validation = sheetmetal_v1.validate_topology_stage_outputs(overlap_broken)
+    assert_true(overlap_validation["status"] == "FAIL", "overlapping accepted placements must fail validation")
+    assert_true(overlap_validation["accepted_overlap_violations"] >= 1, "overlap mutation must increment derived violation counter")
+
+
 def test_frozen_workflow_legacy_scope_verifier() -> None:
     import verify_frozen_workflow as verifier
 
@@ -2087,6 +2163,7 @@ def main() -> None:
         test_sheetmetal_v1_panel_assignment_graph_from_private_models,
         test_sheetmetal_v1_accessory_cutout_reconciliation_from_private_models,
         test_sheetmetal_v1_topology_sizing_placement_calibration_private_models,
+        test_sheetmetal_v1_topology_validation_mutation_failures,
         test_frozen_workflow_legacy_scope_verifier,
         test_frozen_workflow_fail_closed_regressions,
         test_frozen_workflow_active_scope_verifier,

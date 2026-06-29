@@ -1608,6 +1608,160 @@ def rectangles_overlap(left: dict[str, float], right: dict[str, float]) -> bool:
     )
 
 
+def validation_check(check_id: str, status: str, evaluated_count: int, finding_count: int, reason: str | None = None) -> dict[str, Any]:
+    row: dict[str, Any] = {
+        "check_id": check_id,
+        "status": status,
+        "evaluated_count": evaluated_count,
+        "finding_count": finding_count,
+    }
+    if reason:
+        row["reason"] = reason
+    return row
+
+
+def placement_rect_from_row(row: dict[str, Any]) -> tuple[dict[str, float] | None, list[str]]:
+    missing = [field for field in ["x_mm", "y_mm", "width_mm", "height_mm"] if row.get(field) is None]
+    if missing:
+        return None, missing
+    try:
+        return {
+            "x_mm": float(row["x_mm"]),
+            "y_mm": float(row["y_mm"]),
+            "width_mm": float(row["width_mm"]),
+            "height_mm": float(row["height_mm"]),
+        }, []
+    except (TypeError, ValueError):
+        return None, ["NON_NUMERIC_PLACEMENT_GEOMETRY"]
+
+
+def add_validation_finding(
+    findings: list[dict[str, Any]],
+    check_id: str,
+    item_id: str,
+    issue_code: str,
+    detail: dict[str, Any] | None = None,
+) -> None:
+    finding = {
+        "finding_id": stable_id("VALFIND", check_id, item_id, issue_code, detail or {}),
+        "check_id": check_id,
+        "item_id": item_id,
+        "issue_code": issue_code,
+        "severity": "HARD_GATE",
+        "status": "FAIL",
+    }
+    if detail:
+        finding["detail"] = detail
+    findings.append(finding)
+
+
+def evaluate_accepted_placement_constraints(outputs: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    topology = outputs["topology_candidates"]
+    placement_plan = outputs["placement_plan"]
+    panel_dims = panel_dimensions_by_id(topology)
+    placements = sorted(placement_plan.get("placements", []), key=lambda row: row.get("placement_id", ""))
+    findings: list[dict[str, Any]] = []
+    occupied: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    containment_evaluated = 0
+    clearance_evaluated = 0
+    overlap_evaluated = 0
+
+    for placement in placements:
+        placement_id = placement.get("placement_id") or stable_id("PLACE", placement)
+        panel_id = placement.get("panel_id")
+        rect, missing_geometry = placement_rect_from_row(placement)
+        if rect is None:
+            add_validation_finding(
+                findings,
+                "accepted_placement_geometry",
+                placement_id,
+                "PLACEMENT_GEOMETRY_INVALID",
+                {"missing_or_invalid": missing_geometry},
+            )
+            continue
+        dims = panel_dims.get(panel_id, {})
+        missing_dims = [field for field in ["width_mm", "height_mm"] if dims.get(field) is None]
+        if missing_dims:
+            add_validation_finding(
+                findings,
+                "accepted_placement_containment",
+                placement_id,
+                "PANEL_DIMENSIONS_NOT_EVALUATED",
+                {"panel_id": panel_id, "missing_dimensions": missing_dims},
+            )
+            continue
+
+        panel_width = float(dims["width_mm"])
+        panel_height = float(dims["height_mm"])
+        containment_evaluated += 1
+        if rect["x_mm"] < 0 or rect["y_mm"] < 0 or rect["x_mm"] + rect["width_mm"] > panel_width or rect["y_mm"] + rect["height_mm"] > panel_height:
+            add_validation_finding(findings, "accepted_placement_containment", placement_id, "CONTAINMENT", {"panel_id": panel_id})
+
+        minimum_clearance = placement.get("minimum_edge_clearance_mm")
+        if minimum_clearance is not None:
+            clearance_evaluated += 1
+            try:
+                clearance = float(minimum_clearance)
+            except (TypeError, ValueError):
+                add_validation_finding(
+                    findings,
+                    "accepted_placement_clearance",
+                    placement_id,
+                    "EDGE_CLEARANCE_RULE_INVALID",
+                    {"panel_id": panel_id, "minimum_edge_clearance_mm": minimum_clearance},
+                )
+                continue
+            if clearance and (
+                rect["x_mm"] < clearance
+                or rect["y_mm"] < clearance
+                or rect["x_mm"] + rect["width_mm"] > panel_width - clearance
+                or rect["y_mm"] + rect["height_mm"] > panel_height - clearance
+            ):
+                add_validation_finding(
+                    findings,
+                    "accepted_placement_clearance",
+                    placement_id,
+                    "EDGE_CLEARANCE",
+                    {"panel_id": panel_id, "minimum_edge_clearance_mm": clearance},
+                )
+
+        for other in occupied[panel_id]:
+            overlap_evaluated += 1
+            if rectangles_overlap(rect, other["rect"]):
+                add_validation_finding(
+                    findings,
+                    "accepted_placement_overlap",
+                    placement_id,
+                    "NO_PHYSICAL_OVERLAP",
+                    {"panel_id": panel_id, "other_placement_id": other["placement_id"]},
+                )
+        occupied[panel_id].append({"placement_id": placement_id, "rect": rect})
+
+    overlap_findings = [row for row in findings if row["check_id"] == "accepted_placement_overlap"]
+    containment_findings = [row for row in findings if row["check_id"] == "accepted_placement_containment"]
+    clearance_findings = [row for row in findings if row["check_id"] == "accepted_placement_clearance"]
+    geometry_findings = [row for row in findings if row["check_id"] == "accepted_placement_geometry"]
+    checks = [
+        validation_check("accepted_placement_geometry", "FAIL" if geometry_findings else ("PASS" if placements else "NOT_EVALUATED"), len(placements), len(geometry_findings)),
+        validation_check("accepted_placement_containment", "FAIL" if containment_findings else ("PASS" if containment_evaluated else "NOT_EVALUATED"), containment_evaluated, len(containment_findings)),
+        validation_check("accepted_placement_overlap", "FAIL" if overlap_findings else ("PASS" if placements else "NOT_EVALUATED"), overlap_evaluated, len(overlap_findings)),
+        validation_check("accepted_placement_clearance", "FAIL" if clearance_findings else ("PASS" if clearance_evaluated else "NOT_EVALUATED"), clearance_evaluated, len(clearance_findings)),
+    ]
+    for check_id in [
+        "mounting_compatibility",
+        "maintenance_access",
+        "door_swing",
+        "ventilation_clearance",
+        "thermal_separation",
+        "wiring_duct_corridors",
+        "cable_entry_bend_space",
+        "partition_boundaries",
+        "cutout_containment",
+    ]:
+        checks.append(validation_check(check_id, "NOT_EVALUATED", 0, 0, "validator_not_implemented"))
+    return checks, findings
+
+
 def build_placement_and_constraints(
     source_model: dict[str, Any],
     register: dict[str, Any],
@@ -1714,6 +1868,7 @@ def build_placement_and_constraints(
             "width_mm": rect["width_mm"],
             "height_mm": rect["height_mm"],
             "orientation": request.get("orientation", "UNVERIFIED"),
+            "minimum_edge_clearance_mm": minimum_clearance,
             "geometry_status": geometry_status,
             "evidence_or_rule_ids": assignment.get("evidence_ids") or [request.get("choice_id", stable_id("CHOICE", instance["component_instance_id"]))],
             "confidence": 0.7 if geometry_status == "VERIFIED_MODEL_GEOMETRY" else 0.45,
@@ -1851,7 +2006,12 @@ def build_topology_provenance_map(
 
 def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
     assignment_counts = outputs["panel_assignment_recovery"]["counts"]
-    hard_constraints = outputs["hard_constraint_model"]
+    placement_checks, placement_findings = evaluate_accepted_placement_constraints(outputs)
+    check_status = {row["check_id"]: row["status"] for row in placement_checks}
+    issue_counts = {
+        issue: sum(1 for row in placement_findings if row["issue_code"] == issue)
+        for issue in {row["issue_code"] for row in placement_findings}
+    }
     validation = {
         "schema_version": "sheetmetal-v1.topology_validation.v1",
         "project_id": outputs["panel_assignment_recovery"]["project_id"],
@@ -1863,25 +2023,28 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
         "quantity_consistency": "PASS",
         "geometry_provenance": "PASS_WITH_SAFE_UNRESOLVED" if outputs["sizing_candidates"]["geometry_status_counts"].get("GEOMETRY_MISSING", 0) else "PASS",
         "dimension_provenance": outputs["provenance_map"]["coverage_status"],
-        "overlap": "PASS",
-        "containment": "PASS",
-        "clearance": "PASS",
-        "mounting_compatibility": "PASS_WITH_SAFE_UNPLACED" if outputs["unplaced_component_register"].get("unplaced_count") else "PASS",
+        "overlap": check_status["accepted_placement_overlap"],
+        "containment": check_status["accepted_placement_containment"],
+        "clearance": check_status["accepted_placement_clearance"],
+        "mounting_compatibility": "NOT_EVALUATED",
         "unresolved_critical_facts": outputs["unplaced_component_register"].get("unplaced_count", 0)
         + assignment_counts.get("unassigned", 0),
         "unsupported_design_choices": 0,
         "unsupported_critical_dimensions": 0,
         "unsupported_panel_assignments": assignment_counts.get("unsupported_assignment_count", 0),
-        "unsupported_placements": 0,
-        "accepted_overlap_violations": hard_constraints.get("accepted_overlap_violations", 0),
-        "containment_violations": hard_constraints.get("accepted_containment_violations", 0),
-        "clearance_violations": hard_constraints.get("accepted_clearance_violations", 0),
+        "unsupported_placements": len(placement_findings),
+        "accepted_overlap_violations": issue_counts.get("NO_PHYSICAL_OVERLAP", 0),
+        "containment_violations": issue_counts.get("CONTAINMENT", 0) + issue_counts.get("PANEL_DIMENSIONS_NOT_EVALUATED", 0),
+        "clearance_violations": issue_counts.get("EDGE_CLEARANCE", 0) + issue_counts.get("EDGE_CLEARANCE_RULE_INVALID", 0),
         "quantity_stage_overwrite_violations": 0,
         "completed_reference_leakage": 0,
         "post_design_leakage": 0,
         "private_content_transmissions": 0,
         "tracked_private_artifacts": 0,
         "customer_drawing_generation_count": 0,
+        "validation_checks": placement_checks,
+        "validation_findings": placement_findings,
+        "not_evaluated_checks": [row["check_id"] for row in placement_checks if row["status"] == "NOT_EVALUATED"],
     }
     zero_fields = [
         "unsupported_critical_dimensions",
@@ -1901,7 +2064,12 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
     if outputs["provenance_map"]["coverage_status"] != "PASS":
         failures.append("provenance_coverage")
     validation["failures"] = failures
-    validation["status"] = "PASS_WITH_SAFE_UNRESOLVED" if not failures and validation["unresolved_critical_facts"] else "PASS"
+    if failures:
+        validation["status"] = "FAIL"
+    elif validation["unresolved_critical_facts"]:
+        validation["status"] = "PASS_WITH_SAFE_UNRESOLVED"
+    else:
+        validation["status"] = "PASS"
     return validation
 
 

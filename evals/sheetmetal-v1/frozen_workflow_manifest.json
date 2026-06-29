@@ -4,7 +4,7 @@
   "active_goal": "SHEETMETAL_FIRST_MODULAR_PANEL_MODEL_V1",
   "anchor_commit": "980529e32c6014be23c9e3c7e53046ea62b718d4",
   "creation_decision_id": "D-0026",
-  "last_updated_decision_id": "D-0056",
+  "last_updated_decision_id": "D-0057",
   "hash_algorithm": "SHA-256",
   "verification_algorithm": "sha256-file-v1;current-tracked-files;git-lineage-ancestor-check",
   "supersedes_historical_manifest": false,
@@ -248,12 +248,12 @@
     },
     {
       "path": "scripts/run_tests.py",
-      "sha256": "80794C8518F50B1FFEB0708F0ECD9F687E7CD8F05BAC4B31A0F59785DBB43A0E",
+      "sha256": "138290AEF0459EA140D23D281A8EF929EF359ADBAF602C227179106203ACE41F",
       "role": "regression test runner including topology and signed-authority gate coverage"
     },
     {
       "path": "scripts/sheetmetal_v1.py",
-      "sha256": "17251E4B3AE15EB4CABAF5789CC03705E9A1E34FA9F62FC9AAD1B602D296300B",
+      "sha256": "C6B3889D9FB85E4ED5509DE57E0020D23C5FF6AC55E797E65B3756D81E70F053",
       "role": "deterministic sheetmetal-v1 model implementation including topology calibration mode"
     },
     {

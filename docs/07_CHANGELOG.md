@@ -557,3 +557,6 @@
   the `1140304` fail-closed blocker, `1110101` calibration boundary,
   `13 / 24` `ALLOWED_EVAL` status, `NOT_APPROVED` privacy status, and no
   24-project trial/customer-drawing authority.
+- Made topology accepted-placement validation evidence-derived for geometry,
+  containment, overlap, and edge clearance; added synthetic mutation coverage
+  and refreshed active/topology scoped workflow manifest hashes.

@@ -1425,3 +1425,23 @@ this checkpoint.
 Hard gates remain closed: private external transmissions `0`, source-root
 mutation `0`, `.private` mutation `0`, completed-reference inference `0`,
 customer PDF/DXF/DWG generation `0`, and production approval `false`.
+
+## sheetmetal-v1 topology validation evidence-derived hardening
+
+Status: `TOPOLOGY_VALIDATION_EVIDENCE_DERIVED_MUTATION_TESTED`.
+
+Decision: `D-0057`.
+
+Accepted-placement topology validation now recomputes placement geometry,
+containment, overlap, and edge-clearance checks from emitted topology artifacts.
+Violation counters derive from structured validation findings, and listed hard
+constraints without implemented validators are reported as `NOT_EVALUATED`
+instead of optimistic `PASS`.
+
+Synthetic mutation coverage proves accepted placements fail validation when
+they are intentionally moved outside panel containment, inside edge clearance,
+or duplicated into a physical overlap.
+
+Hard gates remain closed: private external transmissions `0`, source-root
+mutation `0`, `.private` mutation `0`, completed-reference inference `0`,
+customer PDF/DXF/DWG generation `0`, and production approval `false`.
