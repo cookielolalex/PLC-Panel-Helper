@@ -560,3 +560,8 @@
 - Made topology accepted-placement validation evidence-derived for geometry,
   containment, overlap, and edge clearance; added synthetic mutation coverage
   and refreshed active/topology scoped workflow manifest hashes.
+- Made topology reference and assignment consistency validation evidence-
+  derived for emitted placements and recovered assignments; added synthetic
+  mutation coverage for unknown panels, unknown component instances, and
+  placement/assignment panel mismatch, then refreshed active/topology scoped
+  workflow manifest hashes.

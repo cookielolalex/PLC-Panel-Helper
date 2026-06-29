@@ -1599,6 +1599,15 @@ def panel_dimensions_by_id(topology: dict[str, Any]) -> dict[str, dict[str, Any]
     return panels
 
 
+def topology_panel_ids(topology: dict[str, Any]) -> set[str]:
+    return {
+        panel["panel_id"]
+        for candidate in topology.get("candidates", [])
+        for panel in candidate.get("panels", [])
+        if panel.get("panel_id")
+    }
+
+
 def rectangles_overlap(left: dict[str, float], right: dict[str, float]) -> bool:
     return not (
         left["x_mm"] + left["width_mm"] <= right["x_mm"]
@@ -1759,6 +1768,133 @@ def evaluate_accepted_placement_constraints(outputs: dict[str, Any]) -> tuple[li
         "cutout_containment",
     ]:
         checks.append(validation_check(check_id, "NOT_EVALUATED", 0, 0, "validator_not_implemented"))
+    return checks, findings
+
+
+def evaluate_topology_references(outputs: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    topology = outputs["topology_candidates"]
+    assignment_recovery = outputs["panel_assignment_recovery"]
+    placement_plan = outputs["placement_plan"]
+    unplaced_register = outputs["unplaced_component_register"]
+    panels = topology_panel_ids(topology)
+    assignments = {
+        row["component_instance_id"]: row
+        for row in assignment_recovery.get("assignments", [])
+        if row.get("component_instance_id")
+    }
+    placements = sorted(placement_plan.get("placements", []), key=lambda row: row.get("placement_id", ""))
+    unplaced = sorted(unplaced_register.get("unplaced_components", []), key=lambda row: row.get("component_instance_id", ""))
+    findings: list[dict[str, Any]] = []
+    panel_reference_count = 0
+    component_reference_count = 0
+    assignment_consistency_count = 0
+
+    for assignment in sorted(assignments.values(), key=lambda row: row.get("component_instance_id", "")):
+        panel_id = assignment.get("panel_id")
+        if not panel_id:
+            continue
+        panel_reference_count += 1
+        if panel_id not in panels:
+            add_validation_finding(
+                findings,
+                "topology_referential_integrity",
+                assignment.get("assignment_id") or assignment["component_instance_id"],
+                "UNKNOWN_ASSIGNED_PANEL_REFERENCE",
+                {
+                    "component_instance_id": assignment["component_instance_id"],
+                    "panel_id": panel_id,
+                },
+            )
+
+    for placement in placements:
+        placement_id = placement.get("placement_id") or stable_id("PLACE", placement)
+        panel_id = placement.get("panel_id")
+        component_instance_id = placement.get("component_instance_id")
+        if panel_id:
+            panel_reference_count += 1
+            if panel_id not in panels:
+                add_validation_finding(
+                    findings,
+                    "topology_referential_integrity",
+                    placement_id,
+                    "UNKNOWN_PANEL_REFERENCE",
+                    {"panel_id": panel_id},
+                )
+        if component_instance_id:
+            component_reference_count += 1
+            assignment = assignments.get(component_instance_id)
+            if not assignment:
+                add_validation_finding(
+                    findings,
+                    "component_instance_referential_integrity",
+                    placement_id,
+                    "UNKNOWN_COMPONENT_INSTANCE_REFERENCE",
+                    {"component_instance_id": component_instance_id},
+                )
+                continue
+            assignment_consistency_count += 1
+            assigned_panel = assignment.get("panel_id")
+            if assignment.get("assignment_state") not in {"ASSIGNED_EXPLICIT", "ASSIGNED_BY_APPROVED_RULE"}:
+                add_validation_finding(
+                    findings,
+                    "assignment_consistency",
+                    placement_id,
+                    "PLACEMENT_WITH_UNASSIGNED_COMPONENT",
+                    {
+                        "component_instance_id": component_instance_id,
+                        "assignment_state": assignment.get("assignment_state"),
+                    },
+                )
+            elif assigned_panel != panel_id:
+                add_validation_finding(
+                    findings,
+                    "assignment_consistency",
+                    placement_id,
+                    "PLACEMENT_ASSIGNMENT_MISMATCH",
+                    {
+                        "component_instance_id": component_instance_id,
+                        "placement_panel_id": panel_id,
+                        "assignment_panel_id": assigned_panel,
+                    },
+                )
+
+    for row in unplaced:
+        component_instance_id = row.get("component_instance_id")
+        if not component_instance_id:
+            continue
+        component_reference_count += 1
+        if component_instance_id not in assignments:
+            add_validation_finding(
+                findings,
+                "component_instance_referential_integrity",
+                component_instance_id,
+                "UNKNOWN_UNPLACED_COMPONENT_REFERENCE",
+                {"component_instance_id": component_instance_id},
+            )
+
+    topology_findings = [row for row in findings if row["check_id"] == "topology_referential_integrity"]
+    component_findings = [row for row in findings if row["check_id"] == "component_instance_referential_integrity"]
+    assignment_findings = [row for row in findings if row["check_id"] == "assignment_consistency"]
+    checks = [
+        validation_check(
+            "topology_referential_integrity",
+            "FAIL" if topology_findings else ("PASS" if panel_reference_count else "PASS_WITH_SAFE_UNRESOLVED"),
+            panel_reference_count,
+            len(topology_findings),
+        ),
+        validation_check(
+            "component_instance_referential_integrity",
+            "FAIL" if component_findings else ("PASS" if component_reference_count else "NOT_EVALUATED"),
+            component_reference_count,
+            len(component_findings),
+        ),
+        validation_check(
+            "assignment_consistency",
+            "FAIL" if assignment_findings else ("PASS" if assignment_consistency_count else "NOT_EVALUATED"),
+            assignment_consistency_count,
+            len(assignment_findings),
+        ),
+    ]
     return checks, findings
 
 
@@ -2007,19 +2143,22 @@ def build_topology_provenance_map(
 def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
     assignment_counts = outputs["panel_assignment_recovery"]["counts"]
     placement_checks, placement_findings = evaluate_accepted_placement_constraints(outputs)
-    check_status = {row["check_id"]: row["status"] for row in placement_checks}
+    reference_checks, reference_findings = evaluate_topology_references(outputs)
+    validation_checks = placement_checks + reference_checks
+    validation_findings = placement_findings + reference_findings
+    check_status = {row["check_id"]: row["status"] for row in validation_checks}
     issue_counts = {
-        issue: sum(1 for row in placement_findings if row["issue_code"] == issue)
-        for issue in {row["issue_code"] for row in placement_findings}
+        issue: sum(1 for row in validation_findings if row["issue_code"] == issue)
+        for issue in {row["issue_code"] for row in validation_findings}
     }
     validation = {
         "schema_version": "sheetmetal-v1.topology_validation.v1",
         "project_id": outputs["panel_assignment_recovery"]["project_id"],
         "schema_validity": "PASS",
         "panel_identity": "PASS_WITH_SAFE_UNRESOLVED" if not any(candidate.get("panels") for candidate in outputs["topology_candidates"].get("candidates", [])) else "PASS",
-        "topology_referential_integrity": "PASS",
-        "component_instance_referential_integrity": "PASS",
-        "assignment_consistency": "PASS",
+        "topology_referential_integrity": check_status["topology_referential_integrity"],
+        "component_instance_referential_integrity": check_status["component_instance_referential_integrity"],
+        "assignment_consistency": check_status["assignment_consistency"],
         "quantity_consistency": "PASS",
         "geometry_provenance": "PASS_WITH_SAFE_UNRESOLVED" if outputs["sizing_candidates"]["geometry_status_counts"].get("GEOMETRY_MISSING", 0) else "PASS",
         "dimension_provenance": outputs["provenance_map"]["coverage_status"],
@@ -2033,6 +2172,9 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
         "unsupported_critical_dimensions": 0,
         "unsupported_panel_assignments": assignment_counts.get("unsupported_assignment_count", 0),
         "unsupported_placements": len(placement_findings),
+        "topology_referential_integrity_violations": len([row for row in reference_findings if row["check_id"] == "topology_referential_integrity"]),
+        "component_instance_referential_integrity_violations": len([row for row in reference_findings if row["check_id"] == "component_instance_referential_integrity"]),
+        "assignment_consistency_violations": len([row for row in reference_findings if row["check_id"] == "assignment_consistency"]),
         "accepted_overlap_violations": issue_counts.get("NO_PHYSICAL_OVERLAP", 0),
         "containment_violations": issue_counts.get("CONTAINMENT", 0) + issue_counts.get("PANEL_DIMENSIONS_NOT_EVALUATED", 0),
         "clearance_violations": issue_counts.get("EDGE_CLEARANCE", 0) + issue_counts.get("EDGE_CLEARANCE_RULE_INVALID", 0),
@@ -2042,14 +2184,17 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
         "private_content_transmissions": 0,
         "tracked_private_artifacts": 0,
         "customer_drawing_generation_count": 0,
-        "validation_checks": placement_checks,
-        "validation_findings": placement_findings,
-        "not_evaluated_checks": [row["check_id"] for row in placement_checks if row["status"] == "NOT_EVALUATED"],
+        "validation_checks": validation_checks,
+        "validation_findings": validation_findings,
+        "not_evaluated_checks": [row["check_id"] for row in validation_checks if row["status"] == "NOT_EVALUATED"],
     }
     zero_fields = [
         "unsupported_critical_dimensions",
         "unsupported_panel_assignments",
         "unsupported_placements",
+        "topology_referential_integrity_violations",
+        "component_instance_referential_integrity_violations",
+        "assignment_consistency_violations",
         "accepted_overlap_violations",
         "containment_violations",
         "clearance_violations",

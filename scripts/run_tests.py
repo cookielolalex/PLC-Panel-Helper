@@ -1930,6 +1930,14 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
         "panel_assignment_recovery": {
             "project_id": "SYNTH-SMV1-VALIDATION",
             "counts": {"unassigned": 0, "unsupported_assignment_count": 0},
+            "assignments": [
+                {
+                    "component_instance_id": "CI-OK",
+                    "panel_id": "PANEL-A",
+                    "assignment_state": "ASSIGNED_EXPLICIT",
+                    "evidence_ids": ["EVID-PANEL-A"],
+                }
+            ],
         },
         "topology_candidates": {
             "candidates": [
@@ -1937,6 +1945,10 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
                     "panels": [
                         {
                             "panel_id": "PANEL-A",
+                            "dimensions": {"width_mm": 100, "height_mm": 100, "depth_mm": 30},
+                        },
+                        {
+                            "panel_id": "PANEL-B",
                             "dimensions": {"width_mm": 100, "height_mm": 100, "depth_mm": 30},
                         }
                     ]
@@ -1968,6 +1980,9 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
     assert_true(validation["containment"] == "PASS", "containment must be evidence-derived pass")
     assert_true(validation["clearance"] == "PASS", "clearance must be evidence-derived pass")
     assert_true(validation["overlap"] == "PASS", "overlap must be evidence-derived pass")
+    assert_true(validation["topology_referential_integrity"] == "PASS", "topology references must be evidence-derived pass")
+    assert_true(validation["component_instance_referential_integrity"] == "PASS", "component instance references must be evidence-derived pass")
+    assert_true(validation["assignment_consistency"] == "PASS", "placement assignments must be evidence-derived pass")
     assert_true("maintenance_access" in validation["not_evaluated_checks"], "unimplemented hard constraints must report NOT_EVALUATED")
 
     containment_broken = json.loads(json.dumps(base_outputs))
@@ -1997,6 +2012,36 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
     overlap_validation = sheetmetal_v1.validate_topology_stage_outputs(overlap_broken)
     assert_true(overlap_validation["status"] == "FAIL", "overlapping accepted placements must fail validation")
     assert_true(overlap_validation["accepted_overlap_violations"] >= 1, "overlap mutation must increment derived violation counter")
+
+    unknown_panel_broken = json.loads(json.dumps(base_outputs))
+    unknown_panel_broken["placement_plan"]["placements"][0]["panel_id"] = "PANEL-MISSING"
+    unknown_panel_validation = sheetmetal_v1.validate_topology_stage_outputs(unknown_panel_broken)
+    assert_true(unknown_panel_validation["status"] == "FAIL", "placement referencing an unknown panel must fail validation")
+    assert_true(
+        unknown_panel_validation["topology_referential_integrity_violations"] >= 1,
+        "unknown panel mutation must increment derived topology-reference counter",
+    )
+    assert_true(any(row["issue_code"] == "UNKNOWN_PANEL_REFERENCE" for row in unknown_panel_validation["validation_findings"]), "unknown panel finding must be structured")
+
+    unknown_component_broken = json.loads(json.dumps(base_outputs))
+    unknown_component_broken["placement_plan"]["placements"][0]["component_instance_id"] = "CI-MISSING"
+    unknown_component_validation = sheetmetal_v1.validate_topology_stage_outputs(unknown_component_broken)
+    assert_true(unknown_component_validation["status"] == "FAIL", "placement referencing an unknown component must fail validation")
+    assert_true(
+        unknown_component_validation["component_instance_referential_integrity_violations"] >= 1,
+        "unknown component mutation must increment derived component-reference counter",
+    )
+    assert_true(any(row["issue_code"] == "UNKNOWN_COMPONENT_INSTANCE_REFERENCE" for row in unknown_component_validation["validation_findings"]), "unknown component finding must be structured")
+
+    assignment_mismatch_broken = json.loads(json.dumps(base_outputs))
+    assignment_mismatch_broken["placement_plan"]["placements"][0]["panel_id"] = "PANEL-B"
+    assignment_mismatch_validation = sheetmetal_v1.validate_topology_stage_outputs(assignment_mismatch_broken)
+    assert_true(assignment_mismatch_validation["status"] == "FAIL", "placement panel must match approved assignment panel")
+    assert_true(
+        assignment_mismatch_validation["assignment_consistency_violations"] >= 1,
+        "assignment mismatch mutation must increment derived assignment-consistency counter",
+    )
+    assert_true(any(row["issue_code"] == "PLACEMENT_ASSIGNMENT_MISMATCH" for row in assignment_mismatch_validation["validation_findings"]), "assignment mismatch finding must be structured")
 
 
 def test_frozen_workflow_legacy_scope_verifier() -> None:

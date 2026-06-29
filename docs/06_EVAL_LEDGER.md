@@ -1445,3 +1445,22 @@ or duplicated into a physical overlap.
 Hard gates remain closed: private external transmissions `0`, source-root
 mutation `0`, `.private` mutation `0`, completed-reference inference `0`,
 customer PDF/DXF/DWG generation `0`, and production approval `false`.
+
+## sheetmetal-v1 topology reference and assignment validation hardening
+
+Status: `TOPOLOGY_REFERENTIAL_ASSIGNMENT_VALIDATION_MUTATION_TESTED`.
+
+Decision: `D-0058`.
+
+Topology validation now checks emitted placement and unplaced artifacts against
+topology panel IDs and recovered component assignments. Topology-reference,
+component-reference, and assignment-consistency counters derive from structured
+validation findings instead of static `PASS` fields.
+
+Synthetic mutation coverage proves validation fails when accepted placements
+reference an unknown panel, reference an unknown component instance, or use a
+panel that conflicts with the approved assignment.
+
+Hard gates remain closed: private external transmissions `0`, source-root
+mutation `0`, `.private` mutation `0`, completed-reference inference `0`,
+customer PDF/DXF/DWG generation `0`, and production approval `false`.
