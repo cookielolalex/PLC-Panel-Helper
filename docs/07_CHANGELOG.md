@@ -565,3 +565,8 @@
   mutation coverage for unknown panels, unknown component instances, and
   placement/assignment panel mismatch, then refreshed active/topology scoped
   workflow manifest hashes.
+- Made topology artifact count consistency evidence-derived for assignment,
+  topology-candidate, placement, unplaced, and reason counts; marked
+  topology-only quantity-stage overwrite checks as `NOT_EVALUATED`, added
+  synthetic count-mutation coverage, and refreshed active/topology scoped
+  workflow manifest hashes.

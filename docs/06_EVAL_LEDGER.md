@@ -1464,3 +1464,25 @@ panel that conflicts with the approved assignment.
 Hard gates remain closed: private external transmissions `0`, source-root
 mutation `0`, `.private` mutation `0`, completed-reference inference `0`,
 customer PDF/DXF/DWG generation `0`, and production approval `false`.
+
+## sheetmetal-v1 topology count consistency validation hardening
+
+Status: `TOPOLOGY_COUNT_CONSISTENCY_VALIDATION_MUTATION_TESTED`.
+
+Decision: `D-0059`.
+
+Topology validation now checks assignment, topology-candidate, placement,
+unplaced, and unplaced-reason counts against the emitted topology-stage rows.
+Quantity-consistency counters derive from structured validation findings
+instead of static `PASS` fields.
+
+Quantity-stage overwrite checks are explicitly reported as `NOT_EVALUATED` in
+this topology-only validator because source-fact quantity rows are not part of
+the validation input.
+
+Synthetic mutation coverage proves validation fails when assignment counts,
+placement counts, or unplaced reason counts are intentionally incorrect.
+
+Hard gates remain closed: private external transmissions `0`, source-root
+mutation `0`, `.private` mutation `0`, completed-reference inference `0`,
+customer PDF/DXF/DWG generation `0`, and production approval `false`.

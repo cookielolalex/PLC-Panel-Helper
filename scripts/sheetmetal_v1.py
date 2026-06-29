@@ -1898,6 +1898,144 @@ def evaluate_topology_references(outputs: dict[str, Any]) -> tuple[list[dict[str
     return checks, findings
 
 
+def add_count_mismatch_finding(
+    findings: list[dict[str, Any]],
+    check_id: str,
+    item_id: str,
+    reported: Any,
+    actual: Any,
+    issue_code: str = "COUNT_MISMATCH",
+) -> None:
+    add_validation_finding(
+        findings,
+        check_id,
+        item_id,
+        issue_code,
+        {"reported": reported, "actual": actual},
+    )
+
+
+def compare_reported_count(
+    findings: list[dict[str, Any]],
+    check_id: str,
+    item_id: str,
+    reported: Any,
+    actual: int,
+) -> int:
+    if reported is None:
+        add_count_mismatch_finding(findings, check_id, item_id, reported, actual, "COUNT_FIELD_MISSING")
+        return 1
+    if reported != actual:
+        add_count_mismatch_finding(findings, check_id, item_id, reported, actual)
+    return 1
+
+
+def evaluate_topology_count_consistency(outputs: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    assignment_recovery = outputs["panel_assignment_recovery"]
+    topology = outputs["topology_candidates"]
+    placement_plan = outputs["placement_plan"]
+    unplaced_register = outputs["unplaced_component_register"]
+    assignments = assignment_recovery.get("assignments", [])
+    assignment_counts = assignment_recovery.get("counts", {})
+    placements = placement_plan.get("placements", [])
+    unplaced_components = unplaced_register.get("unplaced_components", [])
+    findings: list[dict[str, Any]] = []
+    evaluated_count = 0
+
+    state_count_fields = {
+        "ASSIGNED_EXPLICIT": "explicitly_assigned",
+        "ASSIGNED_BY_APPROVED_RULE": "rule_assigned",
+        "UNASSIGNED": "unassigned",
+        "AMBIGUOUS": "ambiguous",
+        "CONFLICT": "conflicting",
+        "CONFLICTING": "conflicting",
+        "HUMAN_REVIEW_REQUIRED": "human_review_required",
+    }
+    actual_assignment_counts = {field: 0 for field in set(state_count_fields.values())}
+    for row in assignments:
+        field = state_count_fields.get(row.get("assignment_state"))
+        if field:
+            actual_assignment_counts[field] += 1
+    actual_assignment_counts["total_component_instances"] = len(assignments)
+    for field in sorted(actual_assignment_counts):
+        evaluated_count += compare_reported_count(
+            findings,
+            "quantity_consistency",
+            f"panel_assignment_recovery.counts.{field}",
+            assignment_counts.get(field),
+            actual_assignment_counts[field],
+        )
+
+    candidates = topology.get("candidates", [])
+    if "candidate_count" in topology:
+        evaluated_count += compare_reported_count(
+            findings,
+            "quantity_consistency",
+            "topology_candidates.candidate_count",
+            topology.get("candidate_count"),
+            len(candidates),
+        )
+
+    evaluated_count += compare_reported_count(
+        findings,
+        "quantity_consistency",
+        "placement_plan.placement_count",
+        placement_plan.get("placement_count"),
+        len(placements),
+    )
+    evaluated_count += compare_reported_count(
+        findings,
+        "quantity_consistency",
+        "placement_plan.unplaced_count",
+        placement_plan.get("unplaced_count"),
+        len(unplaced_components),
+    )
+    evaluated_count += compare_reported_count(
+        findings,
+        "quantity_consistency",
+        "unplaced_component_register.unplaced_count",
+        unplaced_register.get("unplaced_count"),
+        len(unplaced_components),
+    )
+
+    actual_reason_counts = dict(
+        sorted(
+            {
+                reason: sum(1 for row in unplaced_components if row.get("reason_code") == reason)
+                for reason in {row.get("reason_code") for row in unplaced_components if row.get("reason_code")}
+            }.items()
+        )
+    )
+    reported_reason_counts = unplaced_register.get("reason_counts")
+    evaluated_count += 1
+    if reported_reason_counts != actual_reason_counts:
+        add_count_mismatch_finding(
+            findings,
+            "quantity_consistency",
+            "unplaced_component_register.reason_counts",
+            reported_reason_counts,
+            actual_reason_counts,
+            "REASON_COUNT_MISMATCH",
+        )
+
+    checks = [
+        validation_check(
+            "quantity_consistency",
+            "FAIL" if findings else ("PASS" if evaluated_count else "NOT_EVALUATED"),
+            evaluated_count,
+            len(findings),
+        ),
+        validation_check(
+            "quantity_stage_overwrite",
+            "NOT_EVALUATED",
+            0,
+            0,
+            "topology_stage_validator_does_not_include_source_fact_quantity_rows",
+        ),
+    ]
+    return checks, findings
+
+
 def build_placement_and_constraints(
     source_model: dict[str, Any],
     register: dict[str, Any],
@@ -2144,8 +2282,9 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
     assignment_counts = outputs["panel_assignment_recovery"]["counts"]
     placement_checks, placement_findings = evaluate_accepted_placement_constraints(outputs)
     reference_checks, reference_findings = evaluate_topology_references(outputs)
-    validation_checks = placement_checks + reference_checks
-    validation_findings = placement_findings + reference_findings
+    count_checks, count_findings = evaluate_topology_count_consistency(outputs)
+    validation_checks = placement_checks + reference_checks + count_checks
+    validation_findings = placement_findings + reference_findings + count_findings
     check_status = {row["check_id"]: row["status"] for row in validation_checks}
     issue_counts = {
         issue: sum(1 for row in validation_findings if row["issue_code"] == issue)
@@ -2159,7 +2298,7 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
         "topology_referential_integrity": check_status["topology_referential_integrity"],
         "component_instance_referential_integrity": check_status["component_instance_referential_integrity"],
         "assignment_consistency": check_status["assignment_consistency"],
-        "quantity_consistency": "PASS",
+        "quantity_consistency": check_status["quantity_consistency"],
         "geometry_provenance": "PASS_WITH_SAFE_UNRESOLVED" if outputs["sizing_candidates"]["geometry_status_counts"].get("GEOMETRY_MISSING", 0) else "PASS",
         "dimension_provenance": outputs["provenance_map"]["coverage_status"],
         "overlap": check_status["accepted_placement_overlap"],
@@ -2175,6 +2314,7 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
         "topology_referential_integrity_violations": len([row for row in reference_findings if row["check_id"] == "topology_referential_integrity"]),
         "component_instance_referential_integrity_violations": len([row for row in reference_findings if row["check_id"] == "component_instance_referential_integrity"]),
         "assignment_consistency_violations": len([row for row in reference_findings if row["check_id"] == "assignment_consistency"]),
+        "quantity_consistency_violations": len(count_findings),
         "accepted_overlap_violations": issue_counts.get("NO_PHYSICAL_OVERLAP", 0),
         "containment_violations": issue_counts.get("CONTAINMENT", 0) + issue_counts.get("PANEL_DIMENSIONS_NOT_EVALUATED", 0),
         "clearance_violations": issue_counts.get("EDGE_CLEARANCE", 0) + issue_counts.get("EDGE_CLEARANCE_RULE_INVALID", 0),
@@ -2195,6 +2335,7 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
         "topology_referential_integrity_violations",
         "component_instance_referential_integrity_violations",
         "assignment_consistency_violations",
+        "quantity_consistency_violations",
         "accepted_overlap_violations",
         "containment_violations",
         "clearance_violations",

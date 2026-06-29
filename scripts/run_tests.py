@@ -1929,7 +1929,16 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
     base_outputs = {
         "panel_assignment_recovery": {
             "project_id": "SYNTH-SMV1-VALIDATION",
-            "counts": {"unassigned": 0, "unsupported_assignment_count": 0},
+            "counts": {
+                "total_component_instances": 1,
+                "explicitly_assigned": 1,
+                "rule_assigned": 0,
+                "unassigned": 0,
+                "ambiguous": 0,
+                "conflicting": 0,
+                "human_review_required": 0,
+                "unsupported_assignment_count": 0,
+            },
             "assignments": [
                 {
                     "component_instance_id": "CI-OK",
@@ -1940,6 +1949,7 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
             ],
         },
         "topology_candidates": {
+            "candidate_count": 1,
             "candidates": [
                 {
                     "panels": [
@@ -1957,6 +1967,8 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
         },
         "sizing_candidates": {"geometry_status_counts": {}},
         "placement_plan": {
+            "placement_count": 1,
+            "unplaced_count": 0,
             "placements": [
                 {
                     "placement_id": "PLACE-OK",
@@ -1971,7 +1983,7 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
                 }
             ]
         },
-        "unplaced_component_register": {"unplaced_count": 0},
+        "unplaced_component_register": {"unplaced_count": 0, "unplaced_components": [], "reason_counts": {}},
         "hard_constraint_model": {},
         "provenance_map": {"coverage_status": "PASS"},
     }
@@ -1983,7 +1995,9 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
     assert_true(validation["topology_referential_integrity"] == "PASS", "topology references must be evidence-derived pass")
     assert_true(validation["component_instance_referential_integrity"] == "PASS", "component instance references must be evidence-derived pass")
     assert_true(validation["assignment_consistency"] == "PASS", "placement assignments must be evidence-derived pass")
+    assert_true(validation["quantity_consistency"] == "PASS", "artifact counts must be evidence-derived pass")
     assert_true("maintenance_access" in validation["not_evaluated_checks"], "unimplemented hard constraints must report NOT_EVALUATED")
+    assert_true("quantity_stage_overwrite" in validation["not_evaluated_checks"], "unavailable quantity-stage overwrite checks must report NOT_EVALUATED")
 
     containment_broken = json.loads(json.dumps(base_outputs))
     containment_broken["placement_plan"]["placements"][0]["x_mm"] = 95
@@ -2042,6 +2056,28 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
         "assignment mismatch mutation must increment derived assignment-consistency counter",
     )
     assert_true(any(row["issue_code"] == "PLACEMENT_ASSIGNMENT_MISMATCH" for row in assignment_mismatch_validation["validation_findings"]), "assignment mismatch finding must be structured")
+
+    assignment_count_broken = json.loads(json.dumps(base_outputs))
+    assignment_count_broken["panel_assignment_recovery"]["counts"]["unassigned"] = 1
+    assignment_count_validation = sheetmetal_v1.validate_topology_stage_outputs(assignment_count_broken)
+    assert_true(assignment_count_validation["status"] == "FAIL", "incorrect assignment count must fail validation")
+    assert_true(
+        assignment_count_validation["quantity_consistency_violations"] >= 1,
+        "assignment count mutation must increment derived quantity-consistency counter",
+    )
+    assert_true(any(row["item_id"] == "panel_assignment_recovery.counts.unassigned" for row in assignment_count_validation["validation_findings"]), "assignment count finding must identify the count field")
+
+    placement_count_broken = json.loads(json.dumps(base_outputs))
+    placement_count_broken["placement_plan"]["placement_count"] = 0
+    placement_count_validation = sheetmetal_v1.validate_topology_stage_outputs(placement_count_broken)
+    assert_true(placement_count_validation["status"] == "FAIL", "incorrect placement count must fail validation")
+    assert_true(any(row["item_id"] == "placement_plan.placement_count" for row in placement_count_validation["validation_findings"]), "placement count finding must identify the count field")
+
+    reason_count_broken = json.loads(json.dumps(base_outputs))
+    reason_count_broken["unplaced_component_register"]["reason_counts"] = {"UNASSIGNED_PANEL": 1}
+    reason_count_validation = sheetmetal_v1.validate_topology_stage_outputs(reason_count_broken)
+    assert_true(reason_count_validation["status"] == "FAIL", "incorrect unplaced reason counts must fail validation")
+    assert_true(any(row["issue_code"] == "REASON_COUNT_MISMATCH" for row in reason_count_validation["validation_findings"]), "reason count mismatch must be structured")
 
 
 def test_frozen_workflow_legacy_scope_verifier() -> None:
