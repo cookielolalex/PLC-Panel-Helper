@@ -18,6 +18,19 @@ SAFE_UNRESOLVED_STATUSES = {
     "NOT_APPLICABLE",
 }
 
+TOPOLOGY_STAGE_SCHEMA_VERSIONS = {
+    "panel_assignment_recovery": "sheetmetal-v1.topology_assignment_recovery.v1",
+    "topology_candidates": "sheetmetal-v1.topology_candidates.v1",
+    "sizing_candidates": "sheetmetal-v1.sizing_candidates.v1",
+    "placement_plan": "sheetmetal-v1.placement_plan.v1",
+    "unplaced_component_register": "sheetmetal-v1.unplaced_component_register.v1",
+    "hard_constraint_model": "sheetmetal-v1.topology_hard_constraints.v1",
+    "provenance_map": "sheetmetal-v1.topology_provenance_map.v1",
+    "rule_versions": "sheetmetal-v1.rule_versions.v1",
+    "schema_versions": "sheetmetal-v1.schema_versions.v1",
+    "workflow_version": "sheetmetal-v1.workflow_version.v1",
+}
+
 GENERATOR_ALLOWED_ROLES = {
     "CONTRACT_REQUIREMENT",
     "MATERIAL_REQUIREMENT",
@@ -2036,6 +2049,121 @@ def evaluate_topology_count_consistency(outputs: dict[str, Any]) -> tuple[list[d
     return checks, findings
 
 
+def evaluate_topology_schema_validity(outputs: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    findings: list[dict[str, Any]] = []
+    evaluated_count = 0
+    for artifact_name, expected_schema in sorted(TOPOLOGY_STAGE_SCHEMA_VERSIONS.items()):
+        evaluated_count += 1
+        artifact = outputs.get(artifact_name)
+        if not isinstance(artifact, dict):
+            add_validation_finding(
+                findings,
+                "schema_validity",
+                artifact_name,
+                "SCHEMA_ARTIFACT_MISSING",
+                {"expected_schema_version": expected_schema},
+            )
+            continue
+        actual_schema = artifact.get("schema_version")
+        if actual_schema != expected_schema:
+            add_validation_finding(
+                findings,
+                "schema_validity",
+                f"{artifact_name}.schema_version",
+                "SCHEMA_VERSION_MISMATCH",
+                {"expected": expected_schema, "actual": actual_schema},
+            )
+
+    schema_ledger = outputs.get("schema_versions", {})
+    if isinstance(schema_ledger, dict):
+        for artifact_name, expected_schema in sorted(TOPOLOGY_STAGE_SCHEMA_VERSIONS.items()):
+            if artifact_name == "schema_versions":
+                continue
+            if artifact_name not in schema_ledger:
+                continue
+            evaluated_count += 1
+            actual_schema = schema_ledger.get(artifact_name)
+            if actual_schema != expected_schema:
+                add_validation_finding(
+                    findings,
+                    "schema_validity",
+                    f"schema_versions.{artifact_name}",
+                    "SCHEMA_LEDGER_MISMATCH",
+                    {"expected": expected_schema, "actual": actual_schema},
+                )
+
+    checks = [
+        validation_check(
+            "schema_validity",
+            "FAIL" if findings else ("PASS" if evaluated_count else "NOT_EVALUATED"),
+            evaluated_count,
+            len(findings),
+        )
+    ]
+    return checks, findings
+
+
+def provenance_safe_statuses() -> set[str]:
+    return SAFE_UNRESOLVED_STATUSES | {
+        "ASSIGNED_EXPLICIT",
+        "ASSIGNED_BY_APPROVED_RULE",
+        "UNASSIGNED",
+        "AMBIGUOUS",
+        "PASS_WITH_SAFE_UNRESOLVED",
+        "PASS_WITH_SAFE_UNPLACED",
+        "DESIGN_CHOICE_WITH_CONSTRAINTS",
+        "UNASSIGNED_PANEL",
+        "GEOMETRY_MISSING",
+        "MOUNTING_SURFACE_UNKNOWN",
+        "CLEARANCE_RULE_MISSING",
+        "NO_VALID_PLACEMENT",
+    }
+
+
+def evaluate_topology_provenance_consistency(outputs: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    provenance = outputs["provenance_map"]
+    findings: list[dict[str, Any]] = []
+    critical_items = provenance.get("critical_items", [])
+    expected_failures = [
+        row
+        for row in critical_items
+        if not row.get("support_ids") and row.get("status") not in provenance_safe_statuses()
+    ]
+    reported_failures = provenance.get("coverage_failures", [])
+    expected_status = "FAIL" if expected_failures else "PASS"
+    evaluated_count = len(critical_items) + 2
+
+    if provenance.get("coverage_status") != expected_status:
+        add_validation_finding(
+            findings,
+            "provenance_coverage_consistency",
+            "provenance_map.coverage_status",
+            "PROVENANCE_COVERAGE_STATUS_MISMATCH",
+            {"expected": expected_status, "actual": provenance.get("coverage_status")},
+        )
+
+    expected_paths = sorted(row.get("item_path") for row in expected_failures)
+    reported_paths = sorted(row.get("item_path") for row in reported_failures)
+    if reported_paths != expected_paths:
+        add_validation_finding(
+            findings,
+            "provenance_coverage_consistency",
+            "provenance_map.coverage_failures",
+            "PROVENANCE_FAILURE_SET_MISMATCH",
+            {"expected_item_paths": expected_paths, "actual_item_paths": reported_paths},
+        )
+
+    checks = [
+        validation_check(
+            "provenance_coverage_consistency",
+            "FAIL" if findings else ("PASS" if evaluated_count else "NOT_EVALUATED"),
+            evaluated_count,
+            len(findings),
+        )
+    ]
+    return checks, findings
+
+
 def build_placement_and_constraints(
     source_model: dict[str, Any],
     register: dict[str, Any],
@@ -2253,21 +2381,7 @@ def build_topology_provenance_map(
                 "support_ids": [],
             }
         )
-    safe_statuses = SAFE_UNRESOLVED_STATUSES | {
-        "ASSIGNED_EXPLICIT",
-        "ASSIGNED_BY_APPROVED_RULE",
-        "UNASSIGNED",
-        "AMBIGUOUS",
-        "PASS_WITH_SAFE_UNRESOLVED",
-        "PASS_WITH_SAFE_UNPLACED",
-        "DESIGN_CHOICE_WITH_CONSTRAINTS",
-        "UNASSIGNED_PANEL",
-        "GEOMETRY_MISSING",
-        "MOUNTING_SURFACE_UNKNOWN",
-        "CLEARANCE_RULE_MISSING",
-        "NO_VALID_PLACEMENT",
-    }
-    failures = [row for row in critical if not row["support_ids"] and row["status"] not in safe_statuses]
+    failures = [row for row in critical if not row["support_ids"] and row["status"] not in provenance_safe_statuses()]
     return {
         "schema_version": "sheetmetal-v1.topology_provenance_map.v1",
         "project_id": source_model["project_id"],
@@ -2283,8 +2397,10 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
     placement_checks, placement_findings = evaluate_accepted_placement_constraints(outputs)
     reference_checks, reference_findings = evaluate_topology_references(outputs)
     count_checks, count_findings = evaluate_topology_count_consistency(outputs)
-    validation_checks = placement_checks + reference_checks + count_checks
-    validation_findings = placement_findings + reference_findings + count_findings
+    schema_checks, schema_findings = evaluate_topology_schema_validity(outputs)
+    provenance_checks, provenance_findings = evaluate_topology_provenance_consistency(outputs)
+    validation_checks = placement_checks + reference_checks + count_checks + schema_checks + provenance_checks
+    validation_findings = placement_findings + reference_findings + count_findings + schema_findings + provenance_findings
     check_status = {row["check_id"]: row["status"] for row in validation_checks}
     issue_counts = {
         issue: sum(1 for row in validation_findings if row["issue_code"] == issue)
@@ -2293,14 +2409,14 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
     validation = {
         "schema_version": "sheetmetal-v1.topology_validation.v1",
         "project_id": outputs["panel_assignment_recovery"]["project_id"],
-        "schema_validity": "PASS",
+        "schema_validity": check_status["schema_validity"],
         "panel_identity": "PASS_WITH_SAFE_UNRESOLVED" if not any(candidate.get("panels") for candidate in outputs["topology_candidates"].get("candidates", [])) else "PASS",
         "topology_referential_integrity": check_status["topology_referential_integrity"],
         "component_instance_referential_integrity": check_status["component_instance_referential_integrity"],
         "assignment_consistency": check_status["assignment_consistency"],
         "quantity_consistency": check_status["quantity_consistency"],
         "geometry_provenance": "PASS_WITH_SAFE_UNRESOLVED" if outputs["sizing_candidates"]["geometry_status_counts"].get("GEOMETRY_MISSING", 0) else "PASS",
-        "dimension_provenance": outputs["provenance_map"]["coverage_status"],
+        "dimension_provenance": "FAIL" if check_status["provenance_coverage_consistency"] == "FAIL" else outputs["provenance_map"]["coverage_status"],
         "overlap": check_status["accepted_placement_overlap"],
         "containment": check_status["accepted_placement_containment"],
         "clearance": check_status["accepted_placement_clearance"],
@@ -2315,6 +2431,8 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
         "component_instance_referential_integrity_violations": len([row for row in reference_findings if row["check_id"] == "component_instance_referential_integrity"]),
         "assignment_consistency_violations": len([row for row in reference_findings if row["check_id"] == "assignment_consistency"]),
         "quantity_consistency_violations": len(count_findings),
+        "schema_validity_violations": len(schema_findings),
+        "provenance_consistency_violations": len(provenance_findings),
         "accepted_overlap_violations": issue_counts.get("NO_PHYSICAL_OVERLAP", 0),
         "containment_violations": issue_counts.get("CONTAINMENT", 0) + issue_counts.get("PANEL_DIMENSIONS_NOT_EVALUATED", 0),
         "clearance_violations": issue_counts.get("EDGE_CLEARANCE", 0) + issue_counts.get("EDGE_CLEARANCE_RULE_INVALID", 0),
@@ -2336,6 +2454,8 @@ def validate_topology_stage_outputs(outputs: dict[str, Any]) -> dict[str, Any]:
         "component_instance_referential_integrity_violations",
         "assignment_consistency_violations",
         "quantity_consistency_violations",
+        "schema_validity_violations",
+        "provenance_consistency_violations",
         "accepted_overlap_violations",
         "containment_violations",
         "clearance_violations",
@@ -2399,7 +2519,9 @@ def build_topology_stage_outputs(
             "topology_candidates": "sheetmetal-v1.topology_candidates.v1",
             "sizing_candidates": "sheetmetal-v1.sizing_candidates.v1",
             "placement_plan": "sheetmetal-v1.placement_plan.v1",
+            "unplaced_component_register": "sheetmetal-v1.unplaced_component_register.v1",
             "hard_constraint_model": "sheetmetal-v1.topology_hard_constraints.v1",
+            "provenance_map": "sheetmetal-v1.topology_provenance_map.v1",
         },
         "workflow_version": {
             "schema_version": "sheetmetal-v1.workflow_version.v1",

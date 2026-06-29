@@ -1928,6 +1928,7 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
 
     base_outputs = {
         "panel_assignment_recovery": {
+            "schema_version": "sheetmetal-v1.topology_assignment_recovery.v1",
             "project_id": "SYNTH-SMV1-VALIDATION",
             "counts": {
                 "total_component_instances": 1,
@@ -1949,6 +1950,7 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
             ],
         },
         "topology_candidates": {
+            "schema_version": "sheetmetal-v1.topology_candidates.v1",
             "candidate_count": 1,
             "candidates": [
                 {
@@ -1965,8 +1967,9 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
                 }
             ]
         },
-        "sizing_candidates": {"geometry_status_counts": {}},
+        "sizing_candidates": {"schema_version": "sheetmetal-v1.sizing_candidates.v1", "geometry_status_counts": {}},
         "placement_plan": {
+            "schema_version": "sheetmetal-v1.placement_plan.v1",
             "placement_count": 1,
             "unplaced_count": 0,
             "placements": [
@@ -1983,12 +1986,35 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
                 }
             ]
         },
-        "unplaced_component_register": {"unplaced_count": 0, "unplaced_components": [], "reason_counts": {}},
-        "hard_constraint_model": {},
-        "provenance_map": {"coverage_status": "PASS"},
+        "unplaced_component_register": {
+            "schema_version": "sheetmetal-v1.unplaced_component_register.v1",
+            "unplaced_count": 0,
+            "unplaced_components": [],
+            "reason_counts": {},
+        },
+        "hard_constraint_model": {"schema_version": "sheetmetal-v1.topology_hard_constraints.v1"},
+        "provenance_map": {
+            "schema_version": "sheetmetal-v1.topology_provenance_map.v1",
+            "critical_items": [],
+            "coverage_status": "PASS",
+            "coverage_failures": [],
+        },
+        "rule_versions": {"schema_version": "sheetmetal-v1.rule_versions.v1"},
+        "schema_versions": {
+            "schema_version": "sheetmetal-v1.schema_versions.v1",
+            "panel_assignment_recovery": "sheetmetal-v1.topology_assignment_recovery.v1",
+            "topology_candidates": "sheetmetal-v1.topology_candidates.v1",
+            "sizing_candidates": "sheetmetal-v1.sizing_candidates.v1",
+            "placement_plan": "sheetmetal-v1.placement_plan.v1",
+            "unplaced_component_register": "sheetmetal-v1.unplaced_component_register.v1",
+            "hard_constraint_model": "sheetmetal-v1.topology_hard_constraints.v1",
+            "provenance_map": "sheetmetal-v1.topology_provenance_map.v1",
+        },
+        "workflow_version": {"schema_version": "sheetmetal-v1.workflow_version.v1"},
     }
     validation = sheetmetal_v1.validate_topology_stage_outputs(json.loads(json.dumps(base_outputs)))
     assert_true(validation["status"] == "PASS", f"valid synthetic placement should pass: {validation}")
+    assert_true(validation["schema_validity"] == "PASS", "schema versions must be evidence-derived pass")
     assert_true(validation["containment"] == "PASS", "containment must be evidence-derived pass")
     assert_true(validation["clearance"] == "PASS", "clearance must be evidence-derived pass")
     assert_true(validation["overlap"] == "PASS", "overlap must be evidence-derived pass")
@@ -1996,6 +2022,7 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
     assert_true(validation["component_instance_referential_integrity"] == "PASS", "component instance references must be evidence-derived pass")
     assert_true(validation["assignment_consistency"] == "PASS", "placement assignments must be evidence-derived pass")
     assert_true(validation["quantity_consistency"] == "PASS", "artifact counts must be evidence-derived pass")
+    assert_true(validation["dimension_provenance"] == "PASS", "provenance consistency must be evidence-derived pass")
     assert_true("maintenance_access" in validation["not_evaluated_checks"], "unimplemented hard constraints must report NOT_EVALUATED")
     assert_true("quantity_stage_overwrite" in validation["not_evaluated_checks"], "unavailable quantity-stage overwrite checks must report NOT_EVALUATED")
 
@@ -2078,6 +2105,33 @@ def test_sheetmetal_v1_topology_validation_mutation_failures() -> None:
     reason_count_validation = sheetmetal_v1.validate_topology_stage_outputs(reason_count_broken)
     assert_true(reason_count_validation["status"] == "FAIL", "incorrect unplaced reason counts must fail validation")
     assert_true(any(row["issue_code"] == "REASON_COUNT_MISMATCH" for row in reason_count_validation["validation_findings"]), "reason count mismatch must be structured")
+
+    schema_broken = json.loads(json.dumps(base_outputs))
+    schema_broken["placement_plan"]["schema_version"] = "sheetmetal-v1.placement_plan.v0"
+    schema_validation = sheetmetal_v1.validate_topology_stage_outputs(schema_broken)
+    assert_true(schema_validation["status"] == "FAIL", "incorrect artifact schema version must fail validation")
+    assert_true(schema_validation["schema_validity_violations"] >= 1, "schema mutation must increment derived schema counter")
+    assert_true(any(row["issue_code"] == "SCHEMA_VERSION_MISMATCH" for row in schema_validation["validation_findings"]), "schema version mismatch must be structured")
+
+    schema_ledger_broken = json.loads(json.dumps(base_outputs))
+    schema_ledger_broken["schema_versions"]["placement_plan"] = "sheetmetal-v1.placement_plan.v0"
+    schema_ledger_validation = sheetmetal_v1.validate_topology_stage_outputs(schema_ledger_broken)
+    assert_true(schema_ledger_validation["status"] == "FAIL", "incorrect schema ledger entry must fail validation")
+    assert_true(any(row["issue_code"] == "SCHEMA_LEDGER_MISMATCH" for row in schema_ledger_validation["validation_findings"]), "schema ledger mismatch must be structured")
+
+    provenance_broken = json.loads(json.dumps(base_outputs))
+    provenance_broken["provenance_map"]["critical_items"] = [
+        {
+            "item_path": "placements.PLACE-UNSUPPORTED",
+            "status": "UNSUPPORTED_GENERATED_FACT",
+            "support_type": "none",
+            "support_ids": [],
+        }
+    ]
+    provenance_validation = sheetmetal_v1.validate_topology_stage_outputs(provenance_broken)
+    assert_true(provenance_validation["status"] == "FAIL", "unsupported critical item without coverage failure must fail validation")
+    assert_true(provenance_validation["provenance_consistency_violations"] >= 1, "provenance mutation must increment derived provenance counter")
+    assert_true(any(row["issue_code"] == "PROVENANCE_COVERAGE_STATUS_MISMATCH" for row in provenance_validation["validation_findings"]), "provenance status mismatch must be structured")
 
 
 def test_frozen_workflow_legacy_scope_verifier() -> None:

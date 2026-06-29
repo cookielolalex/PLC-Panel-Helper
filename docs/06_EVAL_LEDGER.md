@@ -1426,6 +1426,25 @@ Hard gates remain closed: private external transmissions `0`, source-root
 mutation `0`, `.private` mutation `0`, completed-reference inference `0`,
 customer PDF/DXF/DWG generation `0`, and production approval `false`.
 
+## sheetmetal-v1 topology schema and provenance validation hardening
+
+Status: `TOPOLOGY_SCHEMA_PROVENANCE_VALIDATION_MUTATION_TESTED`.
+
+Decision: `D-0060`.
+
+Topology validation now checks emitted topology-stage schema versions,
+schema-ledger entries, and provenance coverage status/failure sets against the
+emitted critical items. Schema and provenance counters derive from structured
+validation findings instead of static `PASS` fields.
+
+Synthetic mutation coverage proves validation fails when artifact schema
+versions are wrong, schema-ledger entries are wrong, or unsupported critical
+items lack matching provenance failures.
+
+Hard gates remain closed: private external transmissions `0`, source-root
+mutation `0`, `.private` mutation `0`, completed-reference inference `0`,
+customer PDF/DXF/DWG generation `0`, and production approval `false`.
+
 ## sheetmetal-v1 topology validation evidence-derived hardening
 
 Status: `TOPOLOGY_VALIDATION_EVIDENCE_DERIVED_MUTATION_TESTED`.

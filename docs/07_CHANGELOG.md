@@ -570,3 +570,7 @@
   topology-only quantity-stage overwrite checks as `NOT_EVALUATED`, added
   synthetic count-mutation coverage, and refreshed active/topology scoped
   workflow manifest hashes.
+- Made topology schema and provenance consistency evidence-derived for emitted
+  schema versions, schema-ledger entries, and provenance coverage/failure sets;
+  added synthetic schema/provenance mutation coverage and refreshed
+  active/topology scoped workflow manifest hashes.
